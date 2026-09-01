@@ -1,0 +1,27 @@
+title: 'Post Content'
+fields:
+  -
+    handle: post_introduction_part
+    field: content.content
+    config:
+      display: 'Post Introduction Part'
+  -
+    handle: post_blockquote_part
+    field:
+      placeholder: Blockquote
+      type: textarea
+      display: 'Post Blockquote Part'
+  -
+    handle: post_main_part
+    field: content.content
+    config:
+      display: 'Post Main Part'
+      placeholder: 'post main part'
+  -
+    handle: post_conclusion_part
+    field: content.content
+    config:
+      display: 'Post Conclusion Part'
+      placeholder: 'conclusion part'
+      reading_time: true
+      word_count: true

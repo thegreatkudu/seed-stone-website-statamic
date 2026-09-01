@@ -1,0 +1,22 @@
+title: 'Global Page Title'
+fields:
+  -
+    handle: prefix_text_title
+    field:
+      type: text
+      display: 'Prefix Text Title'
+  -
+    handle: colored_text_title
+    field:
+      type: text
+      display: 'Colored Text Title'
+  -
+    handle: suffix_text_title
+    field:
+      type: text
+      display: 'Suffix Text Title'
+  -
+    handle: page_subtitle_text
+    field:
+      type: textarea
+      display: 'Page Subtitle Text'

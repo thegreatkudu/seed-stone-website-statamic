@@ -1,0 +1,91 @@
+title: 'Page Builder'
+fields:
+  -
+    handle: blocks
+    field:
+      collapse: accordion
+      type: replicator
+      display: Blocks
+      sets:
+        main:
+          display: Main
+          sets:
+            contact_section:
+              display: 'Contact Section'
+              icon: mail-sign-at
+              fields:
+                -
+                  import: contact_section
+            featured_post:
+              display: 'Featured Post'
+              icon: layout-split-verical
+              fields:
+                -
+                  import: featured_post
+            featured_posts:
+              display: 'Featured Posts'
+              icon: dashboard-layout
+              fields:
+                -
+                  import: featured_posts
+            all_posts:
+              display: 'All Posts'
+              icon: layout-grid-dots
+              fields:
+                -
+                  import: all_posts
+            content:
+              display: Content
+              icon: text-formatting-shadow-text
+              fields:
+                -
+                  import: content
+            post_content:
+              display: 'Post Content'
+              icon: book-next-page
+              fields:
+                -
+                  import: post_content
+            about_us:
+              display: 'About Us'
+              icon: docs
+              fields:
+                -
+                  import: about_us_content
+            terms_and_conditions:
+              display: 'Terms And Conditions'
+              icon: add-bookmark
+              fields:
+                -
+                  import: terms_and_conditions
+            privacy_policy:
+              display: 'Privacy Policy'
+              icon: add-sticky
+              fields:
+                -
+                  import: privacy_policy
+            service_content:
+              display: 'Service Content'
+              fields:
+                -
+                  import: service_content
+            all_services:
+              display: 'All Services'
+              fields:
+                -
+                  import: all_services
+            contact_us:
+              display: 'Contact Us'
+              fields:
+                -
+                  import: contact_us
+            home_page:
+              display: 'Home Page'
+              fields:
+                -
+                  import: home_page
+            our_partners:
+              display: 'Our Partners'
+              fields:
+                -
+                  import: our_partners

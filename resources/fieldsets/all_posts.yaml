@@ -1,0 +1,12 @@
+title: 'All Posts'
+fields:
+  -
+    handle: page_main_title
+    field:
+      type: text
+      display: 'Page Main Title'
+  -
+    handle: page_subtitle
+    field:
+      type: textarea
+      display: 'Page Subtitle'

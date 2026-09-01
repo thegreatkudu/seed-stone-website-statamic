@@ -1,0 +1,24 @@
+title: 'Service Content'
+fields:
+  -
+    import: global_page_title
+  -
+    import: content
+  -
+    handle: gallery
+    field:
+      container: assets
+      type: assets
+      display: Gallery
+      instructions: 'Upload multiple images for this service gallery'
+      instructions_position: below
+  -
+    handle: service_provider
+    field:
+      type: text
+      display: 'Service Provider'
+  -
+    handle: available_since
+    field:
+      type: date
+      display: 'Available Since'

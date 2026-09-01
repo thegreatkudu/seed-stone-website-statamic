@@ -1,0 +1,200 @@
+{{ section:head_css }}
+<link rel='stylesheet' id='elementor-post-47-css'
+    href='{{ config:app:url }}/walley/wp-content/uploads/sites/2/elementor/css/post-47.css?ver=1767237625'
+    media='all' />
+<link rel='stylesheet' id='elementor-post-767-css'
+    href='{{ config:app:url }}/walley/wp-content/uploads/sites/2/elementor/css/post-767.css?ver=1767333705'
+    media='all' />
+<link rel='stylesheet' id='elementor-post-515-css'
+    href='{{ config:app:url }}/walley/wp-content/uploads/sites/2/elementor/css/post-515.css?ver=1767245096'
+    media='all' />
+<style>
+    .elementor-element-30fe7361 {
+        padding-bottom: 100px;
+    }
+</style>
+{{ /section:head_css }}
+
+{{# ============================================================ #}}
+{{# BODY CLASS #}}
+{{# ============================================================ #}}
+{{ section:body_class }}
+wp-singular envato_tk_templates-template envato_tk_templates-template-elementor_header_footer single
+single-envato_tk_templates postid-515 wp-embed-responsive wp-theme-hello-elementor hello-elementor-default
+elementor-default elementor-template-full-width elementor-kit-6 elementor-page elementor-page-515
+{{ /section:body_class }}
+
+<a class="skip-link screen-reader-text" href="#content">Skip to content </a>
+
+{{ blocks }}{{ if type == "contact_us" }}
+
+<div data-elementor-type="wp-post" data-elementor-id="515" class="elementor elementor-515 elementor-15">
+
+    <!-- Hero / Page Title Section -->
+    <div class="elementor-element elementor-element-1583c934 e-flex e-con-boxed e-con e-parent" data-id="1583c934"
+        data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+        <div class="e-con-inner">
+            <div class="elementor-element elementor-element-29fb6773 e-con-full e-flex e-con e-child" data-id="29fb6773"
+                data-element_type="container">
+                <div class="elementor-element elementor-element-39f42c5c elementor-invisible elementor-widget elementor-widget-heading"
+                    data-id="39f42c5c" data-element_type="widget"
+                    data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
+                    <div class="elementor-widget-container">
+                        <h1 class="elementor-heading-title elementor-size-default">{{ hero:title }}</h1>
+                    </div>
+                </div>
+                <div class="elementor-element elementor-element-587a0473 elementor-invisible elementor-widget elementor-widget-text-editor"
+                    data-id="587a0473" data-element_type="widget"
+                    data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}"
+                    data-widget_type="text-editor.default">
+                    <div class="elementor-widget-container">
+                        <p>{{ hero:description }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Details & App Preview Section -->
+    <div class="elementor-element elementor-element-698af769 e-flex e-con-boxed e-con e-parent" data-id="698af769"
+        data-element_type="container">
+        <div class="e-con-inner">
+            <div class="elementor-element elementor-element-473455e5 e-con-full e-flex e-con e-child" data-id="473455e5"
+                data-element_type="container">
+                <div class="elementor-element elementor-element-2f26df8f elementor-invisible elementor-widget elementor-widget-heading"
+                    data-id="2f26df8f" data-element_type="widget"
+                    data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
+                    <div class="elementor-widget-container">
+                        <h2 class="elementor-heading-title elementor-size-default">{{ contact_section:title }}</h2>
+                    </div>
+                </div>
+                <div class="elementor-element elementor-element-26580e0d elementor-invisible elementor-widget elementor-widget-text-editor"
+                    data-id="26580e0d" data-element_type="widget"
+                    data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}"
+                    data-widget_type="text-editor.default">
+                    <div class="elementor-widget-container">
+                        <p>{{ contact_section:description }}</p>
+                    </div>
+                </div>
+                <div class="elementor-element elementor-element-24577eb0 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-invisible elementor-widget elementor-widget-icon-list"
+                    data-id="24577eb0" data-element_type="widget"
+                    data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="icon-list.default">
+                    <div class="elementor-widget-container">
+                        <ul class="elementor-icon-list-items">
+                            <li class="elementor-icon-list-item">
+                                <a href="mailto:{{ contact_section:email }}">
+                                    <span class="elementor-icon-list-icon">
+                                        <i aria-hidden="true" class="far fa-envelope"></i>
+                                    </span>
+                                    <span class="elementor-icon-list-text">{{ contact_section:email }}</span>
+                                </a>
+                            </li>
+                            <li class="elementor-icon-list-item">
+                                <a href="{{ contact_section:chat_url }}">
+                                    <span class="elementor-icon-list-icon">
+                                        <i aria-hidden="true" class="far fa-comment-dots"></i>
+                                    </span>
+                                    <span class="elementor-icon-list-text">{{ contact_section:chat_label }}</span>
+                                </a>
+                            </li>
+                            <li class="elementor-icon-list-item">
+                                <a href="tel:{{ contact_section:phone }}">
+                                    <span class="elementor-icon-list-icon">
+                                        <i aria-hidden="true" class="fas fa-mobile-alt"></i>
+                                    </span>
+                                    <span class="elementor-icon-list-text">{{ contact_section:phone }}</span>
+                                </a>
+                            </li>
+                            <li class="elementor-icon-list-item">
+                                <a href="#">
+                                    <span class="elementor-icon-list-icon">
+                                        <i aria-hidden="true" class="far fa-map"></i>
+                                    </span>
+                                    <span class="elementor-icon-list-text">{{ contact_section:address }}</span>
+                                </a>
+                            </li>
+                            <li class="elementor-icon-list-item">
+                                <span class="elementor-icon-list-icon">
+                                    <i aria-hidden="true" class="far fa-clock"></i>
+                                </span>
+                                <span class="elementor-icon-list-text">{{ contact_section:hours }}</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="elementor-element elementor-element-105a1a2a e-con-full e-flex e-con e-child" data-id="105a1a2a"
+                data-element_type="container">
+                <div class="elementor-element elementor-element-488f2f48 elementor-invisible elementor-widget elementor-widget-image"
+                    data-id="488f2f48" data-element_type="widget"
+                    data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;}" data-widget_type="image.default">
+                    <div class="elementor-widget-container">
+                        <img fetchpriority="high" decoding="async" width="750" height="1484"
+                            src="{{ contact_section:image_1:url }}"
+                            class="attachment-full size-full wp-image-107"
+                            alt="Leoleo App mobile interface"
+                            srcset="{{ contact_section:image_1:url }} 750w, {{ contact_section:image_1:url }} 152w, {{ contact_section:image_1:url }} 518w"
+                            sizes="(max-width: 750px) 100vw, 750px" />
+                    </div>
+                </div>
+                <div class="elementor-element elementor-element-7e7b722e elementor-widget__width-initial elementor-absolute elementor-invisible elementor-widget elementor-widget-image"
+                    data-id="7e7b722e" data-element_type="widget"
+                    data-settings="{&quot;_position&quot;:&quot;absolute&quot;,&quot;_animation&quot;:&quot;fadeInLeft&quot;}"
+                    data-widget_type="image.default">
+                    <div class="elementor-widget-container">
+                        <img decoding="async" width="750" height="1093"
+                            src="{{ contact_section:image_2:url }}"
+                            class="attachment-full size-full wp-image-299"
+                            alt="Leoleo App crop planning screen"
+                            srcset="{{ contact_section:image_2:url }} 750w, {{ contact_section:image_2:url }} 206w, {{ contact_section:image_2:url }} 703w"
+                            sizes="(max-width: 750px) 100vw, 750px" />
+                    </div>
+                </div>
+                <div class="elementor-element elementor-element-710c1ad5 elementor-widget__width-initial elementor-absolute elementor-invisible elementor-widget elementor-widget-image"
+                    data-id="710c1ad5" data-element_type="widget"
+                    data-settings="{&quot;_position&quot;:&quot;absolute&quot;,&quot;_animation&quot;:&quot;fadeInUp&quot;}"
+                    data-widget_type="image.default">
+                    <div class="elementor-widget-container">
+                        <img loading="lazy" decoding="async" width="750" height="663"
+                            src="{{ contact_section:image_3:url }}"
+                            class="attachment-full size-full wp-image-324"
+                            alt="Leoleo App weather and market alert screen"
+                            srcset="{{ contact_section:image_3:url }} 750w, {{ contact_section:image_3:url }} 300w"
+                            sizes="(max-width: 750px) 100vw, 750px" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Map Section -->
+    <div class="elementor-element elementor-element-30fe7361 e-flex e-con-boxed e-con e-parent" data-id="30fe7361"
+        data-element_type="container">
+        <div class="e-con-inner">
+            <div class="elementor-element elementor-element-5d274c3d e-con-full e-flex e-con e-child" data-id="5d274c3d"
+                data-element_type="container">
+                <div class="elementor-element elementor-element-2446b9fa elementor-invisible elementor-widget elementor-widget-google_maps"
+                    data-id="2446b9fa" data-element_type="widget"
+                    data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;}" data-widget_type="google_maps.default">
+                    <div class="elementor-widget-container">
+                        <div class="elementor-custom-embed">
+                            <iframe src="{{ map:embed_url }}" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"  title="{{ map:title }}" aria-label="{{ map:aria_label }}" ></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- call to action -->
+    {{ partial:layout/cta-section }}
+
+</div>
+
+{{ /if }}{{ /blocks }}
+<!-- #content -->
+{{# /#content #}}
+
+<!-- footer -->
+
+<!-- page-footer-tags -->

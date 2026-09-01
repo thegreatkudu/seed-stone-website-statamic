@@ -1,0 +1,52 @@
+title: 'Privacy Policy'
+fields:
+  -
+    handle: hero
+    field:
+      type: group
+      display: 'Page Header'
+      fields:
+        -
+          handle: title
+          field:
+            type: textarea
+            display: 'Page Title'
+            instructions: 'e.g. "Privacy Policy"'
+            instructions_position: below
+        -
+          handle: last_modified
+          field:
+            format: 'F j, Y'
+            type: date
+            display: 'Last Modified Date'
+            instructions: 'e.g. "November 15, 2023"'
+            instructions_position: below
+  -
+    handle: sections
+    field:
+      type: replicator
+      display: 'Content Sections'
+      instructions: 'Each section appears as a nav item in the sidebar and a content block on the right.'
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          sets:
+            content_section:
+              display: 'Content Section'
+              fields:
+                -
+                  handle: title
+                  field:
+                    type: text
+                    display: 'Section Title'
+                    instructions: 'e.g. "Information", "Log data", "Cookies"'
+                    instructions_position: below
+                -
+                  handle: slug
+                  field:
+                    type: slug
+                    display: 'Section Anchor ID'
+                    instructions: 'Used for sidebar nav links e.g. "section1". Auto-generated from title.'
+                    instructions_position: below
+                -
+                  import: content

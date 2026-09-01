@@ -1,0 +1,326 @@
+{{ section:page_head_tags }}
+
+<!-- main css -->
+<link rel="stylesheet" href="/css/leoleo.css">
+<!-- fonts  -->
+<link rel="stylesheet" href="/assets/sandc_fonts/stylesheet.css">
+<link rel="stylesheet" href="/assets/tragez_fonts/stylesheet.css">
+<!-- font-awesome stylesheet -->
+<link rel="stylesheet" href="/fontawesome/css/all.css">
+<!-- sweetalert stylesheet  -->
+<link rel="stylesheet" href="/css/sweetalert2.min.css">
+<!-- sweetalert stylesheet  -->
+<link rel="stylesheet" href="/css/owl.carousel.min.css">
+<!-- swiper links -->
+<link rel="stylesheet" href="/css/swiper-bundle.min.css">
+
+<link rel='stylesheet' id='elementor-post-15-css'
+    href='{{ config:app:url }}/walley/wp-content/uploads/sites/2/elementor/css/post-15.css?ver=1767237625' media='all' />
+
+<link rel='stylesheet' id='elementor-post-543-css'
+    href='{{ config:app:url }}/walley/wp-content/uploads/sites/2/elementor/css/post-543.css?ver=1767244977' media='all' />
+<link rel='stylesheet' id='elementor-frontend-css'
+    href='{{ config:app:url }}/walley/wp-content/uploads/sites/2/elementor/css/custom-frontend.min.css?ver=1767237625'
+    media='all' />
+<link rel='stylesheet' id='elementor-post-273-css'
+    href='{{ config:app:url }}/walley/wp-content/uploads/sites/2/elementor/css/post-273.css?ver=1767237625' media='all' />
+
+<link rel="stylesheet" id="siteground-optimizer-combined-css-e64ce425848a5949b7d96dc18091db58"
+    href="/wp-content/uploads/siteground-optimizer-assets/siteground-optimizer-combined-css-e64ce425848a5949b7d96dc18091db58.css"
+    media="all" />
+<link rel="preload"
+    href="/wp-content/uploads/siteground-optimizer-assets/siteground-optimizer-combined-css-e64ce425848a5949b7d96dc18091db58.css"
+    as="style">
+
+{{ /section:page_head_tags }}
+
+<!-- page-head-tags -->
+
+{{# ============================================================ #}}
+{{# BODY CLASS #}}
+{{# ============================================================ #}}
+{{ section:body_class }}
+blog wp-theme-finpath wp-child-theme-finpath-child theme-finpath underline-link-effect keydesign-elementor-library
+woocommerce-no-js elementor-default elementor-kit-12
+wp-singular envato_tk_templates-template envato_tk_templates-template-elementor_header_footer single single-envato_tk_templates postid-543 wp-embed-responsive wp-theme-hello-elementor hello-elementor-default elementor-default elementor-template-full-width elementor-kit-6 elementor-page elementor-page-543
+{{ categories }}category-{{ slug }} {{ /categories }}
+{{ tags }}tag-{{ slug }} {{ /tags }}
+{{ /section:body_class }}
+
+<a class="skip-link screen-reader-text" href="#content">Skip to content </a>
+
+<div id="content" class="site-content">
+
+    {{# ============================================================ #}}
+    {{# PAGE HEADER #}}
+    {{# ============================================================ #}}
+    <div data-elementor-type="wp-post" data-elementor-id="543" class="elementor elementor-543">
+
+        <div class="elementor-element elementor-element-126e9922 e-flex e-con-boxed e-con e-parent" data-id="126e9922" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+            <div class="e-con-inner">
+                <div class="elementor-element elementor-element-19305dbc e-con-full e-flex e-con e-child" data-id="19305dbc" data-element_type="container">
+                    <div class="elementor-element elementor-element-10cfd999 elementor-invisible elementor-widget elementor-widget-heading" data-id="10cfd999" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
+                        <div class="elementor-widget-container">
+                            <h1 class="elementor-heading-title elementor-size-default">{{ page_main_title }}</h1>
+                        </div>
+                    </div>
+                    <div class="elementor-element elementor-element-c3196e6 elementor-invisible elementor-widget elementor-widget-text-editor" data-id="c3196e6" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="text-editor.default">
+                        <div class="elementor-widget-container">
+                            <p>{{ page_subtitle }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    {{# ============================================================ #}}
+    {{# MAIN CONTENT + SIDEBAR WRAPPER #}}
+    {{# ============================================================ #}}
+    <div class="keydesign-container e-con blog-content-area blog-layout-grid with-sidebar sidebar-right sticky-sidebar">
+
+        <div id="primary" class="content-area">
+            <main id="main" class="site-main" role="main">
+
+                {{# ============================================================ #}}
+                {{# POSTS LOOP #}}
+                {{# KEY FIX: paginate + as="posts" so we can loop {{ posts }} #}}
+                {{# and still access {{ paginate }} for pagination links #}}
+                {{# ============================================================ #}}
+                {{ collection:posts
+                sort="date:desc"
+                paginate="6"
+                as="posts" }}
+
+                {{# No results message #}}
+                {{ if no_results }}
+                <p class="no-posts">No posts found.</p>
+                {{ /if }}
+
+                {{# ———————————————————————————————————————————————————————— #}}
+                {{# Loop through posts #}}
+                {{# ———————————————————————————————————————————————————————— #}}
+                {{ posts }}
+
+                <article id="post-769" class="keydesign-card post-769 post type-post status-publish format-standard has-post-thumbnail hentry
+                            {{ categories }}category-{{ slug }} {{ /categories }}
+                            {{ tags }}tag-{{ slug }} {{ /tags }}">
+
+                    {{# Featured Image #}}
+                    {{ if featured_image }}
+                    <div class="entry-image">
+                        <a href="{{ url }}" title="{{ title }}">
+                            {{ glide:featured_image width="850" height="550" fit="crop" }}
+                            <img {{ if first }}{{ else }}loading="lazy" {{ /if }} width="850" height="550"
+                                src="{{ url }}" class="attachment-large size-large wp-post-image"
+                                alt="{{ featured_image:alt ?? title }}" decoding="async" srcset="
+                                                    {{ glide:featured_image width='850' height='550' fit='crop' }}{{ url }}{{ /glide:featured_image }} 850w,
+                                                    {{ glide:featured_image width='768' height='497' fit='crop' }}{{ url }}{{ /glide:featured_image }} 768w,
+                                                    {{ glide:featured_image width='710' height='459' fit='crop' }}{{ url }}{{ /glide:featured_image }} 710w,
+                                                    {{ glide:featured_image width='600' height='388' fit='crop' }}{{ url }}{{ /glide:featured_image }} 600w,
+                                                    {{ glide:featured_image width='300' height='194' fit='crop' }}{{ url }}{{ /glide:featured_image }} 300w
+                                                " sizes="(max-width: 850px) 100vw, 850px" />
+                            {{ /glide:featured_image }}
+                        </a>
+                    </div>
+                    {{ /if }}
+
+                    <div class="entry-wrapper">
+
+                        {{# Categories #}}
+                        {{ if categories }}
+                        <div class="category-meta">
+                            <span class="blog-label">
+                                {{ categories }}
+                                <a href="{{ url }}" rel="category tag">{{ title }}</a>
+                                {{ unless last }}, {{ /unless }}
+                                {{ /categories }}
+                            </span>
+                        </div>
+                        {{ /if }}
+
+                        {{# Title #}}
+                        <h2 class="post-title">
+                            <a href="{{ url }}" title="{{ title }}">{{ title }}</a>
+                        </h2>
+
+                        {{# Meta: date, author #}}
+                        <div class="entry-meta">
+                            <span class="published">{{ date format="F j, Y" }} </span>
+                            {{ if author }}
+                            <span class="author">
+                                <a href="/posts/author/{{ author:name | slugify }}" title="Posts by {{ author:name }}"
+                                    rel="author">{{ author:name }}</a>
+                            </span>
+                            {{ /if }}
+                        </div>
+
+                        {{# Excerpt from introduction Bard field #}}
+                        {{ if post_introduction_part }}
+                        <div class="entry-content-card">
+                            <div class="post-content">
+                                <p>
+                                    {{# Loop Bard blocks, grab first text block only #}}
+                                    {{ post_introduction_part }}
+                                    {{ if type == "text" }}
+                                    {{ text | strip_tags | truncate:160 }}
+                                    {{ /if }}
+                                    {{ /post_introduction_part }}
+                                </p>
+                            </div>
+                        </div>
+                        {{ /if }}
+
+                    </div>
+                </article>
+
+                {{ /posts }}
+
+            </main>
+             <!-- #main  -->
+            {{# ============================================================ #}}
+            {{# PAGINATION #}}
+            {{# Uses {{ paginate }} available inside the same tag pair #}}
+            {{# ============================================================ #}}
+            {{ paginate }}
+            {{ if total_pages > 1 }}
+
+            <nav class="navigation pagination" aria-label="Posts pagination">
+                <h2 class="screen-reader-text">Posts pagination</h2>
+
+                <div class="nav-links">
+
+                    {{# Previous link &laquo; #}}
+                    {{ if prev_page }}
+                    <a class="prev page-numbers" href="{{ prev_page }}"> Previous</a>
+                    {{ /if }}
+
+                    {{# Page number links #}}
+                    {{ links:all }}
+                    {{ if page == current_page }}
+                    <span aria-label="Page {{ page }}" aria-current="page" class="page-numbers current">
+                        {{ page }}
+                    </span>
+                    {{ else }}
+                    <a aria-label="Page {{ page }}" class="page-numbers" href="{{ url }}">
+                        {{ page }}
+                    </a>
+                    {{ /if }}
+                    {{ /links:all }}
+
+                    {{# Next link #}}
+                    {{ if next_page }}
+                    <a class="next page-numbers" href="{{ next_page }}">Next</a>
+                    {{ /if }}
+
+                </div>
+
+            </nav>
+
+            {{ /if }}
+            {{ /paginate }}
+        </div>
+        {{ /collection:posts }}
+        <!--  #primary  -->
+
+
+        {{# /#primary #}}
+
+        {{# ============================================================ #}}
+        {{# SIDEBAR #}}
+        {{# ============================================================ #}}
+        <aside id="secondary" class="widget-area keydesign-sidebar" role="complementary">
+
+            {{# Search Widget #}}
+            <section id="search-2" class="widget keydesign-widget widget_search">
+                <h4 class="widget-title">Search</h4>
+                <form role="search" method="get" class="search-form" action="/search">
+                    <label>
+                        <span class="screen-reader-text">Search for:</span>
+                        <input type="search" class="search-field" placeholder="Search &hellip;" value="{{ get:s }}"
+                            name="s" />
+                    </label>
+                    <input type="submit" class="search-submit" value="Search" />
+                </form>
+            </section>
+
+            {{# Categories Widget #}}
+            <section id="categories-2" class="widget keydesign-widget widget_categories">
+                <h4 class="widget-title">Categories</h4>
+                <nav aria-label="Categories">
+                    <ul>
+                        {{ taxonomy:categories sort="title:asc" }}
+                        <li class="cat-item cat-item-{{ slug }}">
+                            <a href="{{ url }}">{{ title }}</a>
+                            <span class="post_count">{{ entries_count }} </span>
+                        </li>
+                        {{ /taxonomy:categories }}
+                    </ul>
+                </nav>
+            </section>
+
+            {{# Recent Posts Widget #}}
+            <section id="recent-posts-thumbnails-2" class="widget keydesign-widget widget_recent_entries">
+                <h4 class="widget-title">Recent posts</h4>
+                <ul class="recent-posts-thumb">
+                    {{ collection:posts sort="date:desc" limit="3" }}
+                    <li>
+                        <a href="{{ url }}">
+                            {{ if featured_image }}
+                            <div class="recent-post-thumbnail">
+                                {{ glide:featured_image width="150" height="150" fit="crop" }}
+                                <img loading="lazy" width="150" height="150" src="{{ url }}"
+                                    class="attachment-thumbnail size-thumbnail wp-post-image" alt="{{ title }}"
+                                    decoding="async" srcset="
+                                                    {{ glide:featured_image width='150' height='150' fit='crop' }}{{ url }}{{ /glide:featured_image }} 150w,
+                                                    {{ glide:featured_image width='300' height='300' fit='crop' }}{{ url }}{{ /glide:featured_image }} 300w,
+                                                    {{ glide:featured_image width='100' height='100' fit='crop' }}{{ url }}{{ /glide:featured_image }} 100w
+                                                " sizes="(max-width: 150px) 100vw, 150px" />
+                                {{ /glide:featured_image }}
+                            </div>
+                            {{ /if }}
+                            <div class="recent-post-title">{{ title }}</div>
+                        </a>
+                    </li>
+                    {{ /collection:posts }}
+                </ul>
+            </section>
+
+            {{# Tags Widget #}}
+            <section id="tag_cloud-2" class="widget keydesign-widget widget_tag_cloud">
+                <h4 class="widget-title">Tags</h4>
+                <nav aria-label="Tags">
+                    <div class="tagcloud">
+                        {{ taxonomy:tags sort="title:asc" }}
+                        <a href="{{ url }}" class="tag-cloud-link tag-link-{{ slug }} tag-link-position-{{ count }}"
+                            style="font-size: 8pt;" aria-label="{{ title }} ({{ entries_count }} items)">
+                            {{ title }}
+                        </a>
+                        {{ /taxonomy:tags }}
+                    </div>
+                </nav>
+            </section>
+
+        </aside>
+        {{# /#secondary #}}
+        <!--  #secondary  -->
+
+    </div>
+    {{# /.keydesign-container #}}
+
+    <div data-elementor-type="wp-post" data-elementor-id="543" class="elementor elementor-543 elementor-15">
+
+        <!-- call to action -->
+        {{ partial:layout/cta-section }}
+        
+    </div>
+
+</div>
+
+{{# /#content #}}
+<!--  #content  -->
+
+<!-- footer -->
+
+<!-- page-footer-tags -->

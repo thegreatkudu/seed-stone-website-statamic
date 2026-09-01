@@ -1,0 +1,12 @@
+title: 'Global Button'
+fields:
+  -
+    handle: title
+    field:
+      type: text
+      display: Title
+  -
+    handle: link
+    field:
+      type: link
+      display: Link

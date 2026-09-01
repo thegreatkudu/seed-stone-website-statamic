@@ -1,0 +1,7 @@
+title: Section Titles
+fields:
+  -
+    handle: section_title
+    field:
+      type: text
+      display: Section Title

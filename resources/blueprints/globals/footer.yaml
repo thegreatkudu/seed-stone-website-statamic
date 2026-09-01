@@ -1,0 +1,29 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: copyright
+            field:
+              buttons:
+                - bold
+                - italic
+                - removeformat
+                - anchor
+              allow_source: true
+              remove_empty_nodes: false
+              antlers: true
+              type: bard
+              display: Copyright
+  home_footer:
+    display: 'Home Footer'
+    sections:
+      -
+        display: 'New Section'
+  page_footer:
+    display: 'Page Footer'
+    sections:
+      -
+        display: 'New Section'

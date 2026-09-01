@@ -1,0 +1,33 @@
+title: Contact
+honeypot: null
+store: true
+email:
+  -
+    to: info@sandc.co.tz
+    from: no-reply@sandc.co.tz
+    subject: 'New Contact Form Submission'
+    markdown: true
+fields:
+  -
+    handle: name
+    field:
+      type: text
+      display: Name
+      validate:
+        - required
+  -
+    handle: email
+    field:
+      type: text
+      display: 'Email Address'
+      input_type: email
+      validate:
+        - required
+        - email
+  -
+    handle: message
+    field:
+      type: textarea
+      display: Message
+      validate:
+        - required

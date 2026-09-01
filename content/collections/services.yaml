@@ -1,0 +1,15 @@
+title: Services
+icon: collections
+template: services/show
+layout: layout
+taxonomies:
+  - service_type
+revisions: false
+route: '/services/{slug}'
+date: true
+sort_dir: asc
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'
+    refresh: true

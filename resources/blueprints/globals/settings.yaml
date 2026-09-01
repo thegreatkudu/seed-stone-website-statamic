@@ -1,0 +1,44 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: 'Global Settings'
+        fields:
+          -
+            handle: header_logo
+            field:
+              container: assets
+              max_files: 1
+              display: 'Header Logo'
+              type: assets
+          -
+            handle: footer_logo
+            field:
+              container: assets
+              max_files: 1
+              type: assets
+              display: 'Footer Logo'
+          -
+            handle: site_name
+            field:
+              character_limit: 0
+              type: text
+              display: 'Site Name'
+          -
+            handle: meta_description
+            field:
+              type: text
+              display: 'Meta Description'
+  social:
+    display: Social
+    sections:
+      -
+        fields:
+          -
+            handle: og_image
+            field:
+              container: assets
+              max_files: 1
+              display: 'OG Image'
+              type: assets

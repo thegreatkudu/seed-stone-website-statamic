@@ -1,0 +1,61 @@
+title: Header
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: 'Extra Links'
+        fields:
+          -
+            handle: top_extra_links
+            field:
+              type: grid
+              display: 'Top Extra Links'
+              fields:
+                -
+                  handle: icon
+                  field:
+                    type: text
+                    display: Icon
+                -
+                  handle: title
+                  field:
+                    type: text
+                    display: Title
+                -
+                  handle: url
+                  field:
+                    type: text
+                    display: Link
+      -
+        display: 'Social Media'
+        fields:
+          -
+            handle: social_media
+            field:
+              type: grid
+              display: 'Social Media'
+              fields:
+                -
+                  handle: icon
+                  field:
+                    type: text
+                    display: Icon
+                -
+                  handle: title
+                  field:
+                    type: text
+                    display: Title
+                -
+                  handle: url
+                  field:
+                    type: text
+                    display: Link
+      -
+        display: 'Work Time'
+        fields:
+          -
+            handle: work_time_text
+            field:
+              type: text
+              display: 'Work Time Text'

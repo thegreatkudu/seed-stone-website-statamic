@@ -1,0 +1,167 @@
+[20-Mar-2026 00:18:48 America/Boise] PHP Warning:  require(/home2/abaigymy/public_html/leoleo/../vendor/autoload.php): failed to open stream: No such file or directory in /home2/abaigymy/public_html/leoleo/index.php on line 14
+[20-Mar-2026 00:18:48 America/Boise] PHP Fatal error:  require(): Failed opening required '/home2/abaigymy/public_html/leoleo/../vendor/autoload.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home2/abaigymy/public_html/leoleo/index.php on line 14
+[20-Mar-2026 06:20:43 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'imagick.so' (tried: /opt/cpanel/ea-php84/root/usr/lib64/php/modules/imagick.so (/opt/cpanel/ea-php84/root/usr/lib64/php/modules/imagick.so: undefined symbol: php_strtolower), /opt/cpanel/ea-php84/root/usr/lib64/php/modules/imagick.so.so (/opt/cpanel/ea-php84/root/usr/lib64/php/modules/imagick.so.so: cannot open shared object file: No such file or directory)) in Unknown on line 0
+[20-Mar-2026 00:20:43 America/Boise] PHP Warning:  PHP Startup: session.gc_divisor must be greater than 0 in Unknown on line 0
+[20-Mar-2026 00:22:39 America/Boise] PHP Fatal error:  Uncaught RuntimeException: Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.4.0". You are running 7.4.33. in /home2/abaigymy/leoleo/vendor/composer/platform_check.php:26
+Stack trace:
+#0 /home2/abaigymy/leoleo/vendor/composer/autoload_real.php(25): require()
+#1 /home2/abaigymy/leoleo/vendor/autoload.php(22): ComposerAutoloaderInitc514d8f7b9fc5970bdd94287905ef584::getLoader()
+#2 /home2/abaigymy/public_html/leoleo/index.php(14): require('/home2/abaigymy...')
+#3 {main}
+  thrown in /home2/abaigymy/leoleo/vendor/composer/platform_check.php on line 26
+[18-May-2026 01:33:13 America/Boise] PHP Warning:  require(/home2/abaigymy/leoleo/vendor/autoload.php): Failed to open stream: No such file or directory in /home2/abaigymy/public_html/leoleo/index.php on line 14
+[18-May-2026 01:33:13 America/Boise] PHP Warning:  require(/home2/abaigymy/leoleo/vendor/autoload.php): Failed to open stream: No such file or directory in /home2/abaigymy/public_html/leoleo/index.php on line 14
+[18-May-2026 01:33:13 America/Boise] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/abaigymy/leoleo/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php84/root/usr/share/pear') in /home2/abaigymy/public_html/leoleo/index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home2/abaigymy/public_html/leoleo/index.php on line 14
+[18-May-2026 01:33:14 America/Boise] PHP Warning:  require(/home2/abaigymy/leoleo/vendor/autoload.php): Failed to open stream: No such file or directory in /home2/abaigymy/public_html/leoleo/index.php on line 14
+[18-May-2026 01:33:14 America/Boise] PHP Warning:  require(/home2/abaigymy/leoleo/vendor/autoload.php): Failed to open stream: No such file or directory in /home2/abaigymy/public_html/leoleo/index.php on line 14
+[18-May-2026 01:33:14 America/Boise] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/abaigymy/leoleo/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php84/root/usr/share/pear') in /home2/abaigymy/public_html/leoleo/index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home2/abaigymy/public_html/leoleo/index.php on line 14
+[18-May-2026 01:33:16 America/Boise] PHP Warning:  require(/home2/abaigymy/leoleo/vendor/autoload.php): Failed to open stream: No such file or directory in /home2/abaigymy/public_html/leoleo/index.php on line 14
+[18-May-2026 01:33:16 America/Boise] PHP Warning:  require(/home2/abaigymy/leoleo/vendor/autoload.php): Failed to open stream: No such file or directory in /home2/abaigymy/public_html/leoleo/index.php on line 14
+[18-May-2026 01:33:16 America/Boise] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/abaigymy/leoleo/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php84/root/usr/share/pear') in /home2/abaigymy/public_html/leoleo/index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home2/abaigymy/public_html/leoleo/index.php on line 14
+[18-May-2026 01:33:16 America/Boise] PHP Warning:  require(/home2/abaigymy/leoleo/vendor/autoload.php): Failed to open stream: No such file or directory in /home2/abaigymy/public_html/leoleo/index.php on line 14
+[18-May-2026 01:33:16 America/Boise] PHP Warning:  require(/home2/abaigymy/leoleo/vendor/autoload.php): Failed to open stream: No such file or directory in /home2/abaigymy/public_html/leoleo/index.php on line 14
+[18-May-2026 01:33:16 America/Boise] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/abaigymy/leoleo/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php84/root/usr/share/pear') in /home2/abaigymy/public_html/leoleo/index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home2/abaigymy/public_html/leoleo/index.php on line 14
+[18-May-2026 01:33:19 America/Boise] PHP Warning:  require(/home2/abaigymy/leoleo/vendor/autoload.php): Failed to open stream: No such file or directory in /home2/abaigymy/public_html/leoleo/index.php on line 14
+[18-May-2026 01:33:19 America/Boise] PHP Warning:  require(/home2/abaigymy/leoleo/vendor/autoload.php): Failed to open stream: No such file or directory in /home2/abaigymy/public_html/leoleo/index.php on line 14
+[18-May-2026 01:33:19 America/Boise] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/abaigymy/leoleo/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php84/root/usr/share/pear') in /home2/abaigymy/public_html/leoleo/index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home2/abaigymy/public_html/leoleo/index.php on line 14
+[18-May-2026 01:33:20 America/Boise] PHP Warning:  require(/home2/abaigymy/leoleo/vendor/autoload.php): Failed to open stream: No such file or directory in /home2/abaigymy/public_html/leoleo/index.php on line 14
+[18-May-2026 01:33:20 America/Boise] PHP Warning:  require(/home2/abaigymy/leoleo/vendor/autoload.php): Failed to open stream: No such file or directory in /home2/abaigymy/public_html/leoleo/index.php on line 14
+[18-May-2026 01:33:20 America/Boise] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/abaigymy/leoleo/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php84/root/usr/share/pear') in /home2/abaigymy/public_html/leoleo/index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home2/abaigymy/public_html/leoleo/index.php on line 14
+[18-May-2026 01:33:20 America/Boise] PHP Warning:  require(/home2/abaigymy/leoleo/vendor/autoload.php): Failed to open stream: No such file or directory in /home2/abaigymy/public_html/leoleo/index.php on line 14
+[18-May-2026 01:33:20 America/Boise] PHP Warning:  require(/home2/abaigymy/leoleo/vendor/autoload.php): Failed to open stream: No such file or directory in /home2/abaigymy/public_html/leoleo/index.php on line 14
+[18-May-2026 01:33:20 America/Boise] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/abaigymy/leoleo/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php84/root/usr/share/pear') in /home2/abaigymy/public_html/leoleo/index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home2/abaigymy/public_html/leoleo/index.php on line 14
+[18-May-2026 01:33:21 America/Boise] PHP Warning:  require(/home2/abaigymy/leoleo/vendor/autoload.php): Failed to open stream: No such file or directory in /home2/abaigymy/public_html/leoleo/index.php on line 14
+[18-May-2026 01:33:21 America/Boise] PHP Warning:  require(/home2/abaigymy/leoleo/vendor/autoload.php): Failed to open stream: No such file or directory in /home2/abaigymy/public_html/leoleo/index.php on line 14
+[18-May-2026 01:33:21 America/Boise] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/abaigymy/leoleo/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php84/root/usr/share/pear') in /home2/abaigymy/public_html/leoleo/index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home2/abaigymy/public_html/leoleo/index.php on line 14
+[18-May-2026 01:33:22 America/Boise] PHP Warning:  require(/home2/abaigymy/leoleo/vendor/autoload.php): Failed to open stream: No such file or directory in /home2/abaigymy/public_html/leoleo/index.php on line 14
+[18-May-2026 01:33:22 America/Boise] PHP Warning:  require(/home2/abaigymy/leoleo/vendor/autoload.php): Failed to open stream: No such file or directory in /home2/abaigymy/public_html/leoleo/index.php on line 14
+[18-May-2026 01:33:22 America/Boise] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/abaigymy/leoleo/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php84/root/usr/share/pear') in /home2/abaigymy/public_html/leoleo/index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home2/abaigymy/public_html/leoleo/index.php on line 14
+[18-May-2026 01:33:22 America/Boise] PHP Warning:  require(/home2/abaigymy/leoleo/vendor/autoload.php): Failed to open stream: No such file or directory in /home2/abaigymy/public_html/leoleo/index.php on line 14
+[18-May-2026 01:33:22 America/Boise] PHP Warning:  require(/home2/abaigymy/leoleo/vendor/autoload.php): Failed to open stream: No such file or directory in /home2/abaigymy/public_html/leoleo/index.php on line 14
+[18-May-2026 01:33:22 America/Boise] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/abaigymy/leoleo/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php84/root/usr/share/pear') in /home2/abaigymy/public_html/leoleo/index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home2/abaigymy/public_html/leoleo/index.php on line 14
+[18-May-2026 01:38:46 America/Boise] PHP Warning:  require(/home2/abaigymy/leoleo/vendor/autoload.php): Failed to open stream: No such file or directory in /home2/abaigymy/public_html/leoleo/index.php on line 14
+[18-May-2026 01:38:46 America/Boise] PHP Warning:  require(/home2/abaigymy/leoleo/vendor/autoload.php): Failed to open stream: No such file or directory in /home2/abaigymy/public_html/leoleo/index.php on line 14
+[18-May-2026 01:38:46 America/Boise] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/abaigymy/leoleo/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php84/root/usr/share/pear') in /home2/abaigymy/public_html/leoleo/index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home2/abaigymy/public_html/leoleo/index.php on line 14
+[18-May-2026 01:41:28 America/Boise] PHP Warning:  require(/home2/abaigymy/leoleo/vendor/autoload.php): Failed to open stream: No such file or directory in /home2/abaigymy/public_html/leoleo/index.php on line 14
+[18-May-2026 01:41:28 America/Boise] PHP Warning:  require(/home2/abaigymy/leoleo/vendor/autoload.php): Failed to open stream: No such file or directory in /home2/abaigymy/public_html/leoleo/index.php on line 14
+[18-May-2026 01:41:28 America/Boise] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/abaigymy/leoleo/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php84/root/usr/share/pear') in /home2/abaigymy/public_html/leoleo/index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home2/abaigymy/public_html/leoleo/index.php on line 14
+[18-May-2026 07:58:19 UTC] PHP Fatal error:  Uncaught Illuminate\Foundation\ViteManifestNotFoundException: Vite manifest not found at: /home2/abaigymy/leoleo-africa/public/vendor/statamic/cp/build/manifest.json in /home2/abaigymy/leoleo-africa/vendor/laravel/framework/src/Illuminate/Foundation/Vite.php:946
+Stack trace:
+#0 /home2/abaigymy/leoleo-africa/vendor/laravel/framework/src/Illuminate/Foundation/Vite.php(880): Illuminate\Foundation\Vite->manifest('vendor/statamic...')
+#1 /home2/abaigymy/leoleo-africa/vendor/statamic/cms/src/Statamic.php(285): Illuminate\Foundation\Vite->asset('resources/img/f...')
+#2 /home2/abaigymy/leoleo-africa/storage/framework/views/177481e3243bf475784b8a2fa1bfeb9c.php(13): Statamic\Statamic::cpViteAsset('img/favicon-32x...')
+#3 /home2/abaigymy/leoleo-africa/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(123): require('/home2/abaigymy...')
+#4 /home2/abaigymy/leoleo-africa/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(124): Illuminate\Filesystem\Filesystem::{closure:Illuminate\Filesystem\Filesystem::getRequire():120}()
+#5 /home2/abaigymy/leoleo-africa/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(57): Illuminate\Filesystem\Filesystem->getRequire('/home2/abaigymy...', Array)
+#6 /home2/abaigymy/leoleo-africa/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(76): Illuminate\View\Engines\PhpEngine->evaluatePath('/home2/abaigymy...', Array)
+#7 /home2/abaigymy/leoleo-africa/vendor/laravel/framework/src/Illuminate/View/View.php(208): Illuminate\View\Engines\CompilerEngine->get('/home2/abaigymy...', Array)
+#8 /home2/abaigymy/leoleo-africa/vendor/laravel/framework/src/Illuminate/View/View.php(191): Illuminate\View\View->getContents()
+#9 /home2/abaigymy/leoleo-africa/vendor/laravel/framework/src/Illuminate/View/View.php(160): Illuminate\View\View->renderContents()
+#10 /home2/abaigymy/leoleo-africa/storage/framework/views/4064b8fa3ade32a90f1eeecb3a7fc08d.php(7): Illuminate\View\View->render()
+#11 /home2/abaigymy/leoleo-africa/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(123): require('/home2/abaigymy...')
+#12 /home2/abaigymy/leoleo-africa/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(124): Illuminate\Filesystem\Filesystem::{closure:Illuminate\Filesystem\Filesystem::getRequire():120}()
+#13 /home2/abaigymy/leoleo-africa/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(57): Illuminate\Filesystem\Filesystem->getRequire('/home2/abaigymy...', Array)
+#14 /home2/abaigymy/leoleo-africa/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(76): Illuminate\View\Engines\PhpEngine->evaluatePath('/home2/abaigymy...', Array)
+#15 /home2/abaigymy/leoleo-africa/vendor/laravel/framework/src/Illuminate/View/View.php(208): Illuminate\View\Engines\CompilerEngine->get('/home2/abaigymy...', Array)
+#16 /home2/abaigymy/leoleo-africa/vendor/laravel/framework/src/Illuminate/View/View.php(191): Illuminate\View\View->getContents()
+#17 /home2/abaigymy/leoleo-africa/vendor/laravel/framework/src/Illuminate/View/View.php(160): Illuminate\View\View->renderContents()
+#18 /home2/abaigymy/leoleo-africa/vendor/laravel/framework/src/Illuminate/Http/Response.php(78): Illuminate\View\View->render()
+#19 /home2/abaigymy/leoleo-africa/vendor/laravel/framework/src/Illuminate/Http/Response.php(34): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#20 /home2/abaigymy/leoleo-africa/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php(61): Illuminate\Http\Response->__construct(Object(Illuminate\View\View), 200, Array)
+#21 /home2/abaigymy/leoleo-africa/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php(91): Illuminate\Routing\ResponseFactory->make(Object(Illuminate\View\View), 200, Array)
+#22 /home2/abaigymy/leoleo-africa/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(363): Illuminate\Routing\ResponseFactory->view('statamic::layou...', Array)
+#23 /home2/abaigymy/leoleo-africa/vendor/inertiajs/inertia-laravel/src/Response.php(219): Illuminate\Support\Facades\Facade::__callStatic('view', Array)
+#24 /home2/abaigymy/leoleo-africa/vendor/statamic/cms/src/Exceptions/Concerns/RendersControlPanelExceptions.php(26): Inertia\Response->toResponse(Object(Illuminate\Http\Request))
+#25 /home2/abaigymy/leoleo-africa/vendor/statamic/cms/src/Exceptions/ControlPanelExceptionHandler.php(19): Statamic\Exceptions\ControlPanelExceptionHandler->renderException(Object(Illuminate\Http\Request), Object(Illuminate\View\ViewException))
+#26 /home2/abaigymy/leoleo-africa/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(221): Statamic\Exceptions\ControlPanelExceptionHandler->render(Object(Illuminate\Http\Request), Object(Illuminate\View\ViewException))
+#27 /home2/abaigymy/leoleo-africa/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(198): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse(Object(Illuminate\View\ViewException))
+#28 /home2/abaigymy/leoleo-africa/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(258): Illuminate\Foundation\Bootstrap\HandleExceptions->handleException(Object(Illuminate\View\ViewException))
+#29 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->{closure:Illuminate\Foundation\Bootstrap\HandleExceptions::forwardsTo():257}(Object(Illuminate\View\ViewException))
+#30 {main}
+
+Next Illuminate\View\ViewException: Vite manifest not found at: /home2/abaigymy/leoleo-africa/public/vendor/statamic/cp/build/manifest.json (View: /home2/abaigymy/leoleo-africa/vendor/statamic/cms/resources/views/partials/head.blade.php) in /home2/abaigymy/leoleo-africa/vendor/laravel/framework/src/Illuminate/Foundation/Vite.php:946
+Stack trace:
+#0 /home2/abaigymy/leoleo-africa/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(59): Illuminate\View\Engines\CompilerEngine->handleViewException(Object(Illuminate\Foundation\ViteManifestNotFoundException), 1)
+#1 /home2/abaigymy/leoleo-africa/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(76): Illuminate\View\Engines\PhpEngine->evaluatePath('/home2/abaigymy...', Array)
+#2 /home2/abaigymy/leoleo-africa/vendor/laravel/framework/src/Illuminate/View/View.php(208): Illuminate\View\Engines\CompilerEngine->get('/home2/abaigymy...', Array)
+#3 /home2/abaigymy/leoleo-africa/vendor/laravel/framework/src/Illuminate/View/View.php(191): Illuminate\View\View->getContents()
+#4 /home2/abaigymy/leoleo-africa/vendor/laravel/framework/src/Illuminate/View/View.php(160): Illuminate\View\View->renderContents()
+#5 /home2/abaigymy/leoleo-africa/storage/framework/views/4064b8fa3ade32a90f1eeecb3a7fc08d.php(7): Illuminate\View\View->render()
+#6 /home2/abaigymy/leoleo-africa/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(123): require('/home2/abaigymy...')
+#7 /home2/abaigymy/leoleo-africa/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(124): Illuminate\Filesystem\Filesystem::{closure:Illuminate\Filesystem\Filesystem::getRequire():120}()
+#8 /home2/abaigymy/leoleo-africa/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(57): Illuminate\Filesystem\Filesystem->getRequire('/home2/abaigymy...', Array)
+#9 /home2/abaigymy/leoleo-africa/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(76): Illuminate\View\Engines\PhpEngine->evaluatePath('/home2/abaigymy...', Array)
+#10 /home2/abaigymy/leoleo-africa/vendor/laravel/framework/src/Illuminate/View/View.php(208): Illuminate\View\Engines\CompilerEngine->get('/home2/abaigymy...', Array)
+#11 /home2/abaigymy/leoleo-africa/vendor/laravel/framework/src/Illuminate/View/View.php(191): Illuminate\View\View->getContents()
+#12 /home2/abaigymy/leoleo-africa/vendor/laravel/framework/src/Illuminate/View/View.php(160): Illuminate\View\View->renderContents()
+#13 /home2/abaigymy/leoleo-africa/vendor/laravel/framework/src/Illuminate/Http/Response.php(78): Illuminate\View\View->render()
+#14 /home2/abaigymy/leoleo-africa/vendor/laravel/framework/src/Illuminate/Http/Response.php(34): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#15 /home2/abaigymy/leoleo-africa/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php(61): Illuminate\Http\Response->__construct(Object(Illuminate\View\View), 200, Array)
+#16 /home2/abaigymy/leoleo-africa/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php(91): Illuminate\Routing\ResponseFactory->make(Object(Illuminate\View\View), 200, Array)
+#17 /home2/abaigymy/leoleo-africa/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(363): Illuminate\Routing\ResponseFactory->view('statamic::layou...', Array)
+#18 /home2/abaigymy/leoleo-africa/vendor/inertiajs/inertia-laravel/src/Response.php(219): Illuminate\Support\Facades\Facade::__callStatic('view', Array)
+#19 /home2/abaigymy/leoleo-africa/vendor/statamic/cms/src/Exceptions/Concerns/RendersControlPanelExceptions.php(26): Inertia\Response->toResponse(Object(Illuminate\Http\Request))
+#20 /home2/abaigymy/leoleo-africa/vendor/statamic/cms/src/Exceptions/ControlPanelExceptionHandler.php(19): Statamic\Exceptions\ControlPanelExceptionHandler->renderException(Object(Illuminate\Http\Request), Object(Illuminate\View\ViewException))
+#21 /home2/abaigymy/leoleo-africa/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(221): Statamic\Exceptions\ControlPanelExceptionHandler->render(Object(Illuminate\Http\Request), Object(Illuminate\View\ViewException))
+#22 /home2/abaigymy/leoleo-africa/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(198): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse(Object(Illuminate\View\ViewException))
+#23 /home2/abaigymy/leoleo-africa/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(258): Illuminate\Foundation\Bootstrap\HandleExceptions->handleException(Object(Illuminate\View\ViewException))
+#24 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->{closure:Illuminate\Foundation\Bootstrap\HandleExceptions::forwardsTo():257}(Object(Illuminate\View\ViewException))
+#25 {main}
+
+Next Illuminate\View\ViewException: Vite manifest not found at: /home2/abaigymy/leoleo-africa/public/vendor/statamic/cp/build/manifest.json (View: /home2/abaigymy/leoleo-africa/vendor/statamic/cms/resources/views/partials/head.blade.php) (View: /home2/abaigymy/leoleo-africa/vendor/statamic/cms/resources/views/partials/head.blade.php) in /home2/abaigymy/leoleo-africa/vendor/laravel/framework/src/Illuminate/Foundation/Vite.php:946
+Stack trace:
+#0 /home2/abaigymy/leoleo-africa/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(59): Illuminate\View\Engines\CompilerEngine->handleViewException(Object(Illuminate\View\ViewException), 0)
+#1 /home2/abaigymy/leoleo-africa/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(76): Illuminate\View\Engines\PhpEngine->evaluatePath('/home2/abaigymy...', Array)
+#2 /home2/abaigymy/leoleo-africa/vendor/laravel/framework/src/Illuminate/View/View.php(208): Illuminate\View\Engines\CompilerEngine->get('/home2/abaigymy...', Array)
+#3 /home2/abaigymy/leoleo-africa/vendor/laravel/framework/src/Illuminate/View/View.php(191): Illuminate\View\View->getContents()
+#4 /home2/abaigymy/leoleo-africa/vendor/laravel/framework/src/Illuminate/View/View.php(160): Illuminate\View\View->renderContents()
+#5 /home2/abaigymy/leoleo-africa/vendor/laravel/framework/src/Illuminate/Http/Response.php(78): Illuminate\View\View->render()
+#6 /home2/abaigymy/leoleo-africa/vendor/laravel/framework/src/Illuminate/Http/Response.php(34): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#7 /home2/abaigymy/leoleo-africa/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php(61): Illuminate\Http\Response->__construct(Object(Illuminate\View\View), 200, Array)
+#8 /home2/abaigymy/leoleo-africa/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php(91): Illuminate\Routing\ResponseFactory->make(Object(Illuminate\View\View), 200, Array)
+#9 /home2/abaigymy/leoleo-africa/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(363): Illuminate\Routing\ResponseFactory->view('statamic::layou...', Array)
+#10 /home2/abaigymy/leoleo-africa/vendor/inertiajs/inertia-laravel/src/Response.php(219): Illuminate\Support\Facades\Facade::__callStatic('view', Array)
+#11 /home2/abaigymy/leoleo-africa/vendor/statamic/cms/src/Exceptions/Concerns/RendersControlPanelExceptions.php(26): Inertia\Response->toResponse(Object(Illuminate\Http\Request))
+#12 /home2/abaigymy/leoleo-africa/vendor/statamic/cms/src/Exceptions/ControlPanelExceptionHandler.php(19): Statamic\Exceptions\ControlPanelExceptionHandler->renderException(Object(Illuminate\Http\Request), Object(Illuminate\View\ViewException))
+#13 /home2/abaigymy/leoleo-africa/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(221): Statamic\Exceptions\ControlPanelExceptionHandler->render(Object(Illuminate\Http\Request), Object(Illuminate\View\ViewException))
+#14 /home2/abaigymy/leoleo-africa/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(198): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse(Object(Illuminate\View\ViewException))
+#15 /home2/abaigymy/leoleo-africa/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(258): Illuminate\Foundation\Bootstrap\HandleExceptions->handleException(Object(Illuminate\View\ViewException))
+#16 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->{closure:Illuminate\Foundation\Bootstrap\HandleExceptions::forwardsTo():257}(Object(Illuminate\View\ViewException))
+#17 {main}
+  thrown in /home2/abaigymy/leoleo-africa/vendor/laravel/framework/src/Illuminate/Foundation/Vite.php on line 946

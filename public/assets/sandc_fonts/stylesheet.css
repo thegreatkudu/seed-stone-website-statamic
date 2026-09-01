@@ -1,0 +1,1156 @@
+@font-face {
+    font-family: 'Dosis';
+    src: url('Dosis-Regular.woff2') format('woff2'),
+        url('Dosis-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Dosis';
+    src: url('Dosis-SemiBold.woff2') format('woff2'),
+        url('Dosis-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Dosis';
+    src: url('Dosis-Regular.woff2') format('woff2'),
+        url('Dosis-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Dosis';
+    src: url('Dosis-Medium.woff2') format('woff2'),
+        url('Dosis-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Dosis';
+    src: url('Dosis-Light.woff2') format('woff2'),
+        url('Dosis-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Dosis';
+    src: url('Dosis-ExtraLight.woff2') format('woff2'),
+        url('Dosis-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Dosis';
+    src: url('Dosis-ExtraBold.woff2') format('woff2'),
+        url('Dosis-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Dosis';
+    src: url('Dosis-Bold.woff2') format('woff2'),
+        url('Dosis-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Inter UI';
+    src: url('InterUI-BlackItalic.woff2') format('woff2'),
+        url('InterUI-BlackItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter Thin  BETA';
+    src: url('Inter-ThinItalicBETA.woff2') format('woff2'),
+        url('Inter-ThinItalicBETA.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter Thin BETA';
+    src: url('Inter-ThinBETA.woff2') format('woff2'),
+        url('Inter-ThinBETA.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter Semi';
+    src: url('Inter-SemiBoldItalic.woff2') format('woff2'),
+        url('Inter-SemiBoldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('Inter-Regular.woff2') format('woff2'),
+        url('Inter-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter Semi';
+    src: url('Inter-SemiBold.woff2') format('woff2'),
+        url('Inter-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('Inter-MediumItalic.woff2') format('woff2'),
+        url('Inter-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('Inter-Medium.woff2') format('woff2'),
+        url('Inter-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter Light  BETA';
+    src: url('Inter-LightItalicBETA.woff2') format('woff2'),
+        url('Inter-LightItalicBETA.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter Light BETA';
+    src: url('Inter-LightBETA.woff2') format('woff2'),
+        url('Inter-LightBETA.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('Inter-Italic.woff2') format('woff2'),
+        url('Inter-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter Extra Light  BETA';
+    src: url('Inter-ExtraLightItalicBETA.woff2') format('woff2'),
+        url('Inter-ExtraLightItalicBETA.woff') format('woff');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter Extra Light BETA';
+    src: url('Inter-ExtraLightBETA.woff2') format('woff2'),
+        url('Inter-ExtraLightBETA.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter Extra';
+    src: url('Inter-ExtraBoldItalic.woff2') format('woff2'),
+        url('Inter-ExtraBoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter Extra';
+    src: url('Inter-ExtraBold.woff2') format('woff2'),
+        url('Inter-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('Inter-BoldItalic.woff2') format('woff2'),
+        url('Inter-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('Inter-Bold.woff2') format('woff2'),
+        url('Inter-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('Inter-Black.woff2') format('woff2'),
+        url('Inter-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Humanst521 BT';
+    src: url('Humanist521BT-Roman.woff2') format('woff2'),
+        url('Humanist521BT-Roman.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Humanist 522';
+    src: url('Humanist522.woff2') format('woff2'),
+        url('Humanist522.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GT Walsheim';
+    src: url('GTWalsheim-RegularOblique.woff2') format('woff2'),
+        url('GTWalsheim-RegularOblique.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans Nova';
+    src: url('GillSansNova-UltraLightIt.woff2') format('woff2'),
+        url('GillSansNova-UltraLightIt.woff') format('woff');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans Nova';
+    src: url('GillSansNova-UltraLight.woff2') format('woff2'),
+        url('GillSansNova-UltraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans Nova Shadowed';
+    src: url('GillSansNovaShadowed-Light.woff2') format('woff2'),
+        url('GillSansNovaShadowed-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans Nova';
+    src: url('GillSansNova-SemiBold.woff2') format('woff2'),
+        url('GillSansNova-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans Nova';
+    src: url('GillSansNova-SemiBoldItalic.woff2') format('woff2'),
+        url('GillSansNova-SemiBoldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans Nova';
+    src: url('GillSansNova-Medium.woff2') format('woff2'),
+        url('GillSansNova-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans Nova';
+    src: url('GillSansNova-MediumItalic.woff2') format('woff2'),
+        url('GillSansNova-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans Nova';
+    src: url('GillSansNova-LightItalic.woff2') format('woff2'),
+        url('GillSansNova-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans Nova';
+    src: url('GillSansNova-Light.woff2') format('woff2'),
+        url('GillSansNova-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Gill Sans Nova';
+    src: url('GillSansNova-Light.woff2') format('woff2'),
+        url('GillSansNova-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans Nova Inline';
+    src: url('GillSansNovaInline-SemiBold.woff2') format('woff2'),
+        url('GillSansNovaInline-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans Nova Inline';
+    src: url('GillSansNovaInline-Regular.woff2') format('woff2'),
+        url('GillSansNovaInline-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans Nova Inline ExtraLt';
+    src: url('GillSansNovaInline-ExtraLt.woff2') format('woff2'),
+        url('GillSansNovaInline-ExtraLt.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans Nova Cond Lt';
+    src: url('GillSansNova-CondLtItalic.woff2') format('woff2'),
+        url('GillSansNova-CondLtItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans Nova Cn';
+    src: url('GillSansNova-CnUltraLightIt.woff2') format('woff2'),
+        url('GillSansNova-CnUltraLightIt.woff') format('woff');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans Nova Cn';
+    src: url('GillSansNova-CnUltraLight.woff2') format('woff2'),
+        url('GillSansNova-CnUltraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans Nova Cn';
+    src: url('GillSansNova-CnUltraBold.woff2') format('woff2'),
+        url('GillSansNova-CnUltraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans Nova Cn';
+    src: url('GillSansNova-CnSemiBoldIt.woff2') format('woff2'),
+        url('GillSansNova-CnSemiBoldIt.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans Nova Cn';
+    src: url('GillSansNova-CnMediumIt.woff2') format('woff2'),
+        url('GillSansNova-CnMediumIt.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans Nova Cn';
+    src: url('GillSansNova-CnSemiBold.woff2') format('woff2'),
+        url('GillSansNova-CnSemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans Nova Cn';
+    src: url('GillSansNova-CnMedium.woff2') format('woff2'),
+        url('GillSansNova-CnMedium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans Nova Cn';
+    src: url('GillSansNova-CnLight.woff2') format('woff2'),
+        url('GillSansNova-CnLight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans Nova Cn';
+    src: url('GillSansNova-CnHeavy.woff2') format('woff2'),
+        url('GillSansNova-CnHeavy.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans Nova Cn Book';
+    src: url('GillSansNova-CnBookIt.woff2') format('woff2'),
+        url('GillSansNova-CnBookIt.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans Nova Cn Book';
+    src: url('GillSansNova-CnBook.woff2') format('woff2'),
+        url('GillSansNova-CnBook.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans Nova Cn Book';
+    src: url('GillSansNova-CnBoldIt.woff2') format('woff2'),
+        url('GillSansNova-CnBoldIt.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans Nova Cn Book';
+    src: url('GillSansNova-CnBold.woff2') format('woff2'),
+        url('GillSansNova-CnBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gadget';
+    src: url('Gadget.woff2') format('woff2'),
+        url('Gadget.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans Nova Book';
+    src: url('GillSansNova-BoldItalic.woff2') format('woff2'),
+        url('GillSansNova-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans Nova Book';
+    src: url('GillSansNova-Bold.woff2') format('woff2'),
+        url('GillSansNova-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Euclid Circular B';
+    src: url('EuclidCircularB-BoldItalic.woff2') format('woff2'),
+        url('EuclidCircularB-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Euclid Circular B';
+    src: url('EuclidCircularB-Bold.woff2') format('woff2'),
+        url('EuclidCircularB-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Euclid Circular A';
+    src: url('EuclidCircularA-SemiBoldItalic.woff2') format('woff2'),
+        url('EuclidCircularA-SemiBoldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Euclid Circular A';
+    src: url('EuclidCircularA-SemiBold.woff2') format('woff2'),
+        url('EuclidCircularA-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Euclid Circular A';
+    src: url('EuclidCircularA-Regular.woff2') format('woff2'),
+        url('EuclidCircularA-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Euclid Circular A';
+    src: url('EuclidCircularA-MediumItalic.woff2') format('woff2'),
+        url('EuclidCircularA-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Euclid Circular A';
+    src: url('EuclidCircularA-Medium.woff2') format('woff2'),
+        url('EuclidCircularA-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Euclid Circular A';
+    src: url('EuclidCircularA-LightItalic.woff2') format('woff2'),
+        url('EuclidCircularA-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Euclid Circular A';
+    src: url('EuclidCircularA-Light.woff2') format('woff2'),
+        url('EuclidCircularA-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Euclid Circular A';
+    src: url('EuclidCircularA-Italic.woff2') format('woff2'),
+        url('EuclidCircularA-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Euclid Circular A';
+    src: url('EuclidCircularA-BoldItalic.woff2') format('woff2'),
+        url('EuclidCircularA-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Euclid Circular A';
+    src: url('EuclidCircularA-Bold.woff2') format('woff2'),
+        url('EuclidCircularA-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans Nova Inline';
+    src: url('GillSansNovaInline-Bold.woff2') format('woff2'),
+        url('GillSansNovaInline-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GillSansNovaW07-CondHeavyIt';
+    src: url('GillSansNovaW07-CondHeavyIt.woff2') format('woff2'),
+        url('GillSansNovaW07-CondHeavyIt.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GillSansNovaDeco';
+    src: url('GillSansNovaDeco-Regular.woff2') format('woff2'),
+        url('GillSansNovaDeco-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans Nova ExtraCond';
+    src: url('GillSansNova-ExtraCondBold.woff2') format('woff2'),
+        url('GillSansNova-ExtraCondBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans Nova';
+    src: url('GillSansNova-ExtraBold.woff2') format('woff2'),
+        url('GillSansNova-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans Nova Book';
+    src: url('GillSansNova-Book.woff2') format('woff2'),
+        url('GillSansNova-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans Nova Book';
+    src: url('GillSansNova-BookItalic.woff2') format('woff2'),
+        url('GillSansNova-BookItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans Nova';
+    src: url('GillSansNova-Heavy.woff2') format('woff2'),
+        url('GillSansNova-Heavy.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans Nova';
+    src: url('GillSansNova-UltraBold.woff2') format('woff2'),
+        url('GillSansNova-UltraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans Nova Inline Condensed';
+    src: url('GillSansNovaInline-Cond.woff2') format('woff2'),
+        url('GillSansNovaInline-Cond.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans Nova Shadowed';
+    src: url('GillSansNovaShadowed-Medium.woff2') format('woff2'),
+        url('GillSansNovaShadowed-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans Nova Shadowed Outline';
+    src: url('GillSansNovaShadowed-Outln.woff2') format('woff2'),
+        url('GillSansNovaShadowed-Outln.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans Nova';
+    src: url('GillSansNova-HeavyItalic.woff2') format('woff2'),
+        url('GillSansNova-HeavyItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GT Walsheim';
+    src: url('GTWalsheim-Light.woff2') format('woff2'),
+        url('GTWalsheim-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GillSansNovaInlineW07';
+    src: url('GillSansNovaInlineW07-Light.woff2') format('woff2'),
+        url('GillSansNovaInlineW07-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GT Walsheim';
+    src: url('GTWalsheim-Light.woff2') format('woff2'),
+        url('GTWalsheim-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GT Walsheim';
+    src: url('GTWalsheim-Light.woff2') format('woff2'),
+        url('GTWalsheim-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GillSansNovaW07-CondXBold';
+    src: url('GillSansNovaW07-CondXBold.woff2') format('woff2'),
+        url('GillSansNovaW07-CondXBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Euclid Circular B';
+    src: url('EuclidCircularB-SemiBoldItalic.woff2') format('woff2'),
+        url('EuclidCircularB-SemiBoldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Euclid Circular B';
+    src: url('EuclidCircularB-SemiBold.woff2') format('woff2'),
+        url('EuclidCircularB-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Euclid Circular B';
+    src: url('EuclidCircularB-Regular.woff2') format('woff2'),
+        url('EuclidCircularB-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Euclid Circular B';
+    src: url('EuclidCircularB-MediumItalic.woff2') format('woff2'),
+        url('EuclidCircularB-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Euclid Circular B';
+    src: url('EuclidCircularB-Medium.woff2') format('woff2'),
+        url('EuclidCircularB-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Euclid Circular B';
+    src: url('EuclidCircularB-LightItalic.woff2') format('woff2'),
+        url('EuclidCircularB-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Euclid Circular B';
+    src: url('EuclidCircularB-Light.woff2') format('woff2'),
+        url('EuclidCircularB-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Euclid Circular B';
+    src: url('EuclidCircularB-Italic.woff2') format('woff2'),
+        url('EuclidCircularB-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Euclid Circular B';
+    src: url('EuclidCircularB-BoldItalic.woff2') format('woff2'),
+        url('EuclidCircularB-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Euclid Circular B';
+    src: url('EuclidCircularB-BoldItalic.woff2') format('woff2'),
+        url('EuclidCircularB-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Euclid Circular B';
+    src: url('EuclidCircularB-Bold.woff2') format('woff2'),
+        url('EuclidCircularB-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Euclid Circular A';
+    src: url('EuclidCircularA-SemiBoldItalic.woff2') format('woff2'),
+        url('EuclidCircularA-SemiBoldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Euclid Circular A';
+    src: url('EuclidCircularA-SemiBold.woff2') format('woff2'),
+        url('EuclidCircularA-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Euclid Circular A';
+    src: url('EuclidCircularA-Regular.woff2') format('woff2'),
+        url('EuclidCircularA-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Euclid Circular A';
+    src: url('EuclidCircularA-MediumItalic.woff2') format('woff2'),
+        url('EuclidCircularA-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Euclid Circular A';
+    src: url('EuclidCircularA-Medium.woff2') format('woff2'),
+        url('EuclidCircularA-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Euclid Circular A';
+    src: url('EuclidCircularA-LightItalic.woff2') format('woff2'),
+        url('EuclidCircularA-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Euclid Circular A';
+    src: url('EuclidCircularA-Light.woff2') format('woff2'),
+        url('EuclidCircularA-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Euclid Circular A';
+    src: url('EuclidCircularA-Italic.woff2') format('woff2'),
+        url('EuclidCircularA-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Euclid Circular A';
+    src: url('EuclidCircularA-BoldItalic.woff2') format('woff2'),
+        url('EuclidCircularA-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Euclid Circular A';
+    src: url('EuclidCircularA-Bold.woff2') format('woff2'),
+        url('EuclidCircularA-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans Nova Inline';
+    src: url('GillSansNovaInline-Bold.woff2') format('woff2'),
+        url('GillSansNovaInline-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GillSansNovaW07-CondHeavyIt';
+    src: url('GillSansNovaW07-CondHeavyIt.woff2') format('woff2'),
+        url('GillSansNovaW07-CondHeavyIt.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GillSansNovaDeco';
+    src: url('GillSansNovaDeco-Regular.woff2') format('woff2'),
+        url('GillSansNovaDeco-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans Nova ExtraCond';
+    src: url('GillSansNova-ExtraCondBold.woff2') format('woff2'),
+        url('GillSansNova-ExtraCondBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans Nova';
+    src: url('GillSansNova-ExtraBold.woff2') format('woff2'),
+        url('GillSansNova-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans Nova Book';
+    src: url('GillSansNova-Book.woff2') format('woff2'),
+        url('GillSansNova-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans Nova Book';
+    src: url('GillSansNova-BookItalic.woff2') format('woff2'),
+        url('GillSansNova-BookItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans Nova';
+    src: url('GillSansNova-Heavy.woff2') format('woff2'),
+        url('GillSansNova-Heavy.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans Nova';
+    src: url('GillSansNova-UltraBold.woff2') format('woff2'),
+        url('GillSansNova-UltraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans Nova Inline Condensed';
+    src: url('GillSansNovaInline-Cond.woff2') format('woff2'),
+        url('GillSansNovaInline-Cond.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans Nova Shadowed';
+    src: url('GillSansNovaShadowed-Medium.woff2') format('woff2'),
+        url('GillSansNovaShadowed-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans Nova Shadowed Outline';
+    src: url('GillSansNovaShadowed-Outln.woff2') format('woff2'),
+        url('GillSansNovaShadowed-Outln.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans Nova';
+    src: url('GillSansNova-HeavyItalic.woff2') format('woff2'),
+        url('GillSansNova-HeavyItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GT Walsheim';
+    src: url('GTWalsheim-Light.woff2') format('woff2'),
+        url('GTWalsheim-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GillSansNovaInlineW07';
+    src: url('GillSansNovaInlineW07-Light.woff2') format('woff2'),
+        url('GillSansNovaInlineW07-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GT Walsheim';
+    src: url('GTWalsheim-Light.woff2') format('woff2'),
+        url('GTWalsheim-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GT Walsheim';
+    src: url('GTWalsheim-Light.woff2') format('woff2'),
+        url('GTWalsheim-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GillSansNovaW07-CondXBold';
+    src: url('GillSansNovaW07-CondXBold.woff2') format('woff2'),
+        url('GillSansNovaW07-CondXBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+

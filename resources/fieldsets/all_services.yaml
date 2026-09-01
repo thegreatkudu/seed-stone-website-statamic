@@ -1,0 +1,95 @@
+title: 'All Services'
+fields:
+  -
+    handle: hero
+    field:
+      type: group
+      display: 'Hero Section'
+      fields:
+        -
+          handle: title
+          field:
+            type: text
+            display: Title
+        -
+          handle: description
+          field:
+            type: textarea
+            display: Description
+  -
+    handle: sidebar_label
+    field:
+      type: text
+      display: 'Sidebar Label'
+      instructions: 'e.g. "Our Services"'
+      instructions_position: below
+  -
+    handle: features_label
+    field:
+      type: text
+      display: 'Features Label'
+      instructions: 'e.g. "GulioSmart Features"'
+      instructions_position: below
+  -
+    handle: feature_1
+    field:
+      type: group
+      display: 'Feature 1'
+      fields:
+        -
+          handle: icon_class
+          field:
+            type: text
+            display: 'Icon Class'
+        -
+          handle: title
+          field:
+            type: text
+            display: Title
+        -
+          handle: description
+          field:
+            type: textarea
+            display: Description
+  -
+    handle: feature_2
+    field:
+      type: group
+      display: 'Feature 2'
+      fields:
+        -
+          handle: icon_class
+          field:
+            type: text
+            display: 'Icon Class'
+        -
+          handle: title
+          field:
+            type: text
+            display: Title
+        -
+          handle: description
+          field:
+            type: textarea
+            display: Description
+  -
+    handle: feature_3
+    field:
+      type: group
+      display: 'Feature 3'
+      fields:
+        -
+          handle: icon_class
+          field:
+            type: text
+            display: 'Icon Class'
+        -
+          handle: title
+          field:
+            type: text
+            display: Title
+        -
+          handle: description
+          field:
+            type: textarea
+            display: Description

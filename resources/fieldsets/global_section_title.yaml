@@ -1,0 +1,33 @@
+title: 'Global Section Title'
+fields:
+  -
+    handle: highlight_title
+    field:
+      type: text
+      display: 'Highlight Title'
+  -
+    handle: main_title
+    field:
+      type: group
+      display: 'Main Title'
+      fields:
+        -
+          handle: text_before
+          field:
+            type: text
+            display: 'Text Before Highlight'
+        -
+          handle: highlighted_text
+          field:
+            type: text
+            display: 'Highlighted Text'
+        -
+          handle: text_after
+          field:
+            type: text
+            display: 'Text After Highlight'
+  -
+    handle: subtitle
+    field:
+      type: textarea
+      display: Subtitle

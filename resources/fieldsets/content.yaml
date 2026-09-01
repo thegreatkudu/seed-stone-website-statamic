@@ -1,0 +1,46 @@
+title: Content
+fields:
+  -
+    handle: content
+    field:
+      buttons:
+        - h2
+        - h3
+        - h4
+        - bold
+        - italic
+        - unorderedlist
+        - orderedlist
+        - removeformat
+        - quote
+        - anchor
+        - small
+        - underline
+        - strikethrough
+        - horizontalrule
+        - code
+        - alignleft
+        - aligncenter
+        - alignright
+        - alignjustify
+      allow_source: false
+      remove_empty_nodes: false
+      type: bard
+      display: Content
+      container: assets
+      sets:
+        main:
+          display: Main
+          sets:
+            image:
+              display: Image
+              fields:
+                -
+                  handle: image
+                  field:
+                    container: assets
+                    type: assets
+                    display: Image
+                    validate:
+                      - required
+                    max_files: 1

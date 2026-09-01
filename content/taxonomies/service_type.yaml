@@ -1,0 +1,12 @@
+title: 'Service Type'
+
+route: /service-type/{slug}
+
+template: service_type/show
+
+preview_targets:
+  -
+    label: Term
+    url: '{permalink}'
+    refresh: true
+    layout: layout

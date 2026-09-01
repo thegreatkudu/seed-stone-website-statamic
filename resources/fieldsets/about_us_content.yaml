@@ -1,0 +1,246 @@
+title: 'About Us Page'
+fields:
+  -
+    handle: hero
+    field:
+      type: group
+      display: 'Hero Section'
+      fields:
+        -
+          handle: image
+          field:
+            container: assets
+            max_files: 1
+            type: assets
+            display: Image
+        -
+          handle: title
+          field:
+            type: text
+            display: Title
+        -
+          handle: description
+          field:
+            type: textarea
+            display: Description
+        -
+          handle: button_text
+          field:
+            type: text
+            display: 'Button Text'
+        -
+          handle: button_url
+          field:
+            type: text
+            display: 'Button URL'
+        -
+          handle: avatar_image_1
+          field:
+            container: assets
+            max_files: 1
+            type: assets
+            display: 'Avatar Image 1'
+        -
+          handle: avatar_image_2
+          field:
+            container: assets
+            max_files: 1
+            type: assets
+            display: 'Avatar Image 2'
+        -
+          handle: avatar_image_3
+          field:
+            container: assets
+            max_files: 1
+            type: assets
+            display: 'Avatar Image 3'
+        -
+          handle: satisfied_farmers_text
+          field:
+            type: text
+            display: 'Satisfied Farmers Text'
+  -
+    handle: mission
+    field:
+      type: group
+      display: 'Mission & App Features Section'
+      fields:
+        -
+          handle: title
+          field:
+            type: text
+            display: Title
+        -
+          handle: description
+          field:
+            type: textarea
+            display: Description
+        -
+          handle: list_items
+          field:
+            type: grid
+            display: 'Feature List Items'
+            fields:
+              -
+                handle: text
+                field:
+                  type: text
+                  display: Text
+        -
+          handle: app_store_button
+          field:
+            type: group
+            display: 'App Store Button'
+            fields:
+              -
+                handle: image
+                field:
+                  container: assets
+                  max_files: 1
+                  type: assets
+                  display: Image
+              -
+                handle: url
+                field:
+                  type: text
+                  display: URL
+        -
+          handle: play_store_button
+          field:
+            type: group
+            display: 'Play Store Button'
+            fields:
+              -
+                handle: image
+                field:
+                  container: assets
+                  max_files: 1
+                  type: assets
+                  display: Image
+              -
+                handle: url
+                field:
+                  type: text
+                  display: URL
+        -
+          handle: image
+          field:
+            container: assets
+            max_files: 1
+            type: assets
+            display: Image
+  -
+    handle: how_it_works
+    field:
+      type: group
+      display: 'How It Works Section'
+      fields:
+        -
+          handle: title
+          field:
+            type: text
+            display: Title
+        -
+          handle: description
+          field:
+            type: textarea
+            display: Description
+        -
+          handle: image
+          field:
+            container: assets
+            max_files: 1
+            type: assets
+            display: Image
+        -
+          handle: items
+          field:
+            type: grid
+            display: 'Requirement Items'
+            fields:
+              -
+                handle: icon_class
+                field:
+                  type: text
+                  display: 'Icon Class'
+                  instructions: 'FontAwesome class e.g. "fas fa-database"'
+                  instructions_position: below
+              -
+                handle: title
+                field:
+                  type: text
+                  display: Title
+              -
+                handle: description
+                field:
+                  type: textarea
+                  display: Description
+  -
+    handle: story
+    field:
+      type: group
+      display: 'Detailed Story Section'
+      fields:
+        -
+          handle: title
+          field:
+            type: text
+            display: Title
+        -
+          handle: tagline
+          field:
+            type: text
+            display: Tagline
+        -
+          handle: avatar_image_1
+          field:
+            container: assets
+            max_files: 1
+            type: assets
+            display: 'Avatar Image 1'
+        -
+          handle: avatar_image_2
+          field:
+            container: assets
+            max_files: 1
+            type: assets
+            display: 'Avatar Image 2'
+        -
+          handle: avatar_image_3
+          field:
+            container: assets
+            max_files: 1
+            type: assets
+            display: 'Avatar Image 3'
+        -
+          handle: satisfied_farmers_text
+          field:
+            type: text
+            display: 'Satisfied Farmers Text'
+        -
+          handle: subtitle
+          field:
+            type: text
+            display: Subtitle
+        -
+          handle: description_1
+          field:
+            type: textarea
+            display: 'Description 1'
+        -
+          handle: description_2
+          field:
+            type: textarea
+            display: 'Description 2'
+        -
+          handle: tagline_2
+          field:
+            type: text
+            display: 'Tagline 2'
+        -
+          handle: image
+          field:
+            container: assets
+            max_files: 1
+            type: assets
+            display: Image

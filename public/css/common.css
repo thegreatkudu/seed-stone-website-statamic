@@ -1,0 +1,20 @@
+body::before {
+  content: "";
+  display: block;
+  background-image: url(/assets/noise.webp);
+  opacity: 0.05;
+  background-repeat: repeat;
+  background-size: 257px auto;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  z-index: 99999998;
+}
+
+.elementor-element-67624143  .wp-image-344,
+.elementor-element-d613d56 .wp-image-344 {
+  border-radius: 32px 32px 32px 32px;
+}

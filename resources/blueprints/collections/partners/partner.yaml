@@ -1,0 +1,46 @@
+title: Partner
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              display: Name
+              required: true
+              validate:
+                - required
+          -
+            handle: logo
+            field:
+              type: assets
+              container: assets
+              max_files: 1
+              display: Logo
+              required: true
+              validate:
+                - required
+          -
+            handle: website
+            field:
+              type: text
+              display: Website
+              instructions: "Optional link to the partner's website"
+          -
+            handle: description
+            field:
+              type: textarea
+              display: Description
+              instructions: 'Optional short description of the partnership'
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug

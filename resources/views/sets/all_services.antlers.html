@@ -1,0 +1,292 @@
+{{ section:page_head_tags }}
+<link rel='stylesheet' id='elementor-post-515-css'
+    href='{{ config:app:url }}/walley/wp-content/uploads/sites/2/elementor/css/post-515.css?ver=1767245096'
+    media='all' />
+<link rel='stylesheet' id='elementor-post-543-css'
+    href='{{ config:app:url }}/walley/wp-content/uploads/sites/2/elementor/css/post-543.css?ver=1767244977'
+    media='all' />
+
+{{ /section:page_head_tags }}
+
+<!-- page-head-tags -->
+
+{{# ============================================================ #}}
+{{# BODY CLASS #}}
+{{# ============================================================ #}}
+{{ section:body_class }}
+wp-singular envato_tk_templates-template envato_tk_templates-template-elementor_header_footer single
+single-envato_tk_templates postid-543 wp-embed-responsive wp-theme-hello-elementor hello-elementor-default
+elementor-default elementor-template-full-width elementor-kit-6 elementor-page elementor-page-543
+{{ categories }}category-{{ slug }} {{ /categories }}
+{{ tags }}tag-{{ slug }} {{ /tags }}
+{{ /section:body_class }}
+
+<a class="skip-link screen-reader-text" href="#content">Skip to content </a>
+
+{{ blocks }}
+{{ if type == "all_services" }}
+
+<div data-elementor-type="wp-post" data-elementor-id="543" class="elementor elementor-543 elementor-15">
+
+    {{# ============================================================ #}}
+    {{# HERO SECTION - same structure, updated content #}}
+    {{# ============================================================ #}}
+    <div class="elementor-element elementor-element-126e9922 e-flex e-con-boxed e-con e-parent" data-id="126e9922"
+        data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+        <div class="e-con-inner">
+            <div class="elementor-element elementor-element-19305dbc e-con-full e-flex e-con e-child" data-id="19305dbc"
+                data-element_type="container">
+                <div class="elementor-element elementor-element-10cfd999 elementor-invisible elementor-widget elementor-widget-heading"
+                    data-id="10cfd999" data-element_type="widget"
+                    data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
+                    <div class="elementor-widget-container">
+                        <h1 class="elementor-heading-title elementor-size-default">{{ hero:title }}</h1>
+                    </div>
+                </div>
+                <div class="elementor-element elementor-element-c3196e6 elementor-invisible elementor-widget elementor-widget-text-editor"
+                    data-id="c3196e6" data-element_type="widget"
+                    data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}"
+                    data-widget_type="text-editor.default">
+                    <div class="elementor-widget-container">
+                        <p>{{ hero:description }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{# ============================================================ #}}
+    {{# MAIN CONTENT AREA - exact same structure, service data loop #}}
+    {{# ============================================================ #}}
+    <div class="elementor-element elementor-element-2cd73e84 e-flex e-con-boxed e-con e-parent" data-id="2cd73e84"
+        data-element_type="container">
+        <div class="e-con-inner">
+
+            {{# LEFT COLUMN: Services looped in blog block style #}}
+            <div class="elementor-element elementor-element-47f3e07c e-con-full e-flex e-con e-child" data-id="47f3e07c"
+                data-element_type="container">
+                <div class="elementor-element elementor-element-7d3bc5cc elementor-invisible elementor-widget elementor-widget-elementskit-blog-posts"
+                    data-id="7d3bc5cc" data-element_type="widget"
+                    data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}"
+                    data-widget_type="elementskit-blog-posts.default">
+                    <div class="elementor-widget-container">
+                        <div class="ekit-wid-con">
+                            <div id="post-items--7d3bc5cc" class="row post-items">
+
+                                {{ collection:services sort="order:asc" }}
+                                <div class="col-md-12">
+                                    <div class="elementskit-blog-block-post">
+                                        <div class="row no-gutters">
+
+                                            {{# Service image → was blog thumbnail #}}
+                                            <div class="col-md-6 order-1">
+                                                <a href="{{ url }}" class="elementskit-entry-thumb">
+                                                    {{ if featured_image }}
+                                                    {{ glide:featured_image width="600" height="400" fit="crop" }}
+                                                    <img decoding="async" src="{{ url }}" alt="{{ title }}">
+                                                    {{ /glide:featured_image }}
+                                                    {{ /if }}
+                                                </a>
+                                            </div>
+
+                                            {{# Service details → was blog post body #}}
+                                            <div class="col-md-6 order-2">
+                                                <div class="elementskit-post-body">
+                                                    <div class="elementskit-entry-header">
+                                                        <div class="post-meta-list">
+
+                                                            {{# available_since → was blog date #}}
+                                                            <span class="meta-date">
+                                                                <i aria-hidden="true"
+                                                                    class="icon icon-calendar-page-empty"></i>
+                                                                <span class="meta-date-text">{{ available_since
+                                                                    format="F j, Y" }}</span>
+                                                            </span>
+
+                                                            {{# service_type → was blog category #}}
+                                                            {{ if service_type }}
+                                                            <span class="post-cat">
+                                                                <i aria-hidden="true" class="far fa-folder"></i>
+                                                                {{ service_type }}
+                                                                <a href="{{ site:url }}/services/type/{{ slug }}"
+                                                                    rel="category tag">{{ title }}</a>
+                                                                {{ /service_type }}
+                                                            </span>
+                                                            {{ /if }}
+
+                                                        </div>
+
+                                                        {{# Service title → was blog post title #}}
+                                                        <h2 class="entry-title">
+                                                            <a href="{{ url }}">{{ title }}</a>
+                                                        </h2>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                {{ /collection:services }}
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {{# RIGHT COLUMN: exact same sidebar structure #}}
+            <div class="elementor-element elementor-element-4503c8f2 e-con-full e-flex e-con e-child" data-id="4503c8f2"
+                data-element_type="container">
+
+                {{# Recent Posts label → Our Services label #}}
+                <div class="elementor-element elementor-element-63edcbe0 elementor-icon-list--layout-inline elementor-list-item-link-inline elementor-align-center elementor-widget__width-auto elementor-invisible elementor-widget elementor-widget-icon-list"
+                    data-id="63edcbe0" data-element_type="widget"
+                    data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="icon-list.default">
+                    <div class="elementor-widget-container">
+                        <ul class="elementor-icon-list-items elementor-inline-items">
+                            <li class="elementor-icon-list-item elementor-inline-item">
+                                <a href="{{ site:url }}/services">
+                                    <span class="elementor-icon-list-icon">
+                                        <i aria-hidden="true" class="far fa-newspaper"></i>
+                                    </span>
+                                    <span class="elementor-icon-list-text">{{ sidebar_label }}</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                {{# Sidebar compact list → looped services titles only #}}
+                <div class="elementor-element elementor-element-4733b8ac elementor-invisible elementor-widget elementor-widget-elementskit-blog-posts"
+                    data-id="4733b8ac" data-element_type="widget"
+                    data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}"
+                    data-widget_type="elementskit-blog-posts.default">
+                    <div class="elementor-widget-container">
+                        <div class="ekit-wid-con">
+                            <div id="post-items--4733b8ac" class="row post-items">
+
+                                {{ collection:services sort="order:asc" limit="3" }}
+                                <div class="col-md-12">
+                                    <div class="elementskit-blog-block-post">
+                                        <div class="row no-gutters">
+                                            <div class="col-md-12 order-2">
+                                                <div class="elementskit-post-body">
+                                                    <div class="elementskit-entry-header">
+                                                        <h2 class="entry-title">
+                                                            <a href="{{ url }}">{{ title }}</a>
+                                                        </h2>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {{ /collection:services }}
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {{# Mobile App Features label → GulioSmart Features label #}}
+                <div class="elementor-element elementor-element-4dee3a62 elementor-icon-list--layout-inline elementor-list-item-link-inline elementor-align-center elementor-widget__width-auto elementor-invisible elementor-widget elementor-widget-icon-list"
+                    data-id="4dee3a62" data-element_type="widget"
+                    data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="icon-list.default">
+                    <div class="elementor-widget-container">
+                        <ul class="elementor-icon-list-items elementor-inline-items">
+                            <li class="elementor-icon-list-item elementor-inline-item">
+                                <a href="#">
+                                    <span class="elementor-icon-list-icon">
+                                        <i aria-hidden="true" class="far fa-handshake"></i>
+                                    </span>
+                                    <span class="elementor-icon-list-text">{{ features_label }}</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                {{# Digital Wallet → Real-Time Farm Data #}}
+                <div class="elementor-element elementor-element-52871dc elementor-view-stacked elementor-position-inline-start elementor-mobile-position-inline-start elementor-shape-circle elementor-invisible elementor-widget elementor-widget-icon-box"
+                    data-id="52871dc" data-element_type="widget"
+                    data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="icon-box.default">
+                    <div class="elementor-widget-container">
+                        <div class="elementor-icon-box-wrapper">
+                            <div class="elementor-icon-box-icon">
+                                <span class="elementor-icon elementor-animation-float">
+                                    <i aria-hidden="true" class="{{ feature_1:icon_class }}"></i>
+                                </span>
+                            </div>
+                            <div class="elementor-icon-box-content">
+                                <h5 class="elementor-icon-box-title">
+                                    <span>{{ feature_1:title }}</span>
+                                </h5>
+                                <p class="elementor-icon-box-description">{{ feature_1:description }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {{# Realtime Report → Market Insights #}}
+                <div class="elementor-element elementor-element-1f061e57 elementor-view-stacked elementor-position-inline-start elementor-mobile-position-inline-start elementor-shape-circle elementor-invisible elementor-widget elementor-widget-icon-box"
+                    data-id="1f061e57" data-element_type="widget"
+                    data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="icon-box.default">
+                    <div class="elementor-widget-container">
+                        <div class="elementor-icon-box-wrapper">
+                            <div class="elementor-icon-box-icon">
+                                <span class="elementor-icon elementor-animation-float">
+                                    <i aria-hidden="true" class="{{ feature_2:icon_class }}"></i>
+                                </span>
+                            </div>
+                            <div class="elementor-icon-box-content">
+                                <h5 class="elementor-icon-box-title">
+                                    <span>{{ feature_2:title }}</span>
+                                </h5>
+                                <p class="elementor-icon-box-description">{{ feature_2:description }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {{# Secure Transaction → Weather Alerts #}}
+                <div class="elementor-element elementor-element-2ef69d11 elementor-view-stacked elementor-position-inline-start elementor-mobile-position-inline-start elementor-shape-circle elementor-invisible elementor-widget elementor-widget-icon-box"
+                    data-id="2ef69d11" data-element_type="widget"
+                    data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="icon-box.default">
+                    <div class="elementor-widget-container">
+                        <div class="elementor-icon-box-wrapper">
+                            <div class="elementor-icon-box-icon">
+                                <span class="elementor-icon elementor-animation-float">
+                                    <i aria-hidden="true" class="{{ feature_3:icon_class }}"></i>
+                                </span>
+                            </div>
+                            <div class="elementor-icon-box-content">
+                                <h5 class="elementor-icon-box-title">
+                                    <span>{{ feature_3:title }}</span>
+                                </h5>
+                                <p class="elementor-icon-box-description">{{ feature_3:description }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- call to action -->
+    {{ partial:layout/cta-section }}
+
+</div>
+
+{{ /if }}
+{{ /blocks }}
+
+<!-- footer -->
+
+{{ section:footer_scripts }}
+
+{{ /section:footer_scripts }}
+
+<!-- page-footer-tags -->

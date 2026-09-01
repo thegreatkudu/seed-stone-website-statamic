@@ -1,0 +1,108 @@
+title: 'Contact Us'
+fields:
+  -
+    handle: hero
+    field:
+      type: group
+      display: 'Hero Section'
+      fields:
+        -
+          handle: title
+          field:
+            type: text
+            display: Title
+        -
+          handle: description
+          field:
+            type: textarea
+            display: Description
+  -
+    handle: contact_section
+    field:
+      type: group
+      display: 'Contact Details & App Preview Section'
+      fields:
+        -
+          handle: title
+          field:
+            type: text
+            display: Title
+        -
+          handle: description
+          field:
+            type: textarea
+            display: Description
+        -
+          handle: email
+          field:
+            type: text
+            display: Email
+        -
+          handle: chat_label
+          field:
+            type: text
+            display: 'Chat Label'
+        -
+          handle: chat_url
+          field:
+            type: text
+            display: 'Chat URL'
+        -
+          handle: phone
+          field:
+            type: text
+            display: Phone
+        -
+          handle: address
+          field:
+            type: text
+            display: Address
+        -
+          handle: hours
+          field:
+            type: text
+            display: 'Office Hours'
+            instructions: 'e.g. "Monday - Friday (9 a.m. – 6 p.m.)"'
+            instructions_position: below
+        -
+          handle: image_1
+          field:
+            container: assets
+            max_files: 1
+            type: assets
+            display: 'Image 1'
+        -
+          handle: image_2
+          field:
+            container: assets
+            max_files: 1
+            type: assets
+            display: 'Image 2'
+        -
+          handle: image_3
+          field:
+            container: assets
+            max_files: 1
+            type: assets
+            display: 'Image 3'
+  -
+    handle: map
+    field:
+      type: group
+      display: 'Map Section'
+      fields:
+        -
+          handle: embed_url
+          field:
+            type: text
+            display: 'Google Maps Embed URL'
+        -
+          handle: title
+          field:
+            type: text
+            display: 'Iframe Title'
+        -
+          handle: aria_label
+          field:
+            type: text
+            display: 'Aria Label'

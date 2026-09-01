@@ -1,0 +1,40 @@
+title: 'Our Partners'
+fields:
+  -
+    handle: hero
+    field:
+      type: group
+      display: 'Page Header'
+      fields:
+        -
+          handle: title
+          field:
+            type: text
+            display: 'Page Title'
+            instructions: 'e.g. "Our Partners"'
+            instructions_position: below
+        -
+          handle: subtitle
+          field:
+            type: textarea
+            display: 'Page Subtitle'
+            instructions_position: below
+  -
+    handle: section
+    field:
+      type: group
+      display: 'Partners Section'
+      fields:
+        -
+          handle: title
+          field:
+            type: text
+            display: 'Section Title'
+            instructions_position: below
+        -
+          handle: highlight_text
+          field:
+            type: text
+            display: 'Highlight Text'
+            instructions: 'Short line shown below the section title, e.g. "Join the growing network of partners driving smart farming forward"'
+            instructions_position: below

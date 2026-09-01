@@ -1,0 +1,12 @@
+title: Tags
+
+route: /tags/{slug}
+
+template: tags/show
+layout: layout
+
+preview_targets:
+  -
+    label: Term
+    url: '{permalink}'
+    refresh: true

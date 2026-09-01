@@ -1,0 +1,1345 @@
+@font-face {
+    font-family: 'Sen';
+    src: url('Sen-Regular.woff2') format('woff2'),
+        url('Sen-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sen';
+    src: url('Sen-SemiBold.woff2') format('woff2'),
+        url('Sen-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sen';
+    src: url('Sen-Regular.woff2') format('woff2'),
+        url('Sen-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sen';
+    src: url('Sen-Medium.woff2') format('woff2'),
+        url('Sen-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sen';
+    src: url('Sen-Bold.woff2') format('woff2'),
+        url('Sen-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sen';
+    src: url('Sen-ExtraBold.woff2') format('woff2'),
+        url('Sen-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('JosefinSans-Thin.woff2') format('woff2'),
+        url('JosefinSans-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('JosefinSans-ThinItalic.woff2') format('woff2'),
+        url('JosefinSans-ThinItalic.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('JosefinSans-ThinItalic.woff2') format('woff2'),
+        url('JosefinSans-ThinItalic.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('JosefinSans-SemiBoldItalic.woff2') format('woff2'),
+        url('JosefinSans-SemiBoldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('JosefinSans-Thin.woff2') format('woff2'),
+        url('JosefinSans-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('JosefinSans-SemiBold.woff2') format('woff2'),
+        url('JosefinSans-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('JosefinSans-Regular.woff2') format('woff2'),
+        url('JosefinSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('JosefinSans-MediumItalic.woff2') format('woff2'),
+        url('JosefinSans-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('JosefinSans-Medium.woff2') format('woff2'),
+        url('JosefinSans-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('JosefinSans-Light.woff2') format('woff2'),
+        url('JosefinSans-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('JosefinSans-LightItalic.woff2') format('woff2'),
+        url('JosefinSans-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('JosefinSans-ExtraLight.woff2') format('woff2'),
+        url('JosefinSans-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('JosefinSans-ExtraLightItalic.woff2') format('woff2'),
+        url('JosefinSans-ExtraLightItalic.woff') format('woff');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('JosefinSans-Italic.woff2') format('woff2'),
+        url('JosefinSans-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('JosefinSans-BoldItalic.woff2') format('woff2'),
+        url('JosefinSans-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('JosefinSans-Bold.woff2') format('woff2'),
+        url('JosefinSans-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Dosis';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Dosis'), url('Dosis-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Cerebri Sans';
+    src: url('CerebriSans-Bold.woff2') format('woff2'),
+        url('CerebriSans-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cerebri Sans';
+    src: url('CerebriSans-Bold.woff2') format('woff2'),
+        url('CerebriSans-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Verlag XLight';
+    src: url('Verlag-XLight.woff2') format('woff2'),
+        url('Verlag-XLight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Verlag';
+    src: url('Verlag-LightItalic.woff2') format('woff2'),
+        url('Verlag-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Verlag XLight';
+    src: url('Verlag-XLight.woff2') format('woff2'),
+        url('Verlag-XLight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Verlag Condensed XLight';
+    src: url('VerlagCondensed-XLight.woff2') format('woff2'),
+        url('VerlagCondensed-XLight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Verlag';
+    src: url('Verlag-Light.woff2') format('woff2'),
+        url('Verlag-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Verlag';
+    src: url('Verlag-Light.woff2') format('woff2'),
+        url('Verlag-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Verlag';
+    src: url('Verlag-LightItalic.woff2') format('woff2'),
+        url('Verlag-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Verlag Condensed';
+    src: url('VerlagCondensed-Light.woff2') format('woff2'),
+        url('VerlagCondensed-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Verlag Condensed XLight';
+    src: url('VerlagCondensed-XLight.woff2') format('woff2'),
+        url('VerlagCondensed-XLight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Verlag Condensed';
+    src: url('VerlagCondensed-Light.woff2') format('woff2'),
+        url('VerlagCondensed-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Verlag Compressed';
+    src: url('VerlagCompressed-Bold.woff2') format('woff2'),
+        url('VerlagCompressed-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Verlag Condensed Book';
+    src: url('VerlagCondensed-Book.woff2') format('woff2'),
+        url('VerlagCondensed-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Verlag Condensed Book';
+    src: url('VerlagCondensed-Book.woff2') format('woff2'),
+        url('VerlagCondensed-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Verlag Book';
+    src: url('Verlag-Book.woff2') format('woff2'),
+        url('Verlag-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Verlag';
+    src: url('Verlag-BlackItalic.woff2') format('woff2'),
+        url('Verlag-BlackItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Verlag';
+    src: url('Verlag-Bold.woff2') format('woff2'),
+        url('Verlag-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Verlag Compressed';
+    src: url('VerlagCompressed-Bold.woff2') format('woff2'),
+        url('VerlagCompressed-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Verlag';
+    src: url('Verlag-Black.woff2') format('woff2'),
+        url('Verlag-Black.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Verlag';
+    src: url('Verlag-Black.woff2') format('woff2'),
+        url('Verlag-Black.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Verlag';
+    src: url('Verlag-BlackItalic.woff2') format('woff2'),
+        url('Verlag-BlackItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Dosis ExtraLight';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Dosis ExtraLight'), url('Dosis-ExtraLight.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Dosis Light';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Dosis Light'), url('Dosis-Light.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Dosis Medium';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Dosis Medium'), url('Dosis-Medium.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Dosis SemiBold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Dosis SemiBold'), url('Dosis-SemiBold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Dosis Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Dosis Bold'), url('Dosis-Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Dosis ExtraBold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Dosis ExtraBold'), url('Dosis-ExtraBold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Abril Fatface';
+    src: url('AbrilFatface-Regular.woff2') format('woff2'),
+        url('AbrilFatface-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rubik Gemstones';
+    src: url('RubikGemstones-Regular.woff2') format('woff2'),
+        url('RubikGemstones-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('Poppins-ThinItalic.woff2') format('woff2'),
+        url('Poppins-ThinItalic.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('Poppins-Thin.woff2') format('woff2'),
+        url('Poppins-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('Poppins-SemiBoldItalic.woff2') format('woff2'),
+        url('Poppins-SemiBoldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('Poppins-SemiBold.woff2') format('woff2'),
+        url('Poppins-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('Poppins-Regular.woff2') format('woff2'),
+        url('Poppins-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('Poppins-MediumItalic.woff2') format('woff2'),
+        url('Poppins-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('Poppins-Medium.woff2') format('woff2'),
+        url('Poppins-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('Poppins-LightItalic.woff2') format('woff2'),
+        url('Poppins-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('Poppins-Light.woff2') format('woff2'),
+        url('Poppins-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('Poppins-Italic.woff2') format('woff2'),
+        url('Poppins-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('Poppins-ExtraLightItalic.woff2') format('woff2'),
+        url('Poppins-ExtraLightItalic.woff') format('woff');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('Poppins-ExtraLight.woff2') format('woff2'),
+        url('Poppins-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('Poppins-ExtraBoldItalic.woff2') format('woff2'),
+        url('Poppins-ExtraBoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('Poppins-ExtraBold.woff2') format('woff2'),
+        url('Poppins-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Prata */
+
+@font-face {
+    font-family: 'Prata';
+    src: url('Prata-Regular.woff2') format('woff2'),
+        url('Prata-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Lexend Deca */
+
+@font-face {
+    font-family: 'Lexend Deca';
+    src: url('LexendDeca-SemiBold.woff2') format('woff2'),
+        url('LexendDeca-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lexend Deca';
+    src: url('LexendDeca-Regular.woff2') format('woff2'),
+        url('LexendDeca-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lexend Deca';
+    src: url('LexendDeca-Thin.woff2') format('woff2'),
+        url('LexendDeca-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lexend Deca';
+    src: url('LexendDeca-Medium.woff2') format('woff2'),
+        url('LexendDeca-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lexend Deca';
+    src: url('LexendDeca-Regular.woff2') format('woff2'),
+        url('LexendDeca-Regular.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+}
+
+/* FreightDispPro */
+
+@font-face {
+    font-family: 'FreightDispProSemibold';
+    src: url('FreightDispProSemibold-Italic.eot');
+    src: local('FreightDisp Pro Semibold Italic'), local('FreightDispProSemibold-Italic'),
+        url('FreightDispProSemibold-Italic.eot?#iefix') format('embedded-opentype'),
+        url('FreightDispProSemibold-Italic.woff2') format('woff2'),
+        url('FreightDispProSemibold-Italic.woff') format('woff'),
+        url('FreightDispProSemibold-Italic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FreightDispProBold';
+    src: url('FreightDispProBold-Regular.eot');
+    src: local('FreightDisp Pro Bold'), local('FreightDispProBold-Regular'),
+        url('FreightDispProBold-Regular.eot?#iefix') format('embedded-opentype'),
+        url('FreightDispProBold-Regular.woff2') format('woff2'),
+        url('FreightDispProBold-Regular.woff') format('woff'),
+        url('FreightDispProBold-Regular.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FreightDispProLight';
+    src: url('FreightDispProLight-Italic.eot');
+    src: local('FreightDisp Pro Light Italic'), local('FreightDispProLight-Italic'),
+        url('FreightDispProLight-Italic.eot?#iefix') format('embedded-opentype'),
+        url('FreightDispProLight-Italic.woff2') format('woff2'),
+        url('FreightDispProLight-Italic.woff') format('woff'),
+        url('FreightDispProLight-Italic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FreightDispProMedium';
+    src: url('FreightDispProMedium-Regular.eot');
+    src: local('FreightDisp Pro Medium'), local('FreightDispProMedium-Regular'),
+        url('FreightDispProMedium-Regular.eot?#iefix') format('embedded-opentype'),
+        url('FreightDispProMedium-Regular.woff2') format('woff2'),
+        url('FreightDispProMedium-Regular.woff') format('woff'),
+        url('FreightDispProMedium-Regular.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FreightDispProMedium';
+    src: url('FreightDispProMedium-Italic.eot');
+    src: local('FreightDisp Pro Medium Italic'), local('FreightDispProMedium-Italic'),
+        url('FreightDispProMedium-Italic.eot?#iefix') format('embedded-opentype'),
+        url('FreightDispProMedium-Italic.woff2') format('woff2'),
+        url('FreightDispProMedium-Italic.woff') format('woff'),
+        url('FreightDispProMedium-Italic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'FreightDispProBlack';
+    src: url('FreightDispProBlack-Regular.eot');
+    src: local('FreightDisp Pro Black'), local('FreightDispProBlack-Regular'),
+        url('FreightDispProBlack-Regular.eot?#iefix') format('embedded-opentype'),
+        url('FreightDispProBlack-Regular.woff2') format('woff2'),
+        url('FreightDispProBlack-Regular.woff') format('woff'),
+        url('FreightDispProBlack-Regular.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FreightDispProBold';
+    src: url('FreightDispProBold-Italic.eot');
+    src: local('FreightDisp Pro Bold Italic'), local('FreightDispProBold-Italic'),
+        url('FreightDispProBold-Italic.eot?#iefix') format('embedded-opentype'),
+        url('FreightDispProBold-Italic.woff2') format('woff2'),
+        url('FreightDispProBold-Italic.woff') format('woff'),
+        url('FreightDispProBold-Italic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FreightDispProBook';
+    src: url('FreightDispProBook-Italic.eot');
+    src: local('FreightDisp Pro Book Italic'), local('FreightDispProBook-Italic'),
+        url('FreightDispProBook-Italic.eot?#iefix') format('embedded-opentype'),
+        url('FreightDispProBook-Italic.woff2') format('woff2'),
+        url('FreightDispProBook-Italic.woff') format('woff'),
+        url('FreightDispProBook-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FreightDispProBlack';
+    src: url('FreightDispProBlack-Italic.eot');
+    src: local('FreightDisp Pro Black Italic'), local('FreightDispProBlack-Italic'),
+        url('FreightDispProBlack-Italic.eot?#iefix') format('embedded-opentype'),
+        url('FreightDispProBlack-Italic.woff2') format('woff2'),
+        url('FreightDispProBlack-Italic.woff') format('woff'),
+        url('FreightDispProBlack-Italic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FreightDispProSemibold';
+    src: url('FreightDispProSemibold-Regular.eot');
+    src: local('FreightDisp Pro Semibold'), local('FreightDispProSemibold-Regular'),
+        url('FreightDispProSemibold-Regular.eot?#iefix') format('embedded-opentype'),
+        url('FreightDispProSemibold-Regular.woff2') format('woff2'),
+        url('FreightDispProSemibold-Regular.woff') format('woff'),
+        url('FreightDispProSemibold-Regular.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FreightDispProLight';
+    src: url('FreightDispProLight-Regular.eot');
+    src: local('FreightDisp Pro Light'), local('FreightDispProLight-Regular'),
+        url('FreightDispProLight-Regular.eot?#iefix') format('embedded-opentype'),
+        url('FreightDispProLight-Regular.woff2') format('woff2'),
+        url('FreightDispProLight-Regular.woff') format('woff'),
+        url('FreightDispProLight-Regular.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FreightDispProBook';
+    src: url('FreightDispProBook-Regular.eot');
+    src: local('FreightDisp Pro Book'), local('FreightDispProBook-Regular'),
+        url('FreightDispProBook-Regular.eot?#iefix') format('embedded-opentype'),
+        url('FreightDispProBook-Regular.woff2') format('woff2'),
+        url('FreightDispProBook-Regular.woff') format('woff'),
+        url('FreightDispProBook-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Futura */
+
+@font-face {
+    font-family: 'Futura';
+    src: url('Futura-Bold.woff2') format('woff2'),
+        url('Futura-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'a_FuturaRound';
+    src: url('AFuturaRound.woff2') format('woff2'),
+        url('AFuturaRound.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Futura Bk';
+    src: url('Futura-Book.woff2') format('woff2'),
+        url('Futura-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Sofia Pro  */
+
+@font-face {
+    font-family: 'Sofia Pro';
+    src: url('SofiaProLight.woff2') format('woff2'),
+        url('SofiaProLight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sofia Pro';
+    src: url('SofiaProLight.woff2') format('woff2'),
+        url('SofiaProLight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Buysling */
+
+@font-face {
+    font-family: 'Buysling';
+    src: url('Buysling.woff2') format('woff2'),
+        url('Buysling.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Buysling';
+    src: url('BuyslingRegular.woff2') format('woff2'),
+        url('BuyslingRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Sulphur Point */
+
+@font-face {
+    font-family: 'Sulphur Point';
+    src: url('SulphurPoint-Regular.woff2') format('woff2'),
+        url('SulphurPoint-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sulphur Point';
+    src: url('SulphurPoint-Light.woff2') format('woff2'),
+        url('SulphurPoint-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sulphur Point';
+    src: url('SulphurPoint-Bold.woff2') format('woff2'),
+        url('SulphurPoint-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Karla */
+
+@font-face {
+    font-family: 'Karla';
+    src: url('Karla-SemiBoldItalic.woff2') format('woff2'),
+        url('Karla-SemiBoldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Karla';
+    src: url('Karla-SemiBold.woff2') format('woff2'),
+        url('Karla-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Karla';
+    src: url('Karla-Light.woff2') format('woff2'),
+        url('Karla-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Karla';
+    src: url('Karla-LightItalic.woff2') format('woff2'),
+        url('Karla-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Karla';
+    src: url('Karla-Medium.woff2') format('woff2'),
+        url('Karla-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Karla';
+    src: url('Karla-Regular.woff2') format('woff2'),
+        url('Karla-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Karla';
+    src: url('Karla-MediumItalic.woff2') format('woff2'),
+        url('Karla-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Karla';
+    src: url('Karla-ExtraBold.woff2') format('woff2'),
+        url('Karla-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Karla';
+    src: url('Karla-ExtraBoldItalic.woff2') format('woff2'),
+        url('Karla-ExtraBoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Karla';
+    src: url('Karla-ExtraLightItalic.woff2') format('woff2'),
+        url('Karla-ExtraLightItalic.woff') format('woff');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Karla';
+    src: url('Karla-Italic.woff2') format('woff2'),
+        url('Karla-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Karla';
+    src: url('Karla-ExtraLight.woff2') format('woff2'),
+        url('Karla-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Karla';
+    src: url('Karla-BoldItalic.woff2') format('woff2'),
+        url('Karla-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Karla';
+    src: url('Karla-Bold.woff2') format('woff2'),
+        url('Karla-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* IBM Selectric Manifold */
+
+@font-face {
+    font-family: 'IBM Selectric Manifold';
+    src: url('IBMSelectricManifold-Regular.woff2') format('woff2'),
+        url('IBMSelectricManifold-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Nunito */
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('Nunito-ExtraLight.woff2') format('woff2'),
+        url('Nunito-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('Nunito-ExtraLightItalic.woff2') format('woff2'),
+        url('Nunito-ExtraLightItalic.woff') format('woff');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('Nunito-SemiBold.woff2') format('woff2'),
+        url('Nunito-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('Nunito-SemiBoldItalic.woff2') format('woff2'),
+        url('Nunito-SemiBoldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('Nunito-Regular.woff2') format('woff2'),
+        url('Nunito-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('Nunito-MediumItalic.woff2') format('woff2'),
+        url('Nunito-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('Nunito-LightItalic.woff2') format('woff2'),
+        url('Nunito-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('Nunito-Medium.woff2') format('woff2'),
+        url('Nunito-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('Nunito-Light.woff2') format('woff2'),
+        url('Nunito-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('Nunito-ExtraLightItalic.woff2') format('woff2'),
+        url('Nunito-ExtraLightItalic.woff') format('woff');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('Nunito-Italic.woff2') format('woff2'),
+        url('Nunito-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('Nunito-ExtraBoldItalic.woff2') format('woff2'),
+        url('Nunito-ExtraBoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('Nunito-ExtraLight.woff2') format('woff2'),
+        url('Nunito-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('Nunito-ExtraBold.woff2') format('woff2'),
+        url('Nunito-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('Nunito-BoldItalic.woff2') format('woff2'),
+        url('Nunito-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('Nunito-Bold.woff2') format('woff2'),
+        url('Nunito-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('Nunito-BlackItalic.woff2') format('woff2'),
+        url('Nunito-BlackItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('Nunito-Black.woff2') format('woff2'),
+        url('Nunito-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Advent Pro */
+
+@font-face {
+    font-family: 'Advent Pro';
+    src: url('AdventPro-Thin.woff2') format('woff2'),
+        url('AdventPro-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Advent Pro';
+    src: url('AdventPro-Regular.woff2') format('woff2'),
+        url('AdventPro-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Advent Pro';
+    src: url('AdventPro-SemiBold.woff2') format('woff2'),
+        url('AdventPro-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Advent Pro';
+    src: url('AdventPro-Medium.woff2') format('woff2'),
+        url('AdventPro-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Advent Pro';
+    src: url('AdventPro-ExtraLight.woff2') format('woff2'),
+        url('AdventPro-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Advent Pro';
+    src: url('AdventPro-Light.woff2') format('woff2'),
+        url('AdventPro-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Advent Pro';
+    src: url('AdventPro-Bold.woff2') format('woff2'),
+        url('AdventPro-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Abel */
+
+@font-face {
+    font-family: 'Abel';
+    src: url('Abel-Regular.woff2') format('woff2'),
+        url('Abel-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Simplifica */
+
+@font-face {
+    font-family: 'Simplifica';
+    src: url('Simplifica.woff2') format('woff2'),
+        url('Simplifica.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Parkinsans';
+    src: url('Parkinsans-Bold.woff2') format('woff2'),
+        url('Parkinsans-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Parkinsans';
+    src: url('Parkinsans-Light.woff2') format('woff2'),
+        url('Parkinsans-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Parkinsans';
+    src: url('Parkinsans-ExtraBold.woff2') format('woff2'),
+        url('Parkinsans-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Parkinsans';
+    src: url('Parkinsans-Medium.woff2') format('woff2'),
+        url('Parkinsans-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Parkinsans';
+    src: url('Parkinsans-Regular.woff2') format('woff2'),
+        url('Parkinsans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Parkinsans';
+    src: url('Parkinsans-SemiBold.woff2') format('woff2'),
+        url('Parkinsans-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}

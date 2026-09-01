@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="{{ site:short_locale }}" dir="ltr">
+
+<head>
+
+    {{# ============================================================ #}}
+    {{# BASIC META #}}
+    {{# ============================================================ #}}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    {{# ============================================================ #}}
+    {{# CACHE CONTROL #}}
+    {{# ============================================================ #}}
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    {{# ============================================================ #}}
+    {{# SITE TITLE #}}
+    {{# Falls back to just site name if no page title exists #}}
+    {{# ============================================================ #}}
+    <title>{{ settings:site_name }} {{ title ?= '- {title}' }}</title>
+
+    {{# ============================================================ #}}
+    {{# SEO META #}}
+    {{# seo_description — set per entry or falls back to settings #}}
+    {{# seo_keywords — set per entry or falls back to settings #}}
+    {{# ============================================================ #}}
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+    <meta name="description" content="{{ seo_description ?? settings:meta_description ?? title }}" />
+    <meta name="keywords" content="{{ seo_keywords ?? settings:meta_keywords }}" />
+    <meta name="author" content="{{ settings:site_name }}" />
+    <link rel="canonical" content="{{ config:app:url }}{{ uri }}" />
+
+    {{# include others meta #}}
+    {{ partial:partials/seo }}
+
+    {{# ============================================================ #}}
+    {{# STRUCTURED DATA — JSON-LD Organization schema #}}
+    {{# Read by search engines and AI/LLM crawlers to understand who #}}
+    {{# Seedstone is, what it does, and what it exports. Only real, #}}
+    {{# already-published facts are included here — nothing invented. #}}
+    {{# ============================================================ #}}
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Seedstone",
+        "url": "{{ config:app:url }}/seed-stone/",
+        "logo": "{{ config:app:url }}/seed-stone/wp-content/uploads/2025/07/seed-stone-logo.svg",
+        "description": "Seedstone is a Tanzanian agricultural export company, sourcing, preparing, and exporting quality crops directly to international buyers.",
+        "email": "info@seedstone.co.tz",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Dar es Salaam",
+            "addressCountry": "TZ"
+        },
+        "areaServed": "Worldwide",
+        "makesOffer": [
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Product",
+                    "name": "Cashewnut",
+                    "description": "Tanzania's flagship export crop, sourced at competitive auction pricing."
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Product",
+                    "name": "Coffee",
+                    "description": "Premium Arabica and Robusta lots sourced from Tanzania's established coffee-growing regions."
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Product",
+                    "name": "Sesame",
+                    "description": "A high-demand oilseed with strong seasonal export volumes."
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Product",
+                    "name": "Pigeon Peas",
+                    "description": "A reliable legume supply for regional and international buyers."
+                }
+            }
+        ]
+    }
+    </script>
+
+    {{# ============================================================ #}}
+    {{# TWITTER CARD — Twitter / X link previews #}}
+    {{# twitter_image — set per entry or falls back to og_image #}}
+    {{# ============================================================ #}}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="{{ settings:twitter_handle }}" />
+    <meta name="twitter:title" content="{{ title }} | {{ settings:site_name }}" />
+    <meta name="twitter:description" content="{{ seo_description ?? settings:meta_description }}" />
+
+    {{# Twitter Image — falls back to OG image if no specific one #}}
+    {{ if twitter_image }}
+    <meta name="twitter:image" content="{{ glide:twitter_image width='1200' height='630' fit='crop' }}" />
+    {{ elseif og_image }}
+    <meta name="twitter:image" content="{{ glide:og_image width='1200' height='630' fit='crop' }}" />
+    {{ elseif settings:og_image }}
+    <meta name="twitter:image" content="{{ glide:settings:og_image width='1200' height='630' fit='crop' }}" />
+    {{ /if }}
+
+    {{# ============================================================ #}}
+    {{# FAVICON #}}
+    {{# All files served from /assets/seeds-tone-favicon/ #}}
+    {{# ============================================================ #}}
+
+    {{# Standard favicons #}}
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/seeds-tone-favicon/favicon-96x96.png" />
+    <link rel="icon" type="image/svg+xml" href="/assets/seeds-tone-favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/assets/seeds-tone-favicon/favicon.ico" />
+
+    {{# Apple Touch Icon — used when added to iOS home screen #}}
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/seeds-tone-favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Seedstone" />
+
+    {{# Web App Manifest — for Android/Chrome PWA support #}}
+    <link rel="manifest" href="/assets/seeds-tone-favicon/site.webmanifest" />
+
+    {{# Browser theme color — Android Chrome address bar #}}
+    <meta name="theme-color" content="#00a651" />
+
+    <link rel="preload" data-rocket-preload="" as="image"
+		href="{{ config:url }}/seed-stone/wp-content/uploads/2025/07/seed-stone-logo-header.svg"
+		fetchpriority="high">
+	<meta name="robots" content="max-image-preview:large">
+
+	<link rel="alternate" type="application/rss+xml" title="Seedstone » Feed"
+		href="{{ config:url }}/seed-stone/feed/">
+	<link rel="alternate" type="application/rss+xml" title="Seedstone » Comments Feed"
+		href="{{ config:url }}/seed-stone/comments/feed/">
+
+    {{# ============================================================ #}}
+    {{# FONTS — Preloaded for performance #}}
+    {{# ============================================================ #}}
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="font" href="https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfBBc4AMP6lQ.woff2"
+        crossorigin />
+    <link rel="preload" as="font"
+        href="https://fonts.gstatic.com/s/opensans/v36/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-mu0SC55I.woff2"
+        crossorigin />
+
+    {{# ============================================================ #}}
+    {{# GLOBAL STYLESHEETS — loaded on every page #}}
+    {{# ============================================================ #}}
+    {{ yield:page_head_tags }}
+
+    {{# ============================================================ #}}
+    {{# VITE — compiled JS and CSS assets #}}
+    {{# ============================================================ #}}
+
+    {{# ============================================================ #}}
+    {{# PAGE-SPECIFIC HEAD INJECTION #}}
+    {{# Use {{ section:head_css }} in any template to inject here #}}
+    {{# Example: #}}
+    {{# {{ section:head_css }} #}}
+    {{# {{ /section:head_css }} #}}
+    {{# ============================================================ #}}
+    {{ yield:head_css }}
+
+    {{# ============================================================ #}}
+    {{# PAGE HEAD TAGS #}}
+    {{# page head tags gets special hero-style nav, others get default #}}
+    {{# ============================================================ #}}
+    {{ partial:layout/head-tag-links }}
+
+</head>
+
+<body class="{{ yield:body_class }}">
+
+    {{# Click Sound #}}
+    <div id="top"></div>
+
+    {{# ============================================================ #}}
+    {{# HEADER #}}
+    {{# Home page gets special hero-style nav, others get default #}}
+    {{# ============================================================ #}}
+    {{ partial:layout/header }}
+
+    {{# ============================================================ #}}
+    {{# MAIN PAGE CONTENT #}}
+    {{# Rendered from the matching template file #}}
+    {{# ============================================================ #}}
+
+    <div id="page" class="main-container">
+        <div id="main-content">
+            <div id="sub-header" class="layout-full elementor-page-title">
+				<div class="meta-header">
+
+					<!-- Elementor `page-title` location -->
+				</div>
+			</div>
+
+			<div id="main" role="main" class="vamtam-main layout-full">
+                <div class="page-wrapper">
+                    {{ template_content }}
+                </div><!-- End of .page-wrapper -->
+            </div><!-- #main-content -->
+
+        </div><!-- #main -->
+
+    </div><!-- / #page -->
+
+    {{# ============================================================ #}}
+    {{# FOOTER #}}
+    {{# ============================================================ #}}
+    {{ partial:layout/footer }}
+
+    {{# ============================================================ #}}
+    {{# PAGE HEAD FOOTER TAGS #}}
+    {{# page footer tags gets special hero-style nav, others get default #}}
+    {{# ============================================================ #}}
+    {{ partial:layout/footer-tag-links }}
+
+    {{# ============================================================ #}}
+    {{# PAGE-SPECIFIC SCRIPT INJECTION #}}
+    {{# Use {{ section:footer_scripts }} in any template #}}
+    {{# Example: #}}
+    {{# {{ section:footer_scripts }} #}}
+    {{# {{ /section:footer_scripts }} #}}
+    {{# ============================================================ #}}
+    {{ yield:footer_scripts }}
+
+</body>
+
+</html>
