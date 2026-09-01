@@ -25,7 +25,7 @@
 
 ## Screenshot
 
-![Screenshot](https://i.imgur.com/6RKCC7Q.png)
+![Screenshot](https://imgur.com/a/9udTPkC)
 
 ## Quick Start
 
