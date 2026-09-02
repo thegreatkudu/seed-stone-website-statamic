@@ -56,6 +56,20 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Trading Platform URL
+    |--------------------------------------------------------------------------
+    |
+    | The Seedstone trading platform (Next.js app) that this marketing site's
+    | Register/Login buttons link out to. Separate deployment, separate stack —
+    | referenced here as one config value so it only needs updating in one
+    | place when the platform's domain changes.
+    |
+    */
+
+    'trading_platform_url' => env('TRADING_PLATFORM_URL', 'https://seedstone-app.vercel.app'),
+
+    /*
+    |--------------------------------------------------------------------------
     | Application Timezone
     |--------------------------------------------------------------------------
     |
