@@ -9,10 +9,14 @@ blocks:
     enabled: true
     hero:
       title: 'Our Partners'
-      subtitle: 'Leoleo GulioSmart works hand in hand with government institutions, NGOs, and agribusinesses to empower farmers and grow smarter agriculture across Africa.'
+      subtitle: 'Seedstone works hand in hand with cooperatives, government institutions, and market bodies to source quality crops and deliver them to international buyers.'
     section:
-      title: "Trusted Across Africa's Agriculture Sector"
-      highlight_text: 'Join the growing network of partners driving smart farming forward'
+      title: "Trusted Across Tanzania's Agriculture Sector"
+      highlight_text: "Join the growing network of partners behind Tanzania's crop exports"
+    cta:
+      heading: 'Get Started Today!'
+      button_text: 'Sign Me Up'
+      button_url: /contact-us
 parent: home
 show_title: true
 updated_by: 2

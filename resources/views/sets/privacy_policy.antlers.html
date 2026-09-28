@@ -1,1197 +1,165 @@
-{{ section:page_head_tags }}
-
-<!-- main css -->
-<link rel="stylesheet" href="/css/leoleo.css">
-<!-- fonts  -->
-<link rel="stylesheet" href="/assets/sandc_fonts/stylesheet.css">
-<link rel="stylesheet" href="/assets/tragez_fonts/stylesheet.css">
-<!-- font-awesome stylesheet -->
-<link rel="stylesheet" href="/fontawesome/css/all.css">
-<!-- sweetalert stylesheet  -->
-<link rel="stylesheet" href="/css/sweetalert2.min.css">
-<!-- sweetalert stylesheet  -->
-<link rel="stylesheet" href="/css/owl.carousel.min.css">
-<!-- swiper links -->
-<link rel="stylesheet" href="/css/swiper-bundle.min.css">
-
-<link rel='stylesheet' id='elementor-post-15-css'
-    href='{{ config:app:url }}/walley/wp-content/uploads/sites/2/elementor/css/post-15.css?ver=1767237625'
-    media='all' />
-
-<link rel='stylesheet' id='elementor-post-543-css'
-    href='{{ config:app:url }}/walley/wp-content/uploads/sites/2/elementor/css/post-543.css?ver=1767244977'
-    media='all' />
-
-<link rel="stylesheet" id="siteground-optimizer-combined-css-261a06ce3505eeb999d627e354b50531"
-    href="/wp-content/uploads/siteground-optimizer-assets/siteground-optimizer-combined-css-261a06ce3505eeb999d627e354b50531.css"
+{{ section:head_css }}
+<link rel="stylesheet" id="widget-heading-css"
+    href="{{ config:url }}/seed-stone/wp-content/plugins/elementor/assets/css/widget-heading.min.css?ver=4.2.3"
     media="all" />
-<link rel="preload"
-    href="/wp-content/uploads/siteground-optimizer-assets/siteground-optimizer-combined-css-261a06ce3505eeb999d627e354b50531.css"
-    as="style">
-
-<style id='elementor-frontend-inline-css'>
-    .elementor-kit-12 {
-        --e-global-color-primary: #00B30F;
-        --e-global-color-secondary: #00473C;
-        --e-global-color-text: #00473C;
-        --e-global-color-accent: #00B30F;
-        --e-global-color-light: #EFEEE7;
-        --e-global-typography-primary-font-family: "Plus Jakarta Sans";
-        --e-global-typography-primary-font-weight: 600;
-        --e-global-typography-secondary-font-family: "Plus Jakarta Sans";
-        --e-global-typography-secondary-font-weight: 600;
-        --e-global-typography-text-font-family: "DM Sans";
-        --e-global-typography-text-font-weight: 400;
-        --e-global-typography-accent-font-family: "Plus Jakarta Sans";
-        --e-global-typography-accent-font-weight: 500;
-        --keydesign-h5-font-weight: 600;
-    }
-
-    .elementor-kit-12 h5 {
-        font-weight: 600;
-    }
-
-    .elementor-kit-12 button,
-    .elementor-kit-12 input[type="button"],
-    .elementor-kit-12 input[type="submit"],
-    .elementor-kit-12 .elementor-button,
-    .elementor-kit-12 .ekit-wid-con .elementskit-btn,
-    .elementor-kit-12 .ekit-wid-con .elementskit-single-pricing .elementskit-pricing-btn,
-    .elementor-kit-12 .kd-widget-container .kd-button {
-        font-weight: 600;
-    }
-
-    .elementor-section.elementor-section-boxed>.elementor-container {
-        max-width: 1240px;
-    }
-
-    .e-con {
-        --container-max-width: 1240px;
-    }
-
-    .elementor-widget:not(:last-child) {
-        --kit-widget-spacing: 20px;
-    }
-
-    .elementor-element {
-        --widgets-spacing: 20px 20px;
-        --widgets-spacing-row: 20px;
-        --widgets-spacing-column: 20px;
-    }
-
-        {}
-
-    h1.entry-title {
-        display: var(--page-title-display);
-    }
-
-    body {
-        --vertical-spacing: 100px;
-        --mobile-spacing: 50px;
-    }
-
-    @media(max-width: 1024px) {
-        .elementor-section.elementor-section-boxed>.elementor-container {
-            max-width: 1024px;
-        }
-
-        .e-con {
-            --container-max-width: 1024px;
-        }
-    }
-
-    @media(max-width: 767px) {
-        .elementor-section.elementor-section-boxed>.elementor-container {
-            max-width: 767px;
-        }
-
-        .e-con {
-            --container-max-width: 767px;
-        }
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-2c6e901 {
+<style>
+    .elementor .elementor-element.elementor-element-a167fa9 {
         --display: flex;
-        --flex-direction: row;
+        --min-height: 500px;
+        --justify-content: center;
+        --align-items: center;
         --container-widget-width: calc((1 - var(--container-widget-flex-grow)) * 100%);
-        --container-widget-height: 100%;
-        --container-widget-flex-grow: 1;
-        --container-widget-align-self: stretch;
-        --flex-wrap-mobile: wrap;
-        --align-items: stretch;
-        --gap: 10px 10px;
-        --row-gap: 10px;
-        --column-gap: 10px;
-        --padding-top: 80px;
-        --padding-bottom: 80px;
-        --padding-left: 0px;
-        --padding-right: 0px;
-        overflow: visible;
+        --overflow: hidden;
+        --overlay-opacity: 0.5;
     }
 
-    .elementor-22253 .elementor-element.elementor-element-2c6e901:not(.elementor-motion-effects-element-type-background),
-    .elementor-22253 .elementor-element.elementor-element-2c6e901>.elementor-motion-effects-container>.elementor-motion-effects-layer {
-        background-color: var(--e-global-color-light);
+    .elementor .elementor-element.elementor-element-a167fa9:not(.elementor-motion-effects-element-type-background),
+    .elementor .elementor-element.elementor-element-a167fa9>.elementor-motion-effects-container>.elementor-motion-effects-layer {
+        background-color: var(--e-global-color-secondary);
+        background-image: url("{{ banner_image:url ?? settings:page_banner_image:url }}");
+        background-position: bottom center;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 
-    .elementor-22253 .elementor-element.elementor-element-6485154 {
+    .elementor .elementor-element.elementor-element-a167fa9::before {
+        background-color: var(--e-global-color-secondary);
+        --background-overlay: "";
+    }
+
+    .elementor .elementor-element.elementor-element-4375798 {
         --display: flex;
-        --gap: 5px 5px;
-        --row-gap: 5px;
-        --column-gap: 5px;
-        --padding-top: 20px;
-        --padding-bottom: 20px;
-        --padding-left: 20px;
-        --padding-right: 20px;
-        overflow: visible;
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-1e62d6a .ekit-heading__description {
-        max-width: 550px;
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-1e62d6a .elementskit-section-title-wraper .elementskit-section-title {
-        color: var(--e-global-color-text);
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-1e62d6a .elementskit-section-title-wraper .elementskit-section-title>span {
-        color: var(--e-global-color-primary);
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-1e62d6a .elementskit-section-title-wraper p {
-        color: var(--e-global-color-text);
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-02a78d8 {
-        --display: flex;
-        --flex-direction: row;
-        --container-widget-width: initial;
-        --container-widget-height: 100%;
-        --container-widget-flex-grow: 1;
-        --container-widget-align-self: stretch;
-        --flex-wrap-mobile: wrap;
-        border-style: solid;
-        --border-style: solid;
-        border-width: 0px 0px 1px 0px;
-        --border-top-width: 0px;
-        --border-right-width: 0px;
-        --border-bottom-width: 1px;
-        --border-left-width: 0px;
-        border-color: #E7E7E7;
-        --border-color: #E7E7E7;
-        --margin-top: 0px;
+        --align-items: center;
+        --container-widget-width: calc((1 - var(--container-widget-flex-grow)) * 100%);
+        --margin-top: 48px;
+        --margin-right: 0px;
         --margin-bottom: 0px;
         --margin-left: 0px;
-        --margin-right: 0px;
-        --padding-top: 0px;
-        --padding-bottom: 90px;
-        --padding-left: 0px;
-        --padding-right: 0px;
-        overflow: visible;
     }
 
-    .elementor-22253 .elementor-element.elementor-element-6984616 {
-        --display: flex;
-        overflow: visible;
+    .elementor .elementor-element.elementor-element-398921c {
+        z-index: 1;
+        text-align: center;
     }
 
-    .elementor-22253 .elementor-element.elementor-element-896675c {
-        --display: flex;
-        --margin-top: 70px;
-        --margin-bottom: 0px;
-        --margin-left: 0px;
-        --margin-right: 0px;
-        overflow: visible;
+    .elementor .elementor-element.elementor-element-398921c .elementor-heading-title {
+        color: var(--e-global-color-53340ed);
     }
 
-    .elementor-22253 .elementor-element.elementor-element-dc469c7 .ekit-stylish-list-content-wrapper {
-        margin: 0px 0px 15px 0px;
+    .elementor .elementor-element.elementor-element-4c5d6e7f {
+        z-index: 1;
+        text-align: center;
+        margin-top: 8px;
     }
 
-    .elementor-22253 .elementor-element.elementor-element-dc469c7 .ekit-stylish-list-content-icon>i {
-        font-size: 13px;
+    .elementor .elementor-element.elementor-element-4c5d6e7f .elementor-widget-container {
+        color: var(--e-global-color-53340ed);
     }
 
-    .elementor-22253 .elementor-element.elementor-element-dc469c7 .ekit-stylish-list-content-icon>svg {
-        height: 13px;
-        width: 13px;
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-dc469c7 .ekit-stylish-list-content-icon>img {
-        height: 13px;
-        width: 13px;
-        color: #E93469;
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-dc469c7 .ekit-stylish-list-content-icon> :is(i, svg) {
-        color: #E93469;
-        fill: #E93469;
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-dc469c7 .ekit-stylish-list-content-wrapper:hover .ekit-stylish-list-content-icon> :is(i, svg) {
-        color: #E93469;
-        fill: #E93469;
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-dc469c7 .ekit-stylish-list-content-wrapper:hover .ekit-stylish-list-content-icon>img {
-        color: #E93469;
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-dc469c7 .ekit-stylish-list-content-icon {
-        margin: 0px 6px 3px 0px;
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-dc469c7 .ekit-stylish-list-content-title {
-        color: inherit;
-        transition: all 0.3s ease-out;
-        font-weight: 500;
-        margin: 0px 6px 0px 0px;
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-dc469c7 .ekit-stylish-list-content-wrapper:hover .ekit-stylish-list-content-title {
-        color: var(--e-global-color-primary);
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-dc469c7 .ekit-stylish-list-content-text {
-        flex-direction: column;
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-dc469c7 .ekit-stylish-list-content-description {
-        color: inherit;
-        transition: color 0.3s ease;
-        margin: 0px 6px 0px 0px;
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-dc469c7 .ekit-stylish-list-content-badge span {
-        color: #fff;
-        background-color: #EF0A0A;
-        border-radius: 4px;
-        padding: 2px 5px 2px 5px;
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-5c1e421 {
-        --display: flex;
-        --padding-top: 0px;
-        --padding-bottom: 0px;
-        --padding-left: 0px;
-        --padding-right: 10px;
-        overflow: visible;
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-47693b8 {
-        --display: flex;
-        --gap: 10px 10px;
-        --row-gap: 10px;
-        --column-gap: 10px;
-        border-style: none;
-        --border-style: none;
-        --margin-top: 0px;
-        --margin-bottom: 0px;
-        --margin-left: 0px;
-        --margin-right: 0px;
-        --padding-top: 90px;
-        --padding-bottom: 0px;
-        --padding-left: 0px;
-        --padding-right: 0px;
-        overflow: visible;
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-1c05ba0 {
-        --display: flex;
-        --padding-top: 0px;
-        --padding-bottom: 20px;
-        --padding-left: 10px;
-        --padding-right: 10px;
-        overflow: visible;
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-2a1c7ce .elementskit-section-title-wraper .elementskit-section-title>span {
-        color: #000000;
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-2a1c7ce .elementskit-section-title-wraper .elementskit-section-title:hover>span {
-        color: #000000;
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-356e360 {
-        --display: flex;
-        --gap: 10px 10px;
-        --row-gap: 10px;
-        --column-gap: 10px;
-        --padding-top: 0px;
-        --padding-bottom: 0px;
-        --padding-left: 10px;
-        --padding-right: 10px;
-        overflow: visible;
-    }
-
-    .elementor-widget-text-editor {
-        font-family: var(--e-global-typography-text-font-family), Sans-serif;
-        font-weight: var(--e-global-typography-text-font-weight);
-        color: var(--e-global-color-text);
-    }
-
-    .elementor-widget-text-editor.elementor-drop-cap-view-stacked .elementor-drop-cap {
-        background-color: var(--e-global-color-primary);
-    }
-
-    .elementor-widget-text-editor.elementor-drop-cap-view-framed .elementor-drop-cap,
-    .elementor-widget-text-editor.elementor-drop-cap-view-default .elementor-drop-cap {
-        color: var(--e-global-color-primary);
-        border-color: var(--e-global-color-primary);
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-46146cb {
-        font-family: "DM Sans", Sans-serif;
-        font-size: 16px;
-        font-weight: 400;
-        color: #757575;
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-21e3eaa {
-        --display: flex;
-        --gap: 10px 10px;
-        --row-gap: 10px;
-        --column-gap: 10px;
-        border-style: none;
-        --border-style: none;
-        --margin-top: 0px;
-        --margin-bottom: 0px;
-        --margin-left: 0px;
-        --margin-right: 0px;
-        --padding-top: 60px;
-        --padding-bottom: 0px;
-        --padding-left: 0px;
-        --padding-right: 0px;
-        overflow: visible;
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-9bac91f {
-        --display: flex;
-        --padding-top: 0px;
-        --padding-bottom: 20px;
-        --padding-left: 10px;
-        --padding-right: 10px;
-        overflow: visible;
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-c4b74ef {
-        --spacer-size: 70px;
-        border-style: solid;
-        border-width: 1px 0px 0px 0px;
-        border-color: #E7E7E7;
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-809cfbb .elementskit-section-title-wraper .elementskit-section-title>span {
-        color: #000000;
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-809cfbb .elementskit-section-title-wraper .elementskit-section-title:hover>span {
-        color: #000000;
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-809cfbb .elementskit-section-title-wraper .elementskit-section-title span:last-child,
-    .elementor-22253 .elementor-element.elementor-element-809cfbb .elementskit-section-title-wraper .elementskit-section-title>span {
-        font-family: var(--e-global-typography-accent-font-family), Sans-serif;
-        font-weight: var(--e-global-typography-accent-font-weight);
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-75d2766 {
-        --display: flex;
-        --gap: 10px 10px;
-        --row-gap: 10px;
-        --column-gap: 10px;
-        --padding-top: 0px;
-        --padding-bottom: 0px;
-        --padding-left: 10px;
-        --padding-right: 10px;
-        overflow: visible;
-    }
-
-
-    .elementor-element-5c1e421 strong,
-    .elementor-element-5c1e421 a {
-        color: var(--e-global-color-text);
-    }
-
-    .status-publish.hentry .elementor-element.elementor-element-10cfd999,
-    .status-publish.hentry .elementor-element.elementor-element-c3196e6 {
-        text-align: left !important;
-    }
-
-    .status-publish.hentry .elementor-element-126e9922>.e-con-inner {
-        text-align: left;
-    }
-
-    .elementor-543 .elementor-element.elementor-element-19305dbc{
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-    }
-
-    .ekit-heading__description strong {
-        color: var(--e-global-color-primary);
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-f7698a0 {
-        font-family: "DM Sans", Sans-serif;
-        font-size: 16px;
-        font-weight: 400;
-        color: #757575;
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-6d3651d {
-        --display: flex;
-        --gap: 10px 10px;
-        --row-gap: 10px;
-        --column-gap: 10px;
-        border-style: none;
-        --border-style: none;
-        --margin-top: 0px;
-        --margin-bottom: 0px;
-        --margin-left: 0px;
-        --margin-right: 0px;
-        --padding-top: 60px;
-        --padding-bottom: 0px;
-        --padding-left: 0px;
-        --padding-right: 0px;
-        overflow: visible;
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-d730f69 {
-        --display: flex;
-        --padding-top: 0px;
-        --padding-bottom: 20px;
-        --padding-left: 10px;
-        --padding-right: 10px;
-        overflow: visible;
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-d24534d {
-        --spacer-size: 70px;
-        border-style: solid;
-        border-width: 1px 0px 0px 0px;
-        border-color: #E7E7E7;
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-c418b98 .elementskit-section-title-wraper .elementskit-section-title>span {
-        color: #000000;
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-c418b98 .elementskit-section-title-wraper .elementskit-section-title:hover>span {
-        color: #000000;
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-c418b98 .elementskit-section-title-wraper .elementskit-section-title span:last-child,
-    .elementor-22253 .elementor-element.elementor-element-c418b98 .elementskit-section-title-wraper .elementskit-section-title>span {
-        font-family: var(--e-global-typography-accent-font-family), Sans-serif;
-        font-weight: var(--e-global-typography-accent-font-weight);
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-e93075f {
-        --display: flex;
-        --gap: 10px 10px;
-        --row-gap: 10px;
-        --column-gap: 10px;
-        --padding-top: 0px;
-        --padding-bottom: 0px;
-        --padding-left: 10px;
-        --padding-right: 10px;
-        overflow: visible;
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-2501ea1 {
-        font-family: "DM Sans", Sans-serif;
-        font-size: 16px;
-        font-weight: 400;
-        color: #757575;
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-cc96f80 {
-        --display: flex;
-        --gap: 10px 10px;
-        --row-gap: 10px;
-        --column-gap: 10px;
-        border-style: none;
-        --border-style: none;
-        --margin-top: 0px;
-        --margin-bottom: 0px;
-        --margin-left: 0px;
-        --margin-right: 0px;
-        --padding-top: 60px;
-        --padding-bottom: 0px;
-        --padding-left: 0px;
-        --padding-right: 0px;
-        overflow: visible;
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-b21772b {
-        --display: flex;
-        --padding-top: 0px;
-        --padding-bottom: 20px;
-        --padding-left: 10px;
-        --padding-right: 10px;
-        overflow: visible;
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-2aa2b8a {
-        --spacer-size: 70px;
-        border-style: solid;
-        border-width: 1px 0px 0px 0px;
-        border-color: #E7E7E7;
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-467e9bb .elementskit-section-title-wraper .elementskit-section-title>span {
-        color: #000000;
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-467e9bb .elementskit-section-title-wraper .elementskit-section-title:hover>span {
-        color: #000000;
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-467e9bb .elementskit-section-title-wraper .elementskit-section-title span:last-child,
-    .elementor-22253 .elementor-element.elementor-element-467e9bb .elementskit-section-title-wraper .elementskit-section-title>span {
-        font-family: var(--e-global-typography-accent-font-family), Sans-serif;
-        font-weight: var(--e-global-typography-accent-font-weight);
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-6af7cc0 {
-        --display: flex;
-        --gap: 10px 10px;
-        --row-gap: 10px;
-        --column-gap: 10px;
-        --padding-top: 0px;
-        --padding-bottom: 0px;
-        --padding-left: 10px;
-        --padding-right: 10px;
-        overflow: visible;
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-aa67470 {
-        font-family: "DM Sans", Sans-serif;
-        font-size: 16px;
-        font-weight: 400;
-        color: #757575;
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-af0c04d {
-        --display: flex;
-        --gap: 10px 10px;
-        --row-gap: 10px;
-        --column-gap: 10px;
-        border-style: none;
-        --border-style: none;
-        --margin-top: 0px;
-        --margin-bottom: 0px;
-        --margin-left: 0px;
-        --margin-right: 0px;
-        --padding-top: 60px;
-        --padding-bottom: 0px;
-        --padding-left: 0px;
-        --padding-right: 0px;
-        overflow: visible;
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-d13a3ba {
-        --display: flex;
-        --padding-top: 0px;
-        --padding-bottom: 20px;
-        --padding-left: 10px;
-        --padding-right: 10px;
-        overflow: visible;
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-5e5a844 {
-        --spacer-size: 70px;
-        border-style: solid;
-        border-width: 1px 0px 0px 0px;
-        border-color: #E7E7E7;
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-609e85d .elementskit-section-title-wraper .elementskit-section-title>span {
-        color: #000000;
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-609e85d .elementskit-section-title-wraper .elementskit-section-title:hover>span {
-        color: #000000;
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-609e85d .elementskit-section-title-wraper .elementskit-section-title span:last-child,
-    .elementor-22253 .elementor-element.elementor-element-609e85d .elementskit-section-title-wraper .elementskit-section-title>span {
-        font-family: var(--e-global-typography-accent-font-family), Sans-serif;
-        font-weight: var(--e-global-typography-accent-font-weight);
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-7429ce9 {
-        --display: flex;
-        --gap: 10px 10px;
-        --row-gap: 10px;
-        --column-gap: 10px;
-        --padding-top: 0px;
-        --padding-bottom: 0px;
-        --padding-left: 10px;
-        --padding-right: 10px;
-        overflow: visible;
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-1a44561 {
-        font-family: "DM Sans", Sans-serif;
-        font-size: 16px;
-        font-weight: 400;
-        color: #757575;
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-9a5fb5a {
-        --display: flex;
-        --gap: 10px 10px;
-        --row-gap: 10px;
-        --column-gap: 10px;
-        border-style: none;
-        --border-style: none;
-        --margin-top: 0px;
-        --margin-bottom: 0px;
-        --margin-left: 0px;
-        --margin-right: 0px;
-        --padding-top: 60px;
-        --padding-bottom: 0px;
-        --padding-left: 0px;
-        --padding-right: 0px;
-        overflow: visible;
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-1ad17bc {
-        --display: flex;
-        --padding-top: 0px;
-        --padding-bottom: 20px;
-        --padding-left: 10px;
-        --padding-right: 10px;
-        overflow: visible;
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-5cc523b {
-        --spacer-size: 70px;
-        border-style: solid;
-        border-width: 1px 0px 0px 0px;
-        border-color: #E7E7E7;
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-f788156 .elementskit-section-title-wraper .elementskit-section-title>span {
-        color: #000000;
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-f788156 .elementskit-section-title-wraper .elementskit-section-title:hover>span {
-        color: #000000;
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-f788156 .elementskit-section-title-wraper .elementskit-section-title span:last-child,
-    .elementor-22253 .elementor-element.elementor-element-f788156 .elementskit-section-title-wraper .elementskit-section-title>span {
-        font-family: var(--e-global-typography-accent-font-family), Sans-serif;
-        font-weight: var(--e-global-typography-accent-font-weight);
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-8e79f24 {
-        --display: flex;
-        --gap: 10px 10px;
-        --row-gap: 10px;
-        --column-gap: 10px;
-        --padding-top: 0px;
-        --padding-bottom: 0px;
-        --padding-left: 10px;
-        --padding-right: 10px;
-        overflow: visible;
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-650ba63 {
-        font-family: "DM Sans", Sans-serif;
-        font-size: 16px;
-        font-weight: 400;
-        color: #757575;
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-0ce6d62 {
-        --display: flex;
-        --gap: 10px 10px;
-        --row-gap: 10px;
-        --column-gap: 10px;
-        border-style: none;
-        --border-style: none;
-        --margin-top: 0px;
-        --margin-bottom: 0px;
-        --margin-left: 0px;
-        --margin-right: 0px;
-        --padding-top: 60px;
-        --padding-bottom: 0px;
-        --padding-left: 0px;
-        --padding-right: 0px;
-        overflow: visible;
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-af8db3b {
-        --display: flex;
-        --padding-top: 0px;
-        --padding-bottom: 20px;
-        --padding-left: 10px;
-        --padding-right: 10px;
-        overflow: visible;
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-411521c {
-        --spacer-size: 70px;
-        border-style: solid;
-        border-width: 1px 0px 0px 0px;
-        border-color: #E7E7E7;
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-20678d9 .elementskit-section-title-wraper .elementskit-section-title>span {
-        color: #000000;
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-20678d9 .elementskit-section-title-wraper .elementskit-section-title:hover>span {
-        color: #000000;
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-20678d9 .elementskit-section-title-wraper .elementskit-section-title span:last-child,
-    .elementor-22253 .elementor-element.elementor-element-20678d9 .elementskit-section-title-wraper .elementskit-section-title>span {
-        font-family: var(--e-global-typography-accent-font-family), Sans-serif;
-        font-weight: var(--e-global-typography-accent-font-weight);
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-784f6a3 {
-        --display: flex;
-        --gap: 10px 10px;
-        --row-gap: 10px;
-        --column-gap: 10px;
-        --padding-top: 0px;
-        --padding-bottom: 0px;
-        --padding-left: 10px;
-        --padding-right: 10px;
-        overflow: visible;
-    }
-
-    .elementor-22253 .elementor-element.elementor-element-a32691f {
-        font-family: "DM Sans", Sans-serif;
-        font-size: 16px;
-        font-weight: 400;
-        color: #757575;
-    }
-
-    :root {
-        --page-title-display: none;
-    }
-
-    @media(max-width: 1024px) {
-        .elementor-22253 .elementor-element.elementor-element-02a78d8 {
-            --flex-direction: column;
-            --container-widget-width: 100%;
-            --container-widget-height: initial;
-            --container-widget-flex-grow: 0;
-            --container-widget-align-self: initial;
-            --flex-wrap-mobile: wrap;
-        }
-
-        .elementor-22253 .elementor-element.elementor-element-5c1e421 {
-            --padding-top: 0px;
-            --padding-bottom: 0px;
-            --padding-left: 0px;
-            --padding-right: 0px;
-        }
-
-        .elementor-22253 .elementor-element.elementor-element-47693b8 {
-            --padding-top: 40px;
-            --padding-bottom: 0px;
-            --padding-left: 0px;
-            --padding-right: 0px;
-        }
-
-        .elementor-22253 .elementor-element.elementor-element-21e3eaa {
-            --padding-top: 20px;
-            --padding-bottom: 0px;
-            --padding-left: 0px;
-            --padding-right: 0px;
-        }
-
-        .elementor-22253 .elementor-element.elementor-element-c4b74ef {
-            --spacer-size: 30px;
-        }
-
-        .elementor-22253 .elementor-element.elementor-element-6d3651d {
-            --padding-top: 20px;
-            --padding-bottom: 0px;
-            --padding-left: 0px;
-            --padding-right: 0px;
-        }
-
-        .elementor-22253 .elementor-element.elementor-element-d24534d {
-            --spacer-size: 30px;
-        }
-
-        .elementor-22253 .elementor-element.elementor-element-cc96f80 {
-            --padding-top: 20px;
-            --padding-bottom: 0px;
-            --padding-left: 0px;
-            --padding-right: 0px;
-        }
-
-        .elementor-22253 .elementor-element.elementor-element-2aa2b8a {
-            --spacer-size: 30px;
-        }
-
-        .elementor-22253 .elementor-element.elementor-element-af0c04d {
-            --padding-top: 20px;
-            --padding-bottom: 0px;
-            --padding-left: 0px;
-            --padding-right: 0px;
-        }
-
-        .elementor-22253 .elementor-element.elementor-element-5e5a844 {
-            --spacer-size: 30px;
-        }
-
-        .elementor-22253 .elementor-element.elementor-element-9a5fb5a {
-            --padding-top: 20px;
-            --padding-bottom: 0px;
-            --padding-left: 0px;
-            --padding-right: 0px;
-        }
-
-        .elementor-22253 .elementor-element.elementor-element-5cc523b {
-            --spacer-size: 30px;
-        }
-
-        .elementor-22253 .elementor-element.elementor-element-0ce6d62 {
-            --padding-top: 20px;
-            --padding-bottom: 0px;
-            --padding-left: 0px;
-            --padding-right: 0px;
-        }
-
-        .elementor-22253 .elementor-element.elementor-element-411521c {
-            --spacer-size: 30px;
+    @media (min-width: 768px) {
+        .elementor .elementor-element.elementor-element-a167fa9 {
+            --width: 2000px;
         }
     }
 
-    @media(max-width: 767px) {
-        .elementor-22253 .elementor-element.elementor-element-2c6e901 {
-            --padding-top: 30px;
-            --padding-bottom: 30px;
-            --padding-left: 0px;
-            --padding-right: 0px;
-        }
-
-        .elementor-22253 .elementor-element.elementor-element-02a78d8 {
-            --padding-top: 0px;
-            --padding-bottom: 40px;
-            --padding-left: 10px;
-            --padding-right: 10px;
-        }
-
-        .elementor-22253 .elementor-element.elementor-element-356e360 {
-            --gap: 0px 0px;
-            --row-gap: 0px;
-            --column-gap: 0px;
-        }
-
-        .elementor-22253 .elementor-element.elementor-element-75d2766 {
-            --gap: 0px 0px;
-            --row-gap: 0px;
-            --column-gap: 0px;
-        }
-
-        .elementor-22253 .elementor-element.elementor-element-e93075f {
-            --gap: 0px 0px;
-            --row-gap: 0px;
-            --column-gap: 0px;
-        }
-
-        .elementor-22253 .elementor-element.elementor-element-6af7cc0 {
-            --gap: 0px 0px;
-            --row-gap: 0px;
-            --column-gap: 0px;
-        }
-
-        .elementor-22253 .elementor-element.elementor-element-7429ce9 {
-            --gap: 0px 0px;
-            --row-gap: 0px;
-            --column-gap: 0px;
-        }
-
-        .elementor-22253 .elementor-element.elementor-element-8e79f24 {
-            --gap: 0px 0px;
-            --row-gap: 0px;
-            --column-gap: 0px;
-        }
-
-        .elementor-22253 .elementor-element.elementor-element-784f6a3 {
-            --gap: 0px 0px;
-            --row-gap: 0px;
-            --column-gap: 0px;
+    @media (max-width: 1024px) {
+        .elementor .elementor-element.elementor-element-a167fa9 {
+            --min-height: 350px;
         }
     }
 
-    @media(min-width: 768px) {
-        .elementor-22253 .elementor-element.elementor-element-6984616 {
-            --width: 25%;
-        }
-
-        .elementor-22253 .elementor-element.elementor-element-5c1e421 {
-            --width: 75%;
-        }
-
-        .elementor-22253 .elementor-element.elementor-element-47693b8 {
-            --width: 100%;
-        }
-
-        .elementor-22253 .elementor-element.elementor-element-21e3eaa {
-            --width: 100%;
-        }
-
-        .elementor-22253 .elementor-element.elementor-element-6d3651d {
-            --width: 100%;
-        }
-
-        .elementor-22253 .elementor-element.elementor-element-cc96f80 {
-            --width: 100%;
-        }
-
-        .elementor-22253 .elementor-element.elementor-element-af0c04d {
-            --width: 100%;
-        }
-
-        .elementor-22253 .elementor-element.elementor-element-9a5fb5a {
-            --width: 100%;
-        }
-
-        .elementor-22253 .elementor-element.elementor-element-0ce6d62 {
-            --width: 100%;
+    @media (max-width: 767px) {
+        .elementor .elementor-element.elementor-element-a167fa9 {
+            --min-height: 300px;
         }
     }
-
-    @media(max-width: 1024px) and (min-width:768px) {
-        .elementor-22253 .elementor-element.elementor-element-5c1e421 {
-            --width: 100%;
-        }
-    }
-
-    .elementor-element-5c1e421 a {
-        text-decoration: underline;
-    }
-
-
-    /*# sourceURL=elementor-frontend-inline-css */
 </style>
-
-{{ /section:page_head_tags }}
-
-<!-- page-head-tags -->
-
-{{# ============================================================ #}}
-{{# BODY CLASS #}}
-{{# ============================================================ #}}
-{{ section:body_class }}
-wp-singular page-template-default page page-id-11230 wp-theme-finpath wp-child-theme-finpath-child theme-finpath
-underline-link-effect keydesign-elementor-library woocommerce-no-js elementor-default elementor-kit-12 elementor-page
-elementor-page-11230
-wp-singular envato_tk_templates-template envato_tk_templates-template-elementor_header_footer single
-single-envato_tk_templates postid-543 wp-embed-responsive wp-theme-hello-elementor hello-elementor-default
-elementor-default elementor-template-full-width elementor-kit-6 elementor-page elementor-page-543
-{{ categories }}category-{{ slug }} {{ /categories }}
-{{ tags }}tag-{{ slug }} {{ /tags }}
-{{ /section:body_class }}
+{{ /section:head_css }} {{#
+============================================================ #}} {{# BODY CLASS
+#}} {{# ============================================================ #}} {{
+section:body_class }} wp-singular envato_tk_templates-template-default single
+single-envato_tk_templates wp-embed-responsive wp-theme-hello-elementor
+hello-elementor-default elementor-default elementor-kit-3 e--ua-firefox {{
+/section:body_class }}
 
 <a class="skip-link screen-reader-text" href="#content">Skip to content </a>
 
-<div id="content" class="site-content">
-    <div id="primary" class="content-area" data-attr="single-page">
-        <main id="main" class="site-main" role="main">
-            <article id="post-22253" class="post-22253 page type-page status-publish hentry">
-                <div class="entry-content">
-                    <div data-elementor-type="wp-page" data-elementor-id="22253" class="elementor elementor-22253">
+{{ blocks }} {{ if type == "privacy_policy" }}
 
-                        {{ blocks }}
-                        {{ if type == "privacy_policy" }}
+<main id="content" class="envato_tk_templates type-envato_tk_templates status-publish hentry post-33 envato_tk_templates type-envato_tk_templates status-publish has-post-thumbnail hentry">
 
-                        {{# ============================================================ #}}
-                        {{# SECTION 1 — PAGE HERO HEADER #}}
-                        {{# ============================================================ #}}
-                        <div data-elementor-type="wp-post" data-elementor-id="543" class="elementor elementor-543">
+    <div class="page-content">
 
-                            <div class="elementor-element elementor-element-126e9922 e-flex e-con-boxed e-con e-parent"
-                                data-id="126e9922" data-element_type="container"
-                                data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                                <div class="e-con-inner">
-                                    <div class="elementor-element elementor-element-19305dbc e-con-full e-flex e-con e-child"
-                                        data-id="19305dbc" data-element_type="container">
-                                        <div class="elementor-element elementor-element-10cfd999 elementor-invisible elementor-widget elementor-widget-heading"
-                                            data-id="10cfd999" data-element_type="widget"
-                                            data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}"
-                                            data-widget_type="heading.default">
-                                            <div class="elementor-widget-container">
-                                                <h1 class="elementor-heading-title elementor-size-default">{{ hero:title
-                                                    }}</h1>
-                                            </div>
-                                        </div>
-                                        <div class="elementor-element elementor-element-c3196e6 elementor-invisible elementor-widget elementor-widget-text-editor"
-                                            data-id="c3196e6" data-element_type="widget"
-                                            data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}"
-                                            data-widget_type="text-editor.default">
-                                            <div class="elementor-widget-container ekit-heading__description">
-                                                <p> <strong>Last modified:</strong>
-                                                    {{ hero:last_modified }} </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+        <div class="elementor elementor-33" data-elementor-type="wp-post" data-elementor-id="33">
 
+            {{# ============================================================ #}}
+            {{# PAGE HERO #}} 
+            {{# ============================================================ #}}
+
+            <div class="elementor-element elementor-element-a167fa9 e-con-full e-flex e-con e-parent e-lazyloaded"
+                data-id="a167fa9" data-element_type="container" data-e-type="container"
+                data-settings='{"background_background":"classic"}'>
+                <div class="elementor-element elementor-element-4375798 e-con-full e-flex e-con e-child"
+                    data-id="4375798" data-element_type="container" data-e-type="container">
+                    <div class="elementor-element elementor-element-398921c elementor-widget elementor-widget-heading animated fadeInUp"
+                        data-id="398921c" data-element_type="widget" data-e-type="widget"
+                        data-settings='{"_animation":"fadeInUp"}' data-widget_type="heading.default">
+                        <h1 class="elementor-heading-title elementor-size-default">
+                            {{ hero:title }}
+                        </h1>
+                    </div>
+                    <div class="elementor-element elementor-element-4c5d6e7f elementor-widget elementor-widget-text-editor animated fadeInUp"
+                        data-id="4c5d6e7f" data-element_type="widget" data-e-type="widget"
+                        data-settings='{"_animation":"fadeInUp"}' data-widget_type="text-editor.default">
+                        <div class="elementor-widget-container">
+                            <p>
+                                <strong>{{ hero:last_modified_label }}</strong> {{
+                                hero:last_modified }}
+                            </p>
                         </div>
-
-
-                        {{# ============================================================ #}}
-                        {{# SECTION 2 — SIDEBAR NAV + CONTENT SECTIONS #}}
-                        {{# ============================================================ #}}
-                        <div class="elementor-element elementor-element-02a78d8 e-flex e-con-boxed e-con e-parent"
-                            data-id="02a78d8" data-element_type="container" data-e-type="container"
-                            data-settings="{&quot;animation&quot;:&quot;none&quot;}">
-                            <div class="e-con-inner">
-
-                                {{# Sidebar nav — desktop only #}}
-                                <div class="elementor-element elementor-element-6984616 e-con-full elementor-hidden-tablet elementor-hidden-mobile e-flex e-con e-child"
-                                    data-id="6984616" data-element_type="container" data-e-type="container">
-                                    <div class="elementor-element elementor-element-896675c e-con-full ekit-sticky--top e-flex e-con e-child"
-                                        data-id="896675c" data-element_type="container" data-e-type="container"
-                                        data-settings="{&quot;ekit_sticky&quot;:&quot;top&quot;,&quot;ekit_sticky_offset&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:175,&quot;sizes&quot;:[]},&quot;ekit_sticky_until&quot;:&quot;section7&quot;,&quot;ekit_sticky_on_desktop&quot;:&quot;desktop&quot;,&quot;ekit_sticky_effect_offset&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]}}">
-                                        <div class="elementor-element elementor-element-dc469c7 sticky-navigation animated-fast elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-elementskit-stylish-list"
-                                            data-id="dc469c7" data-element_type="widget" data-e-type="widget"
-                                            data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;,&quot;ekit_we_effect_on&quot;:&quot;none&quot;}"
-                                            data-widget_type="elementskit-stylish-list.default">
-                                            <div class="elementor-widget-container">
-                                                <div class="ekit-wid-con">
-                                                    <ul class="ekit-stylish-list ">
-                                                        {{ sections }}
-                                                        <li
-                                                            class="ekit-stylish-list-content-wrapper elementor-repeater-item-22253">
-                                                            {{# Sidebar nav link #}}
-                                                            <a class="ekit-wrapper-link" href="#{{ slug }}"
-                                                                aria-label="{{ title }}"></a>
-                                                            <div class="ekit-stylish-list-content">
-                                                                <div class="ekit-stylish-list-content-text">
-                                                                    <span class="ekit-stylish-list-content-title">{{
-                                                                        title }}</span>
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                        {{ /sections }}
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                {{# Main content column #}}
-                                <div class="elementor-element elementor-element-5c1e421 e-con-full e-flex e-con e-child"
-                                    data-id="5c1e421" data-element_type="container" data-e-type="container">
-
-                                    {{ sections }}
-
-                                    <div class="elementor-element e-con-full sticky-section e-flex e-con e-child"
-                                        data-element_type="container" data-e-type="container" id="{{ slug }}">
-
-                                        <div class="elementor-element e-con-full e-flex e-con e-child"
-                                            data-element_type="container" data-e-type="container">
-
-                                            {{# Spacer — skip on first section only #}}
-                                            {{ unless first }}
-                                            <div class="elementor-element animated-fast elementor-widget elementor-widget-spacer"
-                                                data-element_type="widget" data-e-type="widget"
-                                                data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;,&quot;_animation_delay&quot;:100,&quot;ekit_we_effect_on&quot;:&quot;none&quot;}"
-                                                data-widget_type="spacer.default">
-                                                <div class="elementor-spacer">
-                                                    <div class="elementor-spacer-inner"></div>
-                                                </div>
-                                            </div>
-                                            {{ /unless }}
-
-                                        </div>
-
-                                        <div class="elementor-element e-con-full e-flex e-con e-child"
-                                            data-element_type="container" data-e-type="container">
-                                            <div class="elementor-element animated-fast elementor-widget elementor-widget-text-editor"
-                                                data-element_type="widget" data-e-type="widget"
-                                                data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;,&quot;_animation_delay&quot;:100,&quot;ekit_we_effect_on&quot;:&quot;none&quot;}"
-                                                data-widget_type="text-editor.default">
-                                                {{ content }}
-                                                {{ if type == "paragraph" }}
-                                                <p>{{ content | raw }}</p>
-                                                {{ elseif type == "heading" }}
-                                                <h{{ attrs:level }}>{{ content | raw }}</h{{ attrs:level }}>
-                                                {{ elseif type == "orderedList" }}
-                                                <ol>
-                                                    {{ content }}
-                                                    <li>{{ content | raw }}</li>
-                                                    {{ /content }}
-                                                </ol>
-                                                {{ elseif type == "bulletList" }}
-                                                <ul>
-                                                    {{ content }}
-                                                    <li>{{ content | raw }}</li>
-                                                    {{ /content }}
-                                                </ul>
-                                                {{ elseif type == "text" }}
-                                                {{ if marks }}
-                                                {{ marks }}
-                                                {{ if type == "bold" }}<strong>{{ /if }}
-                                                    {{ if type == "italic" }}<em>{{ /if }}
-                                                        {{ if type == "link" }}<a href="{{ attrs:href }}" {{ if
-                                                            attrs:target }} target="{{ attrs:target }}" {{ /if }}>{{ /if
-                                                            }}
-                                                            {{ /marks }}
-                                                            {{ text }}
-                                                            {{ marks }}
-                                                            {{ if type == "bold" }}</strong>{{ /if }}
-                                                {{ if type == "italic" }}</em>{{ /if }}
-                                                {{ if type == "link" }}</a>{{ /if }}
-                                                {{ /marks }}
-                                                {{ else }}
-                                                {{ text }}
-                                                {{ /if }}
-                                                {{ elseif type == "image" }}
-                                                {{ if image }}
-                                                <img src="{{ image:url }}" alt="{{ image:alt }}" loading="lazy">
-                                                {{ /if }}
-                                                {{ /if }}
-                                                {{ /content }}
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    {{# end sticky-section #}}
-
-                                    {{ /sections }}
-
-                                </div>
-                                {{# end main content column #}}
-
-                            </div>
-                        </div>
-
-                        {{ /if }}
-                        {{ /blocks }}
-
                     </div>
                 </div>
-            </article>
-        </main>
-        <!-- #main -->
+            </div>
+
+            <div class="site-main">
+                <div data-elementor-type="wp-page" class="elementor elementor-kit-3">
+                {{# ============================================================
+                #}} {{# CONTENT SECTIONS #}} {{#
+                ============================================================ #}}
+
+                <div class="elementor-element elementor-element-5d6e7f8a e-flex e-con-boxed e-con e-parent"
+                    data-id="5d6e7f8a" data-element_type="container" data-e-type="container">
+                    <div class="e-con-inner">
+                        {{ sections }}
+
+                        <div class="elementor-element elementor-element-6e7f8a9b e-con-full e-flex e-con e-child"
+                            data-id="6e7f8a9b" data-element_type="container" data-e-type="container"
+                            id="{{ slug | substr:1 }}">
+                            <div class="elementor-element elementor-element-7f8a9b0c elementor-widget elementor-widget-text-editor"
+                                data-id="7f8a9b0c" data-element_type="widget" data-e-type="widget"
+                                data-widget_type="text-editor.default">
+                                <div class="elementor-widget-container">
+                                    {{ content }} {{ if type == "text" }}{{ text
+                                    | raw }}{{ /if }} {{ /content }}
+                                </div>
+                            </div>
+                        </div>
+
+                        {{ /sections }}
+                    </div>
+                </div>
+            </div>
+            </div>
+
+        </div>
+
     </div>
-    <!-- #primary -->
-</div>
+
+</main>
+
+{{ /if }} {{ /blocks }}
 <!-- #content -->
 
 <!-- footer -->
-
-{{ section:footer_scripts }}
-<script src="/wp-content/uploads/siteground-optimizer-assets/elementskit-sticky-content.min.js"
-    id="elementskit-sticky-content-js"></script>
-{{ /section:footer_scripts }}
 
 <!-- page-footer-tags -->

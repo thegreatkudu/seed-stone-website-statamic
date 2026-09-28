@@ -1,0 +1,69 @@
+				<div class="elementor-element elementor-element-af2a0e2 e-flex e-con-boxed e-con e-parent e-lazyloaded"
+					data-id="af2a0e2" data-element_type="container" data-e-type="container">
+					<div class="e-con-inner">
+						<div class="elementor-element elementor-element-e3bc72a e-con-full e-flex e-con e-child"
+							data-id="e3bc72a" data-element_type="container" data-e-type="container">
+							<div class="elementor-element elementor-element-062b85f elementor-widget__width-inherit elementor-widget elementor-widget-heading animated fadeInUp"
+								data-id="062b85f" data-element_type="widget" data-e-type="widget"
+								data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}"
+								data-widget_type="heading.default">
+								<div class="elementor-heading-title elementor-size-default">{{ export_sections:process_eyebrow }}</div>
+							</div>
+							<div class="elementor-element elementor-element-725d829 elementor-widget__width-initial elementor-widget-tablet__width-inherit elementor-widget elementor-widget-heading animated fadeInUp"
+								data-id="725d829" data-element_type="widget" data-e-type="widget"
+								data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}"
+								data-widget_type="heading.default">
+								<h2 class="elementor-heading-title elementor-size-default">{{ export_sections:process_heading }}</h2>
+							</div>
+							<div class="elementor-element elementor-element-fb2fba9 elementor-widget__width-initial elementor-widget elementor-widget-text-editor animated fadeInUp"
+								data-id="fb2fba9" data-element_type="widget" data-e-type="widget"
+								data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:&quot;250&quot;}"
+								data-widget_type="text-editor.default">
+								<p>{{ export_sections:process_text }}</p>
+							</div>
+						</div>
+						<div class="elementor-element elementor-element-df4212b e-con-full e-grid e-con e-child"
+							data-id="df4212b" data-element_type="container" data-e-type="container">
+{{ step_card_ids = ['3e0a003', '4bb0dd2', 'ec79ca6', 'f83cf2a'] }}{{ step_number_ids = ['509dab3', '3411df0', 'b2d2714', 'a85811e'] }}{{ step_box_ids = ['e44f1e2', 'e1ace5e', '1609df2', '0315589'] }}{{ step_delays = ['', ',&quot;animation_delay&quot;:&quot;250&quot;', ',&quot;animation_delay&quot;:&quot;500&quot;', ',&quot;animation_delay&quot;:&quot;750&quot;'] }}
+{{ export_sections:process_steps }}
+							<div class="elementor-element elementor-element-{{ step_card_ids[index] }} e-con-full e-flex e-con e-child animated fadeInUp"
+								data-id="{{ step_card_ids[index] }}" data-element_type="container" data-e-type="container"
+								data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeInUp&quot;{{ step_delays[index] }}}">
+								<div class="elementor-element elementor-element-{{ step_number_ids[index] }} elementor-widget elementor-widget-heading"
+									data-id="{{ step_number_ids[index] }}" data-element_type="widget" data-e-type="widget"
+									data-widget_type="heading.default">
+									<div class="elementor-heading-title elementor-size-default">{{ if count < 10 }}0{{ /if }}{{ count }}</div>
+								</div>
+								<div class="elementor-element elementor-element-{{ step_box_ids[index] }} elementor-widget elementor-widget-image-box"
+									data-id="{{ step_box_ids[index] }}" data-element_type="widget" data-e-type="widget"
+									data-widget_type="image-box.default">
+									<div class="elementor-image-box-wrapper">
+										<div class="elementor-image-box-content">
+											<h5 class="elementor-image-box-title">{{ title }}</h5>
+											<p class="elementor-image-box-description">{{ description }}</p>
+										</div>
+									</div>
+								</div>
+							</div>
+{{ /export_sections:process_steps }}
+							<div class="elementor-element elementor-element-5a91b24 e-con-full e-flex e-con e-child animated fadeInUp"
+								data-id="5a91b24" data-element_type="container" data-e-type="container"
+								data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeInUp&quot;}">
+								<div class="elementor-element elementor-element-3c62d20 elementor-widget elementor-widget-heading"
+									data-id="3c62d20" data-element_type="widget" data-e-type="widget"
+									data-widget_type="heading.default">
+									<h3 class="elementor-heading-title elementor-size-default">{{ export_sections:cta_heading }}</h3>
+								</div>
+								<div class="elementor-element elementor-element-4ef6513 elementor-widget elementor-widget-button"
+									data-id="4ef6513" data-element_type="widget" data-e-type="widget"
+									data-widget_type="button.default">
+									<a class="elementor-button elementor-button-link elementor-size-sm" href="{{ export_sections:cta_button_url }}">
+										<span class="elementor-button-content-wrapper">
+											<span class="elementor-button-text">{{ export_sections:cta_button_text }}</span>
+										</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>

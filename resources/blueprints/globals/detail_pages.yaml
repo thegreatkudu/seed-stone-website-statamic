@@ -1,0 +1,175 @@
+title: 'Detail Pages'
+tabs:
+  posts:
+    display: 'Blog Posts'
+    sections:
+      -
+        display: 'Share & Newsletter'
+        instructions: 'Shown at the bottom of every blog post.'
+        fields:
+          -
+            handle: share_label
+            field:
+              type: text
+              display: 'Share Label'
+          -
+            handle: newsletter_heading
+            field:
+              type: text
+              display: 'Newsletter Heading'
+          -
+            handle: newsletter_text
+            field:
+              type: textarea
+              display: 'Newsletter Text'
+          -
+            handle: newsletter_placeholder
+            field:
+              type: text
+              display: 'Email Placeholder'
+              width: 50
+          -
+            handle: newsletter_button_text
+            field:
+              type: text
+              display: 'Subscribe Button Text'
+              width: 50
+          -
+            handle: newsletter_success_message
+            field:
+              type: text
+              display: 'Newsletter Success Message'
+              instructions: 'Sign-ups are saved under Forms → Newsletter.'
+          -
+            handle: newsletter_note
+            field:
+              type: text
+              display: 'Newsletter Small Print'
+      -
+        display: 'Continue Reading'
+        fields:
+          -
+            handle: related_eyebrow
+            field:
+              type: text
+              display: 'Small Label'
+          -
+            handle: related_heading
+            field:
+              type: text
+              display: 'Heading'
+          -
+            handle: related_button_text
+            field:
+              type: text
+              display: 'Button Text'
+              width: 50
+          -
+            handle: related_button_url
+            field:
+              type: text
+              display: 'Button URL'
+              width: 50
+  products_services:
+    display: 'Products & Services'
+    sections:
+      -
+        display: 'Quote Box'
+        instructions: 'Sidebar quote form on every product and service page.'
+        fields:
+          -
+            handle: quote_heading
+            field:
+              type: text
+              display: 'Heading'
+          -
+            handle: quote_name_label
+            field:
+              type: text
+              display: 'Name Label'
+              width: 50
+          -
+            handle: quote_name_placeholder
+            field:
+              type: text
+              display: 'Name Placeholder'
+              width: 50
+          -
+            handle: quote_email_label
+            field:
+              type: text
+              display: 'Email Label'
+              width: 50
+          -
+            handle: quote_email_placeholder
+            field:
+              type: text
+              display: 'Email Placeholder'
+              width: 50
+          -
+            handle: quote_phone_label
+            field:
+              type: text
+              display: 'Phone Label'
+              width: 50
+          -
+            handle: quote_phone_placeholder
+            field:
+              type: text
+              display: 'Phone Placeholder'
+              width: 50
+          -
+            handle: quote_date_label
+            field:
+              type: text
+              display: 'Date Label'
+              width: 50
+          -
+            handle: quote_date_placeholder
+            field:
+              type: text
+              display: 'Date Placeholder'
+              width: 50
+          -
+            handle: quote_message_label
+            field:
+              type: text
+              display: 'Message Label'
+              width: 50
+          -
+            handle: quote_message_placeholder
+            field:
+              type: text
+              display: 'Message Placeholder'
+              width: 50
+          -
+            handle: quote_button_text
+            field:
+              type: text
+              display: 'Button Text'
+          -
+            handle: quote_success_message
+            field:
+              type: text
+              display: 'Success Message'
+              instructions: 'Requests are saved under Forms → Quote Request.'
+          -
+            handle: quote_note
+            field:
+              type: textarea
+              display: 'Small Print'
+  not_found:
+    display: '404 Page'
+    sections:
+      -
+        fields:
+          -
+            handle: not_found_heading
+            field:
+              type: text
+              display: Heading
+          -
+            handle: not_found_text
+            field:
+              type: textarea
+              display: Text

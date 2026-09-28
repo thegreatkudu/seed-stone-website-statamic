@@ -12,6 +12,7 @@ blocks:
     type: privacy_policy
     enabled: true
     hero:
+      last_modified_label: 'Last modified:'
       title: 'Privacy policy'
       last_modified: 'March 10, 2026'
     sections:

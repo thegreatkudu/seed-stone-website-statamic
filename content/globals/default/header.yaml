@@ -1,38 +1,12 @@
-top_extra_links:
+price_ticker:
   -
-    id: HcFsfahPM_dNiBZ9J305s
-    icon: 'fa-brands fa-google-play'
-    title: 'Play Store'
-    url: 'https://play.google.com/store/apps/details?id=com.leoleo.leoleoguliosmart'
+    id: pt1a2b3c
+    text: 'Cashewnut $1,300 / tonne · Coffee $3,500 / tonne'
+    url: '/#crops-we-trade'
   -
-    id: WLp7lv0ExgbErPneXf2Ej
-    icon: 'fab fa-app-store'
-    title: 'App Store'
-    url: 'https://apps.apple.com/app/leoleo/id6450168848'
-  -
-    id: BFc3egnUoCmS2_H0fjNU5
-    icon: 'fa-solid fa-globe'
-    title: SANDC
-    url: 'https://www.sandc.co.tz/'
-social_media:
-  -
-    id: 77WKJI-KMMW5tMyI7-E0w
-    icon: 'fab fa-instagram'
-    title: 'Leoleo Guliosmart'
-    url: 'https://www.instagram.com/leoleogulio/'
-  -
-    id: csas0xhHjzr_8N9AJxnqA
-    icon: 'fab fa-twitter'
-    title: 'Leoleo Guliosmart'
-    url: 'https://x.com/LeoleoGulio'
-  -
-    id: AtZBjYM-o3oJ6Hx0FNCCs
-    icon: 'fab fa-facebook-f'
-    title: 'Leoleo Guliosmart'
-    url: 'https://www.facebook.com/p/Leoleo-Guliosmart-100083053812440/'
-  -
-    id: GHMlC9AKqMhCF6T8kXA3J
-    icon: 'fa-brands fa-tiktok'
-    title: 'Leoleo Guliosmart'
-    url: 'https://www.tiktok.com/@leoleo.guliosmart'
-work_time_text: 'Office Time: 9 a.m.- 6 p.m.'
+    id: pt2a2b3c
+    text: 'Sesame $1,400 / tonne · Pigeon Peas $900 / tonne'
+    url: '/#crops-we-trade'
+cta_button_text: 'Start Planning'
+cta_button_url: 'mailto:info@seedstone.co.tz'
+browser_warning: 'This site has limited support for your browser. We recommend switching to Edge, Chrome, Safari, or Firefox.'

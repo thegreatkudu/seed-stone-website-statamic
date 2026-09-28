@@ -4,9 +4,5 @@ fields:
     handle: page_main_title
     field:
       type: text
-      display: 'Page Main Title'
-  -
-    handle: page_subtitle
-    field:
-      type: textarea
-      display: 'Page Subtitle'
+      display: 'Banner Title'
+      instructions: 'Defaults to the page title. The post cards come from the Posts collection.'

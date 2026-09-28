@@ -5,24 +5,35 @@ fields:
     field:
       type: group
       display: 'Hero Section'
+      instructions: 'Top banner of the page.'
       fields:
-        -
-          handle: image
-          field:
-            container: assets
-            max_files: 1
-            type: assets
-            display: Image
         -
           handle: title
           field:
             type: text
             display: Title
+  -
+    handle: who_we_are
+    field:
+      type: group
+      display: 'Who We Are Section'
+      instructions: 'Intro copy, a Contact Us button, an image, and exactly 4 stats counters.'
+      fields:
         -
-          handle: description
+          handle: eyebrow
+          field:
+            type: text
+            display: Eyebrow
+        -
+          handle: heading
+          field:
+            type: text
+            display: Heading
+        -
+          handle: paragraph
           field:
             type: textarea
-            display: Description
+            display: Paragraph
         -
           handle: button_text
           field:
@@ -34,136 +45,74 @@ fields:
             type: text
             display: 'Button URL'
         -
-          handle: avatar_image_1
-          field:
-            container: assets
-            max_files: 1
-            type: assets
-            display: 'Avatar Image 1'
-        -
-          handle: avatar_image_2
-          field:
-            container: assets
-            max_files: 1
-            type: assets
-            display: 'Avatar Image 2'
-        -
-          handle: avatar_image_3
-          field:
-            container: assets
-            max_files: 1
-            type: assets
-            display: 'Avatar Image 3'
-        -
-          handle: satisfied_farmers_text
+          handle: image
           field:
             type: text
-            display: 'Satisfied Farmers Text'
-  -
-    handle: mission
-    field:
-      type: group
-      display: 'Mission & App Features Section'
-      fields:
+            display: 'Image URL'
+            instructions: 'e.g. /seed-stone/wp-content/uploads/sites/11/2026/01/seedstone-about-crop-export.webp'
+            instructions_position: below
         -
-          handle: title
+          handle: image_alt
           field:
             type: text
-            display: Title
+            display: 'Image Alt Text'
         -
-          handle: description
-          field:
-            type: textarea
-            display: Description
-        -
-          handle: list_items
+          handle: stats
           field:
             type: grid
-            display: 'Feature List Items'
+            display: 'Stats Counters'
+            instructions: 'Exactly 4 counters are displayed.'
             fields:
               -
-                handle: text
+                handle: number
                 field:
                   type: text
-                  display: Text
+                  display: Number
+              -
+                handle: suffix
+                field:
+                  type: text
+                  display: Suffix
+              -
+                handle: title
+                field:
+                  type: text
+                  display: Title
+  -
+    handle: about
+    field:
+      type: group
+      display: 'About Seedstone Section'
+      instructions: 'Intro copy plus exactly 4 feature cards (image + title + description).'
+      fields:
         -
-          handle: app_store_button
+          handle: eyebrow
           field:
-            type: group
-            display: 'App Store Button'
+            type: text
+            display: Eyebrow
+        -
+          handle: heading
+          field:
+            type: text
+            display: Heading
+        -
+          handle: paragraph
+          field:
+            type: textarea
+            display: Paragraph
+        -
+          handle: cards
+          field:
+            type: grid
+            display: 'Feature Cards'
+            instructions: 'Exactly 4 cards are displayed.'
             fields:
               -
                 handle: image
                 field:
-                  container: assets
-                  max_files: 1
-                  type: assets
-                  display: Image
-              -
-                handle: url
-                field:
                   type: text
-                  display: URL
-        -
-          handle: play_store_button
-          field:
-            type: group
-            display: 'Play Store Button'
-            fields:
-              -
-                handle: image
-                field:
-                  container: assets
-                  max_files: 1
-                  type: assets
-                  display: Image
-              -
-                handle: url
-                field:
-                  type: text
-                  display: URL
-        -
-          handle: image
-          field:
-            container: assets
-            max_files: 1
-            type: assets
-            display: Image
-  -
-    handle: how_it_works
-    field:
-      type: group
-      display: 'How It Works Section'
-      fields:
-        -
-          handle: title
-          field:
-            type: text
-            display: Title
-        -
-          handle: description
-          field:
-            type: textarea
-            display: Description
-        -
-          handle: image
-          field:
-            container: assets
-            max_files: 1
-            type: assets
-            display: Image
-        -
-          handle: items
-          field:
-            type: grid
-            display: 'Requirement Items'
-            fields:
-              -
-                handle: icon_class
-                field:
-                  type: text
-                  display: 'Icon Class'
-                  instructions: 'FontAwesome class e.g. "fas fa-database"'
+                  display: 'Image URL'
+                  instructions: 'e.g. /seed-stone/wp-content/uploads/sites/11/2026/01/seedstone-direct-sourcing.webp'
                   instructions_position: below
               -
                 handle: title
@@ -176,71 +125,65 @@ fields:
                   type: textarea
                   display: Description
   -
-    handle: story
+    handle: why
     field:
       type: group
-      display: 'Detailed Story Section'
+      display: 'Why Seedstone Section'
+      instructions: 'Intro copy, an image, exactly 5 accordion items, and a second image.'
       fields:
         -
-          handle: title
+          handle: eyebrow
           field:
             type: text
-            display: Title
+            display: Eyebrow
         -
-          handle: tagline
+          handle: heading
           field:
             type: text
-            display: Tagline
+            display: Heading
         -
-          handle: avatar_image_1
-          field:
-            container: assets
-            max_files: 1
-            type: assets
-            display: 'Avatar Image 1'
-        -
-          handle: avatar_image_2
-          field:
-            container: assets
-            max_files: 1
-            type: assets
-            display: 'Avatar Image 2'
-        -
-          handle: avatar_image_3
-          field:
-            container: assets
-            max_files: 1
-            type: assets
-            display: 'Avatar Image 3'
-        -
-          handle: satisfied_farmers_text
-          field:
-            type: text
-            display: 'Satisfied Farmers Text'
-        -
-          handle: subtitle
-          field:
-            type: text
-            display: Subtitle
-        -
-          handle: description_1
+          handle: paragraph
           field:
             type: textarea
-            display: 'Description 1'
-        -
-          handle: description_2
-          field:
-            type: textarea
-            display: 'Description 2'
-        -
-          handle: tagline_2
-          field:
-            type: text
-            display: 'Tagline 2'
+            display: Paragraph
         -
           handle: image
           field:
-            container: assets
-            max_files: 1
-            type: assets
-            display: Image
+            type: text
+            display: 'Image URL'
+            instructions: 'e.g. /seed-stone/wp-content/uploads/sites/11/2026/01/seedstone-values-sourcing.webp'
+            instructions_position: below
+        -
+          handle: image_alt
+          field:
+            type: text
+            display: 'Image Alt Text'
+        -
+          handle: accordion
+          field:
+            type: grid
+            display: 'Accordion Items'
+            instructions: 'Exactly 5 accordion items are displayed.'
+            fields:
+              -
+                handle: title
+                field:
+                  type: text
+                  display: Title
+              -
+                handle: text
+                field:
+                  type: textarea
+                  display: Text
+        -
+          handle: secondary_image
+          field:
+            type: text
+            display: 'Secondary Image URL'
+            instructions: 'e.g. /seed-stone/wp-content/uploads/sites/11/2026/01/seedstone-clearing-forwarding.webp'
+            instructions_position: below
+        -
+          handle: secondary_image_alt
+          field:
+            type: text
+            display: 'Secondary Image Alt Text'

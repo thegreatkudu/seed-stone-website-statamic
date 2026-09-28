@@ -1,40 +1,95 @@
 title: Footer
 data:
+  tagline: 'Seedstone sources, prepares, and exports quality crops directly to international buyers — one trusted point of contact from order to delivery.'
+  back_to_top_text: 'Back to Top'
+  powered_by_label: 'Sandc Technology'
+  powered_by_url: 'https://sandc.co.tz/'
+  columns:
+    -
+      title: Services
+      links:
+        -
+          label: 'Direct Sourcing'
+          url: '/#get-started'
+        -
+          label: Exporting
+          url: '/#get-started'
+        -
+          label: 'Auction Sourcing'
+          url: '/#get-started'
+        -
+          label: 'Clearing & Forwarding'
+          url: '/#get-started'
+        -
+          label: 'Godown-to-Port Logistics'
+          url: '/#get-started'
+        -
+          label: 'Track Every Order'
+          url: '/#get-started'
+    -
+      title: Company
+      links:
+        -
+          label: 'About Us'
+          url: '/about-us'
+        -
+          label: Contact
+          url: '/contact-us'
+        -
+          label: 'Our Partners'
+          url: '/our-partners'
+        -
+          label: 'News & Publications'
+          url: '/posts'
+    -
+      title: Resources
+      links:
+        -
+          label: 'Terms & Conditions'
+          url: '/terms-and-conditions'
+        -
+          label: 'Privacy Policy'
+          url: '/privacy-policy'
+        -
+          label: 'Book a Consultation'
+          url: '/#get-started'
+    -
+      title: 'Follow Us On'
+      links:
+        -
+          label: LinkedIn
+          url: 'https://www.linkedin.com/'
+        -
+          label: Instagram
+          url: 'https://www.instagram.com/'
+        -
+          label: Tiktok
+          url: 'https://www.tiktok.com/'
+        -
+          label: Facebook
+          url: 'https://www.facebook.com/'
   copyright:
     -
       type: paragraph
       content:
         -
           type: text
-          text: 'Copyright © {{ now format="Y" }} Blogo. All rights reserved.'
-    -
-      type: paragraph
-      content:
-        -
-          type: text
-          text: 'Made by '
+          text: '© Seedstone. Powered by '
         -
           type: text
           marks:
             -
               type: link
               attrs:
-                href: 'https://github.com/afan417'
+                href: 'https://sandc.co.tz/'
                 rel: noopener
                 target: _blank
                 title: null
-          text: 'Afan Ajdari'
-        -
-          type: text
-          text: ' · '
-        -
-          type: text
-          marks:
-            -
-              type: link
-              attrs:
-                href: 'https://github.com/afan417/blogo-starter-kit'
-                rel: null
-                target: _blank
-                title: null
-          text: Github
+          text: 'Sandc Technology'
+  legal_links:
+    -
+      label: 'Terms of Service'
+      url: '/terms-and-conditions'
+    -
+      label: 'Privacy Policy'
+      url: '/privacy-policy'

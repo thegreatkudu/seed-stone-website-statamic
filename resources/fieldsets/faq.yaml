@@ -1,0 +1,78 @@
+title: 'FAQ'
+fields:
+  -
+    handle: hero
+    field:
+      type: group
+      display: 'Page Header'
+      fields:
+        -
+          handle: title
+          field:
+            type: text
+            display: 'Page Title'
+            instructions_position: below
+        -
+          handle: eyebrow
+          field:
+            type: text
+            display: 'Section Eyebrow'
+            instructions: 'Small label above the heading, e.g. "Helpful Info"'
+            instructions_position: below
+        -
+          handle: section_heading
+          field:
+            type: text
+            display: 'Section Heading'
+            instructions_position: below
+        -
+          handle: section_description
+          field:
+            type: textarea
+            display: 'Section Description'
+            instructions_position: below
+        -
+          handle: cta_heading
+          field:
+            type: text
+            display: 'CTA Heading'
+            instructions: 'Shown below the accordion, e.g. "Still have questions?"'
+            instructions_position: below
+        -
+          handle: cta_button_text
+          field:
+            type: text
+            display: 'CTA Button Text'
+            instructions_position: below
+        -
+          handle: cta_button_url
+          field:
+            type: text
+            display: 'CTA Button URL'
+            instructions: 'e.g. /contact-us'
+            instructions_position: below
+  -
+    handle: faqs
+    field:
+      type: replicator
+      display: 'Frequently Asked Questions'
+      instructions: 'Questions and answers shown to visitors and exposed to AI engines via FAQPage structured data.'
+      sets:
+        faq:
+          display: 'FAQ'
+          icon: dialog
+          fields:
+            -
+              handle: question
+              field:
+                type: text
+                display: Question
+                validate:
+                  - required
+            -
+              handle: answer
+              field:
+                type: textarea
+                display: Answer
+                validate:
+                  - required

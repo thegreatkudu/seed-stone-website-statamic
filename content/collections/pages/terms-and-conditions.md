@@ -12,6 +12,7 @@ blocks:
     type: terms_and_conditions
     enabled: true
     hero:
+      last_modified_label: 'Last modified:'
       title: 'Terms and conditions'
       last_modified: 'March 10, 2026'
     sections:

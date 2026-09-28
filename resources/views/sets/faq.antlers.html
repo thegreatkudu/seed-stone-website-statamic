@@ -1,0 +1,157 @@
+{{ section:head_css }}
+<link rel="stylesheet" id="widget-spacer-css" href="{{ config:url }}/seed-stone/wp-content/plugins/elementor/assets/css/widget-spacer.min.css?ver=4.2.3" media="all">
+<link rel="stylesheet" id="widget-nested-accordion-css" href="{{ config:url }}/seed-stone/wp-content/plugins/elementor/assets/css/widget-nested-accordion.min.css?ver=4.2.3" media="all">	
+<link rel="stylesheet" id="elementor-post-33-css" href="{{ config:url }}/seed-stone/wp-content/uploads/sites/11/elementor/css/post-33.css?ver=1787788705" media="all">
+<style>
+	.elementor .elementor-element.elementor-element-a167fa9:not(.elementor-motion-effects-element-type-background) {
+		background-color: var(--e-global-color-secondary);
+		background-image: url("{{ banner_image:url ?? settings:page_banner_image:url }}");
+		background-position: bottom center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+</style>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {{ faqs }}
+        {
+            "@type": "Question",
+            "name": {{ question | json }},
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": {{ answer | json }}
+            }
+        }{{ unless last }},{{ /unless }}
+        {{ /faqs }}
+    ]
+}
+</script>
+{{ /section:head_css }}
+
+{{# ============================================================ #}}
+{{# BODY CLASS #}}
+{{# ============================================================ #}}
+{{ section:body_class }}
+wp-singular envato_tk_templates-template-default single single-envato_tk_templates postid-33 wp-embed-responsive
+wp-theme-hello-elementor hello-elementor-default elementor-default elementor-kit-3 elementor-page elementor-page-33
+e--ua-firefox
+data-elementor-device-mode="desktop"
+{{ /section:body_class }}
+
+<main id="content"
+	class="site-main post-33 envato_tk_templates type-envato_tk_templates status-publish has-post-thumbnail hentry">
+
+	<div class="page-content">
+
+		<div data-elementor-type="wp-post" data-elementor-id="33" class="elementor elementor-33">
+
+			<div class="elementor-element elementor-element-a167fa9 e-con-full e-flex e-con e-parent e-lazyloaded"
+				data-id="a167fa9" data-element_type="container" data-e-type="container"
+				data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+				<div class="elementor-element elementor-element-4375798 e-con-full e-flex e-con e-child"
+					data-id="4375798" data-element_type="container" data-e-type="container">
+					<div class="elementor-element elementor-element-398921c elementor-widget elementor-widget-heading animated fadeInUp"
+						data-id="398921c" data-element_type="widget" data-e-type="widget"
+						data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}"
+						data-widget_type="heading.default">
+						<h1 class="elementor-heading-title elementor-size-default">{{ hero:title }}</h1>
+					</div>
+				</div>
+			</div>
+
+			<div class="elementor-element elementor-element-f242d8c e-flex e-con-boxed e-con e-parent e-lazyloaded"
+				data-id="f242d8c" data-element_type="container" data-e-type="container"
+				data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+				<div class="e-con-inner">
+					<div class="elementor-element elementor-element-5934520 e-con-full e-flex e-con e-child"
+						data-id="5934520" data-element_type="container" data-e-type="container">
+						<div class="elementor-element elementor-element-4e19c57 elementor-widget__width-inherit elementor-widget elementor-widget-heading animated fadeInUp"
+							data-id="4e19c57" data-element_type="widget" data-e-type="widget"
+							data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}"
+							data-widget_type="heading.default">
+							<div class="elementor-heading-title elementor-size-default">{{ hero:eyebrow }}</div>
+						</div>
+						<div class="elementor-element elementor-element-b6e7a28 elementor-widget__width-initial elementor-widget elementor-widget-heading animated fadeInUp"
+							data-id="b6e7a28" data-element_type="widget" data-e-type="widget"
+							data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}"
+							data-widget_type="heading.default">
+							<h2 class="elementor-heading-title elementor-size-default">{{ hero:section_heading }}</h2>
+						</div>
+						<div class="elementor-element elementor-element-34d1622 elementor-widget__width-initial elementor-widget-tablet__width-inherit elementor-widget elementor-widget-text-editor animated fadeInUp"
+							data-id="34d1622" data-element_type="widget" data-e-type="widget"
+							data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:&quot;250&quot;}"
+							data-widget_type="text-editor.default">
+							<p>{{ hero:section_description }}</p>
+						</div>
+					</div>
+					<div class="elementor-element elementor-element-f9afad0 e-con-full e-flex e-con e-child"
+						data-id="f9afad0" data-element_type="container" data-e-type="container">
+						<div class="elementor-element elementor-element-ad95df6 elementor-widget__width-inherit elementor-widget elementor-widget-n-accordion animated fadeInUp"
+							data-id="ad95df6" data-element_type="widget" data-e-type="widget"
+							data-settings="{&quot;default_state&quot;:&quot;all_collapsed&quot;,&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;max_items_expended&quot;:&quot;one&quot;,&quot;n_accordion_animation_duration&quot;:{&quot;unit&quot;:&quot;ms&quot;,&quot;size&quot;:400,&quot;sizes&quot;:[]}}"
+							data-widget_type="nested-accordion.default">
+							<div class="e-n-accordion"
+								aria-label="Accordion. Open links with Enter or Space, close with Escape, and navigate with Arrow Keys">
+								{{ faqs }}
+								<details id="e-n-accordion-item-182{{ index }}" class="e-n-accordion-item"{{ if index == 0 }} open=""{{ /if }}>
+									<summary class="e-n-accordion-item-title" data-accordion-index="{{ count }}" tabindex="{{ if index == 0 }}0{{ else }}-1{{ /if }}"
+										aria-expanded="{{ if index == 0 }}true{{ else }}false{{ /if }}" aria-controls="e-n-accordion-item-182{{ index }}">
+										<span class="e-n-accordion-item-title-header">
+											<div class="e-n-accordion-item-title-text"> {{ question }} </div>
+										</span>
+										<span class="e-n-accordion-item-title-icon">
+											<span class="e-opened"><svg aria-hidden="true"
+													class="e-font-icon-svg e-fas-minus" viewBox="0 0 448 512"
+													xmlns="http://www.w3.org/2000/svg">
+													<path
+														d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path>
+												</svg></span>
+											<span class="e-closed"><svg aria-hidden="true"
+													class="e-font-icon-svg e-fas-plus" viewBox="0 0 448 512"
+													xmlns="http://www.w3.org/2000/svg">
+													<path
+														d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path>
+												</svg></span>
+										</span>
+									</summary>
+									<div role="region" aria-labelledby="e-n-accordion-item-182{{ index }}"
+										class="elementor-element elementor-element-7f0d226 e-con-full e-flex e-con e-child"
+										data-id="7f0d226" data-element_type="container" data-e-type="container">
+										<div class="elementor-element elementor-element-f4d9c40 elementor-widget elementor-widget-text-editor"
+											data-id="f4d9c40" data-element_type="widget" data-e-type="widget"
+											data-widget_type="text-editor.default">
+											<p>{{ answer }}</p>
+										</div>
+									</div>
+								</details>
+								{{ /faqs }}
+							</div>
+						</div>
+						<div class="elementor-element elementor-element-d899cd0 elementor-widget elementor-widget-heading animated fadeInUp"
+							data-id="d899cd0" data-element_type="widget" data-e-type="widget"
+							data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}"
+							data-widget_type="heading.default">
+							<div class="elementor-heading-title elementor-size-default">{{ hero:cta_heading }}</div>
+						</div>
+						<div class="elementor-element elementor-element-59b27a6 elementor-mobile-align-center elementor-widget-mobile__width-inherit elementor-widget elementor-widget-button animated fadeInUp"
+							data-id="59b27a6" data-element_type="widget" data-e-type="widget"
+							data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:&quot;250&quot;}"
+							data-widget_type="button.default">
+							<a class="elementor-button elementor-button-link elementor-size-sm" href="{{ hero:cta_button_url }}">
+								<span class="elementor-button-content-wrapper">
+									<span class="elementor-button-text">{{ hero:cta_button_text }}</span>
+								</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+
+</main>

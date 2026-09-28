@@ -1,7 +1,8 @@
 ---
 id: home
-blueprint: pages
+blueprint: page
 title: 'Agricultural Export Company in Tanzania'
+nav_title: Home
 template: home
 updated_by: 2
 updated_at: 1785769028
@@ -11,314 +12,202 @@ blocks:
     type: home_page
     enabled: true
     hero:
-      heading_plain: 'No. 1 Partner for Sourcing'
-      heading_highlight: 'and Export of Crops'
-      button_1_text: 'Become a Buyer'
-      button_1_url: '/#get-started'
-      button_2_text: 'Contact Us'
-      button_2_url: '/#get-started'
-      badge_number: '04'
-      badge_button_text: 'Core Export Crops'
-      badge_button_url: '/#about-us'
+      watermark: Seedstone
+      rating_text: '4.8/5 on Google Reviews'
+      heading: 'No. 1 Partner for Sourcing and Export of Crops'
+      text: 'We source, prepare, and export quality crops directly to international buyers. From local sourcing and auction to shipment — one trusted point of contact.'
+      button_1_text: 'Register as a Trader'
+      button_1_url: 'https://app.seedstone.co.tz/register'
+      button_2_text: Staff
+      button_2_url: 'https://app.seedstone.co.tz/login'
+      image: images/site/seedstone-agricultural-export-hero.webp
+    logos:
+      -
+        id: lg1a2b3c
+        name: 'Agricultural Marketing Cooperative Society'
+        logo: images/site/agricultural-marketing-cooperative-society.png
+      -
+        id: lg2a2b3c
+        name: 'Cashew Nut Board of Tanzania'
+        logo: images/site/cashewnut-board-of-tanzania.png
+      -
+        id: lg3a2b3c
+        name: 'Tanzania Agricultural Research Institute'
+        logo: images/site/tanzania-agricultural-research-institute.png
+      -
+        id: lg4a2b3c
+        name: 'Tanzania Federation of Cooperatives Limited'
+        logo: images/site/tanzania-federation-of-cooperatives-limited.png
+      -
+        id: lg5a2b3c
+        name: 'Tanzania Mercantile Exchange'
+        logo: images/site/tanzania-mercantile-exchange.png
     about:
-      stats:
-        -
-          id: bYAdvS6f
-          number: '4'
-          label: 'Core Export Crops'
-        -
-          id: pKzL2eNq
-          number: '5'
-          label: 'Dedicated Export Teams'
-        -
-          id: rTn8WmXc
-          number: '6'
-          label: 'Tracked Shipment Stages'
       eyebrow: 'From Sourcing to Shipment'
       heading: "Tanzania's Trusted Partner in Agricultural Export"
-      paragraph: "Seedstone is a Tanzanian agricultural export company, sourcing, preparing, and exporting quality crops directly to international buyers. We manage the full journey ourselves, from local sourcing and auction to shipment, so buyers get a single, reliable point of contact from order to delivery."
+      text: 'Seedstone is a Tanzanian agricultural export company, sourcing, preparing, and exporting quality crops directly to international buyers. We manage the full journey ourselves, from local sourcing and auction to shipment, so buyers get a single, reliable point of contact from order to delivery.'
       button_text: 'More about us'
       button_url: '/#about-us'
+      image: images/site/seedstone-about-crop-export.webp
+      stats:
+        -
+          id: st1a2b3c
+          number: 4
+          label: 'Core Export Crops'
+        -
+          id: st2a2b3c
+          number: 5
+          label: 'Dedicated Export Teams'
+        -
+          id: st3a2b3c
+          number: 6
+          label: 'Tracked Shipment Stages'
+        -
+          id: st4a2b3c
+          number: 24
+          suffix: /7
+          label: 'Support from order to delivery'
     services:
       eyebrow: 'what we offer'
       heading: 'Full-Service Export Support'
-      paragraph_1: "With deep roots in Tanzania's agricultural markets, we manage every stage of the export journey tailored to your sourcing needs."
-      paragraph_2: 'From direct sourcing and TMX auction bidding to clearing, forwarding, and on-time delivery, whether you need bulk cashewnut, coffee, sesame, or pigeon peas, our team tailors sourcing and logistics to your specific volume, quality, and shipment requirements.'
-      tab_1:
-        title: 'Direct Sourcing'
-        description: 'We source crops directly from Tanzanian growers and AMCOS, giving you access to quality supply. Our direct sourcing includes:'
-        button_text: 'Get a Quote'
-        button_url: '/#get-started'
-        list_items:
-          -
-            id: dsL1a1b2
-            text: 'Grower and AMCOS partnerships'
-          -
-            id: dsL2a1b2
-            text: 'Quality grading at source'
-          -
-            id: dsL3a1b2
-            text: 'Seasonal volume planning'
-          -
-            id: dsL4a1b2
-            text: 'Consolidated bulk supply'
-      tab_2:
-        title: 'Exporting'
-        description: 'We manage the full export process, from order to shipment, so goods arrive on schedule. Our export service includes:'
-        button_text: 'Get a Quote'
-        button_url: '/#get-started'
-        list_items:
-          -
-            id: exL1a1b2
-            text: 'Order management from booking to shipment'
-          -
-            id: exL2a1b2
-            text: 'Export documentation and compliance'
-          -
-            id: exL3a1b2
-            text: 'Container loading and logistics'
-          -
-            id: exL4a1b2
-            text: 'On-time port delivery'
-          -
-            id: exL5a1b2
-            text: 'Shipment status updates'
-      tab_3:
-        title: 'Auction Sourcing'
-        description: "We secure your order through Tanzania's TMX auction system and follow it through to acceptance. Our auction sourcing includes:"
-        button_text: 'Get a Quote'
-        button_url: '/#get-started'
-        list_items:
-          -
-            id: auL1a1b2
-            text: 'TMX auction bid management'
-          -
-            id: auL2a1b2
-            text: 'Real-time price monitoring'
-          -
-            id: auL3a1b2
-            text: 'Lot selection and quality checks'
-          -
-            id: auL4a1b2
-            text: 'Secure payment and settlement'
-          -
-            id: auL5a1b2
-            text: 'Confirmed order acceptance'
-      tab_4:
-        title: 'Clearing & Forwarding'
-        description: 'We handle documentation, customs, and forwarding at every stage of the order. Our clearing & forwarding service includes:'
-        button_text: 'Get a Quote'
-        button_url: '/#get-started'
-        list_items:
-          -
-            id: cfL1a1b2
-            text: 'Customs documentation handling'
-          -
-            id: cfL2a1b2
-            text: 'Port clearance coordination'
-          -
-            id: cfL3a1b2
-            text: 'Freight forwarding arrangements'
-          -
-            id: cfL4a1b2
-            text: 'Godown-to-port logistics'
-          -
-            id: cfL5a1b2
-            text: 'Compliance with import regulations'
-    track_order:
-      eyebrow: 'track every order'
-      heading: 'Full Visibility from Godown to Port'
-      paragraph: 'Every stage is logged, with supporting documents and photos uploaded along the way, so you always know where your order stands:'
+      text: "With deep roots in Tanzania's agricultural markets, we manage every stage of the export journey tailored to your sourcing needs."
+      card_button_text: 'Get a Quote'
+    why_choose:
+      eyebrow: 'Why Work with Us'
+      heading: 'Why Choose Seedstone'
+      text: 'We manage the full export journey ourselves, from local sourcing and TMX auction to shipment, giving international buyers a single, reliable point of contact from order to delivery.'
       items:
         -
-          id: toI1a1b2
-          title: 'Godown Check-In'
-          description: 'Your order is received and verified at the Godown before its journey to the coast begins.'
+          id: wc1a2b3c
+          title: 'Expert-Driven Export Services'
+          text: 'Skilled sourcing and export specialists ensure your crops are planned, prepared, and shipped with care.'
+          url: /services/exporting
         -
-          id: toI2a1b2
-          title: 'Dar es Salaam Port'
-          description: "Shipments are cleared and prepared for export at Tanzania's main port."
+          id: wc2a2b3c
+          title: 'TMX Auction Expertise'
+          text: "Using Tanzania's TMX auction system, we source and secure your order directly — with real-time pricing and quality checks on every lot."
+          url: /services/auction-sourcing
         -
-          id: toI3a1b2
-          title: 'In Transit'
-          description: 'Track your cargo as it moves from Tanzania toward its destination.'
+          id: wc3a2b3c
+          title: 'Full Documentation Support'
+          text: 'Every order comes with complete documentation — customs, compliance, and forwarding handled by our team from start to finish.'
+          url: /services/clearing-forwarding
         -
-          id: toI4a1b2
-          title: 'Port of Destination'
-          description: 'Arrival is confirmed and documented as your order reaches its final port.'
+          id: wc4a2b3c
+          title: 'End-to-End Order Tracking'
+          text: 'Every stage is logged, with supporting documents and photos uploaded along the way — so you always know where your order stands.'
+          url: /services/track-every-order
+        -
+          id: wc5a2b3c
+          title: 'Local Market Access'
+          text: "We understand Tanzania's agricultural markets, soil types, and growing regions — giving your order exactly what it needs."
+          url: /services/direct-sourcing
+      button_text: 'Contact Us'
+      button_url: /contact-us
     crops:
       eyebrow: 'what we trade'
       heading: 'Crops We Trade'
+      text: "We source, prepare, and export Tanzania's key export crops — cashewnut, coffee, sesame, and pigeon peas — direct to international buyers."
       button_text: 'View All Crops'
-      button_url: '/#crops-we-trade'
+      button_url: /products
       items:
         -
-          id: cropA1b2c3
-          image: '/seed-stone/wp-content/uploads/2026/08/crops/seed-stone-cashewnut-1.webp'
+          id: cr1a2b3c
+          label: 'Export Crop'
           title: Cashewnut
-          category: 'Export Crop'
-          url: '/#crops-we-trade'
+          description: 'Sourced from growing regions across Tanzania and secured through the TMX auction.'
+          url: /products/cashewnut
+          image: images/site/seedstone-cashewnut.webp
         -
-          id: cropB1b2c3
-          image: '/seed-stone/wp-content/uploads/2026/08/crops/seed-stone-coffee-1.webp'
+          id: cr2a2b3c
+          label: 'Export Crop'
           title: Coffee
-          category: 'Export Crop'
-          url: '/#crops-we-trade'
+          description: 'Quality coffee sourced direct from growers, prepared and exported with care.'
+          url: /products/coffee
+          image: images/site/seedstone-coffee.webp
         -
-          id: cropC1b2c3
-          image: '/seed-stone/wp-content/uploads/2026/08/crops/seed-stone-sesame-seed-flower-on-tree-1.webp'
+          id: cr3a2b3c
+          label: 'Export Crop'
           title: Sesame
-          category: 'Export Crop'
-          url: '/#crops-we-trade'
+          description: "Premium sesame sourced and secured through Tanzania's TMX auction system."
+          url: /products/sesame
+          image: images/site/seedstone-sesame.webp
         -
-          id: cropD1b2c3
-          image: '/seed-stone/wp-content/uploads/2026/08/crops/seed-stone-pigeon-peas-1.webp'
+          id: cr4a2b3c
+          label: 'Export Crop'
           title: 'Pigeon Peas'
-          category: 'Export Crop'
-          url: '/#crops-we-trade'
-    why_choose_us:
-      eyebrow: 'Why Work with Us'
-      heading: |-
-        Why Choose
-        Seedstone
-      paragraph: 'We manage the full export journey ourselves, from local sourcing and TMX auction to shipment, giving international buyers a single, reliable point of contact from order to delivery. Here are just a few of the ways we make things right for our buyers:'
-      button_1_text: 'Contact us'
-      button_1_url: '/#get-started'
-      button_2_text: 'About Us'
-      button_2_url: '/#about-us'
-      reasons:
-        -
-          id: wcuR1a1b2
-          text: 'Local market access: deep relationships with AMCOS across Tanzania'
-        -
-          id: wcuR2a1b2
-          text: 'TMX auction expertise: sourcing and securing orders directly'
-        -
-          id: wcuR3a1b2
-          text: 'Full documentation support handled for every order'
-        -
-          id: wcuR4a1b2
-          text: 'End-to-end tracking from Godown check-in to port arrival'
-      partners:
-        -
-          id: wcuP1a1b2
-          logo: '/seed-stone/wp-content/uploads/2026/08/partners/tanzania-mercqntile-exchange.png'
-          name: 'Tanzania Mercantile Exchange (TMX)'
-        -
-          id: wcuP2a1b2
-          logo: '/seed-stone/wp-content/uploads/2026/08/partners/agricultural-marketing-cooperative-society.png'
-          name: 'Agricultural Marketing Cooperative Society (AMCOS)'
-        -
-          id: wcuP3a1b2
-          logo: '/seed-stone/wp-content/uploads/2026/08/partners/tanzania-federation-of-cooperatives-limited.png'
-          name: 'Tanzania Federation of Cooperatives Limited'
-        -
-          id: wcuP4a1b2
-          logo: '/seed-stone/wp-content/uploads/2026/08/partners/tanzania-agricultural-research-institute.png'
-          name: 'Tanzania Agricultural Research Institute'
-    cta_banner:
-      heading: 'Ready to Source Quality Crops from Tanzania?'
-      button_text: 'Book a Consultation'
-      button_url: '/#get-started'
-    process:
-      eyebrow: 'how it works'
-      heading: 'How Seedstone Works'
-      steps:
-        -
-          id: procS1a1b2
-          title: 'Register Interest'
-          description: 'Register as a buyer and share your sourcing requirements and documentation.'
-        -
-          id: procS2a1b2
-          title: 'Place an Order'
-          description: 'Choose your crop and quantity, and view historical pricing by season before you commit.'
-        -
-          id: procS3a1b2
-          title: 'We Source & Secure'
-          description: "We source your order and secure it through Tanzania's TMX auction system."
-        -
-          id: procS4a1b2
-          title: 'Track & Receive'
-          description: 'Follow your shipment from Godown to the port of destination.'
+          description: 'High-quality pigeon peas sourced direct from growers across Tanzania.'
+          url: /products/pigeon-peas
+          image: images/site/seedstone-pigeon-peas.webp
     testimonials:
-      eyebrow: testimonials
+      eyebrow: Testimonials
       heading: 'What Our Buyers Say'
-      review_badge_1:
-        rating: '4.8'
-        label: 'Get in Touch'
-        url: '/#get-started'
-      review_badge_2:
-        rating: '5.0'
-        label: 'Facebook Reviews'
-        url: '/#get-started'
+      text: 'From small backyards to full-scale commercial shipments, our buyers see the difference in quality and care.'
       items:
         -
-          id: testI1a1b2
-          quote: 'Seedstone made sourcing cashewnut from Tanzania straightforward. From the TMX auction bid to the final shipment, every stage was documented and easy to follow.'
-          name: 'Cashewnut Buyer, Asia'
+          id: ts1a2b3c
+          quote: '"Seedstone made sourcing cashewnut from Tanzania straightforward. From the TMX auction bid to the final shipment, every stage was documented and easy to follow."'
+          name: 'Cashewnut Buyer,'
+          location: Asia
+          avatar: images/site/Avatar-vladislav-nikonov-unsplash.webp
+          button_text: 'Get a Quote'
+          button_url: /contact-us
         -
-          id: testI2a1b2
-          quote: 'The order tracking gave us real confidence — we could see our shipment move from Godown to the port of destination at every step.'
-          name: 'Coffee Importer, Europe'
+          id: ts2a2b3c
+          quote: '"The order tracking gave us real confidence — we could see our shipment move from the Godown to the port of destination at every step."'
+          name: 'Coffee Importer,'
+          location: Europe
+          background_image: images/site/seedstone-review-gardening.webp
+          video_url: 'https://www.youtube.com/embed/VhBl3dHT5SY?feature=oembed?playlist=VhBl3dHT5SY&mute=0&autoplay=0&loop=no&controls=0&start=0&end='
         -
-          id: testI3a1b2
-          quote: 'Clear pricing, full documentation, and a team that handled customs and forwarding without delays — exactly what we needed as an international buyer.'
+          id: ts3a2b3c
+          quote: '"Clear pricing, full documentation, and a team that handled customs and forwarding without delays — exactly what we needed as an international buyer."'
           name: 'Sesame & Pigeon Peas Buyer'
-      button_text: 'Read all Reviews'
-      button_url: '/#get-started'
-    get_started:
-      eyebrow: 'get started'
-      heading: 'Get Started Today'
-      paragraph: 'Source quality crops directly from Tanzania, with full transparency from auction to port. Reach us at info@seedstone.co.tz — Dar es Salaam, Tanzania, East Africa.'
-    news:
-      eyebrow: news
-      heading: 'News & Publications'
-      button_text: 'Read More'
-      button_url: '/#news'
-      items:
+          background_image: images/site/seedstone-review-export.webp
+          video_url: 'https://www.youtube.com/embed/VhBl3dHT5SY?feature=oembed?playlist=VhBl3dHT5SY&mute=0&autoplay=0&loop=no&controls=0&start=0&end='
         -
-          id: newsI1a1b2
-          image: '/seed-stone/wp-content/uploads/2026/08/blogs/understanding-tmx-how-auction-based-crop-bidding-works.webp'
-          category: 'Market Insights'
-          title: 'Understanding TMX: How Auction-Based Crop Bidding Works'
-          url: '/#news'
-        -
-          id: newsI2a1b2
-          image: '/seed-stone/wp-content/uploads/2026/08/blogs/cashewnut-season-outlook-what-exporters-should-know.webp'
-          category: 'Crop & Market Reports'
-          title: 'Cashewnut Season Outlook: What Exporters Should Know'
-          url: '/#news'
-        -
-          id: newsI3a1b2
-          image: '/seed-stone/wp-content/uploads/2026/08/blogs/from-godown-to-port-inside-seed-stone-is-order-tracking-process.webp'
-          category: 'Company Updates'
-          title: "From Godown to Port: Inside Seedstone's Order Tracking Process"
-          url: '/#news'
-    price_ticker:
-      items:
-        -
-          id: priceI1a1b2
-          product_name: 'Cashewnut - Mtwara'
-          past_price_value: 3800
-          current_price_value: 4100
-          price_unit: 'Tzs (1 Kg)'
-        -
-          id: priceI2a1b2
-          product_name: 'Coffee - Mbeya'
-          past_price_value: 8200
-          current_price_value: 7600
-          price_unit: 'Tzs (1 Kg)'
-        -
-          id: priceI3a1b2
-          product_name: 'Sesame - Singida'
-          past_price_value: 5200
-          current_price_value: 5200
-          price_unit: 'Tzs (1 Kg)'
-        -
-          id: priceI4a1b2
-          product_name: 'Pigeon Peas - Dodoma'
-          past_price_value: 2600
-          current_price_value: 2900
-          price_unit: 'Tzs (1 Kg)'
+          id: ts4a2b3c
+          quote: "\"Our shipment of pigeon peas arrived on schedule with complete documentation. Seedstone's transparent tracking made every stage feel effortless for our team.\""
+          name: 'Sesame Buyer'
+          avatar: images/site/taylor-Xqb7GmV_VoQ-unsplash.webp
+          button_text: 'Get a Quote'
+          button_url: /contact-us
+    highlights:
+      -
+        id: hl1a2b3c
+        number: 85
+        suffix: '%'
+        label: 'Export readiness across all crop orders'
+      -
+        id: hl2a2b3c
+        number: 3
+        suffix: x
+        label: 'Faster turnaround from bid to shipment'
+      -
+        id: hl3a2b3c
+        number: 92
+        suffix: '%'
+        label: 'Buyers who re-order with Seedstone'
+    work_with_us:
+      eyebrow: 'Work With Us'
+      heading: 'Start Your Export Order with Us'
+      list_label: 'You will get:'
+      benefits_left:
+        - 'Guaranteed Export Quality'
+        - 'End-to-End Order Tracking'
+        - 'TMX Auction Access'
+      benefits_right:
+        - 'Direct Sourcing Support'
+        - 'Complete Export Documentation'
+        - 'Godown-to-Port Logistics'
+      button_text: 'Work With Us'
+      button_url: /contact-us
+      image: images/site/seedstone-logomark.png
+    newsletter:
+      eyebrow: Newsletter
+      heading: 'Stay Ahead on Export Harvests'
+      text: 'Receive updates on harvests, auction prices, and export schedules to help your team plan every order ahead of time.'
+      button_text: 'Contact Our Team'
+      button_url: 'mailto:info@seedstone.co.tz'
 show_title: false
 ---

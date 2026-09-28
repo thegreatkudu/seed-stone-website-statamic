@@ -1,0 +1,89 @@
+tree:
+  -
+    id: ce10dd4a-3e75-48cf-9854-f73f6735a34a
+    title: Services
+  -
+    id: 3defdfc0-88c1-4660-b0da-171c2d8f9b4b
+    title: Company
+    children:
+      -
+        id: df7b7f85-18a3-456c-93a2-e832969a646b
+        entry: ce6478fb-7940-40c6-b426-d00d9bd1eabb
+      -
+        id: 2614c95a-3b37-452f-ab35-fdfea90b5429
+        title: Contact
+        entry: bd177cc0-23f9-40b2-a106-fa4b6aa4f37c
+      -
+        id: b8c7011f-c8eb-48ac-b5e1-0b85d6a29307
+        title: 'News & Publications'
+        entry: 8e677c57-ebe8-4422-bbf8-cddcc4a0c2d6
+      -
+        id: ea153f32-9391-4bc8-b61a-75fb6e6717dd
+        title: 'Register as a Trader'
+        url: 'https://app.seedstone.co.tz/register'
+        data:
+          new_tab: true
+      -
+        id: 433748a4-eb15-46bc-adff-b392faabbef1
+        title: Login
+        url: 'https://app.seedstone.co.tz/login'
+        data:
+          new_tab: true
+  -
+    id: 70c41a7f-3c72-4a88-8b81-83a754b7e4d6
+    title: Resources
+    children:
+      -
+        id: f4fbbfae-de23-4289-8dfa-824fa1dbf267
+        entry: 6b96ecbe-d757-467c-89f1-1c40b8d199d4
+      -
+        id: 145c923b-a055-4a54-b29c-d655371091ab
+        entry: a8fd79a1-6a5e-4497-a350-d06be6905458
+      -
+        id: 4f118509-14f4-4f52-a189-d5e14b827646
+        title: 'Book a Consultation'
+        url: '/#get-started'
+      -
+        id: faq_footer_link
+        title: FAQs
+        url: /faqs
+      -
+        id: 0a16b3f3-ea7d-4f75-9433-bb976bc0ab69
+        title: 'Content Management'
+        url: /cp
+        data:
+          new_tab: true
+  -
+    id: 014821ab-9729-4401-92f0-728f2bf7f6a6
+    title: 'Follow Us On'
+    children:
+      -
+        id: c0f20492-681f-4fc7-9c28-83d557d2b03f
+        title: LinkedIn
+        url: 'https://www.linkedin.com/'
+        data:
+          new_tab: true
+      -
+        id: 864a6257-8148-462a-9d13-dfb79687eab5
+        title: Instagram
+        url: 'https://www.instagram.com/'
+        data:
+          new_tab: true
+      -
+        id: f55a1ed3-2939-462c-94d0-047dc78d68b9
+        title: Tiktok
+        url: 'https://www.tiktok.com/'
+        data:
+          new_tab: true
+      -
+        id: f5e4eada-cb69-4189-a19c-b75583279f5a
+        title: Facebook
+        url: 'https://www.facebook.com/'
+        data:
+          new_tab: true
+      -
+        id: x_twitter_footer_link
+        title: X (Twitter)
+        url: 'https://x.com/'
+        data:
+          new_tab: true

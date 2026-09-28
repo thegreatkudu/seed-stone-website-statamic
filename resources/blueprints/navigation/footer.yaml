@@ -1,0 +1,12 @@
+title: Footer
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: new_tab
+        field:
+          type: toggle
+          display: 'Open in new tab'
+          default: false
+          instructions: 'Opens the link in a new browser tab.'

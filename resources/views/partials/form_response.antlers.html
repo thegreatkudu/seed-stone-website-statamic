@@ -1,0 +1,18 @@
+{{# Success / error message for a {{ form:create }} block. Pass success_message="..." #}}
+{{ if success }}
+<div class="mf-main-response-wrap mf-response-msg-wrap" data-show="1" role="status" style="display:block; margin-bottom: 20px;">
+    <div class="mf-response-msg" style="display:flex; gap:10px; align-items:center; padding:14px 18px; border-radius:8px; background:#e8f5e9; color:#1b5e20;">
+        <i class="mf-success-icon fas fa-check"></i>
+        <p style="margin:0;">{{ success_message }}</p>
+    </div>
+</div>
+{{ /if }}
+{{ if errors }}
+<div class="mf-main-response-wrap mf-response-msg-wrap" data-show="1" role="alert" style="display:block; margin-bottom: 20px;">
+    <div class="mf-response-msg" style="padding:14px 18px; border-radius:8px; background:#fdecea; color:#8a1c14;">
+        <ul style="margin:0; padding-left:18px;">
+            {{ errors }}<li>{{ value }}</li>{{ /errors }}
+        </ul>
+    </div>
+</div>
+{{ /if }}

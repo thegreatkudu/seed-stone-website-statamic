@@ -1,1031 +1,215 @@
-<div class="elementor elementor-39 elementor-location-header" data-elementor-type="header"
-    data-elementor-post-type="elementor_library" data-elementor-id="18">
-    {{# ============================================================ #}}
-    {{# PRICE TICKER / MARQUEE                                       #}}
-    {{# ============================================================ #}}
-    {{ blocks }}
-    {{ if type == "home_page" && price_ticker:items }}
-    <div class="price-section elementor-element elementor-element-709eac0 elementor-widget elementor-widget-ceamarquee"
-        data-id="709eac0" data-element_type="widget" data-widget_type="ceamarquee.default">
-        <div class="elementor-widget-container">
-            <div class="cea-marquee-list scroll-left">
+<!-- price -->
+<div class="container" data-site-container="">
 
-                {{# FIRST INNER DIV #}}
-                <div class="cea-marquee-inner">
-                    {{ price_ticker:items scope="item" }}
-                    <div class="cea-marquee-item elementor-repeater-item-{{ item:id }}">
-                        <div class="marquee-img marquee-img-before">
-                            <i class="fa-solid fa-chart-column stat-icon"></i>
+    <div class="header-sections">
+
+        <div id="shopify-section-sections--19215017443497__announcement"
+            class="shopify-section shopify-section-group-group-header page-announcement">
+
+            <style data-shopify="">
+                :root {
+
+                    --ANNOUNCEMENT-HEIGHT-DESKTOP: max(calc(var(--font-body-small) * var(--line-height-normal)), 36px);
+                    --ANNOUNCEMENT-HEIGHT-MOBILE: max(calc(var(--font-body-small) * var(--line-height-normal)), 36px);
+                }
+            </style>
+
+            <div id="Announcement--sections--19215017443497__announcement"
+                class="announcement__wrapper announcement__wrapper--top color-scheme-2" data-announcement-wrapper=""
+                data-section-id="sections--19215017443497__announcement" data-section-type="announcement" style="--PT: 0px; --PB: 0px;
+        --ticker-direction: ticker-rtl;--text-size: var(--font-body-small);
+        --text-align: center; --justify-content: center;">
+
+                <div class="announcement__bar announcement__bar--error section-padding">
+                    <div class="announcement__message">
+                        <div class="announcement__text body-small">
+                            <div class="announcement__main">{{ header:browser_warning }}</div>
                         </div>
-                        <div class="ms-4">
-                            <h6 class="price-title text-uppercase">{{ item:product_name }}</h6>
-                            {{ if item:current_price_value > item:past_price_value }}
-                                {{# Price went UP — current green, past neutral #}}
-                                <p class="real-time-status past-price price-neutral-past mb-0">
-                                    Past Price: {{ item:past_price_value }} {{ item:price_unit }}
-                                </p>
-                                <p class="real-time-status current-price price-up mb-0">
-                                    Current Price: {{ item:current_price_value }} {{ item:price_unit }}
-                                    <i class="fa-solid fa-arrow-trend-up price-arrow"></i>
-                                </p>
-                            {{ elseif item:current_price_value < item:past_price_value }}
-                                {{# Price went DOWN — past green, current red #}}
-                                <p class="real-time-status past-price price-was-higher mb-0">
-                                    Past Price: {{ item:past_price_value }} {{ item:price_unit }}
-                                    <i class="fa-solid fa-arrow-trend-up price-arrow"></i>
-                                </p>
-                                <p class="real-time-status current-price price-down mb-0">
-                                    Current Price: {{ item:current_price_value }} {{ item:price_unit }}
-                                    <i class="fa-solid fa-arrow-trend-down price-arrow"></i>
-                                </p>
-                            {{ else }}
-                                {{# Price UNCHANGED — both neutral, amber current #}}
-                                <p class="real-time-status past-price price-unchanged-past mb-0">
-                                    Past Price: {{ item:past_price_value }} {{ item:price_unit }}
-                                </p>
-                                <p class="real-time-status current-price price-neutral mb-0">
-                                    Current Price: {{ item:current_price_value }} {{ item:price_unit }}
-                                    <i class="fa-solid fa-minus price-arrow"></i>
-                                </p>
-                            {{ /if }}
-                        </div>
-                    </div>
-                    <span class="cea-divider"></span>
-                    {{ /price_ticker:items }}
-                </div>{{# END cea-marquee-inner (first) #}}
-
-                {{# SECOND INNER DIV (duplicate for seamless loop) #}}
-                <div class="cea-marquee-inner" aria-hidden="true">
-                    {{ price_ticker:items scope="item" }}
-                    <div class="cea-marquee-item elementor-repeater-item-{{ item:id }}">
-                        <div class="marquee-img marquee-img-before">
-                            <i class="fa-solid fa-chart-column stat-icon"></i>
-                        </div>
-                        <div class="ms-4">
-                            <h6 class="price-title text-uppercase">{{ item:product_name }}</h6>
-                            {{ if item:current_price_value > item:past_price_value }}
-                                <p class="real-time-status past-price price-neutral-past mb-0">
-                                    Past Price: {{ item:past_price_value }} {{ item:price_unit }}
-                                </p>
-                                <p class="real-time-status current-price price-up mb-0">
-                                    Current Price: {{ item:current_price_value }} {{ item:price_unit }}
-                                    <i class="fa-solid fa-arrow-trend-up price-arrow"></i>
-                                </p>
-                            {{ elseif item:current_price_value < item:past_price_value }}
-                                <p class="real-time-status past-price price-was-higher mb-0">
-                                    Past Price: {{ item:past_price_value }} {{ item:price_unit }}
-                                    <i class="fa-solid fa-arrow-trend-up price-arrow"></i>
-                                </p>
-                                <p class="real-time-status current-price price-down mb-0">
-                                    Current Price: {{ item:current_price_value }} {{ item:price_unit }}
-                                    <i class="fa-solid fa-arrow-trend-down price-arrow"></i>
-                                </p>
-                            {{ else }}
-                                <p class="real-time-status past-price price-unchanged-past mb-0">
-                                    Past Price: {{ item:past_price_value }} {{ item:price_unit }}
-                                </p>
-                                <p class="real-time-status current-price price-neutral mb-0">
-                                    Current Price: {{ item:current_price_value }} {{ item:price_unit }}
-                                    <i class="fa-solid fa-minus price-arrow"></i>
-                                </p>
-                            {{ /if }}
-                        </div>
-                    </div>
-                    <span class="cea-divider"></span>
-                    {{ /price_ticker:items }}
-                </div>{{# END cea-marquee-inner (second) #}}
-
-            </div>{{# END cea-marquee-list #}}
-        </div>{{# END elementor-widget-container #}}
-    </div>{{# END price-section #}}
-
-    <style>
-        .price-section {
-            position: relative;
-            min-height: 80px;
-            display: flex;
-            align-items: center;
-            padding: 8px 0px;
-            background-color: #010e00;
-            margin-block-end: 0px !important;
-        }
-
-        .price-section p {
-            margin-block-end: 0px !important;
-        }
-
-        .price-section h6 {
-            margin-block-end: 0rem !important;
-            margin-block-start: 0rem !important;
-        }
-
-        .price-section .elementor-widget-container {
-            width: 100%;
-            min-width: 0;
-        }
-
-        .cea-marquee-list {
-            position: relative;
-            display: flex;
-            align-items: flex-start;
-            white-space: nowrap;
-            overflow: hidden;
-            width: 100%;
-            min-width: 0;
-        }
-
-        .cea-marquee-list .cea-marquee-inner {
-            display: flex;
-            align-items: flex-start;
-        }
-
-        .cea-marquee-list.scroll-left .cea-marquee-inner {
-            animation: scroll_to_left 10s linear infinite;
-        }
-
-        .elementor-element.elementor-element-709eac0 .cea-marquee-inner {
-            animation-duration: 50s;
-        }
-
-        .cea-marquee-list .cea-marquee-item {
-            display: flex;
-            align-items: center;
-            position: relative;
-            justify-content: center;
-        }
-
-        .elementor-element.elementor-element-709eac0 .cea-marquee-item {
-            margin: 0;
-            padding: 0;
-        }
-
-        .elementor-element.elementor-element-709eac0 .cea-divider {
-            margin: 0 20px;
-        }
-
-        .cea-marquee-list .marquee-img,
-        .cea-marquee-list .marquee-icon {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            flex: 0 0 auto;
-            font-size: 30px;
-        }
-
-        .elementor-element.elementor-element-709eac0 .marquee-img.marquee-img-before {
-            margin-right: 25px;
-        }
-
-        .stat-icon {
-            background-color: #90c52d;
-            font-size: 20px;
-            line-height: 40px !important;
-            margin-right: 10px;
-            width: 40px;
-            height: 40px;
-            position: relative;
-            color: #fff;
-            display: inline-block;
-            text-align: center;
-            --g: /20.56% 20.56% radial-gradient(#000 calc(71% - 1px), #0000 71%) no-repeat;
-            mask: 100% 50% var(--g), 93.301% 75% var(--g), 75% 93.301% var(--g), 50% 100% var(--g), 25% 93.301% var(--g), 6.699% 75% var(--g), 0% 50% var(--g), 6.699% 25% var(--g), 25% 6.699% var(--g), 50% 0% var(--g), 75% 6.699% var(--g), 93.301% 25% var(--g), radial-gradient(100% 100%, #000 38.366%, #0000 calc(38.366% + 1px));
-            border-radius: 0;
-        }
-
-        .cea-marquee-list .cea-marquee-item .ms-4 {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-        }
-
-        .price-title {
-            font-family: "Dosis", sans-serif;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            font-size: .8rem;
-            font-weight: 600;
-            color: #ffffff;
-            padding: 0;
-        }
-
-        .real-time-status {
-            font-family: "Sen", sans-serif;
-            font-weight: 600;
-            font-size: .7rem;
-            text-transform: uppercase;
-            display: inline-block;
-        }
-
-        .cea-marquee-item .ms-4 .past-price {
-            color: #888;
-        }
-
-        .cea-marquee-item .ms-4 .past-price.price-neutral-past {
-            color: #ffffff !important;
-            font-weight: 600;
-        }
-
-        .cea-marquee-item .ms-4 .current-price.price-up {
-            color: #22c55e !important;
-            font-weight: 700;
-        }
-
-        .cea-marquee-item .ms-4 .past-price.price-was-higher {
-            color: #00ff5e !important;
-            font-weight: 700;
-        }
-
-        .cea-marquee-item .ms-4 .current-price.price-down {
-            color: #f00 !important;
-            font-weight: 700;
-        }
-
-        .cea-marquee-item .ms-4 .past-price.price-unchanged-past {
-            color: #888 !important;
-            font-weight: 600;
-        }
-
-        .cea-marquee-item .ms-4 .current-price.price-neutral {
-            color: #facc15 !important;
-            font-weight: 700;
-        }
-
-        .price-arrow {
-            font-size: 0.95rem;
-            margin-left: 5px;
-            vertical-align: middle;
-        }
-
-        @keyframes scroll_to_left {
-            from {
-                transform: translateX(0);
-            }
-
-            to {
-                transform: translateX(-100%);
-            }
-        }
-    </style>
-    {{ /if }}
-    {{ /blocks }}
-
-    <!-- This is new header -->
-    <header data-elementor-type="header" data-elementor-id="218"
-        class="elementor elementor-218 elementor-location-header" data-elementor-post-type="elementor_library">
-
-        <div class="elementor-element elementor-element-476ca71 vamtam-sticky-header elementor-hidden-tablet elementor-hidden-mobile e-flex e-con-boxed e-con e-parent e-lazyloaded vamtam-sticky-header--fixed-hidden"
-            data-id="476ca71" data-element_type="container" data-e-type="container"
-            data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-            <div class="e-con-inner">
-                <div class="elementor-element elementor-element-880a31d e-con-full e-flex e-con e-child"
-                    data-id="880a31d" data-element_type="container" data-e-type="container">
-                    <div class="elementor-element elementor-element-1cdc799 elementor-widget elementor-widget-theme-site-logo elementor-widget-image"
-                        data-id="1cdc799" data-element_type="widget" data-e-type="widget"
-                        data-widget_type="theme-site-logo.default">
-                        <a href="{{ config:url }}">
-                            <img fetchpriority="high" width="145" height="26"
-                                src="{{ config:url }}/seed-stone/wp-content/uploads/2025/07/seed-stone-logo-header.svg"
-                                class="attachment-full size-full wp-image-220" alt="Seedstone"> </a>
                     </div>
                 </div>
-                <div class="elementor-element elementor-element-6e84f14 e-con-full e-flex e-con e-child"
-                    data-id="6e84f14" data-element_type="container" data-e-type="container">
-                    <div class="vamtam-has-theme-widget-styles elementor-element elementor-element-8a9d381 elementor-nav-menu__align-center elementor-nav-menu--dropdown-tablet elementor-nav-menu__text-align-aside elementor-nav-menu--toggle elementor-nav-menu--burger elementor-widget elementor-widget-nav-menu"
-                        data-id="8a9d381" data-element_type="widget" data-e-type="widget"
-                        data-settings="{&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;&lt;i aria-hidden=\&quot;true\&quot; class=\&quot;\&quot;&gt;&lt;\/i&gt;&quot;,&quot;library&quot;:&quot;&quot;},&quot;layout&quot;:&quot;horizontal&quot;,&quot;toggle&quot;:&quot;burger&quot;}"
-                        data-widget_type="nav-menu.default">
-                        <nav aria-label="Menu"
-                            class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-background e--animation-fade">
-                            <ul id="menu-1-8a9d381" class="elementor-nav-menu" data-smartmenus-id="17872028654307988">
-                                <li
-                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-18 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-207">
-                                    <a href="{{ config:url }}/" aria-current="page"
-                                        class="elementor-item elementor-item-active has-submenu"
-                                        id="sm-17872028654307988-1" aria-haspopup="true"
-                                        aria-controls="sm-17872028654307988-2" aria-expanded="false">Home<span
-                                            class="sub-arrow"><i aria-hidden="true" class=""></i></span></a>
-                                    <ul class="sub-menu elementor-nav-menu--dropdown" id="sm-17872028654307988-2"
-                                        role="group" aria-hidden="true" aria-labelledby="sm-17872028654307988-1"
-                                        aria-expanded="false">
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-18 current_page_item menu-item-201">
-                                            <a href="{{ config:url }}/" aria-current="page"
-                                                class="elementor-sub-item elementor-item-active">Overview</a>
-                                        </li>
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-206">
-                                            <a href="{{ config:url }}/#about-us" class="elementor-sub-item">About Us</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-202"><a
-                                        href="{{ config:url }}/#about-us" class="elementor-item">About us</a></li>
-                                <li
-                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-208">
-                                    <a href="{{ config:url }}/#services" class="elementor-item has-submenu"
-                                        id="sm-17872028654307988-3" aria-haspopup="true"
-                                        aria-controls="sm-17872028654307988-4" aria-expanded="false">Services<span
-                                            class="sub-arrow"><i aria-hidden="true" class=""></i></span></a>
-                                    <ul class="sub-menu elementor-nav-menu--dropdown" id="sm-17872028654307988-4"
-                                        role="group" aria-hidden="true" aria-labelledby="sm-17872028654307988-3"
-                                        aria-expanded="false">
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-210">
-                                            <a href="{{ config:url }}/#services" class="elementor-sub-item">Direct
-                                                Sourcing</a>
-                                        </li>
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-211">
-                                            <a href="{{ config:url }}/#services"
-                                                class="elementor-sub-item">Exporting</a>
-                                        </li>
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-216">
-                                            <a href="{{ config:url }}/#services" class="elementor-sub-item">Auction
-                                                Sourcing</a>
-                                        </li>
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-215">
-                                            <a href="{{ config:url }}/#services" class="elementor-sub-item">Clearing
-                                                &amp; Forwarding</a>
-                                        </li>
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-213">
-                                            <a href="{{ config:url }}/#track-order" class="elementor-sub-item">Order
-                                                Tracking</a>
-                                        </li>
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-214">
-                                            <a href="{{ config:url }}/#crops-we-trade" class="elementor-sub-item">Crops
-                                                We Trade</a>
-                                        </li>
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-209">
-                                            <a href="{{ config:url }}/#why-choose-us" class="elementor-sub-item">Why
-                                                Choose Us</a>
-                                        </li>
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-212">
-                                            <a href="{{ config:url }}/#how-it-works" class="elementor-sub-item">How It
-                                                Works</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <!-- <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-217"><a
-                                    href="{{ config:url }}/#crops-we-trade"
-                                    class="elementor-item">Crops We Trade</a></li> -->
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-203"><a
-                                        href="{{ config:url }}/#news" class="elementor-item">Blog</a></li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-204"><a
-                                        href="{{ config:url }}/#get-started" class="elementor-item">Contact us</a></li>
-                            </ul>
-                        </nav>
-                        <div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle"
-                            aria-expanded="false">
-                            <svg aria-hidden="true" role="presentation"
-                                class="elementor-menu-toggle__icon--open e-font-icon-svg e-eicon-menu-bar"
-                                viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M104 333H896C929 333 958 304 958 271S929 208 896 208H104C71 208 42 237 42 271S71 333 104 333ZM104 583H896C929 583 958 554 958 521S929 458 896 458H104C71 458 42 487 42 521S71 583 104 583ZM104 833H896C929 833 958 804 958 771S929 708 896 708H104C71 708 42 737 42 771S71 833 104 833Z">
-                                </path>
-                            </svg><svg aria-hidden="true" role="presentation"
-                                class="elementor-menu-toggle__icon--close e-font-icon-svg e-eicon-close"
-                                viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M742 167L500 408 258 167C246 154 233 150 217 150 196 150 179 158 167 167 154 179 150 196 150 212 150 229 154 242 171 254L408 500 167 742C138 771 138 800 167 829 196 858 225 858 254 829L496 587 738 829C750 842 767 846 783 846 800 846 817 842 829 829 842 817 846 804 846 783 846 767 842 750 829 737L588 500 833 258C863 229 863 200 833 171 804 137 775 137 742 167Z">
-                                </path>
-                            </svg>
+
+                <announcement-bar class="announcement__bar-outer section-padding" style="--padding-scrolling: 20px;">
+                    <div class="announcement__bar-holder announcement__bar-holder--marquee">
+                        <div class="announcement__bar"><ticker-bar autoplay="" speed="3.26">
+                                <div data-ticker-frame="" class="announcement__message">
+                                    <div data-ticker-scale="" class="announcement__scale"
+                                        style="--animation-time: 24.22s; --animation-speed: 3.26;">
+                                        <div data-ticker-text="" class="announcement__text ticker--animated">
+                                            {{ header:price_ticker }}
+                                            <div class="announcement__slide" style="">
+                                                <div class="body-small">
+                                                    <p><a href="{{ url }}" title="{{ text }}">{{ text }} </a></p>
+                                                </div>
+                                            </div>
+                                            {{ /header:price_ticker }}
+                                        </div>
+                                        <div data-ticker-text="" class="announcement__text ticker--animated"
+                                            data-clone="">
+                                            {{ header:price_ticker }}
+                                            <div class="announcement__slide" style="">
+                                                <div class="body-small">
+                                                    <p><a href="{{ url }}" title="{{ text }}">{{ text }} </a></p>
+                                                </div>
+                                            </div>
+                                            {{ /header:price_ticker }}
+                                        </div>
+                                        <div data-ticker-text="" class="announcement__text ticker--animated"
+                                            data-clone="">
+                                            {{ header:price_ticker }}
+                                            <div class="announcement__slide" style="">
+                                                <div class="body-small">
+                                                    <p><a href="{{ url }}" title="{{ text }}">{{ text }} </a></p>
+                                                </div>
+                                            </div>
+                                            {{ /header:price_ticker }}
+                                        </div>
+                                        <div data-ticker-text="" class="announcement__text ticker--animated"
+                                            data-clone="">
+                                            {{ header:price_ticker }}
+                                            <div class="announcement__slide" style="">
+                                                <div class="body-small">
+                                                    <p><a href="{{ url }}" title="{{ text }}">{{ text }} </a></p>
+                                                </div>
+                                            </div>
+                                            {{ /header:price_ticker }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-ticker-text="" class="announcement__text ticker__comparitor">
+                                    {{ header:price_ticker }}
+                                    <div class="announcement__slide" style="">
+                                        <div class="body-small">
+                                            <p><a href="{{ url }}" title="{{ text }}">{{ text }} </a></p>
+                                        </div>
+                                    </div>
+                                    {{ /header:price_ticker }}
+                                </div>
+                            </ticker-bar>
                         </div>
-                        <nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true"
-                            style="--menu-height: 0;">
-                            <ul id="menu-2-8a9d381" class="elementor-nav-menu" data-smartmenus-id="17872028654341912">
-                                <li
-                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-18 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-207">
-                                    <a href="{{ config:url }}/" aria-current="page"
-                                        class="elementor-item elementor-item-active has-submenu" tabindex="-1"
-                                        id="sm-17872028654341912-1" aria-haspopup="true"
-                                        aria-controls="sm-17872028654341912-2" aria-expanded="false">Home<span
-                                            class="sub-arrow"><i aria-hidden="true" class=""></i></span></a>
-                                    <ul class="sub-menu elementor-nav-menu--dropdown" id="sm-17872028654341912-2"
-                                        role="group" aria-hidden="true" aria-labelledby="sm-17872028654341912-1"
-                                        aria-expanded="false">
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-18 current_page_item menu-item-201">
-                                            <a href="{{ config:url }}/" aria-current="page"
-                                                class="elementor-sub-item elementor-item-active" tabindex="-1">Small
-                                                Company</a>
-                                        </li>
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-206">
-                                            <a href="{{ config:url }}/#about-us" class="elementor-sub-item"
-                                                tabindex="-1">About Us</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-202"><a
-                                        href="{{ config:url }}/#about-us" class="elementor-item" tabindex="-1">About
-                                        us</a></li>
-                                <li
-                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-208">
-                                    <a href="{{ config:url }}/#services" class="elementor-item has-submenu"
-                                        tabindex="-1" id="sm-17872028654341912-3" aria-haspopup="true"
-                                        aria-controls="sm-17872028654341912-4" aria-expanded="false">Services<span
-                                            class="sub-arrow"><i aria-hidden="true" class=""></i></span></a>
-                                    <ul class="sub-menu elementor-nav-menu--dropdown" id="sm-17872028654341912-4"
-                                        role="group" aria-hidden="true" aria-labelledby="sm-17872028654341912-3"
-                                        aria-expanded="false">
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-210">
-                                            <a href="{{ config:url }}/#services" class="elementor-sub-item"
-                                                tabindex="-1">Direct Sourcing</a>
-                                        </li>
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-211">
-                                            <a href="{{ config:url }}/#services" class="elementor-sub-item"
-                                                tabindex="-1">Exporting</a>
-                                        </li>
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-216">
-                                            <a href="{{ config:url }}/#services" class="elementor-sub-item"
-                                                tabindex="-1">Auction Sourcing</a>
-                                        </li>
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-215">
-                                            <a href="{{ config:url }}/#services" class="elementor-sub-item"
-                                                tabindex="-1">Clearing &amp; Forwarding</a>
-                                        </li>
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-213">
-                                            <a href="{{ config:url }}/#track-order" class="elementor-sub-item"
-                                                tabindex="-1">Order Tracking</a>
-                                        </li>
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-214">
-                                            <a href="{{ config:url }}/#crops-we-trade" class="elementor-sub-item"
-                                                tabindex="-1">Crops We Trade</a>
-                                        </li>
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-209">
-                                            <a href="{{ config:url }}/#why-choose-us" class="elementor-sub-item"
-                                                tabindex="-1">Why Choose Us</a>
-                                        </li>
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-212">
-                                            <a href="{{ config:url }}/#how-it-works" class="elementor-sub-item"
-                                                tabindex="-1">How It Works</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <!-- <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-217"><a
-                                    href="{{ config:url }}/#crops-we-trade"
-                                    class="elementor-item" tabindex="-1">Crops We Trade</a></li> -->
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-203"><a
-                                        href="{{ config:url }}/#news" class="elementor-item" tabindex="-1">Blog</a></li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-204"><a
-                                        href="{{ config:url }}/#get-started" class="elementor-item"
-                                        tabindex="-1">Contact us</a></li>
-                            </ul>
-                        </nav>
                     </div>
-                </div>
-                <div class="elementor-element elementor-element-4cb59f5 e-con-full e-flex e-con e-child"
-                    data-id="4cb59f5" data-element_type="container" data-e-type="container">
-                    <div class="vamtam-has-theme-widget-styles elementor-element elementor-element-eb0dce9 vamtam-has-hover-anim layout-row elementor-widget elementor-widget-button"
-                        data-id="eb0dce9" data-element_type="widget" data-e-type="widget"
-                        data-widget_type="button.default">
-                        <a class="elementor-button elementor-button-link elementor-size-sm"
-                            href="mailto:info@seedstone.co.tz">
-                            <span class="elementor-button-content-wrapper">
-                                <span class="elementor-button-icon">
-                                    <i aria-hidden="true" class="vamtamtheme- vamtam-theme-phone"></i> </span>
+                </announcement-bar>
 
-                                <span class="vamtam-btn-text-wrap"><span
-                                        class="elementor-button-text vamtam-btn-text">info@seedstone.co.tz</span><span
-                                        class="elementor-button-text vamtam-btn-text-abs">info@seedstone.co.tz</span></span></span>
-                        </a>
-                    </div>
-                    <!-- <div class="vamtam-has-theme-widget-styles elementor-element elementor-element-b48f67a vamtam-has-hover-anim elementor-widget elementor-widget-button"
-                    data-id="b48f67a" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
-                    <a class="elementor-button elementor-button-link elementor-size-sm"
-                        href="{{ config:url }}/#get-started">
-                        <span class="elementor-button-content-wrapper">
-
-                            <span class="vamtam-btn-text-wrap"><span class="elementor-button-text vamtam-btn-text">Get a
-                                    Quote</span><span class="elementor-button-text vamtam-btn-text-abs">Get a
-                                    Quote</span></span></span>
-                    </a>
-                </div> -->
-                </div>
             </div>
+
         </div>
+        
+    </div>
 
-        <!-- <div class="elementor-element elementor-element-476ca71 vamtam-sticky-header vamtam-sticky-header--spacer elementor-hidden-tablet elementor-hidden-mobile e-flex e-con-boxed e-con e-parent e-lazyloaded"
-            data-id="476ca71" data-element_type="container" data-e-type="container"
-            data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+</div>
+
+
+
+<!-- header -->
+<div class="ekit-template-content-markup ekit-template-content-header ekit-template-content-theme-support">
+    <div data-elementor-type="wp-post" data-elementor-id="50" class="elementor elementor-50">
+        <div class="elementor-element elementor-element-e7d795f e-flex e-con-boxed e-con e-parent e-lazyloaded"
+            data-id="e7d795f" data-element_type="container" data-e-type="container"
+            data-settings='{"position":"absolute"}'>
             <div class="e-con-inner">
-                <div class="elementor-element elementor-element-880a31d e-con-full e-flex e-con e-child"
-                    data-id="880a31d" data-element_type="container" data-e-type="container">
-                    <div class="elementor-element elementor-element-1cdc799 elementor-widget elementor-widget-theme-site-logo elementor-widget-image"
-                        data-id="1cdc799" data-element_type="widget" data-e-type="widget"
-                        data-widget_type="theme-site-logo.default">
-                        <a href="{{ config:url }}">
-                            <img width="145" height="26"
-                                src="{{ config:url }}/seed-stone/wp-content/uploads/2025/07/seed-stone-logo-header.svg"
-                                class="attachment-full size-full wp-image-220" alt="Seedstone"> </a>
-                    </div>
-                </div>
-                <div class="elementor-element elementor-element-6e84f14 e-con-full e-flex e-con e-child"
-                    data-id="6e84f14" data-element_type="container" data-e-type="container">
-                    <div class="vamtam-has-theme-widget-styles elementor-element elementor-element-8a9d381 elementor-nav-menu__align-center elementor-nav-menu--dropdown-tablet elementor-nav-menu__text-align-aside elementor-nav-menu--toggle elementor-nav-menu--burger elementor-widget elementor-widget-nav-menu"
-                        data-id="8a9d381" data-element_type="widget" data-e-type="widget"
-                        data-settings="{&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;&lt;i aria-hidden=\&quot;true\&quot; class=\&quot;\&quot;&gt;&lt;\/i&gt;&quot;,&quot;library&quot;:&quot;&quot;},&quot;layout&quot;:&quot;horizontal&quot;,&quot;toggle&quot;:&quot;burger&quot;}"
-                        data-widget_type="nav-menu.default">
-                        <nav aria-label="Menu"
-                            class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-background e--animation-fade">
-                            <ul id="menu-3-8a9d381" class="elementor-nav-menu" data-smartmenus-id="17872028654398">
-                                <li
-                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-18 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-207">
-                                    <a href="{{ config:url }}/" aria-current="page"
-                                        class="elementor-item elementor-item-active has-submenu"
-                                        id="sm-17872028654398-1" aria-haspopup="true"
-                                        aria-controls="sm-17872028654398-2" aria-expanded="false">Home<span
-                                            class="sub-arrow"><i aria-hidden="true" class=""></i></span></a>
-                                    <ul class="sub-menu elementor-nav-menu--dropdown" id="sm-17872028654398-2"
-                                        role="group" aria-hidden="true" aria-labelledby="sm-17872028654398-1"
-                                        aria-expanded="false">
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-18 current_page_item menu-item-201">
-                                            <a href="{{ config:url }}/" aria-current="page"
-                                                class="elementor-sub-item elementor-item-active">Overview</a>
-                                        </li>
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-206">
-                                            <a href="{{ config:url }}/#about-us" class="elementor-sub-item">About Us</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-202"><a
-                                        href="{{ config:url }}/#about-us" class="elementor-item">About us</a></li>
-                                <li
-                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-208">
-                                    <a href="{{ config:url }}/#services" class="elementor-item has-submenu"
-                                        id="sm-17872028654398-3" aria-haspopup="true"
-                                        aria-controls="sm-17872028654398-4" aria-expanded="false">Services<span
-                                            class="sub-arrow"><i aria-hidden="true" class=""></i></span></a>
-                                    <ul class="sub-menu elementor-nav-menu--dropdown" id="sm-17872028654398-4"
-                                        role="group" aria-hidden="true" aria-labelledby="sm-17872028654398-3"
-                                        aria-expanded="false">
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-210">
-                                            <a href="{{ config:url }}/#services" class="elementor-sub-item">Direct
-                                                Sourcing</a>
-                                        </li>
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-211">
-                                            <a href="{{ config:url }}/#services"
-                                                class="elementor-sub-item">Exporting</a>
-                                        </li>
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-216">
-                                            <a href="{{ config:url }}/#services" class="elementor-sub-item">Auction
-                                                Sourcing</a>
-                                        </li>
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-215">
-                                            <a href="{{ config:url }}/#services" class="elementor-sub-item">Clearing
-                                                &amp; Forwarding</a>
-                                        </li>
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-213">
-                                            <a href="{{ config:url }}/#track-order" class="elementor-sub-item">Order
-                                                Tracking</a>
-                                        </li>
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-214">
-                                            <a href="{{ config:url }}/#crops-we-trade" class="elementor-sub-item">Crops
-                                                We Trade</a>
-                                        </li>
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-209">
-                                            <a href="{{ config:url }}/#why-choose-us" class="elementor-sub-item">Why
-                                                Choose Us</a>
-                                        </li>
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-212">
-                                            <a href="{{ config:url }}/#how-it-works" class="elementor-sub-item">How It
-                                                Works</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-217"><a
-                                        href="{{ config:url }}/#crops-we-trade" class="elementor-item">Crops We
-                                        Trade</a></li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-203"><a
-                                        href="{{ config:url }}/#news" class="elementor-item">Blog</a></li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-204"><a
-                                        href="{{ config:url }}/#get-started" class="elementor-item">Contact us</a></li>
-                            </ul>
-                        </nav>
-                        <div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle"
-                            aria-expanded="false">
-                            <svg aria-hidden="true" role="presentation"
-                                class="elementor-menu-toggle__icon--open e-font-icon-svg e-eicon-menu-bar"
-                                viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M104 333H896C929 333 958 304 958 271S929 208 896 208H104C71 208 42 237 42 271S71 333 104 333ZM104 583H896C929 583 958 554 958 521S929 458 896 458H104C71 458 42 487 42 521S71 583 104 583ZM104 833H896C929 833 958 804 958 771S929 708 896 708H104C71 708 42 737 42 771S71 833 104 833Z">
-                                </path>
-                            </svg><svg aria-hidden="true" role="presentation"
-                                class="elementor-menu-toggle__icon--close e-font-icon-svg e-eicon-close"
-                                viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M742 167L500 408 258 167C246 154 233 150 217 150 196 150 179 158 167 167 154 179 150 196 150 212 150 229 154 242 171 254L408 500 167 742C138 771 138 800 167 829 196 858 225 858 254 829L496 587 738 829C750 842 767 846 783 846 800 846 817 842 829 829 842 817 846 804 846 783 846 767 842 750 829 737L588 500 833 258C863 229 863 200 833 171 804 137 775 137 742 167Z">
-                                </path>
-                            </svg>
+                <div class="elementor-element elementor-element-aba9955 e-con-full e-flex e-con e-child"
+                    data-id="aba9955" data-element_type="container" data-e-type="container">
+                    <div class="elementor-element elementor-element-0351de8 e-con-full e-flex e-con e-child"
+                        data-id="0351de8" data-element_type="container" data-e-type="container">
+                        <div class="elementor-element elementor-element-3f9aa03 elementor-widget elementor-widget-image animated fadeInDown"
+                            data-id="3f9aa03" data-element_type="widget" data-e-type="widget"
+                            data-settings='{"_animation":"fadeInDown","_animation_delay":"250"}'
+                            data-widget_type="image.default">
+                            <a href="{{ config:app:url }}" title="{{ settings:site_name }} Home">
+                                <img width="274" height="80"
+                                    src="{{ settings:header_logo:url }}"
+                                    class="attachment-full size-full wp-image-52" alt="{{ settings:header_logo:alt ?? settings:site_name }}" />
+                            </a>
                         </div>
-                        <nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true"
-                            style="--menu-height: 0;">
-                            <ul id="menu-4-8a9d381" class="elementor-nav-menu" data-smartmenus-id="17872028654414456">
-                                <li
-                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-18 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-207">
-                                    <a href="{{ config:url }}/" aria-current="page"
-                                        class="elementor-item elementor-item-active has-submenu" tabindex="-1"
-                                        id="sm-17872028654414456-1" aria-haspopup="true"
-                                        aria-controls="sm-17872028654414456-2" aria-expanded="false">Home<span
-                                            class="sub-arrow"><i aria-hidden="true" class=""></i></span></a>
-                                    <ul class="sub-menu elementor-nav-menu--dropdown" id="sm-17872028654414456-2"
-                                        role="group" aria-hidden="true" aria-labelledby="sm-17872028654414456-1"
-                                        aria-expanded="false">
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-18 current_page_item menu-item-201">
-                                            <a href="{{ config:url }}/" aria-current="page"
-                                                class="elementor-sub-item elementor-item-active" tabindex="-1">Small
-                                                Company</a>
-                                        </li>
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-206">
-                                            <a href="{{ config:url }}/#about-us" class="elementor-sub-item"
-                                                tabindex="-1">About Us</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-202"><a
-                                        href="{{ config:url }}/#about-us" class="elementor-item" tabindex="-1">About
-                                        us</a></li>
-                                <li
-                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-208">
-                                    <a href="{{ config:url }}/#services" class="elementor-item has-submenu"
-                                        tabindex="-1" id="sm-17872028654414456-3" aria-haspopup="true"
-                                        aria-controls="sm-17872028654414456-4" aria-expanded="false">Services<span
-                                            class="sub-arrow"><i aria-hidden="true" class=""></i></span></a>
-                                    <ul class="sub-menu elementor-nav-menu--dropdown" id="sm-17872028654414456-4"
-                                        role="group" aria-hidden="true" aria-labelledby="sm-17872028654414456-3"
-                                        aria-expanded="false">
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-210">
-                                            <a href="{{ config:url }}/#services" class="elementor-sub-item"
-                                                tabindex="-1">Direct Sourcing</a>
-                                        </li>
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-211">
-                                            <a href="{{ config:url }}/#services" class="elementor-sub-item"
-                                                tabindex="-1">Exporting</a>
-                                        </li>
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-216">
-                                            <a href="{{ config:url }}/#services" class="elementor-sub-item"
-                                                tabindex="-1">Auction Sourcing</a>
-                                        </li>
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-215">
-                                            <a href="{{ config:url }}/#services" class="elementor-sub-item"
-                                                tabindex="-1">Clearing &amp; Forwarding</a>
-                                        </li>
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-213">
-                                            <a href="{{ config:url }}/#track-order" class="elementor-sub-item"
-                                                tabindex="-1">Order Tracking</a>
-                                        </li>
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-214">
-                                            <a href="{{ config:url }}/#crops-we-trade" class="elementor-sub-item"
-                                                tabindex="-1">Crops We Trade</a>
-                                        </li>
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-209">
-                                            <a href="{{ config:url }}/#why-choose-us" class="elementor-sub-item"
-                                                tabindex="-1">Why Choose Us</a>
-                                        </li>
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-212">
-                                            <a href="{{ config:url }}/#how-it-works" class="elementor-sub-item"
-                                                tabindex="-1">How It Works</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-217"><a
-                                        href="{{ config:url }}/#crops-we-trade" class="elementor-item"
-                                        tabindex="-1">Crops We Trade</a></li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-203"><a
-                                        href="{{ config:url }}/#news" class="elementor-item" tabindex="-1">Blog</a></li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-204"><a
-                                        href="{{ config:url }}/#get-started" class="elementor-item"
-                                        tabindex="-1">Contact us</a></li>
-                            </ul>
-                        </nav>
                     </div>
-                </div>
-                <div class="elementor-element elementor-element-4cb59f5 e-con-full e-flex e-con e-child"
-                    data-id="4cb59f5" data-element_type="container" data-e-type="container">
-                    <div class="vamtam-has-theme-widget-styles elementor-element elementor-element-eb0dce9 vamtam-has-hover-anim layout-row elementor-widget elementor-widget-button"
-                        data-id="eb0dce9" data-element_type="widget" data-e-type="widget"
-                        data-widget_type="button.default">
-                        <a class="elementor-button elementor-button-link elementor-size-sm"
-                            href="mailto:info@seedstone.co.tz">
-                            <span class="elementor-button-content-wrapper">
-                                <span class="elementor-button-icon">
-                                    <i aria-hidden="true" class="vamtamtheme- vamtam-theme-phone"></i> </span>
-
-                                <span class="vamtam-btn-text-wrap"><span
-                                        class="elementor-button-text vamtam-btn-text">info@seedstone.co.tz</span><span
-                                        class="elementor-button-text vamtam-btn-text-abs">info@seedstone.co.tz</span></span></span>
-                        </a>
-                    </div>
-                    <div class="vamtam-has-theme-widget-styles elementor-element elementor-element-b48f67a vamtam-has-hover-anim elementor-widget elementor-widget-button"
-                        data-id="b48f67a" data-element_type="widget" data-e-type="widget"
-                        data-widget_type="button.default">
-                        <a class="elementor-button elementor-button-link elementor-size-sm"
-                            href="{{ config:url }}/#get-started">
-                            <span class="elementor-button-content-wrapper">
-
-                                <span class="vamtam-btn-text-wrap"><span
-                                        class="elementor-button-text vamtam-btn-text">Get a
-                                        Quote</span><span class="elementor-button-text vamtam-btn-text-abs">Get a
-                                        Quote</span></span></span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
-        <div class="elementor-element elementor-element-e067903 elementor-hidden-desktop e-flex e-con-boxed e-con e-parent"
-            data-id="e067903" data-element_type="container" data-e-type="container"
-            data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;sticky&quot;:&quot;top&quot;,&quot;sticky_on&quot;:[&quot;tablet&quot;,&quot;mobile&quot;],&quot;sticky_offset&quot;:0,&quot;sticky_effects_offset&quot;:0,&quot;sticky_anchor_link_offset&quot;:0}">
-            <div class="e-con-inner">
-                <div class="elementor-element elementor-element-9164ca5 e-con-full e-flex e-con e-child"
-                    data-id="9164ca5" data-element_type="container" data-e-type="container">
-                    <div class="elementor-element elementor-element-59ab5a5 elementor-widget elementor-widget-theme-site-logo elementor-widget-image"
-                        data-id="59ab5a5" data-element_type="widget" data-e-type="widget"
-                        data-widget_type="theme-site-logo.default">
-                        <a href="{{ config:url }}">
-                            <img width="145" height="26"
-                                src="{{ config:url }}/seed-stone/wp-content/uploads/2025/07/seed-stone-logo-header.svg"
-                                class="attachment-full size-full wp-image-220" alt="Seedstone"> </a>
-                    </div>
-                </div>
-                <div class="elementor-element elementor-element-ff615e6 e-con-full e-flex e-con e-child"
-                    data-id="ff615e6" data-element_type="container" data-e-type="container">
-                    <div class="vamtam-has-theme-widget-styles elementor-element elementor-element-dcee15b elementor-widget elementor-widget-button"
-                        data-id="dcee15b" data-element_type="widget" data-e-type="widget"
-                        data-widget_type="button.default">
-                        <a class="elementor-button elementor-button-link elementor-size-sm"
-                            href="mailto:info@seedstone.co.tz">
-                            <span class="elementor-button-content-wrapper">
-                                <span class="elementor-button-icon">
-                                    <i aria-hidden="true" class="vamtamtheme- vamtam-theme-phone"></i> </span>
-                            </span>
-                        </a>
-                    </div>
-                    <div class="vamtam-has-theme-widget-styles elementor-element elementor-element-282d771 elementor-nav-menu__align-center elementor-nav-menu--stretch elementor-nav-menu--dropdown-tablet elementor-nav-menu__text-align-aside elementor-nav-menu--toggle elementor-nav-menu--burger elementor-widget elementor-widget-nav-menu"
-                        data-id="282d771" data-element_type="widget" data-e-type="widget"
-                        data-settings="{&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;&lt;svg aria-hidden=\&quot;true\&quot; class=\&quot;fa-svg-chevron-down e-font-icon-svg e-fas-chevron-down\&quot; viewBox=\&quot;0 0 448 512\&quot; xmlns=\&quot;http:\/\/www.w3.org\/2000\/svg\&quot;&gt;&lt;path d=\&quot;M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z\&quot;&gt;&lt;\/path&gt;&lt;\/svg&gt;&quot;,&quot;library&quot;:&quot;fa-solid&quot;},&quot;full_width&quot;:&quot;stretch&quot;,&quot;layout&quot;:&quot;horizontal&quot;,&quot;toggle&quot;:&quot;burger&quot;}"
-                        data-widget_type="nav-menu.default">
-                        <nav aria-label="Menu"
-                            class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-background e--animation-fade">
-                            <ul id="menu-1-282d771" class="elementor-nav-menu" data-smartmenus-id="1787202865446084">
-                                <li
-                                    class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-4400">
-                                    <a href="#" class="elementor-item elementor-item-anchor has-submenu"
-                                        id="sm-1787202865446084-1" aria-haspopup="true"
-                                        aria-controls="sm-1787202865446084-2" aria-expanded="false">Home<span
-                                            class="sub-arrow"><svg aria-hidden="true"
-                                                class="fa-svg-chevron-down e-font-icon-svg e-fas-chevron-down"
-                                                viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z">
-                                                </path>
-                                            </svg></span></a>
-                                    <ul class="sub-menu elementor-nav-menu--dropdown" id="sm-1787202865446084-2"
-                                        role="group" aria-hidden="true" aria-labelledby="sm-1787202865446084-1"
-                                        aria-expanded="false">
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-18 current_page_item menu-item-4401">
-                                            <a href="{{ config:url }}/" aria-current="page"
-                                                class="elementor-sub-item elementor-item-active">Overview</a>
-                                        </li>
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4402">
-                                            <a href="{{ config:url }}/#about-us" class="elementor-sub-item">About Us</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4403"><a
-                                        href="{{ config:url }}/#about-us" class="elementor-item">About us</a></li>
-                                <li
-                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4404">
-                                    <a href="#" class="elementor-item elementor-item-anchor has-submenu"
-                                        id="sm-1787202865446084-3" aria-haspopup="true"
-                                        aria-controls="sm-1787202865446084-4" aria-expanded="false">Services<span
-                                            class="sub-arrow"><svg aria-hidden="true"
-                                                class="fa-svg-chevron-down e-font-icon-svg e-fas-chevron-down"
-                                                viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z">
-                                                </path>
-                                            </svg></span></a>
-                                    <ul class="sub-menu elementor-nav-menu--dropdown" id="sm-1787202865446084-4"
-                                        role="group" aria-hidden="true" aria-labelledby="sm-1787202865446084-3"
-                                        aria-expanded="false">
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4406">
-                                            <a href="{{ config:url }}/#services" class="elementor-sub-item">Direct
-                                                Sourcing</a>
-                                        </li>
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4407">
-                                            <a href="{{ config:url }}/#services"
-                                                class="elementor-sub-item">Exporting</a>
-                                        </li>
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4412">
-                                            <a href="{{ config:url }}/#services" class="elementor-sub-item">Auction
-                                                Sourcing</a>
-                                        </li>
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4411">
-                                            <a href="{{ config:url }}/#services" class="elementor-sub-item">Clearing
-                                                &amp; Forwarding</a>
-                                        </li>
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4409">
-                                            <a href="{{ config:url }}/#track-order" class="elementor-sub-item">Order
-                                                Tracking</a>
-                                        </li>
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4410">
-                                            <a href="{{ config:url }}/#crops-we-trade" class="elementor-sub-item">Crops
-                                                We Trade</a>
-                                        </li>
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4408">
-                                            <a href="{{ config:url }}/#how-it-works" class="elementor-sub-item">How It
-                                                Works</a>
-                                        </li>
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4405">
-                                            <a href="{{ config:url }}/#why-choose-us" class="elementor-sub-item">Why
-                                                Choose Us</a>
-                                        </li>
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4413">
-                                            <a href="{{ config:url }}/#services" class="elementor-sub-item">View All
-                                                Services</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4416"><a
-                                        href="{{ config:url }}/#crops-we-trade" class="elementor-item">Crops We
-                                        Trade</a></li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4414"><a
-                                        href="{{ config:url }}/#news" class="elementor-item">Blog</a></li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4415"><a
-                                        href="{{ config:url }}/#get-started" class="elementor-item">Contact us</a></li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4417"><a
-                                        href="{{ config:url }}/#get-started" class="elementor-item">Get a Quote</a></li>
-                            </ul>
-                        </nav>
-                        <div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle"
-                            aria-expanded="false" style="">
-                            <i aria-hidden="true" role="presentation"
-                                class="elementor-menu-toggle__icon--open vamtamtheme- vamtam-theme-mobile-nav"></i><i
-                                aria-hidden="true" role="presentation"
-                                class="elementor-menu-toggle__icon--close vamtamtheme- vamtam-theme-close"></i>
+                    <div class="elementor-element elementor-element-60f7eeb e-con-full e-flex e-con e-child"
+                        data-id="60f7eeb" data-element_type="container" data-e-type="container">
+                        <div class="elementor-element elementor-element-24859a0 elementor-widget elementor-widget-ekit-nav-menu animated fadeInDown"
+                            data-id="24859a0" data-element_type="widget" data-e-type="widget"
+                            data-settings='{"_animation":"fadeInDown","_animation_delay":"500"}'
+                            data-widget_type="ekit-nav-menu.default">
+                            <div class="elementor-widget-container">
+                                <nav class="ekit-wid-con ekit_menu_responsive_tablet"
+                                    data-hamburger-icon="icon icon-menu-11" data-hamburger-icon-type="icon"
+                                    data-responsive-breakpoint="1024" data-close-on-anchor="no">
+                                    <button class="elementskit-menu-hamburger elementskit-menu-toggler" type="button"
+                                        aria-label="hamburger-icon">
+                                        <svg class="ekit-menu-icon ekit-svg-icon icon-menu-11" viewBox="0 0 32 32"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M30.707 15.107h-29.415c-0.714 0-1.293 0.579-1.293 1.293s0.579 1.293 1.293 1.293h29.415c0.714 0 1.293-0.579 1.293-1.293s-0.579-1.293-1.293-1.293zM30.707 5.302h-29.415c-0.714 0-1.293 0.579-1.293 1.293s0.579 1.293 1.293 1.293h29.415c0.714 0 1.293-0.579 1.293-1.293s-0.579-1.293-1.293-1.293zM30.707 24.912h-29.415c-0.714 0-1.293 0.579-1.293 1.293s0.579 1.293 1.293 1.293h29.415c0.714 0 1.293-0.579 1.293-1.293s-0.579-1.293-1.293-1.293z">
+                                            </path>
+                                        </svg>
+                                    </button>
+                                    <div id="ekit-megamenu-menu"
+                                        class="elementskit-menu-container elementskit-menu-offcanvas-elements elementskit-navbar-nav-default ekit-nav-menu-one-page-no ekit-nav-dropdown-hover"
+                                        ekit-dom-added="yes">
+                                        <ul id="menu-menu"
+                                            class="elementskit-navbar-nav elementskit-menu-po-left submenu-click-on-icon">
+                                            {{ nav:navigation }}
+                                            {{ if no_results }}
+                                            <li class="menu-item nav-item elementskit-mobile-builder-content"
+                                                data-vertical-menu="750px">
+                                                <span class="ekit-menu-nav-link">Menu</span>
+                                            </li>
+                                            {{ else }}
+                                            <li id="menu-item-{{ index }}"
+                                                class="menu-item menu-item-type-post_type menu-item-object-page {{ if children }}menu-item-has-children{{ /if }} menu-item-{{ index }} nav-item {{ if children }}elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width{{ /if }} elementskit-mobile-builder-content {{ if is_current || is_parent }}active{{ /if }}"
+                                                data-vertical-menu="750px">
+                                                <a href="{{ url }}"
+                                                    class="ekit-menu-nav-link {{ if children }}ekit-menu-dropdown-toggle{{ /if }} {{ if is_current || is_parent }}active{{ /if }}">{{
+                                                    nav_title ?? title }}{{ if children }}<svg
+                                                        class="elementskit-submenu-indicator ekit-svg-icon icon-arrow-point-to-down"
+                                                        viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M0 8.4h32l-16 16-16-16z"></path>
+                                                    </svg>{{ /if }}</a>
+                                                {{ if children }}
+                                                <ul class="elementskit-dropdown elementskit-submenu-panel">
+                                                    {{ children }}
+                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-{{ index }} nav-item elementskit-mobile-builder-content"
+                                                        data-vertical-menu="750px">
+                                                        <a href="{{ url }}" class="dropdown-item">{{ title }}</a>
+                                                    </li>
+                                                    {{ /children }}
+                                                </ul>
+                                                {{ /if }}
+                                            </li>
+                                            {{ /if }}
+                                            {{ /nav:navigation }}
+                                        </ul>
+                                        <div class="elementskit-nav-identity-panel">
+                                            <a class="elementskit-nav-logo" href="{{ config:app:url }}" target=""
+                                                rel=""><img
+                                                    src="{{ settings:header_logo:url }}"
+                                                    title="{{ settings:site_name }}" alt="{{ settings:site_name }}"
+                                                    decoding="async" /></a><button
+                                                class="elementskit-menu-close elementskit-menu-toggler" type="button">
+                                                X
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="elementskit-menu-overlay elementskit-menu-offcanvas-elements elementskit-menu-toggler ekit-nav-menu--overlay">
+                                    </div>
+                                </nav>
+                            </div>
                         </div>
-                        <nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true"
-                            style="top: 0px; --menu-height: 0; width: 1920px; left: 0px;">
-                            <ul id="menu-2-282d771" class="elementor-nav-menu" data-smartmenus-id="17872028654497085">
-                                <li
-                                    class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-4400">
-                                    <a href="#" class="elementor-item elementor-item-anchor has-submenu" tabindex="-1"
-                                        id="sm-17872028654497085-1" aria-haspopup="true"
-                                        aria-controls="sm-17872028654497085-2" aria-expanded="false">Home<span
-                                            class="sub-arrow"><svg aria-hidden="true"
-                                                class="fa-svg-chevron-down e-font-icon-svg e-fas-chevron-down"
-                                                viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z">
-                                                </path>
-                                            </svg></span></a>
-                                    <ul class="sub-menu elementor-nav-menu--dropdown" id="sm-17872028654497085-2"
-                                        role="group" aria-hidden="true" aria-labelledby="sm-17872028654497085-1"
-                                        aria-expanded="false">
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-18 current_page_item menu-item-4401">
-                                            <a href="{{ config:url }}/" aria-current="page"
-                                                class="elementor-sub-item elementor-item-active" tabindex="-1">Small
-                                                Company</a>
-                                        </li>
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4402">
-                                            <a href="{{ config:url }}/#about-us" class="elementor-sub-item"
-                                                tabindex="-1">About Us</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4403"><a
-                                        href="{{ config:url }}/#about-us" class="elementor-item" tabindex="-1">About
-                                        us</a></li>
-                                <li
-                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4404">
-                                    <a href="#" class="elementor-item elementor-item-anchor has-submenu" tabindex="-1"
-                                        id="sm-17872028654497085-3" aria-haspopup="true"
-                                        aria-controls="sm-17872028654497085-4" aria-expanded="false">Services<span
-                                            class="sub-arrow"><svg aria-hidden="true"
-                                                class="fa-svg-chevron-down e-font-icon-svg e-fas-chevron-down"
-                                                viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z">
-                                                </path>
-                                            </svg></span></a>
-                                    <ul class="sub-menu elementor-nav-menu--dropdown" id="sm-17872028654497085-4"
-                                        role="group" aria-hidden="true" aria-labelledby="sm-17872028654497085-3"
-                                        aria-expanded="false">
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4406">
-                                            <a href="{{ config:url }}/#services" class="elementor-sub-item"
-                                                tabindex="-1">Direct Sourcing</a>
-                                        </li>
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4407">
-                                            <a href="{{ config:url }}/#services" class="elementor-sub-item"
-                                                tabindex="-1">Exporting</a>
-                                        </li>
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4412">
-                                            <a href="{{ config:url }}/#services" class="elementor-sub-item"
-                                                tabindex="-1">Auction Sourcing</a>
-                                        </li>
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4411">
-                                            <a href="{{ config:url }}/#services" class="elementor-sub-item"
-                                                tabindex="-1">Clearing &amp; Forwarding</a>
-                                        </li>
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4409">
-                                            <a href="{{ config:url }}/#track-order" class="elementor-sub-item"
-                                                tabindex="-1">Order Tracking</a>
-                                        </li>
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4410">
-                                            <a href="{{ config:url }}/#crops-we-trade" class="elementor-sub-item"
-                                                tabindex="-1">Crops We Trade</a>
-                                        </li>
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4408">
-                                            <a href="{{ config:url }}/#how-it-works" class="elementor-sub-item"
-                                                tabindex="-1">How It Works</a>
-                                        </li>
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4405">
-                                            <a href="{{ config:url }}/#why-choose-us" class="elementor-sub-item"
-                                                tabindex="-1">Why Choose Us</a>
-                                        </li>
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4413">
-                                            <a href="{{ config:url }}/#services" class="elementor-sub-item"
-                                                tabindex="-1">View All Services</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4416"><a
-                                        href="{{ config:url }}/#crops-we-trade" class="elementor-item"
-                                        tabindex="-1">Crops We Trade</a></li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4414"><a
-                                        href="{{ config:url }}/#news" class="elementor-item" tabindex="-1">Blog</a></li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4415"><a
-                                        href="{{ config:url }}/#get-started" class="elementor-item"
-                                        tabindex="-1">Contact us</a></li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4417"><a
-                                        href="{{ config:url }}/#get-started" class="elementor-item" tabindex="-1">Get a
-                                        Quote</a></li>
-                            </ul>
-                        </nav>
+                    </div>
+                    <div class="elementor-element elementor-element-15f18f3 e-con-full elementor-hidden-mobile e-flex e-con e-child"
+                        data-id="15f18f3" data-element_type="container" data-e-type="container">
+                        <div class="elementor-element elementor-element-30b8e70 elementor-widget elementor-widget-button animated fadeInDown"
+                            data-id="30b8e70" data-element_type="widget" data-e-type="widget"
+                            data-settings='{"_animation":"fadeInDown","_animation_delay":"750"}'
+                            data-widget_type="button.default">
+                            <a class="elementor-button elementor-button-link elementor-size-sm"
+                                href="{{ header:cta_button_url }}">
+                                <span class="elementor-button-content-wrapper">
+                                    <span class="elementor-button-text">{{ header:cta_button_text }}</span>
+                                </span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
-    </header>
+    </div>
 </div>

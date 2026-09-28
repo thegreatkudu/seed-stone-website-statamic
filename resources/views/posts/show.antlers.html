@@ -1,31 +1,53 @@
 {{ section:page_head_tags }}
 
-<!-- main css -->
-<link rel="stylesheet" href="/css/leoleo.css">
-<!-- fonts  -->
-<link rel="stylesheet" href="/assets/sandc_fonts/stylesheet.css">
-<link rel="stylesheet" href="/assets/tragez_fonts/stylesheet.css">
-<!-- font-awesome stylesheet -->
-<link rel="stylesheet" href="/fontawesome/css/all.css">
-<!-- sweetalert stylesheet  -->
-<link rel="stylesheet" href="/css/sweetalert2.min.css">
-<!-- sweetalert stylesheet  -->
-<link rel="stylesheet" href="/css/owl.carousel.min.css">
-<!-- swiper links -->
-<link rel="stylesheet" href="/css/swiper-bundle.min.css">
+<link rel="stylesheet" id="ekit-social-share-css"
+		href="{{ config:url }}/seed-stone/wp-content/plugins/elementskit-lite/widgets/init/assets/css/social-share.css?ver=4.0.2"
+		media="all" />
+	<link rel="stylesheet" id="elementor-post-642-css"
+		href="{{ config:url }}/seed-stone/wp-content/uploads/sites/11/elementor/css/post-642.css?ver=1787795892"
+		media="all" />
+	<link rel="stylesheet" id="metform-style-css"
+		href="{{ config:url }}/seed-stone/wp-content/plugins/metform/public/assets/css/style.css?ver=4.2.0"
+		media="all" />
+	<link rel="stylesheet" id="ekit-button-css"
+		href="{{ config:url }}/seed-stone/wp-content/plugins/elementskit-lite/widgets/init/assets/css/button.css?ver=4.0.2"
+		media="all" />
 
-<link rel='stylesheet' id='elementor-post-543-css'
-    href='{{ config:app:url }}/walley/wp-content/uploads/sites/2/elementor/css/post-543.css?ver=1767244977'
-    media='all' />
-
-<link rel="stylesheet" id="siteground-optimizer-combined-css-e64ce425848a5949b7d96dc18091db58"
-    href="/wp-content/uploads/siteground-optimizer-assets/siteground-optimizer-combined-css-e64ce425848a5949b7d96dc18091db58.css"
+<link rel="stylesheet" id="ekit-blog-posts-css"
+    href="{{ config:url }}/seed-stone/wp-content/plugins/elementskit-lite/widgets/init/assets/css/blog-posts.css?ver=4.0.2"
     media="all" />
-<link rel="preload"
-    href="/wp-content/uploads/siteground-optimizer-assets/siteground-optimizer-combined-css-e64ce425848a5949b7d96dc18091db58.css"
-    as="style">
+<link rel="stylesheet" id="elementor-post-29-css"
+    href="{{ config:url }}/seed-stone/wp-content/uploads/sites/11/elementor/css/post-29.css?ver=1787795892"
+    media="all" />
 
 {{ /section:page_head_tags }}
+
+{{# ============================================================ #}}
+{{# ARTICLE SCHEMA — JSON-LD per post (indexed posts only) #}}
+{{# ============================================================ #}}
+{{ unless noindex }}
+{{ section:head_css }}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "{{ title }}",
+    "description": "{{ post_introduction_part }}{{ text | strip_tags | truncate:160 }}{{ /post_introduction_part }}",
+    "datePublished": "{{ date format="Y-m-d" }}",
+    "dateModified": "{{ last_modified format="Y-m-d" }}",
+    "author": {
+        "@type": "Person",
+        "name": "Seedstone"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "@id": "{{ config:app:url }}/#organization"
+    },
+    "mainEntityOfPage": "{{ config:app:url }}{{ uri }}"
+}
+</script>
+{{ /section:head_css }}
+{{ /unless }}
 
 <!-- page-head-tags -->
 
@@ -33,534 +55,367 @@
 {{# BODY CLASS #}}
 {{# ============================================================ #}}
 {{ section:body_class }}
-wp-singular post-template-default single single-post postid-759 single-format-standard wp-theme-finpath
-wp-child-theme-finpath-child theme-finpath underline-link-effect keydesign-elementor-library woocommerce-no-js
-blog-single-layout-classic elementor-default elementor-kit-12
-wp-singular envato_tk_templates-template envato_tk_templates-template-elementor_header_footer single
-single-envato_tk_templates postid-543 wp-embed-responsive wp-theme-hello-elementor hello-elementor-default
-elementor-default elementor-template-full-width elementor-kit-6 elementor-page elementor-page-543
+wp-singular envato_tk_templates-template-default single single-envato_tk_templates postid-29 wp-embed-responsive wp-theme-hello-elementor hello-elementor-default elementor-default elementor-kit-3 elementor-page elementor-page-29 e--ua-firefox
+data-elementor-device-mode="desktop"
 {{ categories }}category-{{ slug }} {{ /categories }}
 {{ tags }}tag-{{ slug }} {{ /tags }}
 {{ /section:body_class }}
 
-<a class="skip-link screen-reader-text" href="#content">Skip to content </a>
+<main id="content"
+    class="site-main post-29 envato_tk_templates type-envato_tk_templates status-publish has-post-thumbnail hentry">
+    <div class="page-content">
+        <div data-elementor-type="wp-post" data-elementor-id="29" class="elementor elementor-29">
+            <div class="elementor-element elementor-element-6a49d8f e-con-full e-flex e-con e-parent e-lazyloaded"
+                data-id="6a49d8f" style="background-image: url('{{ settings:page_banner_image:url }}');" data-element_type="container" data-e-type="container"
+                data-settings='{"background_background":"classic"}'>
+                <div class="elementor-element elementor-element-f532fc4 e-con-full e-flex e-con e-child"
+                    data-id="f532fc4" data-element_type="container" data-e-type="container">
+                    <div class="elementor-element elementor-element-e481ad3 elementor-widget elementor-widget-heading animated fadeInUp"
+                        data-id="e481ad3" data-element_type="widget" data-e-type="widget"
+                        data-settings='{"_animation":"fadeInUp"}' data-widget_type="heading.default">
+                        <h1 class="elementor-heading-title elementor-size-default">
+                            {{ title }}
+                        </h1>
+                    </div>
+                </div>
+            </div>
+            <div class="elementor-element elementor-element-46ba594 e-flex e-con-boxed e-con e-parent e-lazyloaded"
+                data-id="46ba594" data-element_type="container" data-e-type="container">
+                <div class="e-con-inner">
+                    <div class="elementor-element elementor-element-01b30cb e-con-full e-flex e-con e-child"
+                        data-id="01b30cb" data-element_type="container" data-e-type="container">
+                        <div class="elementor-element elementor-element-759a313 e-con-full e-flex e-con e-child"
+                            data-id="759a313" data-element_type="container" data-e-type="container">
+                            <div class="elementor-element elementor-element-7363952 elementor-widget elementor-widget-heading animated fadeInUp"
+                                data-id="7363952" data-element_type="widget" data-e-type="widget"
+                                data-settings='{"_animation":"fadeInUp"}' data-widget_type="heading.default">
+                                <h3 class="elementor-heading-title elementor-size-default">
+                                    {{ if categories }}{{ categories }}{{ title }}{{ unless last }}, {{ /unless }}{{ /categories }}{{ /if }}
+                                </h3>
+                            </div>
+                            <div class="elementor-element elementor-element-9f7fff2 elementor-widget elementor-widget-text-editor animated fadeInUp"
+                                data-id="9f7fff2" data-element_type="widget" data-e-type="widget"
+                                data-settings='{"_animation":"fadeInUp"}' data-widget_type="text-editor.default">
+                                {{ post_introduction_part }}{{ text }}{{ /post_introduction_part }}
+                            </div>
+                            <div class="elementor-element elementor-element-2761f49 elementor-widget elementor-widget-heading animated fadeInUp"
+                                data-id="2761f49" data-element_type="widget" data-e-type="widget"
+                                data-settings='{"_animation":"fadeInUp"}' data-widget_type="heading.default">
+                                <h3 class="elementor-heading-title elementor-size-default">
+                                    {{ date format="F j, Y" }}
+                                </h3>
+                            </div>
+                            <div class="elementor-element elementor-element-6a0d781 e-grid e-con-full e-con e-child"
+                                data-id="6a0d781" data-element_type="container" data-e-type="container">
+                                <div class="elementor-element elementor-element-b8f75f5 elementor-widget elementor-widget-text-editor animated fadeInUp"
+                                    data-id="b8f75f5" data-element_type="widget" data-e-type="widget"
+                                    data-settings='{"_animation":"fadeInUp"}' data-widget_type="text-editor.default">
+                                    <blockquote>{{ post_blockquote_part }}</blockquote>
+                                </div>
+                            </div>
+                            <div class="elementor-element elementor-element-2295f4d elementor-widget__width-inherit elementor-widget elementor-widget-image animated fadeInUp"
+                                data-id="2295f4d" data-element_type="widget" data-e-type="widget"
+                                data-settings='{"_animation":"fadeInUp"}' data-widget_type="image.default">
+                                {{ if featured_image }}
+                                {{ glide:featured_image width="1920" }}
+                                <img fetchpriority="high" decoding="async"
+                                    src="{{ url }}"
+                                    class="attachment-full size-full wp-image-153" alt="{{ featured_image:alt ?? title }}" />
+                                {{ /glide:featured_image }}
+                                {{ /if }}
+                            </div>
+                            <div class="elementor-element elementor-element-dde9c5e elementor-widget elementor-widget-text-editor animated fadeInUp"
+                                data-id="dde9c5e" data-element_type="widget" data-e-type="widget"
+                                data-settings='{"_animation":"fadeInUp"}' data-widget_type="text-editor.default">
+                                <p>
+                                    {{ post_main_part }}{{ text }}{{ /post_main_part }}
+                                </p>
+                            </div>
+                            <div class="elementor-element elementor-element-3df5212 elementor-widget elementor-widget-heading animated fadeInUp"
+                                data-id="3df5212" data-element_type="widget" data-e-type="widget"
+                                data-settings='{"_animation":"fadeInUp"}' data-widget_type="heading.default">
+                                <h3 class="elementor-heading-title elementor-size-default">
+                                    {{ post_conclusion_part }}{{ text | regexReplace('^<h4[^>]*>(.*)</h4>.*', '\1') }}{{ /post_conclusion_part }}
+                                </h3>
+                            </div>
+                            <div class="elementor-element elementor-element-201cc07 elementor-widget elementor-widget-text-editor animated fadeInUp"
+                                data-id="201cc07" data-element_type="widget" data-e-type="widget"
+                                data-settings='{"_animation":"fadeInUp"}' data-widget_type="text-editor.default">
+                                <p>
+                                    {{ post_conclusion_part }}{{ text }}{{ /post_conclusion_part }}
+                                </p>
+                            </div>
+                            <div class="elementor-element elementor-element-14dcd33 elementor-widget-divider--view-line elementor-widget elementor-widget-divider animated fadeInUp"
+                                data-id="14dcd33" data-element_type="widget" data-e-type="widget"
+                                data-settings='{"_animation":"fadeInUp"}' data-widget_type="divider.default">
+                                <div class="elementor-divider">
+                                    <span class="elementor-divider-separator">
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="elementor-element elementor-element-15eb225 e-con-full e-flex e-con e-child"
+                                data-id="15eb225" data-element_type="container" data-e-type="container">
+                                <div class="elementor-element elementor-element-639d68e elementor-widget elementor-widget-heading animated fadeInUp"
+                                    data-id="639d68e" data-element_type="widget" data-e-type="widget"
+                                    data-settings='{"_animation":"fadeInUp"}' data-widget_type="heading.default">
+                                    <div class="elementor-heading-title elementor-size-default">{{ detail_pages:share_label }}</div>
+                                </div>
+                                <div class="elementor-element elementor-element-3d451e1 elementor-widget elementor-widget-elementskit-social-share animated fadeInUp"
+                                    data-id="3d451e1" data-element_type="widget" data-e-type="widget"
+                                    data-settings='{"_animation":"fadeInUp","_animation_delay":"250"}'
+                                    data-widget_type="elementskit-social-share.default">
+                                    <div class="elementor-widget-container">
+                                        <div class="ekit-wid-con">
+                                            <ul class="ekit_socialshare">
+                                                <li class="elementor-repeater-item-aae91b6" data-social="facebook">
+                                                    <div class="facebook">
+                                                        <button type="button" aria-label="Share on Facebook">
+                                                            <svg aria-hidden="true"
+                                                                class="e-font-icon-svg e-fab-facebook"
+                                                                viewBox="0 0 512 512"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path
+                                                                    d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z">
+                                                                </path>
+                                                            </svg>
+                                                            Facebook
+                                                        </button>
+                                                    </div>
+                                                </li>
+                                                <li class="elementor-repeater-item-e2f232b" data-social="twitter">
+                                                    <div class="twitter">
+                                                        <button type="button" aria-label="Share on Twitter">
+                                                            <svg aria-hidden="true"
+                                                                class="e-font-icon-svg e-fab-x-twitter"
+                                                                viewBox="0 0 512 512"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path
+                                                                    d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z">
+                                                                </path>
+                                                            </svg>
+                                                            Twitter
+                                                        </button>
+                                                    </div>
+                                                </li>
+                                                <li class="elementor-repeater-item-f5b0194" data-social="linkedin">
+                                                    <div class="linkedin">
+                                                        <button type="button" aria-label="Share on Linkedin">
+                                                            <svg aria-hidden="true"
+                                                                class="e-font-icon-svg e-fab-linkedin"
+                                                                viewBox="0 0 448 512"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path
+                                                                    d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z">
+                                                                </path>
+                                                            </svg>
+                                                            Linkedin
+                                                        </button>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="elementor-element elementor-element-3233ee5 e-con-full e-flex e-con e-child animated fadeInUp"
+                                data-id="3233ee5" data-element_type="container" data-e-type="container"
+                                data-settings='{"background_background":"classic","animation":"fadeInUp"}'>
+                                <div class="elementor-element elementor-element-5c95d1b elementor-widget elementor-widget-heading"
+                                    data-id="5c95d1b" data-element_type="widget" data-e-type="widget"
+                                    data-widget_type="heading.default">
+                                    <h3 class="elementor-heading-title elementor-size-default">{{ detail_pages:newsletter_heading }}</h3>
+                                </div>
+                                <div class="elementor-element elementor-element-6a10291 elementor-widget__width-initial elementor-widget elementor-widget-text-editor"
+                                    data-id="6a10291" data-element_type="widget" data-e-type="widget"
+                                    data-widget_type="text-editor.default">
+                                    <p>{{ detail_pages:newsletter_text }}</p>
+                                </div>
+                                <div class="elementor-element elementor-element-5aaf2ad elementor-widget__width-initial elementor-widget elementor-widget-metform"
+                                    data-id="5aaf2ad" data-element_type="widget" data-e-type="widget"
+                                    data-widget_type="metform.default">
+                                    <div id="mf-response-props-id-642" data-previous-steps-style=""
+                                        data-editswitchopen="" data-response_type="alert"
+                                        data-erroricon="fas fa-exclamation-triangle" data-successicon="fas fa-check"
+                                        data-messageposition="top" class="mf-scroll-top-no">
+                                        <div class="formpicker_warper formpicker_warper_editable"
+                                            data-metform-formpicker-key="642">
+                                            <div class="mf-widget-container">
+                                                <div id="metform-wrap-5aaf2ad-642" class="mf-form-wrapper"
+                                                    data-form-id="642"
+                                                    data-action="{{ config:url }}/seed-stone/wp-json/metform/v1/entries/insert/642"
+                                                    data-wp-nonce="716abd2513" data-form-nonce="815e35f23b"
+                                                    data-quiz-summery="false" data-save-progress="false"
+                                                    data-form-type="general-form" data-stop-vertical-effect=""
+                                                    data-payment-submit-before="0">
+                                                    {{ form:create in="newsletter" class="metform-form-content" attr:id="newsletter-form" }}
+                                                        {{ partial:partials/form_response success_message="{detail_pages:newsletter_success_message}" }}
+                                                        <div style="display:none" aria-hidden="true"><input type="text" name="website" tabindex="-1" autocomplete="off"></div>
+                                                        <div class="metform-form-main-wrapper">
+                                                            <div data-elementor-type="wp-post" data-elementor-id="642"
+                                                                class="elementor elementor-642">
+                                                                <div class="elementor-element elementor-element-79bbd78 e-flex e-con-boxed e-con e-parent"
+                                                                    data-id="79bbd78" data-element_type="container"
+                                                                    data-e-type="container">
+                                                                    <div class="e-con-inner">
+                                                                        <div class="elementor-element elementor-element-11204e3 elementor-widget__width-inherit elementor-widget elementor-widget-mf-email"
+                                                                            data-id="11204e3" data-element_type="widget"
+                                                                            data-e-type="widget"
+                                                                            data-settings='{"mf_input_name":"mf-email"}'
+                                                                            data-widget_type="mf-email.default">
+                                                                            <div class="mf-input-wrapper">
+                                                                                <input type="email" class="mf-input"
+                                                                                    id="mf-input-email-11204e3"
+                                                                                    name="email" required
+                                                                                    placeholder="{{ detail_pages:newsletter_placeholder }}"
+                                                                                    aria-invalid="false" value="{{ old:email }}" />
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="elementor-element elementor-element-2a781c0 mf-btn--mobile-justify mf-btn--center elementor-widget elementor-widget-mf-button"
+                                                                            data-id="2a781c0" data-element_type="widget"
+                                                                            data-e-type="widget"
+                                                                            data-widget_type="mf-button.default">
+                                                                            <div class="mf-btn-wraper"
+                                                                                data-mf-form-conditional-logic-requirement="">
+                                                                                <button type="submit"
+                                                                                    class="metform-btn metform-submit-btn"
+                                                                                    id="">
+                                                                                    <span>{{ detail_pages:newsletter_button_text }}</span>
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    {{ /form:create }}
+                                                </div>
 
-
-{{# ============================================================ #}}
-{{# SITE CONTENT WRAPPER #}}
-{{# ============================================================ #}}
-<div id="content" class="site-content">
-
-    {{# ============================================================ #}}
-    {{# PAGE HEADER #}}
-    {{# ============================================================ #}}
-    <div data-elementor-type="wp-post" data-elementor-id="543" class="elementor elementor-543">
-
-        <div class="elementor-element elementor-element-126e9922 e-flex e-con-boxed e-con e-parent" data-id="126e9922"
-            data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-            <div class="e-con-inner">
-                <div class="elementor-element elementor-element-19305dbc e-con-full e-flex e-con e-child"
-                    data-id="19305dbc" data-element_type="container">
-                    <div class="elementor-element elementor-element-10cfd999 elementor-invisible elementor-widget elementor-widget-heading"
-                        data-id="10cfd999" data-element_type="widget"
-                        data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}"
-                        data-widget_type="heading.default">
-                        <div class="elementor-widget-container">
-                            <h1 class="elementor-heading-title elementor-size-default">{{ title }}</h1>
+                                                <!----------------------------- 
+                                                    * controls_data : find the the props passed indie of data attribute
+                                                    * props.SubmitResponseMarkup : contains the markup of error or success message
+                                                    * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
+                                                --------------------------- -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="elementor-element elementor-element-4311a6b elementor-widget elementor-widget-heading"
+                                    data-id="4311a6b" data-element_type="widget" data-e-type="widget"
+                                    data-widget_type="heading.default">
+                                    <div class="elementor-heading-title elementor-size-default">{{ detail_pages:newsletter_note }}</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="elementor-element elementor-element-c3196e6 elementor-invisible elementor-widget elementor-widget-text-editor"
-                        data-id="c3196e6" data-element_type="widget"
-                        data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}"
-                        data-widget_type="text-editor.default">
-                        <div class="elementor-widget-container">
-                            <p>Smart agriculture stories, farming tips, and the latest updates from Leoleo GulioSmart — empowering farmers across Africa.</p>
+                </div>
+            </div>
+            <div class="elementor-element elementor-element-168b433 e-flex e-con-boxed e-con e-parent e-lazyloaded"
+                data-id="168b433" data-element_type="container" data-e-type="container"
+                data-settings='{"background_background":"classic"}'>
+                <div class="e-con-inner">
+                    <div class="elementor-element elementor-element-83200a5 e-con-full e-flex e-con e-child"
+                        data-id="83200a5" data-element_type="container" data-e-type="container">
+                        <div class="elementor-element elementor-element-747aba4 elementor-widget__width-inherit elementor-widget elementor-widget-heading animated fadeInUp"
+                            data-id="747aba4" data-element_type="widget" data-e-type="widget"
+                            data-settings='{"_animation":"fadeInUp"}' data-widget_type="heading.default">
+                            <div class="elementor-heading-title elementor-size-default">{{ detail_pages:related_eyebrow }}</div>
+                        </div>
+                        <div class="elementor-element elementor-element-51597b4 elementor-widget__width-initial elementor-widget elementor-widget-heading animated fadeInUp"
+                            data-id="51597b4" data-element_type="widget" data-e-type="widget"
+                            data-settings='{"_animation":"fadeInUp"}' data-widget_type="heading.default">
+                            <h2 class="elementor-heading-title elementor-size-default">{{ detail_pages:related_heading }}</h2>
+                        </div>
+                        <div class="elementor-element elementor-element-1cbea4c elementor-widget elementor-widget-button animated fadeInUp"
+                            data-id="1cbea4c" data-element_type="widget" data-e-type="widget"
+                            data-settings='{"_animation":"fadeInUp","_animation_delay":"250"}'
+                            data-widget_type="button.default">
+                            <a class="elementor-button elementor-button-link elementor-size-sm" href="{{ detail_pages:related_button_url }}">
+                                <span class="elementor-button-content-wrapper">
+                                    <span class="elementor-button-text">{{ detail_pages:related_button_text }}</span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="elementor-element elementor-element-3f51a1b e-con-full e-flex e-con e-child"
+                        data-id="3f51a1b" data-element_type="container" data-e-type="container">
+                        <div class="elementor-element elementor-element-db110a9 ekit-blog-posts--bg-hover bg-hover-classic elementor-widget elementor-widget-elementskit-blog-posts animated fadeInUp"
+                            data-id="db110a9" data-element_type="widget" data-e-type="widget"
+                            data-settings='{"_animation":"fadeInUp"}' data-widget_type="elementskit-blog-posts.default">
+                            <div class="ekit-wid-con">
+                                <div id="post-items--db110a9"
+                                    class="ekit-row post-items ekit-blog-post-masonry-inactive">
+                                    {{ collection:posts author:is="3" sort="date:desc" limit="3" :filter:id:not="id" }}
+                                    <div class="post-item ekit-col-4">
+                                        <div class="elementskit-post-image-card">
+                                            <div class="elementskit-entry-header">
+                                                <a href="{{ url }}"
+                                                    class="elementskit-entry-thumb">
+                                                    {{ if featured_image }}
+                                                    {{ glide:featured_image width="620" height="460" fit="crop" }}
+                                                    <img decoding="async"
+                                                        src="{{ url }}"
+                                                        alt="{{ featured_image:alt ?? title }}" />
+                                                    {{ /glide:featured_image }}
+                                                    {{ /if }}
+                                                </a><!-- .elementskit-entry-thumb END -->
+
+                                                {{ if categories }}
+                                                <div class="elementskit-meta-categories">
+                                                    <span class="elementskit-meta-wraper">
+                                                        {{ categories }}
+                                                        <span><a href="{{ url }}"
+                                                                rel="category tag">{{ title }}</a></span>
+                                                        {{ /categories }}
+                                                    </span>
+                                                </div>
+                                                {{ /if }}
+                                            </div>
+                                            <!-- .elementskit-entry-header END -->
+
+                                            <div class="elementskit-post-body">
+                                                <div class="post-meta-list">
+                                                    <span class="meta-date">
+                                                        <svg aria-hidden="true"
+                                                            class="e-font-icon-svg e-fas-calendar-alt"
+                                                            viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M0 464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V192H0v272zm320-196c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zM192 268c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zM64 268c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12H76c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12H76c-6.6 0-12-5.4-12-12v-40zM400 64h-48V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H160V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H48C21.5 64 0 85.5 0 112v48h448v-48c0-26.5-21.5-48-48-48z">
+                                                            </path>
+                                                        </svg>
+                                                        <span class="meta-date-text">
+                                                            {{ date format="M j, Y" }}
+                                                        </span>
+                                                    </span>
+                                                </div>
+
+                                                <h2 class="entry-title">
+                                                    <a href="{{ url }}">
+                                                        {{ title }}
+                                                    </a>
+                                                </h2>
+                                                {{ if post_introduction_part }}
+                                                <p>
+                                                    {{ post_introduction_part }}
+                                                    {{ if type == "text" }}
+                                                        {{ text | strip_tags | truncate:120 }}
+                                                    {{ /if }}
+                                                    {{ /post_introduction_part }}
+                                                </p>
+                                                {{ /if }}
+                                            </div>
+                                            <!-- .elementskit-post-body END -->
+                                        </div>
+                                    </div>
+                                    {{ /collection:posts }}
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
-
-    {{# ============================================================ #}}
-    {{# MAIN CONTENT + SIDEBAR WRAPPER #}}
-    {{# ============================================================ #}}
-
-    <div class="keydesign-container e-con with-sidebar sidebar-right sticky-sidebar">
-
-
-        {{# ============================================================ #}}
-        {{# PRIMARY — MAIN ARTICLE #}}
-        {{# ============================================================ #}}
-        <div id="primary" class="content-area" data-attr="single-post">
-            <main id="main" class="site-main" role="main">
-
-                <article id="post-759" class="article-content article-single post-759 post type-post status-publish format-standard has-post-thumbnail hentry
-                    {{ categories }}category-{{ slug }} {{ /categories }}
-                    {{ tags }}tag-{{ slug }} {{ /tags }}">
-
-
-                    {{# ============================================================ #}}
-                    {{# CATEGORIES META #}}
-                    {{# ============================================================ #}}
-                    {{ if categories }}
-                    <div class="category-meta">
-                        <span class="blog-label">
-                            {{ categories }}
-                            <a href="{{ url }}" rel="category tag">{{ title }}</a>
-                            {{ unless last }}, {{ /unless }}
-                            {{ /categories }}
-                        </span>
-                    </div>
-                    {{ /if }}
-
-
-                    {{# ============================================================ #}}
-                    {{# SOCIAL SHARING #}}
-                    {{# ============================================================ #}}
-                    <div class="post-share">
-                        <div class="post-share-inner">
-                            <div class="social-sharing-list">
-
-                                {{# Facebook #}}
-                                <div class="social-facebook" data-network="facebook">
-                                    <a target="_blank" rel="noopener noreferrer"
-                                        href="//www.facebook.com/sharer/sharer.php?u={{ config:app:url }}{{ url }}"
-                                        title="Share on Facebook">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                                            <path
-                                                d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z" />
-                                        </svg>
-                                    </a>
-                                </div>
-
-                                {{# X / Twitter #}}
-                                <div class="social-x" data-network="twitter">
-                                    <a target="_blank" rel="noopener noreferrer"
-                                        href="//x.com/intent/post?url={{ config:app:url }}{{ url }}" title="Share on X">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                            <path
-                                                d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
-                                        </svg>
-                                    </a>
-                                </div>
-
-                                {{# Pinterest #}}
-                                <div class="social-pinterest" data-network="pinterest">
-                                    <a target="_blank" rel="noopener noreferrer"
-                                        href="https://pinterest.com/pin/create/link/?url={{ config:app:url }}{{ url }}"
-                                        title="Share on Pinterest">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                                            <path
-                                                d="M204 6.5C101.4 6.5 0 74.9 0 185.6 0 256 39.6 296 63.6 296c9.9 0 15.6-27.6 15.6-35.4 0-9.3-23.7-29.1-23.7-67.8 0-80.4 61.2-137.4 140.4-137.4 68.1 0 118.5 38.7 118.5 109.8 0 53.1-21.3 152.7-90.3 152.7-24.9 0-46.2-18-46.2-43.8 0-37.8 26.4-74.4 26.4-113.4 0-66.2-93.9-54.2-93.9 25.8 0 16.8 2.1 35.4 9.6 50.7-13.8 59.4-42 147.9-42 209.1 0 18.9 2.7 37.5 4.5 56.4 3.4 3.8 1.7 3.4 6.9 1.5 50.4-69 48.6-82.5 71.4-172.8 12.3 23.4 44.1 36 69.3 36 106.2 0 153.9-103.5 153.9-196.8C384 71.3 298.2 6.5 204 6.5z" />
-                                        </svg>
-                                    </a>
-                                </div>
-
-                                {{# LinkedIn #}}
-                                <div class="social-linkedin" data-network="linkedin">
-                                    <a target="_blank" rel="noopener noreferrer"
-                                        href="https://www.linkedin.com/shareArticle?mini=true&url={{ config:app:url }}{{ url }}"
-                                        title="Share on LinkedIn">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                            <path
-                                                d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z" />
-                                        </svg>
-                                    </a>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    {{# ============================================================ #}}
-                    {{# POST TITLE #}}
-                    {{# ============================================================ #}}
-                    <h2 class="single-post-title">{{ title }}</h2>
-
-
-                    {{# ============================================================ #}}
-                    {{# POST META — date, author, comment count #}}
-                    {{# comment-count span added — was missing from previous version #}}
-                    {{# ============================================================ #}}
-                    <div class="entry-meta">
-                        <span class="published">
-                            {{ date format="F j, Y" }}
-                        </span>
-                        {{ if author }}
-                        <span class="author">
-                            <a href="/posts/author/{{ author:name | slugify }}" title="Posts by {{ author:name }}"
-                                rel="author">
-                                {{ author:name }}
-                            </a>
-                        </span>
-                        {{ /if }}
-                        {{# Comment count — was present in WP reference but missing #}}
-                        <span class="comment-count">
-                            <a href="{{ url }}#comments">
-                                {{ entries_count ?? '0' }} comment{{ entries_count == 1 ?= '' }}{{ entries_count !=
-                                1 ?= 's' }}
-                            </a>
-                        </span>
-                    </div>
-
-
-                    {{# ============================================================ #}}
-                    {{# FEATURED IMAGE #}}
-                    {{# Added: decoding="async", srcset, sizes — missing before #}}
-                    {{# ============================================================ #}}
-                    {{ if featured_image }}
-                    <div class="entry-image">
-                        {{ glide:featured_image width="850" height="550" fit="crop" }}
-                        <img src="{{ url }}" width="{{ width }}" height="{{ height }}"
-                            alt="{{ featured_image:alt ?? title }}" class="attachment-large size-large wp-post-image"
-                            decoding="async" loading="eager" srcset="
-                                        {{ glide:featured_image width='850' height='550' fit='crop' }}{{ url }}{{ /glide:featured_image }} 850w,
-                                        {{ glide:featured_image width='710' height='459' fit='crop' }}{{ url }}{{ /glide:featured_image }} 710w,
-                                        {{ glide:featured_image width='768' height='497' fit='crop' }}{{ url }}{{ /glide:featured_image }} 768w,
-                                        {{ glide:featured_image width='300' height='194' fit='crop' }}{{ url }}{{ /glide:featured_image }} 300w,
-                                        {{ glide:featured_image width='600' height='388' fit='crop' }}{{ url }}{{ /glide:featured_image }} 600w
-                                    " sizes="(max-width: 850px) 100vw, 850px" />
-                        {{ /glide:featured_image }}
-                    </div>
-                    {{ /if }}
-
-
-                    {{# ============================================================ #}}
-                    {{# POST CONTENT #}}
-                    {{# Bard fields need | bardtext modifier OR the set loop #}}
-                    {{# post_content fieldset imported with prefix: post #}}
-                    {{# so handles are: post_introduction_part etc. #}}
-                    {{# ============================================================ #}}
-                    <div class="entry-content">
-
-                        {{# — Introduction Part — #}}
-                        {{# Bard field: loops through blocks, text blocks use |bardtext #}}
-                        {{ if post_introduction_part }}
-                        <!-- <div class="post-introduction"> -->
-                        {{ post_introduction_part }}
-                        {{ if type == "text" }}
-                        {{ text }}
-                        {{ else }}
-                        {{ partial src="sets/{type}" }}
-                        {{ /if }}
-                        {{ /post_introduction_part }}
-                        <!-- </div> -->
-                        {{ /if }}
-
-                        {{# — Blockquote Part — #}}
-                        {{# This is a textarea field so renders directly as a string #}}
-                        {{ if post_blockquote_part }}
-                        <blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
-                            <p>{{ post_blockquote_part }}</p>
-                        </blockquote>
-                        {{ /if }}
-
-                        {{# — Main Content Part — #}}
-                        {{ if post_main_part }}
-                        <!-- <div class="post-main"> -->
-                        {{ post_main_part }}
-                        {{ if type == "text" }}
-                        {{ text }}
-                        {{ else }}
-                        {{ partial src="sets/{type}" }}
-                        {{ /if }}
-                        {{ /post_main_part }}
-                        <!-- </div> -->
-                        {{ /if }}
-
-                        {{# — Conclusion Part — #}}
-                        {{ if post_conclusion_part }}
-                        <!-- <div class="post-conclusion"> -->
-                        {{ post_conclusion_part }}
-                        {{ if type == "text" }}
-                        {{ text }}
-                        {{ else }}
-                        {{ partial src="sets/{type}" }}
-                        {{ /if }}
-                        {{ /post_conclusion_part }}
-                        <!-- </div> -->
-                        {{ /if }}
-
-                    </div>
-
-                    {{# ============================================================ #}}
-                    {{# ENTRY FOOTER — TAGS #}}
-                    {{# ============================================================ #}}
-                    {{ if tags }}
-                    <div class="entry-footer">
-                        <ul class="tags">
-                            {{ tags }}
-                            <li>
-                                <a href="{{ url }}" rel="tag">{{ title }}</a>
-                            </li>
-                            {{ /tags }}
-                        </ul>
-                    </div>
-                    {{ /if }}
-
-
-                    {{# ============================================================ #}}
-                    {{# AUTHOR BOX #}}
-                    {{# ============================================================ #}}
-                    {{ if author }}
-                    <div class="author-box-wrapper">
-                        <div class="author-avatar">
-                            {{ if author:avatar }}
-                            <img src="{{ author:avatar }}" alt="{{ author:name }}" class="avatar avatar-120 photo"
-                                height="120" width="120" />
-                            {{ else }}
-                            <img src="/assets/images/thumbnail.png" alt="{{ author:name }}"
-                                class="avatar avatar-120 photo" height="120" width="120" />
-                            {{ /if }}
-                        </div>
-                        <div class="author-desc-wrapper">
-                            <div class="author-name">
-                                <h5>
-                                    <a href="/posts/author/{{ author:name | slugify }}"
-                                        title="Posts by {{ author:name }}" rel="author">
-                                        {{ author:name }}
-                                    </a>
-                                </h5>
-                            </div>
-                            {{ if author:bio }}
-                            <div class="author-description">
-                                <p>{{ author:bio }}</p>
-                            </div>
-                            {{ /if }}
-                        </div>
-                    </div>
-                    {{ /if }}
-
-
-                    {{# ============================================================ #}}
-                    {{# POST NAVIGATION — prev / next #}}
-                    {{# ============================================================ #}}
-                    <nav class="navigation post-navigation" aria-label="Posts">
-                        <h2 class="screen-reader-text">Post navigation</h2>
-                        <div class="nav-links">
-                            {{ if prev_post }}
-                            <div class="nav-previous">
-                                <a href="{{ prev_post:url }}" rel="prev">
-                                    &larr; {{ prev_post:title }}
-                                </a>
-                            </div>
-                            {{ /if }}
-                            {{ if next_post }}
-                            <div class="nav-next">
-                                <a href="{{ next_post:url }}" rel="next">
-                                    {{ next_post:title }} &rarr;
-                                </a>
-                            </div>
-                            {{ /if }}
-                        </div>
-                    </nav>
-
-                    <!-- comments -->
-
-                </article>
-            </main>
-            {{# /#main #}}
-        </div>
-        {{# /#primary #}}
-
-
-        {{# ============================================================ #}}
-        {{# SIDEBAR — #secondary #}}
-        {{# ============================================================ #}}
-        <aside id="secondary" class="widget-area keydesign-sidebar" role="complementary">
-
-            {{# Search Widget #}}
-            <section id="search-2" class="widget keydesign-widget widget_search">
-                <h4 class="widget-title">Search</h4>
-                <form role="search" method="get" class="search-form" action="/search">
-                    <label>
-                        <span class="screen-reader-text">Search for:</span>
-                        <input type="search" class="search-field" placeholder="Search &hellip;" value="{{ get:q }}"
-                            name="s" />
-                    </label>
-                    <input type="submit" class="search-submit" value="Search" />
-                </form>
-            </section>
-
-            {{# Categories Widget #}}
-            <section id="categories-2" class="widget keydesign-widget widget_categories">
-                <h4 class="widget-title">Categories</h4>
-                <nav aria-label="Categories">
-                    <ul>
-                        {{ taxonomy:categories }}
-                        <li class="cat-item cat-item-{{ slug }}">
-                            <a href="{{ url }}">{{ title }}</a>
-                            <span class="post_count">{{ entries_count }} </span>
-                        </li>
-                        {{ /taxonomy:categories }}
-                    </ul>
-                </nav>
-            </section>
-
-            {{# Recent Posts Widget #}}
-            {{# Added: decoding="async", srcset, sizes — missing before #}}
-            <section id="recent-posts-thumbnails-2" class="widget keydesign-widget widget_recent_entries">
-                <h4 class="widget-title">Recent posts</h4>
-                <ul class="recent-posts-thumb">
-                    {{ collection:posts
-                    limit="3"
-                    sort="date:desc"
-                    :filter:id:not="id" }}
-                    <li>
-                        <a href="{{ url }}">
-                            {{ if featured_image }}
-                            <div class="recent-post-thumbnail">
-                                {{ glide:featured_image width="150" height="150" fit="crop" }}
-                                <img width="150" height="150" src="{{ url }}"
-                                    class="attachment-thumbnail size-thumbnail wp-post-image" alt="{{ title }}"
-                                    decoding="async" srcset="
-                                                    {{ glide:featured_image width='150' height='150' fit='crop' }}{{ url }}{{ /glide:featured_image }} 150w,
-                                                    {{ glide:featured_image width='300' height='300' fit='crop' }}{{ url }}{{ /glide:featured_image }} 300w,
-                                                    {{ glide:featured_image width='100' height='100' fit='crop' }}{{ url }}{{ /glide:featured_image }} 100w
-                                                " sizes="(max-width: 150px) 100vw, 150px" loading="lazy" />
-                                {{ /glide:featured_image }}
-                            </div>
-                            {{ /if }}
-                            <div class="recent-post-title">{{ title }}</div>
-                        </a>
-                    </li>
-                    {{ /collection:posts }}
-                </ul>
-            </section>
-
-            {{# Tags Widget #}}
-            <section id="tag_cloud-2" class="widget keydesign-widget widget_tag_cloud">
-                <h4 class="widget-title">Tags</h4>
-                <nav aria-label="Tags">
-                    <div class="tagcloud">
-                        {{ taxonomy:tags }}
-                        <a href="{{ url }}" class="tag-cloud-link tag-link-{{ slug }}" style="font-size: 8pt;"
-                            aria-label="{{ title }} ({{ entries_count }} items)">
-                            {{ title }}
-                        </a>
-                        {{ /taxonomy:tags }}
-                    </div>
-                </nav>
-            </section>
-
-        </aside>
-        {{# /#secondary #}}
-
-    </div>
-    {{# /.keydesign-container #}}
-
-    {{# ============================================================ #}}
-    {{# RELATED POSTS #}}
-    {{# Added: decoding="async", srcset, sizes, comment-count span #}}
-    {{# ============================================================ #}}
-    {{ if categories }}
-    <section class="related-posts">
-        <div class="keydesign-container e-con">
-
-            <div class="related-title">
-                <h3>Continue reading</h3>
-            </div>
-
-            <div class="related-content blog-layout-grid columns-3">
-
-                {{ collection:posts
-                limit="3"
-                sort="date:desc"
-                :taxonomy:categories="categories|pluck('id')"
-                :filter:id:not="id" }}
-
-                <article id="post-759" class="keydesign-card post-759 post type-post status-publish format-standard has-post-thumbnail hentry
-                            {{ categories }}category-{{ slug }} {{ /categories }}
-                            {{ tags }}tag-{{ slug }} {{ /tags }}">
-
-                    {{# Related Post — Featured Image #}}
-                    {{# decoding, srcset, sizes added — missing before #}}
-                    {{ if featured_image }}
-                    <div class="entry-image medium-size-thumb">
-                        <a href="{{ url }}" title="{{ title }}">
-                            {{ glide:featured_image width="710" height="459" fit="crop" }}
-                            <img width="710" height="459" src="{{ url }}"
-                                class="attachment-keydesign-medium-image size-keydesign-medium-image wp-post-image"
-                                alt="{{ title }}" decoding="async" srcset="
-                                                    {{ glide:featured_image width='710' height='459' fit='crop' }}{{ url }}{{ /glide:featured_image }} 710w,
-                                                    {{ glide:featured_image width='300' height='194' fit='crop' }}{{ url }}{{ /glide:featured_image }} 300w,
-                                                    {{ glide:featured_image width='768' height='497' fit='crop' }}{{ url }}{{ /glide:featured_image }} 768w,
-                                                    {{ glide:featured_image width='600' height='388' fit='crop' }}{{ url }}{{ /glide:featured_image }} 600w,
-                                                    {{ glide:featured_image width='850' height='550' fit='crop' }}{{ url }}{{ /glide:featured_image }} 850w
-                                                " sizes="(max-width: 710px) 100vw, 710px" loading="lazy" />
-                            {{ /glide:featured_image }}
-                        </a>
-                    </div>
-                    {{ /if }}
-
-                    <div class="entry-wrapper">
-
-                        {{# Related Post — Categories #}}
-                        {{ if categories }}
-                        <div class="category-meta">
-                            <span class="blog-label">
-                                {{ categories }}
-                                <a href="{{ url }}" rel="category tag">{{ title }}</a>
-                                {{ unless last }}, {{ /unless }}
-                                {{ /categories }}
-                            </span>
-                        </div>
-                        {{ /if }}
-
-                        {{# Related Post — Title #}}
-                        <h4 class="post-title">
-                            <a href="{{ url }}" title="{{ title }}">{{ title }}</a>
-                        </h4>
-
-                        {{# Related Post — Meta with comment count #}}
-                        <div class="entry-meta">
-                            <span class="published">
-                                {{ date format="F j, Y" }}
-                            </span>
-                            {{ if author }}
-                            <span class="author">
-                                <a href="/posts/author/{{ author:name | slugify }}" title="Posts by {{ author:name }}"
-                                    rel="author">
-                                    {{ author:name }}
-                                </a>
-                            </span>
-                            {{ /if }}
-                            {{# comment-count was present in WP but missing before #}}
-                            <span class="comment-count">
-                                <a href="{{ url }}#comments">
-                                    {{ entries_count ?? '0' }} comments
-                                </a>
-                            </span>
-                        </div>
-
-                        {{# Related Post — Excerpt #}}
-                        {{ if post_introduction_part }}
-                        <div class="entry-content-card">
-                            <div class="post-content">
-                                <p>
-                                    {{ post_introduction_part }}
-                                    {{ if type == "text" }}
-                                    {{ text | strip_tags | truncate:120 }}
-                                    {{ /if }}
-                                    {{ /post_introduction_part }}
-                                </p>
-                            </div>
-                        </div>
-                        {{ /if }}
-
-                    </div>
-                </article>
-
-                {{ /collection:posts }}
-
-            </div>
-        </div>
-    </section>
-    {{ /if }}
-
-</div>
+</main>
 
 {{# /#content #}}
 

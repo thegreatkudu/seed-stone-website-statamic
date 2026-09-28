@@ -5,213 +5,209 @@ fields:
     field:
       type: group
       display: 'Hero Section'
-      instructions: 'The top banner: headline, two CTA buttons, and the small badge next to them.'
+      fullscreen: false
       fields:
         -
-          handle: heading_plain
+          handle: watermark
           field:
             type: text
-            display: 'Headline (plain part)'
+            display: 'Background Watermark Text'
+            instructions: 'Large faded word behind the hero, e.g. "Seedstone".'
         -
-          handle: heading_highlight
+          handle: rating_text
           field:
             type: text
-            display: 'Headline (highlighted part)'
-        -
-          handle: button_1_text
-          field:
-            type: text
-            display: 'Button 1 Text'
-        -
-          handle: button_1_url
-          field:
-            type: text
-            display: 'Button 1 URL'
-        -
-          handle: button_2_text
-          field:
-            type: text
-            display: 'Button 2 Text'
-        -
-          handle: button_2_url
-          field:
-            type: text
-            display: 'Button 2 URL'
-        -
-          handle: badge_number
-          field:
-            type: text
-            display: 'Badge Number'
-        -
-          handle: badge_button_text
-          field:
-            type: text
-            display: 'Badge Button Text'
-        -
-          handle: badge_button_url
-          field:
-            type: text
-            display: 'Badge Button URL'
-  -
-    handle: about
-    field:
-      type: group
-      display: 'About Us Section'
-      instructions: 'Key stats row followed by the company introduction.'
-      fields:
-        -
-          handle: stats
-          field:
-            type: grid
-            display: 'Stats'
-            instructions: 'Exactly 3 stats are displayed — add/remove rows here will not add/remove boxes on the page.'
-            fields:
-              -
-                handle: number
-                field:
-                  type: text
-                  display: Number
-              -
-                handle: label
-                field:
-                  type: text
-                  display: Label
-        -
-          handle: eyebrow
-          field:
-            type: text
-            display: Eyebrow
+            display: 'Rating Text'
+            instructions: 'Small line with a star icon above the heading.'
         -
           handle: heading
           field:
             type: text
             display: Heading
         -
-          handle: paragraph
+          handle: text
           field:
             type: textarea
-            display: Paragraph
+            display: 'Intro Text'
+        -
+          handle: button_1_text
+          field:
+            type: text
+            display: 'Primary Button Text'
+            width: 50
+        -
+          handle: button_1_url
+          field:
+            type: text
+            display: 'Primary Button URL'
+            width: 50
+        -
+          handle: button_2_text
+          field:
+            type: text
+            display: 'Secondary Button Text'
+            width: 50
+        -
+          handle: button_2_url
+          field:
+            type: text
+            display: 'Secondary Button URL'
+            width: 50
+        -
+          handle: image
+          field:
+            type: assets
+            display: 'Hero Image'
+            container: assets
+            folder: images/site
+            max_files: 1
+  -
+    handle: logos
+    field:
+      type: grid
+      display: 'Partner Logo Strip'
+      instructions: 'Logos scrolling under the hero.'
+      mode: table
+      add_row: 'Add Logo'
+      fields:
+        -
+          handle: name
+          field:
+            type: text
+            display: 'Organisation Name'
+        -
+          handle: logo
+          field:
+            type: assets
+            display: Logo
+            container: assets
+            folder: images/site
+            max_files: 1
+  -
+    handle: about
+    field:
+      type: group
+      display: 'About Section'
+      fullscreen: false
+      fields:
+        -
+          handle: eyebrow
+          field:
+            type: text
+            display: 'Small Label'
+        -
+          handle: heading
+          field:
+            type: text
+            display: Heading
+        -
+          handle: text
+          field:
+            type: textarea
+            display: Text
         -
           handle: button_text
           field:
             type: text
             display: 'Button Text'
+            width: 50
         -
           handle: button_url
           field:
             type: text
             display: 'Button URL'
+            width: 50
+        -
+          handle: image
+          field:
+            type: assets
+            display: Image
+            container: assets
+            folder: images/site
+            max_files: 1
+        -
+          handle: stats
+          field:
+            type: grid
+            display: 'Counters'
+            mode: table
+            max_rows: 4
+            add_row: 'Add Counter'
+            fields:
+              -
+                handle: number
+                field:
+                  type: integer
+                  display: Number
+              -
+                handle: suffix
+                field:
+                  type: text
+                  display: Suffix
+                  instructions: 'e.g. "/7", "%", "x"'
+              -
+                handle: label
+                field:
+                  type: text
+                  display: Label
   -
     handle: services
     field:
       type: group
       display: 'Services Section'
-      instructions: 'Intro copy plus the 4 tabbed service categories. Each tab has a fixed number of list items (4 for tab 1, 5 for tabs 2-4).'
+      instructions: 'The service cards come from the Services collection (entries with a card image).'
+      fullscreen: false
       fields:
         -
           handle: eyebrow
           field:
             type: text
-            display: Eyebrow
+            display: 'Small Label'
         -
           handle: heading
           field:
             type: text
             display: Heading
         -
-          handle: paragraph_1
+          handle: text
           field:
             type: textarea
-            display: 'Paragraph (part 1)'
-            instructions: 'Text before the line break.'
+            display: Text
         -
-          handle: paragraph_2
+          handle: card_button_text
           field:
-            type: textarea
-            display: 'Paragraph (part 2)'
-            instructions: 'Text after the line break.'
-        -
-          handle: tab_1
-          field:
-            type: group
-            display: 'Tab 1'
-            fields: &service_tab_fields
-              -
-                handle: title
-                field:
-                  type: text
-                  display: 'Tab Title'
-              -
-                handle: description
-                field:
-                  type: textarea
-                  display: Description
-              -
-                handle: button_text
-                field:
-                  type: text
-                  display: 'Button Text'
-              -
-                handle: button_url
-                field:
-                  type: text
-                  display: 'Button URL'
-              -
-                handle: list_items
-                field:
-                  type: grid
-                  display: 'List Items'
-                  fields:
-                    -
-                      handle: text
-                      field:
-                        type: text
-                        display: Text
-        -
-          handle: tab_2
-          field:
-            type: group
-            display: 'Tab 2'
-            fields: *service_tab_fields
-        -
-          handle: tab_3
-          field:
-            type: group
-            display: 'Tab 3'
-            fields: *service_tab_fields
-        -
-          handle: tab_4
-          field:
-            type: group
-            display: 'Tab 4'
-            fields: *service_tab_fields
+            type: text
+            display: 'Card Button Text'
   -
-    handle: track_order
+    handle: why_choose
     field:
       type: group
-      display: 'Track Every Order Section'
-      instructions: 'Exactly 4 stages are displayed.'
+      display: 'Why Choose Us Section'
+      fullscreen: false
       fields:
         -
           handle: eyebrow
           field:
             type: text
-            display: Eyebrow
+            display: 'Small Label'
         -
           handle: heading
           field:
             type: text
             display: Heading
         -
-          handle: paragraph
+          handle: text
           field:
             type: textarea
-            display: Paragraph
+            display: Text
         -
           handle: items
           field:
             type: grid
-            display: Stages
+            display: Reasons
+            instructions: 'Up to 5 reasons. Icons are fixed per position.'
+            max_rows: 5
+            add_row: 'Add Reason'
             fields:
               -
                 handle: title
@@ -219,180 +215,74 @@ fields:
                   type: text
                   display: Title
               -
-                handle: description
+                handle: text
                 field:
                   type: textarea
-                  display: Description
+                  display: Text
+              -
+                handle: url
+                field:
+                  type: text
+                  display: 'Arrow Link URL'
+        -
+          handle: button_text
+          field:
+            type: text
+            display: 'Button Text'
+            width: 50
+        -
+          handle: button_url
+          field:
+            type: text
+            display: 'Button URL'
+            width: 50
   -
     handle: crops
     field:
       type: group
-      display: 'Crops We Trade Section'
-      instructions: 'Intro plus the 4-slide crop carousel.'
+      display: 'Crops Section'
+      fullscreen: false
       fields:
         -
           handle: eyebrow
           field:
             type: text
-            display: Eyebrow
+            display: 'Small Label'
         -
           handle: heading
           field:
             type: text
             display: Heading
         -
+          handle: text
+          field:
+            type: textarea
+            display: Text
+        -
           handle: button_text
           field:
             type: text
             display: 'Button Text'
+            width: 50
         -
           handle: button_url
           field:
             type: text
             display: 'Button URL'
+            width: 50
         -
           handle: items
           field:
             type: grid
             display: 'Crop Cards'
-            instructions: 'Exactly 4 cards are displayed.'
+            max_rows: 4
+            add_row: 'Add Crop'
             fields:
               -
-                handle: image
+                handle: label
                 field:
                   type: text
-                  display: 'Image URL'
-              -
-                handle: title
-                field:
-                  type: text
-                  display: Title
-              -
-                handle: category
-                field:
-                  type: text
-                  display: Category
-              -
-                handle: url
-                field:
-                  type: text
-                  display: URL
-  -
-    handle: why_choose_us
-    field:
-      type: group
-      display: 'Why Choose Seedstone Section'
-      instructions: 'Credentials block: intro, two buttons, 4 reasons, and 4 partner logos.'
-      fields:
-        -
-          handle: eyebrow
-          field:
-            type: text
-            display: Eyebrow
-        -
-          handle: heading
-          field:
-            type: text
-            display: Heading
-        -
-          handle: paragraph
-          field:
-            type: textarea
-            display: Paragraph
-        -
-          handle: button_1_text
-          field:
-            type: text
-            display: 'Button 1 Text'
-        -
-          handle: button_1_url
-          field:
-            type: text
-            display: 'Button 1 URL'
-        -
-          handle: button_2_text
-          field:
-            type: text
-            display: 'Button 2 Text'
-        -
-          handle: button_2_url
-          field:
-            type: text
-            display: 'Button 2 URL'
-        -
-          handle: reasons
-          field:
-            type: grid
-            display: Reasons
-            instructions: 'Exactly 4 reasons are displayed.'
-            fields:
-              -
-                handle: text
-                field:
-                  type: text
-                  display: Text
-        -
-          handle: partners
-          field:
-            type: grid
-            display: 'Partner Logos'
-            instructions: 'Exactly 4 logos are displayed.'
-            fields:
-              -
-                handle: logo
-                field:
-                  type: text
-                  display: 'Logo Image URL'
-              -
-                handle: name
-                field:
-                  type: text
-                  display: 'Partner Name (used as alt text)'
-  -
-    handle: cta_banner
-    field:
-      type: group
-      display: 'Consultation CTA Banner'
-      instructions: 'Small banner nested at the end of the Crops section.'
-      fields:
-        -
-          handle: heading
-          field:
-            type: text
-            display: Heading
-        -
-          handle: button_text
-          field:
-            type: text
-            display: 'Button Text'
-        -
-          handle: button_url
-          field:
-            type: text
-            display: 'Button URL'
-  -
-    handle: process
-    field:
-      type: group
-      display: 'Our Process Section'
-      instructions: 'Exactly 4 numbered steps are displayed (numbers 01-04 are fixed by position, not editable).'
-      fields:
-        -
-          handle: eyebrow
-          field:
-            type: text
-            display: Eyebrow
-        -
-          handle: heading
-          field:
-            type: text
-            display: Heading
-        -
-          handle: steps
-          field:
-            type: grid
-            display: Steps
-            fields:
+                  display: 'Badge Label'
               -
                 handle: title
                 field:
@@ -403,56 +293,49 @@ fields:
                 field:
                   type: textarea
                   display: Description
+              -
+                handle: url
+                field:
+                  type: text
+                  display: 'Link URL'
+              -
+                handle: image
+                field:
+                  type: assets
+                  display: 'Background Image'
+                  container: assets
+                  folder: images/site
+                  max_files: 1
   -
     handle: testimonials
     field:
       type: group
       display: 'Testimonials Section'
-      instructions: 'Exactly 3 testimonials and 2 review badges are displayed.'
+      fullscreen: false
       fields:
         -
           handle: eyebrow
           field:
             type: text
-            display: Eyebrow
+            display: 'Small Label'
         -
           handle: heading
           field:
             type: text
             display: Heading
         -
-          handle: review_badge_1
+          handle: text
           field:
-            type: group
-            display: 'Review Badge 1'
-            fields: &review_badge_fields
-              -
-                handle: rating
-                field:
-                  type: text
-                  display: Rating
-              -
-                handle: label
-                field:
-                  type: text
-                  display: Label
-              -
-                handle: url
-                field:
-                  type: text
-                  display: URL
-        -
-          handle: review_badge_2
-          field:
-            type: group
-            display: 'Review Badge 2'
-            fields: *review_badge_fields
+            type: textarea
+            display: Text
         -
           handle: items
           field:
             type: grid
             display: Testimonials
-            instructions: 'Do not include quote marks — they are added automatically.'
+            instructions: 'Four cards. Cards 1 and 4 show a quote icon, photo and button; cards 2 and 3 show a background image with a video button.'
+            max_rows: 4
+            add_row: 'Add Testimonial'
             fields:
               -
                 handle: quote
@@ -464,131 +347,157 @@ fields:
                 field:
                   type: text
                   display: 'Name / Role'
-        -
-          handle: button_text
-          field:
-            type: text
-            display: 'Button Text'
-        -
-          handle: button_url
-          field:
-            type: text
-            display: 'Button URL'
+                  width: 50
+              -
+                handle: location
+                field:
+                  type: text
+                  display: Location
+                  width: 50
+              -
+                handle: avatar
+                field:
+                  type: assets
+                  display: 'Photo (cards 1 & 4)'
+                  container: assets
+                  folder: images/site
+                  max_files: 1
+              -
+                handle: background_image
+                field:
+                  type: assets
+                  display: 'Background Image (cards 2 & 3)'
+                  container: assets
+                  folder: images/site
+                  max_files: 1
+              -
+                handle: video_url
+                field:
+                  type: text
+                  display: 'Video URL (cards 2 & 3)'
+                  instructions: 'YouTube embed URL opened by the play button.'
+              -
+                handle: button_text
+                field:
+                  type: text
+                  display: 'Button Text (cards 1 & 4)'
+                  width: 50
+              -
+                handle: button_url
+                field:
+                  type: text
+                  display: 'Button URL (cards 1 & 4)'
+                  width: 50
   -
-    handle: get_started
+    handle: highlights
+    field:
+      type: grid
+      display: 'Highlight Counters'
+      instructions: 'The three big numbers in the green band.'
+      mode: table
+      max_rows: 3
+      add_row: 'Add Counter'
+      fields:
+        -
+          handle: number
+          field:
+            type: integer
+            display: Number
+        -
+          handle: suffix
+          field:
+            type: text
+            display: Suffix
+        -
+          handle: label
+          field:
+            type: text
+            display: Label
+  -
+    handle: work_with_us
     field:
       type: group
-      display: 'Get Started Section'
-      instructions: 'Closing call-to-action panel.'
+      display: 'Work With Us Box'
+      fullscreen: false
       fields:
         -
           handle: eyebrow
           field:
             type: text
-            display: Eyebrow
+            display: 'Small Label'
         -
           handle: heading
           field:
             type: text
             display: Heading
         -
-          handle: paragraph
+          handle: list_label
+          field:
+            type: text
+            display: 'List Label'
+        -
+          handle: benefits_left
+          field:
+            type: list
+            display: 'Benefits (left column)'
+            width: 50
+        -
+          handle: benefits_right
+          field:
+            type: list
+            display: 'Benefits (right column)'
+            width: 50
+        -
+          handle: button_text
+          field:
+            type: text
+            display: 'Button Text'
+            width: 50
+        -
+          handle: button_url
+          field:
+            type: text
+            display: 'Button URL'
+            width: 50
+        -
+          handle: image
+          field:
+            type: assets
+            display: 'Decorative Image'
+            container: assets
+            folder: images/site
+            max_files: 1
+  -
+    handle: newsletter
+    field:
+      type: group
+      display: 'Newsletter Box'
+      fullscreen: false
+      fields:
+        -
+          handle: eyebrow
+          field:
+            type: text
+            display: 'Small Label'
+        -
+          handle: heading
+          field:
+            type: text
+            display: Heading
+        -
+          handle: text
           field:
             type: textarea
-            display: Paragraph
-  -
-    handle: news
-    field:
-      type: group
-      display: 'News & Publications Section'
-      instructions: 'Exactly 3 article cards are displayed.'
-      fields:
-        -
-          handle: eyebrow
-          field:
-            type: text
-            display: Eyebrow
-        -
-          handle: heading
-          field:
-            type: text
-            display: Heading
+            display: Text
         -
           handle: button_text
           field:
             type: text
             display: 'Button Text'
+            width: 50
         -
           handle: button_url
           field:
             type: text
             display: 'Button URL'
-        -
-          handle: items
-          field:
-            type: grid
-            display: Articles
-            fields:
-              -
-                handle: image
-                field:
-                  type: text
-                  display: 'Image URL'
-              -
-                handle: category
-                field:
-                  type: text
-                  display: Category
-              -
-                handle: title
-                field:
-                  type: text
-                  display: Title
-              -
-                handle: url
-                field:
-                  type: text
-                  display: URL
-  -
-    handle: price_ticker
-    field:
-      type: group
-      display: 'Price Ticker / Marquee'
-      instructions: 'Scrolling commodity price ticker shown at the top of the header.'
-      fields:
-        -
-          handle: items
-          field:
-            type: grid
-            display: 'Price Items'
-            instructions: 'Each row is one scrolling price card.'
-            instructions_position: below
-            fields:
-              -
-                handle: product_name
-                field:
-                  type: text
-                  display: 'Product Name'
-                  instructions: 'e.g. "Cashewnut - Mtwara"'
-                  instructions_position: below
-              -
-                handle: past_price_value
-                field:
-                  type: integer
-                  display: 'Past Price (numeric)'
-                  instructions: 'e.g. 3800'
-                  instructions_position: below
-              -
-                handle: current_price_value
-                field:
-                  type: integer
-                  display: 'Current Price (numeric)'
-                  instructions: 'e.g. 4100'
-                  instructions_position: below
-              -
-                handle: price_unit
-                field:
-                  type: text
-                  display: 'Unit Label'
-                  instructions: 'e.g. "Tzs (1 Kg)"'
-                  instructions_position: below
+            width: 50

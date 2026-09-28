@@ -1,0 +1,38 @@
+<div class="elementor-element elementor-element-0b2e8a3 e-grid e-con-full e-con e-child"
+    data-id="0b2e8a3" data-element_type="container" data-e-type="container">
+    {{ nav:footer }}
+        <div class="elementor-element elementor-element-{{ if index == 0 }}455502a{{ elseif index == 1 }}82c0e86{{ elseif index == 2 }}ba9bfe9{{ else }}cb8d440{{ /if }} e-con-full e-flex e-con e-child"
+            data-id="{{ if index == 0 }}455502a{{ elseif index == 1 }}82c0e86{{ elseif index == 2 }}ba9bfe9{{ else }}cb8d440{{ /if }}" data-element_type="container" data-e-type="container">
+            <div class="elementor-element elementor-element-{{ if index == 0 }}475e18d{{ elseif index == 1 }}d52d3c3{{ elseif index == 2 }}6d6aca1{{ else }}5b56d42{{ /if }} elementor-widget elementor-widget-heading animated fadeInUp"
+                data-id="{{ if index == 0 }}475e18d{{ elseif index == 1 }}d52d3c3{{ elseif index == 2 }}6d6aca1{{ else }}5b56d42{{ /if }}" data-element_type="widget" data-e-type="widget"
+                data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:&quot;250&quot;}"
+                data-widget_type="heading.default">
+                <div class="elementor-heading-title elementor-size-default">{{ title }}</div>
+            </div>
+            <div class="elementor-element elementor-element-{{ if index == 0 }}991af9f{{ elseif index == 1 }}54c6040{{ elseif index == 2 }}d15fa5b{{ else }}9c6e8e0{{ /if }} elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list animated fadeInUp"
+                data-id="{{ if index == 0 }}991af9f{{ elseif index == 1 }}54c6040{{ elseif index == 2 }}d15fa5b{{ else }}9c6e8e0{{ /if }}" data-element_type="widget" data-e-type="widget"
+                data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:&quot;250&quot;}"
+                data-widget_type="icon-list.default">
+                <ul class="elementor-icon-list-items">
+                    {{ if title == 'Services' }}
+                        {{ collection:services }}
+                            <li class="elementor-icon-list-item">
+                                <a href="{{ url }}">
+                                    <span class="elementor-icon-list-text">{{ title }}</span>
+                                </a>
+                            </li>
+                        {{ /collection:services }}
+                    {{ else }}
+                        {{ children }}
+                            <li class="elementor-icon-list-item">
+                                <a href="{{ url }}"{{ if new_tab }} target="_blank" rel="noopener"{{ /if }}>
+                                    <span class="elementor-icon-list-text">{{ title }}</span>
+                                </a>
+                            </li>
+                        {{ /children }}
+                    {{ /if }}
+                </ul>
+            </div>
+        </div>
+    {{ /nav:footer }}
+</div>

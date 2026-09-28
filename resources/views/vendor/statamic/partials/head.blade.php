@@ -10,7 +10,7 @@
 @if (Statamic::pro() && config('statamic.cp.custom_favicon_url'))
     @include('statamic::partials.favicon', ['favicon_url' => config('statamic.cp.custom_favicon_url')])
     <link rel="apple-touch-icon" href="/assets/seeds-tone-favicon/apple-touch-icon.png">
-    <link rel="shortcut icon" type="image/x-icon" href="/assets/seeds-tone-favicon/favicon.ico">
+    <link rel="shortcut icon" type="image/svg+xml" href="{{ config('statamic.cp.custom_favicon_url') }}">
 @else
     <link rel="icon" type="image/png" href="{{ Statamic::cpViteAsset('img/favicon-32x32.png') }}" sizes="32x32">
     <link rel="icon" type="image/png" href="{{ Statamic::cpViteAsset('img/favicon-16x16.png') }}" sizes="16x16">

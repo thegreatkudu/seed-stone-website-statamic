@@ -1,0 +1,59 @@
+regions_eyebrow: 'Sourcing Regions'
+regions_heading: "Rooted in Tanzania's Key Crop Regions"
+regions_text: 'Seedstone sources crops directly from growing regions across Tanzania. Our regional teams work hand-in-hand with growers and AMCOS, ensuring quality supply and seasonal reliability wherever the harvest is.'
+regions_button_text: 'Become a Buyer'
+regions_button_url: /contact-us/
+regions:
+  -
+    id: rg1a2b3c
+    name: 'Mtwara Region'
+    phone: '+255 23 271 1000'
+    email: mtwara@seedstone.co.tz
+  -
+    id: rg2a2b3c
+    name: 'Mbeya Region'
+    phone: '+255 25 250 2000'
+    email: mbeya@seedstone.co.tz
+  -
+    id: rg3a2b3c
+    name: 'Singida Region'
+    phone: '+255 26 296 3000'
+    email: singida@seedstone.co.tz
+  -
+    id: rg4a2b3c
+    name: 'Dodoma Region'
+    phone: '+255 26 232 4000'
+    email: dodoma@seedstone.co.tz
+  -
+    id: rg5a2b3c
+    name: 'Tabora Region'
+    phone: '+255 26 260 5000'
+    email: tabora@seedstone.co.tz
+  -
+    id: rg6a2b3c
+    name: 'Ruvuma Region'
+    phone: '+255 25 260 6000'
+    email: ruvuma@seedstone.co.tz
+process_eyebrow: 'Step by Step'
+process_heading: 'Our Export Process'
+process_text: 'Seedstone manages every export order through a structured and transparent workflow. We ensure reliable results with every shipment we handle.'
+process_steps:
+  -
+    id: ps1a2b3c
+    title: 'Register Interest'
+    description: 'Register as a buyer and share your sourcing requirements and documentation with our team.'
+  -
+    id: ps2a2b3c
+    title: 'Place an Order'
+    description: 'Choose your crop and quantity, and review historical pricing by season before you commit.'
+  -
+    id: ps3a2b3c
+    title: 'We Source & Secure'
+    description: "We source your order and secure it through Tanzania's TMX auction system."
+  -
+    id: ps4a2b3c
+    title: 'Track & Receive'
+    description: 'Follow your shipment from Godown to the port of destination with transparent, real-time updates.'
+cta_heading: 'Ready to Source Quality Crops?'
+cta_button_text: 'Get a Quote'
+cta_button_url: /contact-us/

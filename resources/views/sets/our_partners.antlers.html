@@ -1,16 +1,4 @@
 {{ section:head_css }}
-<link rel="stylesheet" id="elementor-post-47-css"
-    href="{{ config:app:url }}/walley/wp-content/uploads/sites/2/elementor/css/post-47.css?ver=1767237625"
-    media="all" />
-<link rel="stylesheet" id="elementor-post-767-css"
-    href="{{ config:app:url }}/walley/wp-content/uploads/sites/2/elementor/css/post-767.css?ver=1767333705"
-    media="all" />
-<link rel="stylesheet" id="elementor-post-515-css"
-    href="{{ config:app:url }}/walley/wp-content/uploads/sites/2/elementor/css/post-515.css?ver=1767245096"
-    media="all" />
-<link rel="stylesheet" id="elementor-post-529-css"
-    href="{{ config:app:url }}/walley/wp-content/uploads/sites/2/elementor/css/post-529.css?ver=1783848276"
-    media="all" />
 <style>
     .elementor-element-30fe7361 {
         padding-bottom: 100px;
@@ -401,7 +389,7 @@ e--ua-firefox {{ /section:body_class }}
     </div>
 
     <!-- call to action -->
-    {{ partial:layout/cta-section }}
+    {{ if cta:heading }}{{ partial:layout/cta-section }}{{ /if }}
 </div>
 
 {{ /if }}{{ /blocks }}

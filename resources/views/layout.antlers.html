@@ -29,11 +29,10 @@
     {{# seo_description — set per entry or falls back to settings #}}
     {{# seo_keywords — set per entry or falls back to settings #}}
     {{# ============================================================ #}}
-    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+    <meta name="robots" content="{{ noindex ? 'noindex, nofollow' : 'index, follow, max-snippet:-1, max-image-preview:large' }}" />
     <meta name="description" content="{{ seo_description ?? settings:meta_description ?? title }}" />
-    <meta name="keywords" content="{{ seo_keywords ?? settings:meta_keywords }}" />
     <meta name="author" content="{{ settings:site_name }}" />
-    <link rel="canonical" content="{{ config:app:url }}{{ uri }}" />
+    <link rel="canonical" href="{{ config:app:url }}{{ uri }}" />
 
     {{# include others meta #}}
     {{ partial:partials/seo }}
@@ -48,17 +47,28 @@
     {
         "@context": "https://schema.org",
         "@type": "Organization",
+        "@id": "{{ config:app:url }}/#organization",
         "name": "Seedstone",
-        "url": "{{ config:app:url }}/seed-stone/",
-        "logo": "{{ config:app:url }}/seed-stone/wp-content/uploads/2025/07/seed-stone-logo.svg",
+        "url": "{{ config:app:url }}/",
+        "logo": "{{ settings:header_logo:url }}",
         "description": "Seedstone is a Tanzanian agricultural export company, sourcing, preparing, and exporting quality crops directly to international buyers.",
         "email": "info@seedstone.co.tz",
+        "telephone": "+255-67-037-3123",
         "address": {
             "@type": "PostalAddress",
+            "postOfficeBoxNumber": "78812",
             "addressLocality": "Dar es Salaam",
             "addressCountry": "TZ"
         },
         "areaServed": "Worldwide",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer service",
+            "name": "Doreen Tenga",
+            "email": "info@seedstone.co.tz",
+            "telephone": "+255-67-037-3123",
+            "availableLanguage": ["English", "Swahili"]
+        },
         "makesOffer": [
             {
                 "@type": "Offer",
@@ -96,8 +106,48 @@
     }
     </script>
 
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Seedstone",
+        "url": "{{ config:app:url }}/",
+        "description": "Tanzania's trusted agricultural export company, sourcing cashewnut, coffee, sesame, and pigeon peas for international buyers.",
+        "inLanguage": "en",
+        "publisher": {
+            "@type": "Organization",
+            "@id": "{{ config:app:url }}/#organization"
+        }
+    }
+    </script>
+
     {{# ============================================================ #}}
-    {{# TWITTER CARD — Twitter / X link previews #}}
+    {{# BREADCRUMBS — JSON-LD + visible trail for ALWAYS pages #}}
+    {{# ============================================================ #}}
+    {{ if uri != '/' }}
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "{{ config:app:url }}/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "{{ title }}",
+                "item": "{{ config:app:url }}{{ uri }}"
+            }
+        ]
+    }
+    </script>
+    {{ /if }}
+
+    {{# ============================================================ #}}
     {{# twitter_image — set per entry or falls back to og_image #}}
     {{# ============================================================ #}}
     <meta name="twitter:card" content="summary_large_image" />
@@ -119,10 +169,9 @@
     {{# All files served from /assets/seeds-tone-favicon/ #}}
     {{# ============================================================ #}}
 
-    {{# Standard favicons #}}
-    <link rel="icon" type="image/png" sizes="96x96" href="/assets/seeds-tone-favicon/favicon-96x96.png" />
+    {{# Standard favicons — SVG used for crisp rendering at any size #}}
     <link rel="icon" type="image/svg+xml" href="/assets/seeds-tone-favicon/favicon.svg" />
-    <link rel="shortcut icon" href="/assets/seeds-tone-favicon/favicon.ico" />
+    <link rel="shortcut icon" href="/assets/seeds-tone-favicon/favicon.svg" />
 
     {{# Apple Touch Icon — used when added to iOS home screen #}}
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/seeds-tone-favicon/apple-touch-icon.png" />
@@ -133,16 +182,6 @@
 
     {{# Browser theme color — Android Chrome address bar #}}
     <meta name="theme-color" content="#00a651" />
-
-    <link rel="preload" data-rocket-preload="" as="image"
-		href="{{ config:url }}/seed-stone/wp-content/uploads/2025/07/seed-stone-logo-header.svg"
-		fetchpriority="high">
-	<meta name="robots" content="max-image-preview:large">
-
-	<link rel="alternate" type="application/rss+xml" title="Seedstone » Feed"
-		href="{{ config:url }}/seed-stone/feed/">
-	<link rel="alternate" type="application/rss+xml" title="Seedstone » Comments Feed"
-		href="{{ config:url }}/seed-stone/comments/feed/">
 
     {{# ============================================================ #}}
     {{# FONTS — Preloaded for performance #}}
@@ -162,6 +201,29 @@
     {{# ============================================================ #}}
     {{# VITE — compiled JS and CSS assets #}}
     {{# ============================================================ #}}
+    <link rel="stylesheet" href="{{ config:url }}/css/common.css"/>
+
+    {{# ============================================================ #}}
+    {{# MARQUEE JS #}}
+    {{# ============================================================ #}}
+    <script src="{{ config:url }}/js/announcement.js"></script>
+    <script>
+        window.theme = window.theme || {};
+        window.theme.debounce = window.theme.debounce || function (callback, wait) {
+            let timeout;
+            return function (...args) {
+                clearTimeout(timeout);
+                timeout = setTimeout(() => callback.apply(this, args), wait);
+            };
+        };
+    </script>
+    <script src="{{ config:url }}/js/ticker.js" defer></script>
+
+    {{# ============================================================ #}}
+    {{# PAGE HEAD TAGS #}}
+    {{# page head tags gets special hero-style nav, others get default #}}
+    {{# ============================================================ #}}
+    {{ partial:layout/head-tag-links }}
 
     {{# ============================================================ #}}
     {{# PAGE-SPECIFIC HEAD INJECTION #}}
@@ -172,15 +234,10 @@
     {{# ============================================================ #}}
     {{ yield:head_css }}
 
-    {{# ============================================================ #}}
-    {{# PAGE HEAD TAGS #}}
-    {{# page head tags gets special hero-style nav, others get default #}}
-    {{# ============================================================ #}}
-    {{ partial:layout/head-tag-links }}
-
 </head>
 
-<body class="{{ yield:body_class }}">
+<body class="{{ yield:body_class }}" data-elementor-device-mode="desktop">
+    <a class="skip-link screen-reader-text" href="#content"> Skip to content </a>
 
     {{# Click Sound #}}
     <div id="top"></div>

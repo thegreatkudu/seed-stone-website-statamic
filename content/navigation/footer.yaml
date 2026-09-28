@@ -1,0 +1,8 @@
+title: Footer
+max_depth: 2
+collections:
+  - pages
+  - partners
+  - posts
+  - products
+  - services

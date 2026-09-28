@@ -22,6 +22,22 @@ tabs:
               type: assets
               display: 'Featured Image'
           -
+            handle: card_image
+            field:
+              type: assets
+              container: assets
+              folder: images/site
+              max_files: 1
+              display: 'Card Image'
+              instructions: 'Image on the Home and Our Services cards. Services without a card image are hidden from those grids.'
+          -
+            handle: excerpt
+            field:
+              type: textarea
+              display: 'Short Description'
+              instructions: 'A short description shown on the home services card.'
+              width: 100
+          -
             import: service_content
   sidebar:
     display: Sidebar

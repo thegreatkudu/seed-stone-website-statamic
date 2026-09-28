@@ -1,0 +1,43 @@
+title: 'All Products'
+fields:
+  -
+    handle: hero
+    field:
+      type: group
+      display: 'Page Banner'
+      fullscreen: false
+      fields:
+        -
+          handle: title
+          field:
+            type: text
+            display: 'Banner Title'
+            instructions: 'Defaults to the page title.'
+  -
+    handle: listing
+    field:
+      type: group
+      display: 'Products List Section'
+      instructions: 'The cards come from the Products collection. Sourcing Regions and Export Process are edited once in Globals → Export Sections.'
+      fullscreen: false
+      fields:
+        -
+          handle: eyebrow
+          field:
+            type: text
+            display: 'Small Label'
+        -
+          handle: heading
+          field:
+            type: text
+            display: Heading
+        -
+          handle: text
+          field:
+            type: textarea
+            display: Text
+        -
+          handle: card_button_text
+          field:
+            type: text
+            display: 'Card Button Text'

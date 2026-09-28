@@ -11,6 +11,7 @@ tabs:
               container: assets
               max_files: 1
               display: 'Header Logo'
+              instructions: 'Also used in search-engine structured data.'
               type: assets
           -
             handle: footer_logo
@@ -19,6 +20,15 @@ tabs:
               max_files: 1
               type: assets
               display: 'Footer Logo'
+          -
+            handle: page_banner_image
+            field:
+              container: assets
+              folder: images/site
+              max_files: 1
+              type: assets
+              display: 'Default Page Banner Image'
+              instructions: 'Background of the title banner on inner pages, posts, products and services. Pages can override it with their own Banner Image.'
           -
             handle: site_name
             field:

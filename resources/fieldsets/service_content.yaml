@@ -5,6 +5,76 @@ fields:
   -
     import: content
   -
+    handle: section_1_heading
+    field:
+      type: text
+      display: 'Section 1 Heading'
+      instructions: 'Heading shown under the divider (h4).'
+      width: 100
+  -
+    handle: section_1_body
+    field:
+      type: textarea
+      display: 'Section 1 Body'
+      instructions: 'Supporting text for the first section.'
+      width: 100
+  -
+    handle: section_2_heading
+    field:
+      type: text
+      display: 'Section 2 Heading'
+      instructions: 'Heading shown after the first section (h5).'
+      width: 100
+  -
+    handle: section_2_body
+    field:
+      type: textarea
+      display: 'Section 2 Body'
+      instructions: 'Supporting text for the second section.'
+      width: 100
+  -
+    handle: features
+    field:
+      type: replicator
+      display: 'Feature Boxes'
+      instructions: 'Icon boxes rendered in the 3x2 grid after the second section.'
+      sets:
+        feature:
+          display: Feature
+          fields:
+            -
+              handle: icon
+              field:
+                type: select
+                display: Icon
+                default: water
+                options:
+                  water: Water
+                  chart_line: Chart Line
+                  clock: Clock
+                  dollar: Dollar
+                  shield: Shield
+                  leaf: Leaf
+            -
+              handle: title
+              field:
+                type: text
+                display: Title
+                width: 100
+            -
+              handle: description
+              field:
+                type: textarea
+                display: Description
+                width: 100
+  -
+    handle: closing_text
+    field:
+      type: textarea
+      display: 'Closing Text'
+      instructions: 'Final paragraph shown after the feature grid.'
+      width: 100
+  -
     handle: gallery
     field:
       container: assets

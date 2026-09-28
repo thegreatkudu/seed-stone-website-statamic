@@ -69,6 +69,11 @@ fields:
               fields:
                 -
                   import: service_content
+            all_products:
+              display: 'All Products'
+              fields:
+                -
+                  import: all_products
             all_services:
               display: 'All Services'
               fields:
@@ -89,3 +94,9 @@ fields:
               fields:
                 -
                   import: our_partners
+            faq:
+              display: 'FAQ'
+              icon: dialog
+              fields:
+                -
+                  import: faq

@@ -1,0 +1,11 @@
+tagline: 'Seedstone sources, prepares, and exports quality crops directly to international buyers — one trusted point of contact from order to delivery.'
+back_to_top_text: 'Back to Top'
+copyright: |
+  <p>© Seedstone. Powered by <a href="https://sandc.co.tz/" target="_blank" rel="noopener">Sandc Technology</a></p>
+legal_links:
+  -
+    label: 'Terms of Service'
+    url: '/terms-and-conditions'
+  -
+    label: 'Privacy Policy'
+    url: '/privacy-policy'

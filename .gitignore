@@ -25,3 +25,7 @@
 Homestead.json
 Homestead.yaml
 Thumbs.db
+
+# Local deployment bundles (too large for GitHub)
+/seed-stone-backend.zip
+/seed-stone-front.zip

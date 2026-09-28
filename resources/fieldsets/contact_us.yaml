@@ -5,91 +5,134 @@ fields:
     field:
       type: group
       display: 'Hero Section'
+      instructions: 'Top banner heading of the page.'
       fields:
         -
           handle: title
           field:
             type: text
             display: Title
-        -
-          handle: description
-          field:
-            type: textarea
-            display: Description
   -
-    handle: contact_section
+    handle: talk_to_us
     field:
       type: group
-      display: 'Contact Details & App Preview Section'
+      display: 'Talk to Us Section'
       fields:
         -
-          handle: title
+          handle: eyebrow
           field:
             type: text
-            display: Title
+            display: Eyebrow
         -
-          handle: description
+          handle: heading
+          field:
+            type: text
+            display: Heading
+        -
+          handle: paragraph
           field:
             type: textarea
-            display: Description
+            display: Paragraph
+  -
+    handle: form_labels
+    field:
+      type: group
+      display: 'Contact Form'
+      instructions: 'Submissions are saved under Forms → Contact and emailed to the address set on that form.'
+      fields:
         -
-          handle: email
+          handle: name_label
           field:
             type: text
-            display: Email
+            display: 'Name Label'
         -
-          handle: chat_label
+          handle: name_placeholder
           field:
             type: text
-            display: 'Chat Label'
+            display: 'Name Placeholder'
         -
-          handle: chat_url
+          handle: email_label
           field:
             type: text
-            display: 'Chat URL'
+            display: 'Email Label'
         -
-          handle: phone
+          handle: email_placeholder
           field:
             type: text
-            display: Phone
+            display: 'Email Placeholder'
         -
-          handle: address
+          handle: phone_label
           field:
             type: text
-            display: Address
+            display: 'Phone Label'
         -
-          handle: hours
+          handle: phone_placeholder
           field:
             type: text
-            display: 'Office Hours'
-            instructions: 'e.g. "Monday - Friday (9 a.m. – 6 p.m.)"'
-            instructions_position: below
+            display: 'Phone Placeholder'
         -
-          handle: image_1
+          handle: subject_label
           field:
-            container: assets
-            max_files: 1
-            type: assets
-            display: 'Image 1'
+            type: text
+            display: 'Subject Label'
         -
-          handle: image_2
+          handle: subject_placeholder
           field:
-            container: assets
-            max_files: 1
-            type: assets
-            display: 'Image 2'
+            type: text
+            display: 'Subject Placeholder'
         -
-          handle: image_3
+          handle: message_label
           field:
-            container: assets
-            max_files: 1
-            type: assets
-            display: 'Image 3'
+            type: text
+            display: 'Message Label'
+        -
+          handle: message_placeholder
+          field:
+            type: text
+            display: 'Message Placeholder'
+        -
+          handle: submit_text
+          field:
+            type: text
+            display: 'Submit Button Text'
+        -
+          handle: terms_text
+          field:
+            type: text
+            display: 'Terms Note'
+        -
+          handle: success_message
+          field:
+            type: text
+            display: 'Success Message'
+            instructions: 'Shown after the form is sent.'
+  -
+    handle: get_in_touch
+    field:
+      type: group
+      display: 'Get in Touch Section'
+      fields:
+        -
+          handle: eyebrow
+          field:
+            type: text
+            display: Eyebrow
+        -
+          handle: heading
+          field:
+            type: text
+            display: Heading
+        -
+          handle: paragraph
+          field:
+            type: textarea
+            display: Paragraph
   -
     handle: map
     field:
       type: group
       display: 'Map Section'
+      instructions: 'Use the Google Maps embed URL (Google Maps → Share → Embed a map → copy the iframe src). The place-based pb=… embed format shows the place popup with a Get directions button.'
       fields:
         -
           handle: embed_url
@@ -106,3 +149,72 @@ fields:
           field:
             type: text
             display: 'Aria Label'
+  -
+    handle: contact_details
+    field:
+      type: group
+      display: 'Contact Details'
+      instructions: 'Displayed in the lime info card next to the map.'
+      fields:
+        -
+          handle: address_label
+          field:
+            type: text
+            display: 'Address Label'
+        -
+          handle: address
+          field:
+            type: text
+            display: Address
+        -
+          handle: email_label
+          field:
+            type: text
+            display: 'Email Label'
+        -
+          handle: email
+          field:
+            type: text
+            display: 'Email Address'
+        -
+          handle: phone_label
+          field:
+            type: text
+            display: 'Phone Label'
+        -
+          handle: phone
+          field:
+            type: text
+            display: 'Phone Number'
+  -
+    handle: social
+    field:
+      type: group
+      display: 'Social Links'
+      instructions: 'Optional. Leave blank to hide a social icon.'
+      fields:
+        -
+          handle: facebook_url
+          field:
+            type: text
+            display: 'Facebook URL'
+        -
+          handle: twitter_url
+          field:
+            type: text
+            display: 'X (Twitter) URL'
+        -
+          handle: tiktok_url
+          field:
+            type: text
+            display: 'TikTok URL'
+        -
+          handle: youtube_url
+          field:
+            type: text
+            display: 'YouTube URL'
+        -
+          handle: linkedin_url
+          field:
+            type: text
+            display: 'LinkedIn URL'

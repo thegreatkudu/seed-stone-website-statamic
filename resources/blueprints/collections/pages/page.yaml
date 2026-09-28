@@ -12,6 +12,13 @@ tabs:
               required: true
               validate:
                 - required
+          -
+            handle: nav_title
+            field:
+              type: text
+              display: 'Navigation Title'
+              instructions: 'Optionally override the title shown in the navigation menu.'
+              placeholder: 'Defaults to the page title'
       -
         display: Builder
         fields:
@@ -36,6 +43,16 @@ tabs:
               max_items: 1
               listable: false
               localizable: true
+          -
+            handle: banner_image
+            field:
+              container: assets
+              folder: images/site
+              max_files: 1
+              type: assets
+              display: 'Banner Image'
+              instructions: 'Background of the page title banner. Leave empty to use the default from Globals → Settings.'
+              listable: hidden
           -
             handle: show_title
             field:

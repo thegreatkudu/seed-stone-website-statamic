@@ -1,0 +1,116 @@
+title: 'Export Sections'
+tabs:
+  regions:
+    display: 'Sourcing Regions'
+    sections:
+      -
+        instructions: 'Shown on the Products and Our Services pages.'
+        fields:
+          -
+            handle: regions_eyebrow
+            field:
+              type: text
+              display: 'Small Label'
+          -
+            handle: regions_heading
+            field:
+              type: text
+              display: Heading
+          -
+            handle: regions_text
+            field:
+              type: textarea
+              display: Text
+          -
+            handle: regions_button_text
+            field:
+              type: text
+              display: 'Button Text'
+              width: 50
+          -
+            handle: regions_button_url
+            field:
+              type: text
+              display: 'Button URL'
+              width: 50
+          -
+            handle: regions
+            field:
+              type: grid
+              display: Regions
+              instructions: 'Up to 6 regional offices.'
+              max_rows: 6
+              add_row: 'Add Region'
+              fields:
+                -
+                  handle: name
+                  field:
+                    type: text
+                    display: 'Region Name'
+                -
+                  handle: phone
+                  field:
+                    type: text
+                    display: Phone
+                    instructions: 'Shown as typed, e.g. "+255 23 271 1000".'
+                -
+                  handle: email
+                  field:
+                    type: text
+                    display: Email
+  process:
+    display: 'Export Process'
+    sections:
+      -
+        instructions: 'Shown on the Products and Our Services pages.'
+        fields:
+          -
+            handle: process_eyebrow
+            field:
+              type: text
+              display: 'Small Label'
+          -
+            handle: process_heading
+            field:
+              type: text
+              display: Heading
+          -
+            handle: process_text
+            field:
+              type: textarea
+              display: Text
+          -
+            handle: process_steps
+            field:
+              type: grid
+              display: Steps
+              max_rows: 4
+              add_row: 'Add Step'
+              fields:
+                -
+                  handle: title
+                  field:
+                    type: text
+                    display: Title
+                -
+                  handle: description
+                  field:
+                    type: textarea
+                    display: Description
+          -
+            handle: cta_heading
+            field:
+              type: text
+              display: 'Call to Action Heading'
+          -
+            handle: cta_button_text
+            field:
+              type: text
+              display: 'Call to Action Button Text'
+              width: 50
+          -
+            handle: cta_button_url
+            field:
+              type: text
+              display: 'Call to Action Button URL'
+              width: 50

@@ -1,0 +1,27 @@
+share_label: 'Share This Post:'
+newsletter_heading: 'Subscribe to Our Newsletter'
+newsletter_text: 'Get harvest updates, TMX auction prices, and export schedules straight to your inbox, so your team can plan every order ahead of time.'
+newsletter_placeholder: 'Enter your email address'
+newsletter_button_text: Subscribe
+newsletter_success_message: 'Thank you for subscribing! You will receive our next export update.'
+newsletter_note: 'By subscribing you agree with our Privacy Policy'
+related_eyebrow: 'Continue Reading'
+related_heading: 'Explore More Export Insights'
+related_button_text: 'More Articles'
+related_button_url: /posts
+quote_heading: 'Get a Quote'
+quote_name_label: 'Full Name'
+quote_name_placeholder: 'Enter your name'
+quote_email_label: Email
+quote_email_placeholder: 'Enter your email address'
+quote_phone_label: 'Phone Number'
+quote_phone_placeholder: 'Enter your phone number'
+quote_date_label: 'Appointment Date'
+quote_date_placeholder: 'Select date'
+quote_message_label: Message
+quote_message_placeholder: 'Write your message or special request here'
+quote_button_text: 'Get a Quote'
+quote_success_message: 'Thank you! Your quote request has been sent. Our team will contact you shortly.'
+quote_note: 'By clicking you agree to our Terms & Conditions, Privacy and Data Protection Policy'
+not_found_heading: 'Looks like you are lost.'
+not_found_text: 'We can’t seem to find the page you’re looking for. Try searching for something else.'

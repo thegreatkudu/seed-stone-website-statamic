@@ -12,20 +12,10 @@ blocks:
     type: all_services
     enabled: true
     hero:
-      title: 'Our Services'
-      description: 'Leoleo GulioSmart is here to empower Tanzanian farmers with smart technology, real-time data, and market insights.'
-    sidebar_label: 'Our Services'
-    features_label: 'GulioSmart Features'
-    feature_1:
-      icon_class: 'fas fa-satellite-dish'
-      title: 'Real-Time Farm Data'
-      description: 'Monitor soil, weather, and crop conditions live from your farm in Tanzania.'
-    feature_2:
-      icon_class: 'fas fa-chart-line'
-      title: 'Market Insights'
-      description: 'Get live crop prices and connect directly with buyers to maximize your earnings.'
-    feature_3:
-      icon_class: 'fas fa-cloud-sun-rain'
-      title: 'Weather Alerts'
-      description: 'Receive early warnings and smart recommendations to protect your harvest.'
+      title: Services
+    listing:
+      eyebrow: 'What We Offer'
+      heading: 'Full-Service Export Support'
+      text: 'We provide a full range of services to source, prepare, and export quality crops from Tanzania, with every stage of the journey managed in-house.'
+      card_button_text: 'Learn More'
 ---

@@ -1,8 +1,25 @@
+title: Footer
 tabs:
   main:
     display: Main
     sections:
       -
+        display: Brand
+        instructions: 'The footer logo is set in Globals → Settings. The link columns are edited in Navigation → Footer.'
+        fields:
+          -
+            handle: tagline
+            field:
+              type: textarea
+              display: Tagline
+              instructions: 'Short brand line shown under the footer logo.'
+          -
+            handle: back_to_top_text
+            field:
+              type: text
+              display: 'Back to Top Label'
+      -
+        display: Legal
         fields:
           -
             handle: copyright
@@ -17,13 +34,19 @@ tabs:
               antlers: true
               type: bard
               display: Copyright
-  home_footer:
-    display: 'Home Footer'
-    sections:
-      -
-        display: 'New Section'
-  page_footer:
-    display: 'Page Footer'
-    sections:
-      -
-        display: 'New Section'
+          -
+            handle: legal_links
+            field:
+              type: grid
+              display: 'Legal Links'
+              fields:
+                -
+                  handle: label
+                  field:
+                    type: text
+                    display: Label
+                -
+                  handle: url
+                  field:
+                    type: text
+                    display: URL

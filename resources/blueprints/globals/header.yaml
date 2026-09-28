@@ -4,58 +4,49 @@ tabs:
     display: Main
     sections:
       -
-        display: 'Extra Links'
+        display: 'Price Ticker'
+        instructions: 'Scrolling price bar at the very top of every page.'
         fields:
           -
-            handle: top_extra_links
+            handle: price_ticker
             field:
               type: grid
-              display: 'Top Extra Links'
+              display: 'Ticker Items'
+              mode: table
+              add_row: 'Add Item'
               fields:
                 -
-                  handle: icon
+                  handle: text
                   field:
                     type: text
-                    display: Icon
-                -
-                  handle: title
-                  field:
-                    type: text
-                    display: Title
+                    display: Text
+                    instructions: 'e.g. "Cashewnut $1,300 / tonne · Coffee $3,500 / tonne"'
                 -
                   handle: url
                   field:
                     type: text
                     display: Link
       -
-        display: 'Social Media'
+        display: 'Header Button'
         fields:
           -
-            handle: social_media
-            field:
-              type: grid
-              display: 'Social Media'
-              fields:
-                -
-                  handle: icon
-                  field:
-                    type: text
-                    display: Icon
-                -
-                  handle: title
-                  field:
-                    type: text
-                    display: Title
-                -
-                  handle: url
-                  field:
-                    type: text
-                    display: Link
-      -
-        display: 'Work Time'
-        fields:
-          -
-            handle: work_time_text
+            handle: cta_button_text
             field:
               type: text
-              display: 'Work Time Text'
+              display: 'Button Text'
+              width: 50
+          -
+            handle: cta_button_url
+            field:
+              type: text
+              display: 'Button URL'
+              width: 50
+      -
+        display: 'Advanced'
+        fields:
+          -
+            handle: browser_warning
+            field:
+              type: text
+              display: 'Old Browser Warning'
+              instructions: 'Only shown to visitors on unsupported browsers.'

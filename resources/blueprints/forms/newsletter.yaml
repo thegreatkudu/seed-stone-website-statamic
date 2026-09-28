@@ -1,0 +1,16 @@
+title: 'Newsletter'
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: email
+            field:
+              type: text
+              display: 'Email Address'
+              input_type: email
+              validate:
+                - required
+                - email

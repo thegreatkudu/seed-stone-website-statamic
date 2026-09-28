@@ -1,11 +1,9 @@
-title: Newsletter
-fields:
+title: 'Newsletter'
+honeypot: website
+store: true
+email:
   -
-    handle: email
-    field:
-      type: text
-      display: Email
-      input_type: email
-      validate:
-        - required
-        - email
+    to: info@seedstone.co.tz
+    reply_to: '{{ email }}'
+    subject: 'New newsletter sign-up'
+    markdown: true

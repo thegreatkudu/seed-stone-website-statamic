@@ -14,6 +14,12 @@ fields:
             instructions: 'e.g. "Privacy Policy"'
             instructions_position: below
         -
+          handle: last_modified_label
+          field:
+            type: text
+            display: 'Last Modified Label'
+            width: 50
+        -
           handle: last_modified
           field:
             format: 'F j, Y'
