@@ -24,6 +24,13 @@ tabs:
         fields:
           -
             import: page_builder
+  seo:
+    display: SEO
+    sections:
+      -
+        fields:
+          -
+            import: seo
   sidebar:
     display: Sidebar
     sections:

@@ -26,27 +26,23 @@
 {{# SERVICE SCHEMA — JSON-LD per service #}}
 {{# ============================================================ #}}
 {{ section:head_css }}
+{{ schema_description = seo_description ?? excerpt ?? settings:meta_description }}{{ schema_description = schema_description | strip_tags | trim | safe_truncate(300, '…') }}
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "{{ title }}",
-    "description": "{{ excerpt }}",
-    "serviceType": "{{ title }}",
-    "provider": {
-        "@type": "Organization",
-        "name": "Seedstone",
-        "@id": "{{ config:app:url }}/#organization"
-    },
-    "areaServed": {
-        "@type": "Country",
-        "name": "Tanzania"
-    },
+    "@id": "{{ config:app:url }}{{ uri }}#service",
+    "name": {{ title | to_json }},
+    "serviceType": {{ title | to_json }},
+    "description": {{ schema_description | to_json }},
+    {{ if featured_image || card_image }}"image": "{{ featured_image:url ?? card_image:url }}",{{ /if }}
+    "url": "{{ config:app:url }}{{ uri }}",
+    "provider": { "@id": "{{ config:app:url }}/#organization" },
+    "areaServed": "Worldwide",
     "availableChannel": {
         "@type": "ServiceChannel",
-        "servicePhone": "+255-67-037-3123",
-        "serviceUrl": "{{ config:app:url }}/our-services",
-        "availableLanguage": ["English", "Swahili"]
+        "serviceUrl": "{{ config:app:url }}/contact-us"
+        {{ if settings:company_phone }},"servicePhone": { "@type": "ContactPoint", "telephone": {{ settings:company_phone | to_json }} }{{ /if }}
     }
 }
 </script>
@@ -204,7 +200,6 @@ data-elementor-device-mode="desktop"
                                     <div class="mf-widget-container">
 
                                         <div id="metform-wrap-576266b-599" class="mf-form-wrapper" data-form-id="599"
-                                            data-action="{{ config:url }}/seed-stone/wp-json/metform/v1/entries/insert/599"
                                             data-wp-nonce="716abd2513" data-form-nonce="815e35f23b"
                                             data-quiz-summery="false" data-save-progress="false"
                                             data-form-type="general-form" data-stop-vertical-effect=""

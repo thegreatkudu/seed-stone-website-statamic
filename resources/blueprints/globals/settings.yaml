@@ -38,8 +38,9 @@ tabs:
           -
             handle: meta_description
             field:
-              type: text
-              display: 'Meta Description'
+              type: textarea
+              display: 'Default Meta Description'
+              instructions: 'Used for pages without their own meta description.'
   social:
     display: Social
     sections:
@@ -50,5 +51,101 @@ tabs:
             field:
               container: assets
               max_files: 1
-              display: 'OG Image'
+              display: 'Default Social Share Image'
+              instructions: 'Used when a page has no share image or featured image of its own (1200×630 works best).'
               type: assets
+          -
+            handle: twitter_handle
+            field:
+              type: text
+              display: 'X (Twitter) Handle'
+              instructions: 'e.g. @seedstone. Leave empty if there is no account.'
+          -
+            handle: social_profiles
+            field:
+              type: list
+              display: 'Official Social Profile URLs'
+              instructions: 'Full URLs of Seedstone''s real profiles (LinkedIn, Facebook, Instagram…). Search engines and AI assistants use these to confirm the company''s identity.'
+  company:
+    display: 'Company & SEO'
+    sections:
+      -
+        display: 'Company Facts'
+        instructions: 'Used in the structured data that Google and AI assistants read, and in /llms.txt. Only enter accurate, public facts.'
+        fields:
+          -
+            handle: legal_name
+            field:
+              type: text
+              display: 'Legal Name'
+              width: 50
+          -
+            handle: company_description
+            field:
+              type: textarea
+              display: 'Company Description'
+              instructions: 'One or two plain sentences describing what Seedstone does.'
+          -
+            handle: company_email
+            field:
+              type: text
+              display: 'Public Email'
+              width: 50
+          -
+            handle: company_phone
+            field:
+              type: text
+              display: 'Public Phone'
+              instructions: 'International format, e.g. +255 67 037 3123'
+              width: 50
+          -
+            handle: address_street
+            field:
+              type: text
+              display: 'Street Address'
+              width: 50
+          -
+            handle: address_po_box
+            field:
+              type: text
+              display: 'P.O. Box'
+              width: 50
+          -
+            handle: address_city
+            field:
+              type: text
+              display: City
+              width: 50
+          -
+            handle: address_country_code
+            field:
+              type: text
+              display: 'Country Code'
+              instructions: 'Two letters, e.g. TZ'
+              width: 50
+          -
+            handle: contact_person
+            field:
+              type: text
+              display: 'Contact Person'
+              width: 50
+          -
+            handle: contact_person_role
+            field:
+              type: text
+              display: 'Contact Person Role'
+              width: 50
+          -
+            handle: languages
+            field:
+              type: list
+              display: 'Languages Spoken'
+      -
+        display: 'AI Search (llms.txt)'
+        fields:
+          -
+            handle: llms_about
+            field:
+              type: markdown
+              display: 'Extra Facts for AI Assistants'
+              instructions: 'Markdown added to /llms.txt after the company facts. Products, services and articles are listed automatically from the collections.'

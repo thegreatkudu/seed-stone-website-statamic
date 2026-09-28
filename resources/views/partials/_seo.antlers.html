@@ -1,21 +1,147 @@
-    {{# ============================================================ #}}
-    {{# OPEN GRAPH — Facebook / LinkedIn / WhatsApp previews         #}}
-    {{# og_image — set per entry asset field, falls back to settings #}}
-    {{# ============================================================ #}}
-    <meta property="og:type" content="website" />
-    <meta property="og:locale" content="{{ site:short_locale }}" />
-    <meta property="og:site_name" content="{{ settings:site_name }}" />
-    <meta property="og:url" content="{{ config:app:url }}{{ uri }}" />
-    <meta property="og:title" content="{{ title }} | {{ settings:site_name }}" />
-    <meta property="og:description" content="{{ seo_description ?? settings:meta_description }}" />
+{{# ============================================================ #}}
+{{# SEO HEAD — title, meta, social cards and JSON-LD.             #}}
+{{# Every value comes from the entry's SEO tab, the entry itself, #}}
+{{# or Globals → Settings, so editors control all of it in the CP. #}}
+{{# ============================================================ #}}
+{{ page_title = seo_title ?? title }}
+{{ if collection:handle == 'posts' && post_introduction_part }}{{ intro_text = post_introduction_part | bard_html | decode | replace('</', ' </') | strip_tags | trim }}{{ /if }}
+{{ page_description = seo_description ?? excerpt ?? intro_text ?? settings:meta_description }}
+{{ page_description = page_description | strip_tags | trim | safe_truncate(170, '…') }}
+{{ collection_handle = collection:handle }}
+{{ org_legal_name = settings:legal_name ?? settings:site_name }}
+{{ org_description = settings:company_description ?? settings:meta_description }}
+{{ webpage_name = page_title ?? settings:site_name }}
 
-    {{# OG Image — uses Glide for resizing, falls back to settings  #}}
-    {{ if og_image }}
-        <meta property="og:image" content="{{ glide:og_image width='1200' height='630' fit='crop' }}" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-    {{ elseif settings:og_image }}
-        <meta property="og:image" content="{{ glide:settings:og_image width='1200' height='630' fit='crop' }}" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-    {{ /if }}
+<title>{{ if page_title }}{{ page_title }} | {{ /if }}{{ settings:site_name }}</title>
+<meta name="description" content="{{ page_description | entities }}" />
+<meta name="robots" content="{{ if noindex || response_code == 404 }}noindex, nofollow{{ else }}index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1{{ /if }}" />
+<link rel="canonical" href="{{ config:app:url }}{{ uri }}" />
+<link rel="alternate" type="text/plain" title="LLM summary" href="{{ config:app:url }}/llms.txt" />
+
+{{# ── Open Graph (WhatsApp, LinkedIn, Facebook) ── #}}
+<meta property="og:type" content="{{ if collection_handle == 'posts' }}article{{ else }}website{{ /if }}" />
+<meta property="og:locale" content="{{ site:locale | replace('-', '_') }}" />
+<meta property="og:site_name" content="{{ settings:site_name }}" />
+<meta property="og:url" content="{{ config:app:url }}{{ uri }}" />
+<meta property="og:title" content="{{ page_title | entities }}" />
+<meta property="og:description" content="{{ page_description | entities }}" />
+{{ if collection_handle == 'posts' }}
+<meta property="article:published_time" content="{{ date format='c' }}" />
+<meta property="article:modified_time" content="{{ last_modified format='c' }}" />
+{{ /if }}
+{{ if og_image }}
+    {{ share_image = og_image }}
+{{ elseif featured_image }}
+    {{ share_image = featured_image }}
+{{ else }}
+    {{ share_image = settings:og_image }}
+{{ /if }}
+{{ if share_image }}
+<meta property="og:image" content="{{ glide:share_image width='1200' height='630' fit='crop_focal' absolute='true' }}" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="{{ share_image:alt ?? page_title | entities }}" />
+{{ /if }}
+
+{{# ── X (Twitter) card ── #}}
+<meta name="twitter:card" content="summary_large_image" />
+{{ if settings:twitter_handle }}<meta name="twitter:site" content="{{ settings:twitter_handle }}" />{{ /if }}
+<meta name="twitter:title" content="{{ page_title | entities }}" />
+<meta name="twitter:description" content="{{ page_description | entities }}" />
+{{ if share_image }}<meta name="twitter:image" content="{{ glide:share_image width='1200' height='630' fit='crop_focal' absolute='true' }}" />{{ /if }}
+
+{{# ── Organization + WebSite (every page) ── #}}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "Organization",
+            "@id": "{{ config:app:url }}/#organization",
+            "name": {{ settings:site_name | to_json }},
+            "legalName": {{ org_legal_name | to_json }},
+            "url": "{{ config:app:url }}/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "{{ settings:header_logo:url }}"
+            },
+            "description": {{ org_description | to_json }},
+            {{ if settings:company_email }}"email": {{ settings:company_email | to_json }},{{ /if }}
+            {{ if settings:company_phone }}"telephone": {{ settings:company_phone | to_json }},{{ /if }}
+            "address": {
+                "@type": "PostalAddress",
+                {{ if settings:address_street }}"streetAddress": {{ settings:address_street | to_json }},{{ /if }}
+                {{ if settings:address_po_box }}"postOfficeBoxNumber": {{ settings:address_po_box | to_json }},{{ /if }}
+                "addressLocality": {{ settings:address_city | to_json }},
+                "addressCountry": {{ settings:address_country_code | to_json }}
+            },
+            "areaServed": "Worldwide",
+            {{ if settings:social_profiles }}"sameAs": {{ settings:social_profiles | to_json }},{{ /if }}
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "contactType": "sales",
+                {{ if settings:contact_person }}"name": {{ settings:contact_person | to_json }},{{ /if }}
+                {{ if settings:company_email }}"email": {{ settings:company_email | to_json }},{{ /if }}
+                {{ if settings:company_phone }}"telephone": {{ settings:company_phone | to_json }},{{ /if }}
+                "availableLanguage": {{ if settings:languages }}{{ settings:languages | to_json }}{{ else }}["English"]{{ /if }}
+            },
+            "knowsAbout": ["Agricultural export", "Cashewnut", "Coffee", "Sesame", "Pigeon peas", "Tanzania Mercantile Exchange", "Warehouse Receipt System", "Clearing and forwarding"],
+            "makesOffer": [
+                {{ collection:products as="product_items" }}{{ product_items }}
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Product",
+                        "name": {{ title | to_json }},
+                        "url": "{{ config:app:url }}{{ url }}"
+                    }
+                }{{ unless last }},{{ /unless }}
+                {{ /product_items }}{{ /collection:products }}
+            ]
+        },
+        {
+            "@type": "WebSite",
+            "@id": "{{ config:app:url }}/#website",
+            "name": {{ settings:site_name | to_json }},
+            "url": "{{ config:app:url }}/",
+            "inLanguage": "{{ site:short_locale }}",
+            "publisher": { "@id": "{{ config:app:url }}/#organization" }
+        },
+        {
+            "@type": "WebPage",
+            "@id": "{{ config:app:url }}{{ uri }}#webpage",
+            "url": "{{ config:app:url }}{{ uri }}",
+            "name": {{ webpage_name | to_json }},
+            "description": {{ page_description | to_json }},
+            "isPartOf": { "@id": "{{ config:app:url }}/#website" },
+            "about": { "@id": "{{ config:app:url }}/#organization" },
+            "inLanguage": "{{ site:short_locale }}"
+        }
+    ]
+}
+</script>
+
+{{# ── Breadcrumbs (all pages except home) ── #}}
+{{ if uri && uri != '/' && title }}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "{{ config:app:url }}/" },
+        {{ if collection_handle == 'posts' }}
+        { "@type": "ListItem", "position": 2, "name": "News", "item": "{{ config:app:url }}/posts" },
+        { "@type": "ListItem", "position": 3, "name": {{ title | to_json }}, "item": "{{ config:app:url }}{{ uri }}" }
+        {{ elseif collection_handle == 'products' }}
+        { "@type": "ListItem", "position": 2, "name": "Products", "item": "{{ config:app:url }}/products" },
+        { "@type": "ListItem", "position": 3, "name": {{ title | to_json }}, "item": "{{ config:app:url }}{{ uri }}" }
+        {{ elseif collection_handle == 'services' }}
+        { "@type": "ListItem", "position": 2, "name": "Our Services", "item": "{{ config:app:url }}/our-services" },
+        { "@type": "ListItem", "position": 3, "name": {{ title | to_json }}, "item": "{{ config:app:url }}{{ uri }}" }
+        {{ else }}
+        { "@type": "ListItem", "position": 2, "name": {{ title | to_json }}, "item": "{{ config:app:url }}{{ uri }}" }
+        {{ /if }}
+    ]
+}
+</script>
+{{ /if }}

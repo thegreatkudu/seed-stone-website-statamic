@@ -1,0 +1,36 @@
+title: SEO
+fields:
+  -
+    handle: seo_title
+    field:
+      type: text
+      display: 'SEO Title'
+      instructions: 'Title shown in Google and browser tabs. Leave empty to use the entry title. "| Seedstone" is added automatically. Aim for under 60 characters.'
+      character_limit: 70
+      listable: hidden
+  -
+    handle: seo_description
+    field:
+      type: textarea
+      display: 'Meta Description'
+      instructions: 'Summary shown under the title in search results and AI answers. Aim for 120–160 characters. Leave empty to use the excerpt or the site default.'
+      character_limit: 170
+      listable: hidden
+  -
+    handle: og_image
+    field:
+      type: assets
+      container: assets
+      folder: images/site
+      max_files: 1
+      display: 'Social Share Image'
+      instructions: 'Image used when the page is shared on WhatsApp, LinkedIn, Facebook or X (1200×630 works best). Leave empty to use the featured image or the site default.'
+      listable: hidden
+  -
+    handle: noindex
+    field:
+      type: toggle
+      display: 'Hide from Search Engines'
+      instructions: 'Adds noindex and removes the page from the sitemap and llms.txt.'
+      default: false
+      listable: hidden

@@ -3,3 +3,28 @@ footer_logo: images/site/seed-stone-logo.png
 page_banner_image: images/site/seedstone-agricultural-export-hero.webp
 site_name: Seedstone
 meta_description: 'Seedstone is Tanzania''s trusted agricultural export company, sourcing and exporting cashewnut, coffee, sesame, and pigeon peas to international buyers with full transparency from auction to port.'
+og_image: images/site/seedstone-agricultural-export-hero.webp
+legal_name: 'SeedStone Limited'
+company_description: 'Seedstone is a Tanzanian agricultural export company, sourcing, preparing, and exporting quality cashewnut, coffee, sesame, and pigeon peas directly to international buyers.'
+company_email: info@seedstone.co.tz
+company_phone: '+255 67 037 3123'
+address_po_box: '78812'
+address_city: 'Dar es Salaam'
+address_country_code: TZ
+contact_person: 'Doreen Tenga'
+contact_person_role: 'Customer Relations & Legal Officer'
+languages:
+  - English
+  - Swahili
+llms_about: |
+  ## How Seedstone Works
+  Seedstone is a Tanzania sourcing and trade-facilitation partner operating under the **Warehouse Receipt System (WRS)** regulated by the Tanzanian government. Goods move through licensed warehouses that issue warehouse receipts, and are traded through transparent auction-based bidding at the **Tanzania Mercantile Exchange (TMX)**.
+
+  1. Sourcing from farmers and cooperatives (AMCOS).
+  2. Quality preparation and grading to export standards.
+  3. Storage in licensed WRS warehouses.
+  4. Auction-based bidding at TMX.
+  5. Clearing and forwarding.
+  6. Godown-to-port logistics with order tracking.
+  7. Export delivery to international buyers.
+

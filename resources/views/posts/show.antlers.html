@@ -25,25 +25,25 @@
 {{# ============================================================ #}}
 {{# ARTICLE SCHEMA — JSON-LD per post (indexed posts only) #}}
 {{# ============================================================ #}}
+{{ if post_introduction_part }}{{ schema_intro = post_introduction_part | bard_html | decode | replace('</', ' </') | strip_tags | trim }}{{ /if }}{{ schema_description = seo_description ?? schema_intro ?? settings:meta_description }}{{ schema_description = schema_description | strip_tags | trim | safe_truncate(300, '…') }}
 {{ unless noindex }}
 {{ section:head_css }}
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "{{ title }}",
-    "description": "{{ post_introduction_part }}{{ text | strip_tags | truncate:160 }}{{ /post_introduction_part }}",
-    "datePublished": "{{ date format="Y-m-d" }}",
-    "dateModified": "{{ last_modified format="Y-m-d" }}",
-    "author": {
-        "@type": "Person",
-        "name": "Seedstone"
-    },
-    "publisher": {
-        "@type": "Organization",
-        "@id": "{{ config:app:url }}/#organization"
-    },
-    "mainEntityOfPage": "{{ config:app:url }}{{ uri }}"
+    "@type": "BlogPosting",
+    "@id": "{{ config:app:url }}{{ uri }}#article",
+    "headline": {{ title | to_json }},
+    "description": {{ schema_description | to_json }},
+    {{ if featured_image }}"image": ["{{ featured_image:url }}"],{{ /if }}
+    "datePublished": "{{ date format='c' }}",
+    "dateModified": "{{ last_modified format='c' }}",
+    "inLanguage": "{{ site:short_locale }}",
+    "author": { "@id": "{{ config:app:url }}/#organization" },
+    "publisher": { "@id": "{{ config:app:url }}/#organization" },
+    "isPartOf": { "@id": "{{ config:app:url }}/#website" },
+    "mainEntityOfPage": { "@id": "{{ config:app:url }}{{ uri }}#webpage" }{{ if categories }},
+    "articleSection": {{ categories | pluck('title') | to_json }}{{ /if }}
 }
 </script>
 {{ /section:head_css }}
@@ -242,7 +242,6 @@ data-elementor-device-mode="desktop"
                                             <div class="mf-widget-container">
                                                 <div id="metform-wrap-5aaf2ad-642" class="mf-form-wrapper"
                                                     data-form-id="642"
-                                                    data-action="{{ config:url }}/seed-stone/wp-json/metform/v1/entries/insert/642"
                                                     data-wp-nonce="716abd2513" data-form-nonce="815e35f23b"
                                                     data-quiz-summery="false" data-save-progress="false"
                                                     data-form-type="general-form" data-stop-vertical-effect=""

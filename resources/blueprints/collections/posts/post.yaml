@@ -22,6 +22,13 @@ tabs:
                 - required
           -
             import: post_content
+  seo:
+    display: SEO
+    sections:
+      -
+        fields:
+          -
+            import: seo
   sidebar:
     display: Sidebar
     sections:
@@ -65,11 +72,4 @@ tabs:
               default: now
               validate:
                 - required
-          -
-            handle: noindex
-            field:
-              type: toggle
-              display: 'No Index'
-              instructions: 'Hide this post from search engines (adds meta robots = noindex, nofollow).'
-              default: false
 title: Post

@@ -1,6 +1,7 @@
 ---
 id: 7b3c19f1-a4b8-4c92-a984-f188da552ff3
 blueprint: page
+seo_description: "Seedstone works with Tanzanian cooperatives, government institutions and market bodies to source quality crops for international buyers."
 title: 'Our Partners'
 blocks:
   -

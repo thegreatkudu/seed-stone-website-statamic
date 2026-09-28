@@ -1,8 +1,10 @@
 <?php
 
+use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Route;
 use Statamic\Facades\Entry;
+use Statamic\Facades\GlobalSet;
 
 /*
 |--------------------------------------------------------------------------
@@ -64,35 +66,31 @@ use Statamic\Facades\Entry;
 Route::redirect('/services', '/our-services', 301);
 Route::redirect('/services/', '/our-services', 301);
 
-Route::get('/sitemap.xml', function () {
-    $leoleoSlugs = [
-        'empowering-women-agriculture-womens-day-leoleo-guliosmart',
-        'harvest-profit-leoleo-guliosmart-tanzania-market-crisis',
-        'how-data-and-technology-are-transforming-agriculture-in-tanzania',
-        'leoleo-app-launches-iringa-digital-agriculture',
-        'leoleo-app-launches-iringa-digital-agriculture-1',
-        'leoleo-app-launches-iringa-digital-agriculture-2',
-        'how-knowledge-sharing-innovation-leoleo-guliosmart-ifakara-innovation-hub',
-        'leoleo-guliosmart-wins-recognition-ifakara-innovation-hub',
-        'how-winning-tigo-pesa-challenge-accelerated-leoleo-guliosmart',
-        'leoleo-guliosmart-smart-waste-solutions-durp-hackathon-dar-es-salaam',
-        'tanzania-local-vendors-market-data-increase-profits',
-        'empowering-local-market-vendors-tanzania-digital-innovation',
-    ];
+/**
+ * Published, indexable entries from the public collections, in sitemap order.
+ *
+ * @return Collection<int, Statamic\Contracts\Entries\Entry>
+ */
+$indexableEntries = function (string $collection) {
+    return Entry::query()
+        ->where('collection', $collection)
+        ->where('published', true)
+        ->get()
+        ->reject(fn ($entry) => (bool) $entry->get('noindex') || $entry->url() === null)
+        ->values();
+};
 
-    $pages = Entry::query()->where('collection', 'pages')->where('published', true)->get();
-    $products = Entry::query()->where('collection', 'products')->where('published', true)->get();
-    $services = Entry::query()->where('collection', 'services')->where('published', true)->get();
-    $posts = Entry::query()->where('collection', 'posts')->where('published', true)->whereNotIn('slug', $leoleoSlugs)->get();
+Route::get('/sitemap.xml', function () use ($indexableEntries) {
+    $entries = collect(['pages', 'products', 'services', 'posts'])
+        ->flatMap(fn (string $collection) => $indexableEntries($collection));
 
-    $urls = collect($pages)->merge($products)->merge($services)->merge($posts)->map(function ($entry) {
+    $urls = $entries->map(function ($entry) {
         $loc = config('app.url').$entry->url();
         $lastmod = $entry->lastModified()?->toAtomString();
 
         $priority = match ($entry->collection()->handle()) {
-            'pages' => $entry->slug() === 'home' ? '1.0' : '0.8',
-            'products' => '0.7',
-            'services' => '0.7',
+            'pages' => $entry->url() === '/' ? '1.0' : '0.8',
+            'products', 'services' => '0.7',
             default => '0.6',
         };
 
@@ -105,4 +103,89 @@ Route::get('/sitemap.xml', function () {
         .'</urlset>';
 
     return Response::make($xml, 200, ['Content-Type' => 'application/xml']);
+});
+
+/*
+ * llms.txt — plain-text summary for AI assistants (ChatGPT, Claude, Perplexity…).
+ * Built live from Globals → Settings and the Products, Services, Pages and Posts
+ * collections, so it never drifts from what editors publish in the CP.
+ */
+Route::get('/llms.txt', function () use ($indexableEntries) {
+    $settings = GlobalSet::findByHandle('settings')?->inDefaultSite();
+    $setting = fn (string $key, mixed $default = null) => $settings?->get($key) ?? $default;
+    $url = fn ($entry) => rtrim(config('app.url'), '/').$entry->url();
+    $summary = fn ($entry) => trim(preg_replace('/\s+/', ' ', strip_tags((string) ($entry->get('seo_description') ?? $entry->get('excerpt') ?? ''))));
+
+    $lines = [];
+    $lines[] = '# '.$setting('site_name', config('app.name'));
+    $lines[] = '';
+    $lines[] = '> '.$setting('company_description', $setting('meta_description', ''));
+    $lines[] = '';
+    $lines[] = '## Company Facts';
+
+    $facts = [
+        'Legal name' => $setting('legal_name'),
+        'Website' => rtrim(config('app.url'), '/').'/',
+        'Location' => collect([$setting('address_street'), $setting('address_po_box') ? 'P.O. Box '.$setting('address_po_box') : null, $setting('address_city'), $setting('address_country_code')])->filter()->implode(', '),
+        'Email' => $setting('company_email'),
+        'Phone' => $setting('company_phone'),
+        'Contact' => collect([$setting('contact_person'), $setting('contact_person_role')])->filter()->implode(' — '),
+        'Languages' => collect($setting('languages', []))->implode(', '),
+    ];
+
+    foreach (array_filter($facts) as $label => $value) {
+        $lines[] = "- {$label}: {$value}";
+    }
+
+    foreach ((array) $setting('social_profiles', []) as $profile) {
+        $lines[] = "- Profile: {$profile}";
+    }
+
+    $sections = [
+        'Products (export crops)' => $indexableEntries('products'),
+        'Services' => $indexableEntries('services'),
+    ];
+
+    foreach ($sections as $heading => $entries) {
+        if ($entries->isEmpty()) {
+            continue;
+        }
+
+        $lines[] = '';
+        $lines[] = "## {$heading}";
+
+        foreach ($entries as $entry) {
+            $description = $summary($entry);
+            $lines[] = "- [{$entry->get('title')}]({$url($entry)})".($description !== '' ? ": {$description}" : '');
+        }
+    }
+
+    if ($about = trim((string) $setting('llms_about', ''))) {
+        $lines[] = '';
+        $lines[] = $about;
+    }
+
+    $lines[] = '';
+    $lines[] = '## Key Pages';
+
+    foreach ($indexableEntries('pages') as $page) {
+        $lines[] = '- ['.($page->get('nav_title') ?? $page->get('title'))."]({$url($page)})";
+    }
+
+    $posts = $indexableEntries('posts')->sortByDesc(fn ($entry) => $entry->date())->take(20);
+
+    if ($posts->isNotEmpty()) {
+        $lines[] = '';
+        $lines[] = '## Latest Articles';
+
+        foreach ($posts as $post) {
+            $lines[] = "- [{$post->get('title')}]({$url($post)})";
+        }
+    }
+
+    $lines[] = '';
+    $lines[] = '## Optional';
+    $lines[] = '- Sitemap: '.rtrim(config('app.url'), '/').'/sitemap.xml';
+
+    return Response::make(implode("\n", $lines)."\n", 200, ['Content-Type' => 'text/plain; charset=UTF-8']);
 });

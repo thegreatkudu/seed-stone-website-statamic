@@ -1,6 +1,7 @@
 ---
 id: a8fd79a1-6a5e-4497-a350-d06be6905458
 blueprint: page
+seo_description: "How Seedstone collects, uses and protects personal information shared through this website and our export services."
 title: 'Privacy Policy'
 show_title: true
 updated_by: 1

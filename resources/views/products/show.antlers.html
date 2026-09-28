@@ -26,40 +26,24 @@
 {{# PRODUCT SCHEMA — JSON-LD per product #}}
 {{# ============================================================ #}}
 {{ section:head_css }}
+{{ product_region = origin_region ?? 'Tanzania' }}{{ product_season = harvest_season ?? 'Seasonal' }}
+{{ schema_description = seo_description ?? excerpt ?? settings:meta_description }}{{ schema_description = schema_description | strip_tags | trim | safe_truncate(300, '…') }}
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
     "@type": "Product",
-    "name": "{{ title }}",
-    "description": "{{ excerpt }}",
-    "brand": {
-        "@type": "Brand",
-        "name": "Seedstone"
-    },
-    "image": "{{ featured_image:url ?? card_image:url }}",
-    "offers": {
-        "@type": "AggregateOffer",
-        "availability": "https://schema.org/InStock",
-        "priceCurrency": "USD",
-        "lowPrice": "0",
-        "highPrice": "0",
-        "offerCount": 1,
-        "seller": {
-            "@type": "Organization",
-            "name": "Seedstone"
-        }
-    },
+    "@id": "{{ config:app:url }}{{ uri }}#product",
+    "name": {{ title | to_json }},
+    "description": {{ schema_description | to_json }},
+    "category": "Agricultural commodity",
+    {{ if featured_image || card_image }}"image": "{{ featured_image:url ?? card_image:url }}",{{ /if }}
+    "brand": { "@type": "Brand", "name": {{ settings:site_name | to_json }} },
+    "manufacturer": { "@id": "{{ config:app:url }}/#organization" },
+    "countryOfOrigin": { "@type": "Country", "name": "Tanzania" },
+    "url": "{{ config:app:url }}{{ uri }}",
     "additionalProperty": [
-        {
-            "@type": "PropertyValue",
-            "name": "Origin Region",
-            "value": "{{ origin_region }}"
-        },
-        {
-            "@type": "PropertyValue",
-            "name": "Harvest Season",
-            "value": "{{ harvest_season }}"
-        }
+        { "@type": "PropertyValue", "name": "Origin Region", "value": {{ product_region | to_json }} },
+        { "@type": "PropertyValue", "name": "Harvest Season", "value": {{ product_season | to_json }} }
     ]
 }
 </script>
@@ -217,7 +201,6 @@ data-elementor-device-mode="desktop"
                                     <div class="mf-widget-container">
 
                                         <div id="metform-wrap-576266b-599" class="mf-form-wrapper" data-form-id="599"
-                                            data-action="{{ config:url }}/seed-stone/wp-json/metform/v1/entries/insert/599"
                                             data-wp-nonce="716abd2513" data-form-nonce="815e35f23b"
                                             data-quiz-summery="false" data-save-progress="false"
                                             data-form-type="general-form" data-stop-vertical-effect=""

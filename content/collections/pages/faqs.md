@@ -1,6 +1,7 @@
 ---
 id: 0e82b4d6-11d0-4356-956e-f442733745a0
 blueprint: page
+seo_description: "Answers to common questions about buying Tanzanian export crops with Seedstone: TMX auctions, quality grading, documentation, shipping and order tracking."
 title: FAQs
 show_title: false
 updated_by: 3

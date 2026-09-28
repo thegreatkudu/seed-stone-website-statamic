@@ -1,6 +1,7 @@
 ---
 id: bd177cc0-23f9-40b2-a106-fa4b6aa4f37c
 blueprint: page
+seo_description: "Contact Seedstone to request a quote or source Tanzanian cashewnut, coffee, sesame and pigeon peas. Our export team replies to buyers worldwide."
 title: 'Contact Us'
 updated_by: 2
 updated_at: 1785774172

@@ -1,6 +1,7 @@
 ---
 id: dd5418a8-4bc9-448e-a0c5-1cdfa84d0d54
 blueprint: page
+seo_description: "Seedstone's export services: direct sourcing, TMX auction sourcing, clearing and forwarding, godown-to-port logistics and full order tracking."
 title: 'Our Services'
 show_title: false
 updated_by: 1

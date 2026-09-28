@@ -39,6 +39,13 @@ tabs:
               width: 100
           -
             import: product_content
+  seo:
+    display: SEO
+    sections:
+      -
+        fields:
+          -
+            import: seo
   sidebar:
     display: Sidebar
     sections:

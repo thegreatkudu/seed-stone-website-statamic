@@ -1,6 +1,7 @@
 ---
 id: 6b96ecbe-d757-467c-89f1-1c40b8d199d4
 blueprint: page
+seo_description: "Terms and conditions for using the Seedstone website and working with Seedstone on crop sourcing and export orders."
 title: 'Terms & Conditions'
 show_title: true
 updated_by: 1

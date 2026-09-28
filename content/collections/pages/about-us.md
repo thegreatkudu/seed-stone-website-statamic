@@ -1,6 +1,7 @@
 ---
 id: ce6478fb-7940-40c6-b426-d00d9bd1eabb
 blueprint: page
+seo_description: "Learn how Seedstone sources, prepares and exports Tanzanian crops, from grower and AMCOS partnerships to TMX auctions, clearing, forwarding and port delivery."
 banner_image: images/site/seedstone-hero-logistics.webp
 title: 'About Us'
 show_title: true

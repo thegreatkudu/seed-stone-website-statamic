@@ -1,6 +1,7 @@
 ---
 id: home
 blueprint: page
+seo_description: "Seedstone is a Tanzanian agricultural export company sourcing cashewnut, coffee, sesame and pigeon peas through TMX auctions and shipping them to international buyers."
 title: 'Agricultural Export Company in Tanzania'
 nav_title: Home
 template: home
