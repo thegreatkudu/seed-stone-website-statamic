@@ -59,7 +59,7 @@ test('webflow forms post to their Statamic form handlers', function (string $uri
 })->with([
     'contact walkthrough' => ['/contact', 'walkthrough', 'walkthrough'],
     'research newsletter' => ['/publications', 'newsletter', 'newsletter-research'],
-    'changelog newsletter' => ['/changelog', 'newsletter', 'newsletter-changelog'],
+    'changelog newsletter' => ['/news', 'newsletter', 'newsletter-changelog'],
     'footer newsletter' => ['/pricing', 'newsletter', 'newsletter-footer'],
 ]);
 

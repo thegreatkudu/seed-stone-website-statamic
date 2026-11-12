@@ -1,0 +1,92 @@
+title: 'News item'
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              display: Title
+              required: true
+              validate:
+                - required
+          -
+            handle: kind
+            field:
+              type: select
+              display: Type
+              instructions: 'Sets the label shown above the title.'
+              options:
+                event: Event
+                training: Training
+                announcement: Announcement
+                tool: 'Free tool'
+                company: 'Company news'
+              default: announcement
+              required: true
+              validate:
+                - required
+          -
+            handle: summary
+            field:
+              type: textarea
+              display: Summary
+              instructions: 'Two or three plain sentences.'
+              required: true
+              validate:
+                - required
+                - 'max:400'
+          -
+            handle: link_url
+            field:
+              type: text
+              input_type: url
+              display: 'Link or attachment'
+              instructions: 'Optional. Full URL of the poster, PDF or page.'
+              validate:
+                - nullable
+                - url
+          -
+            handle: link_label
+            field:
+              type: text
+              display: 'Link text'
+              instructions: 'e.g. Download the invitation'
+          -
+            handle: image
+            field:
+              type: assets
+              container: assets
+              max_files: 1
+              display: Image
+              instructions: 'Optional picture shown under the summary.'
+          -
+            handle: image_alt
+            field:
+              type: text
+              display: 'Image description'
+              instructions: 'Describe the image for people who cannot see it.'
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+          -
+            handle: when
+            field:
+              type: text
+              display: Date
+              instructions: 'Shown on the left of the timeline, e.g. 4 Mar 2024. Leave empty if there is no date.'
+          -
+            handle: source
+            field:
+              type: text
+              display: 'Organiser or source'
+              instructions: 'Shown under the date, e.g. IET Mbeya & Songwe.'

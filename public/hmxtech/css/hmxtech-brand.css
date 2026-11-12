@@ -167,3 +167,15 @@ section[id] {
   left: auto;
   margin-left: 0;
 }
+
+/* News timeline: optional picture and attachment link under each item. */
+.hx-release_img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.hx-release_link {
+  margin-top: 4px;
+}
