@@ -16,162 +16,69 @@
     </style>
 {{ /section:head_css }}
 
+            {{# Papers come from the Publications collection (Control Panel → Collections → Publications). #}}
             <section class="page-hero">
-                <div class="eyebrow">Research</div>
-                <h1 class="page-hero_title">Notes from the front desk.</h1>
-                <p class="page-hero_text">Field notes, playbooks and product deep dives for people who run clinics.</p>
+                <div class="eyebrow">Publications</div>
+                <h1 class="page-hero_title">Research from the field and the lab.</h1>
+                <p class="page-hero_text">Papers by HMXTECH engineers and their collaborators on roads, materials, bridges, water and public procurement in Tanzania. Every paper is free to download.</p>
             </section>
+            {{ collection:publications featured:is="true" limit="1" }}
             <section class="featured-wrap">
                 <div class="w-dyn-list">
                     <div role="list" class="w-dyn-items">
                         <div role="listitem" class="w-dyn-item">
-                            <div class="post-feature"><a href="/posts/harbor-family-no-shows"
+                            <div class="post-feature"><a href="{{ pdf_url }}" target="_blank" rel="noopener"
                                     class="post-feature_media w-inline-block"><img
-                                        src="/hmxtech/6aec83b44f4f0425b95841e1/6aec83b44f4f0425b9584203_6aeb496ed1a041bbbbe45916_research-featured.webp"
-                                        loading="lazy"
-                                        alt="Weekly no-show chart for Harbor Family from January to June, down 34 percent since go-live"
-                                        class="post-feature_img"></a>
+                                        src="{{ if cover_image }}{{ cover_image:url }}{{ else }}/hmxtech/img/publications/{{ topic:value }}.webp{{ /if }}"
+                                        loading="lazy" alt="{{ cover_alt ?? '' }}" class="post-feature_img"></a>
                                 <div class="post-feature_copy">
                                     <div class="tag-row">
                                         <div class="tag is-new">Featured</div>
-                                        <div class="post-card_tag">Operations</div>
+                                        <div class="post-card_tag">{{ topic:label }}</div>
                                     </div>
-                                    <h2 class="post-feature_title"><a href="/posts/harbor-family-no-shows"
-                                            class="post-feature_link">How Harbor Family cut no-shows by a third</a></h2>
-                                    <p class="post-feature_text">Two-way reminders, a waitlist that fills itself and one
-                                        small change to the confirmation text.</p>
+                                    <h2 class="post-feature_title"><a href="{{ pdf_url }}" target="_blank" rel="noopener"
+                                            class="post-feature_link">{{ title }}</a></h2>
+                                    <p class="post-feature_text">{{ summary }}</p>
                                     <div class="byline">
-                                        <div class="post-avatar">MT</div>
+                                        <div class="post-avatar">PDF</div>
                                         <div class="byline_main">
-                                            <div class="byline_name">Mei Tanaka</div>
+                                            <div class="byline_name">Free download</div>
                                             <div class="byline_row is-meta">
-                                                <div class="byline_meta">November 2, 2026</div>
+                                                <div class="byline_meta">{{ topic:label }}</div>
                                                 <div class="byline_sep">,</div>
-                                                <div class="byline_meta">7 min read</div>
+                                                <div class="byline_meta">Opens in a new tab</div>
                                             </div>
                                         </div>
-                                    </div><a href="/posts/harbor-family-no-shows" class="text-link">Read the story<span
-                                            class="text-link_icon"><svg width="14" height="14" viewBox="0 0 14 14"
-                                                fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M4 10L10 4M10 4H5M10 4V9" stroke="currentColor"
-                                                    stroke-width="1.4" stroke-linecap="round"></path>
-                                            </svg></span></a>
+                                    </div><a href="{{ pdf_url }}" target="_blank" rel="noopener" class="text-link">Read the paper<span class="text-link_icon"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 10L10 4M10 4H5M10 4V9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"></path></svg></span></a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
+            {{ /collection:publications }}
             <section class="section">
                 <div id="latest" class="anchor"></div>
                 <div class="latest-head">
-                    <div class="eyebrow">Latest</div>
+                    <div class="eyebrow">All publications</div>
                 </div>
                 <div class="w-dyn-list">
                     <div role="list" class="post-list w-dyn-items">
-                        <div role="listitem" class="w-dyn-item"><a href="/posts/same-day-claims"
+                        {{ collection:publications featured:isnt="true" }}
+                        <div role="listitem" class="w-dyn-item"><a href="{{ pdf_url }}" target="_blank" rel="noopener"
                                 class="post-card w-inline-block">
-                                <div class="post-card_media"><img
-                                        src="/hmxtech/6aec83b44f4f0425b95841e1/6aec83b44f4f0425b9584243_6aeb4a023adb42d8240afc0d_cover-claims.webp"
-                                        loading="lazy" alt="A 09:30 visit turning into a claim sent at 09:42"
-                                        class="post-card_img"></div>
-                                <div class="post-card_tag">Billing</div>
-                                <h3 class="post-card_title">Same-day claims without a billing team</h3>
-                                <p class="post-card_text">What changes when charges are coded from the visit note
-                                    instead of a spreadsheet.</p>
+                                <div class="post-card_media"><img src="/hmxtech/img/publications/{{ topic:value }}.webp"
+                                        loading="lazy" width="832" height="500" alt="" class="post-card_img"></div>
+                                <div class="post-card_tag">{{ topic:label }}</div>
+                                <h3 class="post-card_title">{{ title }}</h3>
+                                <p class="post-card_text">{{ summary }}</p>
                                 <div class="post-card_meta">
-                                    <div>October 24, 2026</div>
+                                    <div>Free PDF</div>
                                     <div class="byline_sep">,</div>
-                                    <div>6 min read</div>
+                                    <div>Opens in a new tab</div>
                                 </div>
                             </a></div>
-                        <div role="listitem" class="w-dyn-item"><a href="/posts/check-in-from-the-car"
-                                class="post-card w-inline-block">
-                                <div class="post-card_media"><img
-                                        src="/hmxtech/6aec83b44f4f0425b95841e1/6aec83b44f4f0425b9584263_6aeb4a02d555a9c075cfff34_cover-checkin.webp"
-                                        loading="lazy"
-                                        alt="Phone notification saying a patient has arrived in parking spot 4"
-                                        class="post-card_img"></div>
-                                <div class="post-card_tag">Patient experience</div>
-                                <h3 class="post-card_title">The check-in that starts in the car</h3>
-                                <p class="post-card_text">Why the waiting room is the worst part of a visit, and how to
-                                    skip it.</p>
-                                <div class="post-card_meta">
-                                    <div>October 15, 2026</div>
-                                    <div class="byline_sep">,</div>
-                                    <div>5 min read</div>
-                                </div>
-                            </a></div>
-                        <div role="listitem" class="w-dyn-item"><a href="/posts/one-record-architecture"
-                                class="post-card w-inline-block">
-                                <div class="post-card_media"><img
-                                        src="/hmxtech/6aec83b44f4f0425b95841e1/6aec83b44f4f0425b9584283_6aeb4a02d555a9c075cfff6d_cover-architecture.webp"
-                                        loading="lazy"
-                                        alt="Diagram of scheduling, intake, messaging, billing and sync all connected to one patient record"
-                                        class="post-card_img"></div>
-                                <div class="post-card_tag">Product</div>
-                                <h3 class="post-card_title"
-                                    style="translate: none; rotate: none; scale: none; color: rgb(29, 30, 34); transform: translate3d(0px, 0px, 0px);">
-                                    One record, five modules: the architecture</h3>
-                                <p class="post-card_text">A plain-language tour of how every part of Carefront reads and
-                                    writes the same patient.</p>
-                                <div class="post-card_meta">
-                                    <div>October 3, 2026</div>
-                                    <div class="byline_sep">,</div>
-                                    <div>9 min read</div>
-                                </div>
-                            </a></div>
-                        <div role="listitem" class="w-dyn-item"><a href="/posts/baa-checklist"
-                                class="post-card w-inline-block">
-                                <div class="post-card_media"><img
-                                        src="/hmxtech/6aec83b44f4f0425b95841e1/6aec83b44f4f0425b9584299_6aeb4a03b99667771e5a2a19_cover-baa.webp"
-                                        loading="lazy" alt="A business associate agreement document stamped HIPAA"
-                                        class="post-card_img"></div>
-                                <div class="post-card_tag">Compliance</div>
-                                <h3 class="post-card_title">A BAA checklist for small clinics</h3>
-                                <p class="post-card_text">The eight clauses worth reading closely before you sign with
-                                    any vendor.</p>
-                                <div class="post-card_meta">
-                                    <div>September 21, 2026</div>
-                                    <div class="byline_sep">,</div>
-                                    <div>8 min read</div>
-                                </div>
-                            </a></div>
-                        <div role="listitem" class="w-dyn-item"><a href="/posts/front-desk-staffing"
-                                class="post-card w-inline-block">
-                                <div class="post-card_media"><img
-                                        src="/hmxtech/6aec83b44f4f0425b95841e1/6aec83b44f4f0425b95842b7_6aeb4a04649b7895ccd6fd4b_cover-staffing.webp"
-                                        loading="lazy"
-                                        alt="Front desk staffing chart by hour with three people at the peak"
-                                        class="post-card_img"></div>
-                                <div class="post-card_tag">Operations</div>
-                                <h3 class="post-card_title">Front desk staffing after go-live</h3>
-                                <p class="post-card_text">Three clinics share what they did with the hours they got
-                                    back.</p>
-                                <div class="post-card_meta">
-                                    <div>September 9, 2026</div>
-                                    <div class="byline_sep">,</div>
-                                    <div>6 min read</div>
-                                </div>
-                            </a></div>
-                        <div role="listitem" class="w-dyn-item"><a href="/posts/copays-at-the-door"
-                                class="post-card w-inline-block">
-                                <div class="post-card_media"><img
-                                        src="/hmxtech/6aec83b44f4f0425b95841e1/6aec83b44f4f0425b95842ba_6aeb4a0507d3beff1ac3670c_cover-copays.webp"
-                                        loading="lazy" alt="A $40.00 copay receipt marked paid at check-in"
-                                        class="post-card_img"></div>
-                                <div class="post-card_tag">Billing</div>
-                                <h3 class="post-card_title"
-                                    style="translate: none; rotate: none; scale: none; color: rgb(29, 30, 34); transform: translate3d(0px, 0px, 0px);">
-                                    Copays at the door, not in the mail</h3>
-                                <p class="post-card_text">Card on file, payment links and the end of paper statements.
-                                </p>
-                                <div class="post-card_meta">
-                                    <div>August 28, 2026</div>
-                                    <div class="byline_sep">,</div>
-                                    <div>4 min read</div>
-                                </div>
-                            </a></div>
+                        {{ /collection:publications }}
                     </div>
                 </div>
             </section>
@@ -179,19 +86,19 @@
                 <div class="newsletter">
                     <div class="newsletter_copy">
                         <div class="eyebrow">Newsletter</div>
-                        <h2 class="heading-section is-small">One short email a month.</h2>
-                        <p class="text-body">New research, product notes and nothing else. Unsubscribe any time.</p>
+                        <h2 class="heading-section is-small">New papers by email.</h2>
+                        <p class="text-body">A short note when we publish a new paper or open a new tool. Nothing else.</p>
                     </div>
                     <div id="newsletter-research" class="w-form">
                         {{ if ! {form:success in="newsletter"} }}{{ form:create in="newsletter" redirect="{uri}#newsletter-research" error_redirect="{uri}#newsletter-research" attr:id="wf-form-Research-newsletter" attr:name="wf-form-Research-newsletter" data-name="Research newsletter" class="subscribe" aria-label="Research newsletter" data-wf-no-turnstile="true" }}
 <div style="display:none" aria-hidden="true"><input type="text" name="website" tabindex="-1" autocomplete="off"></div><input type="hidden" name="source" value="research"><input
                                 class="field_input is-raised w-input" autocomplete="email" maxlength="256" name="email"
-                                data-name="email" placeholder="Work email" type="email" id="field-2" required="" value="{{ old:email }}"><input
+                                data-name="email" placeholder="Email address" type="email" id="field-2" required="" value="{{ old:email }}"><input
                                 type="submit" data-wait="Please wait..." class="button w-button"
                                 value="Subscribe">{{ /form:create }}{{ /if }}
                         <div class="form-msg w-form-done" {{ if {form:success in="newsletter"} }}style="display:block" {{ /if }} tabindex="-1" role="region"
                             aria-label="Research newsletter success">
-                            <div>You are subscribed. The next note lands at the start of the month.</div>
+                            <div>You are subscribed. We will email you when the next paper is out.</div>
                         </div>
                         <div class="form-msg is-error w-form-fail" {{ if {form:errors in="newsletter"} && old:source == 'research' }}style="display:block" {{ /if }} tabindex="-1" role="region"
                             aria-label="Research newsletter failure">

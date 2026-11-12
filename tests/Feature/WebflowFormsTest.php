@@ -58,7 +58,7 @@ test('webflow forms post to their Statamic form handlers', function (string $uri
         ->assertDontSee('challenges.cloudflare.com/turnstile', false);
 })->with([
     'contact walkthrough' => ['/contact', 'walkthrough', 'walkthrough'],
-    'research newsletter' => ['/research', 'newsletter', 'newsletter-research'],
+    'research newsletter' => ['/publications', 'newsletter', 'newsletter-research'],
     'changelog newsletter' => ['/changelog', 'newsletter', 'newsletter-changelog'],
     'footer newsletter' => ['/pricing', 'newsletter', 'newsletter-footer'],
 ]);
@@ -102,28 +102,28 @@ test('an invalid walkthrough request shows the failure message and keeps the inp
 });
 
 test('a newsletter sign-up records where it came from', function () {
-    $form = webflowFormPayload($this->get('/research')->getContent(), 'newsletter');
+    $form = webflowFormPayload($this->get('/publications')->getContent(), 'newsletter');
 
     expect($form['fields'])->toHaveKey('source');
 
     $this->post($form['action'], $form['fields'] + ['email' => 'reader@example.test'])
-        ->assertRedirect('/research#newsletter-research');
+        ->assertRedirect('/publications#newsletter-research');
 
     $submission = Form::find('newsletter')->submissions()
         ->first(fn ($submission) => $submission->get('email') === 'reader@example.test');
 
     expect($submission?->get('source'))->toBe($form['fields']['source']);
 
-    $this->get('/research')->assertSee('w-form-done" style="display:block"', false);
+    $this->get('/publications')->assertSee('w-form-done" style="display:block"', false);
 });
 
 test('a failed footer sign-up only flags the footer form', function () {
-    $form = webflowFormPayload($this->get('/research')->getContent(), 'newsletter');
+    $form = webflowFormPayload($this->get('/publications')->getContent(), 'newsletter');
 
     $this->post($form['action'], ['source' => 'footer', 'email' => 'not-an-email'] + $form['fields'])
         ->assertRedirect();
 
-    $page = $this->get('/research')->getContent();
+    $page = $this->get('/publications')->getContent();
 
     expect(substr_count($page, 'w-form-fail" style="display:block"'))->toBe(1)
         ->and($page)->toMatch('/footer_form-message w-form-fail" style="display:block"/');
