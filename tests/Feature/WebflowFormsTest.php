@@ -39,7 +39,7 @@ beforeEach(function () {
 });
 
 afterEach(function () {
-    foreach (['walkthrough', 'newsletter'] as $handle) {
+    foreach (['project_enquiry', 'newsletter'] as $handle) {
         Form::find($handle)?->submissions()
             ->filter(fn ($submission) => str_ends_with((string) $submission->get('email'), '@example.test'))
             ->each->delete();
@@ -57,48 +57,54 @@ test('webflow forms post to their Statamic form handlers', function (string $uri
         ->assertDontSee('data-turnstile-sitekey', false)
         ->assertDontSee('challenges.cloudflare.com/turnstile', false);
 })->with([
-    'contact walkthrough' => ['/contact', 'walkthrough', 'walkthrough'],
+    'contact quote request' => ['/contact', 'project_enquiry', 'quote'],
     'research newsletter' => ['/publications', 'newsletter', 'newsletter-research'],
     'changelog newsletter' => ['/news', 'newsletter', 'newsletter-changelog'],
     'footer newsletter' => ['/how-we-work', 'newsletter', 'newsletter-footer'],
 ]);
 
-test('a walkthrough request is stored and replaces the form with the success message', function () {
-    $form = webflowFormPayload($this->get('/contact')->getContent(), 'walkthrough');
+test('a quote request is stored and replaces the form with the success message', function () {
+    $form = webflowFormPayload($this->get('/contact')->getContent(), 'project_enquiry');
 
     $this->post($form['action'], $form['fields'] + [
-        'first_name' => 'Ana',
-        'last_name' => 'Silva',
-        'email' => 'ana@example.test',
-        'clinic' => 'Harbor Family Clinic',
-        'providers' => '4-10',
-        'message' => 'We would like a walkthrough.',
-    ])->assertRedirect('/contact#walkthrough');
+        'first_name' => 'Asha',
+        'last_name' => 'Mwakalinga',
+        'email' => 'asha@example.test',
+        'phone' => '+255 700 000 000',
+        'project_type' => 'building',
+        'location' => 'Mbeya',
+        'message' => 'A two-storey house on a sloping plot.',
+    ])->assertRedirect('/contact#quote');
 
-    $submission = Form::find('walkthrough')->submissions()
-        ->first(fn ($submission) => $submission->get('email') === 'ana@example.test');
+    $submission = Form::find('project_enquiry')->submissions()
+        ->first(fn ($submission) => $submission->get('email') === 'asha@example.test');
 
     expect($submission)->not->toBeNull()
-        ->and($submission->get('first_name'))->toBe('Ana')
-        ->and($submission->get('providers'))->toBe('4-10');
+        ->and($submission->get('first_name'))->toBe('Asha')
+        ->and($submission->get('project_type'))->toBe('building')
+        ->and($submission->get('location'))->toBe('Mbeya');
 
     $this->get('/contact')
         ->assertSee('w-form-done" style="display:block"', false)
-        ->assertDontSee('action="'.config('app.url').'/!/forms/walkthrough"', false);
+        ->assertDontSee('action="'.config('app.url').'/!/forms/project_enquiry"', false);
 });
 
-test('an invalid walkthrough request shows the failure message and keeps the input', function () {
-    $form = webflowFormPayload($this->get('/contact')->getContent(), 'walkthrough');
+test('an invalid quote request shows the failure message and keeps the input', function () {
+    $form = webflowFormPayload($this->get('/contact')->getContent(), 'project_enquiry');
 
     $this->post($form['action'], $form['fields'] + [
-        'first_name' => 'Ana',
+        'first_name' => 'Asha',
         'email' => 'not-an-email',
-    ])->assertRedirect('/contact#walkthrough');
+    ])->assertRedirect('/contact#quote');
 
     $this->get('/contact')
         ->assertSee('w-form-fail" style="display:block"', false)
-        ->assertSee('value="Ana"', false)
-        ->assertSee('action="'.config('app.url').'/!/forms/walkthrough"', false);
+        ->assertSee('value="Asha"', false)
+        ->assertSee('action="'.config('app.url').'/!/forms/project_enquiry"', false);
+});
+
+test('quote requests are emailed to HMXTECH', function () {
+    expect(Form::find('project_enquiry')->email()[0]['to'])->toBe('info@hmxtech.co.tz');
 });
 
 test('a newsletter sign-up records where it came from', function () {

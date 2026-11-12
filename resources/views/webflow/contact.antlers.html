@@ -20,9 +20,8 @@
 				<div class="contact-grid">
 					<div class="contact-copy">
 						<div class="eyebrow">Contact</div>
-						<h1 class="heading-hero">Talk to a person, not a queue.</h1>
-						<p class="page-hero_text is-narrow">Tell us about your clinic and we will set up a 30 minute
-							walkthrough with your own schedule and EHR.</p>
+						<h1 class="heading-hero">Talk to an engineer, not a queue.</h1>
+						<p class="page-hero_text is-narrow">Tell us about your site and what you want to build. We will reply with next steps and, where we can, a quote.</p>
 						<div class="channels">
 							<div class="channel">
 								<div class="channel_main">
@@ -82,54 +81,60 @@
 						</div>
 					</div>
 					<div class="form-card">
-						<h2 class="form-card_title">Book a walkthrough</h2>
-						<div id="walkthrough" class="form-card_form w-form">
-							{{ if ! {form:success in="walkthrough"} }}{{ form:create in="walkthrough" redirect="{uri}#walkthrough" error_redirect="{uri}#walkthrough" attr:id="wf-form-Book-a-walkthrough" attr:name="wf-form-Book-a-walkthrough" data-name="Book a walkthrough" class="form-card_form" aria-label="Book a walkthrough" data-wf-no-turnstile="true" }}
+						<h2 class="form-card_title">Request a quote</h2>
+						<div id="quote" class="form-card_form w-form">
+							{{ if ! {form:success in="project_enquiry"} }}{{ form:create in="project_enquiry" redirect="{uri}#quote" error_redirect="{uri}#quote" attr:id="wf-form-Request-a-quote" attr:name="wf-form-Request-a-quote" data-name="Request a quote" class="form-card_form" aria-label="Request a quote" data-wf-no-turnstile="true" }}
 <div style="display:none" aria-hidden="true"><input type="text" name="website" tabindex="-1" autocomplete="off"></div>
-								<div class="field-row"><label for="" class="field"><span class="field_label">First
-											name</span><input class="field_input w-input" autocomplete="given-name"
-											maxlength="256" name="first_name" data-name="first_name" placeholder="Ana"
-											type="text" id="field-2" required="" value="{{ old:first_name }}"></label><label for=""
+								<div class="field-row"><label for="quote-first-name" class="field"><span class="field_label">First name</span><input
+											class="field_input w-input" autocomplete="given-name" maxlength="256"
+											name="first_name" data-name="first_name" placeholder="Asha" type="text"
+											id="quote-first-name" required="" value="{{ old:first_name }}"></label><label for="quote-last-name"
 										class="field"><span class="field_label">Last name</span><input
 											class="field_input w-input" autocomplete="family-name" maxlength="256"
-											name="last_name" data-name="last_name" placeholder="Silva" type="text"
-											id="field-2" required="" value="{{ old:last_name }}"></label></div><label for="" class="field"><span
-										class="field_label">Work email</span><input class="field_input w-input"
-										autocomplete="email" maxlength="256" name="email" data-name="email"
-										placeholder="ana@clinic.com" type="email" id="field-2"
-										required="" value="{{ old:email }}"></label><label for="" class="field"><span class="field_label">Clinic
-										name</span><input class="field_input w-input" autocomplete="organization"
-										maxlength="256" name="clinic" data-name="clinic"
-										placeholder="Harbor Family Clinic" type="text" id="field-2" value="{{ old:clinic }}"></label><label
-									for="" class="field"><span class="field_label">Number of providers</span><select
-										id="field-2" name="providers" data-name="providers"
+											name="last_name" data-name="last_name" placeholder="Mwakalinga" type="text"
+											id="quote-last-name" required="" value="{{ old:last_name }}"></label></div>
+								<div class="field-row"><label for="quote-email" class="field"><span class="field_label">Email</span><input
+											class="field_input w-input" autocomplete="email" maxlength="256" name="email"
+											data-name="email" placeholder="you@example.com" type="email" id="quote-email"
+											required="" value="{{ old:email }}"></label><label for="quote-phone" class="field"><span
+											class="field_label">Phone</span><input class="field_input w-input"
+											autocomplete="tel" maxlength="30" name="phone" data-name="phone"
+											placeholder="+255 7xx xxx xxx" type="tel" id="quote-phone" value="{{ old:phone }}"></label></div>
+								<label for="quote-type" class="field"><span class="field_label">Project type</span><select
+										id="quote-type" name="project_type" data-name="project_type" required=""
 										class="field_input is-select w-select">
-										<option value="1-3">1 to 3</option>
-										<option value="4-10">4 to 10</option>
-										<option value="11-25">11 to 25</option>
-										<option value="26+">26 or more</option>
-									</select></label><label for="" class="field"><span class="field_label">What should
-										we cover?</span><textarea placeholder="Tell us about your workflows"
-										maxlength="5000" id="field-2" name="message" data-name="message"
+										<option value="building"{{ if old:project_type == 'building' }} selected{{ /if }}>Building</option>
+										<option value="civil"{{ if old:project_type == 'civil' }} selected{{ /if }}>Road or civil works</option>
+										<option value="design"{{ if old:project_type == 'design' }} selected{{ /if }}>Consultancy or design only</option>
+										<option value="supervision"{{ if old:project_type == 'supervision' }} selected{{ /if }}>Supervision only</option>
+										<option value="testing"{{ if old:project_type == 'testing' }} selected{{ /if }}>Materials testing</option>
+										<option value="other"{{ if old:project_type == 'other' }} selected{{ /if }}>Other</option>
+									</select></label>
+								<label for="quote-location" class="field"><span class="field_label">Site location</span><input
+										class="field_input w-input" autocomplete="address-level2" maxlength="120"
+										name="location" data-name="location" placeholder="Town or region, e.g. Mbeya"
+										type="text" id="quote-location" value="{{ old:location }}"></label>
+								<label for="quote-message" class="field"><span class="field_label">About the project</span><textarea
+										placeholder="What you want to build, its size and stage, and any drawings you already have"
+										maxlength="5000" id="quote-message" name="message" data-name="message"
 										class="field_input is-area w-input">{{ old:message }}</textarea></label><label
-									class="w-checkbox field-check"><input type="checkbox" id="checkbox"
+									class="w-checkbox field-check"><input type="checkbox" id="quote-newsletter"
 										name="newsletter" data-name="newsletter"
 										class="w-checkbox-input field-check_box"><span
-										class="field-check_label w-form-label" for="newsletter">Send me the monthly
-										notes from the front desk</span></label><input type="submit"
+										class="field-check_label w-form-label" for="quote-newsletter">Send me HMXTECH news and new publications</span></label><input type="submit"
 									data-wait="Please wait..." class="button is-full w-button"
-									value="Request a walkthrough">
+									value="Request a quote">
 							{{ /form:create }}{{ /if }}
-							<div class="form-msg w-form-done" {{ if {form:success in="walkthrough"} }}style="display:block" {{ /if }} tabindex="-1" role="region"
-								aria-label="Book a walkthrough success">
-								<div>Thanks, we have it. Someone from the team will reply within one business day.</div>
+							<div class="form-msg w-form-done" {{ if {form:success in="project_enquiry"} }}style="display:block" {{ /if }}tabindex="-1" role="region"
+								aria-label="Request a quote success">
+								<div>Thanks, we have it. An engineer will get back to you by email or phone.</div>
 							</div>
-							<div class="form-msg is-error w-form-fail" {{ if {form:errors in="walkthrough"} }}style="display:block" {{ /if }} tabindex="-1" role="region"
-								aria-label="Book a walkthrough failure">
-								<div>That did not send. Check the fields above and try again.</div>{{ form:errors in="walkthrough" }}<div>{{ value }}</div>{{ /form:errors }}
+							<div class="form-msg is-error w-form-fail" {{ if {form:errors in="project_enquiry"} }}style="display:block" {{ /if }}tabindex="-1" role="region"
+								aria-label="Request a quote failure">
+								<div>That did not send. Check the fields above and try again.</div>{{ form:errors in="project_enquiry" }}<div>{{ value }}</div>{{ /form:errors }}
 							</div>
 						</div>
-						<p class="form-card_note">We reply within one business day. No sales sequences.</p>
+						<p class="form-card_note">We only use your details to answer your enquiry.</p>
 					</div>
 				</div>
 			</section>
@@ -138,8 +143,8 @@
 					<div class="faq-intro">
 						<div class="mono-label">FAQ</div>
 						<h2 class="heading-xl">Questions, answered.</h2>
-						<p class="text-lead">Can’t find what you need? Our team replies within one business day.</p><a
-							href="mailto:info@hmxtech.co.tz" class="text-link">Talk to our team<span
+						<p class="text-lead">Can’t find what you need? Call +255 758 526 792 or email us.</p><a
+							href="mailto:info@hmxtech.co.tz" class="text-link">Email info@hmxtech.co.tz<span
 								class="text-link_icon"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"
 									xmlns="http://www.w3.org/2000/svg">
 									<path d="M4 10L10 4M10 4H5M10 4V9" stroke="currentColor" stroke-width="1.4"
@@ -149,7 +154,7 @@
 					<div class="faq-list">
 						<div class="faq-item">
 							<div class="faq-question">
-								<div class="faq-question_text">How long does it take to go live?</div>
+								<div class="faq-question_text">Where is your office?</div>
 								<div class="faq-icon">
 									<div class="faq-icon_inner"><svg width="12" height="12" viewBox="0 0 12 12"
 											fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -159,13 +164,12 @@
 								</div>
 							</div>
 							<div class="faq-answer">
-								<p class="faq-answer_text">Most clinics are live in 30 days. We connect your EHR, import
-									your schedule and train the front desk in two short sessions.</p>
+								<p class="faq-answer_text">We are in Mbeya, Tanzania, at P.O. Box 1897. Call ahead and we will arrange to meet you at the office or on your site.</p>
 							</div>
 						</div>
 						<div class="faq-item">
 							<div class="faq-question">
-								<div class="faq-question_text">Which EHRs do you integrate with?</div>
+								<div class="faq-question_text">Do you visit the site before quoting?</div>
 								<div class="faq-icon">
 									<div class="faq-icon_inner"><svg width="12" height="12" viewBox="0 0 12 12"
 											fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -175,13 +179,12 @@
 								</div>
 							</div>
 							<div class="faq-answer">
-								<p class="faq-answer_text">Cobalt, Summit, Ledgerline, Fernway and most FHIR or HL7
-									systems. Appointments, notes and claims sync both ways in real time.</p>
+								<p class="faq-answer_text">For most building and civil works, yes. A firm quote depends on ground conditions, access and the drawings, so an engineer will usually see the site first.</p>
 							</div>
 						</div>
 						<div class="faq-item">
 							<div class="faq-question">
-								<div class="faq-question_text">Is Carefront HIPAA compliant?</div>
+								<div class="faq-question_text">Can I send drawings with my enquiry?</div>
 								<div class="faq-icon">
 									<div class="faq-icon_inner"><svg width="12" height="12" viewBox="0 0 12 12"
 											fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -191,14 +194,12 @@
 								</div>
 							</div>
 							<div class="faq-answer">
-								<p class="faq-answer_text">Yes. Carefront is SOC 2 Type II audited and HITRUST
-									certified, every plan includes a signed BAA, and data is encrypted at rest and in
-									transit.</p>
+								<p class="faq-answer_text">Yes. Email drawings, surveys or a bill of quantities to info@hmxtech.co.tz, or mention them in the form and we will ask for them.</p>
 							</div>
 						</div>
 						<div class="faq-item">
 							<div class="faq-question">
-								<div class="faq-question_text">Can patients pay through Carefront?</div>
+								<div class="faq-question_text">Do you take on small projects?</div>
 								<div class="faq-icon">
 									<div class="faq-icon_inner"><svg width="12" height="12" viewBox="0 0 12 12"
 											fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -208,14 +209,12 @@
 								</div>
 							</div>
 							<div class="faq-answer">
-								<p class="faq-answer_text">Patients pay copays and balances from a text link or the
-									patient app. Card on file and payment plans come standard on Practice and Network.
-								</p>
+								<p class="faq-answer_text">Yes. We work for individual clients as well as public and private institutions, from a single house to roads and public buildings.</p>
 							</div>
 						</div>
 						<div class="faq-item">
 							<div class="faq-question">
-								<div class="faq-question_text">Do you charge per patient?</div>
+								<div class="faq-question_text">Is the call or first meeting free?</div>
 								<div class="faq-icon">
 									<div class="faq-icon_inner"><svg width="12" height="12" viewBox="0 0 12 12"
 											fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -225,13 +224,12 @@
 								</div>
 							</div>
 							<div class="faq-answer">
-								<p class="faq-answer_text">No. Pricing is per provider, per month. Front desk staff are
-									free and there is no limit on patients or messages.</p>
+								<p class="faq-answer_text">Talking through your project costs nothing. If a site visit, survey or testing is needed before a quote, we will tell you the cost first.</p>
 							</div>
 						</div>
 						<div class="faq-item">
 							<div class="faq-question">
-								<div class="faq-question_text">Can we bring our existing intake forms?</div>
+								<div class="faq-question_text">Where can I get help with Truss Analyzer?</div>
 								<div class="faq-icon">
 									<div class="faq-icon_inner"><svg width="12" height="12" viewBox="0 0 12 12"
 											fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -241,8 +239,7 @@
 								</div>
 							</div>
 							<div class="faq-answer">
-								<p class="faq-answer_text">Send us your current PDFs and we rebuild them as mobile forms
-									that write straight into the chart, usually within a week.</p>
+								<p class="faq-answer_text">Truss Analyzer is free at hmxtech.co.tz/truss. The Read Me explains how to model joints, members, supports and loads, and you can email us with questions.</p>
 							</div>
 						</div>
 					</div>
