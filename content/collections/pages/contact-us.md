@@ -40,11 +40,11 @@ blocks:
       aria_label: 'SandC Technology, Ottu Building, KABWE, Mbeya, Tanzania'
     contact_details:
       address_label: 'Office Address'
-      address: 'SandC Technology, Ottu Building, KABWE, Mbeya, Tanzania'
+      address: 'P.O. Box 1897, Mbeya, Tanzania'
       email_label: 'Email'
-      email: 'info@seedstone.co.tz'
+      email: 'info@hmxtech.co.tz'
       phone_label: 'Phone Number'
-      phone: '+255 765 665 034'
+      phone: '+255 758 526 792'
     social:
       facebook_url: '#'
       twitter_url: '#'

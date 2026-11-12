@@ -1,0 +1,196 @@
+<footer class="footer">
+        <div class="footer_panel">
+          <div class="footer_top">
+            <div class="footer_brand"><a href="/" {{ if is_homepage }}aria-current="page" {{ /if }}class="footer_logo w-inline-block{{ if is_homepage }} w--current{{ /if }}">
+                <img class="nav_brand-mark hx-logo" src="/hmxtech/brand/logo-for-dark-bg.svg" alt="" width="68" height="28">
+          <div class="nav_brand-text hx-wordmark">HMXTECH</div>
+              </a>
+              <p class="footer_tagline">Your building is our business. Engineering consultancy and construction from Mbeya, Tanzania.</p>
+            </div>
+            <div class="footer_news">
+              <div class="mono-label is-panel">News from site</div>
+              <p class="footer_tagline">Occasional updates on our projects, research and engineering events.</p>
+              <div class="footer_form-block">
+                <div id="newsletter-footer" class="footer_form w-form">
+                  {{ if ! {form:success in="newsletter"} }}{{ form:create in="newsletter" redirect="{uri}#newsletter-footer" error_redirect="{uri}#newsletter-footer" data-name="newsletter" class="footer_form-fields" aria-label="newsletter" data-wf-no-turnstile="true" }}
+<div style="display:none" aria-hidden="true"><input type="text" name="website" tabindex="-1" autocomplete="off"></div><input type="hidden" name="source" value="footer"><input
+                      class="footer_input w-input" maxlength="256" name="email" data-name="email"
+                      aria-label="Email address" placeholder="Email address" type="email" id="field" required="" value="{{ old:email }}"><input
+                      type="submit" data-wait="Please wait..." class="footer_submit w-button"
+                      value="Subscribe">{{ /form:create }}{{ /if }}
+                  <div class="footer_form-message w-form-done" {{ if {form:success in="newsletter"} }}style="display:block" {{ /if }} tabindex="-1" role="region"
+                    aria-label="newsletter success">
+                    <div>You're on the list. We'll send our next update to this address.</div>
+                  </div>
+                  <div class="footer_form-message w-form-fail" {{ if {form:errors in="newsletter"} && old:source == 'footer' }}style="display:block" {{ /if }} tabindex="-1" role="region"
+                    aria-label="newsletter failure">
+                    <div>That didn't go through. Check your email address and try again.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer_cols">
+            <div class="footer_col">
+              <div class="mono-label is-panel">Services</div><a href="/#services" class="footer_link">Consultancy</a><a
+                href="/#services" class="footer_link">Building construction</a><a href="/#services"
+                class="footer_link">Civil works</a><a href="/#services" class="footer_link">Analysis and design</a><a
+                href="https://hmxtech.co.tz/truss/" class="footer_link">Truss Analyzer</a>
+            </div>
+            <div class="footer_col">
+              <div class="mono-label is-panel">Get in touch</div><a href="tel:+255758526792" class="footer_link">+255 758 526 792</a><a
+                href="tel:+255767307685" class="footer_link">+255 767 307 685</a><a href="mailto:info@hmxtech.co.tz"
+                class="footer_link">info@hmxtech.co.tz</a><a href="/contact" class="footer_link">P.O. Box 1897, Mbeya</a>
+            </div>
+            <div class="footer_col">
+              <div class="mono-label is-panel">Company</div><a href="/about" {{ if uri == '/about' }}aria-current="page" {{ /if }}class="footer_link{{ if uri == '/about' }} w--current{{ /if }}">About</a><a
+                href="/#research" class="footer_link">Research</a><a href="/about#careers" class="footer_link">Careers</a><a href="/contact" {{ if uri == '/contact' }}aria-current="page" {{ /if }}class="footer_link{{ if uri == '/contact' }} w--current{{ /if }}">Contact</a>
+            </div>
+            <div class="footer_col">
+              <div class="mono-label is-panel">Resources</div><a href="/research" {{ if uri == '/research' }}aria-current="page" {{ /if }}class="footer_link{{ if uri == '/research' }} w--current{{ /if }}">Publications</a><a href="/changelog" {{ if uri == '/changelog' }}aria-current="page" {{ /if }}class="footer_link{{ if uri == '/changelog' }} w--current{{ /if }}">News</a><a href="https://hmxtech.co.tz/truss/"
+                class="footer_link">Truss Analyzer</a><a href="/instructions" {{ if uri == '/instructions' }}aria-current="page" {{ /if }}class="footer_link{{ if uri == '/instructions' }} w--current{{ /if }}">Instructions</a><a href="/style-guide" {{ if uri == '/style-guide' }}aria-current="page" {{ /if }}class="footer_link{{ if uri == '/style-guide' }} w--current{{ /if }}">Style Guide</a>
+            </div>
+            <div class="footer_col is-trust">
+              <div class="mono-label is-panel">Registered</div>
+              <div class="footer_trust">
+                <div class="tier_check"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
+                    height="14" width="14">
+                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor"
+                      d="M2.5 6.2L5 8.5L9.5 3.5"></path>
+                  </svg></div>
+                <div>BRELA 478140</div>
+              </div>
+              <div class="footer_trust">
+                <div class="tier_check"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
+                    height="14" width="14">
+                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor"
+                      d="M2.5 6.2L5 8.5L9.5 3.5"></path>
+                  </svg></div>
+                <div>ERB 238L</div>
+              </div>
+              <div class="footer_trust">
+                <div class="tier_check"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
+                    height="14" width="14">
+                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor"
+                      d="M2.5 6.2L5 8.5L9.5 3.5"></path>
+                  </svg></div>
+                <div>CRB B5 building</div>
+              </div>
+              <div class="footer_trust">
+                <div class="tier_check"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
+                    height="14" width="14">
+                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor"
+                      d="M2.5 6.2L5 8.5L9.5 3.5"></path>
+                  </svg></div>
+                <div>CRB C6 civil works</div>
+              </div>
+            </div>
+          </div>
+          <div class="footer_bottom">
+            <div class="footer_legal">© 2026 HMXTECH Company Limited</div>
+            <div class="footer_status">
+              <div class="footer_status-dot"></div>
+              <div>Taking on new projects</div>
+            </div>
+            <div class="footer_legal-links"><a href="/privacy" {{ if uri == '/privacy' }}aria-current="page" {{ /if }}class="footer_legal-link{{ if uri == '/privacy' }} w--current{{ /if }}">Privacy</a><a href="/terms" {{ if uri == '/terms' }}aria-current="page" {{ /if }}class="footer_legal-link{{ if uri == '/terms' }} w--current{{ /if }}">Terms</a><a href="/licenses" {{ if uri == '/licenses' }}aria-current="page" {{ /if }}class="footer_legal-link{{ if uri == '/licenses' }} w--current{{ /if }}">Licenses</a></div>
+          </div>
+          <div class="footer_schedule"><svg aria-hidden="true" fill="none" preserveAspectRatio="xMidYMin slice"
+              viewBox="0 0 1150 240" xmlns="http://www.w3.org/2000/svg" class="footer_schedule-svg footer_schedule-svg">
+              <line stroke-width="1" y2="240" x2="0" y1="28" x1="0" class="ill-s-line-panel ill-s-line-panel"></line>
+              <text font-size="11" y="18" x="6" class="ill-t ill-f-panel-subtle ill-t ill-f-panel-subtle">07:00</text>
+              <line stroke-width="1" y2="240" x2="92.5" y1="28" x1="92.5" class="ill-s-line-panel ill-s-line-panel">
+              </line><text font-size="11" y="18" x="98.5"
+                class="ill-t ill-f-panel-subtle ill-t ill-f-panel-subtle">08:00</text>
+              <line stroke-width="1" y2="240" x2="185" y1="28" x1="185" class="ill-s-line-panel ill-s-line-panel">
+              </line><text font-size="11" y="18" x="191"
+                class="ill-t ill-f-panel-subtle ill-t ill-f-panel-subtle">09:00</text>
+              <line stroke-width="1" y2="240" x2="277.5" y1="28" x1="277.5" class="ill-s-line-panel ill-s-line-panel">
+              </line><text font-size="11" y="18" x="283.5"
+                class="ill-t ill-f-panel-subtle ill-t ill-f-panel-subtle">10:00</text>
+              <line stroke-width="1" y2="240" x2="370" y1="28" x1="370" class="ill-s-line-panel ill-s-line-panel">
+              </line><text font-size="11" y="18" x="376"
+                class="ill-t ill-f-panel-subtle ill-t ill-f-panel-subtle">11:00</text>
+              <line stroke-width="1" y2="240" x2="462.5" y1="28" x1="462.5" class="ill-s-line-panel ill-s-line-panel">
+              </line><text font-size="11" y="18" x="468.5"
+                class="ill-t ill-f-panel-subtle ill-t ill-f-panel-subtle">12:00</text>
+              <line stroke-width="1" y2="240" x2="555" y1="28" x1="555" class="ill-s-line-panel ill-s-line-panel">
+              </line><text font-size="11" y="18" x="561"
+                class="ill-t ill-f-panel-subtle ill-t ill-f-panel-subtle">13:00</text>
+              <line stroke-width="1" y2="240" x2="647.5" y1="28" x1="647.5" class="ill-s-line-panel ill-s-line-panel">
+              </line><text font-size="11" y="18" x="653.5"
+                class="ill-t ill-f-panel-subtle ill-t ill-f-panel-subtle">14:00</text>
+              <line stroke-width="1" y2="240" x2="740" y1="28" x1="740" class="ill-s-line-panel ill-s-line-panel">
+              </line><text font-size="11" y="18" x="746"
+                class="ill-t ill-f-panel-subtle ill-t ill-f-panel-subtle">15:00</text>
+              <line stroke-width="1" y2="240" x2="832.5" y1="28" x1="832.5" class="ill-s-line-panel ill-s-line-panel">
+              </line><text font-size="11" y="18" x="838.5"
+                class="ill-t ill-f-panel-subtle ill-t ill-f-panel-subtle">16:00</text>
+              <line stroke-width="1" y2="240" x2="925" y1="28" x1="925" class="ill-s-line-panel ill-s-line-panel">
+              </line><text font-size="11" y="18" x="931"
+                class="ill-t ill-f-panel-subtle ill-t ill-f-panel-subtle">17:00</text>
+              <line stroke-width="1" y2="240" x2="1017.5" y1="28" x1="1017.5" class="ill-s-line-panel ill-s-line-panel">
+              </line><text font-size="11" y="18" x="1023.5"
+                class="ill-t ill-f-panel-subtle ill-t ill-f-panel-subtle">18:00</text>
+              <line stroke-width="1" y2="240" x2="1110" y1="28" x1="1110" class="ill-s-line-panel ill-s-line-panel">
+              </line><text font-size="11" y="18" x="1116"
+                class="ill-t ill-f-panel-subtle ill-t ill-f-panel-subtle">19:00</text>
+              <rect rx="4" height="34" width="79.3" y="40" x="18.5" class="ill-f-panel-raised ill-f-panel-raised">
+              </rect>
+              <rect rx="4" height="34" width="79.2" y="40" x="138.8" class="ill-f-accent ill-f-accent"></rect>
+              <rect rx="4" height="34" width="51.5" y="40" x="277.5" class="ill-f-panel-raised ill-f-panel-raised">
+              </rect>
+              <rect rx="4" height="34" width="125.5" y="40" x="388.5" class="ill-f-panel-raised ill-f-panel-raised">
+              </rect>
+              <rect rx="4" height="34" width="70.0" y="40" x="564.3" class="ill-f-accent ill-f-accent"></rect>
+              <rect rx="4" height="34" width="125.5" y="40" x="684.5" class="ill-f-panel-raised ill-f-panel-raised">
+              </rect>
+              <rect rx="4" height="34" width="79.3" y="40" x="878.8" class="ill-f-panel-raised ill-f-panel-raised">
+              </rect>
+              <rect rx="4" height="34" width="79.2" y="40" x="999.0" class="ill-f-panel-raised ill-f-panel-raised">
+              </rect>
+              <rect rx="4" height="34" width="107.0" y="88" x="55.5" class="ill-f-panel-raised ill-f-panel-raised">
+              </rect>
+              <rect rx="4" height="34" width="79.2" y="88" x="203.5" class="ill-f-panel-raised ill-f-panel-raised">
+              </rect>
+              <rect rx="4" height="34" width="125.5" y="88" x="323.8" class="ill-f-accent ill-f-accent"></rect>
+              <rect rx="4" height="34" width="70.0" y="88" x="499.5" class="ill-f-panel-raised ill-f-panel-raised">
+              </rect>
+              <rect rx="4" height="34" width="97.7" y="88" x="647.5" class="ill-f-panel-raised ill-f-panel-raised">
+              </rect>
+              <rect rx="4" height="34" width="51.5" y="88" x="795.5" class="ill-f-accent ill-f-accent"></rect>
+              <rect rx="4" height="34" width="134.8" y="88" x="906.5" class="ill-f-panel-raised ill-f-panel-raised">
+              </rect>
+              <rect rx="4" height="34" width="70.0" y="136" x="9.3" class="ill-f-panel-raised ill-f-panel-raised">
+              </rect>
+              <rect rx="4" height="34" width="144.0" y="136" x="120.3" class="ill-f-panel-raised ill-f-panel-raised">
+              </rect>
+              <rect rx="4" height="34" width="60.7" y="136" x="314.5" class="ill-f-panel-raised ill-f-panel-raised">
+              </rect>
+              <rect rx="4" height="34" width="79.3" y="136" x="425.5" class="ill-f-panel-raised ill-f-panel-raised">
+              </rect>
+              <rect rx="4" height="34" width="144.0" y="136" x="555.0" class="ill-f-accent ill-f-accent"></rect>
+              <rect rx="4" height="34" width="79.3" y="136" x="749.3" class="ill-f-panel-raised ill-f-panel-raised">
+              </rect>
+              <rect rx="4" height="34" width="60.7" y="136" x="869.5" class="ill-f-panel-raised ill-f-panel-raised">
+              </rect>
+              <rect rx="4" height="34" width="116.3" y="136" x="980.5" class="ill-f-panel-raised ill-f-panel-raised">
+              </rect>
+              <rect rx="4" height="34" width="97.8" y="184" x="83.3" class="ill-f-panel-raised ill-f-panel-raised">
+              </rect>
+              <rect rx="4" height="34" width="60.7" y="184" x="240.5" class="ill-f-panel-raised ill-f-panel-raised">
+              </rect>
+              <rect rx="4" height="34" width="97.8" y="184" x="360.8" class="ill-f-panel-raised ill-f-panel-raised">
+              </rect>
+              <rect rx="4" height="34" width="70.0" y="184" x="518.0" class="ill-f-accent ill-f-accent"></rect>
+              <rect rx="4" height="34" width="79.2" y="184" x="638.3" class="ill-f-panel-raised ill-f-panel-raised">
+              </rect>
+              <rect rx="4" height="34" width="144.0" y="184" x="767.8" class="ill-f-panel-raised ill-f-panel-raised">
+              </rect>
+              <rect rx="4" height="34" width="70.0" y="184" x="952.8" class="ill-f-panel-raised ill-f-panel-raised">
+              </rect>
+              <line stroke-width="1.5" y2="240" x2="485.6" y1="28" x1="485.6" class="ill-s-text-panel ill-s-text-panel">
+              </line>
+              <circle r="4.5" cy="28" cx="485.6" class="ill-f-text-panel ill-f-text-panel"></circle>
+            </svg></div>
+        </div>
+      </footer>

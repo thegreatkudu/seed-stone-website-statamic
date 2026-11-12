@@ -1,0 +1,462 @@
+/* ==========================================================================
+   HMX Tech — home hero slider
+   --------------------------------------------------------------------------
+   Built on the Webflow export's own tokens (type, spacing, buttons, Ink
+   panels) and the brand palette in hmxtech-brand.css. Markup lives in
+   resources/views/partials/hero_slider.antlers.html.
+   ========================================================================== */
+
+.section_hero.has-slider {
+  padding-top: 0;
+}
+
+.hx-hero {
+  --hx-gutter: 48px;
+  --hx-ease: cubic-bezier(.22, .61, .36, 1);
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: clamp(580px, calc(100svh - 61px), 820px);
+  overflow: hidden;
+  isolation: isolate;
+  background-color: var(--hmx-ink);
+  color: var(--_carefront-color---text--panel);
+}
+
+/* ---- Background images ------------------------------------------------- */
+.hx-hero_media {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.hx-hero_image {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1.2s var(--hx-ease);
+}
+
+.hx-hero_image.is-active {
+  opacity: 1;
+}
+
+.hx-hero_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 70% 50%;
+  transform: scale(1.06);
+}
+
+.hx-hero.is-ready .hx-hero_image.is-active img {
+  transform: scale(1);
+  transition: transform var(--hx-interval, 7s) linear;
+}
+
+/* Keeps the headline readable on any photo: the text column always sits on
+   at least 86% Ink, so muted headline text stays above 5:1 contrast. */
+.hx-hero_scrim {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgb(14 12 29 / .94) 0%, rgb(14 12 29 / .86) 42%, rgb(14 12 29 / .4) 72%, rgb(14 12 29 / .12) 100%),
+    linear-gradient(0deg, rgb(14 12 29 / .85) 0%, rgb(14 12 29 / 0) 30%);
+}
+
+/* ---- Travelling-node line ---------------------------------------------- */
+.hx-hero_line {
+  position: absolute;
+  top: 50%;
+  right: 14%;
+  width: 120px;
+  height: 560px;
+  transform: translateY(-56%);
+  pointer-events: none;
+}
+
+.hx-hero_line-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.hx-hero_line-path {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: hx-draw 1.6s var(--hx-ease) .3s forwards;
+}
+
+.hx-hero_node {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  margin: -7px 0 0 -7px;
+  border: 1.5px solid var(--hmx-magenta);
+  border-radius: 4px;
+  background-color: var(--hmx-ink);
+  box-shadow: 0 0 0 4px rgb(226 29 211 / .14), 0 0 24px rgb(226 29 211 / .55);
+  offset-path: path("M90 0 V150 C90 210 40 230 40 290 C40 350 90 370 90 430 V560");
+  offset-rotate: 0deg;
+  offset-distance: var(--hx-node, 20%);
+  transition: offset-distance 1.4s var(--hx-ease);
+  opacity: 0;
+  animation: hx-fade .6s ease 1.2s forwards;
+}
+
+/* ---- Slide content ------------------------------------------------------ */
+.hx-hero_slides {
+  display: grid;
+  padding: 96px var(--hx-gutter) 148px;
+}
+
+.hx-hero_slide {
+  grid-area: 1 / 1;
+  max-width: 760px;
+}
+
+/* Without JavaScript only the first slide is shown. */
+.hx-hero:not(.is-ready) .hx-hero_slide:not(:first-child),
+.hx-hero:not(.is-ready) .hx-hero_controls {
+  display: none;
+}
+
+/* The outgoing slide clears before the incoming one fades in, so two sets of
+   text and buttons never overlap. */
+.hx-hero.is-ready .hx-hero_slide {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .25s ease, visibility 0s linear .25s;
+}
+
+.hx-hero.is-ready .hx-hero_slide.is-active {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity .45s ease .3s, visibility 0s linear .3s;
+}
+
+.hx-hero_eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+  color: var(--_carefront-color---text--panel-muted);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.hx-hero_eyebrow-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--hmx-magenta);
+  box-shadow: 0 0 10px var(--hmx-magenta);
+}
+
+.hx-hero_heading {
+  margin: 0 0 22px;
+  color: #fff;
+  font-family: "Brygada 1918", sans-serif;
+  font-size: 72px;
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -.02em;
+}
+
+.hx-hero_heading-muted {
+  color: var(--_carefront-color---text--panel-muted);
+}
+
+.hx-hero_text {
+  max-width: 520px;
+  margin: 0;
+  color: var(--_carefront-color---text--panel);
+  font-size: 17px;
+  line-height: 1.55;
+  opacity: .86;
+}
+
+.hx-hero_actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 32px;
+}
+
+.hx-hero .button.is-ghost {
+  border: 1px solid rgb(255 255 255 / .24);
+  background-color: rgb(255 255 255 / .04);
+  color: #fff;
+  transition: background-color .15s, border-color .15s;
+}
+
+.hx-hero .button.is-ghost:hover {
+  border-color: rgb(255 255 255 / .5);
+  background-color: rgb(255 255 255 / .1);
+}
+
+.hx-hero .button:focus-visible,
+.hx-hero_tab:focus-visible,
+.hx-hero_icon-button:focus-visible {
+  outline: 2px solid var(--hmx-violet-300);
+  outline-offset: 3px;
+}
+
+/* Word-by-word reveal (words are wrapped by the slider script). */
+.hx-word {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+  padding-bottom: .08em;
+  margin-bottom: -.08em;
+}
+
+.hx-word > span {
+  display: inline-block;
+  transform: translateY(105%);
+  transition: transform .8s var(--hx-ease);
+  transition-delay: calc(var(--i, 0) * 45ms + 150ms);
+}
+
+.hx-hero_slide.is-active .hx-word > span {
+  transform: translateY(0);
+}
+
+.hx-hero_slide:not(.is-active) .hx-word > span {
+  transition-delay: 0s;
+  transition-duration: .3s;
+}
+
+/* ---- Controls ------------------------------------------------------------ */
+.hx-hero_controls {
+  position: absolute;
+  right: var(--hx-gutter);
+  bottom: 36px;
+  left: var(--hx-gutter);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.hx-hero_tabs {
+  display: flex;
+  flex: 1;
+  gap: 24px;
+  max-width: 720px;
+}
+
+.hx-hero_tab {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  flex: 1;
+  gap: 4px 10px;
+  min-width: 0;
+  padding: 0 0 2px;
+  border: 0;
+  background: none;
+  color: var(--_carefront-color---text--panel-subtle);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+  transition: color .2s;
+}
+
+.hx-hero_tab:hover,
+.hx-hero_tab.is-active {
+  color: #fff;
+}
+
+.hx-hero_tab-num {
+  font-variant-numeric: tabular-nums;
+}
+
+.hx-hero_tab-label {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.hx-hero_tab-track {
+  grid-column: 1 / -1;
+  height: 2px;
+  margin-top: 10px;
+  overflow: hidden;
+  border-radius: 2px;
+  background-color: rgb(255 255 255 / .16);
+}
+
+.hx-hero_tab-fill {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: var(--hmx-gradient);
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.hx-hero_tab.is-done .hx-hero_tab-fill {
+  transform: scaleX(1);
+  opacity: .45;
+}
+
+.hx-hero_tab.is-active .hx-hero_tab-fill {
+  transform: scaleX(var(--hx-progress, 1));
+}
+
+.hx-hero.is-playing .hx-hero_tab.is-active .hx-hero_tab-fill {
+  animation: hx-progress var(--hx-interval, 7s) linear forwards;
+}
+
+.hx-hero.is-held .hx-hero_tab.is-active .hx-hero_tab-fill {
+  animation-play-state: paused;
+}
+
+.hx-hero_buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.hx-hero_icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 1px solid rgb(255 255 255 / .2);
+  border-radius: 2px;
+  background-color: rgb(14 12 29 / .4);
+  color: #fff;
+  cursor: pointer;
+  transition: background-color .15s, border-color .15s;
+}
+
+.hx-hero_icon-button:hover {
+  border-color: rgb(255 255 255 / .45);
+  background-color: rgb(255 255 255 / .08);
+}
+
+.hx-icon-play,
+.hx-hero:not(.is-playing) .hx-icon-pause {
+  display: none;
+}
+
+.hx-hero:not(.is-playing) .hx-icon-play {
+  display: block;
+}
+
+.hx-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* ---- Motion -------------------------------------------------------------- */
+@keyframes hx-draw {
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes hx-fade {
+  to { opacity: 1; }
+}
+
+@keyframes hx-progress {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hx-hero_image,
+  .hx-hero_image img,
+  .hx-hero.is-ready .hx-hero_image.is-active img,
+  .hx-hero_node,
+  .hx-word > span,
+  .hx-hero.is-ready .hx-hero_slide {
+    transition: none !important;
+    animation: none !important;
+  }
+
+  .hx-hero_image img,
+  .hx-word > span {
+    transform: none !important;
+  }
+
+  .hx-hero_line-path {
+    animation: none;
+    stroke-dashoffset: 0;
+  }
+
+  .hx-hero_node {
+    opacity: 1;
+  }
+}
+
+/* ---- Responsive (matches the export's breakpoints) ----------------------- */
+@media screen and (max-width: 991px) {
+  .hx-hero {
+    --hx-gutter: 40px;
+    min-height: clamp(560px, calc(100svh - 61px), 760px);
+  }
+
+  .hx-hero_heading {
+    font-size: 54px;
+  }
+
+  .hx-hero_line {
+    right: 6%;
+    opacity: .6;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .hx-hero {
+    --hx-gutter: 20px;
+    min-height: 600px;
+    justify-content: flex-end;
+  }
+
+  .hx-hero_slides {
+    padding-top: 72px;
+    padding-bottom: 120px;
+  }
+
+  .hx-hero_heading {
+    font-size: 38px;
+  }
+
+  .hx-hero_text {
+    font-size: 15px;
+  }
+
+  .hx-hero_line {
+    display: none;
+  }
+
+  .hx-hero_scrim {
+    background:
+      linear-gradient(0deg, rgb(14 12 29 / .96) 0%, rgb(14 12 29 / .86) 55%, rgb(14 12 29 / .45) 100%);
+  }
+
+  .hx-hero_tabs {
+    gap: 12px;
+  }
+
+  .hx-hero_tab-label {
+    display: none;
+  }
+
+  .hx-hero_buttons .hx-hero_icon-button:not([data-hx-toggle]) {
+    display: none;
+  }
+}

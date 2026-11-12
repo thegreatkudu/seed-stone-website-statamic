@@ -21,8 +21,8 @@ use Statamic\Facades\GlobalSet;
 //     return view('index');
 // });
 
-// Route::get('/about-us', function () {
-//     return view('about-us');
+// Route::get('/about', function () {
+//     return view('about');
 // });
 
 // Route::get('/before-&-after', function () {
@@ -49,8 +49,36 @@ use Statamic\Facades\GlobalSet;
 //     return view('post', compact('slug'));
 // });
 
-// Route::get('/contact-us', function () {
-//     return view('contact-us');
+// Route::get('/contact', function () {
+//     return view('contact');
+// });
+
+// Route::get('/sign-in', function () {
+//     return view('sign-in');
+// });
+
+// Route::get('/sign-up', function () {
+//     return view('sign-up');
+// });
+
+// Route::get('/style-guide', function () {
+//     return view('style-guide');
+// });
+
+// Route::get('/instructions', function () {
+//     return view('instructions');
+// });
+
+// Route::get('/terms', function () {
+//     return view('terms');
+// });
+
+// Route::get('/privacy', function () {
+//     return view('privacy');
+// });
+
+// Route::get('/licenses', function () {
+//     return view('licenses');
 // });
 
 // Route::get('/our-works', function () {
@@ -59,6 +87,22 @@ use Statamic\Facades\GlobalSet;
 
 // Route::get('/pricing', function () {
 //     return view('pricing');
+// });
+
+// Route::get('/platform', function () {
+//     return view('platform');
+// });
+
+// Route::get('/research', function () {
+//     return view('research');
+// });
+
+// Route::get('/changelog', function () {
+//     return view('changelog');
+// });
+
+// Route::get('/posts/harbor-family-no-shows', function () {
+//     return view('post');
 // });
 
 // Route::statamic('search', 'search');

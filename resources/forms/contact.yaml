@@ -3,7 +3,7 @@ honeypot: website
 store: true
 email:
   -
-    to: info@seedstone.co.tz
+    to: info@hmxtech.co.tz
     reply_to: '{{ email }}'
     subject: 'New contact message from the website'
     markdown: true

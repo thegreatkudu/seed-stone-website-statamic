@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="80 0 620 255" width="620" height="255"><defs>
+<linearGradient id="mg" gradientUnits="userSpaceOnUse" x1="170" y1="0" x2="670" y2="0"><stop offset="0" stop-color="#FF3DE8"/><stop offset="0.5" stop-color="#A060FF"/><stop offset="1" stop-color="#4F6DFF"/></linearGradient>
+<linearGradient id="ma" gradientUnits="userSpaceOnUse" x1="92" y1="0" x2="686" y2="0"><stop offset="0" stop-color="#FFFFFF"/><stop offset="0.55" stop-color="#E4E4F0"/><stop offset="1" stop-color="#E4E4F0" stop-opacity="0.12"/></linearGradient>
+<mask id="mk" maskUnits="userSpaceOnUse" x="0" y="0" width="800" height="300"><rect width="800" height="300" fill="#fff"/><line x1="392" y1="163.7" x2="448" y2="126.3" stroke="#000" stroke-width="30"/></mask>
+</defs><path d="M92 188 C160 95 300 22 448 18 C560 15 640 38 686 66 C636 46 560 34 452 36 C318 42 200 110 130 182 Q112 196 92 188 Z" fill="url(#ma)"/>
+<rect x="339" y="58" width="12" height="32" rx="2" fill="#E4E4F0"/><rect x="489" y="58" width="12" height="32" rx="2" fill="#E4E4F0"/>
+<g fill="none" stroke="url(#mg)" stroke-width="16" stroke-linejoin="miter" mask="url(#mk)"><line x1="345" y1="95" x2="345" y2="242"/><line x1="495" y1="95" x2="495" y2="242"/><polyline points="170,212 345,95 495,195"/></g>
+<polyline points="345,195 495,95 670,212" fill="none" stroke="url(#mg)" stroke-width="16" stroke-linejoin="miter"/></svg>

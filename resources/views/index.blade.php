@@ -1,2798 +1,2020 @@
 <!doctype html>
-<html lang="en-US">
+
+<html data-wf-domain="carefront.webflow.io" data-wf-page="6aec83b44f4f0425b95841ca"
+  data-wf-site="6aec83b44f4f0425b95841e3" lang="en" class="w-mod-js w-mod-ix3">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Home – Terrace</title>
-	<meta name="robots" content="max-image-preview:large">
-	<link rel="alternate" type="application/rss+xml" title="Terrace » Feed"
-		href="{{ request()->getSchemeAndHttpHost() }}/seed-stone/feed/">
-	<link rel="alternate" type="application/rss+xml" title="Terrace » Comments Feed"
-		href="{{ request()->getSchemeAndHttpHost() }}/seed-stone/comments/feed/">
-	<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed"
-		href="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fview.kitpixel.com%2Fterrace%2Ftemplate-kit%2Fhome%2F">
-	<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed"
-		href="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fview.kitpixel.com%2Fterrace%2Ftemplate-kit%2Fhome%2F&amp;format=xml">
-	<style id="wp-img-auto-sizes-contain-inline-css">
-		img:is([sizes=auto i], [sizes^="auto," i]) {
-			contain-intrinsic-size: 3000px 1500px
-		}
-
-		/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
-	</style>
-	<link rel="stylesheet" id="elementor-frontend-css"
-		href="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=4.2.3"
-		media="all">
-	<link rel="stylesheet" id="elementor-post-50-css"
-		href="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/elementor/css/post-50.css?ver=1787532900"
-		media="all">
-	<link rel="stylesheet" id="elementor-post-59-css"
-		href="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/elementor/css/post-59.css?ver=1787532900"
-		media="all">
-	<link rel="stylesheet" id="font-awesome-5-all-css"
-		href="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/plugins/elementor/assets/lib/font-awesome/css/all.min.css?ver=4.2.3"
-		media="all">
-	<link rel="stylesheet" id="font-awesome-4-shim-css"
-		href="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/plugins/elementor/assets/lib/font-awesome/css/v4-shims.min.css?ver=4.2.3"
-		media="all">
-	<style id="wp-emoji-styles-inline-css">
-		img.wp-smiley,
-		img.emoji {
-			display: inline !important;
-			border: none !important;
-			box-shadow: none !important;
-			height: 1em !important;
-			width: 1em !important;
-			margin: 0 0.07em !important;
-			vertical-align: -0.1em !important;
-			background: none !important;
-			padding: 0 !important;
-		}
-
-		/*# sourceURL=wp-emoji-styles-inline-css */
-	</style>
-	<style id="global-styles-inline-css">
-		:root {
-			--wp--preset--aspect-ratio--square: 1;
-			--wp--preset--aspect-ratio--4-3: 4/3;
-			--wp--preset--aspect-ratio--3-4: 3/4;
-			--wp--preset--aspect-ratio--3-2: 3/2;
-			--wp--preset--aspect-ratio--2-3: 2/3;
-			--wp--preset--aspect-ratio--16-9: 16/9;
-			--wp--preset--aspect-ratio--9-16: 9/16;
-			--wp--preset--color--black: #000000;
-			--wp--preset--color--cyan-bluish-gray: #abb8c3;
-			--wp--preset--color--white: #ffffff;
-			--wp--preset--color--pale-pink: #f78da7;
-			--wp--preset--color--vivid-red: #cf2e2e;
-			--wp--preset--color--luminous-vivid-orange: #ff6900;
-			--wp--preset--color--luminous-vivid-amber: #fcb900;
-			--wp--preset--color--light-green-cyan: #7bdcb5;
-			--wp--preset--color--vivid-green-cyan: #00d084;
-			--wp--preset--color--pale-cyan-blue: #8ed1fc;
-			--wp--preset--color--vivid-cyan-blue: #0693e3;
-			--wp--preset--color--vivid-purple: #9b51e0;
-			--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg, rgb(6, 147, 227) 0%, rgb(155, 81, 224) 100%);
-			--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg, rgb(122, 220, 180) 0%, rgb(0, 208, 130) 100%);
-			--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg, rgb(252, 185, 0) 0%, rgb(255, 105, 0) 100%);
-			--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg, rgb(255, 105, 0) 0%, rgb(207, 46, 46) 100%);
-			--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg, rgb(238, 238, 238) 0%, rgb(169, 184, 195) 100%);
-			--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg, rgb(74, 234, 220) 0%, rgb(151, 120, 209) 20%, rgb(207, 42, 186) 40%, rgb(238, 44, 130) 60%, rgb(251, 105, 98) 80%, rgb(254, 248, 76) 100%);
-			--wp--preset--gradient--blush-light-purple: linear-gradient(135deg, rgb(255, 206, 236) 0%, rgb(152, 150, 240) 100%);
-			--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg, rgb(254, 205, 165) 0%, rgb(254, 45, 45) 50%, rgb(107, 0, 62) 100%);
-			--wp--preset--gradient--luminous-dusk: linear-gradient(135deg, rgb(255, 203, 112) 0%, rgb(199, 81, 192) 50%, rgb(65, 88, 208) 100%);
-			--wp--preset--gradient--pale-ocean: linear-gradient(135deg, rgb(255, 245, 203) 0%, rgb(182, 227, 212) 50%, rgb(51, 167, 181) 100%);
-			--wp--preset--gradient--electric-grass: linear-gradient(135deg, rgb(202, 248, 128) 0%, rgb(113, 206, 126) 100%);
-			--wp--preset--gradient--midnight: linear-gradient(135deg, rgb(2, 3, 129) 0%, rgb(40, 116, 252) 100%);
-			--wp--preset--font-size--small: 13px;
-			--wp--preset--font-size--medium: 20px;
-			--wp--preset--font-size--large: 36px;
-			--wp--preset--font-size--x-large: 42px;
-			--wp--preset--spacing--20: 0.44rem;
-			--wp--preset--spacing--30: 0.67rem;
-			--wp--preset--spacing--40: 1rem;
-			--wp--preset--spacing--50: 1.5rem;
-			--wp--preset--spacing--60: 2.25rem;
-			--wp--preset--spacing--70: 3.38rem;
-			--wp--preset--spacing--80: 5.06rem;
-			--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);
-			--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);
-			--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);
-			--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);
-			--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);
-		}
-
-		.wp-block-button {
-			--wp--preset--dimension--25: 25%;
-			--wp--preset--dimension--50: 50%;
-			--wp--preset--dimension--75: 75%;
-			--wp--preset--dimension--100: 100%;
-		}
-
-		:root {
-			--wp--style--global--content-size: 800px;
-			--wp--style--global--wide-size: 1200px;
-		}
-
-		:where(body) {
-			margin: 0;
-		}
-
-		.wp-site-blocks>.alignleft {
-			float: left;
-			margin-right: 2em;
-		}
-
-		.wp-site-blocks>.alignright {
-			float: right;
-			margin-left: 2em;
-		}
-
-		.wp-site-blocks>.aligncenter {
-			justify-content: center;
-			margin-left: auto;
-			margin-right: auto;
-		}
-
-		:where(.wp-site-blocks)>* {
-			margin-block-start: 24px;
-			margin-block-end: 0;
-		}
-
-		:where(.wp-site-blocks)> :first-child {
-			margin-block-start: 0;
-		}
-
-		:where(.wp-site-blocks)> :last-child {
-			margin-block-end: 0;
-		}
-
-		:root {
-			--wp--style--block-gap: 24px;
-		}
-
-		:root :where(.is-layout-flow)> :first-child {
-			margin-block-start: 0;
-		}
-
-		:root :where(.is-layout-flow)> :last-child {
-			margin-block-end: 0;
-		}
-
-		:root :where(.is-layout-flow)>* {
-			margin-block-start: 24px;
-			margin-block-end: 0;
-		}
-
-		:root :where(.is-layout-constrained)> :first-child {
-			margin-block-start: 0;
-		}
-
-		:root :where(.is-layout-constrained)> :last-child {
-			margin-block-end: 0;
-		}
-
-		:root :where(.is-layout-constrained)>* {
-			margin-block-start: 24px;
-			margin-block-end: 0;
-		}
-
-		:root :where(.is-layout-flex) {
-			gap: 24px;
-		}
-
-		:root :where(.is-layout-grid) {
-			gap: 24px;
-		}
-
-		.is-layout-flow>.alignleft {
-			float: left;
-			margin-inline-start: 0;
-			margin-inline-end: 2em;
-		}
-
-		.is-layout-flow>.alignright {
-			float: right;
-			margin-inline-start: 2em;
-			margin-inline-end: 0;
-		}
-
-		.is-layout-flow>.aligncenter {
-			margin-left: auto !important;
-			margin-right: auto !important;
-		}
-
-		.is-layout-constrained>.alignleft {
-			float: left;
-			margin-inline-start: 0;
-			margin-inline-end: 2em;
-		}
-
-		.is-layout-constrained>.alignright {
-			float: right;
-			margin-inline-start: 2em;
-			margin-inline-end: 0;
-		}
-
-		.is-layout-constrained>.aligncenter {
-			margin-left: auto !important;
-			margin-right: auto !important;
-		}
-
-		.is-layout-constrained> :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
-			max-width: var(--wp--style--global--content-size);
-			margin-left: auto !important;
-			margin-right: auto !important;
-		}
-
-		.is-layout-constrained>.alignwide {
-			max-width: var(--wp--style--global--wide-size);
-		}
-
-		body .is-layout-flex {
-			display: flex;
-		}
-
-		.is-layout-flex {
-			flex-wrap: wrap;
-			align-items: center;
-		}
-
-		.is-layout-flex> :is(*, div) {
-			margin: 0;
-		}
-
-		body .is-layout-grid {
-			display: grid;
-		}
-
-		.is-layout-grid> :is(*, div) {
-			margin: 0;
-		}
-
-		body {
-			padding-top: 0px;
-			padding-right: 0px;
-			padding-bottom: 0px;
-			padding-left: 0px;
-		}
-
-		:root :where(.wp-element-button, .wp-block-button__link) {
-			background-color: #32373c;
-			border-width: 0;
-			color: #fff;
-			font-family: inherit;
-			font-size: inherit;
-			font-style: inherit;
-			font-weight: inherit;
-			letter-spacing: inherit;
-			line-height: inherit;
-			padding-top: calc(0.667em + 2px);
-			padding-right: calc(1.333em + 2px);
-			padding-bottom: calc(0.667em + 2px);
-			padding-left: calc(1.333em + 2px);
-			text-decoration: none;
-			text-transform: inherit;
-		}
-
-		.has-black-color {
-			color: var(--wp--preset--color--black) !important;
-		}
-
-		.has-cyan-bluish-gray-color {
-			color: var(--wp--preset--color--cyan-bluish-gray) !important;
-		}
-
-		.has-white-color {
-			color: var(--wp--preset--color--white) !important;
-		}
-
-		.has-pale-pink-color {
-			color: var(--wp--preset--color--pale-pink) !important;
-		}
-
-		.has-vivid-red-color {
-			color: var(--wp--preset--color--vivid-red) !important;
-		}
-
-		.has-luminous-vivid-orange-color {
-			color: var(--wp--preset--color--luminous-vivid-orange) !important;
-		}
-
-		.has-luminous-vivid-amber-color {
-			color: var(--wp--preset--color--luminous-vivid-amber) !important;
-		}
-
-		.has-light-green-cyan-color {
-			color: var(--wp--preset--color--light-green-cyan) !important;
-		}
-
-		.has-vivid-green-cyan-color {
-			color: var(--wp--preset--color--vivid-green-cyan) !important;
-		}
-
-		.has-pale-cyan-blue-color {
-			color: var(--wp--preset--color--pale-cyan-blue) !important;
-		}
-
-		.has-vivid-cyan-blue-color {
-			color: var(--wp--preset--color--vivid-cyan-blue) !important;
-		}
-
-		.has-vivid-purple-color {
-			color: var(--wp--preset--color--vivid-purple) !important;
-		}
-
-		.has-black-background-color {
-			background-color: var(--wp--preset--color--black) !important;
-		}
-
-		.has-cyan-bluish-gray-background-color {
-			background-color: var(--wp--preset--color--cyan-bluish-gray) !important;
-		}
-
-		.has-white-background-color {
-			background-color: var(--wp--preset--color--white) !important;
-		}
-
-		.has-pale-pink-background-color {
-			background-color: var(--wp--preset--color--pale-pink) !important;
-		}
-
-		.has-vivid-red-background-color {
-			background-color: var(--wp--preset--color--vivid-red) !important;
-		}
-
-		.has-luminous-vivid-orange-background-color {
-			background-color: var(--wp--preset--color--luminous-vivid-orange) !important;
-		}
-
-		.has-luminous-vivid-amber-background-color {
-			background-color: var(--wp--preset--color--luminous-vivid-amber) !important;
-		}
-
-		.has-light-green-cyan-background-color {
-			background-color: var(--wp--preset--color--light-green-cyan) !important;
-		}
-
-		.has-vivid-green-cyan-background-color {
-			background-color: var(--wp--preset--color--vivid-green-cyan) !important;
-		}
-
-		.has-pale-cyan-blue-background-color {
-			background-color: var(--wp--preset--color--pale-cyan-blue) !important;
-		}
-
-		.has-vivid-cyan-blue-background-color {
-			background-color: var(--wp--preset--color--vivid-cyan-blue) !important;
-		}
-
-		.has-vivid-purple-background-color {
-			background-color: var(--wp--preset--color--vivid-purple) !important;
-		}
-
-		.has-black-border-color {
-			border-color: var(--wp--preset--color--black) !important;
-		}
-
-		.has-cyan-bluish-gray-border-color {
-			border-color: var(--wp--preset--color--cyan-bluish-gray) !important;
-		}
-
-		.has-white-border-color {
-			border-color: var(--wp--preset--color--white) !important;
-		}
-
-		.has-pale-pink-border-color {
-			border-color: var(--wp--preset--color--pale-pink) !important;
-		}
-
-		.has-vivid-red-border-color {
-			border-color: var(--wp--preset--color--vivid-red) !important;
-		}
-
-		.has-luminous-vivid-orange-border-color {
-			border-color: var(--wp--preset--color--luminous-vivid-orange) !important;
-		}
-
-		.has-luminous-vivid-amber-border-color {
-			border-color: var(--wp--preset--color--luminous-vivid-amber) !important;
-		}
-
-		.has-light-green-cyan-border-color {
-			border-color: var(--wp--preset--color--light-green-cyan) !important;
-		}
-
-		.has-vivid-green-cyan-border-color {
-			border-color: var(--wp--preset--color--vivid-green-cyan) !important;
-		}
-
-		.has-pale-cyan-blue-border-color {
-			border-color: var(--wp--preset--color--pale-cyan-blue) !important;
-		}
-
-		.has-vivid-cyan-blue-border-color {
-			border-color: var(--wp--preset--color--vivid-cyan-blue) !important;
-		}
-
-		.has-vivid-purple-border-color {
-			border-color: var(--wp--preset--color--vivid-purple) !important;
-		}
-
-		.has-vivid-cyan-blue-to-vivid-purple-gradient-background {
-			background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;
-		}
-
-		.has-light-green-cyan-to-vivid-green-cyan-gradient-background {
-			background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;
-		}
-
-		.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background {
-			background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;
-		}
-
-		.has-luminous-vivid-orange-to-vivid-red-gradient-background {
-			background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;
-		}
-
-		.has-very-light-gray-to-cyan-bluish-gray-gradient-background {
-			background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;
-		}
-
-		.has-cool-to-warm-spectrum-gradient-background {
-			background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;
-		}
-
-		.has-blush-light-purple-gradient-background {
-			background: var(--wp--preset--gradient--blush-light-purple) !important;
-		}
-
-		.has-blush-bordeaux-gradient-background {
-			background: var(--wp--preset--gradient--blush-bordeaux) !important;
-		}
-
-		.has-luminous-dusk-gradient-background {
-			background: var(--wp--preset--gradient--luminous-dusk) !important;
-		}
-
-		.has-pale-ocean-gradient-background {
-			background: var(--wp--preset--gradient--pale-ocean) !important;
-		}
-
-		.has-electric-grass-gradient-background {
-			background: var(--wp--preset--gradient--electric-grass) !important;
-		}
-
-		.has-midnight-gradient-background {
-			background: var(--wp--preset--gradient--midnight) !important;
-		}
-
-		.has-small-font-size {
-			font-size: var(--wp--preset--font-size--small) !important;
-		}
-
-		.has-medium-font-size {
-			font-size: var(--wp--preset--font-size--medium) !important;
-		}
-
-		.has-large-font-size {
-			font-size: var(--wp--preset--font-size--large) !important;
-		}
-
-		.has-x-large-font-size {
-			font-size: var(--wp--preset--font-size--x-large) !important;
-		}
-
-		:root :where(.wp-block-icon svg) {
-			width: 24px;
-		}
-
-		:root :where(.wp-block-pullquote) {
-			font-size: 1.5em;
-			line-height: 1.6;
-		}
-
-		/*# sourceURL=global-styles-inline-css */
-	</style>
-	<link rel="stylesheet" id="template-kit-export-css"
-		href="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/plugins/template-kit-export/assets/public/template-kit-export-public.css?ver=1.0.23"
-		media="all">
-	<link rel="stylesheet" id="cute-alert-css"
-		href="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/plugins/metform/public/assets/lib/cute-alert/style.css?ver=4.2.0"
-		media="all">
-	<link rel="stylesheet" id="text-editor-style-css"
-		href="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/plugins/metform/public/assets/css/text-editor.css?ver=4.2.0"
-		media="all">
-	<link rel="stylesheet" id="hello-elementor-css"
-		href="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/themes/hello-elementor/assets/css/reset.css?ver=3.5.1"
-		media="all">
-	<link rel="stylesheet" id="hello-elementor-theme-style-css"
-		href="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/themes/hello-elementor/assets/css/theme.css?ver=3.5.1"
-		media="all">
-	<link rel="stylesheet" id="hello-elementor-header-footer-css"
-		href="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/themes/hello-elementor/assets/css/header-footer.css?ver=3.5.1"
-		media="all">
-	<link rel="stylesheet" id="elementor-post-3-css"
-		href="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/elementor/css/post-3.css?ver=1787532900"
-		media="all">
-	<link rel="stylesheet" id="e-animation-fadeInUp-css"
-		href="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/plugins/elementor/assets/lib/animations/styles/fadeInUp.min.css?ver=4.2.3"
-		media="all">
-	<link rel="stylesheet" id="ekit-widget-common-css"
-		href="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/plugins/elementskit-lite/widgets/init/assets/css/common.css?ver=4.0.2"
-		media="all">
-	<link rel="stylesheet" id="ekit-heading-css"
-		href="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/plugins/elementskit-lite/widgets/init/assets/css/heading.css?ver=4.0.2"
-		media="all">
-	<link rel="stylesheet" id="widget-icon-list-css"
-		href="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/plugins/elementor/assets/css/widget-icon-list.min.css?ver=4.2.3"
-		media="all">
-	<link rel="stylesheet" id="widget-heading-css"
-		href="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/plugins/elementor/assets/css/widget-heading.min.css?ver=4.2.3"
-		media="all">
-	<link rel="stylesheet" id="widget-image-css"
-		href="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/plugins/elementor/assets/css/widget-image.min.css?ver=4.2.3"
-		media="all">
-	<link rel="stylesheet" id="swiper-css"
-		href="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/plugins/elementor/assets/lib/swiper/v8/css/swiper.min.css?ver=8.4.5"
-		media="all">
-	<link rel="stylesheet" id="e-swiper-css"
-		href="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/plugins/elementor/assets/css/conditionals/e-swiper.min.css?ver=4.2.3"
-		media="all">
-	<link rel="stylesheet" id="widget-image-carousel-css"
-		href="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/plugins/elementor/assets/css/widget-image-carousel.min.css?ver=4.2.3"
-		media="all">
-	<link rel="stylesheet" id="widget-spacer-css"
-		href="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/plugins/elementor/assets/css/widget-spacer.min.css?ver=4.2.3"
-		media="all">
-	<link rel="stylesheet" id="widget-counter-css"
-		href="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/plugins/elementor/assets/css/widget-counter.min.css?ver=4.2.3"
-		media="all">
-	<link rel="stylesheet" id="widget-image-box-css"
-		href="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/plugins/elementor/assets/css/widget-image-box.min.css?ver=4.2.3"
-		media="all">
-	<link rel="stylesheet" id="widget-icon-box-css"
-		href="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/plugins/elementor/assets/css/widget-icon-box.min.css?ver=4.2.3"
-		media="all">
-	<link rel="stylesheet" id="widget-divider-css"
-		href="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/plugins/elementor/assets/css/widget-divider.min.css?ver=4.2.3"
-		media="all">
-	<link rel="stylesheet" id="mediaelement-css"
-		href="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css?ver=4.2.17"
-		media="all">
-	<link rel="stylesheet" id="wp-mediaelement-css"
-		href="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-includes/js/mediaelement/wp-mediaelement.min.css?ver=7.1.1"
-		media="all">
-	<link rel="stylesheet" id="magnific-popup-css"
-		href="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/plugins/elementskit-lite/assets/libs/magnific-popup/magnific-popup.css?ver=1790077428"
-		media="all">
-	<link rel="stylesheet" id="ekit-video-css"
-		href="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/plugins/elementskit-lite/widgets/init/assets/css/video.css?ver=4.0.2"
-		media="all">
-	<link rel="stylesheet" id="elementor-post-17-css"
-		href="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/elementor/css/post-17.css?ver=1787532901"
-		media="all">
-	<link rel="stylesheet" id="ekit-nav-menu-css"
-		href="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/plugins/elementskit-lite/widgets/init/assets/css/nav-menu.css?ver=4.0.2"
-		media="all">
-	<link rel="stylesheet" id="ekit-header-search-css"
-		href="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/plugins/elementskit-lite/widgets/init/assets/css/header-search.css?ver=4.0.2"
-		media="all">
-	<link rel="stylesheet" id="ekit-header-offcanvas-css"
-		href="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/plugins/elementskit-lite/widgets/init/assets/css/header-offcanvas.css?ver=4.0.2"
-		media="all">
-	<link rel="stylesheet" id="ekit-header-info-css"
-		href="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/plugins/elementskit-lite/widgets/init/assets/css/header-info.css?ver=4.0.2"
-		media="all">
-	<link rel="stylesheet" id="elementor-gf-fraunces-css"
-		href="https://fonts.googleapis.com/css?family=Fraunces:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&amp;display=auto"
-		media="all">
-	<link rel="stylesheet" id="elementor-gf-inter-css"
-		href="https://fonts.googleapis.com/css?family=Inter:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&amp;display=auto"
-		media="all">
-	<script type="text/javascript">
-		var elementskit = {
-			resturl: '{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-json/elementskit/v1/',
-		}
-
-	</script>
-	<script id="font-awesome-4-shim-js"
-		src="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js?ver=4.2.3"></script>
-	<script id="jquery-core-js"
-		src="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
-	<script id="jquery-migrate-js"
-		src="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"></script>
-	<script id="template-kit-export-js"
-		src="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/plugins/template-kit-export/assets/public/template-kit-export-public.js?ver=1.0.23"></script>
-	<link rel="https://api.w.org/" href="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-json/">
-	<link rel="EditURI" type="application/rsd+xml" title="RSD" href="{{ request()->getSchemeAndHttpHost() }}/seed-stone/xmlrpc.php?rsd">
-	<meta name="generator" content="WordPress 7.1.1">
-	<link rel="canonical" href="{{ request()->getSchemeAndHttpHost() }}/seed-stone/template-kit/home/">
-	<link rel="shortlink" href="{{ request()->getSchemeAndHttpHost() }}/seed-stone/?p=17">
-
-	<!-- GA Google Analytics @ https://m0n.co/ga -->
-	<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-F59BZKS3MB"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
-		gtag('config', 'G-F59BZKS3MB');
-	</script>
-
-	<meta name="generator"
-		content="Elementor 4.2.3; features: e_font_icon_svg, additional_custom_breakpoints; settings: css_print_method-external, google_font-enabled, font_display-auto">
-	<style>
-		.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload),
-		.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload) * {
-			background-image: none !important;
-		}
-
-		@media screen and (max-height: 1024px) {
-
-			.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload),
-			.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload) * {
-				background-image: none !important;
-			}
-		}
-
-		@media screen and (max-height: 640px) {
-
-			.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload),
-			.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload) * {
-				background-image: none !important;
-			}
-		}
-	</style>
-	<style>
-		.mfp-fade-5c966ad {
-			background-color: ;
-		}
-	</style>
-	<style>
-		.mfp-fade-537b8a5 {
-			background-color: ;
-		}
-	</style>
+  <style>
+    .wf-force-outline-none[tabindex="-1"]:focus {
+      outline: none;
+    }
+  </style>
+  <meta charset="utf-8">
+  <link href="https://cdn.prod.website-files.com" rel="preconnect" crossorigin="anonymous">
+  <title>Carefront - Webflow HTML website template</title>
+  <meta
+    content="Scheduling, intake, messaging and billing on one living patient record. Carefront keeps clinics, providers and patients in sync, from booking to bill."
+    name="description">
+  <meta content="Carefront - Webflow HTML website template" property="og:title">
+  <meta
+    content="Scheduling, intake, messaging and billing on one living patient record. Carefront keeps clinics, providers and patients in sync, from booking to bill."
+    property="og:description">
+  <meta content="{{ asset('hmxtech/6aec83b44f4f0425b95841e3/6aecb3a795b52ce374b10b3b_carefront-og.jpg') }}" property="og:image">
+  <meta content="Carefront - Webflow HTML website template" name="twitter:title">
+  <meta
+    content="Scheduling, intake, messaging and billing on one living patient record. Carefront keeps clinics, providers and patients in sync, from booking to bill."
+    name="twitter:description">
+  <meta property="og:type" content="website">
+  <meta content="summary_large_image" name="twitter:card">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="Webflow" name="generator">
+  <link href="{{ asset('hmxtech/6aec83b44f4f0425b95841e3/css/carefront.webflow.shared.7b60a7b06.css') }}" rel="stylesheet"
+    type="text/css" integrity="sha384-e2CnsGxdkBiAfIzJc3vlx1gieiX+6zWTZH0nkJ1KfYYMAj2i/JgBKKDwsPHoWk0O"
+    crossorigin="anonymous">
+  <style>
+    html.w-mod-js:not(.w-mod-ix3):is(.rs-pat.is-1) {
+      visibility: hidden !important;
+    }
+
+    html.w-mod-js:not(.w-mod-ix3):is(.rs-pat.is-1) * {
+      visibility: hidden !important;
+    }
+
+    html.w-mod-js:not(.w-mod-ix3) :is([data-wf-target*='["6aec83b44f4f0425b95841ca","8f53d73e-da14-aadc-b6ee-3fabd5df89a4"]'], [data-wf-target*='["6aec83b44f4f0425b95841ca","8f53d73e-da14-aadc-b6ee-3fabd5df89de"]'], .feature, [data-wf-target*='["6aec83b44f4f0425b95841ca","fc1a0d03-a5a7-6eb0-ce55-d1ec96b94892"]'], [data-wf-target*='["6aec83b44f4f0425b95841ca","fc1a0d03-a5a7-6eb0-ce55-d1ec96b94894"]'], [data-wf-target*='["6aec83b44f4f0425b95841ca","fc1a0d03-a5a7-6eb0-ce55-d1ec96b94899"]'], [data-wf-target*='["6aec83b44f4f0425b95841ca","fc1a0d03-a5a7-6eb0-ce55-d1ec96b9495d"]'], .record-stack .rs-layer.is-1, .record-stack .rs-layer.is-2, .record-stack .rs-layer.is-3, .record-stack .svg-dash, .rs-pat.is-1, .rs-leader .svg-dot, .rs-leader .svg-leader, .module-scene.is-1 .ui-card, .pattern-tile .snippet > *, .pattern-tile .check-dot.is-done, .pattern-tile .progress_fill, .pattern-tile .bubble.is-reply, .pattern-tile .typing, .pattern-tile .steps_line, .pattern-tile .steps_dot, .pattern-tile .ui-card_row .chip, .nav_mobile) {
+      visibility: hidden !important;
+    }
+  </style>
+  <script
+    type="text/javascript">!function (o, c) { var n = c.documentElement, t = " w-mod-"; n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch") }(window, document);</script>
+  <link href="{{ asset('hmxtech/6aec83b44f4f0425b95841e3/6aecace4e86df1b0d7d6cc91_carefront-icon.png') }}" rel="icon" type="image/png"
+    sizes="32x32" media="(prefers-color-scheme: light)">
+  <link href="{{ asset('hmxtech/6aec83b44f4f0425b95841e3/6aecace4e86df1b0d7d6cc91_carefront-icon.png') }}" rel="icon" type="image/png"
+    sizes="32x32" media="(prefers-color-scheme: dark)">
+  <link href="{{ asset('hmxtech/6aec83b44f4f0425b95841e3/6aecace4f1e393d6b7280ad6_carefront-icon.png') }}" rel="icon" type="image/png"
+    sizes="48x48">
+  <link href="{{ asset('hmxtech/6aec83b44f4f0425b95841e3/6aecace4d07273d1cd7e59a7_carefront-icon.png') }}" rel="apple-touch-icon"
+    sizes="180x180">
+  <link href="{{ asset('hmxtech/6aec83b44f4f0425b95841e3/6aecace5a3fd0e69eb5dad18_carefront-icon.png') }}" rel="icon" type="image/png"
+    sizes="192x192">
+  <link href="{{ asset('hmxtech/6aec83b44f4f0425b95841e3/6aecace414b33286f73dd85d_carefront-icon.png') }}" rel="icon" type="image/png"
+    sizes="512x512">
+  <script>
+    window.__WF_REVIEW_BRIDGE = {
+      siteId: "6aec83b44f4f0425b95841e3",
+      version: "0.3.0",
+      marker: "__wf_review_snippet_v1",
+      bridgeToken: "wfbt_a9f609324e6246bfa515bcdc0be0cf99",
+      reviewSurface: "published-review",
+      reviewScriptUrl: "https://validation-worker.createsomething.workers.dev/app-validator/snippet/review.js"
+    };
+  </script>
+  <script src="https://validation-worker.createsomething.workers.dev/app-validator/snippet/review.js"></script>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js"></script>
 </head>
 
-<body
-	class="wp-singular envato_tk_templates-template-default single single-envato_tk_templates postid-17 wp-embed-responsive wp-theme-hello-elementor hello-elementor-default elementor-default elementor-kit-3 elementor-page elementor-page-17 e--ua-firefox" data-elementor-device-mode="desktop">
-
-
-	<a class="skip-link screen-reader-text" href="#content">
-		Skip to content </a>
-
-
-	<div class="ekit-template-content-markup ekit-template-content-header ekit-template-content-theme-support">
-		<div data-elementor-type="wp-post" data-elementor-id="50" class="elementor elementor-50">
-			<div class="elementor-element elementor-element-e7d795f e-flex e-con-boxed e-con e-parent e-lazyloaded"
-				data-id="e7d795f" data-element_type="container" data-e-type="container"
-				data-settings="{&quot;position&quot;:&quot;absolute&quot;}">
-				<div class="e-con-inner">
-					<div class="elementor-element elementor-element-aba9955 e-con-full e-flex e-con e-child"
-						data-id="aba9955" data-element_type="container" data-e-type="container">
-						<div class="elementor-element elementor-element-0351de8 e-con-full e-flex e-con e-child"
-							data-id="0351de8" data-element_type="container" data-e-type="container">
-							<div class="elementor-element elementor-element-3f9aa03 elementor-widget elementor-widget-image animated fadeInDown"
-								data-id="3f9aa03" data-element_type="widget" data-e-type="widget"
-								data-settings="{&quot;_animation&quot;:&quot;fadeInDown&quot;,&quot;_animation_delay&quot;:&quot;250&quot;}"
-								data-widget_type="image.default">
-								<img width="274" height="80"
-									src="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/seed-stone-logo.png"
-									class="attachment-full size-full wp-image-52" alt="">
-							</div>
-						</div>
-						<div class="elementor-element elementor-element-60f7eeb e-con-full e-flex e-con e-child"
-							data-id="60f7eeb" data-element_type="container" data-e-type="container">
-							<div class="elementor-element elementor-element-24859a0 elementor-widget elementor-widget-ekit-nav-menu animated fadeInDown"
-								data-id="24859a0" data-element_type="widget" data-e-type="widget"
-								data-settings="{&quot;_animation&quot;:&quot;fadeInDown&quot;,&quot;_animation_delay&quot;:&quot;500&quot;}"
-								data-widget_type="ekit-nav-menu.default">
-								<div class="elementor-widget-container">
-									<nav class="ekit-wid-con ekit_menu_responsive_tablet"
-										data-hamburger-icon="icon icon-menu-11" data-hamburger-icon-type="icon"
-										data-responsive-breakpoint="1024" data-close-on-anchor="no">
-										<button class="elementskit-menu-hamburger elementskit-menu-toggler"
-											type="button" aria-label="hamburger-icon">
-											<svg class="ekit-menu-icon ekit-svg-icon icon-menu-11" viewBox="0 0 32 32"
-												xmlns="http://www.w3.org/2000/svg">
-												<path
-													d="M30.707 15.107h-29.415c-0.714 0-1.293 0.579-1.293 1.293s0.579 1.293 1.293 1.293h29.415c0.714 0 1.293-0.579 1.293-1.293s-0.579-1.293-1.293-1.293zM30.707 5.302h-29.415c-0.714 0-1.293 0.579-1.293 1.293s0.579 1.293 1.293 1.293h29.415c0.714 0 1.293-0.579 1.293-1.293s-0.579-1.293-1.293-1.293zM30.707 24.912h-29.415c-0.714 0-1.293 0.579-1.293 1.293s0.579 1.293 1.293 1.293h29.415c0.714 0 1.293-0.579 1.293-1.293s-0.579-1.293-1.293-1.293z">
-												</path>
-											</svg> </button>
-										<div id="ekit-megamenu-menu"
-											class="elementskit-menu-container elementskit-menu-offcanvas-elements elementskit-navbar-nav-default ekit-nav-menu-one-page-no ekit-nav-dropdown-hover"
-											ekit-dom-added="yes">
-											<ul id="menu-menu"
-												class="elementskit-navbar-nav elementskit-menu-po-left submenu-click-on-icon">
-												<li id="menu-item-5"
-													class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-5 nav-item elementskit-mobile-builder-content active"
-													data-vertical-menu="750px"><a
-														href="{{ request()->getSchemeAndHttpHost() }}/seed-stone/template-kit/home/"
-														class="ekit-menu-nav-link active">Home</a></li>
-												<li id="menu-item-15"
-													class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-15 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content"
-													data-vertical-menu="750px"><a href="#"
-														class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Pages<svg
-															class="elementskit-submenu-indicator ekit-svg-icon icon-arrow-point-to-down"
-															viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-															<path d="M0 8.4h32l-16 16-16-16z"></path>
-														</svg></a>
-													<ul class="elementskit-dropdown elementskit-submenu-panel">
-														<li id="menu-item-7"
-															class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7 nav-item elementskit-mobile-builder-content"
-															data-vertical-menu="750px"><a
-																href="{{ request()->getSchemeAndHttpHost() }}/seed-stone/template-kit/about/"
-																class=" dropdown-item">About</a> </li>
-														<li id="menu-item-14"
-															class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14 nav-item elementskit-mobile-builder-content"
-															data-vertical-menu="750px"><a
-																href="{{ request()->getSchemeAndHttpHost() }}/seed-stone/template-kit/before-&amp;-after/"
-																class=" dropdown-item">Before &amp; After</a> </li>
-														<li id="menu-item-9"
-															class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9 nav-item elementskit-mobile-builder-content"
-															data-vertical-menu="750px"><a
-																href="{{ request()->getSchemeAndHttpHost() }}/seed-stone/template-kit/single-service/"
-																class=" dropdown-item">Single Service</a> </li>
-														<li id="menu-item-8"
-															class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8 nav-item elementskit-mobile-builder-content"
-															data-vertical-menu="750px"><a
-																href="{{ request()->getSchemeAndHttpHost() }}/seed-stone/template-kit/contact/"
-																class=" dropdown-item">Contact</a> </li>
-														<li id="menu-item-11"
-															class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11 nav-item elementskit-mobile-builder-content"
-															data-vertical-menu="750px"><a
-																href="{{ request()->getSchemeAndHttpHost() }}/seed-stone/template-kit/blog/"
-																class=" dropdown-item">Blog</a> </li>
-														<li id="menu-item-12"
-															class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12 nav-item elementskit-mobile-builder-content"
-															data-vertical-menu="750px"><a
-																href="{{ request()->getSchemeAndHttpHost() }}/seed-stone/template-kit/post/"
-																class=" dropdown-item">Post</a></li>
-													</ul>
-												</li>
-												<li id="menu-item-6"
-													class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6 nav-item elementskit-mobile-builder-content"
-													data-vertical-menu="750px"><a
-														href="{{ request()->getSchemeAndHttpHost() }}/seed-stone/template-kit/services/"
-														class="ekit-menu-nav-link">Services</a></li>
-												<li id="menu-item-13"
-													class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13 nav-item elementskit-mobile-builder-content"
-													data-vertical-menu="750px"><a
-														href="{{ request()->getSchemeAndHttpHost() }}/seed-stone/template-kit/pricing/"
-														class="ekit-menu-nav-link">Pricing</a></li>
-												<li id="menu-item-10"
-													class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10 nav-item elementskit-mobile-builder-content"
-													data-vertical-menu="750px"><a
-														href="{{ request()->getSchemeAndHttpHost() }}/seed-stone/template-kit/our-works/"
-														class="ekit-menu-nav-link">Our Works</a></li>
-											</ul>
-											<div class="elementskit-nav-identity-panel"><a class="elementskit-nav-logo"
-													href="{{ request()->getSchemeAndHttpHost() }}/seed-stone" target="" rel=""><img
-														src="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/seed-stone-logo.png"
-														title="seed-stone-logo" alt="seed-stone-logo"
-														decoding="async"></a><button
-													class="elementskit-menu-close elementskit-menu-toggler"
-													type="button">X</button></div>
-										</div>
-										<div
-											class="elementskit-menu-overlay elementskit-menu-offcanvas-elements elementskit-menu-toggler ekit-nav-menu--overlay">
-										</div>
-									</nav>
-								</div>
-							</div>
-						</div>
-						<div class="elementor-element elementor-element-15f18f3 e-con-full elementor-hidden-mobile e-flex e-con e-child"
-							data-id="15f18f3" data-element_type="container" data-e-type="container">
-							<div class="elementor-element elementor-element-30b8e70 elementor-widget elementor-widget-button animated fadeInDown"
-								data-id="30b8e70" data-element_type="widget" data-e-type="widget"
-								data-settings="{&quot;_animation&quot;:&quot;fadeInDown&quot;,&quot;_animation_delay&quot;:&quot;750&quot;}"
-								data-widget_type="button.default">
-								<a class="elementor-button elementor-button-link elementor-size-sm" href="#">
-									<span class="elementor-button-content-wrapper">
-										<span class="elementor-button-text">Start Planning</span>
-									</span>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-
-	<main id="content" class="site-main post-17 envato_tk_templates type-envato_tk_templates status-publish has-post-thumbnail hentry">
-
-		<div class="page-content">
-
-			<div data-elementor-type="wp-post" data-elementor-id="17" class="elementor elementor-17">
-				<div class="elementor-element elementor-element-89f0de1 e-con-full e-flex e-con e-parent e-lazyloaded"
-					data-id="89f0de1" data-element_type="container" data-e-type="container"
-					data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-					<div class="elementor-element elementor-element-a04cf4c elementor-absolute elementor-widget elementor-widget-elementskit-heading animated fadeInUp"
-						data-id="a04cf4c" data-element_type="widget" data-e-type="widget"
-						data-settings="{&quot;_position&quot;:&quot;absolute&quot;,&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:&quot;750&quot;}"
-						data-widget_type="elementskit-heading.default">
-						<div class="ekit-wid-con">
-							<div
-								class="ekit-heading elementskit-section-title-wraper text_left   ekit_heading_tablet-   ekit_heading_mobile-">
-								<div class="ekit-heading--title elementskit-section-title text_fill">
-									<span>Terrace</span></div>
-							</div>
-						</div>
-					</div>
-					<div class="elementor-element elementor-element-1260c29 e-con-full e-flex e-con e-child"
-						data-id="1260c29" data-element_type="container" data-e-type="container">
-						<div class="elementor-element elementor-element-7f8fd61 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list animated fadeInUp"
-							data-id="7f8fd61" data-element_type="widget" data-e-type="widget"
-							data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}"
-							data-widget_type="icon-list.default">
-							<ul class="elementor-icon-list-items">
-								<li class="elementor-icon-list-item">
-									<span class="elementor-icon-list-icon">
-										<svg class="ekit-svg-icon icon-star-1" viewBox="0 0 32 32"
-											xmlns="http://www.w3.org/2000/svg">
-											<path
-												d="M32 12.967c0-0.474-0.359-0.769-1.077-0.885l-9.654-1.404-4.327-8.75c-0.243-0.526-0.558-0.788-0.942-0.788s-0.699 0.263-0.942 0.788l-4.327 8.75-9.654 1.404c-0.718 0.116-1.077 0.41-1.077 0.885 0 0.269 0.16 0.577 0.481 0.923l7 6.808-1.654 9.615c-0.026 0.18-0.038 0.308-0.038 0.385 0 0.269 0.067 0.497 0.202 0.683s0.336 0.279 0.606 0.279c0.231 0 0.487-0.077 0.769-0.231l8.634-4.539 8.635 4.539c0.27 0.154 0.526 0.231 0.769 0.231 0.257 0 0.452-0.093 0.587-0.279s0.201-0.413 0.201-0.683c0-0.166-0.006-0.295-0.019-0.385l-1.654-9.615 6.981-6.808c0.334-0.333 0.5-0.641 0.5-0.923z">
-											</path>
-										</svg> </span>
-									<span class="elementor-icon-list-text">4,9/5 on Google Reviews</span>
-								</li>
-							</ul>
-						</div>
-						<div class="elementor-element elementor-element-7d04007 elementor-widget elementor-widget-heading animated fadeInUp"
-							data-id="7d04007" data-element_type="widget" data-e-type="widget"
-							data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}"
-							data-widget_type="heading.default">
-							<h1 class="elementor-heading-title elementor-size-default">Transform Your Outdoor Space with
-								Expert Landscape Care</h1>
-						</div>
-						<div class="elementor-element elementor-element-5d30339 elementor-widget-tablet__width-initial elementor-widget elementor-widget-text-editor animated fadeInUp"
-							data-id="5d30339" data-element_type="widget" data-e-type="widget"
-							data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}"
-							data-widget_type="text-editor.default">
-							<p>From custom garden design to full-service maintenance, we help you build an outdoor space
-								that’s clean, healthy, and inspiring.</p>
-						</div>
-						<div class="elementor-element elementor-element-cce6da9 e-con-full e-flex e-con e-child"
-							data-id="cce6da9" data-element_type="container" data-e-type="container">
-							<div class="elementor-element elementor-element-54dcf3e elementor-mobile-align-justify elementor-widget-mobile__width-inherit elementor-widget elementor-widget-button animated fadeInUp"
-								data-id="54dcf3e" data-element_type="widget" data-e-type="widget"
-								data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}"
-								data-widget_type="button.default">
-								<a class="elementor-button elementor-button-link elementor-size-sm" href="#">
-									<span class="elementor-button-content-wrapper">
-										<span class="elementor-button-text">Request a Quote</span>
-									</span>
-								</a>
-							</div>
-							<div class="elementor-element elementor-element-cace790 elementor-mobile-align-justify elementor-widget-mobile__width-inherit elementor-widget elementor-widget-button animated fadeInUp"
-								data-id="cace790" data-element_type="widget" data-e-type="widget"
-								data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:&quot;250&quot;}"
-								data-widget_type="button.default">
-								<a class="elementor-button elementor-button-link elementor-size-sm" href="#">
-									<span class="elementor-button-content-wrapper">
-										<span class="elementor-button-text">Our Services</span>
-									</span>
-								</a>
-							</div>
-						</div>
-					</div>
-					<div class="elementor-element elementor-element-91dde1f e-con-full e-flex e-con e-child"
-						data-id="91dde1f" data-element_type="container" data-e-type="container">
-						<div class="elementor-element elementor-element-ac55e1a elementor-widget elementor-widget-image"
-							data-id="ac55e1a" data-element_type="widget" data-e-type="widget"
-							data-widget_type="image.default">
-							<img fetchpriority="high" decoding="async" width="1920" height="1280"
-								src="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/professional-gardener-trimming-garden-decorative-t-2025-03-15-00-55-17-utc.webp"
-								class="attachment-full size-full wp-image-80" alt=""
-								srcset="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/professional-gardener-trimming-garden-decorative-t-2025-03-15-00-55-17-utc.webp 1920w, {{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/professional-gardener-trimming-garden-decorative-t-2025-03-15-00-55-17-utc-300x200.webp 300w, {{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/professional-gardener-trimming-garden-decorative-t-2025-03-15-00-55-17-utc-1024x683.webp 1024w, {{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/professional-gardener-trimming-garden-decorative-t-2025-03-15-00-55-17-utc-768x512.webp 768w, {{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/professional-gardener-trimming-garden-decorative-t-2025-03-15-00-55-17-utc-1536x1024.webp 1536w, {{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/professional-gardener-trimming-garden-decorative-t-2025-03-15-00-55-17-utc-800x533.webp 800w"
-								sizes="(max-width: 1920px) 100vw, 1920px">
-						</div>
-					</div>
-				</div>
-				<div class="elementor-element elementor-element-24ce88c e-flex e-con-boxed e-con e-parent e-lazyloaded"
-					data-id="24ce88c" data-element_type="container" data-e-type="container">
-					<div class="e-con-inner">
-						<div class="elementor-element elementor-element-2de9694 e-con-full e-flex e-con e-child animated fadeInUp"
-							data-id="2de9694" data-element_type="container" data-e-type="container"
-							data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;}">
-							<div class="elementor-element elementor-element-872410c elementor-widget elementor-widget-image-carousel e-widget-swiper"
-								data-id="872410c" data-element_type="widget" data-e-type="widget"
-								data-settings="{&quot;slides_to_show&quot;:&quot;5&quot;,&quot;slides_to_scroll&quot;:&quot;1&quot;,&quot;navigation&quot;:&quot;none&quot;,&quot;image_spacing_custom&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;80&quot;,&quot;sizes&quot;:[]},&quot;slides_to_show_tablet&quot;:&quot;4&quot;,&quot;slides_to_show_mobile&quot;:&quot;2&quot;,&quot;autoplay&quot;:&quot;yes&quot;,&quot;autoplay_speed&quot;:5000,&quot;infinite&quot;:&quot;yes&quot;,&quot;speed&quot;:500,&quot;image_spacing_custom_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;image_spacing_custom_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}"
-								data-widget_type="image-carousel.default">
-								<div class="elementor-image-carousel-wrapper swiper swiper-initialized swiper-horizontal swiper-pointer-events"
-									role="region" aria-roledescription="carousel" aria-label="Image Carousel" dir="ltr">
-									<div class="elementor-image-carousel swiper-wrapper" aria-live="off"
-										style="transition-duration: 0ms; transform: translate3d(-2448px, 0px, 0px);"
-										id="swiper-wrapper-db6eabf101335fe02">
-										<div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev"
-											role="group" aria-roledescription="slide" aria-label="4 / 8"
-											data-swiper-slide-index="3" style="width: 192px; margin-right: 80px;"
-											aria-hidden="true" inert="">
-											<figure class="swiper-slide-inner"><img decoding="async"
-													class="swiper-slide-image"
-													src="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/logo-04.png"
-													alt="logo-04"></figure>
-										</div>
-										<div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active"
-											role="group" aria-roledescription="slide" aria-label="5 / 8"
-											data-swiper-slide-index="4" style="width: 192px; margin-right: 80px;"
-											aria-hidden="true" inert="">
-											<figure class="swiper-slide-inner"><img decoding="async"
-													class="swiper-slide-image"
-													src="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/logo-05.png"
-													alt="logo-05"></figure>
-										</div>
-										<div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next"
-											role="group" aria-roledescription="slide" aria-label="6 / 8"
-											data-swiper-slide-index="5" style="width: 192px; margin-right: 80px;"
-											aria-hidden="true" inert="">
-											<figure class="swiper-slide-inner"><img decoding="async"
-													class="swiper-slide-image"
-													src="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/logo-06.png"
-													alt="logo-06"></figure>
-										</div>
-										<div class="swiper-slide swiper-slide-duplicate" role="group"
-											aria-roledescription="slide" aria-label="7 / 8" data-swiper-slide-index="6"
-											style="width: 192px; margin-right: 80px;" aria-hidden="true" inert="">
-											<figure class="swiper-slide-inner"><img decoding="async"
-													class="swiper-slide-image"
-													src="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/logo-07.png"
-													alt="logo-07"></figure>
-										</div>
-										<div class="swiper-slide swiper-slide-duplicate" role="group"
-											aria-roledescription="slide" aria-label="8 / 8" data-swiper-slide-index="7"
-											style="width: 192px; margin-right: 80px;" aria-hidden="true" inert="">
-											<figure class="swiper-slide-inner"><img decoding="async"
-													class="swiper-slide-image"
-													src="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/logo-08.png"
-													alt="logo-08"></figure>
-										</div>
-										<div class="swiper-slide" role="group" aria-roledescription="slide"
-											aria-label="1 / 8" data-swiper-slide-index="0"
-											style="width: 192px; margin-right: 80px;" aria-hidden="true" inert="">
-											<figure class="swiper-slide-inner"><img decoding="async"
-													class="swiper-slide-image"
-													src="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/logo-01.png"
-													alt="logo-01"></figure>
-										</div>
-										<div class="swiper-slide" role="group" aria-roledescription="slide"
-											aria-label="2 / 8" data-swiper-slide-index="1"
-											style="width: 192px; margin-right: 80px;" aria-hidden="true" inert="">
-											<figure class="swiper-slide-inner"><img decoding="async"
-													class="swiper-slide-image"
-													src="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/logo-02.png"
-													alt="logo-02"></figure>
-										</div>
-										<div class="swiper-slide" role="group" aria-roledescription="slide"
-											aria-label="3 / 8" data-swiper-slide-index="2"
-											style="width: 192px; margin-right: 80px;" aria-hidden="true" inert="">
-											<figure class="swiper-slide-inner"><img decoding="async"
-													class="swiper-slide-image"
-													src="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/logo-03.png"
-													alt="logo-03"></figure>
-										</div>
-										<div class="swiper-slide swiper-slide-prev" role="group"
-											aria-roledescription="slide" aria-label="4 / 8" data-swiper-slide-index="3"
-											style="width: 192px; margin-right: 80px;" aria-hidden="true" inert="">
-											<figure class="swiper-slide-inner"><img decoding="async"
-													class="swiper-slide-image"
-													src="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/logo-04.png"
-													alt="logo-04"></figure>
-										</div>
-										<div class="swiper-slide swiper-slide-active" role="group"
-											aria-roledescription="slide" aria-label="5 / 8" data-swiper-slide-index="4"
-											style="width: 192px; margin-right: 80px;">
-											<figure class="swiper-slide-inner"><img decoding="async"
-													class="swiper-slide-image"
-													src="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/logo-05.png"
-													alt="logo-05"></figure>
-										</div>
-										<div class="swiper-slide swiper-slide-next" role="group"
-											aria-roledescription="slide" aria-label="6 / 8" data-swiper-slide-index="5"
-											style="width: 192px; margin-right: 80px;">
-											<figure class="swiper-slide-inner"><img decoding="async"
-													class="swiper-slide-image"
-													src="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/logo-06.png"
-													alt="logo-06"></figure>
-										</div>
-										<div class="swiper-slide" role="group" aria-roledescription="slide"
-											aria-label="7 / 8" data-swiper-slide-index="6"
-											style="width: 192px; margin-right: 80px;">
-											<figure class="swiper-slide-inner"><img decoding="async"
-													class="swiper-slide-image"
-													src="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/logo-07.png"
-													alt="logo-07"></figure>
-										</div>
-										<div class="swiper-slide" role="group" aria-roledescription="slide"
-											aria-label="8 / 8" data-swiper-slide-index="7"
-											style="width: 192px; margin-right: 80px;">
-											<figure class="swiper-slide-inner"><img decoding="async"
-													class="swiper-slide-image"
-													src="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/logo-08.png"
-													alt="logo-08"></figure>
-										</div>
-										<div class="swiper-slide swiper-slide-duplicate" role="group"
-											aria-roledescription="slide" aria-label="1 / 8" data-swiper-slide-index="0"
-											style="width: 192px; margin-right: 80px;">
-											<figure class="swiper-slide-inner"><img decoding="async"
-													class="swiper-slide-image"
-													src="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/logo-01.png"
-													alt="logo-01"></figure>
-										</div>
-										<div class="swiper-slide swiper-slide-duplicate" role="group"
-											aria-roledescription="slide" aria-label="2 / 8" data-swiper-slide-index="1"
-											style="width: 192px; margin-right: 80px;" aria-hidden="true" inert="">
-											<figure class="swiper-slide-inner"><img decoding="async"
-													class="swiper-slide-image"
-													src="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/logo-02.png"
-													alt="logo-02"></figure>
-										</div>
-										<div class="swiper-slide swiper-slide-duplicate" role="group"
-											aria-roledescription="slide" aria-label="3 / 8" data-swiper-slide-index="2"
-											style="width: 192px; margin-right: 80px;" aria-hidden="true" inert="">
-											<figure class="swiper-slide-inner"><img decoding="async"
-													class="swiper-slide-image"
-													src="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/logo-03.png"
-													alt="logo-03"></figure>
-										</div>
-										<div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev"
-											role="group" aria-roledescription="slide" aria-label="4 / 8"
-											data-swiper-slide-index="3" style="width: 192px; margin-right: 80px;"
-											aria-hidden="true" inert="">
-											<figure class="swiper-slide-inner"><img decoding="async"
-													class="swiper-slide-image"
-													src="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/logo-04.png"
-													alt="logo-04"></figure>
-										</div>
-										<div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active"
-											role="group" aria-roledescription="slide" aria-label="5 / 8"
-											data-swiper-slide-index="4" style="width: 192px; margin-right: 80px;"
-											aria-hidden="true" inert="">
-											<figure class="swiper-slide-inner"><img decoding="async"
-													class="swiper-slide-image"
-													src="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/logo-05.png"
-													alt="logo-05"></figure>
-										</div>
-									</div>
-
-									<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
-								</div>
-							</div>
-							<div class="elementor-element elementor-element-d163777 elementor-widget__width-initial elementor-absolute elementor-widget elementor-widget-spacer"
-								data-id="d163777" data-element_type="widget" data-e-type="widget"
-								data-settings="{&quot;_position&quot;:&quot;absolute&quot;}"
-								data-widget_type="spacer.default">
-								<div class="elementor-spacer">
-									<div class="elementor-spacer-inner"></div>
-								</div>
-							</div>
-							<div class="elementor-element elementor-element-6c87419 elementor-widget__width-initial elementor-absolute elementor-widget elementor-widget-spacer"
-								data-id="6c87419" data-element_type="widget" data-e-type="widget"
-								data-settings="{&quot;_position&quot;:&quot;absolute&quot;}"
-								data-widget_type="spacer.default">
-								<div class="elementor-spacer">
-									<div class="elementor-spacer-inner"></div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="elementor-element elementor-element-3fc9d7f e-flex e-con-boxed e-con e-parent e-lazyloaded"
-					data-id="3fc9d7f" data-element_type="container" data-e-type="container">
-					<div class="e-con-inner">
-						<div class="elementor-element elementor-element-22d1b5c e-con-full e-flex e-con e-child"
-							data-id="22d1b5c" data-element_type="container" data-e-type="container">
-							<div class="elementor-element elementor-element-ded3721 elementor-widget elementor-widget-heading animated fadeInUp"
-								data-id="ded3721" data-element_type="widget" data-e-type="widget"
-								data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}"
-								data-widget_type="heading.default">
-								<div class="elementor-heading-title elementor-size-default">Who We Are</div>
-							</div>
-							<div class="elementor-element elementor-element-7ba4507 elementor-widget elementor-widget-heading animated fadeInUp"
-								data-id="7ba4507" data-element_type="widget" data-e-type="widget"
-								data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}"
-								data-widget_type="heading.default">
-								<h2 class="elementor-heading-title elementor-size-default">Trusted Partner for Green,
-									Healthy Environments</h2>
-							</div>
-							<div class="elementor-element elementor-element-d6a3d55 elementor-widget elementor-widget-text-editor animated fadeInUp"
-								data-id="d6a3d55" data-element_type="widget" data-e-type="widget"
-								data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}"
-								data-widget_type="text-editor.default">
-								<p>For over a decade, our team has helped transform homes and commercial properties into
-									lush, organized, and welcoming landscapes. We approach every project with careful
-									planning, thoughtful design, and reliable maintenance — ensuring your garden looks
-									its best all year long.</p>
-							</div>
-							<div class="elementor-element elementor-element-833d5a7 elementor-widget elementor-widget-button animated fadeInUp"
-								data-id="833d5a7" data-element_type="widget" data-e-type="widget"
-								data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}"
-								data-widget_type="button.default">
-								<a class="elementor-button elementor-button-link elementor-size-sm" href="#">
-									<span class="elementor-button-content-wrapper">
-										<span class="elementor-button-text">Learn More</span>
-									</span>
-								</a>
-							</div>
-						</div>
-						<div class="elementor-element elementor-element-8c4665f e-con-full e-flex e-con e-child"
-							data-id="8c4665f" data-element_type="container" data-e-type="container">
-							<div class="elementor-element elementor-element-186a133 elementor-widget elementor-widget-image animated fadeInUp"
-								data-id="186a133" data-element_type="widget" data-e-type="widget"
-								data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:&quot;250&quot;}"
-								data-widget_type="image.default">
-								<img decoding="async" width="1920" height="1280"
-									src="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/professional-garden-worker-trimming-plants-using-s-2025-03-14-03-22-40-utc.webp"
-									class="attachment-full size-full wp-image-133" alt=""
-									srcset="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/professional-garden-worker-trimming-plants-using-s-2025-03-14-03-22-40-utc.webp 1920w, {{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/professional-garden-worker-trimming-plants-using-s-2025-03-14-03-22-40-utc-300x200.webp 300w, {{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/professional-garden-worker-trimming-plants-using-s-2025-03-14-03-22-40-utc-1024x683.webp 1024w, {{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/professional-garden-worker-trimming-plants-using-s-2025-03-14-03-22-40-utc-768x512.webp 768w, {{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/professional-garden-worker-trimming-plants-using-s-2025-03-14-03-22-40-utc-1536x1024.webp 1536w, {{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/professional-garden-worker-trimming-plants-using-s-2025-03-14-03-22-40-utc-800x533.webp 800w"
-									sizes="(max-width: 1920px) 100vw, 1920px">
-							</div>
-						</div>
-						<div class="elementor-element elementor-element-8b2a54a e-con-full e-flex e-con e-child"
-							data-id="8b2a54a" data-element_type="container" data-e-type="container">
-							<div class="elementor-element elementor-element-aa96e99 elementor-widget-tablet__width-initial elementor-widget-mobile__width-inherit elementor-widget elementor-widget-counter animated fadeInUp"
-								data-id="aa96e99" data-element_type="widget" data-e-type="widget"
-								data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}"
-								data-widget_type="counter.default">
-								<div class="elementor-counter">
-									<div class="elementor-counter-title">Years of industry experience</div>
-									<div class="elementor-counter-number-wrapper">
-										<span class="elementor-counter-number-prefix"></span>
-										<span class="elementor-counter-number" data-duration="2000" data-to-value="10"
-											data-from-value="0" data-delimiter=",">10</span>
-										<span class="elementor-counter-number-suffix">+</span>
-									</div>
-								</div>
-							</div>
-							<div class="elementor-element elementor-element-1f775a2 elementor-widget-tablet__width-initial elementor-widget-mobile__width-inherit elementor-widget elementor-widget-counter animated fadeInUp"
-								data-id="1f775a2" data-element_type="widget" data-e-type="widget"
-								data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:&quot;250&quot;}"
-								data-widget_type="counter.default">
-								<div class="elementor-counter">
-									<div class="elementor-counter-title">Garderns designed &amp; maintained</div>
-									<div class="elementor-counter-number-wrapper">
-										<span class="elementor-counter-number-prefix"></span>
-										<span class="elementor-counter-number" data-duration="2000" data-to-value="300"
-											data-from-value="0" data-delimiter=",">300</span>
-										<span class="elementor-counter-number-suffix">+</span>
-									</div>
-								</div>
-							</div>
-							<div class="elementor-element elementor-element-2f44247 elementor-widget-tablet__width-initial elementor-widget-mobile__width-inherit elementor-widget elementor-widget-counter animated fadeInUp"
-								data-id="2f44247" data-element_type="widget" data-e-type="widget"
-								data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:&quot;500&quot;}"
-								data-widget_type="counter.default">
-								<div class="elementor-counter">
-									<div class="elementor-counter-title">Client satisfaction rate</div>
-									<div class="elementor-counter-number-wrapper">
-										<span class="elementor-counter-number-prefix"></span>
-										<span class="elementor-counter-number" data-duration="2000" data-to-value="98"
-											data-from-value="0" data-delimiter=",">98</span>
-										<span class="elementor-counter-number-suffix">%</span>
-									</div>
-								</div>
-							</div>
-							<div class="elementor-element elementor-element-435e176 elementor-widget-tablet__width-initial elementor-widget-mobile__width-inherit elementor-widget elementor-widget-counter animated fadeInUp"
-								data-id="435e176" data-element_type="widget" data-e-type="widget"
-								data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:&quot;750&quot;}"
-								data-widget_type="counter.default">
-								<div class="elementor-counter">
-									<div class="elementor-counter-title">Support for scheduled maintenance</div>
-									<div class="elementor-counter-number-wrapper">
-										<span class="elementor-counter-number-prefix"></span>
-										<span class="elementor-counter-number" data-duration="2000" data-to-value="24"
-											data-from-value="24" data-delimiter=",">24</span>
-										<span class="elementor-counter-number-suffix">/7</span>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="elementor-element elementor-element-32d9ca4 e-flex e-con-boxed e-con e-parent e-lazyloaded"
-					data-id="32d9ca4" data-element_type="container" data-e-type="container"
-					data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-					<div class="e-con-inner">
-						<div class="elementor-element elementor-element-189bd6e e-con-full e-flex e-con e-child"
-							data-id="189bd6e" data-element_type="container" data-e-type="container">
-							<div class="elementor-element elementor-element-7d9d259 elementor-widget elementor-widget-heading animated fadeInUp"
-								data-id="7d9d259" data-element_type="widget" data-e-type="widget"
-								data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}"
-								data-widget_type="heading.default">
-								<div class="elementor-heading-title elementor-size-default">What We Offer</div>
-							</div>
-							<div class="elementor-element elementor-element-74ef56b elementor-widget elementor-widget-heading animated fadeInUp"
-								data-id="74ef56b" data-element_type="widget" data-e-type="widget"
-								data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}"
-								data-widget_type="heading.default">
-								<h2 class="elementor-heading-title elementor-size-default">Tailored Gardening &amp;
-									Landscape Solutions</h2>
-							</div>
-							<div class="elementor-element elementor-element-81db4ae elementor-widget elementor-widget-text-editor animated fadeInUp"
-								data-id="81db4ae" data-element_type="widget" data-e-type="widget"
-								data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}"
-								data-widget_type="text-editor.default">
-								<p>We provide a full range of services to help you build, grow, and maintain a thriving
-									outdoor environment.</p>
-							</div>
-						</div>
-						<div class="elementor-element elementor-element-3b729ec e-grid e-con-full e-con e-child"
-							data-id="3b729ec" data-element_type="container" data-e-type="container">
-							<div class="elementor-element elementor-element-0594957 e-con-full e-flex e-con e-child animated fadeInUp"
-								data-id="0594957" data-element_type="container" data-e-type="container"
-								data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeInUp&quot;}">
-								<div class="elementor-element elementor-element-08dfd17 elementor-widget elementor-widget-image-box"
-									data-id="08dfd17" data-element_type="widget" data-e-type="widget"
-									data-widget_type="image-box.default">
-									<div class="elementor-image-box-wrapper">
-										<div class="elementor-image-box-content">
-											<h4 class="elementor-image-box-title">Landscape Design</h4>
-											<p class="elementor-image-box-description">Transform your outdoor space with
-												custom layouts, plant selections, and functional garden structures
-												designed to match your style and needs.</p>
-										</div>
-									</div>
-								</div>
-								<div class="elementor-element elementor-element-b70cc79 e-con-full e-flex e-con e-child"
-									data-id="b70cc79" data-element_type="container" data-e-type="container"
-									data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-									<div class="elementor-element elementor-element-9237a09 elementor-widget elementor-widget-button"
-										data-id="9237a09" data-element_type="widget" data-e-type="widget"
-										data-widget_type="button.default">
-										<a class="elementor-button elementor-button-link elementor-size-sm" href="#">
-											<span class="elementor-button-content-wrapper">
-												<span class="elementor-button-text">Learn More</span>
-											</span>
-										</a>
-									</div>
-									<div class="elementor-element elementor-element-569d1db elementor-widget__width-inherit elementor-absolute elementor-widget elementor-widget-image"
-										data-id="569d1db" data-element_type="widget" data-e-type="widget"
-										data-settings="{&quot;_position&quot;:&quot;absolute&quot;}"
-										data-widget_type="image.default">
-										<img loading="lazy" decoding="async" width="1920" height="1280"
-											src="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/autumn-garden-works-2025-03-13-12-16-05-utc.webp"
-											class="attachment-full size-full wp-image-153" alt=""
-											srcset="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/autumn-garden-works-2025-03-13-12-16-05-utc.webp 1920w, {{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/autumn-garden-works-2025-03-13-12-16-05-utc-300x200.webp 300w, {{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/autumn-garden-works-2025-03-13-12-16-05-utc-1024x683.webp 1024w, {{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/autumn-garden-works-2025-03-13-12-16-05-utc-768x512.webp 768w, {{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/autumn-garden-works-2025-03-13-12-16-05-utc-1536x1024.webp 1536w, {{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/autumn-garden-works-2025-03-13-12-16-05-utc-800x533.webp 800w"
-											sizes="(max-width: 1920px) 100vw, 1920px">
-									</div>
-								</div>
-							</div>
-							<div class="elementor-element elementor-element-e443e43 e-con-full e-flex e-con e-child animated fadeInUp"
-								data-id="e443e43" data-element_type="container" data-e-type="container"
-								data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeInUp&quot;,&quot;animation_delay&quot;:&quot;250&quot;}">
-								<div class="elementor-element elementor-element-2b2c7f3 elementor-widget elementor-widget-image-box"
-									data-id="2b2c7f3" data-element_type="widget" data-e-type="widget"
-									data-widget_type="image-box.default">
-									<div class="elementor-image-box-wrapper">
-										<div class="elementor-image-box-content">
-											<h4 class="elementor-image-box-title">Garden Maintenance</h4>
-											<p class="elementor-image-box-description">Reliable weekly or monthly
-												maintenance, including trimming, pruning, weeding, lawn care, and
-												seasonal preparation to keep everything healthy and tidy.</p>
-										</div>
-									</div>
-								</div>
-								<div class="elementor-element elementor-element-519a921 e-con-full e-flex e-con e-child"
-									data-id="519a921" data-element_type="container" data-e-type="container"
-									data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-									<div class="elementor-element elementor-element-ac8efb0 elementor-widget elementor-widget-button"
-										data-id="ac8efb0" data-element_type="widget" data-e-type="widget"
-										data-widget_type="button.default">
-										<a class="elementor-button elementor-button-link elementor-size-sm" href="#">
-											<span class="elementor-button-content-wrapper">
-												<span class="elementor-button-text">Learn More</span>
-											</span>
-										</a>
-									</div>
-									<div class="elementor-element elementor-element-2c313c4 elementor-widget__width-inherit elementor-absolute elementor-widget elementor-widget-image"
-										data-id="2c313c4" data-element_type="widget" data-e-type="widget"
-										data-settings="{&quot;_position&quot;:&quot;absolute&quot;}"
-										data-widget_type="image.default">
-										<img loading="lazy" decoding="async" width="1920" height="1280"
-											src="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/garden-worker-trimming-plants-during-spring-season-2025-03-13-02-51-36-utc.webp"
-											class="attachment-full size-full wp-image-247" alt=""
-											srcset="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/garden-worker-trimming-plants-during-spring-season-2025-03-13-02-51-36-utc.webp 1920w, {{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/garden-worker-trimming-plants-during-spring-season-2025-03-13-02-51-36-utc-300x200.webp 300w, {{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/garden-worker-trimming-plants-during-spring-season-2025-03-13-02-51-36-utc-1024x683.webp 1024w, {{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/garden-worker-trimming-plants-during-spring-season-2025-03-13-02-51-36-utc-768x512.webp 768w, {{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/garden-worker-trimming-plants-during-spring-season-2025-03-13-02-51-36-utc-1536x1024.webp 1536w, {{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/garden-worker-trimming-plants-during-spring-season-2025-03-13-02-51-36-utc-800x533.webp 800w"
-											sizes="(max-width: 1920px) 100vw, 1920px">
-									</div>
-								</div>
-							</div>
-							<div class="elementor-element elementor-element-0498ec0 e-con-full e-flex e-con e-child animated fadeInUp"
-								data-id="0498ec0" data-element_type="container" data-e-type="container"
-								data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeInUp&quot;,&quot;animation_delay&quot;:&quot;500&quot;}">
-								<div class="elementor-element elementor-element-89494e7 elementor-widget elementor-widget-image-box"
-									data-id="89494e7" data-element_type="widget" data-e-type="widget"
-									data-widget_type="image-box.default">
-									<div class="elementor-image-box-wrapper">
-										<div class="elementor-image-box-content">
-											<h4 class="elementor-image-box-title">Lawn Care &amp; Turf Restoration</h4>
-											<p class="elementor-image-box-description">Professional lawn mowing,
-												fertilizing, aeration, and turf repair to keep your grass green, strong,
-												and evenly grown.</p>
-										</div>
-									</div>
-								</div>
-								<div class="elementor-element elementor-element-39533ab e-con-full e-flex e-con e-child"
-									data-id="39533ab" data-element_type="container" data-e-type="container"
-									data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-									<div class="elementor-element elementor-element-13fc96d elementor-widget elementor-widget-button"
-										data-id="13fc96d" data-element_type="widget" data-e-type="widget"
-										data-widget_type="button.default">
-										<a class="elementor-button elementor-button-link elementor-size-sm" href="#">
-											<span class="elementor-button-content-wrapper">
-												<span class="elementor-button-text">Learn More</span>
-											</span>
-										</a>
-									</div>
-									<div class="elementor-element elementor-element-95de8ce elementor-widget__width-inherit elementor-absolute elementor-widget elementor-widget-image"
-										data-id="95de8ce" data-element_type="widget" data-e-type="widget"
-										data-settings="{&quot;_position&quot;:&quot;absolute&quot;}"
-										data-widget_type="image.default">
-										<img loading="lazy" decoding="async" width="1920" height="1280"
-											src="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/gardener-tending-to-plants-in-a-lush-garden-during-2025-07-08-16-32-36-utc.webp"
-											class="attachment-full size-full wp-image-249" alt=""
-											srcset="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/gardener-tending-to-plants-in-a-lush-garden-during-2025-07-08-16-32-36-utc.webp 1920w, {{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/gardener-tending-to-plants-in-a-lush-garden-during-2025-07-08-16-32-36-utc-300x200.webp 300w, {{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/gardener-tending-to-plants-in-a-lush-garden-during-2025-07-08-16-32-36-utc-1024x683.webp 1024w, {{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/gardener-tending-to-plants-in-a-lush-garden-during-2025-07-08-16-32-36-utc-768x512.webp 768w, {{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/gardener-tending-to-plants-in-a-lush-garden-during-2025-07-08-16-32-36-utc-1536x1024.webp 1536w, {{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/gardener-tending-to-plants-in-a-lush-garden-during-2025-07-08-16-32-36-utc-800x533.webp 800w"
-											sizes="(max-width: 1920px) 100vw, 1920px">
-									</div>
-								</div>
-							</div>
-							<div class="elementor-element elementor-element-0725371 e-con-full e-flex e-con e-child animated fadeInUp"
-								data-id="0725371" data-element_type="container" data-e-type="container"
-								data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeInUp&quot;}">
-								<div class="elementor-element elementor-element-22c33fb elementor-widget elementor-widget-image-box"
-									data-id="22c33fb" data-element_type="widget" data-e-type="widget"
-									data-widget_type="image-box.default">
-									<div class="elementor-image-box-wrapper">
-										<div class="elementor-image-box-content">
-											<h4 class="elementor-image-box-title">Outdoor Cleaning &amp; Hardscape Care
-											</h4>
-											<p class="elementor-image-box-description">Cleaning pathways, patios, stone
-												areas, and outdoor structures to maintain a polished, welcoming look
-												across your entire landscape.</p>
-										</div>
-									</div>
-								</div>
-								<div class="elementor-element elementor-element-e935549 e-con-full e-flex e-con e-child"
-									data-id="e935549" data-element_type="container" data-e-type="container"
-									data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-									<div class="elementor-element elementor-element-c824ec1 elementor-widget elementor-widget-button"
-										data-id="c824ec1" data-element_type="widget" data-e-type="widget"
-										data-widget_type="button.default">
-										<a class="elementor-button elementor-button-link elementor-size-sm" href="#">
-											<span class="elementor-button-content-wrapper">
-												<span class="elementor-button-text">Learn More</span>
-											</span>
-										</a>
-									</div>
-									<div class="elementor-element elementor-element-855a52d elementor-widget__width-inherit elementor-absolute elementor-widget elementor-widget-image"
-										data-id="855a52d" data-element_type="widget" data-e-type="widget"
-										data-settings="{&quot;_position&quot;:&quot;absolute&quot;}"
-										data-widget_type="image.default">
-										<img fetchpriority="high" decoding="async" width="1920" height="1280"
-											src="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/professional-gardener-trimming-garden-decorative-t-2025-03-15-00-55-17-utc.webp"
-											class="attachment-full size-full wp-image-80" alt=""
-											srcset="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/professional-gardener-trimming-garden-decorative-t-2025-03-15-00-55-17-utc.webp 1920w, {{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/professional-gardener-trimming-garden-decorative-t-2025-03-15-00-55-17-utc-300x200.webp 300w, {{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/professional-gardener-trimming-garden-decorative-t-2025-03-15-00-55-17-utc-1024x683.webp 1024w, {{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/professional-gardener-trimming-garden-decorative-t-2025-03-15-00-55-17-utc-768x512.webp 768w, {{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/professional-gardener-trimming-garden-decorative-t-2025-03-15-00-55-17-utc-1536x1024.webp 1536w, {{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/professional-gardener-trimming-garden-decorative-t-2025-03-15-00-55-17-utc-800x533.webp 800w"
-											sizes="(max-width: 1920px) 100vw, 1920px">
-									</div>
-								</div>
-							</div>
-							<div class="elementor-element elementor-element-ab346f1 e-con-full e-flex e-con e-child animated fadeInUp"
-								data-id="ab346f1" data-element_type="container" data-e-type="container"
-								data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeInUp&quot;,&quot;animation_delay&quot;:&quot;250&quot;}">
-								<div class="elementor-element elementor-element-13ab702 elementor-widget elementor-widget-image-box"
-									data-id="13ab702" data-element_type="widget" data-e-type="widget"
-									data-widget_type="image-box.default">
-									<div class="elementor-image-box-wrapper">
-										<div class="elementor-image-box-content">
-											<h4 class="elementor-image-box-title">Irrigation System Setup</h4>
-											<p class="elementor-image-box-description">Smart, water-efficient irrigation
-												solutions that ensure your plants receive the right amount of hydration,
-												saving time and reducing water waste.</p>
-										</div>
-									</div>
-								</div>
-								<div class="elementor-element elementor-element-e5ff1cf e-con-full e-flex e-con e-child"
-									data-id="e5ff1cf" data-element_type="container" data-e-type="container"
-									data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-									<div class="elementor-element elementor-element-c0351b9 elementor-widget elementor-widget-button"
-										data-id="c0351b9" data-element_type="widget" data-e-type="widget"
-										data-widget_type="button.default">
-										<a class="elementor-button elementor-button-link elementor-size-sm" href="#">
-											<span class="elementor-button-content-wrapper">
-												<span class="elementor-button-text">Learn More</span>
-											</span>
-										</a>
-									</div>
-									<div class="elementor-element elementor-element-91fa6c8 elementor-widget__width-inherit elementor-absolute elementor-widget elementor-widget-image"
-										data-id="91fa6c8" data-element_type="widget" data-e-type="widget"
-										data-settings="{&quot;_position&quot;:&quot;absolute&quot;}"
-										data-widget_type="image.default">
-										<img loading="lazy" decoding="async" width="1920" height="1280"
-											src="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/power-washing-garden-paths-2025-03-13-02-47-53-utc.webp"
-											class="attachment-full size-full wp-image-250" alt=""
-											srcset="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/power-washing-garden-paths-2025-03-13-02-47-53-utc.webp 1920w, {{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/power-washing-garden-paths-2025-03-13-02-47-53-utc-300x200.webp 300w, {{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/power-washing-garden-paths-2025-03-13-02-47-53-utc-1024x683.webp 1024w, {{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/power-washing-garden-paths-2025-03-13-02-47-53-utc-768x512.webp 768w, {{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/power-washing-garden-paths-2025-03-13-02-47-53-utc-1536x1024.webp 1536w, {{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/power-washing-garden-paths-2025-03-13-02-47-53-utc-800x533.webp 800w"
-											sizes="(max-width: 1920px) 100vw, 1920px">
-									</div>
-								</div>
-							</div>
-							<div class="elementor-element elementor-element-5612e6e e-con-full e-flex e-con e-child animated fadeInUp"
-								data-id="5612e6e" data-element_type="container" data-e-type="container"
-								data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeInUp&quot;,&quot;animation_delay&quot;:&quot;500&quot;}">
-								<div class="elementor-element elementor-element-b06f072 elementor-widget elementor-widget-image-box"
-									data-id="b06f072" data-element_type="widget" data-e-type="widget"
-									data-widget_type="image-box.default">
-									<div class="elementor-image-box-wrapper">
-										<div class="elementor-image-box-content">
-											<h4 class="elementor-image-box-title">Tree &amp; Shrub Care</h4>
-											<p class="elementor-image-box-description">Expert pruning, shaping, pest
-												management, and health monitoring for trees and shrubs to support
-												long-term growth and safety.</p>
-										</div>
-									</div>
-								</div>
-								<div class="elementor-element elementor-element-5744ea0 e-con-full e-flex e-con e-child"
-									data-id="5744ea0" data-element_type="container" data-e-type="container"
-									data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-									<div class="elementor-element elementor-element-063e4c4 elementor-widget elementor-widget-button"
-										data-id="063e4c4" data-element_type="widget" data-e-type="widget"
-										data-widget_type="button.default">
-										<a class="elementor-button elementor-button-link elementor-size-sm" href="#">
-											<span class="elementor-button-content-wrapper">
-												<span class="elementor-button-text">Learn More</span>
-											</span>
-										</a>
-									</div>
-									<div class="elementor-element elementor-element-f005318 elementor-widget__width-inherit elementor-absolute elementor-widget elementor-widget-image"
-										data-id="f005318" data-element_type="widget" data-e-type="widget"
-										data-settings="{&quot;_position&quot;:&quot;absolute&quot;}"
-										data-widget_type="image.default">
-										<img loading="lazy" decoding="async" width="1920" height="1230"
-											src="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/gardener-laying-new-sod-in-residential-backyard-du-2025-05-31-22-39-14-utc.webp"
-											class="attachment-full size-full wp-image-248" alt=""
-											srcset="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/gardener-laying-new-sod-in-residential-backyard-du-2025-05-31-22-39-14-utc.webp 1920w, {{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/gardener-laying-new-sod-in-residential-backyard-du-2025-05-31-22-39-14-utc-300x192.webp 300w, {{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/gardener-laying-new-sod-in-residential-backyard-du-2025-05-31-22-39-14-utc-1024x656.webp 1024w, {{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/gardener-laying-new-sod-in-residential-backyard-du-2025-05-31-22-39-14-utc-768x492.webp 768w, {{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/gardener-laying-new-sod-in-residential-backyard-du-2025-05-31-22-39-14-utc-1536x984.webp 1536w, {{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/gardener-laying-new-sod-in-residential-backyard-du-2025-05-31-22-39-14-utc-800x513.webp 800w"
-											sizes="(max-width: 1920px) 100vw, 1920px">
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="elementor-element elementor-element-3259417 e-flex e-con-boxed e-con e-parent e-lazyloaded"
-					data-id="3259417" data-element_type="container" data-e-type="container">
-					<div class="e-con-inner">
-						<div class="elementor-element elementor-element-840fc5b e-con-full e-flex e-con e-child"
-							data-id="840fc5b" data-element_type="container" data-e-type="container">
-							<div class="elementor-element elementor-element-a219aa9 elementor-widget elementor-widget-heading animated fadeInUp"
-								data-id="a219aa9" data-element_type="widget" data-e-type="widget"
-								data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}"
-								data-widget_type="heading.default">
-								<div class="elementor-heading-title elementor-size-default">Why Choose Us</div>
-							</div>
-							<div class="elementor-element elementor-element-92c8df1 elementor-widget elementor-widget-heading animated fadeInUp"
-								data-id="92c8df1" data-element_type="widget" data-e-type="widget"
-								data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}"
-								data-widget_type="heading.default">
-								<h2 class="elementor-heading-title elementor-size-default">Gardens That Thrive, Not Just
-									Survive</h2>
-							</div>
-							<div class="elementor-element elementor-element-555780f elementor-widget elementor-widget-text-editor animated fadeInUp"
-								data-id="555780f" data-element_type="widget" data-e-type="widget"
-								data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}"
-								data-widget_type="text-editor.default">
-								<p>Our combination of experience, care, and sustainable methods ensures your garden
-									stays vibrant year-round.</p>
-							</div>
-						</div>
-						<div class="elementor-element elementor-element-316cf66 e-con-full e-flex e-con e-child"
-							data-id="316cf66" data-element_type="container" data-e-type="container">
-							<div class="elementor-element elementor-element-c66addd e-con-full e-flex e-con e-child animated fadeInUp"
-								data-id="c66addd" data-element_type="container" data-e-type="container"
-								data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;}">
-								<div class="elementor-element elementor-element-c13119b elementor-position-inline-start elementor-widget__width-initial elementor-view-default elementor-mobile-position-block-start elementor-widget elementor-widget-icon-box"
-									data-id="c13119b" data-element_type="widget" data-e-type="widget"
-									data-widget_type="icon-box.default">
-									<div class="elementor-icon-box-wrapper">
-
-										<div class="elementor-icon-box-icon">
-											<span class="elementor-icon">
-												<svg aria-hidden="true" class="e-font-icon-svg e-fas-medal"
-													viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-													<path
-														d="M223.75 130.75L154.62 15.54A31.997 31.997 0 0 0 127.18 0H16.03C3.08 0-4.5 14.57 2.92 25.18l111.27 158.96c29.72-27.77 67.52-46.83 109.56-53.39zM495.97 0H384.82c-11.24 0-21.66 5.9-27.44 15.54l-69.13 115.21c42.04 6.56 79.84 25.62 109.56 53.38L509.08 25.18C516.5 14.57 508.92 0 495.97 0zM256 160c-97.2 0-176 78.8-176 176s78.8 176 176 176 176-78.8 176-176-78.8-176-176-176zm92.52 157.26l-37.93 36.96 8.97 52.22c1.6 9.36-8.26 16.51-16.65 12.09L256 393.88l-46.9 24.65c-8.4 4.45-18.25-2.74-16.65-12.09l8.97-52.22-37.93-36.96c-6.82-6.64-3.05-18.23 6.35-19.59l52.43-7.64 23.43-47.52c2.11-4.28 6.19-6.39 10.28-6.39 4.11 0 8.22 2.14 10.33 6.39l23.43 47.52 52.43 7.64c9.4 1.36 13.17 12.95 6.35 19.59z">
-													</path>
-												</svg> </span>
-										</div>
-
-										<div class="elementor-icon-box-content">
-
-											<h4 class="elementor-icon-box-title">
-												<span>
-													Expert-Driven Results </span>
-											</h4>
-
-
-										</div>
-
-									</div>
-								</div>
-								<div class="elementor-element elementor-element-eea8ab5 elementor-widget__width-initial elementor-widget elementor-widget-text-editor"
-									data-id="eea8ab5" data-element_type="widget" data-e-type="widget"
-									data-widget_type="text-editor.default">
-									<p>Skilled horticulturists and landscape specialists ensure your garden is planned
-										and maintained with precision and care.</p>
-								</div>
-								<div class="elementor-element elementor-element-18c6868 elementor-view-stacked elementor-shape-circle elementor-widget elementor-widget-icon"
-									data-id="18c6868" data-element_type="widget" data-e-type="widget"
-									data-widget_type="icon.default">
-									<div class="elementor-icon-wrapper">
-										<a class="elementor-icon" href="#">
-											<svg aria-hidden="true" class="e-font-icon-svg e-fas-chevron-right"
-												viewBox="0 0 320 512" xmlns="http://www.w3.org/2000/svg">
-												<path
-													d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z">
-												</path>
-											</svg> </a>
-									</div>
-								</div>
-							</div>
-							<div class="elementor-element elementor-element-991c172 elementor-widget-divider--view-line elementor-widget elementor-widget-divider animated fadeInUp"
-								data-id="991c172" data-element_type="widget" data-e-type="widget"
-								data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}"
-								data-widget_type="divider.default">
-								<div class="elementor-divider">
-									<span class="elementor-divider-separator">
-									</span>
-								</div>
-							</div>
-							<div class="elementor-element elementor-element-52cbf35 e-con-full e-flex e-con e-child animated fadeInUp"
-								data-id="52cbf35" data-element_type="container" data-e-type="container"
-								data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;}">
-								<div class="elementor-element elementor-element-c72e879 elementor-position-inline-start elementor-widget__width-initial elementor-view-default elementor-mobile-position-block-start elementor-widget elementor-widget-icon-box"
-									data-id="c72e879" data-element_type="widget" data-e-type="widget"
-									data-widget_type="icon-box.default">
-									<div class="elementor-icon-box-wrapper">
-
-										<div class="elementor-icon-box-icon">
-											<span class="elementor-icon">
-												<svg aria-hidden="true" class="e-font-icon-svg e-fas-recycle"
-													viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-													<path
-														d="M184.561 261.903c3.232 13.997-12.123 24.635-24.068 17.168l-40.736-25.455-50.867 81.402C55.606 356.273 70.96 384 96.012 384H148c6.627 0 12 5.373 12 12v40c0 6.627-5.373 12-12 12H96.115c-75.334 0-121.302-83.048-81.408-146.88l50.822-81.388-40.725-25.448c-12.081-7.547-8.966-25.961 4.879-29.158l110.237-25.45c8.611-1.988 17.201 3.381 19.189 11.99l25.452 110.237zm98.561-182.915l41.289 66.076-40.74 25.457c-12.051 7.528-9 25.953 4.879 29.158l110.237 25.45c8.672 1.999 17.215-3.438 19.189-11.99l25.45-110.237c3.197-13.844-11.99-24.719-24.068-17.168l-40.687 25.424-41.263-66.082c-37.521-60.033-125.209-60.171-162.816 0l-17.963 28.766c-3.51 5.62-1.8 13.021 3.82 16.533l33.919 21.195c5.62 3.512 13.024 1.803 16.536-3.817l17.961-28.743c12.712-20.341 41.973-19.676 54.257-.022zM497.288 301.12l-27.515-44.065c-3.511-5.623-10.916-7.334-16.538-3.821l-33.861 21.159c-5.62 3.512-7.33 10.915-3.818 16.536l27.564 44.112c13.257 21.211-2.057 48.96-27.136 48.96H320V336.02c0-14.213-17.242-21.383-27.313-11.313l-80 79.981c-6.249 6.248-6.249 16.379 0 22.627l80 79.989C302.689 517.308 320 510.3 320 495.989V448h95.88c75.274 0 121.335-82.997 81.408-146.88z">
-													</path>
-												</svg> </span>
-										</div>
-
-										<div class="elementor-icon-box-content">
-
-											<h4 class="elementor-icon-box-title">
-												<span>
-													Sustainable &amp; Eco-Friendly Methods </span>
-											</h4>
-
-
-										</div>
-
-									</div>
-								</div>
-								<div class="elementor-element elementor-element-06dc923 elementor-widget__width-initial elementor-widget elementor-widget-text-editor"
-									data-id="06dc923" data-element_type="widget" data-e-type="widget"
-									data-widget_type="text-editor.default">
-									<p>We use safe fertilizers, smart irrigation, and low-waste practices to keep your
-										garden healthy and the environment protected.</p>
-								</div>
-								<div class="elementor-element elementor-element-4b2cdc2 elementor-view-stacked elementor-shape-circle elementor-widget elementor-widget-icon"
-									data-id="4b2cdc2" data-element_type="widget" data-e-type="widget"
-									data-widget_type="icon.default">
-									<div class="elementor-icon-wrapper">
-										<a class="elementor-icon" href="#">
-											<svg aria-hidden="true" class="e-font-icon-svg e-fas-chevron-right"
-												viewBox="0 0 320 512" xmlns="http://www.w3.org/2000/svg">
-												<path
-													d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z">
-												</path>
-											</svg> </a>
-									</div>
-								</div>
-							</div>
-							<div class="elementor-element elementor-element-d518cee elementor-widget-divider--view-line elementor-widget elementor-widget-divider animated fadeInUp"
-								data-id="d518cee" data-element_type="widget" data-e-type="widget"
-								data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}"
-								data-widget_type="divider.default">
-								<div class="elementor-divider">
-									<span class="elementor-divider-separator">
-									</span>
-								</div>
-							</div>
-							<div class="elementor-element elementor-element-fcf2e5a e-con-full e-flex e-con e-child animated fadeInUp"
-								data-id="fcf2e5a" data-element_type="container" data-e-type="container"
-								data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;}">
-								<div class="elementor-element elementor-element-26ce58e elementor-position-inline-start elementor-widget__width-initial elementor-view-default elementor-mobile-position-block-start elementor-widget elementor-widget-icon-box"
-									data-id="26ce58e" data-element_type="widget" data-e-type="widget"
-									data-widget_type="icon-box.default">
-									<div class="elementor-icon-box-wrapper">
-
-										<div class="elementor-icon-box-icon">
-											<span class="elementor-icon">
-												<svg aria-hidden="true" class="e-font-icon-svg e-fas-calendar-check"
-													viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
-													<path
-														d="M436 160H12c-6.627 0-12-5.373-12-12v-36c0-26.51 21.49-48 48-48h48V12c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v52h128V12c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v52h48c26.51 0 48 21.49 48 48v36c0 6.627-5.373 12-12 12zM12 192h424c6.627 0 12 5.373 12 12v260c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V204c0-6.627 5.373-12 12-12zm333.296 95.947l-28.169-28.398c-4.667-4.705-12.265-4.736-16.97-.068L194.12 364.665l-45.98-46.352c-4.667-4.705-12.266-4.736-16.971-.068l-28.397 28.17c-4.705 4.667-4.736 12.265-.068 16.97l82.601 83.269c4.667 4.705 12.265 4.736 16.97.068l142.953-141.805c4.705-4.667 4.736-12.265.068-16.97z">
-													</path>
-												</svg> </span>
-										</div>
-
-										<div class="elementor-icon-box-content">
-
-											<h4 class="elementor-icon-box-title">
-												<span>
-													Reliable, Consistent Maintenance </span>
-											</h4>
-
-
-										</div>
-
-									</div>
-								</div>
-								<div class="elementor-element elementor-element-5d67b46 elementor-widget__width-initial elementor-widget elementor-widget-text-editor"
-									data-id="5d67b46" data-element_type="widget" data-e-type="widget"
-									data-widget_type="text-editor.default">
-									<p>Weekly or monthly care that keeps your outdoor space neat, balanced, and thriving
-										— without you lifting a finger.</p>
-								</div>
-								<div class="elementor-element elementor-element-c3331cd elementor-view-stacked elementor-shape-circle elementor-widget elementor-widget-icon"
-									data-id="c3331cd" data-element_type="widget" data-e-type="widget"
-									data-widget_type="icon.default">
-									<div class="elementor-icon-wrapper">
-										<a class="elementor-icon" href="#">
-											<svg aria-hidden="true" class="e-font-icon-svg e-fas-chevron-right"
-												viewBox="0 0 320 512" xmlns="http://www.w3.org/2000/svg">
-												<path
-													d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z">
-												</path>
-											</svg> </a>
-									</div>
-								</div>
-							</div>
-							<div class="elementor-element elementor-element-c482174 elementor-widget-divider--view-line elementor-widget elementor-widget-divider animated fadeInUp"
-								data-id="c482174" data-element_type="widget" data-e-type="widget"
-								data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}"
-								data-widget_type="divider.default">
-								<div class="elementor-divider">
-									<span class="elementor-divider-separator">
-									</span>
-								</div>
-							</div>
-							<div class="elementor-element elementor-element-ca269cc e-con-full e-flex e-con e-child animated fadeInUp"
-								data-id="ca269cc" data-element_type="container" data-e-type="container"
-								data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;}">
-								<div class="elementor-element elementor-element-9936bd8 elementor-position-inline-start elementor-widget__width-initial elementor-view-default elementor-mobile-position-block-start elementor-widget elementor-widget-icon-box"
-									data-id="9936bd8" data-element_type="widget" data-e-type="widget"
-									data-widget_type="icon-box.default">
-									<div class="elementor-icon-box-wrapper">
-
-										<div class="elementor-icon-box-icon">
-											<span class="elementor-icon">
-												<svg aria-hidden="true" class="e-font-icon-svg e-fas-expand-arrows-alt"
-													viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
-													<path
-														d="M448 344v112a23.94 23.94 0 0 1-24 24H312c-21.39 0-32.09-25.9-17-41l36.2-36.2L224 295.6 116.77 402.9 153 439c15.09 15.1 4.39 41-17 41H24a23.94 23.94 0 0 1-24-24V344c0-21.4 25.89-32.1 41-17l36.19 36.2L184.46 256 77.18 148.7 41 185c-15.1 15.1-41 4.4-41-17V56a23.94 23.94 0 0 1 24-24h112c21.39 0 32.09 25.9 17 41l-36.2 36.2L224 216.4l107.23-107.3L295 73c-15.09-15.1-4.39-41 17-41h112a23.94 23.94 0 0 1 24 24v112c0 21.4-25.89 32.1-41 17l-36.19-36.2L263.54 256l107.28 107.3L407 327.1c15.1-15.2 41-4.5 41 16.9z">
-													</path>
-												</svg> </span>
-										</div>
-
-										<div class="elementor-icon-box-content">
-
-											<h4 class="elementor-icon-box-title">
-												<span>
-													Tailored to Your Space &amp; Style </span>
-											</h4>
-
-
-										</div>
-
-									</div>
-								</div>
-								<div class="elementor-element elementor-element-3584d51 elementor-widget__width-initial elementor-widget elementor-widget-text-editor"
-									data-id="3584d51" data-element_type="widget" data-e-type="widget"
-									data-widget_type="text-editor.default">
-									<p>Every garden is unique. We customize plant choices, layouts, and maintenance
-										plans based on your landscape and lifestyle.</p>
-								</div>
-								<div class="elementor-element elementor-element-f2d01c3 elementor-view-stacked elementor-shape-circle elementor-widget elementor-widget-icon"
-									data-id="f2d01c3" data-element_type="widget" data-e-type="widget"
-									data-widget_type="icon.default">
-									<div class="elementor-icon-wrapper">
-										<a class="elementor-icon" href="#">
-											<svg aria-hidden="true" class="e-font-icon-svg e-fas-chevron-right"
-												viewBox="0 0 320 512" xmlns="http://www.w3.org/2000/svg">
-												<path
-													d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z">
-												</path>
-											</svg> </a>
-									</div>
-								</div>
-							</div>
-							<div class="elementor-element elementor-element-167b2ee elementor-widget-divider--view-line elementor-widget elementor-widget-divider animated fadeInUp"
-								data-id="167b2ee" data-element_type="widget" data-e-type="widget"
-								data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}"
-								data-widget_type="divider.default">
-								<div class="elementor-divider">
-									<span class="elementor-divider-separator">
-									</span>
-								</div>
-							</div>
-							<div class="elementor-element elementor-element-97c2845 e-con-full e-flex e-con e-child animated fadeInUp"
-								data-id="97c2845" data-element_type="container" data-e-type="container"
-								data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;}">
-								<div class="elementor-element elementor-element-e23ea58 elementor-position-inline-start elementor-widget__width-initial elementor-view-default elementor-mobile-position-block-start elementor-widget elementor-widget-icon-box"
-									data-id="e23ea58" data-element_type="widget" data-e-type="widget"
-									data-widget_type="icon-box.default">
-									<div class="elementor-icon-box-wrapper">
-
-										<div class="elementor-icon-box-icon">
-											<span class="elementor-icon">
-												<svg aria-hidden="true" class="e-font-icon-svg e-fas-map-marked-alt"
-													viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
-													<path
-														d="M288 0c-69.59 0-126 56.41-126 126 0 56.26 82.35 158.8 113.9 196.02 6.39 7.54 17.82 7.54 24.2 0C331.65 284.8 414 182.26 414 126 414 56.41 357.59 0 288 0zm0 168c-23.2 0-42-18.8-42-42s18.8-42 42-42 42 18.8 42 42-18.8 42-42 42zM20.12 215.95A32.006 32.006 0 0 0 0 245.66v250.32c0 11.32 11.43 19.06 21.94 14.86L160 448V214.92c-8.84-15.98-16.07-31.54-21.25-46.42L20.12 215.95zM288 359.67c-14.07 0-27.38-6.18-36.51-16.96-19.66-23.2-40.57-49.62-59.49-76.72v182l192 64V266c-18.92 27.09-39.82 53.52-59.49 76.72-9.13 10.77-22.44 16.95-36.51 16.95zm266.06-198.51L416 224v288l139.88-55.95A31.996 31.996 0 0 0 576 426.34V176.02c0-11.32-11.43-19.06-21.94-14.86z">
-													</path>
-												</svg> </span>
-										</div>
-
-										<div class="elementor-icon-box-content">
-
-											<h4 class="elementor-icon-box-title">
-												<span>
-													Local Expertise </span>
-											</h4>
-
-
-										</div>
-
-									</div>
-								</div>
-								<div class="elementor-element elementor-element-5fff0b4 elementor-widget__width-initial elementor-widget elementor-widget-text-editor"
-									data-id="5fff0b4" data-element_type="widget" data-e-type="widget"
-									data-widget_type="text-editor.default">
-									<p>We understand local climate, soil types, and plant behavior, giving your garden
-										exactly what it needs.</p>
-								</div>
-								<div class="elementor-element elementor-element-b6f30d8 elementor-view-stacked elementor-shape-circle elementor-widget elementor-widget-icon"
-									data-id="b6f30d8" data-element_type="widget" data-e-type="widget"
-									data-widget_type="icon.default">
-									<div class="elementor-icon-wrapper">
-										<a class="elementor-icon" href="#">
-											<svg aria-hidden="true" class="e-font-icon-svg e-fas-chevron-right"
-												viewBox="0 0 320 512" xmlns="http://www.w3.org/2000/svg">
-												<path
-													d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z">
-												</path>
-											</svg> </a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="elementor-element elementor-element-cb7a26c elementor-widget elementor-widget-button animated fadeInUp"
-							data-id="cb7a26c" data-element_type="widget" data-e-type="widget"
-							data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}"
-							data-widget_type="button.default">
-							<a class="elementor-button elementor-button-link elementor-size-sm" href="#">
-								<span class="elementor-button-content-wrapper">
-									<span class="elementor-button-text">See All Benefits</span>
-								</span>
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="elementor-element elementor-element-43cd6f8 e-flex e-con-boxed e-con e-parent e-lazyloaded"
-					data-id="43cd6f8" data-element_type="container" data-e-type="container"
-					data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-					<div class="e-con-inner">
-						<div class="elementor-element elementor-element-1b3a489 e-con-full e-flex e-con e-child"
-							data-id="1b3a489" data-element_type="container" data-e-type="container">
-							<div class="elementor-element elementor-element-b23a820 elementor-widget__width-inherit elementor-widget elementor-widget-heading animated fadeInUp"
-								data-id="b23a820" data-element_type="widget" data-e-type="widget"
-								data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}"
-								data-widget_type="heading.default">
-								<div class="elementor-heading-title elementor-size-default">Recent Project</div>
-							</div>
-							<div class="elementor-element elementor-element-49b4ccc elementor-widget__width-initial elementor-widget elementor-widget-heading animated fadeInUp"
-								data-id="49b4ccc" data-element_type="widget" data-e-type="widget"
-								data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}"
-								data-widget_type="heading.default">
-								<h2 class="elementor-heading-title elementor-size-default">A Collection of Gardens We've
-									Designed</h2>
-							</div>
-							<div class="elementor-element elementor-element-4abd11a elementor-widget__width-initial elementor-widget elementor-widget-text-editor animated fadeInUp"
-								data-id="4abd11a" data-element_type="widget" data-e-type="widget"
-								data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}"
-								data-widget_type="text-editor.default">
-								<p>Each project reflects our commitment to detail, quality, and creating spaces that
-									feel welcoming and alive.</p>
-							</div>
-							<div class="elementor-element elementor-element-2debc2c elementor-widget elementor-widget-button animated fadeInUp"
-								data-id="2debc2c" data-element_type="widget" data-e-type="widget"
-								data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:&quot;250&quot;}"
-								data-widget_type="button.default">
-								<a class="elementor-button elementor-button-link elementor-size-sm" href="#">
-									<span class="elementor-button-content-wrapper">
-										<span class="elementor-button-text">See All Projects</span>
-									</span>
-								</a>
-							</div>
-						</div>
-						<div class="elementor-element elementor-element-2753c37 e-con-full e-grid e-con e-child"
-							data-id="2753c37" data-element_type="container" data-e-type="container">
-							<a class="elementor-element elementor-element-75b7a0f e-con-full e-flex e-con e-child animated fadeInUp"
-								data-id="75b7a0f" data-element_type="container" data-e-type="container"
-								data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;}" href="#">
-								<div class="elementor-element elementor-element-6b0b1bc e-con-full e-flex e-con e-child"
-									data-id="6b0b1bc" data-element_type="container" data-e-type="container"
-									data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-									<div class="elementor-element elementor-element-dc9b6f3 elementor-widget elementor-widget-heading"
-										data-id="dc9b6f3" data-element_type="widget" data-e-type="widget"
-										data-widget_type="heading.default">
-										<div class="elementor-heading-title elementor-size-default">Commercial</div>
-									</div>
-								</div>
-								<div class="elementor-element elementor-element-4f2f6bd elementor-widget elementor-widget-image-box"
-									data-id="4f2f6bd" data-element_type="widget" data-e-type="widget"
-									data-widget_type="image-box.default">
-									<div class="elementor-image-box-wrapper">
-										<div class="elementor-image-box-content">
-											<div class="elementor-image-box-title">Commercial Landscape Redesign</div>
-											<p class="elementor-image-box-description">Melbourne, Australia</p>
-										</div>
-									</div>
-								</div>
-							</a>
-							<a class="elementor-element elementor-element-72e9e6c e-con-full e-flex e-con e-child animated fadeInUp"
-								data-id="72e9e6c" data-element_type="container" data-e-type="container"
-								data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;,&quot;animation_delay&quot;:&quot;250&quot;}"
-								href="#">
-								<div class="elementor-element elementor-element-143ddb8 e-con-full e-flex e-con e-child"
-									data-id="143ddb8" data-element_type="container" data-e-type="container"
-									data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-									<div class="elementor-element elementor-element-e522fb7 elementor-widget elementor-widget-heading"
-										data-id="e522fb7" data-element_type="widget" data-e-type="widget"
-										data-widget_type="heading.default">
-										<div class="elementor-heading-title elementor-size-default">Residential</div>
-									</div>
-								</div>
-								<div class="elementor-element elementor-element-c54c7fe elementor-widget elementor-widget-image-box"
-									data-id="c54c7fe" data-element_type="widget" data-e-type="widget"
-									data-widget_type="image-box.default">
-									<div class="elementor-image-box-wrapper">
-										<div class="elementor-image-box-content">
-											<div class="elementor-image-box-title">Tropical Home Garden Revitalization
-											</div>
-											<p class="elementor-image-box-description">Bali, Indonesia</p>
-										</div>
-									</div>
-								</div>
-							</a>
-							<a class="elementor-element elementor-element-32d84b5 e-con-full e-flex e-con e-child animated fadeInUp"
-								data-id="32d84b5" data-element_type="container" data-e-type="container"
-								data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;,&quot;animation_delay&quot;:&quot;500&quot;}"
-								href="#">
-								<div class="elementor-element elementor-element-68b5aa1 e-con-full e-flex e-con e-child"
-									data-id="68b5aa1" data-element_type="container" data-e-type="container"
-									data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-									<div class="elementor-element elementor-element-e6a1e8e elementor-widget elementor-widget-heading"
-										data-id="e6a1e8e" data-element_type="widget" data-e-type="widget"
-										data-widget_type="heading.default">
-										<div class="elementor-heading-title elementor-size-default">Residential</div>
-									</div>
-								</div>
-								<div class="elementor-element elementor-element-6f0cd9f elementor-widget elementor-widget-image-box"
-									data-id="6f0cd9f" data-element_type="widget" data-e-type="widget"
-									data-widget_type="image-box.default">
-									<div class="elementor-image-box-wrapper">
-										<div class="elementor-image-box-content">
-											<div class="elementor-image-box-title">Backyard Courtyard Redesign</div>
-											<p class="elementor-image-box-description">Sydney, Australia</p>
-										</div>
-									</div>
-								</div>
-							</a>
-							<a class="elementor-element elementor-element-be72776 e-con-full e-flex e-con e-child animated fadeInUp"
-								data-id="be72776" data-element_type="container" data-e-type="container"
-								data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;,&quot;animation_delay&quot;:&quot;750&quot;}"
-								href="#">
-								<div class="elementor-element elementor-element-b4859c5 e-con-full e-flex e-con e-child"
-									data-id="b4859c5" data-element_type="container" data-e-type="container"
-									data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-									<div class="elementor-element elementor-element-8b8d1b2 elementor-widget elementor-widget-heading"
-										data-id="8b8d1b2" data-element_type="widget" data-e-type="widget"
-										data-widget_type="heading.default">
-										<div class="elementor-heading-title elementor-size-default">Commercial</div>
-									</div>
-								</div>
-								<div class="elementor-element elementor-element-cf95944 elementor-widget elementor-widget-image-box"
-									data-id="cf95944" data-element_type="widget" data-e-type="widget"
-									data-widget_type="image-box.default">
-									<div class="elementor-image-box-wrapper">
-										<div class="elementor-image-box-content">
-											<div class="elementor-image-box-title">Front Yard Makeover For Family Home
-											</div>
-											<p class="elementor-image-box-description">Brisbane, Australia</p>
-										</div>
-									</div>
-								</div>
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="elementor-element elementor-element-a67a212 e-flex e-con-boxed e-con e-parent e-lazyloaded"
-					data-id="a67a212" data-element_type="container" data-e-type="container">
-					<div class="e-con-inner">
-						<div class="elementor-element elementor-element-472469a e-con-full e-flex e-con e-child"
-							data-id="472469a" data-element_type="container" data-e-type="container">
-							<div class="elementor-element elementor-element-a8f6d39 elementor-widget elementor-widget-heading animated fadeInUp"
-								data-id="a8f6d39" data-element_type="widget" data-e-type="widget"
-								data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}"
-								data-widget_type="heading.default">
-								<div class="elementor-heading-title elementor-size-default">What People Say</div>
-							</div>
-							<div class="elementor-element elementor-element-912a58d elementor-widget__width-initial elementor-widget elementor-widget-heading animated fadeInUp"
-								data-id="912a58d" data-element_type="widget" data-e-type="widget"
-								data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}"
-								data-widget_type="heading.default">
-								<h2 class="elementor-heading-title elementor-size-default">Happy Clients, Beautiful
-									Landscapes</h2>
-							</div>
-							<div class="elementor-element elementor-element-3b8366e elementor-widget elementor-widget-text-editor animated fadeInUp"
-								data-id="3b8366e" data-element_type="widget" data-e-type="widget"
-								data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}"
-								data-widget_type="text-editor.default">
-								<p>From small backyard upgrades to full-scale landscapes, our clients see the difference
-									in quality and care.</p>
-							</div>
-						</div>
-						<div class="elementor-element elementor-element-37eb41e e-con-full e-flex e-con e-child"
-							data-id="37eb41e" data-element_type="container" data-e-type="container">
-							<div class="elementor-element elementor-element-2288ab3 e-con-full e-flex e-con e-child animated fadeInUp"
-								data-id="2288ab3" data-element_type="container" data-e-type="container"
-								data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeInUp&quot;}">
-								<div class="elementor-element elementor-element-3552fc1 elementor-view-default elementor-widget elementor-widget-icon"
-									data-id="3552fc1" data-element_type="widget" data-e-type="widget"
-									data-widget_type="icon.default">
-									<div class="elementor-icon-wrapper">
-										<div class="elementor-icon">
-											<svg class="ekit-svg-icon icon-quote1" viewBox="0 0 32 32"
-												xmlns="http://www.w3.org/2000/svg">
-												<path
-													d="M7.426 15.221v2.576h6.435v13.861h-13.861v-13.861h0v-2.576c0-5.231 1.505-9.115 4.473-11.545 2.053-1.681 4.653-2.533 7.725-2.533v7.425c-1.668 0-4.773 0-4.773 6.653zM30.338 8.568v-7.425c-3.073 0-5.672 0.852-7.725 2.533-2.968 2.43-4.473 6.314-4.473 11.545v16.437h13.861v-13.861h-6.435v-2.576c0-6.653 3.105-6.653 4.773-6.653z">
-												</path>
-											</svg>
-										</div>
-									</div>
-								</div>
-								<div class="elementor-element elementor-element-ea43745 elementor-widget elementor-widget-text-editor"
-									data-id="ea43745" data-element_type="widget" data-e-type="widget"
-									data-widget_type="text-editor.default">
-									<p>“We’ve worked with several gardening services in the past, but nothing compares
-										to the experience we had with this team. They took the time to understand how we
-										use our backyard, suggested plants that matched our lifestyle, and redesigned
-										everything with such care.”</p>
-								</div>
-								<div class="elementor-element elementor-element-f948cb4 e-con-full e-flex e-con e-child"
-									data-id="f948cb4" data-element_type="container" data-e-type="container">
-									<div class="elementor-element elementor-element-9dfc3b1 elementor-widget elementor-widget-image"
-										data-id="9dfc3b1" data-element_type="widget" data-e-type="widget"
-										data-widget_type="image.default">
-										<img loading="lazy" decoding="async" width="600" height="600"
-											src="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/Avatar-vladislav-nikonov-unsplash.webp"
-											class="attachment-full size-full wp-image-265" alt=""
-											srcset="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/Avatar-vladislav-nikonov-unsplash.webp 600w, {{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/Avatar-vladislav-nikonov-unsplash-300x300.webp 300w, {{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/Avatar-vladislav-nikonov-unsplash-150x150.webp 150w"
-											sizes="(max-width: 600px) 100vw, 600px">
-									</div>
-									<div class="elementor-element elementor-element-7d8d74e elementor-widget elementor-widget-elementskit-heading"
-										data-id="7d8d74e" data-element_type="widget" data-e-type="widget"
-										data-widget_type="elementskit-heading.default">
-										<div class="ekit-wid-con">
-											<div
-												class="ekit-heading elementskit-section-title-wraper text_left   ekit_heading_tablet-   ekit_heading_mobile-">
-												<div class="ekit-heading--title elementskit-section-title ">Tom M.,
-													<span>Homeowner</span></div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="elementor-element elementor-element-03e9aa3 elementor-widget elementor-widget-button"
-									data-id="03e9aa3" data-element_type="widget" data-e-type="widget"
-									data-widget_type="button.default">
-									<a class="elementor-button elementor-button-link elementor-size-sm" href="#">
-										<span class="elementor-button-content-wrapper">
-											<span class="elementor-button-icon">
-												<svg aria-hidden="true" class="e-font-icon-svg e-fas-arrow-right"
-													viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
-													<path
-														d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z">
-													</path>
-												</svg> </span>
-											<span class="elementor-button-text">Read Customer Story</span>
-										</span>
-									</a>
-								</div>
-							</div>
-							<div class="elementor-element elementor-element-94c81f2 e-con-full e-flex e-con e-child animated fadeInUp"
-								data-id="94c81f2" data-element_type="container" data-e-type="container"
-								data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeInUp&quot;,&quot;animation_delay&quot;:&quot;250&quot;}">
-								<div class="elementor-element elementor-element-5c966ad elementor-widget elementor-widget-elementskit-video"
-									data-id="5c966ad" data-element_type="widget" data-e-type="widget"
-									data-settings="{&quot;ekit_video_popup_close_icon&quot;:{&quot;value&quot;:&quot;icon icon-cancel&quot;,&quot;library&quot;:&quot;ekiticons&quot;}}"
-									data-widget_type="elementskit-video.default">
-									<div class="elementor-widget-container">
-										<div class="ekit-wid-con">
-											<div class="video-content" data-video-player="[]"
-												data-video-setting="{&quot;videoVolume&quot;:&quot;horizontal&quot;,&quot;startVolume&quot;:0.8,&quot;videoType&quot;:&quot;iframe&quot;,&quot;videoClass&quot;:&quot;mfp-fade&quot;,&quot;popupIcon&quot;:{&quot;value&quot;:&quot;icon icon-cancel&quot;,&quot;library&quot;:&quot;ekiticons&quot;},&quot;videoStyle&quot;:&quot;popup&quot;,&quot;videoTypeName&quot;:&quot;youtube&quot;,&quot;autoplay&quot;:false,&quot;muted&quot;:false,&quot;loop&quot;:false,&quot;bg_color&quot;:&quot;&quot;}">
-												<div class="ekit-hidden-icons" style="display: none;">
-													<div class="ekit-popup-close-icon">
-														<svg class="ekit-svg-icon icon-cancel" viewBox="0 0 32 32"
-															xmlns="http://www.w3.org/2000/svg">
-															<path
-																d="M18.556 16.027l12.169-12.169c0.706-0.706 0.706-1.85 0-2.555s-1.851-0.706-2.555 0l-12.169 12.169-12.167-12.169c-0.705-0.706-1.85-0.706-2.555 0s-0.706 1.85 0 2.555l12.167 12.169-12.915 12.915c-0.706 0.706-0.706 1.85 0 2.555 0.352 0.353 0.815 0.53 1.278 0.53s0.925-0.176 1.278-0.53l12.915-12.915 12.915 12.915c0.353 0.353 0.815 0.53 1.278 0.53s0.924-0.176 1.278-0.53c0.706-0.706 0.706-1.85 0-2.555l-12.915-12.915z">
-															</path>
-														</svg>
-													</div>
-												</div>
-
-												<a class="ekit_icon_button ekit-video-popup ekit-video-popup-btn"
-													href="https://www.youtube.com/embed/VhBl3dHT5SY?feature=oembed?playlist=VhBl3dHT5SY&amp;mute=0&amp;autoplay=0&amp;loop=no&amp;controls=0&amp;start=0&amp;end="
-													aria-label="Play video">
-													<svg class="ekit-svg-icon icon-play-button" viewBox="0 0 32 32"
-														xmlns="http://www.w3.org/2000/svg">
-														<path
-															d="M27.481 15.773l-22.096-15.238c-0.234-0.161-0.537-0.178-0.787-0.047-0.251 0.132-0.408 0.391-0.408 0.674v30.477c0 0.283 0.157 0.543 0.408 0.675 0.111 0.058 0.233 0.087 0.354 0.087 0.152 0 0.302-0.046 0.433-0.135l22.096-15.238c0.206-0.142 0.329-0.376 0.329-0.627s-0.123-0.485-0.329-0.627z">
-														</path>
-													</svg></a>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="elementor-element elementor-element-397328f elementor-widget elementor-widget-text-editor"
-									data-id="397328f" data-element_type="widget" data-e-type="widget"
-									data-widget_type="text-editor.default">
-									<p>“Reliable, professional, and easy to work with.”</p>
-								</div>
-								<div class="elementor-element elementor-element-5af54c0 elementor-widget elementor-widget-elementskit-heading"
-									data-id="5af54c0" data-element_type="widget" data-e-type="widget"
-									data-widget_type="elementskit-heading.default">
-									<div class="ekit-wid-con">
-										<div
-											class="ekit-heading elementskit-section-title-wraper text_left   ekit_heading_tablet-   ekit_heading_mobile-">
-											<div class="ekit-heading--title elementskit-section-title ">Mike T.,
-												<span>Homeowner</span></div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="elementor-element elementor-element-fc81481 e-con-full e-flex e-con e-child animated fadeInUp"
-								data-id="fc81481" data-element_type="container" data-e-type="container"
-								data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeInUp&quot;}">
-								<div class="elementor-element elementor-element-537b8a5 elementor-widget elementor-widget-elementskit-video"
-									data-id="537b8a5" data-element_type="widget" data-e-type="widget"
-									data-settings="{&quot;ekit_video_popup_close_icon&quot;:{&quot;value&quot;:&quot;icon icon-cancel&quot;,&quot;library&quot;:&quot;ekiticons&quot;}}"
-									data-widget_type="elementskit-video.default">
-									<div class="elementor-widget-container">
-										<div class="ekit-wid-con">
-											<div class="video-content" data-video-player="[]"
-												data-video-setting="{&quot;videoVolume&quot;:&quot;horizontal&quot;,&quot;startVolume&quot;:0.8,&quot;videoType&quot;:&quot;iframe&quot;,&quot;videoClass&quot;:&quot;mfp-fade&quot;,&quot;popupIcon&quot;:{&quot;value&quot;:&quot;icon icon-cancel&quot;,&quot;library&quot;:&quot;ekiticons&quot;},&quot;videoStyle&quot;:&quot;popup&quot;,&quot;videoTypeName&quot;:&quot;youtube&quot;,&quot;autoplay&quot;:false,&quot;muted&quot;:false,&quot;loop&quot;:false,&quot;bg_color&quot;:&quot;&quot;}">
-												<div class="ekit-hidden-icons" style="display: none;">
-													<div class="ekit-popup-close-icon">
-														<svg class="ekit-svg-icon icon-cancel" viewBox="0 0 32 32"
-															xmlns="http://www.w3.org/2000/svg">
-															<path
-																d="M18.556 16.027l12.169-12.169c0.706-0.706 0.706-1.85 0-2.555s-1.851-0.706-2.555 0l-12.169 12.169-12.167-12.169c-0.705-0.706-1.85-0.706-2.555 0s-0.706 1.85 0 2.555l12.167 12.169-12.915 12.915c-0.706 0.706-0.706 1.85 0 2.555 0.352 0.353 0.815 0.53 1.278 0.53s0.925-0.176 1.278-0.53l12.915-12.915 12.915 12.915c0.353 0.353 0.815 0.53 1.278 0.53s0.924-0.176 1.278-0.53c0.706-0.706 0.706-1.85 0-2.555l-12.915-12.915z">
-															</path>
-														</svg>
-													</div>
-												</div>
-
-												<a class="ekit_icon_button ekit-video-popup ekit-video-popup-btn"
-													href="https://www.youtube.com/embed/VhBl3dHT5SY?feature=oembed?playlist=VhBl3dHT5SY&amp;mute=0&amp;autoplay=0&amp;loop=no&amp;controls=0&amp;start=0&amp;end="
-													aria-label="Play video">
-													<svg class="ekit-svg-icon icon-play-button" viewBox="0 0 32 32"
-														xmlns="http://www.w3.org/2000/svg">
-														<path
-															d="M27.481 15.773l-22.096-15.238c-0.234-0.161-0.537-0.178-0.787-0.047-0.251 0.132-0.408 0.391-0.408 0.674v30.477c0 0.283 0.157 0.543 0.408 0.675 0.111 0.058 0.233 0.087 0.354 0.087 0.152 0 0.302-0.046 0.433-0.135l22.096-15.238c0.206-0.142 0.329-0.376 0.329-0.627s-0.123-0.485-0.329-0.627z">
-														</path>
-													</svg></a>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="elementor-element elementor-element-5fef0cd elementor-widget elementor-widget-text-editor"
-									data-id="5fef0cd" data-element_type="widget" data-e-type="widget"
-									data-widget_type="text-editor.default">
-									<p>“Their monthly maintenance service is truly stress-free”</p>
-								</div>
-								<div class="elementor-element elementor-element-0fa39e4 elementor-widget elementor-widget-elementskit-heading"
-									data-id="0fa39e4" data-element_type="widget" data-e-type="widget"
-									data-widget_type="elementskit-heading.default">
-									<div class="ekit-wid-con">
-										<div
-											class="ekit-heading elementskit-section-title-wraper text_left   ekit_heading_tablet-   ekit_heading_mobile-">
-											<div class="ekit-heading--title elementskit-section-title ">Daniel P.,
-												<span>Homeowner</span></div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="elementor-element elementor-element-0013d36 e-con-full e-flex e-con e-child animated fadeInUp"
-								data-id="0013d36" data-element_type="container" data-e-type="container"
-								data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeInUp&quot;,&quot;animation_delay&quot;:&quot;250&quot;}">
-								<div class="elementor-element elementor-element-fa40805 elementor-view-default elementor-widget elementor-widget-icon"
-									data-id="fa40805" data-element_type="widget" data-e-type="widget"
-									data-widget_type="icon.default">
-									<div class="elementor-icon-wrapper">
-										<div class="elementor-icon">
-											<svg class="ekit-svg-icon icon-quote1" viewBox="0 0 32 32"
-												xmlns="http://www.w3.org/2000/svg">
-												<path
-													d="M7.426 15.221v2.576h6.435v13.861h-13.861v-13.861h0v-2.576c0-5.231 1.505-9.115 4.473-11.545 2.053-1.681 4.653-2.533 7.725-2.533v7.425c-1.668 0-4.773 0-4.773 6.653zM30.338 8.568v-7.425c-3.073 0-5.672 0.852-7.725 2.533-2.968 2.43-4.473 6.314-4.473 11.545v16.437h13.861v-13.861h-6.435v-2.576c0-6.653 3.105-6.653 4.773-6.653z">
-												</path>
-											</svg>
-										</div>
-									</div>
-								</div>
-								<div class="elementor-element elementor-element-1e69837 elementor-widget elementor-widget-text-editor"
-									data-id="1e69837" data-element_type="widget" data-e-type="widget"
-									data-widget_type="text-editor.default">
-									<p>“Our café courtyard used to feel dull and uneven, and we weren’t sure how to
-										improve it. The team came in with a clear plan, offered creative ideas, and
-										handled everything with reliable communication and consistency.”</p>
-								</div>
-								<div class="elementor-element elementor-element-3341a9c e-con-full e-flex e-con e-child"
-									data-id="3341a9c" data-element_type="container" data-e-type="container">
-									<div class="elementor-element elementor-element-17a9f80 elementor-widget elementor-widget-image"
-										data-id="17a9f80" data-element_type="widget" data-e-type="widget"
-										data-widget_type="image.default">
-										<img loading="lazy" decoding="async" width="600" height="600"
-											src="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/taylor-Xqb7GmV_VoQ-unsplash.webp"
-											class="attachment-full size-full wp-image-266" alt=""
-											srcset="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/taylor-Xqb7GmV_VoQ-unsplash.webp 600w, {{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/taylor-Xqb7GmV_VoQ-unsplash-300x300.webp 300w, {{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/taylor-Xqb7GmV_VoQ-unsplash-150x150.webp 150w"
-											sizes="(max-width: 600px) 100vw, 600px">
-									</div>
-									<div class="elementor-element elementor-element-226e0d8 elementor-widget elementor-widget-elementskit-heading"
-										data-id="226e0d8" data-element_type="widget" data-e-type="widget"
-										data-widget_type="elementskit-heading.default">
-										<div class="ekit-wid-con">
-											<div
-												class="ekit-heading elementskit-section-title-wraper text_left   ekit_heading_tablet-   ekit_heading_mobile-">
-												<div class="ekit-heading--title elementskit-section-title ">Michael R.,
-													<span>Café Owner</span></div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="elementor-element elementor-element-f9ea402 elementor-widget elementor-widget-button"
-									data-id="f9ea402" data-element_type="widget" data-e-type="widget"
-									data-widget_type="button.default">
-									<a class="elementor-button elementor-button-link elementor-size-sm" href="#">
-										<span class="elementor-button-content-wrapper">
-											<span class="elementor-button-icon">
-												<svg aria-hidden="true" class="e-font-icon-svg e-fas-arrow-right"
-													viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
-													<path
-														d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z">
-													</path>
-												</svg> </span>
-											<span class="elementor-button-text">Read Customer Story</span>
-										</span>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="elementor-element elementor-element-f18b96e e-flex e-con-boxed e-con e-parent e-lazyloaded"
-					data-id="f18b96e" data-element_type="container" data-e-type="container"
-					data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-					<div class="e-con-inner">
-						<div class="elementor-element elementor-element-f88b575 e-con-full e-flex e-con e-child"
-							data-id="f88b575" data-element_type="container" data-e-type="container">
-							<div class="elementor-element elementor-element-890d673 e-con-full e-flex e-con e-child animated fadeInUp"
-								data-id="890d673" data-element_type="container" data-e-type="container"
-								data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;}">
-								<div class="elementor-element elementor-element-4ae62cd elementor-widget elementor-widget-counter"
-									data-id="4ae62cd" data-element_type="widget" data-e-type="widget"
-									data-widget_type="counter.default">
-									<div class="elementor-counter">
-										<div class="elementor-counter-number-wrapper">
-											<span class="elementor-counter-number-prefix"></span>
-											<span class="elementor-counter-number" data-duration="2000"
-												data-to-value="85" data-from-value="0" data-delimiter=",">85</span>
-											<span class="elementor-counter-number-suffix">%</span>
-										</div>
-									</div>
-								</div>
-								<div class="elementor-element elementor-element-edcb1df elementor-widget elementor-widget-text-editor"
-									data-id="edcb1df" data-element_type="widget" data-e-type="widget"
-									data-widget_type="text-editor.default">
-									<p>Healthier plant growth with guided care</p>
-								</div>
-							</div>
-							<div class="elementor-element elementor-element-32dfef7 elementor-view-default elementor-widget elementor-widget-icon animated fadeInUp"
-								data-id="32dfef7" data-element_type="widget" data-e-type="widget"
-								data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:&quot;250&quot;}"
-								data-widget_type="icon.default">
-								<div class="elementor-icon-wrapper">
-									<div class="elementor-icon">
-										<svg aria-hidden="true" class="e-font-icon-svg e-fas-asterisk"
-											viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-											<path
-												d="M478.21 334.093L336 256l142.21-78.093c11.795-6.477 15.961-21.384 9.232-33.037l-19.48-33.741c-6.728-11.653-21.72-15.499-33.227-8.523L296 186.718l3.475-162.204C299.763 11.061 288.937 0 275.48 0h-38.96c-13.456 0-24.283 11.061-23.994 24.514L216 186.718 77.265 102.607c-11.506-6.976-26.499-3.13-33.227 8.523l-19.48 33.741c-6.728 11.653-2.562 26.56 9.233 33.037L176 256 33.79 334.093c-11.795 6.477-15.961 21.384-9.232 33.037l19.48 33.741c6.728 11.653 21.721 15.499 33.227 8.523L216 325.282l-3.475 162.204C212.237 500.939 223.064 512 236.52 512h38.961c13.456 0 24.283-11.061 23.995-24.514L296 325.282l138.735 84.111c11.506 6.976 26.499 3.13 33.227-8.523l19.48-33.741c6.728-11.653 2.563-26.559-9.232-33.036z">
-											</path>
-										</svg>
-									</div>
-								</div>
-							</div>
-							<div class="elementor-element elementor-element-753b0d4 e-con-full e-flex e-con e-child animated fadeInUp"
-								data-id="753b0d4" data-element_type="container" data-e-type="container"
-								data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;,&quot;animation_delay&quot;:&quot;500&quot;}">
-								<div class="elementor-element elementor-element-669c85b elementor-widget elementor-widget-counter"
-									data-id="669c85b" data-element_type="widget" data-e-type="widget"
-									data-widget_type="counter.default">
-									<div class="elementor-counter">
-										<div class="elementor-counter-number-wrapper">
-											<span class="elementor-counter-number-prefix"></span>
-											<span class="elementor-counter-number" data-duration="2000"
-												data-to-value="3" data-from-value="0" data-delimiter=",">3</span>
-											<span class="elementor-counter-number-suffix">x</span>
-										</div>
-									</div>
-								</div>
-								<div class="elementor-element elementor-element-d50fedc elementor-widget elementor-widget-text-editor"
-									data-id="d50fedc" data-element_type="widget" data-e-type="widget"
-									data-widget_type="text-editor.default">
-									<p>Faster planning workflow</p>
-								</div>
-							</div>
-							<div class="elementor-element elementor-element-4cc0d31 elementor-view-default elementor-widget elementor-widget-icon animated fadeInUp"
-								data-id="4cc0d31" data-element_type="widget" data-e-type="widget"
-								data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:&quot;750&quot;}"
-								data-widget_type="icon.default">
-								<div class="elementor-icon-wrapper">
-									<div class="elementor-icon">
-										<svg aria-hidden="true" class="e-font-icon-svg e-fas-asterisk"
-											viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-											<path
-												d="M478.21 334.093L336 256l142.21-78.093c11.795-6.477 15.961-21.384 9.232-33.037l-19.48-33.741c-6.728-11.653-21.72-15.499-33.227-8.523L296 186.718l3.475-162.204C299.763 11.061 288.937 0 275.48 0h-38.96c-13.456 0-24.283 11.061-23.994 24.514L216 186.718 77.265 102.607c-11.506-6.976-26.499-3.13-33.227 8.523l-19.48 33.741c-6.728 11.653-2.562 26.56 9.233 33.037L176 256 33.79 334.093c-11.795 6.477-15.961 21.384-9.232 33.037l19.48 33.741c6.728 11.653 21.721 15.499 33.227 8.523L216 325.282l-3.475 162.204C212.237 500.939 223.064 512 236.52 512h38.961c13.456 0 24.283-11.061 23.995-24.514L296 325.282l138.735 84.111c11.506 6.976 26.499 3.13 33.227-8.523l19.48-33.741c6.728-11.653 2.563-26.559-9.232-33.036z">
-											</path>
-										</svg>
-									</div>
-								</div>
-							</div>
-							<div class="elementor-element elementor-element-4349ced e-con-full e-flex e-con e-child animated fadeInUp"
-								data-id="4349ced" data-element_type="container" data-e-type="container"
-								data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;,&quot;animation_delay&quot;:&quot;1000&quot;}">
-								<div class="elementor-element elementor-element-9e9de4f elementor-widget elementor-widget-counter"
-									data-id="9e9de4f" data-element_type="widget" data-e-type="widget"
-									data-widget_type="counter.default">
-									<div class="elementor-counter">
-										<div class="elementor-counter-number-wrapper">
-											<span class="elementor-counter-number-prefix"></span>
-											<span class="elementor-counter-number" data-duration="2000"
-												data-to-value="92" data-from-value="0" data-delimiter=",">92</span>
-											<span class="elementor-counter-number-suffix">%</span>
-										</div>
-									</div>
-								</div>
-								<div class="elementor-element elementor-element-c17596b elementor-widget elementor-widget-text-editor"
-									data-id="c17596b" data-element_type="widget" data-e-type="widget"
-									data-widget_type="text-editor.default">
-									<p>Users feel more confident in their garden decisions</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="elementor-element elementor-element-05973b4 e-flex e-con-boxed e-con e-parent e-lazyloaded"
-					data-id="05973b4" data-element_type="container" data-e-type="container">
-					<div class="e-con-inner">
-						<div class="elementor-element elementor-element-ff7c58a e-con-full e-flex e-con e-child animated fadeInUp"
-							data-id="ff7c58a" data-element_type="container" data-e-type="container"
-							data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeInUp&quot;}">
-							<div class="elementor-element elementor-element-a842320 elementor-widget elementor-widget-heading"
-								data-id="a842320" data-element_type="widget" data-e-type="widget"
-								data-widget_type="heading.default">
-								<div class="elementor-heading-title elementor-size-default">Work With Us</div>
-							</div>
-							<div class="elementor-element elementor-element-2ef5be1 elementor-widget__width-initial elementor-widget elementor-widget-heading"
-								data-id="2ef5be1" data-element_type="widget" data-e-type="widget"
-								data-widget_type="heading.default">
-								<h3 class="elementor-heading-title elementor-size-default">Start Your Garden
-									Transformation with Us</h3>
-							</div>
-							<div class="elementor-element elementor-element-62cd4ac elementor-widget elementor-widget-heading"
-								data-id="62cd4ac" data-element_type="widget" data-e-type="widget"
-								data-widget_type="heading.default">
-								<div class="elementor-heading-title elementor-size-default">You will get:</div>
-							</div>
-							<div class="elementor-element elementor-element-ff7a6d9 e-grid e-con-full e-con e-child"
-								data-id="ff7a6d9" data-element_type="container" data-e-type="container">
-								<div class="elementor-element elementor-element-c2fc7bb elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
-									data-id="c2fc7bb" data-element_type="widget" data-e-type="widget"
-									data-widget_type="icon-list.default">
-									<ul class="elementor-icon-list-items">
-										<li class="elementor-icon-list-item">
-											<span class="elementor-icon-list-icon">
-												<svg aria-hidden="true" class="e-font-icon-svg e-fas-check-circle"
-													viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-													<path
-														d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z">
-													</path>
-												</svg> </span>
-											<span class="elementor-icon-list-text">Cleaner, Healthier Gardens</span>
-										</li>
-										<li class="elementor-icon-list-item">
-											<span class="elementor-icon-list-icon">
-												<svg aria-hidden="true" class="e-font-icon-svg e-fas-check-circle"
-													viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-													<path
-														d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z">
-													</path>
-												</svg> </span>
-											<span class="elementor-icon-list-text">Expert Outdoor Guidance</span>
-										</li>
-										<li class="elementor-icon-list-item">
-											<span class="elementor-icon-list-icon">
-												<svg aria-hidden="true" class="e-font-icon-svg e-fas-check-circle"
-													viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-													<path
-														d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z">
-													</path>
-												</svg> </span>
-											<span class="elementor-icon-list-text">Boost Property Value</span>
-										</li>
-									</ul>
-								</div>
-								<div class="elementor-element elementor-element-2b701d4 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
-									data-id="2b701d4" data-element_type="widget" data-e-type="widget"
-									data-widget_type="icon-list.default">
-									<ul class="elementor-icon-list-items">
-										<li class="elementor-icon-list-item">
-											<span class="elementor-icon-list-icon">
-												<svg aria-hidden="true" class="e-font-icon-svg e-fas-check-circle"
-													viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-													<path
-														d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z">
-													</path>
-												</svg> </span>
-											<span class="elementor-icon-list-text">Certified Garden Specialist</span>
-										</li>
-										<li class="elementor-icon-list-item">
-											<span class="elementor-icon-list-icon">
-												<svg aria-hidden="true" class="e-font-icon-svg e-fas-check-circle"
-													viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-													<path
-														d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z">
-													</path>
-												</svg> </span>
-											<span class="elementor-icon-list-text">Visible Instant Results</span>
-										</li>
-										<li class="elementor-icon-list-item">
-											<span class="elementor-icon-list-icon">
-												<svg aria-hidden="true" class="e-font-icon-svg e-fas-check-circle"
-													viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-													<path
-														d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z">
-													</path>
-												</svg> </span>
-											<span class="elementor-icon-list-text">Personalized Garden Plans</span>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<div class="elementor-element elementor-element-bdc1e06 elementor-widget elementor-widget-button"
-								data-id="bdc1e06" data-element_type="widget" data-e-type="widget"
-								data-widget_type="button.default">
-								<a class="elementor-button elementor-button-link elementor-size-sm" href="#">
-									<span class="elementor-button-content-wrapper">
-										<span class="elementor-button-text">Work With Us</span>
-									</span>
-								</a>
-							</div>
-							<div class="elementor-element elementor-element-5d383aa elementor-absolute elementor-widget elementor-widget-image"
-								data-id="5d383aa" data-element_type="widget" data-e-type="widget"
-								data-settings="{&quot;_position&quot;:&quot;absolute&quot;}"
-								data-widget_type="image.default">
-								<img loading="lazy" decoding="async" width="806" height="808"
-									src="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/terrace-logomark-2.png"
-									class="attachment-full size-full wp-image-240" alt=""
-									srcset="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/terrace-logomark-2.png 806w, {{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/terrace-logomark-2-300x300.png 300w, {{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/terrace-logomark-2-150x150.png 150w, {{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/terrace-logomark-2-768x770.png 768w, {{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/terrace-logomark-2-800x802.png 800w"
-									sizes="(max-width: 806px) 100vw, 806px">
-							</div>
-						</div>
-						<div class="elementor-element elementor-element-f947f34 e-con-full e-flex e-con e-child animated fadeInUp"
-							data-id="f947f34" data-element_type="container" data-e-type="container"
-							data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeInUp&quot;,&quot;animation_delay&quot;:&quot;250&quot;}">
-							<div class="elementor-element elementor-element-95f2299 elementor-widget elementor-widget-heading"
-								data-id="95f2299" data-element_type="widget" data-e-type="widget"
-								data-widget_type="heading.default">
-								<div class="elementor-heading-title elementor-size-default">Newsletter</div>
-							</div>
-							<div class="elementor-element elementor-element-7836c5d elementor-widget__width-initial elementor-widget elementor-widget-heading"
-								data-id="7836c5d" data-element_type="widget" data-e-type="widget"
-								data-widget_type="heading.default">
-								<h3 class="elementor-heading-title elementor-size-default">Nurture Your Garden with Us
-								</h3>
-							</div>
-							<div class="elementor-element elementor-element-83d7c5d elementor-widget elementor-widget-text-editor"
-								data-id="83d7c5d" data-element_type="widget" data-e-type="widget"
-								data-widget_type="text-editor.default">
-								<p>Receive curated tips, inspiration, and the latest updates to help your outdoor space
-									thrive all year long.</p>
-							</div>
-							<div class="elementor-element elementor-element-349f7da elementor-widget elementor-widget-button"
-								data-id="349f7da" data-element_type="widget" data-e-type="widget"
-								data-widget_type="button.default">
-								<a class="elementor-button elementor-button-link elementor-size-sm" href="#">
-									<span class="elementor-button-content-wrapper">
-										<span class="elementor-button-text">Join Now</span>
-									</span>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-		</div>
-
-	</main>
-
-	<div class="ekit-template-content-markup ekit-template-content-footer ekit-template-content-theme-support">
-		<div data-elementor-type="wp-post" data-elementor-id="59" class="elementor elementor-59">
-			<div class="elementor-element elementor-element-e4ea2ee e-flex e-con-boxed e-con e-parent e-lazyloaded"
-				data-id="e4ea2ee" data-element_type="container" data-e-type="container"
-				data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-				<div class="e-con-inner">
-					<div class="elementor-element elementor-element-71d32e9 e-con-full e-flex e-con e-child"
-						data-id="71d32e9" data-element_type="container" data-e-type="container">
-						<div class="elementor-element elementor-element-4c37da8 e-con-full e-flex e-con e-child"
-							data-id="4c37da8" data-element_type="container" data-e-type="container">
-							<div class="elementor-element elementor-element-0a87d2e elementor-widget elementor-widget-image animated fadeInUp"
-								data-id="0a87d2e" data-element_type="widget" data-e-type="widget"
-								data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}"
-								data-widget_type="image.default">
-								<img width="274" height="80"
-									src="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/uploads/sites/11/2026/01/seed-stone-logo.png"
-									class="attachment-full size-full wp-image-52" alt="">
-							</div>
-							<div class="elementor-element elementor-element-037ab19 elementor-widget elementor-widget-text-editor animated fadeInUp"
-								data-id="037ab19" data-element_type="widget" data-e-type="widget"
-								data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}"
-								data-widget_type="text-editor.default">
-								<p>Growing outdoor spaces that feel alive and inspiring.</p>
-							</div>
-							<div class="elementor-element elementor-element-d9c7ffe elementor-widget elementor-widget-button"
-								data-id="d9c7ffe" data-element_type="widget" data-e-type="widget"
-								data-widget_type="button.default">
-								<a class="elementor-button elementor-button-link elementor-size-sm" href="#">
-									<span class="elementor-button-content-wrapper">
-										<span class="elementor-button-text">Back to Top</span>
-									</span>
-								</a>
-							</div>
-						</div>
-						<div class="elementor-element elementor-element-0b2e8a3 e-grid e-con-full e-con e-child"
-							data-id="0b2e8a3" data-element_type="container" data-e-type="container">
-							<div class="elementor-element elementor-element-455502a e-con-full e-flex e-con e-child"
-								data-id="455502a" data-element_type="container" data-e-type="container">
-								<div class="elementor-element elementor-element-475e18d elementor-widget elementor-widget-heading animated fadeInUp"
-									data-id="475e18d" data-element_type="widget" data-e-type="widget"
-									data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:&quot;250&quot;}"
-									data-widget_type="heading.default">
-									<div class="elementor-heading-title elementor-size-default">Services</div>
-								</div>
-								<div class="elementor-element elementor-element-991af9f elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list animated fadeInUp"
-									data-id="991af9f" data-element_type="widget" data-e-type="widget"
-									data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:&quot;250&quot;}"
-									data-widget_type="icon-list.default">
-									<ul class="elementor-icon-list-items">
-										<li class="elementor-icon-list-item">
-											<a href="#">
-
-												<span class="elementor-icon-list-text">Garden Maintenance</span>
-											</a>
-										</li>
-										<li class="elementor-icon-list-item">
-											<a href="#">
-
-												<span class="elementor-icon-list-text">Landscape Design</span>
-											</a>
-										</li>
-										<li class="elementor-icon-list-item">
-											<a href="#">
-
-												<span class="elementor-icon-list-text">Irrigation Systems</span>
-											</a>
-										</li>
-										<li class="elementor-icon-list-item">
-											<a href="#">
-
-												<span class="elementor-icon-list-text">Lawn Care &amp; Turf</span>
-											</a>
-										</li>
-										<li class="elementor-icon-list-item">
-											<a href="#">
-
-												<span class="elementor-icon-list-text">Tree &amp; Shrub Care</span>
-											</a>
-										</li>
-										<li class="elementor-icon-list-item">
-											<a href="#">
-
-												<span class="elementor-icon-list-text">Outdoor Cleaning</span>
-											</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<div class="elementor-element elementor-element-82c0e86 e-con-full e-flex e-con e-child"
-								data-id="82c0e86" data-element_type="container" data-e-type="container">
-								<div class="elementor-element elementor-element-d52d3c3 elementor-widget elementor-widget-heading animated fadeInUp"
-									data-id="d52d3c3" data-element_type="widget" data-e-type="widget"
-									data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:&quot;250&quot;}"
-									data-widget_type="heading.default">
-									<div class="elementor-heading-title elementor-size-default">Company</div>
-								</div>
-								<div class="elementor-element elementor-element-54c6040 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list animated fadeInUp"
-									data-id="54c6040" data-element_type="widget" data-e-type="widget"
-									data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:&quot;250&quot;}"
-									data-widget_type="icon-list.default">
-									<ul class="elementor-icon-list-items">
-										<li class="elementor-icon-list-item">
-											<a href="#">
-
-												<span class="elementor-icon-list-text">About Us</span>
-											</a>
-										</li>
-										<li class="elementor-icon-list-item">
-											<a href="#">
-
-												<span class="elementor-icon-list-text">Contact</span>
-											</a>
-										</li>
-										<li class="elementor-icon-list-item">
-											<a href="#">
-
-												<span class="elementor-icon-list-text">Career</span>
-											</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<div class="elementor-element elementor-element-ba9bfe9 e-con-full e-flex e-con e-child"
-								data-id="ba9bfe9" data-element_type="container" data-e-type="container">
-								<div class="elementor-element elementor-element-6d6aca1 elementor-widget elementor-widget-heading animated fadeInUp"
-									data-id="6d6aca1" data-element_type="widget" data-e-type="widget"
-									data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:&quot;250&quot;}"
-									data-widget_type="heading.default">
-									<div class="elementor-heading-title elementor-size-default">Resources</div>
-								</div>
-								<div class="elementor-element elementor-element-d15fa5b elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list animated fadeInUp"
-									data-id="d15fa5b" data-element_type="widget" data-e-type="widget"
-									data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:&quot;250&quot;}"
-									data-widget_type="icon-list.default">
-									<ul class="elementor-icon-list-items">
-										<li class="elementor-icon-list-item">
-											<a href="#">
-
-												<span class="elementor-icon-list-text">Blog &amp; Tips</span>
-											</a>
-										</li>
-										<li class="elementor-icon-list-item">
-											<a href="#">
-
-												<span class="elementor-icon-list-text">FAQs</span>
-											</a>
-										</li>
-										<li class="elementor-icon-list-item">
-											<a href="#">
-
-												<span class="elementor-icon-list-text">Pricing</span>
-											</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<div class="elementor-element elementor-element-cb8d440 e-con-full e-flex e-con e-child"
-								data-id="cb8d440" data-element_type="container" data-e-type="container">
-								<div class="elementor-element elementor-element-5b56d42 elementor-widget elementor-widget-heading animated fadeInUp"
-									data-id="5b56d42" data-element_type="widget" data-e-type="widget"
-									data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:&quot;250&quot;}"
-									data-widget_type="heading.default">
-									<div class="elementor-heading-title elementor-size-default">Follow Us On</div>
-								</div>
-								<div class="elementor-element elementor-element-9c6e8e0 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list animated fadeInUp"
-									data-id="9c6e8e0" data-element_type="widget" data-e-type="widget"
-									data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:&quot;250&quot;}"
-									data-widget_type="icon-list.default">
-									<ul class="elementor-icon-list-items">
-										<li class="elementor-icon-list-item">
-											<a href="#">
-
-												<span class="elementor-icon-list-text">LinkedIn</span>
-											</a>
-										</li>
-										<li class="elementor-icon-list-item">
-											<a href="#">
-
-												<span class="elementor-icon-list-text">Instagram</span>
-											</a>
-										</li>
-										<li class="elementor-icon-list-item">
-											<a href="#">
-
-												<span class="elementor-icon-list-text">Tiktok</span>
-											</a>
-										</li>
-										<li class="elementor-icon-list-item">
-											<a href="#">
-
-												<span class="elementor-icon-list-text">Facebook</span>
-											</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="elementor-element elementor-element-1dc93c9 e-con-full e-flex e-con e-child"
-						data-id="1dc93c9" data-element_type="container" data-e-type="container">
-						<div class="elementor-element elementor-element-bde5c4b elementor-widget__width-inherit elementor-widget-divider--view-line elementor-widget elementor-widget-divider animated fadeInUp"
-							data-id="bde5c4b" data-element_type="widget" data-e-type="widget"
-							data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}"
-							data-widget_type="divider.default">
-							<div class="elementor-divider">
-								<span class="elementor-divider-separator">
-								</span>
-							</div>
-						</div>
-						<div class="elementor-element elementor-element-f3ad743 elementor-widget elementor-widget-text-editor animated fadeInUp"
-							data-id="f3ad743" data-element_type="widget" data-e-type="widget"
-							data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:&quot;250&quot;}"
-							data-widget_type="text-editor.default">
-							© Terrace. Powered by <a href="https://kitpixel.com" target="_blank"
-								rel="noopener">Kitpixel</a> </div>
-						<div class="elementor-element elementor-element-0a6469a elementor-icon-list--layout-inline elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list animated fadeInUp"
-							data-id="0a6469a" data-element_type="widget" data-e-type="widget"
-							data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}"
-							data-widget_type="icon-list.default">
-							<ul class="elementor-icon-list-items elementor-inline-items">
-								<li class="elementor-icon-list-item elementor-inline-item">
-									<a href="#">
-
-										<span class="elementor-icon-list-text">Terms of Service</span>
-									</a>
-								</li>
-								<li class="elementor-icon-list-item elementor-inline-item">
-									<a href="#">
-
-										<span class="elementor-icon-list-text">Privacy Policy</span>
-									</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<script type="speculationrules">
-{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/terrace/*"},{"not":{"href_matches":["/terrace/wp-*.php","/terrace/wp-admin/*","/terrace/wp-content/uploads/sites/11/*","/terrace/wp-content/*","/terrace/wp-content/plugins/*","/terrace/wp-content/themes/hello-elementor/*","/terrace/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
-</script>
-	<script>
-		(() => {
-			const lazyloadRunObserver = () => {
-				const lazyloadBackgrounds = document.querySelectorAll(`.e-con.e-parent:not(.e-lazyloaded)`);
-				const lazyloadBackgroundObserver = new IntersectionObserver((entries) => {
-					entries.forEach((entry) => {
-						if (entry.isIntersecting) {
-							let lazyloadBackground = entry.target;
-							if (lazyloadBackground) {
-								lazyloadBackground.classList.add('e-lazyloaded');
-							}
-							lazyloadBackgroundObserver.unobserve(entry.target);
-						}
-					});
-				}, { rootMargin: '200px 0px 200px 0px' });
-				lazyloadBackgrounds.forEach((lazyloadBackground) => {
-					lazyloadBackgroundObserver.observe(lazyloadBackground);
-				});
-			};
-			const events = [
-				'DOMContentLoaded',
-				'elementor/lazyload/observe',
-			];
-			events.forEach((event) => {
-				document.addEventListener(event, lazyloadRunObserver);
-			});
-		})();
-	</script>
-	<link rel="stylesheet" id="e-animation-fadeInDown-css"
-		href="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/plugins/elementor/assets/lib/animations/styles/fadeInDown.min.css?ver=4.2.3"
-		media="all">
-	<script id="cute-alert-js"
-		src="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/plugins/metform/public/assets/lib/cute-alert/cute-alert.js?ver=4.2.0"></script>
-	<script id="hello-theme-frontend-js"
-		src="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/themes/hello-elementor/assets/js/hello-frontend.js?ver=3.5.1"></script>
-	<script id="elementor-webpack-runtime-js"
-		src="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=4.2.3"></script>
-	<script id="elementor-frontend-modules-js"
-		src="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=4.2.3"></script>
-	<script id="jquery-ui-core-js-before">
-		jQuery.uiBackCompat = true;
-		//# sourceURL=jquery-ui-core-js-before
-	</script>
-	<script id="jquery-ui-core-js"
-		src="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-includes/js/jquery/ui/core.min.js?ver=1.14.2"></script>
-	<script id="elementor-frontend-js-before">
-		var elementorFrontendConfig = { "environmentMode": { "edit": false, "wpPreview": false, "isScriptDebug": false }, "i18n": { "shareOnFacebook": "Share on Facebook", "shareOnX": "Share on X", "pinIt": "Pin it", "download": "Download", "downloadImage": "Download image", "fullscreen": "Fullscreen", "zoom": "Zoom", "share": "Share", "playVideo": "Play Video", "previous": "Previous", "next": "Next", "close": "Close", "a11yCarouselPrevSlideMessage": "Previous slide", "a11yCarouselNextSlideMessage": "Next slide", "a11yCarouselFirstSlideMessage": "This is the first slide", "a11yCarouselLastSlideMessage": "This is the last slide", "a11yCarouselPaginationBulletMessage": "Go to slide" }, "is_rtl": false, "breakpoints": { "xs": 0, "sm": 480, "md": 768, "lg": 1025, "xl": 1440, "xxl": 1600 }, "responsive": { "breakpoints": { "mobile": { "label": "Mobile Portrait", "value": 767, "default_value": 767, "direction": "max", "is_enabled": true }, "mobile_extra": { "label": "Mobile Landscape", "value": 880, "default_value": 880, "direction": "max", "is_enabled": false }, "tablet": { "label": "Tablet Portrait", "value": 1024, "default_value": 1024, "direction": "max", "is_enabled": true }, "tablet_extra": { "label": "Tablet Landscape", "value": 1200, "default_value": 1200, "direction": "max", "is_enabled": false }, "laptop": { "label": "Laptop", "value": 1366, "default_value": 1366, "direction": "max", "is_enabled": false }, "widescreen": { "label": "Widescreen", "value": 2400, "default_value": 2400, "direction": "min", "is_enabled": false } }, "hasCustomBreakpoints": false }, "version": "4.2.3", "is_static": false, "experimentalFeatures": { "e_font_icon_svg": true, "additional_custom_breakpoints": true, "container": true, "e_optimized_markup": true, "e_panel_promotions": true, "hello-theme-header-footer": true, "e_pro_free_trial_popup": true, "nested-elements": true, "global_classes_should_enforce_capabilities": true, "e_variables": true, "e_opt_in_v4_page": true, "e_components": true, "e_interactions": true, "e_widget_creation": true, "import-export-customization": true }, "urls": { "assets": "https:\/\/view.kitpixel.com\/terrace\/wp-content\/plugins\/elementor\/assets\/", "ajaxurl": "https:\/\/view.kitpixel.com\/terrace\/wp-admin\/admin-ajax.php", "uploadUrl": "https:\/\/view.kitpixel.com\/terrace\/wp-content\/uploads\/sites\/11" }, "nonces": { "floatingButtonsClickTracking": "31385e62c7", "atomicFormsSendForm": "e63f7279f6" }, "swiperClass": "swiper", "settings": { "page": [], "editorPreferences": [] }, "kit": { "body_background_background": "classic", "active_breakpoints": ["viewport_mobile", "viewport_tablet"], "global_image_lightbox": "yes", "lightbox_enable_counter": "yes", "lightbox_enable_fullscreen": "yes", "lightbox_enable_zoom": "yes", "lightbox_enable_share": "yes", "lightbox_title_src": "title", "lightbox_description_src": "description", "hello_header_logo_type": "title", "hello_header_menu_layout": "horizontal", "hello_footer_logo_type": "logo" }, "post": { "id": 17, "title": "Home%20%E2%80%93%20Terrace", "excerpt": "", "featuredImage": "https:\/\/view.kitpixel.com\/terrace\/wp-content\/uploads\/sites\/11\/2026\/02\/01-home-162x1024.jpg" } };
-		//# sourceURL=elementor-frontend-js-before
-	</script>
-	<script id="elementor-frontend-js"
-		src="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=4.2.3"></script>
-	<span id="elementor-device-mode" class="elementor-screen-only"></span>
-	<script id="swiper-js"
-		src="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/plugins/elementor/assets/lib/swiper/v8/swiper.min.js?ver=8.4.5"></script>
-	<script id="jquery-numerator-js"
-		src="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/plugins/elementor/assets/lib/jquery-numerator/jquery-numerator.min.js?ver=0.2.1"></script>
-	<script id="ekit-core-js-extra">
-		var ekit_config = { "ajaxurl": "{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-admin/admin-ajax.php", "nonce": "fd31bca6c5" };
-		//# sourceURL=ekit-core-js-extra
-	</script>
-	<script id="ekit-core-js"
-		src="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/plugins/elementskit-lite/widgets/init/assets/js/widgets/core.js?ver=4.0.2"></script>
-	<script id="ekit-video-js"
-		src="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/plugins/elementskit-lite/widgets/init/assets/js/widgets/video.js?ver=4.0.2"></script>
-	<script id="mediaelement-core-js-before">
-		var mejsL10n = { "language": "en", "strings": { "mejs.download-file": "Download File", "mejs.install-flash": "You are using a browser that does not have Flash player enabled or installed. Please turn on your Flash player plugin or download the latest version from https://get.adobe.com/flashplayer/", "mejs.fullscreen": "Fullscreen", "mejs.play": "Play", "mejs.pause": "Pause", "mejs.time-slider": "Time Slider", "mejs.time-help-text": "Use Left/Right Arrow keys to advance one second, Up/Down arrows to advance ten seconds.", "mejs.live-broadcast": "Live Broadcast", "mejs.volume-help-text": "Use Up/Down Arrow keys to increase or decrease volume.", "mejs.unmute": "Unmute", "mejs.mute": "Mute", "mejs.volume-slider": "Volume Slider", "mejs.video-player": "Video Player", "mejs.audio-player": "Audio Player", "mejs.captions-subtitles": "Captions/Subtitles", "mejs.captions-chapters": "Chapters", "mejs.none": "None", "mejs.afrikaans": "Afrikaans", "mejs.albanian": "Albanian", "mejs.arabic": "Arabic", "mejs.belarusian": "Belarusian", "mejs.bulgarian": "Bulgarian", "mejs.catalan": "Catalan", "mejs.chinese": "Chinese", "mejs.chinese-simplified": "Chinese (Simplified)", "mejs.chinese-traditional": "Chinese (Traditional)", "mejs.croatian": "Croatian", "mejs.czech": "Czech", "mejs.danish": "Danish", "mejs.dutch": "Dutch", "mejs.english": "English", "mejs.estonian": "Estonian", "mejs.filipino": "Filipino", "mejs.finnish": "Finnish", "mejs.french": "French", "mejs.galician": "Galician", "mejs.german": "German", "mejs.greek": "Greek", "mejs.haitian-creole": "Haitian Creole", "mejs.hebrew": "Hebrew", "mejs.hindi": "Hindi", "mejs.hungarian": "Hungarian", "mejs.icelandic": "Icelandic", "mejs.indonesian": "Indonesian", "mejs.irish": "Irish", "mejs.italian": "Italian", "mejs.japanese": "Japanese", "mejs.korean": "Korean", "mejs.latvian": "Latvian", "mejs.lithuanian": "Lithuanian", "mejs.macedonian": "Macedonian", "mejs.malay": "Malay", "mejs.maltese": "Maltese", "mejs.norwegian": "Norwegian", "mejs.persian": "Persian", "mejs.polish": "Polish", "mejs.portuguese": "Portuguese", "mejs.romanian": "Romanian", "mejs.russian": "Russian", "mejs.serbian": "Serbian", "mejs.slovak": "Slovak", "mejs.slovenian": "Slovenian", "mejs.spanish": "Spanish", "mejs.swahili": "Swahili", "mejs.swedish": "Swedish", "mejs.tagalog": "Tagalog", "mejs.thai": "Thai", "mejs.turkish": "Turkish", "mejs.ukrainian": "Ukrainian", "mejs.vietnamese": "Vietnamese", "mejs.welsh": "Welsh", "mejs.yiddish": "Yiddish" } };
-		//# sourceURL=mediaelement-core-js-before
-	</script>
-	<script id="mediaelement-core-js"
-		src="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-includes/js/mediaelement/mediaelement-and-player.min.js?ver=4.2.17"></script>
-	<script id="mediaelement-migrate-js"
-		src="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-includes/js/mediaelement/mediaelement-migrate.min.js?ver=7.1.1"></script>
-	<script id="mediaelement-js-extra">
-		var _wpmejsSettings = { "pluginPath": "/terrace/wp-includes/js/mediaelement/", "classPrefix": "mejs-", "stretching": "responsive", "audioShortcodeLibrary": "mediaelement", "videoShortcodeLibrary": "mediaelement" };
-		//# sourceURL=mediaelement-js-extra
-	</script>
-	<script id="wp-mediaelement-js"
-		src="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-includes/js/mediaelement/wp-mediaelement.min.js?ver=7.1.1"></script>
-	<script id="magnific-popup-js"
-		src="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/plugins/elementskit-lite/assets/libs/magnific-popup/jquery.magnific-popup.min.js?ver=4.0.2"></script>
-	<script id="ekit-nav-menu-js"
-		src="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/plugins/elementskit-lite/widgets/init/assets/js/widgets/nav-menu.js?ver=4.0.2"></script>
-	<script id="ekit-menu-js"
-		src="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/plugins/elementskit-lite/widgets/init/assets/js/nav-menu.js?ver=4.0.2"></script>
-	<script id="ekit-header-search-js"
-		src="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/plugins/elementskit-lite/widgets/init/assets/js/widgets/header-search.js?ver=4.0.2"></script>
-	<script id="ekit-header-offcanvas-js"
-		src="{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-content/plugins/elementskit-lite/widgets/init/assets/js/widgets/header-offcanvas.js?ver=4.0.2"></script>
-	<script id="wp-emoji-settings" type="application/json">
-{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"{{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-includes/js/wp-emoji-release.min.js?ver=7.1.1"}}
-</script>
-	<script type="module">
-		/*! This file is auto-generated */
-		var e = "script#wp-emoji-settings", t = document.querySelector(e); if (!(t instanceof HTMLScriptElement)) throw new Error("Element missing: " + e); const r = JSON.parse(t.text), s = (window._wpemojiSettings = r, "wpEmojiSettingsSupports"), o = ["flag", "emoji"]; function i(e) { try { var t = { supportTests: e, timestamp: (new Date).valueOf() }; sessionStorage.setItem(s, JSON.stringify(t)) } catch (e) { } } function c(e, t, n) { e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(t, 0, 0); t = new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data); e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(n, 0, 0); const r = new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data); return t.every((e, t) => e === r[t]) } function p(e, t) { e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(t, 0, 0); var n = e.getImageData(16, 16, 1, 1); for (let e = 0; e < n.data.length; e++)if (0 !== n.data[e]) return !1; return !0 } function u(e, t, n, r) { switch (t) { case "flag": return n(e, "\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f", "\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f") ? !1 : !n(e, "\ud83c\udde8\ud83c\uddf6", "\ud83c\udde8\u200b\ud83c\uddf6") && !n(e, "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f", "\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f"); case "emoji": return !r(e, "\ud83e\u1fac8") }return !1 } function f(e, t, n, r) { let a; const s = (a = "undefined" != typeof WorkerGlobalScope && self instanceof WorkerGlobalScope ? new OffscreenCanvas(300, 150) : document.createElement("canvas")).getContext("2d", { willReadFrequently: !0 }), o = (s.textBaseline = "top", s.font = "600 32px Arial", {}); return e.forEach(e => { o[e] = t(s, e, n, r) }), o } function a(e) { var t = document.createElement("script"); t.src = e, t.defer = !0, document.head.appendChild(t) } r.supports = { everything: !0, everythingExceptFlag: !0 }, new Promise(t => { let n = function () { try { var e = JSON.parse(sessionStorage.getItem(s)); if ("object" == typeof e && "number" == typeof e.timestamp && (new Date).valueOf() < e.timestamp + 604800 && "object" == typeof e.supportTests) return e.supportTests } catch (e) { } return null }(); if (!n) { if ("undefined" != typeof Worker && "undefined" != typeof OffscreenCanvas && "undefined" != typeof URL && URL.createObjectURL && "undefined" != typeof Blob) try { var e = "postMessage(" + f.toString() + "(" + [JSON.stringify(o), u.toString(), c.toString(), p.toString()].join(",") + "));", r = new Blob([e], { type: "text/javascript" }); const a = new Worker(URL.createObjectURL(r), { name: "wpTestEmojiSupports" }); return void (a.onmessage = e => { i(n = e.data), a.terminate(), t(n) }) } catch (e) { } i(n = f(o, u, c, p)) } t(n) }).then(e => { for (const n in e) r.supports[n] = e[n], r.supports.everything = r.supports.everything && r.supports[n], "flag" !== n && (r.supports.everythingExceptFlag = r.supports.everythingExceptFlag && r.supports[n]); var t; r.supports.everythingExceptFlag = r.supports.everythingExceptFlag && !r.supports.flag, r.supports.everything || ((t = r.source || {}).concatemoji ? a(t.concatemoji) : t.wpemoji && t.twemoji && (a(t.twemoji), a(t.wpemoji))) });
-		//# sourceURL={{ request()->getSchemeAndHttpHost() }}/seed-stone/wp-includes/js/wp-emoji-loader.min.js
-	</script>
-
-
-
-	<span
-		style="border-radius: 10px !important; text-indent: 12px !important; width: auto !important; height: 20px !important; padding: 0px 8px !important; text-align: center !important; vertical-align: middle !important; font: bold 11px / 20px &quot;Helvetica Neue&quot;, Helvetica, sans-serif !important; color: rgb(255, 255, 255) !important; background: url(&quot;data:image/svg+xml;base64,PHN2ZyBpZD0ic291cmNlIiB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iNiIgY3k9IjYiIHI9IjYiIGZpbGw9IiNFNjAwMjMiPjwvY2lyY2xlPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTAgNkMwIDguNTYxNSAxLjYwNTUgMTAuNzQ4NSAzLjg2NSAxMS42MDlDMy44MSAxMS4xNDA1IDMuNzUxNSAxMC4zNjggMy44Nzc1IDkuODI2QzMuOTg2IDkuMzYgNC41NzggNi44NTcgNC41NzggNi44NTdDNC41NzggNi44NTcgNC4zOTk1IDYuNDk5NSA0LjM5OTUgNS45N0M0LjM5OTUgNS4xNCA0Ljg4MDUgNC41MiA1LjQ4IDQuNTJDNS45OSA0LjUyIDYuMjM2IDQuOTAyNSA2LjIzNiA1LjM2MUM2LjIzNiA1Ljg3MzUgNS45MDk1IDYuNjM5NSA1Ljc0MSA3LjM1QzUuNjAwNSA3Ljk0NDUgNi4wMzk1IDguNDI5NSA2LjYyNTUgOC40Mjk1QzcuNjg3IDguNDI5NSA4LjUwMzUgNy4zMSA4LjUwMzUgNS42OTRDOC41MDM1IDQuMjYzNSA3LjQ3NTUgMy4yNjQgNi4wMDggMy4yNjRDNC4zMDkgMy4yNjQgMy4zMTE1IDQuNTM4NSAzLjMxMTUgNS44NTZDMy4zMTE1IDYuMzY5NSAzLjUwOSA2LjkxOTUgMy43NTYgNy4yMTlDMy44MDQ1IDcuMjc4NSAzLjgxMiA3LjMzIDMuNzk3NSA3LjM5MDVDMy43NTIgNy41Nzk1IDMuNjUxIDcuOTg1IDMuNjMxNSA4LjA2OEMzLjYwNSA4LjE3NyAzLjU0NSA4LjIwMDUgMy40MzE1IDguMTQ3NUMyLjY4NTUgNy44MDA1IDIuMjE5NSA2LjcxIDIuMjE5NSA1LjgzNEMyLjIxOTUgMy45NDk1IDMuNTg4IDIuMjE5NSA2LjE2NTUgMi4yMTk1QzguMjM3NSAyLjIxOTUgOS44NDggMy42OTYgOS44NDggNS42NjlDOS44NDggNy43Mjc1IDguNTUwNSA5LjM4NDUgNi43NDg1IDkuMzg0NUM2LjE0MyA5LjM4NDUgNS41NzQ1IDkuMDY5NSA1LjM3OTUgOC42OThDNS4zNzk1IDguNjk4IDUuMDggOS44MzkgNS4wMDc1IDEwLjExOEM0Ljg2NjUgMTAuNjYgNC40NzU1IDExLjM0NiA0LjIzMyAxMS43MzU1QzQuNzkyIDExLjkwNzUgNS4zODUgMTIgNiAxMkM5LjMxMzUgMTIgMTIgOS4zMTM1IDEyIDZDMTIgMi42ODY1IDkuMzEzNSAwIDYgMEMyLjY4NjUgMCAwIDIuNjg2NSAwIDZaIiBmaWxsPSJ3aGl0ZSI+PC9wYXRoPgo8L3N2Zz4=&quot;) 4px 50% / 12px 12px no-repeat rgb(230, 0, 35) !important; position: absolute !important; opacity: 1 !important; z-index: 8675309 !important; display: none; cursor: pointer !important; border: medium !important; top: 2533px; left: 330px;">Save</span><span
-		style="width: 24px !important; height: 24px !important; background: url(&quot;data:image/svg+xml;base64,PHN2ZyBpZD0ic291cmNlIiB3aWR0aD0iMjIiIGhlaWdodD0iMjIiIHZpZXdCb3g9IjAgMCAyMiAyMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMTEiIGN5PSIxMSIgcj0iMTEiIGZpbGw9ImJsYWNrIiBmaWxsLW9wYWNpdHk9IjAuOCI+PC9jaXJjbGU+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTUuMDgzNCA0LjU4MzMzSDEzLjMzMzRWNS43NDk5OUgxNS4wODM0QzE1LjcyNjggNS43NDk5OSAxNi4yNSA2LjI3MzI0IDE2LjI1IDYuOTE2NjZWOC42NjY2NkgxNy40MTY3VjYuOTE2NjZDMTcuNDE2NyA1LjYyOTgzIDE2LjM3MDIgNC41ODMzMyAxNS4wODM0IDQuNTgzMzNaTTE2LjI1IDE1LjA4MzNDMTYuMjUgMTUuNzI2NyAxNS43MjY4IDE2LjI1IDE1LjA4MzQgMTYuMjVIMTMuMzMzNFYxNy40MTY3SDE1LjA4MzRDMTYuMzcwMiAxNy40MTY3IDE3LjQxNjcgMTYuMzcwMiAxNy40MTY3IDE1LjA4MzNWMTMuMzMzM0gxNi4yNVYxNS4wODMzWk01Ljc1MDA0IDE1LjA4MzNWMTMuMzMzM0g0LjU4MzM3VjE1LjA4MzNDNC41ODMzNyAxNi4zNzAyIDUuNjI5ODcgMTcuNDE2NyA2LjkxNjcxIDE3LjQxNjdIOC42NjY3MVYxNi4yNUg2LjkxNjcxQzYuMjczMjkgMTYuMjUgNS43NTAwNCAxNS43MjY3IDUuNzUwMDQgMTUuMDgzM1pNNS43NTAwNCA2LjkxNjY2QzUuNzUwMDQgNi4yNzMyNCA2LjI3MzI5IDUuNzQ5OTkgNi45MTY3MSA1Ljc0OTk5SDguNjY2NzFWNC41ODMzM0g2LjkxNjcxQzUuNjI5ODcgNC41ODMzMyA0LjU4MzM3IDUuNjI5ODMgNC41ODMzNyA2LjkxNjY2VjguNjY2NjZINS43NTAwNFY2LjkxNjY2Wk05LjI1MDA0IDEwLjcwODNDOS4yNTAwNCA5LjkwNDQ5IDkuOTA0NTQgOS4yNDk5OSAxMC43MDg0IDkuMjQ5OTlDMTEuNTEyMiA5LjI0OTk5IDEyLjE2NjcgOS45MDQ0OSAxMi4xNjY3IDEwLjcwODNDMTIuMTY2NyAxMS41MTIyIDExLjUxMjIgMTIuMTY2NyAxMC43MDg0IDEyLjE2NjdDOS45MDQ1NCAxMi4xNjY3IDkuMjUwMDQgMTEuNTEyMiA5LjI1MDA0IDEwLjcwODNaTTEzLjYyNSAxNC41QzEzLjg0OSAxNC41IDE0LjA3MyAxNC40MTQ4IDE0LjI0NCAxNC4yNDM5QzE0LjU4NTIgMTMuOTAyMSAxNC41ODUyIDEzLjM0NzkgMTQuMjQ0IDEzLjAwNjFMMTMuMDcwMyAxMS44MzNDMTMuMjM0MiAxMS40OTA2IDEzLjMzMzQgMTEuMTEyNiAxMy4zMzM0IDEwLjcwODNDMTMuMzMzNCA5LjI2MTA4IDEyLjE1NTYgOC4wODMzMyAxMC43MDg0IDguMDgzMzNDOS4yNjExMiA4LjA4MzMzIDguMDgzMzcgOS4yNjEwOCA4LjA4MzM3IDEwLjcwODNDOC4wODMzNyAxMi4xNTU2IDkuMjYxMTIgMTMuMzMzMyAxMC43MDg0IDEzLjMzMzNDMTEuMTEyNiAxMy4zMzMzIDExLjQ5MDYgMTMuMjM0MiAxMS44MzMgMTMuMDcwMkwxMy4wMDYxIDE0LjI0MzlDMTMuMTc3IDE0LjQxNDggMTMuNDAxIDE0LjUgMTMuNjI1IDE0LjVaIiBmaWxsPSJ3aGl0ZSI+PC9wYXRoPgo8L3N2Zz4=&quot;) 50% 50% / 24px 24px no-repeat rgba(0, 0, 0, 0.4) !important; position: absolute !important; opacity: 1 !important; z-index: 8675309 !important; display: none; cursor: pointer !important; border: medium !important; border-radius: 12px; top: 2533px; left: 707px;"></span>
-
+<body>
+  <div class="page-wrapper">
+    <div class="rails">
+      <nav class="nav_component"><a href="/" aria-current="page" class="nav_brand w-inline-block w--current">
+          <div class="nav_brand-mark"><svg aria-hidden="true" height="22" width="24" viewBox="0 0 24 22" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-width="3" stroke="currentColor" d="M17.6 5.3A8 8 0 1 0 17.6 16.7">
+              </path>
+              <circle fill="#2f6bff" r="2.6" cy="11" cx="19.6"></circle>
+            </svg></div>
+          <div class="nav_brand-text">Carefront</div>
+        </a>
+        <div class="nav_menu"><a href="/platform" class="nav_link">Platform</a><a href="/pricing"
+            class="nav_link">Pricing</a>
+          <div data-hover="true" data-delay="80" class="nav_dropdown w-dropdown">
+            <div class="nav_dropdown-toggle w-dropdown-toggle" id="w-dropdown-toggle-0"
+              aria-controls="w-dropdown-list-0" aria-haspopup="menu" aria-expanded="false" role="button" tabindex="0">
+              <div>Resources</div>
+              <div class="nav_dropdown-icon w-icon-dropdown-toggle" aria-hidden="true"></div>
+            </div>
+            <nav class="nav_panel w-dropdown-list" id="w-dropdown-list-0" aria-labelledby="w-dropdown-toggle-0">
+              <div class="nav_panel-box">
+                <div class="nav_panel-list"><a href="/research" class="nav_item w-inline-block" tabindex="0">
+                    <div class="nav_item-icon"><svg fill="none" viewBox="0 0 18 18" height="18" width="18"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linejoin="round" stroke-width="1.3" stroke="currentColor"
+                          d="M3 3.5H8C9.4 3.5 10.5 4.6 10.5 6V14.5C10.5 13.4 9.6 12.5 8.5 12.5H3V3.5Z"></path>
+                        <path stroke-linejoin="round" stroke-width="1.3" stroke="currentColor"
+                          d="M15 3.5H13C11.6 3.5 10.5 4.6 10.5 6V14.5C10.5 13.4 11.4 12.5 12.5 12.5H15V3.5Z"></path>
+                      </svg></div>
+                    <div class="nav_item-text">
+                      <div class="nav_item-title">Research</div>
+                      <div class="nav_item-desc">Field notes and studies from clinics running on one record.</div>
+                    </div>
+                  </a><a href="/changelog" class="nav_item w-inline-block" tabindex="0">
+                    <div class="nav_item-icon"><svg fill="none" viewBox="0 0 18 18" height="18" width="18"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <circle stroke-width="1.3" stroke="currentColor" r="6" cy="9" cx="9"></circle>
+                        <path stroke-linecap="round" stroke-width="1.3" stroke="currentColor" d="M9 5.5V9L11.5 10.5">
+                        </path>
+                      </svg></div>
+                    <div class="nav_item-text">
+                      <div class="nav_item-row">
+                        <div class="nav_item-title">Changelog</div>
+                        <div class="nav_item-tag">v4.12</div>
+                      </div>
+                      <div class="nav_item-desc">What shipped, release by release.</div>
+                    </div>
+                  </a><a href="/research" class="nav_all w-inline-block" tabindex="0">
+                    <div>All articles</div><svg fill="none" viewBox="0 0 14 14" height="14" width="14"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path stroke-linecap="round" stroke-width="1.4" stroke="currentColor"
+                        d="M4 10L10 4M10 4H5M10 4V9"></path>
+                    </svg>
+                  </a></div><a href="/posts/harbor-family-no-shows" class="nav_feature w-inline-block" tabindex="0">
+                  <div class="nav_feature-media"><img
+                      src="{{ asset('hmxtech/6aec83b44f4f0425b95841e3/6aec83b44f4f0425b9584248_research-featured.webp') }}"
+                      loading="lazy" width="1520" height="920"
+                      alt="Weekly no-show chart for Harbor Family, down 34 percent since go-live"
+                      srcset="{{ asset('hmxtech/6aec83b44f4f0425b95841e3/6aec83b44f4f0425b9584248_research-featured-p-500.webp') }} 500w, {{ asset('hmxtech/6aec83b44f4f0425b95841e3/6aec83b44f4f0425b9584248_research-featured-p-800.webp') }} 800w, {{ asset('hmxtech/6aec83b44f4f0425b95841e3/6aec83b44f4f0425b9584248_research-featured-p-1080.webp') }} 1080w, {{ asset('hmxtech/6aec83b44f4f0425b95841e3/6aec83b44f4f0425b9584248_research-featured.webp') }} 1520w"
+                      sizes="(max-width: 1520px) 100vw, 1520px" class="nav_feature-img"></div>
+                  <div class="nav_feature-eyebrow">Customer story</div>
+                  <div class="nav_feature-title">How Harbor Family cut no-shows by a third</div>
+                  <div class="nav_feature-meta">
+                    <div>7 min read</div><svg fill="none" viewBox="0 0 14 14" height="14" width="14"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path stroke-linecap="round" stroke-width="1.4" stroke="currentColor"
+                        d="M4 10L10 4M10 4H5M10 4V9"></path>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+            </nav>
+          </div>
+          <div data-hover="true" data-delay="80" class="nav_dropdown w-dropdown">
+            <div class="nav_dropdown-toggle w-dropdown-toggle" id="w-dropdown-toggle-1"
+              aria-controls="w-dropdown-list-1" aria-haspopup="menu" aria-expanded="false" role="button" tabindex="0">
+              <div>Company</div>
+              <div class="nav_dropdown-icon w-icon-dropdown-toggle" aria-hidden="true"></div>
+            </div>
+            <nav class="nav_panel is-compact w-dropdown-list" id="w-dropdown-list-1"
+              aria-labelledby="w-dropdown-toggle-1">
+              <div class="nav_panel-box">
+                <div class="nav_panel-list"><a href="/about" class="nav_item w-inline-block" tabindex="0">
+                    <div class="nav_item-icon"><svg fill="none" viewBox="0 0 18 18" height="18" width="18"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linejoin="round" stroke-width="1.3" stroke="currentColor"
+                          d="M9 2.5L15.5 5.75L9 9L2.5 5.75L9 2.5Z"></path>
+                        <path stroke-linejoin="round" stroke-width="1.3" stroke="currentColor"
+                          d="M2.5 9L9 12.25L15.5 9"></path>
+                        <path stroke-linejoin="round" stroke-width="1.3" stroke="currentColor"
+                          d="M2.5 12.25L9 15.5L15.5 12.25"></path>
+                      </svg></div>
+                    <div class="nav_item-text">
+                      <div class="nav_item-title">About</div>
+                      <div class="nav_item-desc">Who builds Carefront and how we work.</div>
+                    </div>
+                  </a><a href="/contact" class="nav_item w-inline-block" tabindex="0">
+                    <div class="nav_item-icon"><svg fill="none" viewBox="0 0 18 18" height="18" width="18"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linejoin="round" stroke-width="1.3" stroke="currentColor"
+                          d="M3 4.5C3 3.7 3.7 3 4.5 3H13.5C14.3 3 15 3.7 15 4.5V11C15 11.8 14.3 12.5 13.5 12.5H8L5 15V12.5H4.5C3.7 12.5 3 11.8 3 11V4.5Z">
+                        </path>
+                      </svg></div>
+                    <div class="nav_item-text">
+                      <div class="nav_item-title">Contact</div>
+                      <div class="nav_item-desc">Book a demo or talk to the team.</div>
+                    </div>
+                  </a></div>
+              </div>
+            </nav>
+          </div>
+        </div>
+        <div class="nav_actions"><a href="/sign-in" class="nav_link is-signin">Sign in</a><a href="/contact"
+            class="button is-nav">Book a demo</a>
+          <div class="nav_menu-button">
+            <div class="nav_menu-line is-top"></div>
+            <div class="nav_menu-line is-bottom"></div>
+          </div>
+        </div>
+        <div class="nav_mobile"
+          style="translate: none; rotate: none; scale: none; transform: translate(0px, -8px); opacity: 0;"><a
+            href="/platform" class="nav_mobile-link">Platform</a><a href="/pricing" class="nav_mobile-link">Pricing</a>
+          <div data-hover="false" data-delay="0" class="nav_mobile-dd w-dropdown">
+            <div class="nav_mobile-toggle w-dropdown-toggle" id="w-dropdown-toggle-2" aria-controls="w-dropdown-list-2"
+              aria-haspopup="menu" aria-expanded="false" role="button" tabindex="0">
+              <div>Resources</div>
+              <div class="nav_mobile-icon w-icon-dropdown-toggle" aria-hidden="true"></div>
+            </div>
+            <nav class="nav_mobile-list w-dropdown-list" id="w-dropdown-list-2" aria-labelledby="w-dropdown-toggle-2">
+              <div class="nav_mobile-subs"><a href="/research" class="nav_msub w-inline-block" tabindex="0">
+                  <div class="nav_msub-title">Research</div>
+                  <div class="nav_msub-desc">Field notes and studies</div>
+                </a><a href="/changelog" class="nav_msub w-inline-block" tabindex="0">
+                  <div class="nav_msub-title">Changelog</div>
+                  <div class="nav_msub-desc">What shipped, release by release</div>
+                </a><a href="/posts/harbor-family-no-shows" class="nav_mfeature w-inline-block" tabindex="0">
+                  <div class="nav_mfeature-thumb"><img
+                      src="{{ asset('hmxtech/6aec83b44f4f0425b95841e3/6aec83b44f4f0425b9584248_research-featured.webp') }}"
+                      loading="lazy" width="1520" height="920"
+                      alt="Weekly no-show chart for Harbor Family, down 34 percent since go-live"
+                      srcset="{{ asset('hmxtech/6aec83b44f4f0425b95841e3/6aec83b44f4f0425b9584248_research-featured-p-500.webp') }} 500w, {{ asset('hmxtech/6aec83b44f4f0425b95841e3/6aec83b44f4f0425b9584248_research-featured-p-800.webp') }} 800w, {{ asset('hmxtech/6aec83b44f4f0425b95841e3/6aec83b44f4f0425b9584248_research-featured-p-1080.webp') }} 1080w, {{ asset('hmxtech/6aec83b44f4f0425b95841e3/6aec83b44f4f0425b9584248_research-featured.webp') }} 1520w"
+                      sizes="(max-width: 1520px) 100vw, 1520px" class="nav_mfeature-img"></div>
+                  <div class="nav_mfeature-text">
+                    <div class="nav_mfeature-eyebrow">Customer story</div>
+                    <div class="nav_mfeature-title">How Harbor Family cut no-shows by a third</div>
+                  </div>
+                </a></div>
+            </nav>
+          </div>
+          <div data-hover="false" data-delay="0" class="nav_mobile-dd w-dropdown">
+            <div class="nav_mobile-toggle w-dropdown-toggle" id="w-dropdown-toggle-3" aria-controls="w-dropdown-list-3"
+              aria-haspopup="menu" aria-expanded="false" role="button" tabindex="0">
+              <div>Company</div>
+              <div class="nav_mobile-icon w-icon-dropdown-toggle" aria-hidden="true"></div>
+            </div>
+            <nav class="nav_mobile-list w-dropdown-list" id="w-dropdown-list-3" aria-labelledby="w-dropdown-toggle-3">
+              <div class="nav_mobile-subs"><a href="/about" class="nav_msub w-inline-block" tabindex="0">
+                  <div class="nav_msub-title">About</div>
+                  <div class="nav_msub-desc">Who builds Carefront</div>
+                </a><a href="/contact" class="nav_msub w-inline-block" tabindex="0">
+                  <div class="nav_msub-title">Contact</div>
+                  <div class="nav_msub-desc">Book a demo or talk to the team</div>
+                </a></div>
+            </nav>
+          </div>
+          <div class="nav_mobile-cta"><a href="/contact" class="button">Book a demo</a><a href="/sign-in"
+              class="button is-secondary">Sign in</a></div>
+        </div>
+      </nav>
+      <section class="section_hero">
+        <div class="hero_header">
+          <h1
+            data-wf-target="[[[&quot;6aec83b44f4f0425b95841ca&quot;,&quot;fc1a0d03-a5a7-6eb0-ce55-d1ec96b94892&quot;],[]]]"
+            class="heading-display"
+            style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 0px, 0px); opacity: 1;">The
+            operating layer for every patient interaction.</h1>
+          <p data-wf-target="[[[&quot;6aec83b44f4f0425b95841ca&quot;,&quot;fc1a0d03-a5a7-6eb0-ce55-d1ec96b94894&quot;],[]]]"
+            class="text-lead is-center"
+            style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 0px, 0px); opacity: 1;">One
+            living record behind every booking, message, visit and bill.</p>
+          <div
+            data-wf-target="[[[&quot;6aec83b44f4f0425b95841ca&quot;,&quot;fc1a0d03-a5a7-6eb0-ce55-d1ec96b94899&quot;],[]]]"
+            class="button-row is-center"
+            style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 0px, 0px); opacity: 1;"><a
+              href="/contact" class="button">Book a demo</a><a href="/research" class="button is-secondary">Read the
+              research</a></div>
+        </div>
+        <div
+          data-wf-target="[[[&quot;6aec83b44f4f0425b95841ca&quot;,&quot;fc1a0d03-a5a7-6eb0-ce55-d1ec96b9495d&quot;],[]]]"
+          class="platform_panel"
+          style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 0px, 0px); opacity: 1;">
+          <div class="platform_rail is-left"></div>
+          <div class="platform_rail is-right"></div>
+          <div class="platform_grid">
+            <div class="platform_copy">
+              <h2 class="heading-panel">One system for every workflow, drawing on the full record of every patient.</h2>
+              <p class="text-panel">Scheduling, intake, messaging and billing share one record, so every step knows what
+                happened before it.</p>
+              <div class="module-index"><a type="button"
+                  data-wf-target="[[[&quot;6aec83b44f4f0425b95841ca&quot;,&quot;edc8332b-d204-65fe-18ae-599734f4b70f&quot;],[]]]"
+                  href="#" class="module-tab is-active is-1 w-button"><span
+                    class="module-tab_num">01</span><span>Scheduling</span></a><a type="button"
+                  data-wf-target="[[[&quot;6aec83b44f4f0425b95841ca&quot;,&quot;edc8332b-d204-65fe-18ae-599734f4b714&quot;],[]]]"
+                  href="#" class="module-tab is-2 w-button"><span
+                    class="module-tab_num">02</span><span>Intake</span></a><a type="button"
+                  data-wf-target="[[[&quot;6aec83b44f4f0425b95841ca&quot;,&quot;edc8332b-d204-65fe-18ae-599734f4b719&quot;],[]]]"
+                  href="#" class="module-tab is-3 w-button"><span
+                    class="module-tab_num">03</span><span>Messaging</span></a><a type="button"
+                  data-wf-target="[[[&quot;6aec83b44f4f0425b95841ca&quot;,&quot;edc8332b-d204-65fe-18ae-599734f4b71e&quot;],[]]]"
+                  href="#" class="module-tab is-4 w-button"><span
+                    class="module-tab_num">04</span><span>Billing</span></a><a type="button"
+                  data-wf-target="[[[&quot;6aec83b44f4f0425b95841ca&quot;,&quot;edc8332b-d204-65fe-18ae-599734f4b723&quot;],[]]]"
+                  href="#" class="module-tab is-5 w-button"><span
+                    class="module-tab_num">05</span><span>Integrations</span></a></div>
+            </div>
+            <div class="platform_visual">
+              <div class="record-stack_wrap"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                  viewBox="0 0 620 540" height="540" width="620" class="record-stack record-stack">
+                  <g stroke-dasharray="3 5" stroke="currentColor" class="svg-dash svg-dash"
+                    style="opacity: 1; translate: none; rotate: none; scale: none; transform-origin: 0px 0px 0px;"
+                    data-svg-origin="102.19999694824219 50" transform="matrix(1,0,0,1,0,0)">
+                    <line y2="154.0" x2="310.0" y1="248.0" x1="310.0"></line>
+                    <line y2="274.0" x2="517.8" y1="368.0" x1="517.8"></line>
+                    <line y2="274.0" x2="102.2" y1="368.0" x1="102.2"></line>
+                    <line y2="394.0" x2="310.0" y1="488.0" x1="310.0"></line>
+                    <line y2="50.0" x2="310.0" y1="144.0" x1="310.0"></line>
+                    <line y2="170.0" x2="517.8" y1="264.0" x1="517.8"></line>
+                    <line y2="170.0" x2="102.2" y1="264.0" x1="102.2"></line>
+                    <line y2="290.0" x2="310.0" y1="384.0" x1="310.0"></line>
+                  </g>
+                  <g class="rs-layer is-1" style="translate: none; rotate: none; scale: none; opacity: 1;"
+                    data-svg-origin="102.19999694824219 248" transform="matrix(1,0,0,1,0,0)">
+                    <g fill="currentColor" class="svg-plate svg-plate">
+                      <polygon points="102.2,368.0 310.0,488.0 310.0,498.0 102.2,378.0"></polygon>
+                      <polygon points="517.8,368.0 310.0,488.0 310.0,498.0 517.8,378.0"></polygon>
+                      <polygon points="310.0,248.0 517.8,368.0 310.0,488.0 102.2,368.0"></polygon>
+                    </g>
+                    <g stroke-linejoin="round" stroke="currentColor" class="svg-line svg-line">
+                      <polygon points="102.2,368.0 310.0,488.0 310.0,498.0 102.2,378.0"></polygon>
+                      <polygon points="517.8,368.0 310.0,488.0 310.0,498.0 517.8,378.0"></polygon>
+                      <polygon points="310.0,248.0 517.8,368.0 310.0,488.0 102.2,368.0"></polygon>
+                    </g>
+                    <g stroke="currentColor" class="svg-grid svg-grid">
+                      <line y2="388.0" x2="136.8" y1="268.0" x1="344.6"></line>
+                      <line y2="388.0" x2="483.2" y1="268.0" x1="275.4"></line>
+                      <line y2="408.0" x2="171.4" y1="288.0" x1="379.3"></line>
+                      <line y2="408.0" x2="448.6" y1="288.0" x1="240.7"></line>
+                      <line y2="428.0" x2="206.1" y1="308.0" x1="413.9"></line>
+                      <line y2="428.0" x2="413.9" y1="308.0" x1="206.1"></line>
+                      <line y2="448.0" x2="240.7" y1="328.0" x1="448.6"></line>
+                      <line y2="448.0" x2="379.3" y1="328.0" x1="171.4"></line>
+                      <line y2="468.0" x2="275.4" y1="348.0" x1="483.2"></line>
+                      <line y2="468.0" x2="344.6" y1="348.0" x1="136.8"></line>
+                    </g>
+                  </g>
+                  <g class="rs-layer is-2" style="translate: none; rotate: none; scale: none; opacity: 1;"
+                    data-svg-origin="102.19999694824219 144" transform="matrix(1,0,0,1,0,0)">
+                    <g fill="currentColor" class="svg-plate svg-plate">
+                      <polygon points="102.2,264.0 310.0,384.0 310.0,394.0 102.2,274.0"></polygon>
+                      <polygon points="517.8,264.0 310.0,384.0 310.0,394.0 517.8,274.0"></polygon>
+                      <polygon points="310.0,144.0 517.8,264.0 310.0,384.0 102.2,264.0"></polygon>
+                    </g>
+                    <g stroke-linejoin="round" stroke="currentColor" class="svg-line svg-line">
+                      <polygon points="102.2,264.0 310.0,384.0 310.0,394.0 102.2,274.0"></polygon>
+                      <polygon points="517.8,264.0 310.0,384.0 310.0,394.0 517.8,274.0"></polygon>
+                      <polygon points="310.0,144.0 517.8,264.0 310.0,384.0 102.2,264.0"></polygon>
+                    </g>
+                    <g stroke="currentColor" class="svg-grid svg-grid">
+                      <line y2="284.0" x2="136.8" y1="164.0" x1="344.6"></line>
+                      <line y2="284.0" x2="483.2" y1="164.0" x1="275.4"></line>
+                      <line y2="304.0" x2="171.4" y1="184.0" x1="379.3"></line>
+                      <line y2="304.0" x2="448.6" y1="184.0" x1="240.7"></line>
+                      <line y2="324.0" x2="206.1" y1="204.0" x1="413.9"></line>
+                      <line y2="324.0" x2="413.9" y1="204.0" x1="206.1"></line>
+                      <line y2="344.0" x2="240.7" y1="224.0" x1="448.6"></line>
+                      <line y2="344.0" x2="379.3" y1="224.0" x1="171.4"></line>
+                      <line y2="364.0" x2="275.4" y1="244.0" x1="483.2"></line>
+                      <line y2="364.0" x2="344.6" y1="244.0" x1="136.8"></line>
+                    </g>
+                  </g>
+                  <g class="rs-layer is-3" style="translate: none; rotate: none; scale: none; opacity: 1;"
+                    data-svg-origin="102.19999694824219 40" transform="matrix(1,0,0,1,0,0)">
+                    <g fill="currentColor" class="svg-plate svg-plate">
+                      <polygon points="102.2,160.0 310.0,280.0 310.0,290.0 102.2,170.0"></polygon>
+                      <polygon points="517.8,160.0 310.0,280.0 310.0,290.0 517.8,170.0"></polygon>
+                    </g>
+                    <g fill="currentColor" class="svg-accent svg-accent">
+                      <polygon points="310.0,40.0 517.8,160.0 310.0,280.0 102.2,160.0"></polygon>
+                    </g>
+                    <g stroke-linejoin="round" stroke="currentColor" class="svg-line svg-line">
+                      <polygon points="102.2,160.0 310.0,280.0 310.0,290.0 102.2,170.0"></polygon>
+                      <polygon points="517.8,160.0 310.0,280.0 310.0,290.0 517.8,170.0"></polygon>
+                      <polygon points="310.0,40.0 517.8,160.0 310.0,280.0 102.2,160.0"></polygon>
+                    </g>
+                    <g class="rs-pat is-1 rs-pat is-1"
+                      style="opacity: 1; translate: none; rotate: none; scale: none; transform-origin: 0px 0px 0px;"
+                      data-svg-origin="164.5 76" transform="matrix(1,0,0,1,0,0)">
+                      <g stroke-linejoin="round" stroke="currentColor" class="svg-pat-line svg-pat-line">
+                        <polygon points="310.0,76.0 455.5,160.0 310.0,244.0 164.5,160.0"></polygon>
+                        <polygon points="310.0,76.0 455.5,160.0 431.2,174.0 285.8,90.0"></polygon>
+                        <line y2="181.0" x2="200.9" y1="111.0" x1="322.1"></line>
+                        <line y2="191.5" x2="400.9" y1="107.5" x1="255.4"></line>
+                        <line y2="202.0" x2="237.3" y1="132.0" x1="358.5"></line>
+                        <line y2="209.0" x2="370.6" y1="125.0" x1="225.1"></line>
+                        <line y2="223.0" x2="273.6" y1="153.0" x1="394.9"></line>
+                        <line y2="226.5" x2="340.3" y1="142.5" x1="194.8"></line>
+                      </g>
+                      <g fill="currentColor" class="svg-pat-fill svg-pat-fill">
+                        <polygon points="328.2,154.3 356.2,170.5 334.2,183.2 306.2,167.0"></polygon>
+                      </g>
+                    </g>
+                    <g class="rs-pat is-2 rs-pat is-2">
+                      <g stroke-linejoin="round" stroke="currentColor" class="svg-pat-line svg-pat-line">
+                        <polygon points="306.5,78.0 403.5,134.0 384.5,145.0 287.5,89.0"></polygon>
+                        <polygon points="268.4,100.0 344.6,144.0 325.6,155.0 249.4,111.0"></polygon>
+                        <polygon points="230.3,122.0 334.2,182.0 315.2,193.0 211.3,133.0"></polygon>
+                        <polygon points="192.2,144.0 254.6,180.0 235.5,191.0 173.2,155.0"></polygon>
+                        <polygon points="311.7,213.0 332.5,225.0 313.5,236.0 292.7,224.0"></polygon>
+                      </g>
+                      <g fill="currentColor" class="svg-pat-fill svg-pat-fill">
+                        <polygon points="426.0,147.0 446.8,159.0 427.8,170.0 407.0,158.0"></polygon>
+                        <polygon points="387.9,169.0 408.7,181.0 389.7,192.0 368.9,180.0"></polygon>
+                        <polygon points="349.8,191.0 370.6,203.0 351.6,214.0 330.8,202.0"></polygon>
+                      </g>
+                    </g>
+                    <g class="rs-pat is-3 rs-pat is-3">
+                      <g stroke-linejoin="round" stroke="currentColor" class="svg-pat-line svg-pat-line">
+                        <polygon points="310.0,76.0 413.9,136.0 375.8,158.0 271.9,98.0"></polygon>
+                        <polygon points="199.2,140.0 275.4,184.0 240.7,204.0 164.5,160.0"></polygon>
+                        <polygon points="285.8,106.0 306.5,118.0 271.9,114.0"></polygon>
+                      </g>
+                      <g fill="currentColor" class="svg-pat-fill svg-pat-fill">
+                        <polygon points="296.1,132.0 400.1,192.0 362.0,214.0 258.0,154.0"></polygon>
+                        <polygon points="330.8,196.0 348.1,206.0 334.2,214.0"></polygon>
+                      </g>
+                    </g>
+                    <g class="rs-pat is-4 rs-pat is-4">
+                      <g stroke-linejoin="round" stroke="currentColor" class="svg-pat-line svg-pat-line">
+                        <polygon points="310.0,76.0 455.5,160.0 372.4,208.0 226.9,124.0"></polygon>
+                        <line y2="224.0" x2="344.6" y1="140.0" x1="199.2"></line>
+                        <line y2="206.0" x2="271.9" y1="152.0" x1="178.4"></line>
+                        <line y2="236.0" x2="323.9" y1="220.0" x1="296.1"></line>
+                      </g>
+                      <g fill="currentColor" class="svg-pat-fill svg-pat-fill">
+                        <polygon points="292.7,86.0 438.2,170.0 422.6,179.0 277.1,95.0"></polygon>
+                        <polygon points="273.6,113.0 297.9,127.0 278.8,138.0 254.6,124.0"></polygon>
+                      </g>
+                    </g>
+                    <g class="rs-pat is-5 rs-pat is-5">
+                      <g stroke-linejoin="round" stroke="currentColor" class="svg-pat-line svg-pat-line">
+                        <polygon points="310.0,72.0 344.6,92.0 310.0,112.0 275.4,92.0"></polygon>
+                        <polygon points="427.8,140.0 462.4,160.0 427.8,180.0 393.1,160.0"></polygon>
+                        <polygon points="192.2,140.0 226.9,160.0 192.2,180.0 157.6,160.0"></polygon>
+                        <polygon points="310.0,208.0 344.6,228.0 310.0,248.0 275.4,228.0"></polygon>
+                        <line y2="138.0" x2="310.0" y1="112.0" x1="310.0"></line>
+                        <line y2="160.0" x2="348.1" y1="160.0" x1="393.1"></line>
+                        <line y2="160.0" x2="271.9" y1="160.0" x1="226.9"></line>
+                        <line y2="182.0" x2="310.0" y1="208.0" x1="310.0"></line>
+                      </g>
+                      <g fill="currentColor" class="svg-pat-fill svg-pat-fill">
+                        <polygon points="310.0,138.0 348.1,160.0 310.0,182.0 271.9,160.0"></polygon>
+                      </g>
+                    </g>
+                    <g class="rs-leader is-a rs-leader is-a">
+                      <g stroke="currentColor" class="svg-leader svg-leader"
+                        style="opacity: 1; translate: none; rotate: none; scale: none; transform-origin: 0px 0px 0px;"
+                        data-svg-origin="517.7999877929688 160" transform="matrix(1,0,0,1,0,0)">
+                        <line y2="160.0" x2="575.0" y1="160.0" x1="517.8"></line>
+                      </g>
+                      <g fill="currentColor" class="svg-dot svg-dot"
+                        style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px 0px; opacity: 1;"
+                        data-svg-origin="517.7999877929688 160" transform="matrix(1,0,0,1,0,0)">
+                        <circle r="3.5" cy="160.0" cx="517.8"></circle>
+                      </g>
+                    </g>
+                  </g>
+                  <g class="rs-leader is-b rs-leader is-b">
+                    <g stroke="currentColor" class="svg-leader svg-leader"
+                      style="opacity: 1; translate: none; rotate: none; scale: none; transform-origin: 0px 0px 0px;"
+                      data-svg-origin="517.7999877929688 264" transform="matrix(1,0,0,1,0,0)">
+                      <line y2="264.0" x2="575.0" y1="264.0" x1="517.8"></line>
+                    </g>
+                    <g fill="currentColor" class="svg-dot svg-dot"
+                      style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px 0px; opacity: 1;"
+                      data-svg-origin="517.7999877929688 264" transform="matrix(1,0,0,1,0,0)">
+                      <circle r="3.5" cy="264.0" cx="517.8"></circle>
+                    </g>
+                  </g>
+                  <g class="rs-leader is-c rs-leader is-c">
+                    <g stroke="currentColor" class="svg-leader svg-leader"
+                      style="opacity: 1; translate: none; rotate: none; scale: none; transform-origin: 0px 0px 0px;"
+                      data-svg-origin="255 498" transform="matrix(1,0,0,1,0,0)">
+                      <line y2="498.0" x2="255.0" y1="498.0" x1="310.0"></line>
+                    </g>
+                    <g fill="currentColor" class="svg-dot svg-dot"
+                      style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px 0px; opacity: 1;"
+                      data-svg-origin="310 498" transform="matrix(1,0,0,1,0,0)">
+                      <circle r="3.5" cy="498.0" cx="310.0"></circle>
+                    </g>
+                  </g>
+                </svg>
+                <div class="module-scene is-1">
+                  <div class="ui-card is-a"
+                    style="translate: none; rotate: none; scale: none; transform: translate3d(0px, -63.736px, 0px); opacity: 1;">
+                    <div class="mono-label">Booking</div>
+                    <div class="ui-card_title">Thu 5 Nov, 09:30</div>
+                    <div class="ui-card_row">
+                      <div class="ui-card_meta">Dr. Ortiz, Room 2</div>
+                      <div class="chip">Confirmed</div>
+                    </div>
+                  </div>
+                  <div class="ui-card is-b"
+                    style="translate: none; rotate: none; scale: none; transform: translate3d(0px, -34.66px, 0px); opacity: 1;">
+                    <div class="mono-label">Message</div>
+                    <div class="ui-card_row is-start">
+                      <div class="avatar">AS</div>
+                      <div>
+                        <div class="ui-card_strong">Can I move to Friday?</div>
+                        <div class="ui-card_meta">Ana Silva, 2 min ago</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="ui-card is-c"
+                    style="translate: none; rotate: none; scale: none; transform: translate3d(0px, -36.225px, 0px); opacity: 1;">
+                    <div class="mono-label">Payment</div>
+                    <div class="ui-card_price">$40.00 <span class="ui-card_meta">copay</span></div>
+                    <div class="ui-card_row is-start">
+                      <div class="icon-accent"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
+                          height="12" width="12">
+                          <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor"
+                            d="M2.5 6.2L5 8.5L9.5 3.5"></path>
+                        </svg></div>
+                      <div class="ui-card_meta">Paid by card at check-in</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="module-scene is-2">
+                  <div class="ui-card is-a">
+                    <div class="mono-label">Intake form</div>
+                    <div class="ui-card_title">8 of 8 answered</div>
+                    <div class="ui-card_bar">
+                      <div class="ui-card_bar-fill is-full"></div>
+                    </div>
+                    <div class="ui-card_meta">Sent with the booking</div>
+                  </div>
+                  <div class="ui-card is-b">
+                    <div class="mono-label">Insurance</div>
+                    <div class="ui-card_strong is-14">Bayline PPO</div>
+                    <div class="ui-card_row is-start">
+                      <div class="icon-accent"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
+                          height="12" width="12">
+                          <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor"
+                            d="M2.5 6.2L5 8.5L9.5 3.5"></path>
+                        </svg></div>
+                      <div class="ui-card_meta">Coverage verified at booking</div>
+                    </div>
+                  </div>
+                  <div class="ui-card is-c">
+                    <div class="mono-label">Chart</div>
+                    <div class="ui-card_strong is-14">Allergies updated</div>
+                    <div class="ui-card_row is-start">
+                      <div class="icon-accent"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
+                          height="12" width="12">
+                          <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor"
+                            d="M2.5 6.2L5 8.5L9.5 3.5"></path>
+                        </svg></div>
+                      <div class="ui-card_meta">Written to the record</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="module-scene is-3">
+                  <div class="ui-card is-a">
+                    <div class="mono-label">Reminder</div>
+                    <div class="ui-card_title">Sent 24 h before</div>
+                    <div class="ui-card_row">
+                      <div class="ui-card_meta">SMS, delivered</div>
+                      <div class="chip">Read</div>
+                    </div>
+                  </div>
+                  <div class="ui-card is-b">
+                    <div class="mono-label">Reply</div>
+                    <div class="ui-card_row is-start">
+                      <div class="avatar">AS</div>
+                      <div>
+                        <div class="ui-card_strong">Friday at 10:15 works.</div>
+                        <div class="ui-card_meta">Ana Silva, just now</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="ui-card is-c">
+                    <div class="mono-label">Waitlist</div>
+                    <div class="ui-card_strong is-14">Slot offered to 3</div>
+                    <div class="ui-card_row is-start">
+                      <div class="icon-accent"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
+                          height="12" width="12">
+                          <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor"
+                            d="M2.5 6.2L5 8.5L9.5 3.5"></path>
+                        </svg></div>
+                      <div class="ui-card_meta">Filled in 6 minutes</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="module-scene is-4">
+                  <div class="ui-card is-a">
+                    <div class="mono-label">Claim</div>
+                    <div class="ui-card_title">Claim 4821</div>
+                    <div class="ui-card_row">
+                      <div class="ui-card_meta">Submitted same day</div>
+                      <div class="chip">Accepted</div>
+                    </div>
+                  </div>
+                  <div class="ui-card is-b">
+                    <div class="mono-label">Eligibility</div>
+                    <div class="ui-card_strong is-14">Active coverage</div>
+                    <div class="ui-card_row is-start">
+                      <div class="icon-accent"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
+                          height="12" width="12">
+                          <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor"
+                            d="M2.5 6.2L5 8.5L9.5 3.5"></path>
+                        </svg></div>
+                      <div class="ui-card_meta">Checked at booking</div>
+                    </div>
+                  </div>
+                  <div class="ui-card is-c">
+                    <div class="mono-label">Payment</div>
+                    <div class="ui-card_price">$40.00 <span class="ui-card_meta">copay</span></div>
+                    <div class="ui-card_row is-start">
+                      <div class="icon-accent"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
+                          height="12" width="12">
+                          <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor"
+                            d="M2.5 6.2L5 8.5L9.5 3.5"></path>
+                        </svg></div>
+                      <div class="ui-card_meta">Posted to the ledger</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="module-scene is-5">
+                  <div class="ui-card is-a">
+                    <div class="mono-label">EHR sync</div>
+                    <div class="ui-card_title">Summit</div>
+                    <div class="ui-card_row">
+                      <div class="ui-card_meta">Synced 2 min ago</div>
+                      <div class="chip">Live</div>
+                    </div>
+                  </div>
+                  <div class="ui-card is-b">
+                    <div class="mono-label">Calendar</div>
+                    <div class="ui-card_strong is-14">Calendar feed</div>
+                    <div class="ui-card_row is-start">
+                      <div class="icon-accent"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
+                          height="12" width="12">
+                          <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor"
+                            d="M2.5 6.2L5 8.5L9.5 3.5"></path>
+                        </svg></div>
+                      <div class="ui-card_meta">14 providers connected</div>
+                    </div>
+                  </div>
+                  <div class="ui-card is-c">
+                    <div class="mono-label">Webhooks</div>
+                    <div class="ui-card_strong is-14">3 active endpoints</div>
+                    <div class="ui-card_row is-start">
+                      <div class="icon-accent"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
+                          height="12" width="12">
+                          <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor"
+                            d="M2.5 6.2L5 8.5L9.5 3.5"></path>
+                        </svg></div>
+                      <div class="ui-card_meta">Last delivery succeeded</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="platform_desc">
+                <div class="module-desc is-1">
+                  <div class="mono-label is-panel">Scheduling</div>
+                  <p class="text-panel is-small">Book from your site, a map listing or a text link. Rooms, providers and
+                    buffers stay in sync with the record.</p>
+                </div>
+                <div class="module-desc is-2">
+                  <div class="mono-label is-panel">Intake</div>
+                  <p class="text-panel is-small">Forms go out with the booking. Answers, insurance and consent land in
+                    the chart before the patient parks.</p>
+                </div>
+                <div class="module-desc is-3">
+                  <div class="mono-label is-panel">Messaging</div>
+                  <p class="text-panel is-small">Texts, reminders and waitlist offers are written from the record, so
+                    every message knows the visit.</p>
+                </div>
+                <div class="module-desc is-4">
+                  <div class="mono-label is-panel">Billing</div>
+                  <p class="text-panel is-small">Eligibility, estimates and claims run off the same visit. Payments post
+                    to the ledger on their own.</p>
+                </div>
+                <div class="module-desc is-5">
+                  <div class="mono-label is-panel">Integrations</div>
+                  <p class="text-panel is-small">Two way sync with your EHR, calendars and payments. Nobody on the team
+                    retypes anything.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="section-header is-split">
+          <h2 class="heading-xl">Built for the work behind the front desk.</h2>
+          <div class="section-header_aside">
+            <p class="text-lead">Every module reads from and writes to the same patient record. Nothing is copied,
+              nothing goes stale.</p><a href="/platform" class="text-link">Explore the platform<span
+                class="text-link_icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14"
+                  height="14" width="14">
+                  <path stroke-linecap="round" stroke-width="1.4" stroke="currentColor" d="M4 10L10 4M10 4H5M10 4V9">
+                  </path>
+                </svg></span></a>
+          </div>
+        </div>
+        <div class="feature-grid">
+          <div class="feature is-first"
+            style="translate: none; rotate: none; scale: none; transform: translate(0px, 28px); opacity: 0;">
+            <div class="mono-label">Intake</div>
+            <div class="pattern-tile">
+              <div class="pattern-tile_fade"></div>
+              <div class="snippet">
+                <div class="mono-label"
+                  style="translate: none; rotate: none; scale: none; transform: translate(0px, 8px); opacity: 0;">Intake
+                  for Ana Silva</div>
+                <div class="check-row"
+                  style="translate: none; rotate: none; scale: none; transform: translate(0px, 8px); opacity: 0;">
+                  <div class="check-dot is-done"
+                    style="translate: none; rotate: none; scale: none; transform-origin: 50% 50% 0px; transform: scale(0.6); opacity: 0;">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12" height="10" width="10">
+                      <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6" stroke="currentColor"
+                        d="M2.5 6.2L5 8.5L9.5 3.5"></path>
+                    </svg></div>
+                  <div>Insurance card</div>
+                </div>
+                <div class="check-row"
+                  style="translate: none; rotate: none; scale: none; transform: translate(0px, 8px); opacity: 0;">
+                  <div class="check-dot is-done"
+                    style="translate: none; rotate: none; scale: none; transform-origin: 50% 50% 0px; transform: scale(0.6); opacity: 0;">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12" height="10" width="10">
+                      <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6" stroke="currentColor"
+                        d="M2.5 6.2L5 8.5L9.5 3.5"></path>
+                    </svg></div>
+                  <div>Medical history</div>
+                </div>
+                <div class="check-row is-pending"
+                  style="translate: none; rotate: none; scale: none; transform: translate(0px, 8px); opacity: 0;">
+                  <div class="check-dot"></div>
+                  <div>Consent form</div>
+                </div>
+                <div class="progress"
+                  style="translate: none; rotate: none; scale: none; transform: translate(0px, 8px); opacity: 0;">
+                  <div class="progress_fill" style="width: 0%;"></div>
+                </div>
+                <div class="ui-card_meta"
+                  style="translate: none; rotate: none; scale: none; transform: translate(0px, 8px); opacity: 0;">2 of 3
+                  done, synced to chart</div>
+              </div>
+            </div>
+            <h3 class="heading-m">Forms that fill the chart</h3>
+            <p class="text-small">Answers land in the record, not a PDF.</p>
+          </div>
+          <div class="feature"
+            style="translate: none; rotate: none; scale: none; transform: translate(0px, 28px); opacity: 0;">
+            <div class="mono-label">Messaging</div>
+            <div class="pattern-tile">
+              <div class="pattern-tile_fade"></div>
+              <div class="snippet">
+                <div class="chip-row"
+                  style="translate: none; rotate: none; scale: none; transform: translate(0px, 8px); opacity: 0;">
+                  <div class="tag is-active">SMS</div>
+                  <div class="tag">Email</div>
+                  <div class="tag">Portal</div>
+                </div>
+                <div class="bubble"
+                  style="translate: none; rotate: none; scale: none; transform: translate(0px, 8px); opacity: 0;">Can I
+                  move to Friday?</div>
+                <div class="bubble is-reply"
+                  style="translate: none; rotate: none; scale: none; transform: translate(0px, 8px) scale(0.6); opacity: 0; transform-origin: 100% 50% 0px;">
+                  Done. Fri 10:15 with Dr. Ortiz.</div>
+                <div class="ui-card_meta"
+                  style="translate: none; rotate: none; scale: none; transform: translate(0px, 8px); opacity: 0;">
+                  Replied in 3 min</div>
+                <div aria-hidden="true" class="typing"
+                  style="translate: none; rotate: none; scale: none; transform: translate(0px, 8px); opacity: 0;"><span
+                    class="typing_dot"></span><span class="typing_dot"></span><span class="typing_dot"></span></div>
+              </div>
+            </div>
+            <h3 class="heading-m">One thread per patient</h3>
+            <p class="text-small">Text, email and portal, side by side.</p>
+          </div>
+          <div class="feature"
+            style="translate: none; rotate: none; scale: none; transform: translate(0px, 28px); opacity: 0;">
+            <div class="mono-label">Billing</div>
+            <div class="pattern-tile">
+              <div class="pattern-tile_fade"></div>
+              <div class="snippet">
+                <div class="ui-card_row"
+                  style="translate: none; rotate: none; scale: none; transform: translate(0px, 8px); opacity: 0;">
+                  <div class="mono-label">Claim 4821</div>
+                  <div class="chip"
+                    style="translate: none; rotate: none; scale: none; transform-origin: 50% 50% 0px; transform: scale(0.6); opacity: 0;">
+                    Paid</div>
+                </div>
+                <div class="ui-card_price is-large"
+                  style="translate: none; rotate: none; scale: none; transform: translate(0px, 8px); opacity: 0;">
+                  $186.40</div>
+                <div class="steps"
+                  style="translate: none; rotate: none; scale: none; transform: translate(0px, 8px); opacity: 0;">
+                  <div class="steps_line"
+                    style="translate: none; rotate: none; scale: none; transform-origin: 0% 50% 0px; transform: scale(0, 1);">
+                  </div>
+                  <div class="steps_item">
+                    <div class="steps_dot"
+                      style="translate: none; rotate: none; scale: none; transform-origin: 50% 50% 0px; transform: scale(0.6); opacity: 0;">
+                    </div>
+                    <div class="ui-card_meta">Coded</div>
+                  </div>
+                  <div class="steps_item">
+                    <div class="steps_dot"
+                      style="translate: none; rotate: none; scale: none; transform-origin: 50% 50% 0px; transform: scale(0.6); opacity: 0;">
+                    </div>
+                    <div class="ui-card_meta">Sent</div>
+                  </div>
+                  <div class="steps_item">
+                    <div class="steps_dot"
+                      style="translate: none; rotate: none; scale: none; transform-origin: 50% 50% 0px; transform: scale(0.6); opacity: 0;">
+                    </div>
+                    <div class="ui-card_meta">Paid</div>
+                  </div>
+                </div>
+                <div class="ui-card_meta"
+                  style="translate: none; rotate: none; scale: none; transform: translate(0px, 8px); opacity: 0;">Paid
+                  in 6 days</div>
+              </div>
+            </div>
+            <h3 class="heading-m">Claims that send themselves</h3>
+            <p class="text-small">Coded from the visit, paid in days.</p>
+          </div>
+        </div>
+        <div class="trust-row">
+          <div class="trust-item is-first">
+            <div class="trust-status">
+              <div class="trust-dot"></div>
+              <div class="mono-label">Signed BAA</div>
+            </div>
+            <div class="trust-label">HIPAA</div>
+            <div class="trust-meta">On every plan, including trials</div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-status">
+              <div class="trust-dot"></div>
+              <div class="mono-label">Audited yearly</div>
+            </div>
+            <div class="trust-label">SOC 2 Type II</div>
+            <div class="trust-meta">Report shared under NDA</div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-status">
+              <div class="trust-dot"></div>
+              <div class="mono-label">r2 certified</div>
+            </div>
+            <div class="trust-label">HITRUST</div>
+            <div class="trust-meta">Covers the full platform</div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-status">
+              <div class="trust-dot"></div>
+              <div class="mono-label">EU and UK</div>
+            </div>
+            <div class="trust-label">GDPR</div>
+            <div class="trust-meta">Data stays in region</div>
+          </div>
+          <div class="trust-item is-last">
+            <div class="trust-status">
+              <div class="trust-dot"></div>
+              <div class="mono-label">Certified</div>
+            </div>
+            <div class="trust-label">ISO 27001</div>
+            <div class="trust-meta">Security managed end to end</div>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="split-grid">
+          <div class="split-copy">
+            <div class="mono-label">The record</div>
+            <h2 class="heading-xl">Every patient, one living record.</h2>
+            <p class="text-lead">See where a patient has been and what should happen next, on one screen the whole team
+              shares.</p><a href="/platform#record" class="button">See the record</a>
+          </div>
+          <div class="visit-card">
+            <div class="visit-card_head">
+              <div class="visit-avatar">AS</div>
+              <div class="visit-who">
+                <div class="visit-name">Ana Silva</div>
+                <div class="visit-sub">34, MRN 20419, Bayline PPO</div>
+              </div>
+              <div class="visit-next">
+                <div class="visit-next_label">Next visit</div>
+                <div class="visit-next_value">Thu 5 Nov, 09:30, Room 2</div>
+              </div>
+            </div>
+            <div class="visit-vitals">
+              <div class="vital is-alert">
+                <div class="vital_label">Blood pressure</div>
+                <div class="vital_value-row">
+                  <div class="vital_value is-alert">152/96</div>
+                  <div class="vital_unit">mmHg</div>
+                </div><svg preserveAspectRatio="none" height="26" width="180" viewBox="0 0 180 26" fill="none"
+                  xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                  class="vital_trend is-alert vital_trend is-alert">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" stroke="currentColor"
+                    d="M0.0 15.2L22.5 16.9L45.0 18.7L67.5 21.3L90.0 23.0L112.5 19.5L135.0 16.0L157.5 9.1L180.0 3.0">
+                  </path>
+                </svg>
+                <div class="vital_note is-alert">Up 14 since June</div>
+              </div>
+              <div class="vital">
+                <div class="vital_label">LDL</div>
+                <div class="vital_value-row">
+                  <div class="vital_value">132</div>
+                  <div class="vital_unit">mg/dL</div>
+                </div><svg preserveAspectRatio="none" height="26" width="180" viewBox="0 0 180 26" fill="none"
+                  xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="vital_trend vital_trend">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" stroke="currentColor"
+                    d="M0.0 23.0L45.0 20.1L90.0 14.4L135.0 8.7L180.0 3.0"></path>
+                </svg>
+                <div class="vital_note">Above goal of 100</div>
+              </div>
+              <div class="vital">
+                <div class="vital_label">Weight</div>
+                <div class="vital_value-row">
+                  <div class="vital_value">68.2</div>
+                  <div class="vital_unit">kg</div>
+                </div><svg preserveAspectRatio="none" height="26" width="180" viewBox="0 0 180 26" fill="none"
+                  xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="vital_trend vital_trend">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" stroke="currentColor"
+                    d="M0.0 3.0L36.0 18.0L72.0 8.0L108.0 13.0L144.0 23.0L180.0 13.0"></path>
+                </svg>
+                <div class="vital_note">Stable for a year</div>
+              </div>
+            </div>
+            <div class="visit-body">
+              <div class="visit-col">
+                <div class="visit-col_title">Since the last visit</div>
+                <div class="event">
+                  <div class="event_icon is-alert"><svg stroke-linejoin="round" stroke-linecap="round"
+                      stroke-width="1.6" stroke="currentColor" height="14" width="14" viewBox="0 0 24 24" fill="none"
+                      xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path d="M22 12H18L15 20L9 4L6 12H2"></path>
+                    </svg></div>
+                  <div class="event_text">
+                    <div class="event_title">Home reading flagged</div>
+                    <div class="event_sub is-alert">152/96 from her cuff</div>
+                  </div>
+                  <div class="event_date">28 Oct</div>
+                </div>
+                <div class="event">
+                  <div class="event_icon"><svg stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"
+                      stroke="currentColor" height="14" width="14" viewBox="0 0 24 24" fill="none"
+                      xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path d="M12 2.5L21.5 7.5L12 12.5L2.5 7.5L12 2.5Z"></path>
+                      <path d="M2.5 12L12 17L21.5 12"></path>
+                      <path d="M2.5 16.5L12 21.5L21.5 16.5"></path>
+                    </svg></div>
+                  <div class="event_text">
+                    <div class="event_title">Message from Ana</div>
+                    <div class="event_sub">Headaches in the morning</div>
+                  </div>
+                  <div class="event_date">18 Aug</div>
+                </div>
+                <div class="event">
+                  <div class="event_icon"><svg stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"
+                      stroke="currentColor" height="14" width="14" viewBox="0 0 24 24" fill="none"
+                      xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path d="M12 3L13.9 8.6L19.5 10.5L13.9 12.4L12 18L10.1 12.4L4.5 10.5L10.1 8.6L12 3Z"></path>
+                      <path d="M19 3V6"></path>
+                      <path d="M17.5 4.5H20.5"></path>
+                    </svg></div>
+                  <div class="event_text">
+                    <div class="event_title">Lab results</div>
+                    <div class="event_sub">LDL 132, A1C 5.6</div>
+                  </div>
+                  <div class="event_date">02 Jun</div>
+                </div>
+              </div>
+              <div class="visit-col is-prep">
+                <div class="visit-col_title">Prep for Thursday</div>
+                <div class="prep">
+                  <div class="prep_check is-done"><svg stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6"
+                      stroke="currentColor" height="12" width="12" viewBox="0 0 24 24" fill="none"
+                      xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path d="M20 6L9 17L4 12"></path>
+                    </svg></div>
+                  <div class="prep_text">
+                    <div class="prep_title">Recheck blood pressure</div>
+                    <div class="prep_sub">Booked automatically</div>
+                  </div>
+                  <div class="prep_owner">LO</div>
+                </div>
+                <div class="prep">
+                  <div class="prep_check"></div>
+                  <div class="prep_text">
+                    <div class="prep_title">Discuss statin options</div>
+                    <div class="prep_sub">Suggested by the record</div>
+                  </div>
+                  <div class="prep_owner">LO</div>
+                </div>
+                <div class="prep">
+                  <div class="prep_check"></div>
+                  <div class="prep_text">
+                    <div class="prep_title">Refill lisinopril</div>
+                    <div class="prep_sub">Due in 12 days</div>
+                  </div>
+                  <div class="prep_owner">MK</div>
+                </div>
+              </div>
+            </div>
+            <div class="visit-card_foot">
+              <div class="visit-dot"></div>
+              <div class="visit-foot_text">Synced with Cobalt EHR 2 min ago</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="app-grid">
+          <div class="radar">
+            <div class="radar_sweep"></div>
+            <div class="radar_min is-a">2 MIN</div>
+            <div class="radar_min is-b">5 MIN</div>
+            <div class="radar_min is-c">10 MIN</div><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+              viewBox="0 0 200 460" height="460" width="200" class="radar_route radar_route">
+              <path stroke-linecap="round" stroke-dasharray="2 6" stroke-width="1.5" stroke="currentColor"
+                d="M-10 450C60 420 40 260 180 212"></path>
+              <circle fill-opacity="0.18" fill="currentColor" r="9" cy="389.2" cx="37.7"></circle>
+              <circle fill="currentColor" r="3.5" cy="389.2" cx="37.7"></circle>
+              <circle fill-opacity="0.18" fill="currentColor" r="9" cy="296.1" cx="79.3"></circle>
+              <circle fill="currentColor" r="3.5" cy="296.1" cx="79.3"></circle>
+              <circle fill-opacity="0.18" fill="currentColor" r="9" cy="225.5" cx="149.3"></circle>
+              <circle fill="currentColor" r="3.5" cy="225.5" cx="149.3"></circle>
+            </svg>
+            <div class="radar_stop is-1">
+              <div>09:12</div>
+              <div class="mono-label is-panel">Left home</div>
+            </div>
+            <div class="radar_stop is-2">
+              <div>09:24</div>
+              <div class="mono-label is-panel">Parked</div>
+            </div>
+            <div class="radar_stop is-3">
+              <div>09:26</div>
+              <div class="mono-label is-panel">Checked in</div>
+            </div>
+            <div class="notification">
+              <div class="notification_icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                  height="16" width="16">
+                  <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.8" stroke="currentColor"
+                    d="M6 8a6 6 0 1 1 12 0c0 7 3 9 3 9H3s3-2 3-9M10.3 21a1.94 1.94 0 0 0 3.4 0"></path>
+                </svg></div>
+              <div class="notification_body">
+                <div class="ui-card_row">
+                  <div class="ui-card_strong">Room 2 is ready</div>
+                  <div class="ui-card_meta">now</div>
+                </div>
+                <div class="ui-card_meta">Dr. Ortiz will see you in a minute.</div>
+              </div>
+            </div>
+            <div class="phone">
+              <div class="phone_screen">
+                <div class="phone_status">
+                  <div>9:41</div>
+                  <div class="phone_island"></div>
+                  <div class="mono-label is-dark">5G</div>
+                </div>
+                <div class="phone_head">
+                  <div class="phone_clinic">
+                    <div class="avatar">HF</div>
+                    <div>Harbor Family</div>
+                  </div>
+                </div>
+                <div>
+                  <div class="mono-label">Thursday, 5 Nov</div>
+                  <div class="phone_greet">Morning, Ana.</div>
+                </div>
+                <div class="pass">
+                  <div class="ui-card_row">
+                    <div class="mono-label is-panel">Visit pass</div>
+                    <div class="chip">Today</div>
+                  </div>
+                  <div>
+                    <div class="pass_time">09:30</div>
+                    <div class="text-panel is-small">Dr. Lena Ortiz, Room 2</div>
+                  </div>
+                  <div class="pass_steps">
+                    <div class="pass_line"></div>
+                    <div class="pass_line-fill"></div>
+                    <div class="pass_step">
+                      <div class="pass_dot"></div>
+                      <div>Booked</div>
+                    </div>
+                    <div class="pass_step">
+                      <div class="pass_dot"></div>
+                      <div>Forms</div>
+                    </div>
+                    <div class="pass_step">
+                      <div class="pass_dot is-todo"></div>
+                      <div>Arrive</div>
+                    </div>
+                  </div>
+                  <div aria-hidden="true" class="button is-block">I’m here</div>
+                </div>
+                <div class="ui-card_row">
+                  <div class="mono-label">Before you arrive</div>
+                  <div class="ui-card_strong">2 of 3</div>
+                </div>
+                <div>
+                  <div class="list-row">
+                    <div>Intake form</div>
+                    <div class="check-dot is-done"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 12 12" height="10" width="10">
+                        <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6" stroke="currentColor"
+                          d="M2.5 6.2L5 8.5L9.5 3.5"></path>
+                      </svg></div>
+                  </div>
+                  <div class="list-row">
+                    <div>Insurance card</div>
+                    <div class="check-dot is-done"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 12 12" height="10" width="10">
+                        <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6" stroke="currentColor"
+                          d="M2.5 6.2L5 8.5L9.5 3.5"></path>
+                      </svg></div>
+                  </div>
+                  <div class="list-row">
+                    <div>Copay $40.00</div>
+                    <div class="pay-chip">Pay</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="split-copy app-grid_copy">
+            <div class="mono-label">Patient app</div>
+            <h2 class="heading-xl">The same record, in their pocket.</h2>
+            <p class="text-lead">Patients book, fill in forms, check in and pay from their phone. Every tap writes to
+              the record your team already works from.</p>
+            <div class="points">
+              <div class="point">
+                <div class="point_mark"></div>
+                <div>
+                  <div class="point_title">Book and reschedule</div>
+                  <div class="text-small">Live times from the same calendar your front desk uses.</div>
+                </div>
+              </div>
+              <div class="point">
+                <div class="point_mark"></div>
+                <div>
+                  <div class="point_title">Check in from the car</div>
+                  <div class="text-small">One tap on arrival, and the room gets ready.</div>
+                </div>
+              </div>
+              <div class="point">
+                <div class="point_mark"></div>
+                <div>
+                  <div class="point_title">Pay before they leave</div>
+                  <div class="text-small">Copays and balances settle in one tap.</div>
+                </div>
+              </div>
+            </div><a href="/platform#messaging" class="button">See patient messaging</a>
+            <div class="mono-label">No download needed. Works on any phone.</div>
+          </div>
+        </div>
+      </section>
+      <section class="section is-panel">
+        <div class="ehr-panel">
+          <div class="ehr-panel_grid">
+            <div class="ehr-panel_copy">
+              <div class="mono-label is-panel">Integrations</div>
+              <div class="tag-row">
+                <div class="tag is-accent">FHIR / HL7</div>
+                <div class="tag is-accent">Smart on FHIR</div>
+              </div>
+              <h2 class="heading-panel">Bidirectional EHR integration.</h2>
+              <p class="text-panel">Read and write with the EHR you already run. Appointments, notes, orders and claims
+                flow both ways in real time, scoped to what each workflow needs.</p><a href="/platform#integrations"
+                class="button">How we connect to your EHR<span class="text-link_icon"><svg
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14" height="14" width="14">
+                    <path stroke-linecap="round" stroke-width="1.4" stroke="currentColor" d="M4 10L10 4M10 4H5M10 4V9">
+                    </path>
+                  </svg></span></a>
+            </div>
+            <div class="sync">
+              <div role="img"
+                aria-label="Median write time from Carefront to the EHR over the last 7 days is 1.6 seconds, with 95% of writes under 2.4 seconds."
+                class="sync-d">
+                <div class="sync-d_top">
+                  <div class="sync-d_cap">Median write time to the EHR, last 7 days</div>
+                  <div class="sync-d_route">
+                    <div class="sync-d_pill">Carefront</div>
+                    <div class="sync-d_to">to</div>
+                    <div class="sync-d_pill">Cobalt EHR</div>
+                  </div>
+                </div>
+                <div class="sync-d_num">1.6 s</div>
+                <div class="sync-d_plot">
+                  <div class="sync-d_mark is-median">median</div>
+                  <div class="sync-d_mark is-p95">95% under 2.4 s</div><svg height="84" width="560"
+                    viewBox="20 226 560 84" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                    class="sync-d_svg sync-d_svg">
+                    <g>
+                      <line y2="300" x2="560" y1="300" x1="40" class="ill-s-line-panel"></line>
+                      <line y2="304" x2="40.0" y1="296" x1="40.0" class="ill-s-line-panel"></line>
+                      <line y2="304" x2="126.7" y1="296" x1="126.7" class="ill-s-line-panel"></line>
+                      <line y2="304" x2="213.3" y1="296" x1="213.3" class="ill-s-line-panel"></line>
+                      <line y2="304" x2="300.0" y1="296" x1="300.0" class="ill-s-line-panel"></line>
+                      <line y2="304" x2="386.7" y1="296" x1="386.7" class="ill-s-line-panel"></line>
+                      <line y2="304" x2="473.3" y1="296" x1="473.3" class="ill-s-line-panel"></line>
+                      <line y2="304" x2="560.0" y1="296" x1="560.0" class="ill-s-line-panel"></line>
+                    </g>
+                    <g>
+                      <circle r="2.6" cy="276.7" cx="272.1" class="ill-f-panel-muted sd-dim sd-dot sd-g0"></circle>
+                      <circle r="2.6" cy="252.9" cx="331.6" class="ill-f-panel-muted sd-dim sd-dot sd-g1"></circle>
+                      <circle r="2.6" cy="258.0" cx="392.6" class="ill-f-panel-muted sd-dim sd-dot sd-g2"></circle>
+                      <circle r="2.6" cy="254.9" cx="306.9" class="ill-f-accent sd-dot sd-g3"></circle>
+                      <circle r="2.6" cy="265.4" cx="307.3" class="ill-f-accent sd-dot sd-g0"></circle>
+                      <circle r="2.6" cy="263.4" cx="372.3" class="ill-f-panel-muted sd-dim sd-dot sd-g1"></circle>
+                      <circle r="2.6" cy="260.6" cx="435.2" class="ill-f-panel-muted sd-dim sd-dot sd-g2"></circle>
+                      <circle r="2.6" cy="271.2" cx="425.4" class="ill-f-panel-muted sd-dim sd-dot sd-g3"></circle>
+                      <circle r="2.6" cy="272.9" cx="289.6" class="ill-f-panel-muted sd-dim sd-dot sd-g0"></circle>
+                      <circle r="2.6" cy="261.5" cx="342.4" class="ill-f-panel-muted sd-dim sd-dot sd-g1"></circle>
+                      <circle r="2.6" cy="274.0" cx="343.2" class="ill-f-panel-muted sd-dim sd-dot sd-g2"></circle>
+                      <circle r="2.6" cy="277.5" cx="315.9" class="ill-f-accent sd-dot sd-g3"></circle>
+                      <circle r="2.6" cy="270.9" cx="290.7" class="ill-f-panel-muted sd-dim sd-dot sd-g0"></circle>
+                      <circle r="2.6" cy="278.7" cx="411.5" class="ill-f-panel-muted sd-dim sd-dot sd-g1"></circle>
+                      <circle r="2.6" cy="267.3" cx="247.7" class="ill-f-panel-muted sd-dim sd-dot sd-g2"></circle>
+                      <circle r="2.6" cy="275.7" cx="313.9" class="ill-f-accent sd-dot sd-g3"></circle>
+                      <circle r="2.6" cy="258.1" cx="430.8" class="ill-f-panel-muted sd-dim sd-dot sd-g0"></circle>
+                      <circle r="2.6" cy="255.7" cx="341.6" class="ill-f-panel-muted sd-dim sd-dot sd-g1"></circle>
+                      <circle r="2.6" cy="275.0" cx="402.3" class="ill-f-panel-muted sd-dim sd-dot sd-g2"></circle>
+                      <circle r="2.6" cy="268.8" cx="281.1" class="ill-f-panel-muted sd-dim sd-dot sd-g3"></circle>
+                      <circle r="2.6" cy="250.0" cx="361.5" class="ill-f-panel-muted sd-dim sd-dot sd-g0"></circle>
+                      <circle r="2.6" cy="282.6" cx="182.9" class="ill-f-panel-muted sd-dim sd-dot sd-g1"></circle>
+                      <circle r="2.6" cy="279.7" cx="371.7" class="ill-f-panel-muted sd-dim sd-dot sd-g2"></circle>
+                      <circle r="2.6" cy="245.4" cx="268.6" class="ill-f-panel-muted sd-dim sd-dot sd-g3"></circle>
+                      <circle r="2.6" cy="246.1" cx="498.3" class="ill-f-panel-muted sd-dim sd-dot sd-g0"></circle>
+                      <circle r="2.6" cy="275.1" cx="246.7" class="ill-f-panel-muted sd-dim sd-dot sd-g1"></circle>
+                      <circle r="2.6" cy="275.8" cx="191.7" class="ill-f-panel-muted sd-dim sd-dot sd-g2"></circle>
+                      <circle r="2.6" cy="275.5" cx="382.5" class="ill-f-panel-muted sd-dim sd-dot sd-g3"></circle>
+                      <circle r="2.6" cy="246.7" cx="316.0" class="ill-f-accent sd-dot sd-g0"></circle>
+                      <circle r="2.6" cy="245.8" cx="178.6" class="ill-f-panel-muted sd-dim sd-dot sd-g1"></circle>
+                      <circle r="2.6" cy="246.4" cx="329.8" class="ill-f-accent sd-dot sd-g2"></circle>
+                      <circle r="2.6" cy="256.1" cx="352.0" class="ill-f-panel-muted sd-dim sd-dot sd-g3"></circle>
+                      <circle r="2.6" cy="261.2" cx="192.2" class="ill-f-panel-muted sd-dim sd-dot sd-g0"></circle>
+                      <circle r="2.6" cy="254.6" cx="320.8" class="ill-f-accent sd-dot sd-g1"></circle>
+                      <circle r="2.6" cy="245.6" cx="183.4" class="ill-f-panel-muted sd-dim sd-dot sd-g2"></circle>
+                      <circle r="2.6" cy="284.4" cx="350.3" class="ill-f-panel-muted sd-dim sd-dot sd-g3"></circle>
+                      <circle r="2.6" cy="244.0" cx="510.3" class="ill-f-panel-muted sd-dim sd-dot sd-g0"></circle>
+                      <circle r="2.6" cy="254.0" cx="306.8" class="ill-f-accent sd-dot sd-g1"></circle>
+                      <circle r="2.6" cy="268.2" cx="319.7" class="ill-f-accent sd-dot sd-g2"></circle>
+                      <circle r="2.6" cy="258.7" cx="363.7" class="ill-f-panel-muted sd-dim sd-dot sd-g3"></circle>
+                      <circle r="2.6" cy="267.4" cx="363.4" class="ill-f-panel-muted sd-dim sd-dot sd-g0"></circle>
+                      <circle r="2.6" cy="242.3" cx="316.7" class="ill-f-accent sd-dot sd-g1"></circle>
+                      <circle r="2.6" cy="277.2" cx="461.3" class="ill-f-panel-muted sd-dim sd-dot sd-g2"></circle>
+                      <circle r="2.6" cy="261.5" cx="282.7" class="ill-f-panel-muted sd-dim sd-dot sd-g3"></circle>
+                      <circle r="2.6" cy="277.8" cx="426.4" class="ill-f-panel-muted sd-dim sd-dot sd-g0"></circle>
+                      <circle r="2.6" cy="263.0" cx="282.3" class="ill-f-panel-muted sd-dim sd-dot sd-g1"></circle>
+                      <circle r="2.6" cy="270.1" cx="368.1" class="ill-f-panel-muted sd-dim sd-dot sd-g2"></circle>
+                      <circle r="2.6" cy="262.2" cx="251.1" class="ill-f-panel-muted sd-dim sd-dot sd-g3"></circle>
+                      <circle r="2.6" cy="275.6" cx="273.1" class="ill-f-panel-muted sd-dim sd-dot sd-g0"></circle>
+                      <circle r="2.6" cy="252.0" cx="264.9" class="ill-f-panel-muted sd-dim sd-dot sd-g1"></circle>
+                      <circle r="2.6" cy="256.0" cx="496.5" class="ill-f-panel-muted sd-dim sd-dot sd-g2"></circle>
+                      <circle r="2.6" cy="259.6" cx="355.7" class="ill-f-panel-muted sd-dim sd-dot sd-g3"></circle>
+                      <circle r="2.6" cy="280.0" cx="342.2" class="ill-f-panel-muted sd-dim sd-dot sd-g0"></circle>
+                      <circle r="2.6" cy="285.6" cx="126.7" class="ill-f-panel-muted sd-dim sd-dot sd-g1"></circle>
+                      <circle r="2.6" cy="280.1" cx="355.2" class="ill-f-panel-muted sd-dim sd-dot sd-g2"></circle>
+                      <circle r="2.6" cy="265.9" cx="258.1" class="ill-f-panel-muted sd-dim sd-dot sd-g3"></circle>
+                      <circle r="2.6" cy="251.9" cx="409.4" class="ill-f-panel-muted sd-dim sd-dot sd-g0"></circle>
+                      <circle r="2.6" cy="275.9" cx="219.8" class="ill-f-panel-muted sd-dim sd-dot sd-g1"></circle>
+                      <circle r="2.6" cy="245.3" cx="385.1" class="ill-f-panel-muted sd-dim sd-dot sd-g2"></circle>
+                      <circle r="2.6" cy="259.5" cx="214.5" class="ill-f-panel-muted sd-dim sd-dot sd-g3"></circle>
+                      <circle r="2.6" cy="257.6" cx="164.7" class="ill-f-panel-muted sd-dim sd-dot sd-g0"></circle>
+                      <circle r="2.6" cy="282.7" cx="400.1" class="ill-f-panel-muted sd-dim sd-dot sd-g1"></circle>
+                      <circle r="2.6" cy="285.7" cx="197.5" class="ill-f-panel-muted sd-dim sd-dot sd-g2"></circle>
+                      <circle r="2.6" cy="245.3" cx="198.6" class="ill-f-panel-muted sd-dim sd-dot sd-g3"></circle>
+                    </g>
+                    <g>
+                      <line stroke-width="2" y2="304" x2="317.3" y1="230" x1="317.3" class="ill-s-accent sd-median">
+                      </line>
+                      <line stroke-dasharray="3 4" y2="304" x2="456.0" y1="230" x1="456.0"
+                        class="ill-s-text-panel sd-p95"></line>
+                    </g>
+                  </svg>
+                </div>
+                <div class="sync-d_axis">
+                  <div class="sync-d_tick is-0">0 s</div>
+                  <div class="sync-d_tick is-1">1 s</div>
+                  <div class="sync-d_tick is-2">2 s</div>
+                  <div class="sync-d_tick is-3">3 s</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="logo-strip">
+            <div class="logo-cell is-first">Cobalt</div>
+            <div class="logo-cell">Ledgerline</div>
+            <div class="logo-cell">Clearpath</div>
+            <div class="logo-cell is-serif">Oakfield</div>
+            <div class="logo-cell">fernway</div>
+            <div class="logo-cell">Wellnest</div>
+            <div class="logo-cell is-serif">Northgate</div>
+            <div class="logo-cell">Summit</div>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div id="customers" class="anchor"></div>
+        <div class="section-header is-split">
+          <div class="split-copy">
+            <div class="mono-label">Customers</div>
+            <h2 class="heading-xl">Clinics that run on one record.</h2>
+          </div>
+          <div class="section-header_aside">
+            <p class="text-lead">Primary care, specialty and dental groups use Carefront to keep every patient, every
+              visit and every bill in one place.</p>
+          </div>
+        </div>
+        <div class="quote-feature">
+          <div class="quote-feature_main">
+            <div class="quote-mark">“</div>
+            <p class="quote-text">We stopped chasing patients across four systems. Now the front desk, the nurses and
+              billing look at the same record, and the patients notice.</p>
+            <div class="author">
+              <div class="monogram">LO</div>
+              <div>
+                <div class="ui-card_strong is-14">Dr. Lena Ortiz</div>
+                <div class="ui-card_meta is-13">Medical director, Harbor Family Clinic</div>
+              </div>
+            </div>
+          </div>
+          <div class="metrics">
+            <div class="metric">
+              <div class="mono-label">No-shows</div>
+              <div class="metric_value">38%</div>
+              <div class="ui-card_meta is-13">fewer missed visits in the first quarter</div>
+            </div>
+            <div class="metric is-second">
+              <div class="mono-label">Front desk</div>
+              <div class="metric_value">4.2 h</div>
+              <div class="ui-card_meta is-13">saved per provider, every week</div>
+            </div>
+          </div>
+        </div>
+        <div class="quotes">
+          <div class="quote">
+            <p class="quote_text">Intake used to be a clipboard and a scanner. Now answers land in the chart before the
+              patient parks.</p>
+            <div>
+              <div class="ui-card_strong">Maya Chen</div>
+              <div class="ui-card_meta">Practice manager, Northpine Pediatrics</div>
+            </div>
+          </div>
+          <div class="quote">
+            <p class="quote_text">Claims go out the same day as the visit. Our days in A/R dropped by a third.</p>
+            <div>
+              <div class="ui-card_strong">Ravi Patel</div>
+              <div class="ui-card_meta">Billing lead, Bayside Dental</div>
+            </div>
+          </div>
+          <div class="quote">
+            <p class="quote_text">The EHR sync just works. Nobody on my team retypes anything anymore.</p>
+            <div>
+              <div class="ui-card_strong">Jonas Weber</div>
+              <div class="ui-card_meta">Operations, Ostara Health</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="section-header is-split">
+          <div class="pricing-intro">
+            <div class="mono-label">Pricing</div>
+            <h2 class="heading-xl">Priced per provider, not per patient.</h2>
+          </div>
+          <div class="section-header_aside">
+            <p class="text-lead">Front desk, nurses and admins are always free. Switch plans or cancel any month.</p>
+            <div class="billing-toggle">
+              <div
+                data-wf-target="[[[&quot;6aec83b44f4f0425b95841ca&quot;,&quot;8f53d73e-da14-aadc-b6ee-3fabd5df898d&quot;],[]]]"
+                class="billing-toggle_knob"></div>
+              <div
+                data-wf-target="[[[&quot;6aec83b44f4f0425b95841ca&quot;,&quot;8f53d73e-da14-aadc-b6ee-3fabd5df898f&quot;],[]]]"
+                class="billing-toggle_option is-monthly">Monthly</div>
+              <div
+                data-wf-target="[[[&quot;6aec83b44f4f0425b95841ca&quot;,&quot;8f53d73e-da14-aadc-b6ee-3fabd5df8993&quot;],[]]]"
+                class="billing-toggle_option is-annual">Annual<span class="billing-toggle_save">-20%</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="pricing-grid">
+          <div class="tier is-first">
+            <div class="tier_top">
+              <div class="tier_glyph"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                  viewBox="0 0 40 40" height="40" width="40" class="tier_svg ill">
+                  <g stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round">
+                    <circle r="7" cy="20" cx="20" class="ill-f-accent"></circle>
+                    <g class="tg-spin">
+                      <circle stroke-dasharray="2 3" stroke-width="1.2" fill="none" r="14" cy="20" cx="20"
+                        class="ill-s-accent"></circle>
+                    </g>
+                  </g>
+                </svg></div>
+            </div>
+            <h3 class="tier_name">Starter</h3>
+            <p class="text-small">For a single location getting off paper.</p>
+            <div class="tier_price">
+              <div
+                data-wf-target="[[[&quot;6aec83b44f4f0425b95841ca&quot;,&quot;8f53d73e-da14-aadc-b6ee-3fabd5df89a2&quot;],[]]]"
+                class="tier_amount price-monthly">$89</div>
+              <div
+                data-wf-target="[[[&quot;6aec83b44f4f0425b95841ca&quot;,&quot;8f53d73e-da14-aadc-b6ee-3fabd5df89a4&quot;],[]]]"
+                class="tier_amount price-annual"
+                style="translate: none; rotate: none; scale: none; transform: translate(0px, 6px); opacity: 0;">$74
+              </div>
+              <div class="tier_unit">per provider / month</div>
+            </div>
+            <div class="tier_cta"><a href="/sign-up" class="button is-secondary">Start free trial</a></div>
+            <div class="tier_list">
+              <div class="tier_item">
+                <div class="tier_check"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
+                    height="14" width="14">
+                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor"
+                      d="M2.5 6.2L5 8.5L9.5 3.5"></path>
+                  </svg></div>
+                <div>Scheduling and reminders</div>
+              </div>
+              <div class="tier_item">
+                <div class="tier_check"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
+                    height="14" width="14">
+                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor"
+                      d="M2.5 6.2L5 8.5L9.5 3.5"></path>
+                  </svg></div>
+                <div>Digital intake forms</div>
+              </div>
+              <div class="tier_item">
+                <div class="tier_check"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
+                    height="14" width="14">
+                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor"
+                      d="M2.5 6.2L5 8.5L9.5 3.5"></path>
+                  </svg></div>
+                <div>Two-way texting</div>
+              </div>
+              <div class="tier_item">
+                <div class="tier_check"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
+                    height="14" width="14">
+                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor"
+                      d="M2.5 6.2L5 8.5L9.5 3.5"></path>
+                  </svg></div>
+                <div>Up to 3 providers</div>
+              </div>
+            </div>
+          </div>
+          <div class="tier is-featured">
+            <div class="tier_top">
+              <div class="tier_glyph"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                  viewBox="0 0 40 40" height="40" width="40" class="tier_svg ill">
+                  <g stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round">
+                    <g class="tg-spin">
+                      <polyline fill="none" points="8,29 20,9 32,29 8,29" class="ill-s-accent"></polyline>
+                    </g>
+                    <circle r="4.5" cy="9" cx="20" class="ill-f-accent"></circle>
+                    <circle stroke-width="1.4" r="4.5" cy="29" cx="8" class="ill-f-raised ill-s-accent"></circle>
+                    <circle stroke-width="1.4" r="4.5" cy="29" cx="32" class="ill-f-raised ill-s-accent"></circle>
+                  </g>
+                </svg></div>
+              <div class="tier_badge">Most clinics</div>
+            </div>
+            <h3 class="tier_name">Practice</h3>
+            <p class="text-small is-panel">For growing groups that run on one record.</p>
+            <div class="tier_price">
+              <div
+                data-wf-target="[[[&quot;6aec83b44f4f0425b95841ca&quot;,&quot;8f53d73e-da14-aadc-b6ee-3fabd5df89dc&quot;],[]]]"
+                class="tier_amount price-monthly">$149</div>
+              <div
+                data-wf-target="[[[&quot;6aec83b44f4f0425b95841ca&quot;,&quot;8f53d73e-da14-aadc-b6ee-3fabd5df89de&quot;],[]]]"
+                class="tier_amount price-annual"
+                style="translate: none; rotate: none; scale: none; transform: translate(0px, 6px); opacity: 0;">$124
+              </div>
+              <div class="tier_unit is-panel">per provider / month</div>
+            </div>
+            <div class="tier_cta"><a href="/sign-up" class="button">Start free trial</a></div>
+            <div class="tier_list is-panel">
+              <div class="tier_item">
+                <div class="tier_check"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
+                    height="14" width="14">
+                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor"
+                      d="M2.5 6.2L5 8.5L9.5 3.5"></path>
+                  </svg></div>
+                <div>Everything in Starter</div>
+              </div>
+              <div class="tier_item">
+                <div class="tier_check"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
+                    height="14" width="14">
+                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor"
+                      d="M2.5 6.2L5 8.5L9.5 3.5"></path>
+                  </svg></div>
+                <div>Billing and claims</div>
+              </div>
+              <div class="tier_item">
+                <div class="tier_check"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
+                    height="14" width="14">
+                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor"
+                      d="M2.5 6.2L5 8.5L9.5 3.5"></path>
+                  </svg></div>
+                <div>EHR sync, both ways</div>
+              </div>
+              <div class="tier_item">
+                <div class="tier_check"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
+                    height="14" width="14">
+                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor"
+                      d="M2.5 6.2L5 8.5L9.5 3.5"></path>
+                  </svg></div>
+                <div>Patient app and visit pass</div>
+              </div>
+              <div class="tier_item">
+                <div class="tier_check"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
+                    height="14" width="14">
+                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor"
+                      d="M2.5 6.2L5 8.5L9.5 3.5"></path>
+                  </svg></div>
+                <div>Unlimited providers</div>
+              </div>
+            </div>
+          </div>
+          <div class="tier">
+            <div class="tier_top">
+              <div class="tier_glyph"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                  viewBox="0 0 40 40" height="40" width="40" class="tier_svg ill">
+                  <g stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round">
+                    <g class="tg-spin">
+                      <circle stroke-width="1" fill="none" r="14" cy="20" cx="20" class="ill-s-accent"></circle>
+                      <line stroke-width="0.9" y2="6" x2="20" y1="20" x1="20" class="ill-s-accent"></line>
+                      <circle stroke-width="1.2" r="3" cy="6" cx="20" class="ill-f-raised ill-s-accent"></circle>
+                      <line stroke-width="0.9" y2="13" x2="32.1" y1="20" x1="20" class="ill-s-accent"></line>
+                      <circle stroke-width="1.2" r="3" cy="13" cx="32.1" class="ill-f-raised ill-s-accent"></circle>
+                      <line stroke-width="0.9" y2="27" x2="32.1" y1="20" x1="20" class="ill-s-accent"></line>
+                      <circle stroke-width="1.2" r="3" cy="27" cx="32.1" class="ill-f-raised ill-s-accent"></circle>
+                      <line stroke-width="0.9" y2="34" x2="20" y1="20" x1="20" class="ill-s-accent"></line>
+                      <circle stroke-width="1.2" r="3" cy="34" cx="20" class="ill-f-raised ill-s-accent"></circle>
+                      <line stroke-width="0.9" y2="27" x2="7.9" y1="20" x1="20" class="ill-s-accent"></line>
+                      <circle stroke-width="1.2" r="3" cy="27" cx="7.9" class="ill-f-raised ill-s-accent"></circle>
+                      <line stroke-width="0.9" y2="13" x2="7.9" y1="20" x1="20" class="ill-s-accent"></line>
+                      <circle stroke-width="1.2" r="3" cy="13" cx="7.9" class="ill-f-raised ill-s-accent"></circle>
+                    </g>
+                    <circle r="5" cy="20" cx="20" class="ill-f-accent"></circle>
+                  </g>
+                </svg></div>
+            </div>
+            <h3 class="tier_name">Network</h3>
+            <p class="text-small">For multi-site groups and health systems.</p>
+            <div class="tier_price">
+              <div class="tier_amount">Custom</div>
+              <div class="tier_unit">volume pricing</div>
+            </div>
+            <div class="tier_cta"><a href="/contact" class="button is-secondary">Talk to sales</a></div>
+            <div class="tier_list">
+              <div class="tier_item">
+                <div class="tier_check"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
+                    height="14" width="14">
+                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor"
+                      d="M2.5 6.2L5 8.5L9.5 3.5"></path>
+                  </svg></div>
+                <div>Everything in Practice</div>
+              </div>
+              <div class="tier_item">
+                <div class="tier_check"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
+                    height="14" width="14">
+                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor"
+                      d="M2.5 6.2L5 8.5L9.5 3.5"></path>
+                  </svg></div>
+                <div>Multi-location reporting</div>
+              </div>
+              <div class="tier_item">
+                <div class="tier_check"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
+                    height="14" width="14">
+                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor"
+                      d="M2.5 6.2L5 8.5L9.5 3.5"></path>
+                  </svg></div>
+                <div>SSO and audit exports</div>
+              </div>
+              <div class="tier_item">
+                <div class="tier_check"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
+                    height="14" width="14">
+                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor"
+                      d="M2.5 6.2L5 8.5L9.5 3.5"></path>
+                  </svg></div>
+                <div>Dedicated success lead</div>
+              </div>
+              <div class="tier_item">
+                <div class="tier_check"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
+                    height="14" width="14">
+                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor"
+                      d="M2.5 6.2L5 8.5L9.5 3.5"></path>
+                  </svg></div>
+                <div>Custom BAA terms</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pricing-note">
+          <div class="mono-label">All plans include a signed BAA, SSO and unlimited patients</div><a
+            href="/pricing#compare" class="text-link">Compare all features<span class="text-link_icon"><svg
+                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14" height="14" width="14">
+                <path stroke-linecap="round" stroke-width="1.4" stroke="currentColor" d="M4 10L10 4M10 4H5M10 4V9">
+                </path>
+              </svg></span></a>
+        </div>
+      </section>
+      <section class="section">
+        <div class="faq-grid">
+          <div class="faq-intro">
+            <div class="mono-label">FAQ</div>
+            <h2 class="heading-xl">Questions, answered.</h2>
+            <p class="text-lead">Can’t find what you need? Our team replies within one business day.</p><a
+              href="/contact" class="text-link">Talk to our team<span class="text-link_icon"><svg
+                  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14" height="14" width="14">
+                  <path stroke-linecap="round" stroke-width="1.4" stroke="currentColor" d="M4 10L10 4M10 4H5M10 4V9">
+                  </path>
+                </svg></span></a>
+          </div>
+          <div class="faq-list">
+            <div class="faq-item">
+              <div
+                data-wf-target="[[[&quot;6aec83b44f4f0425b95841ca&quot;,&quot;0b5c6277-6244-35b8-1e39-50d6161bc838&quot;],[]]]"
+                class="faq-question">
+                <div class="faq-question_text">How long does it take to go live?</div>
+                <div class="faq-icon">
+                  <div
+                    data-wf-target="[[[&quot;6aec83b44f4f0425b95841ca&quot;,&quot;0b5c6277-6244-35b8-1e39-50d6161bc836&quot;],[]]]"
+                    class="faq-icon_inner"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
+                      height="12" width="12">
+                      <path stroke-linecap="round" stroke-width="1.4" stroke="currentColor" d="M6 1V11M1 6H11"></path>
+                    </svg></div>
+                </div>
+              </div>
+              <div
+                data-wf-target="[[[&quot;6aec83b44f4f0425b95841ca&quot;,&quot;0b5c6277-6244-35b8-1e39-50d6161bc83b&quot;],[]]]"
+                class="faq-answer">
+                <p class="faq-answer_text">Most clinics are live in 30 days. We move your patient records, connect your
+                  EHR and train the front desk in two short sessions.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div
+                data-wf-target="[[[&quot;6aec83b44f4f0425b95841ca&quot;,&quot;0b5c6277-6244-35b8-1e39-50d6161bc845&quot;],[]]]"
+                class="faq-question">
+                <div class="faq-question_text">Does Carefront replace our EHR?</div>
+                <div class="faq-icon">
+                  <div
+                    data-wf-target="[[[&quot;6aec83b44f4f0425b95841ca&quot;,&quot;0b5c6277-6244-35b8-1e39-50d6161bc843&quot;],[]]]"
+                    class="faq-icon_inner"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
+                      height="12" width="12">
+                      <path stroke-linecap="round" stroke-width="1.4" stroke="currentColor" d="M6 1V11M1 6H11"></path>
+                    </svg></div>
+                </div>
+              </div>
+              <div
+                data-wf-target="[[[&quot;6aec83b44f4f0425b95841ca&quot;,&quot;0b5c6277-6244-35b8-1e39-50d6161bc848&quot;],[]]]"
+                class="faq-answer">
+                <p class="faq-answer_text">No. Carefront sits on top of it. Scheduling, intake, messaging and billing
+                  write back to your EHR, so clinical work stays where it already lives.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div
+                data-wf-target="[[[&quot;6aec83b44f4f0425b95841ca&quot;,&quot;0b5c6277-6244-35b8-1e39-50d6161bc852&quot;],[]]]"
+                class="faq-question">
+                <div class="faq-question_text">Is patient data secure?</div>
+                <div class="faq-icon">
+                  <div
+                    data-wf-target="[[[&quot;6aec83b44f4f0425b95841ca&quot;,&quot;0b5c6277-6244-35b8-1e39-50d6161bc850&quot;],[]]]"
+                    class="faq-icon_inner"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
+                      height="12" width="12">
+                      <path stroke-linecap="round" stroke-width="1.4" stroke="currentColor" d="M6 1V11M1 6H11"></path>
+                    </svg></div>
+                </div>
+              </div>
+              <div
+                data-wf-target="[[[&quot;6aec83b44f4f0425b95841ca&quot;,&quot;0b5c6277-6244-35b8-1e39-50d6161bc855&quot;],[]]]"
+                class="faq-answer">
+                <p class="faq-answer_text">Carefront is HIPAA compliant, SOC 2 Type II audited and HITRUST certified.
+                  Every plan includes a signed BAA and data is encrypted at rest and in transit.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div
+                data-wf-target="[[[&quot;6aec83b44f4f0425b95841ca&quot;,&quot;0b5c6277-6244-35b8-1e39-50d6161bc85f&quot;],[]]]"
+                class="faq-question">
+                <div class="faq-question_text">How is pricing calculated?</div>
+                <div class="faq-icon">
+                  <div
+                    data-wf-target="[[[&quot;6aec83b44f4f0425b95841ca&quot;,&quot;0b5c6277-6244-35b8-1e39-50d6161bc85d&quot;],[]]]"
+                    class="faq-icon_inner"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
+                      height="12" width="12">
+                      <path stroke-linecap="round" stroke-width="1.4" stroke="currentColor" d="M6 1V11M1 6H11"></path>
+                    </svg></div>
+                </div>
+              </div>
+              <div
+                data-wf-target="[[[&quot;6aec83b44f4f0425b95841ca&quot;,&quot;0b5c6277-6244-35b8-1e39-50d6161bc862&quot;],[]]]"
+                class="faq-answer">
+                <p class="faq-answer_text">Per provider, per month. Front desk staff, nurses and admins are free, and
+                  there is no limit on patients or messages.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div
+                data-wf-target="[[[&quot;6aec83b44f4f0425b95841ca&quot;,&quot;0b5c6277-6244-35b8-1e39-50d6161bc86c&quot;],[]]]"
+                class="faq-question">
+                <div class="faq-question_text">Can patients use it without an app?</div>
+                <div class="faq-icon">
+                  <div
+                    data-wf-target="[[[&quot;6aec83b44f4f0425b95841ca&quot;,&quot;0b5c6277-6244-35b8-1e39-50d6161bc86a&quot;],[]]]"
+                    class="faq-icon_inner"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
+                      height="12" width="12">
+                      <path stroke-linecap="round" stroke-width="1.4" stroke="currentColor" d="M6 1V11M1 6H11"></path>
+                    </svg></div>
+                </div>
+              </div>
+              <div
+                data-wf-target="[[[&quot;6aec83b44f4f0425b95841ca&quot;,&quot;0b5c6277-6244-35b8-1e39-50d6161bc86f&quot;],[]]]"
+                class="faq-answer">
+                <p class="faq-answer_text">Yes. Check-in, forms and payments all work from a text message link. The
+                  patient app is there for people who want it.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div
+                data-wf-target="[[[&quot;6aec83b44f4f0425b95841ca&quot;,&quot;0b5c6277-6244-35b8-1e39-50d6161bc879&quot;],[]]]"
+                class="faq-question">
+                <div class="faq-question_text">What if we want to leave?</div>
+                <div class="faq-icon">
+                  <div
+                    data-wf-target="[[[&quot;6aec83b44f4f0425b95841ca&quot;,&quot;0b5c6277-6244-35b8-1e39-50d6161bc877&quot;],[]]]"
+                    class="faq-icon_inner"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
+                      height="12" width="12">
+                      <path stroke-linecap="round" stroke-width="1.4" stroke="currentColor" d="M6 1V11M1 6H11"></path>
+                    </svg></div>
+                </div>
+              </div>
+              <div
+                data-wf-target="[[[&quot;6aec83b44f4f0425b95841ca&quot;,&quot;0b5c6277-6244-35b8-1e39-50d6161bc87c&quot;],[]]]"
+                class="faq-answer">
+                <p class="faq-answer_text">Export the full patient record at any time in standard formats. No exit fees,
+                  no lock-in, no questions.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="cta-box">
+          <div class="cta-stack_wrap"><svg height="280" width="900" viewBox="0 0 900 280" fill="none"
+              xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cta-weave cta-weave">
+              <g class="th th-4">
+                <path stroke-linejoin="round" stroke-width="1.3"
+                  d="M20 30.0C200 30.0 260 116.0 360 116.0L360 116.0L370 117.4L380 119.3L390 121.2L400 122.3L410 122.0L420 120.7L430 118.9L440 117.8L450 118.4L460 120.9L470 125.0L480 129.7L490 133.6L500 135.9L510 135.9L520 134.1L530 131.6L540 129.5L550 128.8L560 129.9L570 132.3L580 135.2L590 137.8L600 139.3L610 139.9L620 140.0"
+                  class="ill-s-strong"></path>
+                <circle stroke-width="1.3" r="3.5" cy="30.0" cx="20" class="ill-f-raised ill-s-ink"></circle>
+              </g>
+              <g class="th th-3">
+                <path stroke-dasharray="3 4" stroke-linejoin="round" stroke-width="1.3"
+                  d="M20 66.7C200 66.7 260 124.0 360 124.0L360 124.0L370 125.5L380 126.7L390 127.2L400 126.5L410 125.0L420 123.6L430 123.1L440 124.3L450 127.2L460 131.3L470 135.3L480 138.0L490 138.7L500 137.3L510 134.5L520 131.5L530 129.5L540 129.3L550 131.0L560 133.9L570 136.9L580 139.3L590 140.4L600 140.4L610 140.1L620 140.0"
+                  class="ill-s-strong"></path>
+                <circle stroke-width="1.3" r="3.5" cy="66.7" cx="20" class="ill-f-raised ill-s-ink"></circle>
+              </g>
+              <g class="th th-2">
+                <path stroke-linejoin="round" stroke-width="1.3"
+                  d="M20 103.3C200 103.3 260 132.0 360 132.0L360 132.0L370 132.9L380 133.0L390 132.1L400 130.7L410 129.6L420 129.6L430 131.2L440 134.2L450 137.8L460 140.8L470 142.2L480 141.4L490 138.7L500 135.2L510 132.2L520 130.7L530 131.2L540 133.5L550 136.7L560 139.7L570 141.6L580 142.0L590 141.3L600 140.3L610 139.7L620 140.0"
+                  class="ill-s-strong"></path>
+                <circle stroke-width="1.3" r="3.5" cy="103.3" cx="20" class="ill-f-raised ill-s-ink"></circle>
+              </g>
+              <g class="th th-1">
+                <path stroke-linejoin="round" stroke-width="2"
+                  d="M20 140.0C200 140.0 260 140.0 360 140.0L360 140.0L370 139.9L380 139.0L390 137.7L400 136.8L410 137.1L420 138.9L430 141.6L440 144.4L450 146.1L460 146.0L470 143.9L480 140.4L490 136.7L500 134.0L510 133.2L520 134.6L530 137.5L540 140.8L550 143.3L560 144.4L570 143.9L580 142.3L590 140.6L600 139.5L610 139.3L620 140.0"
+                  class="ill-s-accent"></path>
+                <circle stroke-width="1.3" r="3.5" cy="140.0" cx="20" class="ill-f-raised ill-s-accent"></circle>
+              </g>
+              <g class="th th-2">
+                <path stroke-linejoin="round" stroke-width="1.3"
+                  d="M20 176.7C200 176.7 260 148.0 360 148.0L360 148.0L370 147.0L380 145.7L390 145.0L400 145.3L410 146.8L420 149.0L430 150.7L440 151.2L450 149.8L460 146.7L470 142.7L480 139.1L490 137.1L500 137.2L510 139.4L520 142.6L530 145.6L540 147.4L550 147.4L560 145.7L570 143.2L580 140.9L590 139.4L600 139.0L610 139.5L620 140.0"
+                  class="ill-s-strong"></path>
+                <circle stroke-width="1.3" r="3.5" cy="176.7" cx="20" class="ill-f-raised ill-s-ink"></circle>
+              </g>
+              <g class="th th-3">
+                <path stroke-dasharray="3 4" stroke-linejoin="round" stroke-width="1.3"
+                  d="M20 213.3C200 213.3 260 156.0 360 156.0L360 156.0L370 154.6L380 153.7L390 153.9L400 154.9L410 156.3L420 156.9L430 156.2L440 153.7L450 150.0L460 146.0L470 142.9L480 141.8L490 142.8L500 145.4L510 148.6L520 151.0L530 151.6L540 150.3L550 147.5L560 144.1L570 141.3L580 139.7L590 139.4L600 139.8L610 140.2L620 140.0"
+                  class="ill-s-strong"></path>
+                <circle stroke-width="1.3" r="3.5" cy="213.3" cx="20" class="ill-f-raised ill-s-ink"></circle>
+              </g>
+              <g class="th th-4">
+                <path stroke-linejoin="round" stroke-width="1.3"
+                  d="M20 250.0C200 250.0 260 164.0 360 164.0L360 164.0L370 162.8L380 162.5L390 163.0L400 163.5L410 163.2L420 161.4L430 158.2L440 154.3L450 150.6L460 148.2L470 147.9L480 149.6L490 152.4L500 155.1L510 156.4L520 155.7L530 153.0L540 149.1L550 145.2L560 142.2L570 140.7L580 140.6L590 141.2L600 141.7L610 141.3L620 140.0"
+                  class="ill-s-strong"></path>
+                <circle stroke-width="1.3" r="3.5" cy="250.0" cx="20" class="ill-f-raised ill-s-ink"></circle>
+              </g>
+              <g class="cord">
+                <path stroke-linecap="round" stroke-width="4" d="M620 140H870" class="ill-s-ink"></path>
+                <path stroke-linecap="round" stroke-dasharray="1 7" stroke-width="1.5" d="M620 140H870"
+                  class="ill-s-accent cord-flow"></path>
+                <circle r="8" cy="140" cx="870" class="ill-f-accent cord-end"></circle>
+              </g>
+            </svg></div>
+          <h2 class="heading-xl is-center">Bring every patient into one record.</h2>
+          <p class="text-lead is-center">See Carefront on your own schedule, with your own EHR, in a 30 minute
+            walkthrough.</p>
+          <div class="button-row is-center"><a href="/contact" class="button w-inline-block">Book a demo<svg
+                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14" height="14" width="14">
+                <path stroke-linecap="round" stroke-width="1.4" stroke="currentColor" d="M4 10L10 4M10 4H5M10 4V9">
+                </path>
+              </svg></a><a href="/sign-up" class="button is-secondary">Start free trial</a></div>
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="footer_panel">
+          <div class="footer_top">
+            <div class="footer_brand"><a href="/" aria-current="page" class="footer_logo w-inline-block w--current">
+                <div class="nav_brand-mark"><svg aria-hidden="true" height="22" width="24" viewBox="0 0 24 22"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-width="3" stroke="currentColor"
+                      d="M17.6 5.3A8 8 0 1 0 17.6 16.7"></path>
+                    <circle fill="#2f6bff" r="2.6" cy="11" cx="19.6"></circle>
+                  </svg></div>
+                <div class="nav_brand-text">Carefront</div>
+              </a>
+              <p class="footer_tagline">The operating layer for every patient interaction.</p>
+            </div>
+            <div class="footer_news">
+              <div class="mono-label is-panel">Notes from the front desk</div>
+              <p class="footer_tagline">One short email a month on running a calmer clinic.</p>
+              <div class="footer_form-block">
+                <div class="footer_form w-form w-form-loading">
+                  <form method="get" name="" data-name="newsletter" class="footer_form-fields"
+                    data-wf-page-id="6aec83b44f4f0425b95841ca" data-wf-element-id="f0dec401-a56e-b092-397c-fd7e18a03343"
+                    data-turnstile-sitekey="0x4AAAAAAAQTptj2So4dx43e" aria-label="newsletter"><input
+                      class="footer_input w-input" maxlength="256" name="email" data-name="email"
+                      aria-label="Work email" placeholder="Work email" type="email" id="field" required=""><input
+                      type="submit" data-wait="Please wait..." class="footer_submit w-button w-form-loading"
+                      value="Subscribe" disabled=""></form>
+                  <div class="footer_form-message w-form-done" tabindex="-1" role="region"
+                    aria-label="newsletter success">
+                    <div>You're on the list. The first note arrives at the start of next month.</div>
+                  </div>
+                  <div class="footer_form-message w-form-fail" tabindex="-1" role="region"
+                    aria-label="newsletter failure">
+                    <div>That didn't go through. Check your email address and try again.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer_cols">
+            <div class="footer_col">
+              <div class="mono-label is-panel">Platform</div><a href="/platform#scheduling"
+                class="footer_link">Scheduling</a><a href="/platform#intake" class="footer_link">Intake</a><a
+                href="/platform#messaging" class="footer_link">Messaging</a><a href="/platform#billing"
+                class="footer_link">Billing</a><a href="/platform#integrations" class="footer_link">Integrations</a>
+            </div>
+            <div class="footer_col">
+              <div class="mono-label is-panel">Solutions</div><a href="/#customers" class="footer_link">Primary
+                care</a><a href="/#customers" class="footer_link">Specialty</a><a href="/#customers"
+                class="footer_link">Dental</a><a href="/#customers" class="footer_link">Behavioral</a>
+            </div>
+            <div class="footer_col">
+              <div class="mono-label is-panel">Company</div><a href="/about" class="footer_link">About</a><a
+                href="/#customers" class="footer_link">Customers</a><a href="/about#careers"
+                class="footer_link">Careers</a><a href="/contact" class="footer_link">Contact</a>
+            </div>
+            <div class="footer_col">
+              <div class="mono-label is-panel">Resources</div><a href="/research" class="footer_link">Research</a><a
+                href="/changelog" class="footer_link">Changelog</a><a href="/privacy#security"
+                class="footer_link">Security</a><a href="/instructions" class="footer_link">Instructions</a><a
+                href="/style-guide" class="footer_link">Style Guide</a>
+            </div>
+            <div class="footer_col is-trust">
+              <div class="mono-label is-panel">Trust</div>
+              <div class="footer_trust">
+                <div class="tier_check"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
+                    height="14" width="14">
+                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor"
+                      d="M2.5 6.2L5 8.5L9.5 3.5"></path>
+                  </svg></div>
+                <div>HIPAA</div>
+              </div>
+              <div class="footer_trust">
+                <div class="tier_check"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
+                    height="14" width="14">
+                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor"
+                      d="M2.5 6.2L5 8.5L9.5 3.5"></path>
+                  </svg></div>
+                <div>SOC 2 Type II</div>
+              </div>
+              <div class="footer_trust">
+                <div class="tier_check"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
+                    height="14" width="14">
+                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor"
+                      d="M2.5 6.2L5 8.5L9.5 3.5"></path>
+                  </svg></div>
+                <div>HITRUST</div>
+              </div>
+              <div class="footer_trust">
+                <div class="tier_check"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
+                    height="14" width="14">
+                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor"
+                      d="M2.5 6.2L5 8.5L9.5 3.5"></path>
+                  </svg></div>
+                <div>GDPR</div>
+              </div>
+            </div>
+          </div>
+          <div class="footer_bottom">
+            <div class="footer_legal">© 2026 Carefront Health Systems</div>
+            <div class="footer_status">
+              <div class="footer_status-dot"></div>
+              <div>All systems normal</div>
+            </div>
+            <div class="footer_legal-links"><a href="/privacy" class="footer_legal-link">Privacy</a><a href="/terms"
+                class="footer_legal-link">Terms</a><a href="/licenses" class="footer_legal-link">Licenses</a></div>
+          </div>
+          <div class="footer_schedule"><svg aria-hidden="true" fill="none" preserveAspectRatio="xMidYMin slice"
+              viewBox="0 0 1150 240" xmlns="http://www.w3.org/2000/svg" class="footer_schedule-svg footer_schedule-svg">
+              <line stroke-width="1" y2="240" x2="0" y1="28" x1="0" class="ill-s-line-panel ill-s-line-panel"></line>
+              <text font-size="11" y="18" x="6" class="ill-t ill-f-panel-subtle ill-t ill-f-panel-subtle">07:00</text>
+              <line stroke-width="1" y2="240" x2="92.5" y1="28" x1="92.5" class="ill-s-line-panel ill-s-line-panel">
+              </line><text font-size="11" y="18" x="98.5"
+                class="ill-t ill-f-panel-subtle ill-t ill-f-panel-subtle">08:00</text>
+              <line stroke-width="1" y2="240" x2="185" y1="28" x1="185" class="ill-s-line-panel ill-s-line-panel">
+              </line><text font-size="11" y="18" x="191"
+                class="ill-t ill-f-panel-subtle ill-t ill-f-panel-subtle">09:00</text>
+              <line stroke-width="1" y2="240" x2="277.5" y1="28" x1="277.5" class="ill-s-line-panel ill-s-line-panel">
+              </line><text font-size="11" y="18" x="283.5"
+                class="ill-t ill-f-panel-subtle ill-t ill-f-panel-subtle">10:00</text>
+              <line stroke-width="1" y2="240" x2="370" y1="28" x1="370" class="ill-s-line-panel ill-s-line-panel">
+              </line><text font-size="11" y="18" x="376"
+                class="ill-t ill-f-panel-subtle ill-t ill-f-panel-subtle">11:00</text>
+              <line stroke-width="1" y2="240" x2="462.5" y1="28" x1="462.5" class="ill-s-line-panel ill-s-line-panel">
+              </line><text font-size="11" y="18" x="468.5"
+                class="ill-t ill-f-panel-subtle ill-t ill-f-panel-subtle">12:00</text>
+              <line stroke-width="1" y2="240" x2="555" y1="28" x1="555" class="ill-s-line-panel ill-s-line-panel">
+              </line><text font-size="11" y="18" x="561"
+                class="ill-t ill-f-panel-subtle ill-t ill-f-panel-subtle">13:00</text>
+              <line stroke-width="1" y2="240" x2="647.5" y1="28" x1="647.5" class="ill-s-line-panel ill-s-line-panel">
+              </line><text font-size="11" y="18" x="653.5"
+                class="ill-t ill-f-panel-subtle ill-t ill-f-panel-subtle">14:00</text>
+              <line stroke-width="1" y2="240" x2="740" y1="28" x1="740" class="ill-s-line-panel ill-s-line-panel">
+              </line><text font-size="11" y="18" x="746"
+                class="ill-t ill-f-panel-subtle ill-t ill-f-panel-subtle">15:00</text>
+              <line stroke-width="1" y2="240" x2="832.5" y1="28" x1="832.5" class="ill-s-line-panel ill-s-line-panel">
+              </line><text font-size="11" y="18" x="838.5"
+                class="ill-t ill-f-panel-subtle ill-t ill-f-panel-subtle">16:00</text>
+              <line stroke-width="1" y2="240" x2="925" y1="28" x1="925" class="ill-s-line-panel ill-s-line-panel">
+              </line><text font-size="11" y="18" x="931"
+                class="ill-t ill-f-panel-subtle ill-t ill-f-panel-subtle">17:00</text>
+              <line stroke-width="1" y2="240" x2="1017.5" y1="28" x1="1017.5" class="ill-s-line-panel ill-s-line-panel">
+              </line><text font-size="11" y="18" x="1023.5"
+                class="ill-t ill-f-panel-subtle ill-t ill-f-panel-subtle">18:00</text>
+              <line stroke-width="1" y2="240" x2="1110" y1="28" x1="1110" class="ill-s-line-panel ill-s-line-panel">
+              </line><text font-size="11" y="18" x="1116"
+                class="ill-t ill-f-panel-subtle ill-t ill-f-panel-subtle">19:00</text>
+              <rect rx="4" height="34" width="79.3" y="40" x="18.5" class="ill-f-panel-raised ill-f-panel-raised">
+              </rect>
+              <rect rx="4" height="34" width="79.2" y="40" x="138.8" class="ill-f-accent ill-f-accent"></rect>
+              <rect rx="4" height="34" width="51.5" y="40" x="277.5" class="ill-f-panel-raised ill-f-panel-raised">
+              </rect>
+              <rect rx="4" height="34" width="125.5" y="40" x="388.5" class="ill-f-panel-raised ill-f-panel-raised">
+              </rect>
+              <rect rx="4" height="34" width="70.0" y="40" x="564.3" class="ill-f-accent ill-f-accent"></rect>
+              <rect rx="4" height="34" width="125.5" y="40" x="684.5" class="ill-f-panel-raised ill-f-panel-raised">
+              </rect>
+              <rect rx="4" height="34" width="79.3" y="40" x="878.8" class="ill-f-panel-raised ill-f-panel-raised">
+              </rect>
+              <rect rx="4" height="34" width="79.2" y="40" x="999.0" class="ill-f-panel-raised ill-f-panel-raised">
+              </rect>
+              <rect rx="4" height="34" width="107.0" y="88" x="55.5" class="ill-f-panel-raised ill-f-panel-raised">
+              </rect>
+              <rect rx="4" height="34" width="79.2" y="88" x="203.5" class="ill-f-panel-raised ill-f-panel-raised">
+              </rect>
+              <rect rx="4" height="34" width="125.5" y="88" x="323.8" class="ill-f-accent ill-f-accent"></rect>
+              <rect rx="4" height="34" width="70.0" y="88" x="499.5" class="ill-f-panel-raised ill-f-panel-raised">
+              </rect>
+              <rect rx="4" height="34" width="97.7" y="88" x="647.5" class="ill-f-panel-raised ill-f-panel-raised">
+              </rect>
+              <rect rx="4" height="34" width="51.5" y="88" x="795.5" class="ill-f-accent ill-f-accent"></rect>
+              <rect rx="4" height="34" width="134.8" y="88" x="906.5" class="ill-f-panel-raised ill-f-panel-raised">
+              </rect>
+              <rect rx="4" height="34" width="70.0" y="136" x="9.3" class="ill-f-panel-raised ill-f-panel-raised">
+              </rect>
+              <rect rx="4" height="34" width="144.0" y="136" x="120.3" class="ill-f-panel-raised ill-f-panel-raised">
+              </rect>
+              <rect rx="4" height="34" width="60.7" y="136" x="314.5" class="ill-f-panel-raised ill-f-panel-raised">
+              </rect>
+              <rect rx="4" height="34" width="79.3" y="136" x="425.5" class="ill-f-panel-raised ill-f-panel-raised">
+              </rect>
+              <rect rx="4" height="34" width="144.0" y="136" x="555.0" class="ill-f-accent ill-f-accent"></rect>
+              <rect rx="4" height="34" width="79.3" y="136" x="749.3" class="ill-f-panel-raised ill-f-panel-raised">
+              </rect>
+              <rect rx="4" height="34" width="60.7" y="136" x="869.5" class="ill-f-panel-raised ill-f-panel-raised">
+              </rect>
+              <rect rx="4" height="34" width="116.3" y="136" x="980.5" class="ill-f-panel-raised ill-f-panel-raised">
+              </rect>
+              <rect rx="4" height="34" width="97.8" y="184" x="83.3" class="ill-f-panel-raised ill-f-panel-raised">
+              </rect>
+              <rect rx="4" height="34" width="60.7" y="184" x="240.5" class="ill-f-panel-raised ill-f-panel-raised">
+              </rect>
+              <rect rx="4" height="34" width="97.8" y="184" x="360.8" class="ill-f-panel-raised ill-f-panel-raised">
+              </rect>
+              <rect rx="4" height="34" width="70.0" y="184" x="518.0" class="ill-f-accent ill-f-accent"></rect>
+              <rect rx="4" height="34" width="79.2" y="184" x="638.3" class="ill-f-panel-raised ill-f-panel-raised">
+              </rect>
+              <rect rx="4" height="34" width="144.0" y="184" x="767.8" class="ill-f-panel-raised ill-f-panel-raised">
+              </rect>
+              <rect rx="4" height="34" width="70.0" y="184" x="952.8" class="ill-f-panel-raised ill-f-panel-raised">
+              </rect>
+              <line stroke-width="1.5" y2="240" x2="485.6" y1="28" x1="485.6" class="ill-s-text-panel ill-s-text-panel">
+              </line>
+              <circle r="4.5" cy="28" cx="485.6" class="ill-f-text-panel ill-f-text-panel"></circle>
+            </svg></div>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6aec83b44f4f0425b95841e3"
+    type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous"></script>
+  <script src="{{ asset('hmxtech/6aec83b44f4f0425b95841e3/js/webflow.schunk.efb220150c6bf06b.js') }}" type="text/javascript"
+    integrity="sha384-M5g7g8L9HlkqeyHNOn9zSh8ZtiN83Kb/VMbJFMdWVs4hUgzrCr701of4XbZzJRGY"
+    crossorigin="anonymous"></script>
+  <script src="{{ asset('hmxtech/6aec83b44f4f0425b95841e3/js/webflow.3e78af3c.f091fcab5f62be66.js') }}" type="text/javascript"
+    integrity="sha384-d6nPGYxcWIkP50JsUsxnuG/dr2GOdT7dFk9Z89rbCOELaJQtPGUFwndvTzwx5xHs"
+    crossorigin="anonymous"></script>
+  <script src="{{ asset('hmxtech/gsap/3.15.0/gsap.min.js') }}" type="text/javascript"></script>
+  <script src="{{ asset('hmxtech/gsap/3.15.0/ScrollTrigger.min.js') }}" type="text/javascript"></script>
 </body>
 
 </html>

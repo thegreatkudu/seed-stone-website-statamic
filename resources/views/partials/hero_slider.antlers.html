@@ -1,0 +1,90 @@
+{{# ============================================================ #}}
+{{# HERO SLIDER — full-width image slides for the home page.     #}}
+{{# Content: Home entry → "Hero Slider" tab (hero_slides grid).  #}}
+{{# Behaviour: /hmxtech/js/hmxtech-hero-slider.js                #}}
+{{# Styles:    /hmxtech/css/hmxtech-hero.css                     #}}
+{{# Without JavaScript the first slide shows on its own.        #}}
+{{# ============================================================ #}}
+{{ if hero_slides }}
+<section class="hx-hero" aria-roledescription="carousel" aria-label="Highlights"
+  data-hx-hero data-autoplay="{{ hero_autoplay ? 'true' : 'false' }}" data-interval="{{ hero_interval ?? 7 }}">
+
+  <div class="hx-hero_media" aria-hidden="true">
+    {{ hero_slides }}
+      <div class="hx-hero_image{{ if first }} is-active{{ /if }}" data-hx-image>
+        {{ if image }}
+        <img src="{{ glide:image width='1920' fit='crop_focal' format='webp' }}"
+          srcset="{{ glide:image width='960' fit='crop_focal' format='webp' }} 960w, {{ glide:image width='1440' fit='crop_focal' format='webp' }} 1440w, {{ glide:image width='1920' fit='crop_focal' format='webp' }} 1920w, {{ glide:image width='2560' fit='crop_focal' format='webp' }} 2560w"
+          sizes="(min-width: 1392px) 1392px, 100vw" alt="" {{ if first }}fetchpriority="high"{{ else }}loading="lazy"{{ /if }} decoding="async">
+        {{ /if }}
+      </div>
+    {{ /hero_slides }}
+    <div class="hx-hero_scrim"></div>
+  </div>
+
+  <div class="hx-hero_line" aria-hidden="true">
+    <svg class="hx-hero_line-svg" viewBox="0 0 120 560" fill="none" preserveAspectRatio="none">
+      <defs>
+        <linearGradient id="hx-hero-line-gradient" x1="0" y1="0" x2="0" y2="560" gradientUnits="userSpaceOnUse">
+          <stop offset="0" stop-color="#e21dd3" stop-opacity="0"></stop>
+          <stop offset=".25" stop-color="#e21dd3"></stop>
+          <stop offset=".6" stop-color="#8a2bf2"></stop>
+          <stop offset="1" stop-color="#2d3bf2" stop-opacity="0"></stop>
+        </linearGradient>
+      </defs>
+      <path class="hx-hero_line-path" d="M90 0 V150 C90 210 40 230 40 290 C40 350 90 370 90 430 V560"
+        stroke="url(#hx-hero-line-gradient)" stroke-width="1.5" pathLength="1"></path>
+    </svg>
+    <span class="hx-hero_node" data-hx-node></span>
+  </div>
+
+  <div class="hx-hero_slides" data-hx-slides aria-live="off">
+    {{ hero_slides }}
+      <div class="hx-hero_slide{{ if first }} is-active{{ /if }}" id="hx-hero-slide-{{ count }}" role="group"
+        aria-roledescription="slide" aria-label="{{ count }} of {{ total_results }}" data-hx-slide>
+        {{ if eyebrow }}
+        <div class="hx-hero_eyebrow"><span class="hx-hero_eyebrow-dot"></span>{{ eyebrow }}</div>
+        {{ /if }}
+        {{ if first }}<h1{{ else }}<h2{{ /if }} class="hx-hero_heading" data-hx-split>{{ heading }}{{ if heading_muted }} <span class="hx-hero_heading-muted">{{ heading_muted }}</span>{{ /if }}{{ if first }}</h1>{{ else }}</h2>{{ /if }}
+        {{ if text }}
+        <p class="hx-hero_text">{{ text }}</p>
+        {{ /if }}
+        {{ if primary_label || secondary_label }}
+        <div class="hx-hero_actions">
+          {{ if primary_label && primary_url }}<a href="{{ primary_url }}" class="button">{{ primary_label }}</a>{{ /if }}
+          {{ if secondary_label && secondary_url }}<a href="{{ secondary_url }}" class="button is-ghost">{{ secondary_label }}</a>{{ /if }}
+        </div>
+        {{ /if }}
+        {{ if image_alt }}<span class="hx-visually-hidden">{{ image_alt }}</span>{{ /if }}
+      </div>
+    {{ /hero_slides }}
+  </div>
+
+  {{ if (hero_slides | length) > 1 }}
+  <div class="hx-hero_controls">
+    <div class="hx-hero_tabs" role="tablist" aria-label="Choose a slide">
+      {{ hero_slides }}
+        <button type="button" class="hx-hero_tab{{ if first }} is-active{{ /if }}" role="tab" id="hx-hero-tab-{{ count }}"
+          aria-controls="hx-hero-slide-{{ count }}" aria-selected="{{ first ? 'true' : 'false' }}" tabindex="{{ first ? '0' : '-1' }}" data-hx-tab>
+          <span class="hx-hero_tab-num">{{ if count < 10 }}0{{ /if }}{{ count }}</span>
+          <span class="hx-hero_tab-label">{{ tab_label }}</span>
+          <span class="hx-hero_tab-track"><span class="hx-hero_tab-fill"></span></span>
+        </button>
+      {{ /hero_slides }}
+    </div>
+    <div class="hx-hero_buttons">
+      <button type="button" class="hx-hero_icon-button" aria-label="Previous slide" data-hx-prev>
+        <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </button>
+      <button type="button" class="hx-hero_icon-button" aria-label="Pause slides" data-hx-toggle>
+        <svg class="hx-icon-pause" viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M5.5 3.5v9M10.5 3.5v9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg>
+        <svg class="hx-icon-play" viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M5 3.5l7 4.5-7 4.5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path></svg>
+      </button>
+      <button type="button" class="hx-hero_icon-button" aria-label="Next slide" data-hx-next>
+        <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </button>
+    </div>
+  </div>
+  {{ /if }}
+</section>
+{{ /if }}

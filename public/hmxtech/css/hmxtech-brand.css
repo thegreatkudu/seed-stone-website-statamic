@@ -1,0 +1,151 @@
+/* ==========================================================================
+   HMX Tech brand theme
+   --------------------------------------------------------------------------
+   Loaded after the Webflow export stylesheet. The export is left untouched;
+   every page is re-themed by overriding its design tokens here, so a fresh
+   Webflow export can be dropped in without losing the brand.
+
+   Palette (from the logo):
+     Magenta     #E21DD3  accent & highlights — decorative only (3.6:1 on light)
+     Violet      #8A2BF2  primary brand colour — buttons, active UI
+     Royal Blue  #2D3BF2  secondary — inline text links
+     Ink         #0E0C1D  dark backgrounds
+     Charcoal    #1F1F27  body text
+     Mist        #F4F4F7  light backgrounds
+
+   Every text pairing below meets WCAG 2.1 AA (4.5:1) on the surfaces it is
+   used on; ratios are noted next to the tokens.
+   ========================================================================== */
+
+:root {
+  /* ---- Brand palette ---------------------------------------------------- */
+  --hmx-magenta: #e21dd3;
+  --hmx-violet: #8a2bf2;
+  --hmx-royal-blue: #2d3bf2;
+  --hmx-ink: #0e0c1d;
+  --hmx-charcoal: #1f1f27;
+  --hmx-mist: #f4f4f7;
+
+  /* ---- Violet scale for UI ----------------------------------------------- */
+  --hmx-violet-50: #f5edfe;
+  --hmx-violet-100: #eadafd;
+  --hmx-violet-200: #d4b5fb;
+  --hmx-violet-300: #bc8df8;
+  --hmx-violet-400: #a35df5;
+  --hmx-violet-500: #8a2bf2;
+  --hmx-violet-600: #7319d6;
+  --hmx-violet-700: #5a13a8;
+  --hmx-violet-800: #420e7b;
+  --hmx-violet-900: #2b0950;
+
+  /* ---- Signature gradient ------------------------------------------------ */
+  --hmx-gradient: linear-gradient(90deg, #e21dd3 0%, #8a2bf2 50%, #2d3bf2 100%);
+
+  /* ---- Webflow tokens: accent -------------------------------------------- */
+  --_carefront-color---accent--default: var(--hmx-violet-500);   /* white text 5.66:1 */
+  --_carefront-color---accent--mid: var(--hmx-violet-600);       /* hover, white text 7.40:1 */
+  --_carefront-color---accent--dark: var(--hmx-violet-700);
+  --_carefront-color---accent--text: var(--hmx-violet-600);      /* 6.74:1 on Mist */
+  --_carefront-color---accent--on: #fff;
+
+  /* ---- Webflow tokens: light surfaces (cool Mist family) ----------------- */
+  --_carefront-color---bg--paper: var(--hmx-mist);
+  --_carefront-color---bg--raised: #fbfbfd;
+  --_carefront-color---bg--card: #f8f8fb;
+  --_carefront-color---bg--subtle: #ececf2;
+  --_carefront-color---bg--button-secondary: #e6e5ee;
+  --_carefront-color---line--paper: #d9d8e3;
+  --_carefront-color---line--strong: #e4e3ec;
+
+  /* ---- Webflow tokens: text on light ------------------------------------- */
+  --_carefront-color---text--primary: var(--hmx-charcoal);       /* 14.90:1 on Mist */
+  --_carefront-color---text--muted: #5e5e6b;                     /* 5.82:1 on Mist */
+
+  /* ---- Webflow tokens: dark panels (Ink family) -------------------------- */
+  --_carefront-color---bg--panel: var(--hmx-ink);
+  --_carefront-color---bg--panel-deep: #08070f;
+  --_carefront-color---bg--panel-raised: #1e1b30;
+  --_carefront-color---line--panel: #34304a;
+  --_carefront-color---text--panel: #e4e3ee;                     /* 15.17:1 on Ink */
+  --_carefront-color---text--panel-muted: #a6a3b8;               /* 7.85:1 on Ink */
+  --_carefront-color---text--panel-subtle: #8a879f;              /* 5.55:1 on Ink */
+
+  /* ---- Webflow tokens: status -------------------------------------------- */
+  /* Errors stay red, never magenta, so they can't be mistaken for branding. */
+  --_carefront-color---status--alert: #c2362f;                   /* 4.95:1 on Mist */
+}
+
+/* ---- Inline text links use the secondary Royal Blue -------------------- */
+/* Classed links (nav, buttons, cards) keep their own component colours.   */
+a:not([class]),
+.post-rich a {
+  color: var(--hmx-royal-blue);                                  /* 6.34:1 on Mist */
+  text-decoration-color: color-mix(in srgb, var(--hmx-royal-blue) 40%, transparent);
+  text-underline-offset: 0.18em;
+}
+
+a:not([class]):hover,
+.post-rich a:hover {
+  color: var(--hmx-violet-600);
+}
+
+/* ---- Hard-coded colours in the export that bypass the tokens ------------ */
+.ill-f-accent {
+  fill: var(--hmx-violet-500);
+}
+
+.ill-s-accent {
+  stroke: var(--hmx-violet-500);
+}
+
+.w-checkbox-input--inputType-custom.w--redirected-checked {
+  border-color: var(--hmx-violet-500);
+  background-color: var(--hmx-violet-500);
+}
+
+.w-checkbox-input--inputType-custom.w--redirected-focus {
+  box-shadow: 0 0 0 3px var(--hmx-violet-200);
+}
+
+/* ---- Magenta: small highlights only -------------------------------------- */
+.brand-mark_dot {
+  fill: var(--hmx-magenta);
+}
+
+.trust-dot,
+.footer_status-dot,
+.auth_dot {
+  background-color: var(--hmx-magenta);
+}
+
+/* ---- Signature gradient: progress and activity indicators ---------------- */
+.progress_fill,
+.pass_line-fill,
+.ui-card_bar-fill {
+  background-color: var(--hmx-violet-500);
+  background-image: var(--hmx-gradient);
+}
+
+/* ---- Selection & focus ---------------------------------------------------- */
+::selection {
+  background-color: var(--hmx-violet-100);
+  color: var(--hmx-violet-900);
+}
+
+:focus-visible {
+  outline-color: var(--hmx-violet-500);
+}
+
+/* ---- HMXTECH logo (brand kit mark + wordmark) ------------------------------ */
+.nav_brand-mark.hx-logo {
+  width: auto;
+  height: 28px;
+  object-fit: contain;
+}
+
+.hx-wordmark {
+  font-family: "Schibsted Grotesk", sans-serif;
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: .06em;
+}

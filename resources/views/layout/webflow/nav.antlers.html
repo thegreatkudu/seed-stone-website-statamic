@@ -1,0 +1,151 @@
+<nav class="nav_component"><a href="/" {{ if is_homepage }}aria-current="page" {{ /if }}class="nav_brand w-inline-block{{ if is_homepage }} w--current{{ /if }}">
+          <img class="nav_brand-mark hx-logo" src="/hmxtech/brand/logo-color.svg" alt="" width="68" height="28">
+          <div class="nav_brand-text hx-wordmark">HMXTECH</div>
+        </a>
+        <div class="nav_menu"><a href="/platform" {{ if uri == '/platform' }}aria-current="page" {{ /if }}class="nav_link{{ if uri == '/platform' }} w--current{{ /if }}">Services</a><a href="/pricing" {{ if uri == '/pricing' }}aria-current="page" {{ /if }}class="nav_link{{ if uri == '/pricing' }} w--current{{ /if }}">How we work</a>
+          <div data-hover="true" data-delay="80" class="nav_dropdown w-dropdown">
+            <div class="nav_dropdown-toggle w-dropdown-toggle" id="w-dropdown-toggle-0"
+              aria-controls="w-dropdown-list-0" aria-haspopup="menu" aria-expanded="false" role="button" tabindex="0">
+              <div>Resources</div>
+              <div class="nav_dropdown-icon w-icon-dropdown-toggle" aria-hidden="true"></div>
+            </div>
+            <nav class="nav_panel w-dropdown-list" id="w-dropdown-list-0" aria-labelledby="w-dropdown-toggle-0">
+              <div class="nav_panel-box">
+                <div class="nav_panel-list"><a href="/research" {{ if uri == '/research' }}aria-current="page" {{ /if }}class="nav_item w-inline-block{{ if uri == '/research' }} w--current{{ /if }}" tabindex="0">
+                    <div class="nav_item-icon"><svg fill="none" viewBox="0 0 18 18" height="18" width="18"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linejoin="round" stroke-width="1.3" stroke="currentColor"
+                          d="M3 3.5H8C9.4 3.5 10.5 4.6 10.5 6V14.5C10.5 13.4 9.6 12.5 8.5 12.5H3V3.5Z"></path>
+                        <path stroke-linejoin="round" stroke-width="1.3" stroke="currentColor"
+                          d="M15 3.5H13C11.6 3.5 10.5 4.6 10.5 6V14.5C10.5 13.4 11.4 12.5 12.5 12.5H15V3.5Z"></path>
+                      </svg></div>
+                    <div class="nav_item-text">
+                      <div class="nav_item-title">Publications</div>
+                      <div class="nav_item-desc">Research on roads, materials and public building procurement.</div>
+                    </div>
+                  </a><a href="/changelog" {{ if uri == '/changelog' }}aria-current="page" {{ /if }}class="nav_item w-inline-block{{ if uri == '/changelog' }} w--current{{ /if }}" tabindex="0">
+                    <div class="nav_item-icon"><svg fill="none" viewBox="0 0 18 18" height="18" width="18"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <circle stroke-width="1.3" stroke="currentColor" r="6" cy="9" cx="9"></circle>
+                        <path stroke-linecap="round" stroke-width="1.3" stroke="currentColor" d="M9 5.5V9L11.5 10.5">
+                        </path>
+                      </svg></div>
+                    <div class="nav_item-text">
+                      <div class="nav_item-row">
+                        <div class="nav_item-title">News</div>
+                        <div class="nav_item-tag">IET</div>
+                      </div>
+                      <div class="nav_item-desc">Engineering events, training and company updates.</div>
+                    </div>
+                  </a><a href="/research" {{ if uri == '/research' }}aria-current="page" {{ /if }}class="nav_all w-inline-block{{ if uri == '/research' }} w--current{{ /if }}" tabindex="0">
+                    <div>All publications</div><svg fill="none" viewBox="0 0 14 14" height="14" width="14"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path stroke-linecap="round" stroke-width="1.4" stroke="currentColor"
+                        d="M4 10L10 4M10 4H5M10 4V9"></path>
+                    </svg>
+                  </a></div><a href="https://hmxtech.co.tz/truss/" class="nav_feature w-inline-block" tabindex="0">
+                  <div class="nav_feature-media"><img
+                      src="/hmxtech/img/truss-analyzer-feature.webp" loading="lazy" width="1520" height="920" alt="Blueprint of a Pratt truss with member forces" class="nav_feature-img"></div>
+                  <div class="nav_feature-eyebrow">Free tool</div>
+                  <div class="nav_feature-title">Truss Analyzer: solve plane trusses in your browser</div>
+                  <div class="nav_feature-meta">
+                    <div>Open the app</div><svg fill="none" viewBox="0 0 14 14" height="14" width="14"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path stroke-linecap="round" stroke-width="1.4" stroke="currentColor"
+                        d="M4 10L10 4M10 4H5M10 4V9"></path>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+            </nav>
+          </div>
+          <div data-hover="true" data-delay="80" class="nav_dropdown w-dropdown">
+            <div class="nav_dropdown-toggle w-dropdown-toggle" id="w-dropdown-toggle-1"
+              aria-controls="w-dropdown-list-1" aria-haspopup="menu" aria-expanded="false" role="button" tabindex="0">
+              <div>Company</div>
+              <div class="nav_dropdown-icon w-icon-dropdown-toggle" aria-hidden="true"></div>
+            </div>
+            <nav class="nav_panel is-compact w-dropdown-list" id="w-dropdown-list-1"
+              aria-labelledby="w-dropdown-toggle-1">
+              <div class="nav_panel-box">
+                <div class="nav_panel-list"><a href="/about" {{ if uri == '/about' }}aria-current="page" {{ /if }}class="nav_item w-inline-block{{ if uri == '/about' }} w--current{{ /if }}" tabindex="0">
+                    <div class="nav_item-icon"><svg fill="none" viewBox="0 0 18 18" height="18" width="18"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linejoin="round" stroke-width="1.3" stroke="currentColor"
+                          d="M9 2.5L15.5 5.75L9 9L2.5 5.75L9 2.5Z"></path>
+                        <path stroke-linejoin="round" stroke-width="1.3" stroke="currentColor"
+                          d="M2.5 9L9 12.25L15.5 9"></path>
+                        <path stroke-linejoin="round" stroke-width="1.3" stroke="currentColor"
+                          d="M2.5 12.25L9 15.5L15.5 12.25"></path>
+                      </svg></div>
+                    <div class="nav_item-text">
+                      <div class="nav_item-title">About</div>
+                      <div class="nav_item-desc">Who we are, our registrations and how we work.</div>
+                    </div>
+                  </a><a href="/contact" {{ if uri == '/contact' }}aria-current="page" {{ /if }}class="nav_item w-inline-block{{ if uri == '/contact' }} w--current{{ /if }}" tabindex="0">
+                    <div class="nav_item-icon"><svg fill="none" viewBox="0 0 18 18" height="18" width="18"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linejoin="round" stroke-width="1.3" stroke="currentColor"
+                          d="M3 4.5C3 3.7 3.7 3 4.5 3H13.5C14.3 3 15 3.7 15 4.5V11C15 11.8 14.3 12.5 13.5 12.5H8L5 15V12.5H4.5C3.7 12.5 3 11.8 3 11V4.5Z">
+                        </path>
+                      </svg></div>
+                    <div class="nav_item-text">
+                      <div class="nav_item-title">Contact</div>
+                      <div class="nav_item-desc">Get a quote or talk to an engineer.</div>
+                    </div>
+                  </a></div>
+              </div>
+            </nav>
+          </div>
+        </div>
+        <div class="nav_actions"><a href="/sign-in" {{ if uri == '/sign-in' }}aria-current="page" {{ /if }}class="nav_link is-signin{{ if uri == '/sign-in' }} w--current{{ /if }}">Sign in</a><a href="/contact" {{ if uri == '/contact' }}aria-current="page" {{ /if }}class="button is-nav{{ if uri == '/contact' }} w--current{{ /if }}">Get a quote</a>
+          <div class="nav_menu-button">
+            <div class="nav_menu-line is-top"></div>
+            <div class="nav_menu-line is-bottom"></div>
+          </div>
+        </div>
+        <div class="nav_mobile"
+          style="translate: none; rotate: none; scale: none; transform: translate(0px, -8px); opacity: 0;"><a href="/platform" {{ if uri == '/platform' }}aria-current="page" {{ /if }}class="nav_mobile-link{{ if uri == '/platform' }} w--current{{ /if }}">Services</a><a href="/pricing" {{ if uri == '/pricing' }}aria-current="page" {{ /if }}class="nav_mobile-link{{ if uri == '/pricing' }} w--current{{ /if }}">How we work</a>
+          <div data-hover="false" data-delay="0" class="nav_mobile-dd w-dropdown">
+            <div class="nav_mobile-toggle w-dropdown-toggle" id="w-dropdown-toggle-2" aria-controls="w-dropdown-list-2"
+              aria-haspopup="menu" aria-expanded="false" role="button" tabindex="0">
+              <div>Resources</div>
+              <div class="nav_mobile-icon w-icon-dropdown-toggle" aria-hidden="true"></div>
+            </div>
+            <nav class="nav_mobile-list w-dropdown-list" id="w-dropdown-list-2" aria-labelledby="w-dropdown-toggle-2">
+              <div class="nav_mobile-subs"><a href="/research" {{ if uri == '/research' }}aria-current="page" {{ /if }}class="nav_msub w-inline-block{{ if uri == '/research' }} w--current{{ /if }}" tabindex="0">
+                  <div class="nav_msub-title">Publications</div>
+                  <div class="nav_msub-desc">Roads, materials and procurement</div>
+                </a><a href="/changelog" {{ if uri == '/changelog' }}aria-current="page" {{ /if }}class="nav_msub w-inline-block{{ if uri == '/changelog' }} w--current{{ /if }}" tabindex="0">
+                  <div class="nav_msub-title">News</div>
+                  <div class="nav_msub-desc">Events, training and updates</div>
+                </a><a href="/posts/harbor-family-no-shows" {{ if uri == '/posts/harbor-family-no-shows' }}aria-current="page" {{ /if }}class="nav_mfeature w-inline-block{{ if uri == '/posts/harbor-family-no-shows' }} w--current{{ /if }}" tabindex="0">
+                  <div class="nav_mfeature-thumb"><img
+                      src="/hmxtech/img/truss-analyzer-feature.webp" loading="lazy" width="1520" height="920" alt="Blueprint of a Pratt truss with member forces" class="nav_mfeature-img"></div>
+                  <div class="nav_mfeature-text">
+                    <div class="nav_mfeature-eyebrow">Free tool</div>
+                    <div class="nav_mfeature-title">Truss Analyzer: solve plane trusses in your browser</div>
+                  </div>
+                </a></div>
+            </nav>
+          </div>
+          <div data-hover="false" data-delay="0" class="nav_mobile-dd w-dropdown">
+            <div class="nav_mobile-toggle w-dropdown-toggle" id="w-dropdown-toggle-3" aria-controls="w-dropdown-list-3"
+              aria-haspopup="menu" aria-expanded="false" role="button" tabindex="0">
+              <div>Company</div>
+              <div class="nav_mobile-icon w-icon-dropdown-toggle" aria-hidden="true"></div>
+            </div>
+            <nav class="nav_mobile-list w-dropdown-list" id="w-dropdown-list-3" aria-labelledby="w-dropdown-toggle-3">
+              <div class="nav_mobile-subs"><a href="/about" {{ if uri == '/about' }}aria-current="page" {{ /if }}class="nav_msub w-inline-block{{ if uri == '/about' }} w--current{{ /if }}" tabindex="0">
+                  <div class="nav_msub-title">About</div>
+                  <div class="nav_msub-desc">Who we are and how we work</div>
+                </a><a href="/contact" {{ if uri == '/contact' }}aria-current="page" {{ /if }}class="nav_msub w-inline-block{{ if uri == '/contact' }} w--current{{ /if }}" tabindex="0">
+                  <div class="nav_msub-title">Contact</div>
+                  <div class="nav_msub-desc">Get a quote or talk to an engineer</div>
+                </a></div>
+            </nav>
+          </div>
+          <div class="nav_mobile-cta"><a href="/contact" {{ if uri == '/contact' }}aria-current="page" {{ /if }}class="button{{ if uri == '/contact' }} w--current{{ /if }}">Get a quote</a><a href="/sign-in"
+              class="button is-secondary">Sign in</a></div>
+        </div>
+      </nav>

@@ -1,0 +1,557 @@
+{{ section:wf_page }}6aec83b44f4f0425b95841d0{{ /section:wf_page }}
+
+{{ section:head_css }}
+    <style>
+        html.w-mod-js:not(.w-mod-ix3):is(.rs-pat.is-1) {
+            visibility: hidden !important;
+        }
+
+        html.w-mod-js:not(.w-mod-ix3):is(.rs-pat.is-1) * {
+            visibility: hidden !important;
+        }
+
+        html.w-mod-js:not(.w-mod-ix3) :is([data-wf-target*='["6aec83b44f4f0425b95841ca","8f53d73e-da14-aadc-b6ee-3fabd5df89a4"]'], [data-wf-target*='["6aec83b44f4f0425b95841ca","8f53d73e-da14-aadc-b6ee-3fabd5df89de"]'], .feature, [data-wf-target*='["6aec83b44f4f0425b95841ca","fc1a0d03-a5a7-6eb0-ce55-d1ec96b94892"]'], [data-wf-target*='["6aec83b44f4f0425b95841ca","fc1a0d03-a5a7-6eb0-ce55-d1ec96b94894"]'], [data-wf-target*='["6aec83b44f4f0425b95841ca","fc1a0d03-a5a7-6eb0-ce55-d1ec96b94899"]'], [data-wf-target*='["6aec83b44f4f0425b95841ca","fc1a0d03-a5a7-6eb0-ce55-d1ec96b9495d"]'], .record-stack .rs-layer.is-1, .record-stack .rs-layer.is-2, .record-stack .rs-layer.is-3, .record-stack .svg-dash, .rs-pat.is-1, .rs-leader .svg-dot, .rs-leader .svg-leader, .module-scene.is-1 .ui-card, .pattern-tile .snippet > *, .pattern-tile .check-dot.is-done, .pattern-tile .progress_fill, .pattern-tile .bubble.is-reply, .pattern-tile .typing, .pattern-tile .steps_line, .pattern-tile .steps_dot, .pattern-tile .ui-card_row .chip, .nav_mobile) {
+            visibility: hidden !important;
+        }
+    </style>
+{{ /section:head_css }}
+
+            <section class="page-hero">
+                <div class="eyebrow">Changelog</div>
+                <h1 class="page-hero_title">What is new in Carefront.</h1>
+                <p class="page-hero_text">Every release, every improvement, every fix. Shipped weekly.</p>
+                <div id="newsletter-changelog" class="w-form">
+                    {{ if ! {form:success in="newsletter"} }}{{ form:create in="newsletter" redirect="{uri}#newsletter-changelog" error_redirect="{uri}#newsletter-changelog" attr:id="wf-form-Changelog-updates" attr:name="wf-form-Changelog-updates" data-name="Changelog updates" class="subscribe" aria-label="Changelog updates" data-wf-no-turnstile="true" }}
+<div style="display:none" aria-hidden="true"><input type="text" name="website" tabindex="-1" autocomplete="off"></div><input type="hidden" name="source" value="changelog"><input
+                            class="field_input is-raised w-input" autocomplete="email" maxlength="256" name="email"
+                            data-name="email" placeholder="Work email" type="email" id="field-2" required="" value="{{ old:email }}"><input
+                            type="submit" data-wait="Please wait..." class="button is-dark w-button" value="Get updates"
+                           >
+                    {{ /form:create }}{{ /if }}
+                    <div class="form-msg w-form-done" {{ if {form:success in="newsletter"} }}style="display:block" {{ /if }} tabindex="-1" role="region"
+                        aria-label="Changelog updates success">
+                        <div>You are on the list. Release notes land in your inbox every Tuesday.</div>
+                    </div>
+                    <div class="form-msg is-error w-form-fail" {{ if {form:errors in="newsletter"} && old:source == 'changelog' }}style="display:block" {{ /if }} tabindex="-1" role="region"
+                        aria-label="Changelog updates failure">
+                        <div>That did not send. Check the email address and try again.</div>
+                    </div>
+                </div>
+            </section>
+            <section class="releases">
+                <div id="releases" class="anchor"></div>
+                <article class="release">
+                    <div class="release_meta">
+                        <div class="release_date">Nov 3, 2026</div>
+                        <div class="release_version">v4.12</div>
+                    </div>
+                    <div class="release_body">
+                        <div class="tag-row">
+                            <div class="tag is-new">New</div>
+                        </div>
+                        <h2 class="release_title">Waitlist auto-fill</h2>
+                        <p class="release_text">Cancelled slots are now offered to the waitlist by text with a two-hour
+                            hold. Most slots refill before the front desk sees them open.</p>
+                        <div class="release_media"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 640 280"
+                                aria-label="Schedule for Thursday with a cancelled 10:00 slot offered by text to the first patient on the waitlist"
+                                role="img" class="ill-art ia-rel-a">
+                                <g>
+                                    <g>
+                                        <g>
+                                            <g>
+                                                <g>
+                                                    <g clip-path="url(#ia-rel-a-clip0_78_2)">
+                                                        <rect rx="12" height="280" width="640" class="ill-f-panel">
+                                                        </rect>
+                                                        <g>
+                                                            <g>
+                                                                <path
+                                                                    d="M314 58H46C42.6 58 40 60.6 40 64V84C40 87.3 42.6 90 46 90H314C317.3 90 320 87.3 320 84V64C320 60.6 317.3 58 314 58Z"
+                                                                    data-i="0.0" class="ill-f-line-panel"></path>
+                                                                <path
+                                                                    d="M314 98H46C42.6 98 40 100.6 40 104V124C40 127.3 42.6 130 46 130H314C317.3 130 320 127.3 320 124V104C320 100.6 317.3 98 314 98Z"
+                                                                    data-i="0.11" class="ill-f-line-panel"></path>
+                                                                <path stroke-dasharray="4 4" stroke-linejoin="round"
+                                                                    stroke-linecap="round" stroke-width="1.2"
+                                                                    d="M314 138H46C42.6 138 40 140.6 40 144V164C40 167.3 42.6 170 46 170H314C317.3 170 320 167.3 320 164V144C320 140.6 317.3 138 314 138Z"
+                                                                    data-i="0.22" class="ill-f-panel ill-s-accent">
+                                                                </path>
+                                                                <path
+                                                                    d="M314 178H46C42.6 178 40 180.6 40 184V204C40 207.3 42.6 210 46 210H314C317.3 210 320 207.3 320 204V184C320 180.6 317.3 178 314 178Z"
+                                                                    data-i="0.33" class="ill-f-line-panel"></path>
+                                                                <path
+                                                                    d="M314 218H46C42.6 218 40 220.6 40 224V244C40 247.3 42.6 250 46 250H314C317.3 250 320 247.3 320 244V224C320 220.6 317.3 218 314 218Z"
+                                                                    data-i="0.44" class="ill-f-line-panel"></path>
+                                                                <path
+                                                                    d="M430 158C441.0 158 450 149.0 450 138C450 126.9 441.0 118 430 118C418.9 118 410 126.9 410 138C410 149.0 418.9 158 430 158Z"
+                                                                    data-i="0.55" class="ill-f-accent ill-f-accent">
+                                                                </path>
+                                                                <path stroke-linejoin="round" stroke-linecap="round"
+                                                                    stroke-width="1.2"
+                                                                    d="M492 158C503.0 158 512 149.0 512 138C512 126.9 503.0 118 492 118C480.9 118 472 126.9 472 138C472 149.0 480.9 158 492 158Z"
+                                                                    data-i="0.66" class="ill-f-panel ill-s-text-panel">
+                                                                </path>
+                                                                <path stroke-linejoin="round" stroke-linecap="round"
+                                                                    stroke-width="1.2"
+                                                                    d="M554 158C565.0 158 574 149.0 574 138C574 126.9 565.0 118 554 118C542.9 118 534 126.9 534 138C534 149.0 542.9 158 554 158Z"
+                                                                    data-i="0.77" class="ill-f-panel ill-s-text-panel">
+                                                                </path>
+                                                                <path stroke-linejoin="round" stroke-linecap="round"
+                                                                    stroke-width="1.6"
+                                                                    d="M410 138C370 138 360 154 322 154" data-i="0.88"
+                                                                    class="ill-s-accent ill-s-accent"></path>
+                                                                <path stroke-linejoin="round" stroke-linecap="round"
+                                                                    stroke-width="1.6" d="M330 148L322 154L330 160"
+                                                                    data-i="0.99" class="ill-s-accent ill-s-accent">
+                                                                </path>
+                                                                <path
+                                                                    d="M602 182H418C413.5 182 410 185.5 410 190V220C410 224.4 413.5 228 418 228H602C606.4 228 610 224.4 610 220V190C610 185.5 606.4 182 602 182Z"
+                                                                    data-i="1.1" class="ill-f-raised ill-f-raised">
+                                                                </path>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g><text data-i="0.45" font-weight="500" font-size="12" y="43.8" x="40"
+                                    class="ill-t ill-f-panel-muted ill-t ill-f-panel-muted">Thu 5 Nov, Dr.
+                                    Ortiz</text><text data-i="0.49" font-weight="500" font-size="12" y="79.8" x="54"
+                                    class="ill-t ill-f-panel-muted ill-t ill-f-panel-muted">09:00</text><text
+                                    data-i="0.54" font-size="12" y="77.8" x="110"
+                                    class="ill-t ill-f-text-panel ill-t ill-f-text-panel">Ana Silva</text><text
+                                    data-i="0.58" font-weight="500" font-size="12" y="119.8" x="54"
+                                    class="ill-t ill-f-panel-muted ill-t ill-f-panel-muted">09:30</text><text
+                                    data-i="0.62" font-size="12" y="117.8" x="110"
+                                    class="ill-t ill-f-text-panel ill-t ill-f-text-panel">J. Reyes</text><text
+                                    data-i="0.67" font-weight="500" font-size="12" y="159.8" x="54"
+                                    class="ill-t ill-f-accent ill-t ill-f-accent">10:00</text><text data-i="0.71"
+                                    font-size="12" y="157.8" x="110"
+                                    class="ill-t ill-f-accent ill-t ill-f-accent">Cancelled, offered to
+                                    waitlist</text><text data-i="0.76" font-weight="500" font-size="12" y="199.8" x="54"
+                                    class="ill-t ill-f-panel-muted ill-t ill-f-panel-muted">10:30</text><text
+                                    data-i="0.8" font-size="12" y="197.8" x="110"
+                                    class="ill-t ill-f-text-panel ill-t ill-f-text-panel">M. Kaur</text><text
+                                    data-i="0.84" font-weight="500" font-size="12" y="239.8" x="54"
+                                    class="ill-t ill-f-panel-muted ill-t ill-f-panel-muted">11:00</text><text
+                                    data-i="0.89" font-size="12" y="237.8" x="110"
+                                    class="ill-t ill-f-text-panel ill-t ill-f-text-panel">T. Brooks</text><text
+                                    data-i="0.93" font-size="12" y="142.8" x="423"
+                                    class="ill-t ill-f-on ill-t ill-f-on">JL</text><text data-i="0.97" font-size="12"
+                                    y="142.8" x="483.8"
+                                    class="ill-t ill-f-text-panel ill-t ill-f-text-panel">RB</text><text data-i="1.02"
+                                    font-size="12" y="142.8" x="546.4"
+                                    class="ill-t ill-f-text-panel ill-t ill-f-text-panel">KD</text><text data-i="1.06"
+                                    font-weight="500" font-size="12" y="107.8" x="410"
+                                    class="ill-t ill-f-panel-muted ill-t ill-f-panel-muted">Waitlist</text><text
+                                    data-i="1.11" font-weight="500" font-size="12" y="201.8" x="444.2"
+                                    class="ill-t ill-f-muted ill-t ill-f-muted">SMS, 2 hour hold</text><text
+                                    data-i="1.15" font-size="12" y="216.8" x="422"
+                                    class="ill-t ill-f-ink ill-t ill-f-ink">10:00 opened up. Want it?</text>
+                                <defs>
+                                    <clipPath id="ia-rel-a-clip0_78_2">
+                                        <rect fill="white" rx="12" height="280" width="640"></rect>
+                                    </clipPath>
+                                </defs>
+                            </svg></div>
+                    </div>
+                </article>
+                <article class="release">
+                    <div class="release_meta">
+                        <div class="release_date">Oct 27, 2026</div>
+                        <div class="release_version">v4.11</div>
+                    </div>
+                    <div class="release_body">
+                        <div class="tag-row">
+                            <div class="tag is-improved">Improved</div>
+                        </div>
+                        <h2 class="release_title">Faster EHR sync</h2>
+                        <p class="release_text">Median sync time between Carefront and Cobalt EHR dropped from 4.1 s to
+                            1.6 s. Sync status now shows per patient.</p>
+                        <div class="release_media"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 640 280"
+                                aria-label="Line chart of median EHR sync time over 12 weeks, falling from 4.1 seconds to 1.6 seconds after v4.2 shipped"
+                                role="img" class="ill-art ia-rel-b">
+                                <g>
+                                    <g>
+                                        <g>
+                                            <g>
+                                                <g>
+                                                    <g clip-path="url(#ia-rel-b-clip0_78_2)">
+                                                        <rect rx="12" height="280" width="640"
+                                                            class="ill-f-raised ill-f-raised"></rect>
+                                                        <g>
+                                                            <g>
+                                                                <path stroke-linejoin="round" stroke-linecap="round"
+                                                                    d="M60 50H600" data-i="0.0"
+                                                                    class="ill-s-line-paper ill-s-line-paper"></path>
+                                                                <path stroke-linejoin="round" stroke-linecap="round"
+                                                                    d="M60 84H600" data-i="0.1"
+                                                                    class="ill-s-line-paper ill-s-line-paper"></path>
+                                                                <path stroke-linejoin="round" stroke-linecap="round"
+                                                                    d="M60 118H600" data-i="0.2"
+                                                                    class="ill-s-line-paper ill-s-line-paper"></path>
+                                                                <path stroke-linejoin="round" stroke-linecap="round"
+                                                                    d="M60 152H600" data-i="0.3"
+                                                                    class="ill-s-line-paper ill-s-line-paper"></path>
+                                                                <path stroke-linejoin="round" stroke-linecap="round"
+                                                                    d="M60 186H600" data-i="0.4"
+                                                                    class="ill-s-line-paper ill-s-line-paper"></path>
+                                                                <path stroke-linejoin="round" stroke-linecap="round"
+                                                                    d="M60 220H600" data-i="0.5"
+                                                                    class="ill-s-line-paper ill-s-line-paper"></path>
+                                                                <path fill="#EDEEEF"
+                                                                    d="M60 80.6L109.1 84.0L158.2 77.2L207.3 87.4L256.4 97.6L305.5 114.6L354.5 138.4L403.6 155.4L452.7 162.2L501.8 165.6H550.9H600V220H60V80.6Z"
+                                                                    data-i="0.6"></path>
+                                                                <path stroke-linejoin="round" stroke-linecap="round"
+                                                                    stroke-width="2"
+                                                                    d="M60 80.6L109.1 84.0L158.2 77.2L207.3 87.4L256.4 97.6L305.5 114.6L354.5 138.4L403.6 155.4L452.7 162.2L501.8 165.6H550.9H600"
+                                                                    data-i="0.7" class="ill-s-accent ill-s-accent">
+                                                                </path>
+                                                                <path stroke-linejoin="round" stroke-linecap="round"
+                                                                    stroke-width="1.2"
+                                                                    d="M60 84.5C62.2 84.5 64 82.8 64 80.5C64 78.3 62.2 76.5 60 76.5C57.7 76.5 56 78.3 56 80.5C56 82.8 57.7 84.5 60 84.5Z"
+                                                                    data-i="0.8"
+                                                                    class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                                </path>
+                                                                <path
+                                                                    d="M600 170.6C602.7 170.6 605 168.3 605 165.6C605 162.8 602.7 160.6 600 160.6C597.2 160.6 595 162.8 595 165.6C595 168.3 597.2 170.6 600 170.6Z"
+                                                                    data-i="0.9" class="ill-f-accent ill-f-accent">
+                                                                </path>
+                                                                <path stroke-dasharray="2 3" stroke-linejoin="round"
+                                                                    stroke-linecap="round" d="M354.5 42V220"
+                                                                    data-i="1.0" class="ill-s-ink ill-s-ink"></path>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                    <rect rx="11.5" height="279" width="639" y="0.5" x="0.5"
+                                                        data-i="1.1" class="ill-s-line-paper ill-s-line-paper"></rect>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g><text data-i="0.45" font-weight="500" font-size="12" y="55.8" x="33.8"
+                                    class="ill-t ill-f-muted ill-t ill-f-muted">5 s</text><text data-i="0.53"
+                                    font-weight="500" font-size="12" y="89.8" x="33.7"
+                                    class="ill-t ill-f-muted ill-t ill-f-muted">4 s</text><text data-i="0.61"
+                                    font-weight="500" font-size="12" y="123.8" x="33.8"
+                                    class="ill-t ill-f-muted ill-t ill-f-muted">3 s</text><text data-i="0.68"
+                                    font-weight="500" font-size="12" y="157.8" x="33.9"
+                                    class="ill-t ill-f-muted ill-t ill-f-muted">2 s</text><text data-i="0.76"
+                                    font-weight="500" font-size="12" y="191.8" x="36.5"
+                                    class="ill-t ill-f-muted ill-t ill-f-muted">1 s</text><text data-i="0.84"
+                                    font-weight="500" font-size="12" y="225.8" x="33.4"
+                                    class="ill-t ill-f-muted ill-t ill-f-muted">0 s</text><text data-i="0.92"
+                                    font-weight="500" font-size="12" y="51.8" x="371.2"
+                                    class="ill-t ill-f-ink ill-t ill-f-ink">v4.2 shipped</text><text data-i="0.99"
+                                    font-weight="500" font-size="14" y="72.1" x="68"
+                                    class="ill-t ill-f-ink ill-t ill-f-ink">4.1 s</text><text data-i="1.07"
+                                    font-weight="500" font-size="14" y="151.1" x="572.2"
+                                    class="ill-t ill-f-accent ill-t ill-f-accent">1.6 s</text><text data-i="1.15"
+                                    font-weight="500" font-size="12" y="245.8" x="60"
+                                    class="ill-t ill-f-muted ill-t ill-f-muted">Cobalt EHR, median sync, 12 weeks</text>
+                                <defs>
+                                    <clipPath id="ia-rel-b-clip0_78_2">
+                                        <rect fill="white" rx="12" height="280" width="640"></rect>
+                                    </clipPath>
+                                </defs>
+                            </svg></div>
+                    </div>
+                </article>
+                <article class="release">
+                    <div class="release_meta">
+                        <div class="release_date">Oct 20, 2026</div>
+                        <div class="release_version">v4.10</div>
+                    </div>
+                    <div class="release_body">
+                        <div class="tag-row">
+                            <div class="tag is-new">New</div>
+                            <div class="tag">Billing</div>
+                        </div>
+                        <h2 class="release_title">Payment plans</h2>
+                        <p class="release_text">Patients can split balances over 3, 6 or 12 months from the same payment
+                            link. Reconciliation is automatic.</p>
+                        <div class="release_media"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 640 280"
+                                aria-label="A $480 balance split into 3, 6 or 12 monthly payments, with the first payment due today"
+                                role="img" class="ill-art ia-rel-c">
+                                <g>
+                                    <g>
+                                        <g>
+                                            <g>
+                                                <g>
+                                                    <g clip-path="url(#ia-rel-c-clip0_78_2)">
+                                                        <rect fill="#EDEEEF" rx="12" height="280" width="640"></rect>
+                                                        <g>
+                                                            <g>
+                                                                <path
+                                                                    d="M290 70H154C151.7 70 150 71.7 150 74V102C150 104.2 151.7 106 154 106H290C292.2 106 294 104.2 294 102V74C294 71.7 292.2 70 290 70Z"
+                                                                    data-i="0.0" class="ill-f-accent ill-f-accent">
+                                                                </path>
+                                                                <path stroke-linejoin="round" stroke-linecap="round"
+                                                                    d="M438 70H302C299.7 70 298 71.7 298 74V102C298 104.2 299.7 106 302 106H438C440.2 106 442 104.2 442 102V74C442 71.7 440.2 70 438 70Z"
+                                                                    data-i="0.06"
+                                                                    class="ill-f-raised ill-s-strong ill-f-raised ill-s-strong">
+                                                                </path>
+                                                                <path stroke-linejoin="round" stroke-linecap="round"
+                                                                    d="M586 70H450C447.7 70 446 71.7 446 74V102C446 104.2 447.7 106 450 106H586C588.2 106 590 104.2 590 102V74C590 71.7 588.2 70 586 70Z"
+                                                                    data-i="0.11"
+                                                                    class="ill-f-raised ill-s-strong ill-f-raised ill-s-strong">
+                                                                </path>
+                                                                <path
+                                                                    d="M216 132H154C151.7 132 150 133.7 150 136V164C150 166.2 151.7 168 154 168H216C218.2 168 220 166.2 220 164V136C220 133.7 218.2 132 216 132Z"
+                                                                    data-i="0.17" class="ill-f-accent ill-f-accent">
+                                                                </path>
+                                                                <path stroke-linejoin="round" stroke-linecap="round"
+                                                                    fill="#EDEEEF"
+                                                                    d="M290 132H228C225.7 132 224 133.7 224 136V164C224 166.2 225.7 168 228 168H290C292.2 168 294 166.2 294 164V136C294 133.7 292.2 132 290 132Z"
+                                                                    data-i="0.22" class="ill-s-accent ill-s-accent">
+                                                                </path>
+                                                                <path stroke-linejoin="round" stroke-linecap="round"
+                                                                    fill="#EDEEEF"
+                                                                    d="M364 132H302C299.7 132 298 133.7 298 136V164C298 166.2 299.7 168 302 168H364C366.2 168 368 166.2 368 164V136C368 133.7 366.2 132 364 132Z"
+                                                                    data-i="0.28" class="ill-s-accent ill-s-accent">
+                                                                </path>
+                                                                <path stroke-linejoin="round" stroke-linecap="round"
+                                                                    fill="#EDEEEF"
+                                                                    d="M438 132H376C373.7 132 372 133.7 372 136V164C372 166.2 373.7 168 376 168H438C440.2 168 442 166.2 442 164V136C442 133.7 440.2 132 438 132Z"
+                                                                    data-i="0.33" class="ill-s-accent ill-s-accent">
+                                                                </path>
+                                                                <path stroke-linejoin="round" stroke-linecap="round"
+                                                                    fill="#EDEEEF"
+                                                                    d="M512 132H450C447.7 132 446 133.7 446 136V164C446 166.2 447.7 168 450 168H512C514.2 168 516 166.2 516 164V136C516 133.7 514.2 132 512 132Z"
+                                                                    data-i="0.39" class="ill-s-accent ill-s-accent">
+                                                                </path>
+                                                                <path stroke-linejoin="round" stroke-linecap="round"
+                                                                    fill="#EDEEEF"
+                                                                    d="M586 132H524C521.7 132 520 133.7 520 136V164C520 166.2 521.7 168 524 168H586C588.2 168 590 166.2 590 164V136C590 133.7 588.2 132 586 132Z"
+                                                                    data-i="0.44" class="ill-s-accent ill-s-accent">
+                                                                </path>
+                                                                <path
+                                                                    d="M179 194H154C151.7 194 150 195.7 150 198V226C150 228.2 151.7 230 154 230H179C181.2 230 183 228.2 183 226V198C183 195.7 181.2 194 179 194Z"
+                                                                    data-i="0.5" class="ill-f-accent ill-f-accent">
+                                                                </path>
+                                                                <path stroke-linejoin="round" stroke-linecap="round"
+                                                                    d="M216 194H191C188.7 194 187 195.7 187 198V226C187 228.2 188.7 230 191 230H216C218.2 230 220 228.2 220 226V198C220 195.7 218.2 194 216 194Z"
+                                                                    data-i="0.55"
+                                                                    class="ill-f-raised ill-s-strong ill-f-raised ill-s-strong">
+                                                                </path>
+                                                                <path stroke-linejoin="round" stroke-linecap="round"
+                                                                    d="M253 194H228C225.7 194 224 195.7 224 198V226C224 228.2 225.7 230 228 230H253C255.2 230 257 228.2 257 226V198C257 195.7 255.2 194 253 194Z"
+                                                                    data-i="0.61"
+                                                                    class="ill-f-raised ill-s-strong ill-f-raised ill-s-strong">
+                                                                </path>
+                                                                <path stroke-linejoin="round" stroke-linecap="round"
+                                                                    d="M290 194H265C262.7 194 261 195.7 261 198V226C261 228.2 262.7 230 265 230H290C292.2 230 294 228.2 294 226V198C294 195.7 292.2 194 290 194Z"
+                                                                    data-i="0.66"
+                                                                    class="ill-f-raised ill-s-strong ill-f-raised ill-s-strong">
+                                                                </path>
+                                                                <path stroke-linejoin="round" stroke-linecap="round"
+                                                                    d="M327 194H302C299.7 194 298 195.7 298 198V226C298 228.2 299.7 230 302 230H327C329.2 230 331 228.2 331 226V198C331 195.7 329.2 194 327 194Z"
+                                                                    data-i="0.72"
+                                                                    class="ill-f-raised ill-s-strong ill-f-raised ill-s-strong">
+                                                                </path>
+                                                                <path stroke-linejoin="round" stroke-linecap="round"
+                                                                    d="M364 194H339C336.7 194 335 195.7 335 198V226C335 228.2 336.7 230 339 230H364C366.2 230 368 228.2 368 226V198C368 195.7 366.2 194 364 194Z"
+                                                                    data-i="0.77"
+                                                                    class="ill-f-raised ill-s-strong ill-f-raised ill-s-strong">
+                                                                </path>
+                                                                <path stroke-linejoin="round" stroke-linecap="round"
+                                                                    d="M401 194H376C373.7 194 372 195.7 372 198V226C372 228.2 373.7 230 376 230H401C403.2 230 405 228.2 405 226V198C405 195.7 403.2 194 401 194Z"
+                                                                    data-i="0.83"
+                                                                    class="ill-f-raised ill-s-strong ill-f-raised ill-s-strong">
+                                                                </path>
+                                                                <path stroke-linejoin="round" stroke-linecap="round"
+                                                                    d="M438 194H413C410.7 194 409 195.7 409 198V226C409 228.2 410.7 230 413 230H438C440.2 230 442 228.2 442 226V198C442 195.7 440.2 194 438 194Z"
+                                                                    data-i="0.88"
+                                                                    class="ill-f-raised ill-s-strong ill-f-raised ill-s-strong">
+                                                                </path>
+                                                                <path stroke-linejoin="round" stroke-linecap="round"
+                                                                    d="M475 194H450C447.7 194 446 195.7 446 198V226C446 228.2 447.7 230 450 230H475C477.2 230 479 228.2 479 226V198C479 195.7 477.2 194 475 194Z"
+                                                                    data-i="0.94"
+                                                                    class="ill-f-raised ill-s-strong ill-f-raised ill-s-strong">
+                                                                </path>
+                                                                <path stroke-linejoin="round" stroke-linecap="round"
+                                                                    d="M512 194H487C484.7 194 483 195.7 483 198V226C483 228.2 484.7 230 487 230H512C514.2 230 516 228.2 516 226V198C516 195.7 514.2 194 512 194Z"
+                                                                    data-i="0.99"
+                                                                    class="ill-f-raised ill-s-strong ill-f-raised ill-s-strong">
+                                                                </path>
+                                                                <path stroke-linejoin="round" stroke-linecap="round"
+                                                                    d="M549 194H524C521.7 194 520 195.7 520 198V226C520 228.2 521.7 230 524 230H549C551.2 230 553 228.2 553 226V198C553 195.7 551.2 194 549 194Z"
+                                                                    data-i="1.04"
+                                                                    class="ill-f-raised ill-s-strong ill-f-raised ill-s-strong">
+                                                                </path>
+                                                                <path stroke-linejoin="round" stroke-linecap="round"
+                                                                    d="M586 194H561C558.7 194 557 195.7 557 198V226C557 228.2 558.7 230 561 230H586C588.2 230 590 228.2 590 226V198C590 195.7 588.2 194 586 194Z"
+                                                                    data-i="1.1"
+                                                                    class="ill-f-raised ill-s-strong ill-f-raised ill-s-strong">
+                                                                </path>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g><text data-i="0.45" font-weight="500" font-size="12" y="41.8" x="40"
+                                    class="ill-t ill-f-muted ill-t ill-f-muted">Balance $480.00</text><text
+                                    data-i="0.55" font-weight="500" font-size="14" y="89.5" x="40"
+                                    class="ill-t ill-f-ink ill-t ill-f-ink">3 months</text><text data-i="0.65"
+                                    font-size="12" y="107.8" x="40" class="ill-t ill-f-muted ill-t ill-f-muted">$160 /
+                                    mo</text><text data-i="0.75" font-weight="500" font-size="14" y="151.5" x="40"
+                                    class="ill-t ill-f-ink ill-t ill-f-ink">6 months</text><text data-i="0.85"
+                                    font-size="12" y="169.8" x="40" class="ill-t ill-f-muted ill-t ill-f-muted">$80 /
+                                    mo</text><text data-i="0.95" font-weight="500" font-size="14" y="213.5" x="40"
+                                    class="ill-t ill-f-ink ill-t ill-f-ink">12 months</text><text data-i="1.05"
+                                    font-size="12" y="231.8" x="40" class="ill-t ill-f-muted ill-t ill-f-muted">$40 /
+                                    mo</text><text data-i="1.15" font-weight="500" font-size="12" y="247.8" x="419"
+                                    class="ill-t ill-f-accent ill-t ill-f-accent">First payment today, same link</text>
+                                <defs>
+                                    <clipPath id="ia-rel-c-clip0_78_2">
+                                        <rect fill="white" rx="12" height="280" width="640"></rect>
+                                    </clipPath>
+                                </defs>
+                            </svg></div>
+                    </div>
+                </article>
+                <article class="release">
+                    <div class="release_meta">
+                        <div class="release_date">Oct 13, 2026</div>
+                        <div class="release_version">v4.9</div>
+                    </div>
+                    <div class="release_body">
+                        <div class="tag-row">
+                            <div class="tag">Fixed</div>
+                        </div>
+                        <h2 class="release_title">Reminder time zones</h2>
+                        <p class="release_text">Reminders for multi-location groups now always use the location time
+                            zone, not the account default.</p>
+                    </div>
+                </article>
+                <article class="release">
+                    <div class="release_meta">
+                        <div class="release_date">Oct 6, 2026</div>
+                        <div class="release_version">v4.8</div>
+                    </div>
+                    <div class="release_body">
+                        <div class="tag-row">
+                            <div class="tag is-improved">Improved</div>
+                        </div>
+                        <h2 class="release_title">Shared inbox assignments</h2>
+                        <p class="release_text">Threads can be assigned to a person or a role, and reassign themselves
+                            when a shift ends.</p>
+                        <div class="release_media"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 640 280"
+                                aria-label="Shared inbox with patient threads assigned to front desk, billing and nurse roles"
+                                role="img" class="ill-art ia-rel-d">
+                                <g>
+                                    <g>
+                                        <g>
+                                            <g>
+                                                <g>
+                                                    <g clip-path="url(#ia-rel-d-clip0_78_2)">
+                                                        <rect rx="12" height="280" width="640" class="ill-f-panel">
+                                                        </rect>
+                                                        <g>
+                                                            <g>
+                                                                <path stroke-linejoin="round" stroke-linecap="round"
+                                                                    d="M334 40H46C42.6 40 40 42.6 40 46V76C40 79.3 42.6 82 46 82H334C337.3 82 340 79.3 340 76V46C340 42.6 337.3 40 334 40Z"
+                                                                    data-i="0.0" class="ill-f-panel ill-s-line-panel">
+                                                                </path>
+                                                                <path stroke-linejoin="round" stroke-linecap="round"
+                                                                    stroke-width="1.2" d="M340 61C400 61 400 80 410 80"
+                                                                    data-i="0.08" class="ill-s-line-panel"></path>
+                                                                <path stroke-linejoin="round" stroke-linecap="round"
+                                                                    d="M334 92H46C42.6 92 40 94.6 40 98V128C40 131.3 42.6 134 46 134H334C337.3 134 340 131.3 340 128V98C340 94.6 337.3 92 334 92Z"
+                                                                    data-i="0.17" class="ill-f-panel ill-s-line-panel">
+                                                                </path>
+                                                                <path stroke-linejoin="round" stroke-linecap="round"
+                                                                    stroke-width="1.6"
+                                                                    d="M340 113C400 113 400 150 410 150" data-i="0.25"
+                                                                    class="ill-s-accent ill-s-accent"></path>
+                                                                <path stroke-linejoin="round" stroke-linecap="round"
+                                                                    d="M334 144H46C42.6 144 40 146.6 40 150V180C40 183.3 42.6 186 46 186H334C337.3 186 340 183.3 340 180V150C340 146.6 337.3 144 334 144Z"
+                                                                    data-i="0.34" class="ill-f-panel ill-s-line-panel">
+                                                                </path>
+                                                                <path stroke-linejoin="round" stroke-linecap="round"
+                                                                    stroke-width="1.2"
+                                                                    d="M340 165C400 165 400 220 410 220" data-i="0.42"
+                                                                    class="ill-s-line-panel"></path>
+                                                                <path stroke-linejoin="round" stroke-linecap="round"
+                                                                    d="M334 196H46C42.6 196 40 198.6 40 202V232C40 235.3 42.6 238 46 238H334C337.3 238 340 235.3 340 232V202C340 198.6 337.3 196 334 196Z"
+                                                                    data-i="0.51" class="ill-f-panel ill-s-line-panel">
+                                                                </path>
+                                                                <path stroke-linejoin="round" stroke-linecap="round"
+                                                                    stroke-width="1.2"
+                                                                    d="M340 217C400 217 400 80 410 80" data-i="0.59"
+                                                                    class="ill-s-line-panel"></path>
+                                                                <path stroke-linejoin="round" stroke-linecap="round"
+                                                                    stroke-width="1.1"
+                                                                    d="M580 60H430C418.9 60 410 68.9 410 80C410 91.0 418.9 100 430 100H580C591.0 100 600 91.0 600 80C600 68.9 591.0 60 580 60Z"
+                                                                    data-i="0.68" class="ill-f-panel ill-s-text-panel">
+                                                                </path>
+                                                                <path
+                                                                    d="M430 92C436.6 92 442 86.6 442 80C442 73.3 436.6 68 430 68C423.3 68 418 73.3 418 80C418 86.6 423.3 92 430 92Z"
+                                                                    data-i="0.76" class="ill-f-line-panel"></path>
+                                                                <path
+                                                                    d="M580 130H430C418.9 130 410 138.9 410 150C410 161.0 418.9 170 430 170H580C591.0 170 600 161.0 600 150C600 138.9 591.0 130 580 130Z"
+                                                                    data-i="0.85" class="ill-f-accent ill-f-accent">
+                                                                </path>
+                                                                <path
+                                                                    d="M430 162C436.6 162 442 156.6 442 150C442 143.3 436.6 138 430 138C423.3 138 418 143.3 418 150C418 156.6 423.3 162 430 162Z"
+                                                                    data-i="0.93" class="ill-f-raised ill-f-raised">
+                                                                </path>
+                                                                <path stroke-linejoin="round" stroke-linecap="round"
+                                                                    stroke-width="1.1"
+                                                                    d="M580 200H430C418.9 200 410 208.9 410 220C410 231.0 418.9 240 430 240H580C591.0 240 600 231.0 600 220C600 208.9 591.0 200 580 200Z"
+                                                                    data-i="1.02" class="ill-f-panel ill-s-text-panel">
+                                                                </path>
+                                                                <path
+                                                                    d="M430 232C436.6 232 442 226.6 442 220C442 213.3 436.6 208 430 208C423.3 208 418 213.3 418 220C418 226.6 423.3 232 430 232Z"
+                                                                    data-i="1.1" class="ill-f-line-panel"></path>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g><text data-i="0.45" font-size="13" y="59.7" x="56"
+                                    class="ill-t ill-f-text-panel ill-t ill-f-text-panel">Refill request</text><text
+                                    data-i="0.5" font-size="12" y="75.8" x="56"
+                                    class="ill-t ill-f-panel-muted ill-t ill-f-panel-muted">Ana Silva</text><text
+                                    data-i="0.56" font-size="13" y="111.7" x="56"
+                                    class="ill-t ill-f-text-panel ill-t ill-f-text-panel">Lab question</text><text
+                                    data-i="0.61" font-size="12" y="127.8" x="56"
+                                    class="ill-t ill-f-panel-muted ill-t ill-f-panel-muted">J. Reyes</text><text
+                                    data-i="0.67" font-size="13" y="163.7" x="56"
+                                    class="ill-t ill-f-text-panel ill-t ill-f-text-panel">Billing dispute</text><text
+                                    data-i="0.72" font-size="12" y="179.8" x="56"
+                                    class="ill-t ill-f-panel-muted ill-t ill-f-panel-muted">M. Kaur</text><text
+                                    data-i="0.77" font-size="13" y="215.7" x="56"
+                                    class="ill-t ill-f-text-panel ill-t ill-f-text-panel">Reschedule</text><text
+                                    data-i="0.83" font-size="12" y="231.8" x="56"
+                                    class="ill-t ill-f-panel-muted ill-t ill-f-panel-muted">T. Brooks</text><text
+                                    data-i="0.88" font-size="10" y="82.6" x="423.7"
+                                    class="ill-t ill-f-text-panel ill-t ill-f-text-panel">LO</text><text data-i="0.93"
+                                    font-weight="500" font-size="12" y="85.8" x="450"
+                                    class="ill-t ill-f-text-panel ill-t ill-f-text-panel">Front desk</text><text
+                                    data-i="0.99" font-size="10" y="152.6" x="421.9"
+                                    class="ill-t ill-f-accent ill-t ill-f-accent">MK</text><text data-i="1.04"
+                                    font-weight="500" font-size="12" y="155.8" x="450"
+                                    class="ill-t ill-f-on ill-t ill-f-on">Nurse</text><text data-i="1.1" font-size="10"
+                                    y="222.6" x="424.1"
+                                    class="ill-t ill-f-text-panel ill-t ill-f-text-panel">TB</text><text data-i="1.15"
+                                    font-weight="500" font-size="12" y="225.8" x="450"
+                                    class="ill-t ill-f-text-panel ill-t ill-f-text-panel">Billing</text>
+                                <defs>
+                                    <clipPath id="ia-rel-d-clip0_78_2">
+                                        <rect fill="white" rx="12" height="280" width="640"></rect>
+                                    </clipPath>
+                                </defs>
+                            </svg></div>
+                    </div>
+                </article><a href="/changelog#releases" class="button is-outline">Load older releases</a>
+            </section>

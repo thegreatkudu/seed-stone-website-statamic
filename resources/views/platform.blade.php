@@ -1,0 +1,2493 @@
+<!doctype html>
+<html data-wf-domain="carefront.webflow.io" data-wf-page="6aec83b44f4f0425b95841cb"
+    data-wf-site="6aec83b44f4f0425b95841e3" lang="en" class="w-mod-js w-mod-ix3">
+
+<head>
+    <style>
+        .wf-force-outline-none[tabindex="-1"]:focus {
+            outline: none;
+        }
+    </style>
+    <meta charset="utf-8">
+    <link href="https://cdn.prod.website-files.com" rel="preconnect" crossorigin="anonymous">
+    <title>Platform: scheduling, intake and billing | Carefront</title>
+    <meta
+        content="Five modules on one record: scheduling, intake, messaging, billing and two way EHR sync. See how Carefront connects every step of every patient visit."
+        name="description">
+    <meta content="Platform: scheduling, intake and billing | Carefront" property="og:title">
+    <meta
+        content="Five modules on one record: scheduling, intake, messaging, billing and two way EHR sync. See how Carefront connects every step of every patient visit."
+        property="og:description">
+    <meta
+        content="{{ asset('hmxtech/6aec83b44f4f0425b95841e3/6aecb3a795b52ce374b10b3b_carefront-og.jpg') }}"
+        property="og:image">
+    <meta content="Platform: scheduling, intake and billing | Carefront" name="twitter:title">
+    <meta
+        content="Five modules on one record: scheduling, intake, messaging, billing and two way EHR sync. See how Carefront connects every step of every patient visit."
+        name="twitter:description">
+    <meta property="og:type" content="website">
+    <meta content="summary_large_image" name="twitter:card">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="Webflow" name="generator">
+    <link href="{{ asset('hmxtech/6aec83b44f4f0425b95841e3/css/carefront.webflow.shared.7b60a7b06.css') }}"
+        rel="stylesheet" type="text/css"
+        integrity="sha384-e2CnsGxdkBiAfIzJc3vlx1gieiX+6zWTZH0nkJ1KfYYMAj2i/JgBKKDwsPHoWk0O" crossorigin="anonymous">
+    <style>
+        html.w-mod-js:not(.w-mod-ix3):is(.rs-pat.is-1) {
+            visibility: hidden !important;
+        }
+
+        html.w-mod-js:not(.w-mod-ix3):is(.rs-pat.is-1) * {
+            visibility: hidden !important;
+        }
+
+        html.w-mod-js:not(.w-mod-ix3) :is([data-wf-target*='["6aec83b44f4f0425b95841ca","8f53d73e-da14-aadc-b6ee-3fabd5df89a4"]'], [data-wf-target*='["6aec83b44f4f0425b95841ca","8f53d73e-da14-aadc-b6ee-3fabd5df89de"]'], .feature, [data-wf-target*='["6aec83b44f4f0425b95841ca","fc1a0d03-a5a7-6eb0-ce55-d1ec96b94892"]'], [data-wf-target*='["6aec83b44f4f0425b95841ca","fc1a0d03-a5a7-6eb0-ce55-d1ec96b94894"]'], [data-wf-target*='["6aec83b44f4f0425b95841ca","fc1a0d03-a5a7-6eb0-ce55-d1ec96b94899"]'], [data-wf-target*='["6aec83b44f4f0425b95841ca","fc1a0d03-a5a7-6eb0-ce55-d1ec96b9495d"]'], .record-stack .rs-layer.is-1, .record-stack .rs-layer.is-2, .record-stack .rs-layer.is-3, .record-stack .svg-dash, .rs-pat.is-1, .rs-leader .svg-dot, .rs-leader .svg-leader, .module-scene.is-1 .ui-card, .pattern-tile .snippet > *, .pattern-tile .check-dot.is-done, .pattern-tile .progress_fill, .pattern-tile .bubble.is-reply, .pattern-tile .typing, .pattern-tile .steps_line, .pattern-tile .steps_dot, .pattern-tile .ui-card_row .chip, .nav_mobile) {
+            visibility: hidden !important;
+        }
+    </style>
+    <script
+        type="text/javascript">!function (o, c) { var n = c.documentElement, t = " w-mod-"; n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch") }(window, document);</script>
+    <link href="{{ asset('hmxtech/6aec83b44f4f0425b95841e3/6aecace4e86df1b0d7d6cc91_carefront-icon.png') }}"
+        rel="icon" type="image/png" sizes="32x32" media="(prefers-color-scheme: light)">
+    <link href="{{ asset('hmxtech/6aec83b44f4f0425b95841e3/6aecace4e86df1b0d7d6cc91_carefront-icon.png') }}"
+        rel="icon" type="image/png" sizes="32x32" media="(prefers-color-scheme: dark)">
+    <link href="{{ asset('hmxtech/6aec83b44f4f0425b95841e3/6aecace4f1e393d6b7280ad6_carefront-icon.png') }}"
+        rel="icon" type="image/png" sizes="48x48">
+    <link href="{{ asset('hmxtech/6aec83b44f4f0425b95841e3/6aecace4d07273d1cd7e59a7_carefront-icon.png') }}"
+        rel="apple-touch-icon" sizes="180x180">
+    <link href="{{ asset('hmxtech/6aec83b44f4f0425b95841e3/6aecace5a3fd0e69eb5dad18_carefront-icon.png') }}"
+        rel="icon" type="image/png" sizes="192x192">
+    <link href="{{ asset('hmxtech/6aec83b44f4f0425b95841e3/6aecace414b33286f73dd85d_carefront-icon.png') }}"
+        rel="icon" type="image/png" sizes="512x512">
+    <script>
+        window.__WF_REVIEW_BRIDGE = {
+            siteId: "6aec83b44f4f0425b95841e3",
+            version: "0.3.0",
+            marker: "__wf_review_snippet_v1",
+            bridgeToken: "wfbt_a9f609324e6246bfa515bcdc0be0cf99",
+            reviewSurface: "published-review",
+            reviewScriptUrl: "https://validation-worker.createsomething.workers.dev/app-validator/snippet/review.js"
+        };
+    </script>
+    <script src="https://validation-worker.createsomething.workers.dev/app-validator/snippet/review.js"></script>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js"></script>
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <div class="rails">
+            <nav class="nav_component"><a href="/" class="nav_brand w-inline-block">
+                    <div class="nav_brand-mark"><svg aria-hidden="true" height="22" width="24" viewBox="0 0 24 22"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-width="3" stroke="currentColor"
+                                d="M17.6 5.3A8 8 0 1 0 17.6 16.7"></path>
+                            <circle fill="#2f6bff" r="2.6" cy="11" cx="19.6"></circle>
+                        </svg></div>
+                    <div class="nav_brand-text">Carefront</div>
+                </a>
+                <div class="nav_menu"><a href="/platform" aria-current="page" class="nav_link w--current">Platform</a><a
+                        href="/pricing" class="nav_link">Pricing</a>
+                    <div data-hover="true" data-delay="80" class="nav_dropdown w-dropdown">
+                        <div class="nav_dropdown-toggle w-dropdown-toggle" id="w-dropdown-toggle-0"
+                            aria-controls="w-dropdown-list-0" aria-haspopup="menu" aria-expanded="false" role="button"
+                            tabindex="0">
+                            <div>Resources</div>
+                            <div class="nav_dropdown-icon w-icon-dropdown-toggle" aria-hidden="true"></div>
+                        </div>
+                        <nav class="nav_panel w-dropdown-list" id="w-dropdown-list-0"
+                            aria-labelledby="w-dropdown-toggle-0">
+                            <div class="nav_panel-box">
+                                <div class="nav_panel-list"><a href="/research" class="nav_item w-inline-block"
+                                        tabindex="0">
+                                        <div class="nav_item-icon"><svg fill="none" viewBox="0 0 18 18" height="18"
+                                                width="18" xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linejoin="round" stroke-width="1.3" stroke="currentColor"
+                                                    d="M3 3.5H8C9.4 3.5 10.5 4.6 10.5 6V14.5C10.5 13.4 9.6 12.5 8.5 12.5H3V3.5Z">
+                                                </path>
+                                                <path stroke-linejoin="round" stroke-width="1.3" stroke="currentColor"
+                                                    d="M15 3.5H13C11.6 3.5 10.5 4.6 10.5 6V14.5C10.5 13.4 11.4 12.5 12.5 12.5H15V3.5Z">
+                                                </path>
+                                            </svg></div>
+                                        <div class="nav_item-text">
+                                            <div class="nav_item-title">Research</div>
+                                            <div class="nav_item-desc">Field notes and studies from clinics running on
+                                                one record.</div>
+                                        </div>
+                                    </a><a href="/changelog" class="nav_item w-inline-block" tabindex="0">
+                                        <div class="nav_item-icon"><svg fill="none" viewBox="0 0 18 18" height="18"
+                                                width="18" xmlns="http://www.w3.org/2000/svg">
+                                                <circle stroke-width="1.3" stroke="currentColor" r="6" cy="9" cx="9">
+                                                </circle>
+                                                <path stroke-linecap="round" stroke-width="1.3" stroke="currentColor"
+                                                    d="M9 5.5V9L11.5 10.5"></path>
+                                            </svg></div>
+                                        <div class="nav_item-text">
+                                            <div class="nav_item-row">
+                                                <div class="nav_item-title">Changelog</div>
+                                                <div class="nav_item-tag">v4.12</div>
+                                            </div>
+                                            <div class="nav_item-desc">What shipped, release by release.</div>
+                                        </div>
+                                    </a><a href="/research" class="nav_all w-inline-block" tabindex="0">
+                                        <div>All articles</div><svg fill="none" viewBox="0 0 14 14" height="14"
+                                            width="14" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-width="1.4" stroke="currentColor"
+                                                d="M4 10L10 4M10 4H5M10 4V9"></path>
+                                        </svg>
+                                    </a></div><a href="/posts/harbor-family-no-shows" class="nav_feature w-inline-block"
+                                    tabindex="0">
+                                    <div class="nav_feature-media"><img
+                                            src="{{ asset('hmxtech/6aec83b44f4f0425b95841e3/6aec83b44f4f0425b9584248_research-featured.webp') }}"
+                                            loading="lazy" width="1520" height="920"
+                                            alt="Weekly no-show chart for Harbor Family, down 34 percent since go-live"
+                                            srcset="{{ asset('hmxtech/6aec83b44f4f0425b95841e3/6aec83b44f4f0425b9584248_research-featured-p-500.webp') }} 500w, {{ asset('hmxtech/6aec83b44f4f0425b95841e3/6aec83b44f4f0425b9584248_research-featured-p-800.webp') }} 800w, {{ asset('hmxtech/6aec83b44f4f0425b95841e3/6aec83b44f4f0425b9584248_research-featured-p-1080.webp') }} 1080w, {{ asset('hmxtech/6aec83b44f4f0425b95841e3/6aec83b44f4f0425b9584248_research-featured.webp') }} 1520w"
+                                            sizes="(max-width: 1520px) 100vw, 1520px" class="nav_feature-img"></div>
+                                    <div class="nav_feature-eyebrow">Customer story</div>
+                                    <div class="nav_feature-title">How Harbor Family cut no-shows by a third</div>
+                                    <div class="nav_feature-meta">
+                                        <div>7 min read</div><svg fill="none" viewBox="0 0 14 14" height="14" width="14"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-width="1.4" stroke="currentColor"
+                                                d="M4 10L10 4M10 4H5M10 4V9"></path>
+                                        </svg>
+                                    </div>
+                                </a>
+                            </div>
+                        </nav>
+                    </div>
+                    <div data-hover="true" data-delay="80" class="nav_dropdown w-dropdown">
+                        <div class="nav_dropdown-toggle w-dropdown-toggle" id="w-dropdown-toggle-1"
+                            aria-controls="w-dropdown-list-1" aria-haspopup="menu" aria-expanded="false" role="button"
+                            tabindex="0">
+                            <div>Company</div>
+                            <div class="nav_dropdown-icon w-icon-dropdown-toggle" aria-hidden="true"></div>
+                        </div>
+                        <nav class="nav_panel is-compact w-dropdown-list" id="w-dropdown-list-1"
+                            aria-labelledby="w-dropdown-toggle-1">
+                            <div class="nav_panel-box">
+                                <div class="nav_panel-list"><a href="/about" class="nav_item w-inline-block"
+                                        tabindex="0">
+                                        <div class="nav_item-icon"><svg fill="none" viewBox="0 0 18 18" height="18"
+                                                width="18" xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linejoin="round" stroke-width="1.3" stroke="currentColor"
+                                                    d="M9 2.5L15.5 5.75L9 9L2.5 5.75L9 2.5Z"></path>
+                                                <path stroke-linejoin="round" stroke-width="1.3" stroke="currentColor"
+                                                    d="M2.5 9L9 12.25L15.5 9"></path>
+                                                <path stroke-linejoin="round" stroke-width="1.3" stroke="currentColor"
+                                                    d="M2.5 12.25L9 15.5L15.5 12.25"></path>
+                                            </svg></div>
+                                        <div class="nav_item-text">
+                                            <div class="nav_item-title">About</div>
+                                            <div class="nav_item-desc">Who builds Carefront and how we work.</div>
+                                        </div>
+                                    </a><a href="/contact" class="nav_item w-inline-block" tabindex="0">
+                                        <div class="nav_item-icon"><svg fill="none" viewBox="0 0 18 18" height="18"
+                                                width="18" xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linejoin="round" stroke-width="1.3" stroke="currentColor"
+                                                    d="M3 4.5C3 3.7 3.7 3 4.5 3H13.5C14.3 3 15 3.7 15 4.5V11C15 11.8 14.3 12.5 13.5 12.5H8L5 15V12.5H4.5C3.7 12.5 3 11.8 3 11V4.5Z">
+                                                </path>
+                                            </svg></div>
+                                        <div class="nav_item-text">
+                                            <div class="nav_item-title">Contact</div>
+                                            <div class="nav_item-desc">Book a demo or talk to the team.</div>
+                                        </div>
+                                    </a></div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+                <div class="nav_actions"><a href="/sign-in" class="nav_link is-signin">Sign in</a><a href="/contact"
+                        class="button is-nav">Book a demo</a>
+                    <div class="nav_menu-button">
+                        <div class="nav_menu-line is-top"></div>
+                        <div class="nav_menu-line is-bottom"></div>
+                    </div>
+                </div>
+                <div class="nav_mobile"
+                    style="translate: none; rotate: none; scale: none; transform: translate(0px, -8px); opacity: 0;"><a
+                        href="/platform" aria-current="page" class="nav_mobile-link w--current">Platform</a><a
+                        href="/pricing" class="nav_mobile-link">Pricing</a>
+                    <div data-hover="false" data-delay="0" class="nav_mobile-dd w-dropdown">
+                        <div class="nav_mobile-toggle w-dropdown-toggle" id="w-dropdown-toggle-2"
+                            aria-controls="w-dropdown-list-2" aria-haspopup="menu" aria-expanded="false" role="button"
+                            tabindex="0">
+                            <div>Resources</div>
+                            <div class="nav_mobile-icon w-icon-dropdown-toggle" aria-hidden="true"></div>
+                        </div>
+                        <nav class="nav_mobile-list w-dropdown-list" id="w-dropdown-list-2"
+                            aria-labelledby="w-dropdown-toggle-2">
+                            <div class="nav_mobile-subs"><a href="/research" class="nav_msub w-inline-block"
+                                    tabindex="0">
+                                    <div class="nav_msub-title">Research</div>
+                                    <div class="nav_msub-desc">Field notes and studies</div>
+                                </a><a href="/changelog" class="nav_msub w-inline-block" tabindex="0">
+                                    <div class="nav_msub-title">Changelog</div>
+                                    <div class="nav_msub-desc">What shipped, release by release</div>
+                                </a><a href="/posts/harbor-family-no-shows" class="nav_mfeature w-inline-block"
+                                    tabindex="0">
+                                    <div class="nav_mfeature-thumb"><img
+                                            src="{{ asset('hmxtech/6aec83b44f4f0425b95841e3/6aec83b44f4f0425b9584248_research-featured.webp') }}"
+                                            loading="lazy" width="1520" height="920"
+                                            alt="Weekly no-show chart for Harbor Family, down 34 percent since go-live"
+                                            srcset="{{ asset('hmxtech/6aec83b44f4f0425b95841e3/6aec83b44f4f0425b9584248_research-featured-p-500.webp') }} 500w, {{ asset('hmxtech/6aec83b44f4f0425b95841e3/6aec83b44f4f0425b9584248_research-featured-p-800.webp') }} 800w, {{ asset('hmxtech/6aec83b44f4f0425b95841e3/6aec83b44f4f0425b9584248_research-featured-p-1080.webp') }} 1080w, {{ asset('hmxtech/6aec83b44f4f0425b95841e3/6aec83b44f4f0425b9584248_research-featured.webp') }} 1520w"
+                                            sizes="(max-width: 1520px) 100vw, 1520px" class="nav_mfeature-img"></div>
+                                    <div class="nav_mfeature-text">
+                                        <div class="nav_mfeature-eyebrow">Customer story</div>
+                                        <div class="nav_mfeature-title">How Harbor Family cut no-shows by a third</div>
+                                    </div>
+                                </a></div>
+                        </nav>
+                    </div>
+                    <div data-hover="false" data-delay="0" class="nav_mobile-dd w-dropdown">
+                        <div class="nav_mobile-toggle w-dropdown-toggle" id="w-dropdown-toggle-3"
+                            aria-controls="w-dropdown-list-3" aria-haspopup="menu" aria-expanded="false" role="button"
+                            tabindex="0">
+                            <div>Company</div>
+                            <div class="nav_mobile-icon w-icon-dropdown-toggle" aria-hidden="true"></div>
+                        </div>
+                        <nav class="nav_mobile-list w-dropdown-list" id="w-dropdown-list-3"
+                            aria-labelledby="w-dropdown-toggle-3">
+                            <div class="nav_mobile-subs"><a href="/about" class="nav_msub w-inline-block" tabindex="0">
+                                    <div class="nav_msub-title">About</div>
+                                    <div class="nav_msub-desc">Who builds Carefront</div>
+                                </a><a href="/contact" class="nav_msub w-inline-block" tabindex="0">
+                                    <div class="nav_msub-title">Contact</div>
+                                    <div class="nav_msub-desc">Book a demo or talk to the team</div>
+                                </a></div>
+                        </nav>
+                    </div>
+                    <div class="nav_mobile-cta"><a href="/contact" class="button">Book a demo</a><a href="/sign-in"
+                            class="button is-secondary">Sign in</a></div>
+                </div>
+            </nav>
+            <section class="section_hero is-shell">
+                <div class="hero_header">
+                    <div class="mono-label hero_label">Platform</div>
+                    <h1 class="heading-display">Five modules. One patient record.</h1>
+                    <p class="text-lead is-center">Scheduling, intake, messaging, billing and integrations all read from
+                        and write to the same record. Turn on what you need, when you need it.</p>
+                    <div class="button-row is-center"><a href="/contact" class="button">Book a demo</a><a
+                            href="/pricing" class="button is-secondary">See pricing</a></div>
+                </div>
+            </section>
+            <section class="section is-index">
+                <div class="platform-index"><a href="#scheduling" class="module-index_item w-inline-block">
+                        <div class="module-index_row">
+                            <div class="module-index_num">01</div>
+                            <div class="module-index_title">Scheduling</div>
+                        </div>
+                        <div class="module-index_desc">Book from anywhere</div>
+                    </a><a href="#intake" class="module-index_item w-inline-block">
+                        <div class="module-index_row">
+                            <div class="module-index_num">02</div>
+                            <div class="module-index_title">Intake</div>
+                        </div>
+                        <div class="module-index_desc">Forms that fill the chart</div>
+                    </a><a href="#messaging" class="module-index_item w-inline-block">
+                        <div class="module-index_row">
+                            <div class="module-index_num">03</div>
+                            <div class="module-index_title">Messaging</div>
+                        </div>
+                        <div class="module-index_desc">One thread per patient</div>
+                    </a><a href="#billing" class="module-index_item w-inline-block">
+                        <div class="module-index_row">
+                            <div class="module-index_num">04</div>
+                            <div class="module-index_title">Billing</div>
+                        </div>
+                        <div class="module-index_desc">Claims that send themselves</div>
+                    </a><a href="#integrations" class="module-index_item w-inline-block">
+                        <div class="module-index_row">
+                            <div class="module-index_num">05</div>
+                            <div class="module-index_title">Integrations</div>
+                        </div>
+                        <div class="module-index_desc">Two-way EHR sync</div>
+                    </a></div>
+            </section>
+            <section class="section">
+                <div id="scheduling" class="anchor"></div>
+                <div class="module-grid">
+                    <div class="module-copy reveal">
+                        <div class="mono-label">Scheduling</div>
+                        <h2 class="heading-l">Book from your site, a map listing or a text link.</h2>
+                        <p class="text-lead">Live availability from every provider calendar. Rooms, buffers and visit
+                            types stay in sync, so the front desk never double books.</p>
+                        <div class="points">
+                            <div class="point">
+                                <div class="point_mark"></div>
+                                <div class="point_title">Online booking widget for your site</div>
+                            </div>
+                            <div class="point">
+                                <div class="point_mark"></div>
+                                <div class="point_title">Waitlist that fills cancellations automatically</div>
+                            </div>
+                            <div class="point">
+                                <div class="point_mark"></div>
+                                <div class="point_title">Text reminders patients can reply to</div>
+                            </div>
+                        </div><a href="/contact" class="text-link">See scheduling in a demo<span
+                                class="text-link_icon"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 10L10 4M10 4H5M10 4V9" stroke="currentColor" stroke-width="1.4"
+                                        stroke-linecap="round"></path>
+                                </svg></span></a>
+                    </div>
+                    <div class="module-visual reveal"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 640 460"
+                            aria-label="Clinic floor plan with rooms and a provider calendar showing a new booking at 09:30"
+                            role="img" class="ill-art ia-mod-scheduling">
+                            <g>
+                                <g>
+                                    <g>
+                                        <g>
+                                            <g clip-path="url(#ia-mod-scheduling-clip0_78_2)">
+                                                <rect rx="16" height="460" width="640"
+                                                    class="ill-f-raised ill-f-raised"></rect>
+                                                <g>
+                                                    <g>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M55.3 145L281.3 275.5V284.2L55.3 153.7V145Z" data-i="0.0"
+                                                            class="ill-f-subtle ill-s-ink"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M432 188.5L281.3 275.5V284.2L432 197.2V188.5Z"
+                                                            data-i="0.01" class="ill-f-subtle ill-s-ink"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M206 58L432 188.5L281.3 275.5L55.3 145L206 58Z"
+                                                            data-i="0.01"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path fill="#EDEEEF"
+                                                            d="M281.3 101.5L356.7 145L286.4 185.6L211 142.1L281.3 101.5Z"
+                                                            data-i="0.02"></path>
+                                                        <path
+                                                            d="M135.7 98.5L361.7 229.1L336.6 243.6L110.6 113.1L135.7 98.5Z"
+                                                            data-i="0.03" class="ill-f-paper"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1" d="M206 29L432 159.5V188.5L206 58V29Z"
+                                                            data-i="0.04"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M435 157.8L432 159.5V188.5L435 186.8V157.8Z"
+                                                            data-i="0.04"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M209 27.2L435 157.8L432 159.5L206 28.9L209 27.2Z"
+                                                            data-i="0.05" class="ill-f-strong ill-s-ink"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M52.3 114.3L55.3 116V145L52.3 143.3V114.3Z" data-i="0.06"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1" d="M209 27.2L55.3 116V145L209 56.2V27.2Z"
+                                                            data-i="0.07"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M206 25.5L209 27.3L55.3 116L52.3 114.3L206 25.5Z"
+                                                            data-i="0.07" class="ill-f-strong ill-s-ink"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M209.8 130.9L212.3 132.4V142.8L209.8 141.4V130.9Z"
+                                                            data-i="0.08"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M282.6 91.7L212.3 132.4V142.8L282.6 102.2V91.7Z"
+                                                            data-i="0.09"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M280.1 90.2L282.6 91.7L212.3 132.4L209.8 130.9L280.1 90.2Z"
+                                                            data-i="0.09" class="ill-f-strong ill-s-ink"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M285.1 174.4L287.6 175.9V186.3L285.1 184.9V174.4Z"
+                                                            data-i="0.1"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M357.9 135.3L287.6 175.9V186.3L357.9 145.7V135.3Z"
+                                                            data-i="0.11"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M355.4 133.8L357.9 135.3L287.6 175.9L285.1 174.4L355.4 133.8Z"
+                                                            data-i="0.12" class="ill-f-strong ill-s-ink"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M134.4 88.9L174.6 112.1V122.5L134.4 99.3V88.9Z"
+                                                            data-i="0.12"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M177.1 110.6L174.6 112.1V122.5L177.1 121.1V110.6Z"
+                                                            data-i="0.13"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M136.9 87.4L177.1 110.6L174.6 112.1L134.4 88.9L136.9 87.4Z"
+                                                            data-i="0.14" class="ill-f-strong ill-s-ink"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M194.7 123.7L249.9 155.6V166L194.7 134.1V123.7Z"
+                                                            data-i="0.15"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M252.5 154.1L249.9 155.6V166L252.5 164.6V154.1Z"
+                                                            data-i="0.15"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M197.2 122.2L252.5 154.1L249.9 155.6L194.7 123.7L197.2 122.2Z"
+                                                            data-i="0.16" class="ill-f-strong ill-s-ink"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M270 167.2L325.3 199.1V209.5L270 177.6V167.2Z"
+                                                            data-i="0.17"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M327.8 197.6L325.3 199.1V209.5L327.8 208.1V197.6Z"
+                                                            data-i="0.17"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M272.6 165.7L327.8 197.6L325.3 199.1L270 167.2L272.6 165.7Z"
+                                                            data-i="0.18" class="ill-f-strong ill-s-ink"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M345.4 210.7L360.5 219.4V229.8L345.4 221.1V210.7Z"
+                                                            data-i="0.19"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M363 217.9L360.5 219.4V229.8L363 228.4V217.9Z"
+                                                            data-i="0.2"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M347.9 209.2L363 217.9L360.5 219.4L345.4 210.7L347.9 209.2Z"
+                                                            data-i="0.2" class="ill-f-strong ill-s-ink"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M185.9 73.9L233.6 101.5V113.1L185.9 85.5V73.9Z"
+                                                            data-i="0.21"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M255 89.2L233.6 101.5V113.1L255 100.8V89.2Z"
+                                                            data-i="0.22"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M207.3 61.5L255 89.1L233.6 101.5L185.9 73.8L207.3 61.5Z"
+                                                            data-i="0.23"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M189.7 72.0L203.5 79.9V84.0L189.7 76.0V72.0Z"
+                                                            data-i="0.23"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M224.8 67.7L203.5 80.0V84.1L224.8 71.8V67.7Z"
+                                                            data-i="0.24"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M211 59.7L224.8 67.7L203.5 80.0L189.7 72.1L211 59.7Z"
+                                                            data-i="0.25"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M175.9 99.5L190.9 108.2V117.4L175.9 108.8V99.5Z"
+                                                            data-i="0.25"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M206 99.5L190.9 108.2V117.4L206 108.8V99.5Z"
+                                                            data-i="0.26"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M190.9 90.7L206 99.4L190.9 108.2L175.9 99.4L190.9 90.7Z"
+                                                            data-i="0.27"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M261.3 117.5L309 145V156.6L261.3 129.1V117.5Z"
+                                                            data-i="0.28"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M330.3 132.7L309 145V156.6L330.3 144.3V132.7Z"
+                                                            data-i="0.28"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M282.6 105.1L330.3 132.7L309 145L261.3 117.5L282.6 105.1Z"
+                                                            data-i="0.29"
+                                                            class="ill-f-accent ill-s-ink ill-f-accent ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M265 115.6L278.8 123.5V127.6L265 119.6V115.6Z"
+                                                            data-i="0.3"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M300.2 111.2L278.8 123.5V127.6L300.2 115.3V111.2Z"
+                                                            data-i="0.31"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M286.4 103.2L300.2 111.2L278.8 123.5L265 115.6L286.4 103.2Z"
+                                                            data-i="0.31"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M251.2 143L266.3 151.7V160.9L251.2 152.2V143Z"
+                                                            data-i="0.32"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M281.3 143L266.3 151.7V160.9L281.3 152.2V143Z"
+                                                            data-i="0.33"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M266.3 134.3L281.3 143L266.3 151.7L251.2 143L266.3 134.3Z"
+                                                            data-i="0.34"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M336.6 161L384.3 188.5V200.1L336.6 172.6V161Z"
+                                                            data-i="0.34"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M405.7 176.2L384.3 188.5V200.1L405.7 187.8V176.2Z"
+                                                            data-i="0.35"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M357.9 148.6L405.7 176.2L384.3 188.5L336.6 161L357.9 148.6Z"
+                                                            data-i="0.36"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M340.4 159.1L354.2 167V171.1L340.4 163.1V159.1Z"
+                                                            data-i="0.36"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M375.5 154.7L354.2 167V171.1L375.5 158.8V154.7Z"
+                                                            data-i="0.37"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M361.7 146.7L375.5 154.7L354.2 167L340.4 159.1L361.7 146.7Z"
+                                                            data-i="0.38"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M326.5 186.5L341.6 195.2V204.4L326.5 195.8V186.5Z"
+                                                            data-i="0.39"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M356.7 186.5L341.6 195.2V204.4L356.7 195.8V186.5Z"
+                                                            data-i="0.39"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M341.6 177.8L356.7 186.5L341.6 195.2L326.5 186.5L341.6 177.8Z"
+                                                            data-i="0.4"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M93 121.8L158.3 159.5V175.4L93 137.8V121.8Z"
+                                                            data-i="0.41" class="ill-f-subtle ill-s-ink"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M173.4 150.8L158.3 159.5V175.4L173.4 166.8V150.8Z"
+                                                            data-i="0.42" class="ill-f-subtle ill-s-ink"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M108.1 113.1L173.4 150.8L158.3 159.5L93 121.8L108.1 113.1Z"
+                                                            data-i="0.42"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M125.6 160.9L140.7 169.7V185.6L125.6 176.9V160.9Z"
+                                                            data-i="0.43" class="ill-f-subtle ill-s-ink"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M158.3 159.5L140.7 169.7V185.6L158.3 175.4V159.5Z"
+                                                            data-i="0.44" class="ill-f-subtle ill-s-ink"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M143.2 150.8L158.3 159.5L140.7 169.7L125.6 160.9L143.2 150.8Z"
+                                                            data-i="0.44"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M120.6 115.1L134.4 123.1V134.1L120.6 126.1V115.1Z"
+                                                            data-i="0.45" class="ill-f-panel ill-s-ink"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M136.9 121.7L134.4 123.1V134.1L136.9 132.7V121.7Z"
+                                                            data-i="0.46"
+                                                            class="ill-f-ink ill-s-ink ill-f-ink ill-s-ink"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M123.1 113.7L136.9 121.7L134.4 123.1L120.6 115.1L123.1 113.7Z"
+                                                            data-i="0.47"
+                                                            class="ill-f-ink ill-s-ink ill-f-ink ill-s-ink"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M198.5 188.2L215 197.8V205.3L198.5 195.8V188.2Z"
+                                                            data-i="0.47"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M230.1 189.1L215 197.8V205.3L230.1 196.6V189.1Z"
+                                                            data-i="0.48"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M213.5 179.5L230.1 189.1L215 197.8L198.5 188.2L213.5 179.5Z"
+                                                            data-i="0.49"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M210.5 172L227.1 181.5V190.8L210.5 181.2V172Z"
+                                                            data-i="0.5"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M230.1 179.8L227.1 181.5V190.8L230.1 189.1V179.8Z"
+                                                            data-i="0.5"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M213.5 170.2L230.1 179.8L227.1 181.5L210.5 172L213.5 170.2Z"
+                                                            data-i="0.51"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M223.6 202.7L240.2 212.3V219.8L223.6 210.2V202.7Z"
+                                                            data-i="0.52"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M255.2 203.6L240.2 212.3V219.8L255.2 211.1V203.6Z"
+                                                            data-i="0.52"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M238.6 194L255.2 203.6L240.2 212.3L223.6 202.7L238.6 194Z"
+                                                            data-i="0.53"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M235.6 186.5L252.2 196V205.3L235.6 195.8V186.5Z"
+                                                            data-i="0.54"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M255.2 194.3L252.2 196V205.3L255.2 203.6V194.3Z"
+                                                            data-i="0.55"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M238.6 184.7L255.2 194.3L252.2 196L235.6 186.5L238.6 184.7Z"
+                                                            data-i="0.55"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M248.7 217.2L265.3 226.8V234.3L248.7 224.8V217.2Z"
+                                                            data-i="0.56"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M280.3 218.1L265.3 226.8V234.3L280.3 225.6V218.1Z"
+                                                            data-i="0.57"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M263.8 208.5L280.3 218.1L265.3 226.8L248.7 217.2L263.8 208.5Z"
+                                                            data-i="0.58"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M260.7 201L277.3 210.5V219.8L260.7 210.2V201Z"
+                                                            data-i="0.58"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M280.3 208.8L277.3 210.5V219.8L280.3 218.1V208.8Z"
+                                                            data-i="0.59"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M263.8 199.2L280.3 208.8L277.3 210.5L260.7 201L263.8 199.2Z"
+                                                            data-i="0.6"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M273.8 231.7L290.4 241.3V248.8L273.8 239.2V231.7Z"
+                                                            data-i="0.6"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M305.5 232.6L290.4 241.3V248.8L305.5 240.1V232.6Z"
+                                                            data-i="0.61"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M288.9 223L305.5 232.6L290.4 241.3L273.8 231.7L288.9 223Z"
+                                                            data-i="0.62"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M285.9 215.5L302.4 225V234.3L285.9 224.8V215.5Z"
+                                                            data-i="0.63"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M305.5 223.3L302.4 225V234.3L305.5 232.6V223.3Z"
+                                                            data-i="0.63"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M288.9 213.7L305.5 223.3L302.4 225L285.9 215.5L288.9 213.7Z"
+                                                            data-i="0.64"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M173.4 202.7L189.9 212.3V219.8L173.4 210.2V202.7Z"
+                                                            data-i="0.65"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M205 203.6L189.9 212.3V219.8L205 211.1V203.6Z"
+                                                            data-i="0.66"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M188.4 194L205 203.6L189.9 212.3L173.4 202.7L188.4 194Z"
+                                                            data-i="0.66"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M185.4 186.5L202 196V205.3L185.4 195.8V186.5Z"
+                                                            data-i="0.67"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M205 194.3L202 196V205.3L205 203.6V194.3Z" data-i="0.68"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M188.4 184.7L205 194.3L202 196L185.4 186.5L188.4 184.7Z"
+                                                            data-i="0.68"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M198.5 217.2L215 226.8V234.3L198.5 224.8V217.2Z"
+                                                            data-i="0.69"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M230.1 218.1L215 226.8V234.3L230.1 225.6V218.1Z"
+                                                            data-i="0.7"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M213.5 208.5L230.1 218.1L215 226.8L198.5 217.2L213.5 208.5Z"
+                                                            data-i="0.71"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M210.5 201L227.1 210.5V219.8L210.5 210.2V201Z"
+                                                            data-i="0.71"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M230.1 208.8L227.1 210.5V219.8L230.1 218.1V208.8Z"
+                                                            data-i="0.72"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M213.5 199.2L230.1 208.8L227.1 210.5L210.5 201L213.5 199.2Z"
+                                                            data-i="0.73"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M223.6 231.7L240.2 241.3V248.8L223.6 239.2V231.7Z"
+                                                            data-i="0.74"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M255.2 232.6L240.2 241.3V248.8L255.2 240.1V232.6Z"
+                                                            data-i="0.74"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M238.6 223L255.2 232.6L240.2 241.3L223.6 231.7L238.6 223Z"
+                                                            data-i="0.75"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M235.6 215.5L252.2 225V234.3L235.6 224.8V215.5Z"
+                                                            data-i="0.76"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M255.2 223.3L252.2 225V234.3L255.2 232.6V223.3Z"
+                                                            data-i="0.76"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M238.6 213.7L255.2 223.3L252.2 225L235.6 215.5L238.6 213.7Z"
+                                                            data-i="0.77"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M248.7 246.2L265.3 255.8V263.3L248.7 253.8V246.2Z"
+                                                            data-i="0.78"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M280.3 247.1L265.3 255.8V263.3L280.3 254.6V247.1Z"
+                                                            data-i="0.79"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M263.8 237.5L280.3 247.1L265.3 255.8L248.7 246.2L263.8 237.5Z"
+                                                            data-i="0.79"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M260.7 230L277.3 239.5V248.8L260.7 239.2V230Z"
+                                                            data-i="0.8"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M280.3 237.8L277.3 239.5V248.8L280.3 247.1V237.8Z"
+                                                            data-i="0.81"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M263.8 228.2L280.3 237.8L277.3 239.5L260.7 230L263.8 228.2Z"
+                                                            data-i="0.82"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path
+                                                            d="M214.3 177.6C217.3 177.6 219.8 175.1 219.8 172.1C219.8 169.0 217.3 166.6 214.3 166.6C211.2 166.6 208.8 169.0 208.8 172.1C208.8 175.1 211.2 177.6 214.3 177.6Z"
+                                                            data-i="0.82" class="ill-f-ink ill-f-ink"></path>
+                                                        <path
+                                                            d="M239.4 221.1C242.4 221.1 244.9 218.6 244.9 215.6C244.9 212.5 242.4 210.1 239.4 210.1C236.3 210.1 233.9 212.5 233.9 215.6C233.9 218.6 236.3 221.1 239.4 221.1Z"
+                                                            data-i="0.83" class="ill-f-ink ill-f-ink"></path>
+                                                        <path stroke-dasharray="2 3" stroke-linejoin="round"
+                                                            stroke-linecap="round" stroke-width="1.2"
+                                                            d="M283.9 132V90.9" data-i="0.84"
+                                                            class="ill-s-accent ill-s-accent"></path>
+                                                        <path
+                                                            d="M283.9 92.9C271.9 78.9 271.9 62.9 283.9 62.9C295.9 62.9 295.9 78.9 283.9 92.9Z"
+                                                            data-i="0.85" class="ill-f-accent ill-f-accent"></path>
+                                                        <path
+                                                            d="M283.9 77.9C286.1 77.9 287.9 76.1 287.9 73.9C287.9 71.6 286.1 69.9 283.9 69.9C281.6 69.9 279.9 71.6 279.9 73.9C279.9 76.1 281.6 77.9 283.9 77.9Z"
+                                                            data-i="0.85" class="ill-f-raised ill-f-raised"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            d="M299.9 73.9H426L446 96.0" data-i="0.86"
+                                                            class="ill-s-ink ill-s-ink"></path>
+                                                        <path
+                                                            d="M446 99C447.6 99 449 97.6 449 96C449 94.3 447.6 93 446 93C444.3 93 443 94.3 443 96C443 97.6 444.3 99 446 99Z"
+                                                            data-i="0.87" class="ill-f-ink ill-f-ink"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            d="M608 56H454C449.5 56 446 59.5 446 64V144C446 148.4 449.5 152 454 152H608C612.4 152 616 148.4 616 144V64C616 59.5 612.4 56 608 56Z"
+                                                            data-i="0.87"
+                                                            class="ill-f-raised ill-s-strong ill-f-raised ill-s-strong">
+                                                        </path>
+                                                        <path d="M449 56H446V152H449V56Z" data-i="0.88"
+                                                            class="ill-f-accent ill-f-accent"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            d="M64 350V356" data-i="0.89"
+                                                            class="ill-s-strong ill-s-strong"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            d="M117.6 350V356" data-i="0.9"
+                                                            class="ill-s-strong ill-s-strong"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            d="M171.2 350V356" data-i="0.9"
+                                                            class="ill-s-strong ill-s-strong"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            d="M224.8 350V356" data-i="0.91"
+                                                            class="ill-s-strong ill-s-strong"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            d="M278.4 350V356" data-i="0.92"
+                                                            class="ill-s-strong ill-s-strong"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            d="M332 350V356" data-i="0.93"
+                                                            class="ill-s-strong ill-s-strong"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            d="M385.6 350V356" data-i="0.93"
+                                                            class="ill-s-strong ill-s-strong"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            d="M439.2 350V356" data-i="0.94"
+                                                            class="ill-s-strong ill-s-strong"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            d="M492.8 350V356" data-i="0.95"
+                                                            class="ill-s-strong ill-s-strong"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            d="M546.4 350V356" data-i="0.95"
+                                                            class="ill-s-strong ill-s-strong"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            d="M600 350V356" data-i="0.96"
+                                                            class="ill-s-strong ill-s-strong"></path>
+                                                        <path
+                                                            d="M597 362H67C65.3 362 64 363.3 64 365V371C64 372.6 65.3 374 67 374H597C598.6 374 600 372.6 600 371V365C600 363.3 598.6 362 597 362Z"
+                                                            data-i="0.97" class="ill-f-subtle"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            d="M113.6 362H68C66.3 362 65 363.3 65 365V371C65 372.6 66.3 374 68 374H113.6C115.2 374 116.6 372.6 116.6 371V365C116.6 363.3 115.2 362 113.6 362Z"
+                                                            data-i="0.98"
+                                                            class="ill-f-raised ill-s-strong ill-f-raised ill-s-strong">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            d="M194 362H148.4C146.7 362 145.4 363.3 145.4 365V371C145.4 372.6 146.7 374 148.4 374H194C195.6 374 197 372.6 197 371V365C197 363.3 195.6 362 194 362Z"
+                                                            data-i="0.98"
+                                                            class="ill-f-raised ill-s-strong ill-f-raised ill-s-strong">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            d="M354.8 362H282.4C280.7 362 279.4 363.3 279.4 365V371C279.4 372.6 280.7 374 282.4 374H354.8C356.4 374 357.8 372.6 357.8 371V365C357.8 363.3 356.4 362 354.8 362Z"
+                                                            data-i="0.99"
+                                                            class="ill-f-raised ill-s-strong ill-f-raised ill-s-strong">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            d="M488.8 362H443.2C441.5 362 440.2 363.3 440.2 365V371C440.2 372.6 441.5 374 443.2 374H488.8C490.4 374 491.8 372.6 491.8 371V365C491.8 363.3 490.4 362 488.8 362Z"
+                                                            data-i="1.0"
+                                                            class="ill-f-raised ill-s-strong ill-f-raised ill-s-strong">
+                                                        </path>
+                                                        <path
+                                                            d="M597 384H67C65.3 384 64 385.3 64 387V393C64 394.6 65.3 396 67 396H597C598.6 396 600 394.6 600 393V387C600 385.3 598.6 384 597 384Z"
+                                                            data-i="1.01" class="ill-f-subtle"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            d="M140.4 384H94.8C93.1 384 91.8 385.3 91.8 387V393C91.8 394.6 93.1 396 94.8 396H140.4C142.0 396 143.4 394.6 143.4 393V387C143.4 385.3 142.0 384 140.4 384Z"
+                                                            data-i="1.01"
+                                                            class="ill-f-raised ill-s-strong ill-f-raised ill-s-strong">
+                                                        </path>
+                                                        <path
+                                                            d="M167.2 384H148.4C146.7 384 145.4 385.3 145.4 387V393C145.4 394.6 146.7 396 148.4 396H167.2C168.8 396 170.2 394.6 170.2 393V387C170.2 385.3 168.8 384 167.2 384Z"
+                                                            data-i="1.02" class="ill-f-accent ill-f-accent"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            d="M274.4 384H228.8C227.1 384 225.8 385.3 225.8 387V393C225.8 394.6 227.1 396 228.8 396H274.4C276.0 396 277.4 394.6 277.4 393V387C277.4 385.3 276.0 384 274.4 384Z"
+                                                            data-i="1.03"
+                                                            class="ill-f-raised ill-s-strong ill-f-raised ill-s-strong">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            d="M408.4 384H336C334.3 384 333 385.3 333 387V393C333 394.6 334.3 396 336 396H408.4C410.0 396 411.4 394.6 411.4 393V387C411.4 385.3 410.0 384 408.4 384Z"
+                                                            data-i="1.03"
+                                                            class="ill-f-raised ill-s-strong ill-f-raised ill-s-strong">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            d="M569.2 384H496.8C495.1 384 493.8 385.3 493.8 387V393C493.8 394.6 495.1 396 496.8 396H569.2C570.8 396 572.2 394.6 572.2 393V387C572.2 385.3 570.8 384 569.2 384Z"
+                                                            data-i="1.04"
+                                                            class="ill-f-raised ill-s-strong ill-f-raised ill-s-strong">
+                                                        </path>
+                                                        <path
+                                                            d="M597 406H67C65.3 406 64 407.3 64 409V415C64 416.6 65.3 418 67 418H597C598.6 418 600 416.6 600 415V409C600 407.3 598.6 406 597 406Z"
+                                                            data-i="1.05" class="ill-f-subtle"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            d="M167.2 406H68C66.3 406 65 407.3 65 409V415C65 416.6 66.3 418 68 418H167.2C168.8 418 170.2 416.6 170.2 415V409C170.2 407.3 168.8 406 167.2 406Z"
+                                                            data-i="1.06"
+                                                            class="ill-f-raised ill-s-strong ill-f-raised ill-s-strong">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            d="M247.6 406H228.8C227.1 406 225.8 407.3 225.8 409V415C225.8 416.6 227.1 418 228.8 418H247.6C249.2 418 250.6 416.6 250.6 415V409C250.6 407.3 249.2 406 247.6 406Z"
+                                                            data-i="1.06"
+                                                            class="ill-f-raised ill-s-strong ill-f-raised ill-s-strong">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            d="M462 406H389.6C387.9 406 386.6 407.3 386.6 409V415C386.6 416.6 387.9 418 389.6 418H462C463.6 418 465 416.6 465 415V409C465 407.3 463.6 406 462 406Z"
+                                                            data-i="1.07"
+                                                            class="ill-f-raised ill-s-strong ill-f-raised ill-s-strong">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            d="M596 406H550.4C548.7 406 547.4 407.3 547.4 409V415C547.4 416.6 548.7 418 550.4 418H596C597.6 418 599 416.6 599 415V409C599 407.3 597.6 406 596 406Z"
+                                                            data-i="1.08"
+                                                            class="ill-f-raised ill-s-strong ill-f-raised ill-s-strong">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.2" d="M203.4 356V424" data-i="1.09"
+                                                            class="ill-s-alert"></path>
+                                                        <path
+                                                            d="M203.4 359C205.0 359 206.4 357.6 206.4 356C206.4 354.3 205.0 353 203.4 353C201.7 353 200.4 354.3 200.4 356C200.4 357.6 201.7 359 203.4 359Z"
+                                                            data-i="1.09" class="ill-f-alert ill-f-alert"></path>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                            <rect rx="15.5" height="459" width="639" y="0.5" x="0.5" data-i="1.1"
+                                                class="ill-s-line-paper ill-s-line-paper"></rect>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g><text data-i="0.45" font-weight="500" font-size="12" y="137.7" x="159.4" fill="#656669"
+                                class="ill-t ill-f-muted ill-t ill-f-muted">Rm 1</text><text data-i="0.48"
+                                font-weight="500" font-size="12" y="181.3" x="234.7"
+                                class="ill-t ill-f-muted ill-t ill-f-muted">Rm 2</text><text data-i="0.51"
+                                font-weight="500" font-size="12" y="224.8" x="310"
+                                class="ill-t ill-f-muted ill-t ill-f-muted">Rm 3</text><text data-i="0.54"
+                                font-weight="500" font-size="12" y="192.1" x="71.3"
+                                class="ill-t ill-f-muted ill-t ill-f-muted">Front desk</text><text data-i="0.57"
+                                font-weight="500" font-size="12" y="276.6" x="304.4"
+                                class="ill-t ill-f-muted ill-t ill-f-muted">Waiting</text><text data-i="0.6"
+                                font-weight="500" font-size="12" y="79.8" x="462"
+                                class="ill-t ill-f-accent ill-t ill-f-accent">Booked, 09:30</text><text data-i="0.63"
+                                font-weight="500" font-size="14" y="99.5" x="462"
+                                class="ill-t ill-f-ink ill-t ill-f-ink">Ana Silva</text><text data-i="0.66"
+                                font-size="12" y="117.8" x="462" class="ill-t ill-f-muted ill-t ill-f-muted">Annual
+                                physical</text><text data-i="0.69" font-size="12" y="133.8" x="462"
+                                class="ill-t ill-f-muted ill-t ill-f-muted">Dr. Ortiz, Room 2</text><text data-i="0.72"
+                                font-weight="500" font-size="12" y="345.8" x="57"
+                                class="ill-t ill-f-muted ill-t ill-f-muted">08</text><text data-i="0.75"
+                                font-weight="500" font-size="12" y="345.8" x="110.6"
+                                class="ill-t ill-f-muted ill-t ill-f-muted">09</text><text data-i="0.78"
+                                font-weight="500" font-size="12" y="345.8" x="164.2"
+                                class="ill-t ill-f-muted ill-t ill-f-muted">10</text><text data-i="0.82"
+                                font-weight="500" font-size="12" y="345.8" x="217.8"
+                                class="ill-t ill-f-muted ill-t ill-f-muted">11</text><text data-i="0.85"
+                                font-weight="500" font-size="12" y="345.8" x="271.4"
+                                class="ill-t ill-f-muted ill-t ill-f-muted">12</text><text data-i="0.88"
+                                font-weight="500" font-size="12" y="345.8" x="325"
+                                class="ill-t ill-f-muted ill-t ill-f-muted">13</text><text data-i="0.91"
+                                font-weight="500" font-size="12" y="345.8" x="378.6"
+                                class="ill-t ill-f-muted ill-t ill-f-muted">14</text><text data-i="0.94"
+                                font-weight="500" font-size="12" y="345.8" x="432.2"
+                                class="ill-t ill-f-muted ill-t ill-f-muted">15</text><text data-i="0.97"
+                                font-weight="500" font-size="12" y="345.8" x="485.8"
+                                class="ill-t ill-f-muted ill-t ill-f-muted">16</text><text data-i="1.0"
+                                font-weight="500" font-size="12" y="345.8" x="539.4"
+                                class="ill-t ill-f-muted ill-t ill-f-muted">17</text><text data-i="1.03"
+                                font-weight="500" font-size="12" y="345.8" x="593"
+                                class="ill-t ill-f-muted ill-t ill-f-muted">18</text><text data-i="1.06"
+                                font-weight="500" font-size="12" y="373.8" x="24"
+                                class="ill-t ill-f-muted ill-t ill-f-muted">Rm 1</text><text data-i="1.09"
+                                font-weight="500" font-size="12" y="395.8" x="24"
+                                class="ill-t ill-f-muted ill-t ill-f-muted">Rm 2</text><text data-i="1.12"
+                                font-weight="500" font-size="12" y="417.8" x="24"
+                                class="ill-t ill-f-muted ill-t ill-f-muted">Rm 3</text><text data-i="1.15"
+                                font-weight="500" font-size="12" y="435.8" x="209.4"
+                                class="ill-t ill-f-alert ill-t ill-f-alert">Now 10:36</text>
+                            <defs>
+                                <clipPath id="ia-mod-scheduling-clip0_78_2">
+                                    <rect fill="white" rx="16" height="460" width="640"></rect>
+                                </clipPath>
+                            </defs>
+                        </svg></div>
+                </div>
+            </section>
+            <section class="section">
+                <div id="intake" class="anchor"></div>
+                <div class="module-grid is-flip">
+                    <div class="module-copy reveal">
+                        <div class="mono-label">Intake</div>
+                        <h2 class="heading-l">Forms that land in the chart, not a PDF.</h2>
+                        <p class="text-lead">Patients finish intake from their phone before they arrive. Answers map to
+                            structured fields in the record and in your EHR.</p>
+                        <div class="points">
+                            <div class="point">
+                                <div class="point_mark"></div>
+                                <div class="point_title">Insurance card capture with OCR</div>
+                            </div>
+                            <div class="point">
+                                <div class="point_mark"></div>
+                                <div class="point_title">Consents with signature and audit trail</div>
+                            </div>
+                            <div class="point">
+                                <div class="point_mark"></div>
+                                <div class="point_title">Conditional questions by visit type</div>
+                            </div>
+                        </div><a href="/contact" class="text-link">See intake in a demo<span class="text-link_icon"><svg
+                                    width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 10L10 4M10 4H5M10 4V9" stroke="currentColor" stroke-width="1.4"
+                                        stroke-linecap="round"></path>
+                                </svg></span></a>
+                    </div>
+                    <div class="module-visual reveal is-first"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 640 460"
+                            aria-label="Phone intake form writing insurance, history and consent into the patient record"
+                            role="img" class="ill-art ia-mod-intake">
+                            <g>
+                                <g>
+                                    <g>
+                                        <g>
+                                            <g clip-path="url(#ia-mod-intake-clip0_78_2)">
+                                                <rect fill="#EDEEEF" rx="16" height="460" width="640"></rect>
+                                                <g>
+                                                    <g>
+                                                        <path
+                                                            d="M226 52H98C82.5 52 70 64.5 70 80V396C70 411.4 82.5 424 98 424H226C241.4 424 254 411.4 254 396V80C254 64.5 241.4 52 226 52Z"
+                                                            data-i="0.0" class="ill-f-strong"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.5"
+                                                            d="M220 44H92C76.5 44 64 56.5 64 72V388C64 403.4 76.5 416 92 416H220C235.4 416 248 403.4 248 388V72C248 56.5 235.4 44 220 44Z"
+                                                            data-i="0.03"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path
+                                                            d="M175 56H137C133.1 56 130 59.1 130 63C130 66.8 133.1 70 137 70H175C178.8 70 182 66.8 182 63C182 59.1 178.8 56 175 56Z"
+                                                            data-i="0.05" class="ill-f-ink ill-f-ink"></path>
+                                                        <path
+                                                            d="M114 132H84C82.8 132 82 132.8 82 134C82 135.1 82.8 136 84 136H114C115.1 136 116 135.1 116 134C116 132.8 115.1 132 114 132Z"
+                                                            data-i="0.07" class="ill-f-accent ill-f-accent"></path>
+                                                        <path
+                                                            d="M152 132H122C120.8 132 120 132.8 120 134C120 135.1 120.8 136 122 136H152C153.1 136 154 135.1 154 134C154 132.8 153.1 132 152 132Z"
+                                                            data-i="0.1" class="ill-f-accent ill-f-accent"></path>
+                                                        <path
+                                                            d="M190 132H160C158.8 132 158 132.8 158 134C158 135.1 158.8 136 160 136H190C191.1 136 192 135.1 192 134C192 132.8 191.1 132 190 132Z"
+                                                            data-i="0.12" class="ill-f-accent ill-f-accent"></path>
+                                                        <path
+                                                            d="M228 132H198C196.8 132 196 132.8 196 134C196 135.1 196.8 136 198 136H228C229.1 136 230 135.1 230 134C230 132.8 229.1 132 228 132Z"
+                                                            data-i="0.15" class="ill-f-subtle"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            d="M226 152H86C81.5 152 78 155.5 78 160V186C78 190.4 81.5 194 86 194H226C230.4 194 234 190.4 234 186V160C234 155.5 230.4 152 226 152Z"
+                                                            data-i="0.18" class="ill-f-paper ill-s-line-paper"></path>
+                                                        <path
+                                                            d="M96 181C100.4 181 104 177.4 104 173C104 168.5 100.4 165 96 165C91.5 165 88 168.5 88 173C88 177.4 91.5 181 96 181Z"
+                                                            data-i="0.2" class="ill-f-accent ill-f-accent"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.6" d="M92 173L95 176L100 170" data-i="0.23"
+                                                            class="ill-s-raised"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            d="M226 202H86C81.5 202 78 205.5 78 210V236C78 240.4 81.5 244 86 244H226C230.4 244 234 240.4 234 236V210C234 205.5 230.4 202 226 202Z"
+                                                            data-i="0.25" class="ill-f-paper ill-s-line-paper"></path>
+                                                        <path
+                                                            d="M96 231C100.4 231 104 227.4 104 223C104 218.5 100.4 215 96 215C91.5 215 88 218.5 88 223C88 227.4 91.5 231 96 231Z"
+                                                            data-i="0.28" class="ill-f-accent ill-f-accent"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.6" d="M92 223L95 226L100 220" data-i="0.3"
+                                                            class="ill-s-raised"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            d="M226 252H86C81.5 252 78 255.5 78 260V286C78 290.4 81.5 294 86 294H226C230.4 294 234 290.4 234 286V260C234 255.5 230.4 252 226 252Z"
+                                                            data-i="0.33" class="ill-f-paper ill-s-line-paper"></path>
+                                                        <path
+                                                            d="M96 281C100.4 281 104 277.4 104 273C104 268.5 100.4 265 96 265C91.5 265 88 268.5 88 273C88 277.4 91.5 281 96 281Z"
+                                                            data-i="0.35" class="ill-f-accent ill-f-accent"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.6" d="M92 273L95 276L100 270" data-i="0.38"
+                                                            class="ill-s-raised"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            d="M226 302H86C81.5 302 78 305.5 78 310V336C78 340.4 81.5 344 86 344H226C230.4 344 234 340.4 234 336V310C234 305.5 230.4 302 226 302Z"
+                                                            data-i="0.4"
+                                                            class="ill-f-raised ill-s-accent ill-f-raised ill-s-accent">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.2"
+                                                            d="M96 331C100.4 331 104 327.4 104 323C104 318.5 100.4 315 96 315C91.5 315 88 318.5 88 323C88 327.4 91.5 331 96 331Z"
+                                                            data-i="0.43" class="ill-s-accent ill-s-accent"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.4"
+                                                            d="M92 374C102 356 110 356 108 374C106 392 118 384 128 368C138 352 140 366 144 372C148 378 158 368 166 362"
+                                                            data-i="0.45" class="ill-s-ink ill-s-ink"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            d="M86 384H226" data-i="0.48"
+                                                            class="ill-s-line-paper ill-s-line-paper"></path>
+                                                        <path stroke-dasharray="3 5" stroke-linejoin="round"
+                                                            stroke-linecap="round" stroke-width="1.2"
+                                                            d="M254 184C348 124 330 330 420 250" data-i="0.5"
+                                                            class="ill-s-ink ill-s-ink"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.2"
+                                                            d="M312.4 156.4H270.4C267.6 156.4 265.4 158.6 265.4 161.4V185.4C265.4 188.1 267.6 190.4 270.4 190.4H312.4C315.1 190.4 317.4 188.1 317.4 185.4V161.4C317.4 158.6 315.1 156.4 312.4 156.4Z"
+                                                            data-i="0.53"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path d="M317.4 164.4H265.4V171.4H317.4V164.4Z" data-i="0.55"
+                                                            class="ill-f-ink ill-f-ink"></path>
+                                                        <path
+                                                            d="M282.4 177.4H274.4C273.2 177.4 272.4 178.2 272.4 179.4V183.4C272.4 184.5 273.2 185.4 274.4 185.4H282.4C283.5 185.4 284.4 184.5 284.4 183.4V179.4C284.4 178.2 283.5 177.4 282.4 177.4Z"
+                                                            data-i="0.58" class="ill-f-accent ill-f-accent"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.2"
+                                                            d="M352.2 194.4H318.2C316.5 194.4 315.2 195.7 315.2 197.4V239.4C315.2 241.0 316.5 242.4 318.2 242.4H352.2C353.8 242.4 355.2 241.0 355.2 239.4V197.4C355.2 195.7 353.8 194.4 352.2 194.4Z"
+                                                            data-i="0.6"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.4"
+                                                            d="M323.2 226.4C329.2 214.4 333.2 214.4 332.2 226.4C331.2 238.4 338.2 232.4 344.2 222.4"
+                                                            data-i="0.63" class="ill-s-accent ill-s-accent"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            d="M323.2 204.4H347.2" data-i="0.65"
+                                                            class="ill-s-strong ill-s-strong"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            d="M323.2 210.4H342.2" data-i="0.68"
+                                                            class="ill-s-strong ill-s-strong"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            d="M323.2 216.4H337.2" data-i="0.7"
+                                                            class="ill-s-strong ill-s-strong"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.2" fill="#EDEEEF"
+                                                            d="M392.9 256.2H354.9C348.8 256.2 343.9 261.1 343.9 267.2C343.9 273.2 348.8 278.2 354.9 278.2H392.9C398.9 278.2 403.9 273.2 403.9 267.2C403.9 261.1 398.9 256.2 392.9 256.2Z"
+                                                            data-i="0.72" class="ill-s-alert"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.3"
+                                                            d="M430 138H486L498 120H600C601.5 120 603.1 120.6 604.2 121.7C605.3 122.8 606 124.4 606 126V356H430V138Z"
+                                                            data-i="0.75" class="ill-f-subtle ill-s-ink"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M579 132H447C445.3 132 444 133.3 444 135V325C444 326.6 445.3 328 447 328H579C580.6 328 582 326.6 582 325V135C582 133.3 580.6 132 579 132Z"
+                                                            data-i="0.78"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            d="M456 152H570" data-i="0.8"
+                                                            class="ill-s-strong ill-s-strong"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            d="M456 164H562" data-i="0.83"
+                                                            class="ill-s-strong ill-s-strong"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            d="M456 176H554" data-i="0.85"
+                                                            class="ill-s-strong ill-s-strong"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            d="M456 188H546" data-i="0.88"
+                                                            class="ill-s-strong ill-s-strong"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            d="M456 200H538" data-i="0.9"
+                                                            class="ill-s-strong ill-s-strong"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.1"
+                                                            d="M579 142H455C453.3 142 452 143.3 452 145V335C452 336.6 453.3 338 455 338H579C580.6 338 582 336.6 582 335V145C582 143.3 580.6 142 579 142Z"
+                                                            data-i="0.93"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            d="M464 162H570" data-i="0.95"
+                                                            class="ill-s-strong ill-s-strong"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            d="M464 174H562" data-i="0.98"
+                                                            class="ill-s-strong ill-s-strong"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            d="M464 186H554" data-i="1.0"
+                                                            class="ill-s-strong ill-s-strong"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            d="M464 198H546" data-i="1.03"
+                                                            class="ill-s-strong ill-s-strong"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            d="M464 210H538" data-i="1.05"
+                                                            class="ill-s-strong ill-s-strong"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.3"
+                                                            d="M430 212H606V356C606 357.5 605.3 359.1 604.2 360.2C603.1 361.3 601.5 362 600 362H436C434.4 362 432.8 361.3 431.7 360.2C430.6 359.1 430 357.5 430 356V212Z"
+                                                            data-i="1.08"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path
+                                                            d="M451 232H447C446.4 232 446 232.4 446 233V237C446 237.5 446.4 238 447 238H451C451.5 238 452 237.5 452 237V233C452 232.4 451.5 232 451 232Z"
+                                                            data-i="1.1" class="ill-f-accent ill-f-accent"></path>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g><text data-i="0.45" font-weight="500" font-size="12" y="99.8" x="82"
+                                class="ill-t ill-f-muted ill-t ill-f-muted">Intake, 3 of 4</text><text data-i="0.5"
+                                font-weight="500" font-size="14" y="119.5" x="82"
+                                class="ill-t ill-f-ink ill-t ill-f-ink">Before your visit</text><text data-i="0.54"
+                                font-size="13" y="171.7" x="112" class="ill-t ill-f-ink ill-t ill-f-ink">Insurance
+                                card</text><text data-i="0.59" font-size="12" y="186.8" x="112"
+                                class="ill-t ill-f-muted ill-t ill-f-muted">Bayline PPO</text><text data-i="0.64"
+                                font-size="13" y="221.7" x="112" class="ill-t ill-f-ink ill-t ill-f-ink">Medical
+                                history</text><text data-i="0.68" font-size="12" y="236.8" x="112"
+                                class="ill-t ill-f-muted ill-t ill-f-muted">12 answers</text><text data-i="0.73"
+                                font-size="13" y="271.7" x="112"
+                                class="ill-t ill-f-ink ill-t ill-f-ink">Allergies</text><text data-i="0.78"
+                                font-size="12" y="286.8" x="112"
+                                class="ill-t ill-f-muted ill-t ill-f-muted">Penicillin</text><text data-i="0.82"
+                                font-size="13" y="321.7" x="112"
+                                class="ill-t ill-f-ink ill-t ill-f-ink">Consent</text><text data-i="0.87" font-size="12"
+                                y="336.8" x="112" class="ill-t ill-f-muted ill-t ill-f-muted">Sign below</text><text
+                                data-i="0.92" font-weight="500" font-size="12" y="274" x="349"
+                                class="ill-t ill-f-alert ill-t ill-f-alert">Penicillin</text><text data-i="0.96"
+                                font-weight="500" font-size="12" y="240.8" x="460"
+                                class="ill-t ill-f-muted ill-t ill-f-muted">Chart</text><text data-i="1.01"
+                                font-weight="500" font-size="14" y="263.5" x="446"
+                                class="ill-t ill-f-ink ill-t ill-f-ink">Ana Silva</text><text data-i="1.06"
+                                font-size="12" y="281.8" x="446" class="ill-t ill-f-muted ill-t ill-f-muted">MRN
+                                20419</text><text data-i="1.1" font-size="12" y="317.8" x="446"
+                                class="ill-t ill-f-accent ill-t ill-f-accent">4 sections written</text><text
+                                data-i="1.15" font-size="12" y="333.8" x="446"
+                                class="ill-t ill-f-muted ill-t ill-f-muted">before she parks</text>
+                            <defs>
+                                <clipPath id="ia-mod-intake-clip0_78_2">
+                                    <rect fill="white" rx="16" height="460" width="640"></rect>
+                                </clipPath>
+                            </defs>
+                        </svg></div>
+                </div>
+            </section>
+            <section class="section">
+                <div id="messaging" class="anchor"></div>
+                <div class="module-grid">
+                    <div class="module-copy reveal">
+                        <div class="mono-label">Messaging</div>
+                        <h2 class="heading-l">One thread per patient, on every channel.</h2>
+                        <p class="text-lead">Text, email and portal messages arrive in one inbox, attached to the
+                            patient. Anyone on the team can pick up where someone else left off.</p>
+                        <div class="points">
+                            <div class="point">
+                                <div class="point_mark"></div>
+                                <div class="point_title">Shared inbox with assignments</div>
+                            </div>
+                            <div class="point">
+                                <div class="point_mark"></div>
+                                <div class="point_title">Templates and quick replies</div>
+                            </div>
+                            <div class="point">
+                                <div class="point_mark"></div>
+                                <div class="point_title">Auto-replies after hours</div>
+                            </div>
+                        </div><a href="/contact" class="text-link">See messaging in a demo<span
+                                class="text-link_icon"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 10L10 4M10 4H5M10 4V9" stroke="currentColor" stroke-width="1.4"
+                                        stroke-linecap="round"></path>
+                                </svg></span></a>
+                    </div>
+                    <div class="module-visual reveal"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 640 460"
+                            aria-label="Text, email and portal messages merging into one patient thread with a reply"
+                            role="img" class="ill-art ia-mod-messaging">
+                            <g>
+                                <g>
+                                    <g>
+                                        <g>
+                                            <g clip-path="url(#ia-mod-messaging-clip0_78_2)">
+                                                <rect rx="16" height="460" width="640" class="ill-f-panel"></rect>
+                                                <g>
+                                                    <g>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.2"
+                                                            d="M78 140C93.4 140 106 127.4 106 112C106 96.5 93.4 84 78 84C62.5 84 50 96.5 50 112C50 127.4 62.5 140 78 140Z"
+                                                            data-i="0.0" class="ill-f-panel ill-s-line-panel"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.4"
+                                                            d="M66 103H90C90.7 103 91.5 103.3 92.1 103.8C92.6 104.4 93 105.2 93 106V118C93 118.7 92.6 119.5 92.1 120.1C91.5 120.6 90.7 121 90 121H78L71 127V121H66C65.2 121 64.4 120.6 63.8 120.1C63.3 119.5 63 118.7 63 118V106C63 105.2 63.3 104.4 63.8 103.8C64.4 103.3 65.2 103 66 103Z"
+                                                            data-i="0.04" class="ill-s-text-panel"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.4" d="M106 112C228 112 198 230 318 230"
+                                                            data-i="0.08" class="ill-s-text-panel"></path>
+                                                        <path
+                                                            d="M191.2 148.2C192.8 148.2 194.2 146.8 194.2 145.2C194.2 143.5 192.8 142.2 191.2 142.2C189.5 142.2 188.2 143.5 188.2 145.2C188.2 146.8 189.5 148.2 191.2 148.2Z"
+                                                            data-i="0.13" class="ill-f-accent ill-f-accent"></path>
+                                                        <path
+                                                            d="M242.3 207.5C243.9 207.5 245.3 206.1 245.3 204.5C245.3 202.8 243.9 201.5 242.3 201.5C240.6 201.5 239.3 202.8 239.3 204.5C239.3 206.1 240.6 207.5 242.3 207.5Z"
+                                                            data-i="0.17" class="ill-f-panel-muted ill-f-panel-muted">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.2"
+                                                            d="M78 258C93.4 258 106 245.4 106 230C106 214.5 93.4 202 78 202C62.5 202 50 214.5 50 230C50 245.4 62.5 258 78 258Z"
+                                                            data-i="0.21" class="ill-f-panel ill-s-line-panel"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.4"
+                                                            d="M89 221H67C65.8 221 65 221.8 65 223V237C65 238.1 65.8 239 67 239H89C90.1 239 91 238.1 91 237V223C91 221.8 90.1 221 89 221Z"
+                                                            data-i="0.25" class="ill-s-text-panel"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.4" d="M65 222L78 232L91 222" data-i="0.3"
+                                                            class="ill-s-text-panel"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.4" d="M106 230C228 230 198 230 318 230"
+                                                            data-i="0.34" class="ill-s-line-panel"></path>
+                                                        <path
+                                                            d="M203.1 233C204.7 233 206.1 231.6 206.1 230C206.1 228.3 204.7 227 203.1 227C201.4 227 200.1 228.3 200.1 230C200.1 231.6 201.4 233 203.1 233Z"
+                                                            data-i="0.38" class="ill-f-panel-muted ill-f-panel-muted">
+                                                        </path>
+                                                        <path
+                                                            d="M257.4 233C259.0 233 260.4 231.6 260.4 230C260.4 228.3 259.0 227 257.4 227C255.7 227 254.4 228.3 254.4 230C254.4 231.6 255.7 233 257.4 233Z"
+                                                            data-i="0.42" class="ill-f-panel-muted ill-f-panel-muted">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.2"
+                                                            d="M78 376C93.4 376 106 363.4 106 348C106 332.5 93.4 320 78 320C62.5 320 50 332.5 50 348C50 363.4 62.5 376 78 376Z"
+                                                            data-i="0.47" class="ill-f-panel ill-s-line-panel"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.4"
+                                                            d="M88 337H68C66.3 337 65 338.3 65 340V356C65 357.6 66.3 359 68 359H88C89.6 359 91 357.6 91 356V340C91 338.3 89.6 337 88 337Z"
+                                                            data-i="0.51" class="ill-s-text-panel"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.4" d="M65 344H91" data-i="0.55"
+                                                            class="ill-s-text-panel"></path>
+                                                        <path
+                                                            d="M70 341.5C70.5 341.5 71 341.0 71 340.5C71 339.9 70.5 339.5 70 339.5C69.4 339.5 69 339.9 69 340.5C69 341.0 69.4 341.5 70 341.5Z"
+                                                            data-i="0.59" class="ill-f-text-panel ill-f-text-panel">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.4" d="M106 348C228 348 198 230 318 230"
+                                                            data-i="0.63" class="ill-s-line-panel"></path>
+                                                        <path
+                                                            d="M214.1 290.2C215.7 290.2 217.1 288.8 217.1 287.2C217.1 285.5 215.7 284.2 214.1 284.2C212.4 284.2 211.1 285.5 211.1 287.2C211.1 288.8 212.4 290.2 214.1 290.2Z"
+                                                            data-i="0.68" class="ill-f-panel-muted ill-f-panel-muted">
+                                                        </path>
+                                                        <path
+                                                            d="M275.6 239.3C277.2 239.3 278.6 237.9 278.6 236.3C278.6 234.6 277.2 233.3 275.6 233.3C273.9 233.3 272.6 234.6 272.6 236.3C272.6 237.9 273.9 239.3 275.6 239.3Z"
+                                                            data-i="0.72" class="ill-f-panel-muted ill-f-panel-muted">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="3" d="M318 230H352" data-i="0.76"
+                                                            class="ill-s-accent ill-s-accent"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="3"
+                                                            d="M318 236C321.3 236 324 233.3 324 230C324 226.6 321.3 224 318 224C314.6 224 312 226.6 312 230C312 233.3 314.6 236 318 236Z"
+                                                            data-i="0.8"
+                                                            class="ill-f-accent ill-s-panel ill-f-accent ill-s-panel">
+                                                        </path>
+                                                        <path
+                                                            d="M576 72H364C357.3 72 352 77.3 352 84V376C352 382.6 357.3 388 364 388H576C582.6 388 588 382.6 588 376V84C588 77.3 582.6 72 576 72Z"
+                                                            data-i="0.85" class="ill-f-raised ill-f-raised"></path>
+                                                        <path fill="#EDEEEF"
+                                                            d="M380 113C387.1 113 393 107.1 393 100C393 92.8 387.1 87 380 87C372.8 87 367 92.8 367 100C367 107.1 372.8 113 380 113Z"
+                                                            data-i="0.89"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            d="M352 128H588" data-i="0.93"
+                                                            class="ill-s-line-paper ill-s-line-paper"></path>
+                                                        <path
+                                                            d="M528 144H376C370.4 144 366 148.4 366 154V168C366 173.5 370.4 178 376 178H528C533.5 178 538 173.5 538 168V154C538 148.4 533.5 144 528 144Z"
+                                                            data-i="0.97" class="ill-f-subtle"></path>
+                                                        <path
+                                                            d="M564 204H434C428.4 204 424 208.4 424 214V228C424 233.5 428.4 238 434 238H564C569.5 238 574 233.5 574 228V214C574 208.4 569.5 204 564 204Z"
+                                                            data-i="1.02" class="ill-f-accent ill-f-accent"></path>
+                                                        <path
+                                                            d="M528 264H376C370.4 264 366 268.4 366 274V288C366 293.5 370.4 298 376 298H528C533.5 298 538 293.5 538 288V274C538 268.4 533.5 264 528 264Z"
+                                                            data-i="1.06" class="ill-f-subtle"></path>
+                                                        <path
+                                                            d="M564 324H434C428.4 324 424 328.4 424 334V348C424 353.5 428.4 358 434 358H564C569.5 358 574 353.5 574 348V334C574 328.4 569.5 324 564 324Z"
+                                                            data-i="1.1" class="ill-f-accent ill-f-accent"></path>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g><text data-i="0.45" font-weight="500" font-size="12" y="99.8" x="118"
+                                class="ill-t ill-f-panel-muted ill-t ill-f-panel-muted">SMS</text><text data-i="0.5"
+                                font-weight="500" font-size="12" y="217.8" x="118"
+                                class="ill-t ill-f-panel-muted ill-t ill-f-panel-muted">Email</text><text data-i="0.55"
+                                font-weight="500" font-size="12" y="335.8" x="118"
+                                class="ill-t ill-f-panel-muted ill-t ill-f-panel-muted">Portal</text><text data-i="0.6"
+                                font-weight="500" font-size="12" y="261.8" x="256"
+                                class="ill-t ill-f-accent ill-t ill-f-accent">One thread</text><text data-i="0.65"
+                                font-size="12" y="105.8" x="371.6"
+                                class="ill-t ill-f-accent ill-t ill-f-accent">AS</text><text data-i="0.7"
+                                font-weight="500" font-size="14" y="99.5" x="402"
+                                class="ill-t ill-f-ink ill-t ill-f-ink">Ana Silva</text><text data-i="0.75"
+                                font-size="12" y="114.8" x="402" class="ill-t ill-f-muted ill-t ill-f-muted">Visit Thu
+                                09:30, Dr. Ortiz</text><text data-i="0.8" font-size="12" y="164.8" x="378"
+                                class="ill-t ill-f-ink ill-t ill-f-ink">Reminder: Thu 5 Nov, 09:30</text><text
+                                data-i="0.85" font-weight="500" font-size="12" y="195.8" x="366"
+                                class="ill-t ill-f-muted ill-t ill-f-muted">SMS, 24 h before</text><text data-i="0.9"
+                                font-size="12" y="224.8" x="436" class="ill-t ill-f-on ill-t ill-f-on">Can I move to
+                                Friday?</text><text data-i="0.95" font-weight="500" font-size="12" y="255.8" x="516.5"
+                                class="ill-t ill-f-muted ill-t ill-f-muted">SMS, read</text><text data-i="1.0"
+                                font-size="12" y="284.8" x="378" class="ill-t ill-f-ink ill-t ill-f-ink">Fri 10:15 is
+                                open. Book it?</text><text data-i="1.05" font-weight="500" font-size="12" y="315.8"
+                                x="366" class="ill-t ill-f-muted ill-t ill-f-muted">Email</text><text data-i="1.1"
+                                font-size="12" y="344.8" x="436" class="ill-t ill-f-on ill-t ill-f-on">Yes
+                                please.</text><text data-i="1.15" font-weight="500" font-size="12" y="375.8" x="540.3"
+                                class="ill-t ill-f-muted ill-t ill-f-muted">Portal</text>
+                            <defs>
+                                <clipPath id="ia-mod-messaging-clip0_78_2">
+                                    <rect fill="white" rx="16" height="460" width="640"></rect>
+                                </clipPath>
+                            </defs>
+                        </svg></div>
+                </div>
+            </section>
+            <section class="section">
+                <div id="billing" class="anchor"></div>
+                <div class="module-grid is-flip">
+                    <div class="module-copy reveal">
+                        <div class="mono-label">Billing</div>
+                        <h2 class="heading-l">Claims that send themselves.</h2>
+                        <p class="text-lead">Charges are coded from the visit note and sent the same day. Patients pay
+                            copays from a link, and balances reconcile on their own.</p>
+                        <div class="points">
+                            <div class="point">
+                                <div class="point_mark"></div>
+                                <div class="point_title">Same-day claim submission</div>
+                            </div>
+                            <div class="point">
+                                <div class="point_mark"></div>
+                                <div class="point_title">Card on file and payment plans</div>
+                            </div>
+                            <div class="point">
+                                <div class="point_mark"></div>
+                                <div class="point_title">Denial alerts with the fix attached</div>
+                            </div>
+                        </div><a href="/contact" class="text-link">See billing in a demo<span
+                                class="text-link_icon"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 10L10 4M10 4H5M10 4V9" stroke="currentColor" stroke-width="1.4"
+                                        stroke-linecap="round"></path>
+                                </svg></span></a>
+                    </div>
+                    <div class="module-visual reveal is-first"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 640 460"
+                            aria-label="Claim 4821 receipt for $186.40 next to its route from coding to the ledger"
+                            role="img" class="ill-art ia-mod-billing">
+                            <g>
+                                <g>
+                                    <g>
+                                        <g>
+                                            <g clip-path="url(#ia-mod-billing-clip0_78_2)">
+                                                <rect fill="#F7F5F0" rx="16" height="460" width="640"></rect>
+                                                <g>
+                                                    <g>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.3"
+                                                            d="M60 40H284V410L276 402L268 410L260 402L252 410L244 402L236 410L228 402L220 410L212 402L204 410L196 402L188 410L180 402L172 410L164 402L156 410L148 402L140 410L132 402L124 410L116 402L108 410L100 402L92 410L84 402L76 410L68 402L60 410V40Z"
+                                                            data-i="0.0"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-dasharray="2 3" stroke-linejoin="round"
+                                                            stroke-linecap="round" d="M76 106H268" data-i="0.04"
+                                                            class="ill-s-ink ill-s-ink"></path>
+                                                        <path stroke-dasharray="2 3" stroke-linejoin="round"
+                                                            stroke-linecap="round" d="M76 216H268" data-i="0.07"
+                                                            class="ill-s-ink ill-s-ink"></path>
+                                                        <path d="M81 340H80V380H81V340Z" data-i="0.11"
+                                                            class="ill-f-ink ill-f-ink"></path>
+                                                        <path d="M87.4 340H85.4V380H87.4V340Z" data-i="0.15"
+                                                            class="ill-f-ink ill-f-ink"></path>
+                                                        <path d="M91.8 340H90.8V380H91.8V340Z" data-i="0.18"
+                                                            class="ill-f-ink ill-f-ink"></path>
+                                                        <path d="M99.2 340H96.2V380H99.2V340Z" data-i="0.22"
+                                                            class="ill-f-ink ill-f-ink"></path>
+                                                        <path d="M102.6 340H101.6V380H102.6V340Z" data-i="0.26"
+                                                            class="ill-f-ink ill-f-ink"></path>
+                                                        <path d="M108 340H107V380H108V340Z" data-i="0.29"
+                                                            class="ill-f-ink ill-f-ink"></path>
+                                                        <path d="M114.4 340H112.4V380H114.4V340Z" data-i="0.33"
+                                                            class="ill-f-ink ill-f-ink"></path>
+                                                        <path d="M118.8 340H117.8V380H118.8V340Z" data-i="0.37"
+                                                            class="ill-f-ink ill-f-ink"></path>
+                                                        <path d="M125.2 340H123.2V380H125.2V340Z" data-i="0.4"
+                                                            class="ill-f-ink ill-f-ink"></path>
+                                                        <path d="M129.6 340H128.6V380H129.6V340Z" data-i="0.44"
+                                                            class="ill-f-ink ill-f-ink"></path>
+                                                        <path d="M137 340H134V380H137V340Z" data-i="0.48"
+                                                            class="ill-f-ink ill-f-ink"></path>
+                                                        <path d="M140.4 340H139.4V380H140.4V340Z" data-i="0.51"
+                                                            class="ill-f-ink ill-f-ink"></path>
+                                                        <path d="M145.8 340H144.8V380H145.8V340Z" data-i="0.55"
+                                                            class="ill-f-ink ill-f-ink"></path>
+                                                        <g>
+                                                            <path stroke-linejoin="round" stroke-linecap="round"
+                                                                stroke-width="1.6"
+                                                                d="M247.9 376.5C266.8 371.8 278.3 352.7 273.6 333.9C268.9 315.0 249.8 303.5 230.9 308.2C212.0 312.9 200.6 332.0 205.3 350.9C210.0 369.8 229.1 381.2 247.9 376.5Z"
+                                                                data-i="0.59" class="ill-s-accent ill-s-accent"></path>
+                                                            <path stroke-linejoin="round" stroke-linecap="round"
+                                                                stroke-width="0.8"
+                                                                d="M246.6 371.1C262.4 367.2 272.1 351.1 268.1 335.2C264.2 319.4 248.1 309.7 232.3 313.7C216.4 317.6 206.7 333.7 210.7 349.6C214.7 365.4 230.7 375.1 246.6 371.1Z"
+                                                                data-i="0.62" class="ill-s-accent ill-s-accent"></path>
+                                                        </g>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="3" d="M360 84V376" data-i="0.66"
+                                                            class="ill-s-accent ill-s-accent"></path>
+                                                        <path stroke-dasharray="3 4" stroke-linejoin="round"
+                                                            stroke-linecap="round" stroke-width="1.2"
+                                                            d="M360 186C430 196 430 258 360 266" data-i="0.7"
+                                                            class="ill-s-ink ill-s-ink"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.2"
+                                                            d="M412 235C416.9 235 421 230.9 421 226C421 221.0 416.9 217 412 217C407.0 217 403 221.0 403 226C403 230.9 407.0 235 412 235Z"
+                                                            data-i="0.73"
+                                                            class="ill-f-raised ill-s-ink ill-f-raised ill-s-ink">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.4" d="M408 226L411 229L416 223"
+                                                            data-i="0.77" class="ill-s-ink ill-s-ink"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="3"
+                                                            d="M360 94C365.5 94 370 89.5 370 84C370 78.4 365.5 74 360 74C354.4 74 350 78.4 350 84C350 89.5 354.4 94 360 94Z"
+                                                            data-i="0.81"
+                                                            class="ill-f-raised ill-s-accent ill-f-raised ill-s-accent">
+                                                        </path>
+                                                        <path
+                                                            d="M360 87.5C361.9 87.5 363.5 85.9 363.5 84C363.5 82.0 361.9 80.5 360 80.5C358.0 80.5 356.5 82.0 356.5 84C356.5 85.9 358.0 87.5 360 87.5Z"
+                                                            data-i="0.84" class="ill-f-accent ill-f-accent"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="3"
+                                                            d="M360 180C365.5 180 370 175.5 370 170C370 164.4 365.5 160 360 160C354.4 160 350 164.4 350 170C350 175.5 354.4 180 360 180Z"
+                                                            data-i="0.88"
+                                                            class="ill-f-raised ill-s-accent ill-f-raised ill-s-accent">
+                                                        </path>
+                                                        <path
+                                                            d="M360 173.5C361.9 173.5 363.5 171.9 363.5 170C363.5 168.0 361.9 166.5 360 166.5C358.0 166.5 356.5 168.0 356.5 170C356.5 171.9 358.0 173.5 360 173.5Z"
+                                                            data-i="0.92" class="ill-f-accent ill-f-accent"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="3"
+                                                            d="M360 292C365.5 292 370 287.5 370 282C370 276.4 365.5 272 360 272C354.4 272 350 276.4 350 282C350 287.5 354.4 292 360 292Z"
+                                                            data-i="0.95"
+                                                            class="ill-f-raised ill-s-accent ill-f-raised ill-s-accent">
+                                                        </path>
+                                                        <path
+                                                            d="M360 285.5C361.9 285.5 363.5 283.9 363.5 282C363.5 280.0 361.9 278.5 360 278.5C358.0 278.5 356.5 280.0 356.5 282C356.5 283.9 358.0 285.5 360 285.5Z"
+                                                            data-i="0.99" class="ill-f-accent ill-f-accent"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="3"
+                                                            d="M360 386C365.5 386 370 381.5 370 376C370 370.4 365.5 366 360 366C354.4 366 350 370.4 350 376C350 381.5 354.4 386 360 386Z"
+                                                            data-i="1.03"
+                                                            class="ill-f-raised ill-s-accent ill-f-raised ill-s-accent">
+                                                        </path>
+                                                        <path
+                                                            d="M360 379.5C361.9 379.5 363.5 377.9 363.5 376C363.5 374.0 361.9 372.5 360 372.5C358.0 372.5 356.5 374.0 356.5 376C356.5 377.9 358.0 379.5 360 379.5Z"
+                                                            data-i="1.06" class="ill-f-accent ill-f-accent"></path>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                            <rect rx="15.5" height="459" width="639" y="0.5" x="0.5" data-i="1.1"
+                                                class="ill-s-line-paper ill-s-line-paper"></rect>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g><text data-i="0.45" font-weight="500" font-size="12" y="71.8" x="80"
+                                class="ill-t ill-f-muted ill-t ill-f-muted">Claim 4821</text><text data-i="0.48"
+                                font-weight="500" font-size="12" y="71.8" x="203.3"
+                                class="ill-t ill-f-muted ill-t ill-f-muted">Bayline PPO</text><text data-i="0.51"
+                                font-size="12" y="91.8" x="80" class="ill-t ill-f-muted ill-t ill-f-muted">Ana Silva,
+                                Thu 5 Nov</text><text data-i="0.53" font-weight="500" font-size="12" y="131.8" x="80"
+                                class="ill-t ill-f-muted ill-t ill-f-muted">99213</text><text data-i="0.56"
+                                font-size="12" y="129.8" x="136" class="ill-t ill-f-ink ill-t ill-f-ink">Office
+                                visit</text><text data-i="0.59" font-size="12" y="129.8" x="221.2"
+                                class="ill-t ill-f-ink ill-t ill-f-ink">$120.00</text><text data-i="0.62"
+                                font-weight="500" font-size="12" y="161.8" x="80"
+                                class="ill-t ill-f-muted ill-t ill-f-muted">80061</text><text data-i="0.65"
+                                font-size="12" y="159.8" x="136" class="ill-t ill-f-ink ill-t ill-f-ink">Lipid
+                                panel</text><text data-i="0.67" font-size="12" y="159.8" x="225.3"
+                                class="ill-t ill-f-ink ill-t ill-f-ink">$66.40</text><text data-i="0.7"
+                                font-weight="500" font-size="12" y="191.8" x="80"
+                                class="ill-t ill-f-muted ill-t ill-f-muted">Z00.00</text><text data-i="0.73"
+                                font-size="12" y="189.8" x="136" class="ill-t ill-f-muted ill-t ill-f-muted">Annual
+                                exam</text><text data-i="0.76" font-weight="500" font-size="12" y="243.8" x="80"
+                                class="ill-t ill-f-muted ill-t ill-f-muted">Total</text><text data-i="0.79"
+                                letter-spacing="-.01em" font-weight="500" font-size="22" y="247.4" x="185.7"
+                                class="ill-t ill-f-ink ill-t ill-f-ink">$186.40</text><text data-i="0.81" font-size="12"
+                                y="273.8" x="80" class="ill-t ill-f-muted ill-t ill-f-muted">Copay $40.00 paid at
+                                check-in</text><text data-i="0.84" transform="translate(222.1 337) rotate(-14)"
+                                font-weight="500" font-size="15" y="14.9" x="0"
+                                class="ill-t ill-f-accent ill-t ill-f-accent">Paid</text><text data-i="0.87"
+                                font-weight="500" font-size="12" y="225.8" x="430"
+                                class="ill-t ill-f-muted ill-t ill-f-muted">Auto fix</text><text data-i="0.9"
+                                font-size="12" y="241.8" x="430" class="ill-t ill-f-muted ill-t ill-f-muted">Missing
+                                modifier added</text><text data-i="0.93" font-weight="500" font-size="12" y="79.8"
+                                x="386" class="ill-t ill-f-accent ill-t ill-f-accent">09:42</text><text data-i="0.95"
+                                font-weight="500" font-size="14" y="96.5" x="386"
+                                class="ill-t ill-f-ink ill-t ill-f-ink">Coded from the note</text><text data-i="0.98"
+                                font-weight="500" font-size="12" y="165.8" x="386"
+                                class="ill-t ill-f-accent ill-t ill-f-accent">09:43</text><text data-i="1.01"
+                                font-weight="500" font-size="14" y="182.5" x="386"
+                                class="ill-t ill-f-ink ill-t ill-f-ink">Sent to Bayline</text><text data-i="1.04"
+                                font-weight="500" font-size="12" y="277.8" x="386"
+                                class="ill-t ill-f-accent ill-t ill-f-accent">Day 2</text><text data-i="1.07"
+                                font-weight="500" font-size="14" y="294.5" x="386"
+                                class="ill-t ill-f-ink ill-t ill-f-ink">Accepted</text><text data-i="1.09"
+                                font-weight="500" font-size="12" y="371.8" x="386"
+                                class="ill-t ill-f-accent ill-t ill-f-accent">Day 6</text><text data-i="1.12"
+                                font-weight="500" font-size="14" y="388.5" x="386"
+                                class="ill-t ill-f-ink ill-t ill-f-ink">Posted to the ledger</text><text data-i="1.15"
+                                font-weight="500" font-size="12" y="51.8" x="338"
+                                class="ill-t ill-f-muted ill-t ill-f-muted">Claim route</text>
+                            <defs>
+                                <clipPath id="ia-mod-billing-clip0_78_2">
+                                    <rect fill="white" rx="16" height="460" width="640"></rect>
+                                </clipPath>
+                            </defs>
+                        </svg></div>
+                </div>
+            </section>
+            <section class="section">
+                <div id="integrations" class="anchor"></div>
+                <div class="module-grid">
+                    <div class="module-copy reveal">
+                        <div class="mono-label">Integrations</div>
+                        <h2 class="heading-l">Two-way sync with the EHR you already run.</h2>
+                        <p class="text-lead">Appointments, notes, orders and claims flow both ways in real time over
+                            FHIR and HL7. No migration, no double entry.</p>
+                        <div class="points">
+                            <div class="point">
+                                <div class="point_mark"></div>
+                                <div class="point_title">Cobalt, Summit, Ledgerline and more</div>
+                            </div>
+                            <div class="point">
+                                <div class="point_mark"></div>
+                                <div class="point_title">Scoped permissions per workflow</div>
+                            </div>
+                            <div class="point">
+                                <div class="point_mark"></div>
+                                <div class="point_title">Sync status you can actually see</div>
+                            </div>
+                        </div><a href="/contact" class="text-link">See integrations in a demo<span
+                                class="text-link_icon"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 10L10 4M10 4H5M10 4V9" stroke="currentColor" stroke-width="1.4"
+                                        stroke-linecap="round"></path>
+                                </svg></span></a>
+                    </div>
+                    <div class="module-visual reveal"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 640 460"
+                            aria-label="Carefront fields mapped to FHIR resources in the EHR, syncing both ways"
+                            role="img" class="ill-art ia-mod-integrations">
+                            <g>
+                                <g>
+                                    <g>
+                                        <g>
+                                            <g clip-path="url(#ia-mod-integrations-clip0_78_2)">
+                                                <rect rx="16" height="460" width="640" class="ill-f-panel-deep"></rect>
+                                                <g>
+                                                    <g>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.2"
+                                                            d="M236 96H56C51.5 96 48 99.5 48 104V128C48 132.4 51.5 136 56 136H236C240.4 136 244 132.4 244 128V104C244 99.5 240.4 96 236 96Z"
+                                                            data-i="0.0" class="ill-f-panel ill-s-line-panel"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.2"
+                                                            d="M584 96H404C399.5 96 396 99.5 396 104V128C396 132.4 399.5 136 404 136H584C588.4 136 592 132.4 592 128V104C592 99.5 588.4 96 584 96Z"
+                                                            data-i="0.03" class="ill-f-panel ill-s-line-panel"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.2"
+                                                            d="M244 120C246.2 120 248 118.2 248 116C248 113.7 246.2 112 244 112C241.7 112 240 113.7 240 116C240 118.2 241.7 120 244 120Z"
+                                                            data-i="0.06" class="ill-f-panel ill-s-text-panel"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.2"
+                                                            d="M396 120C398.2 120 400 118.2 400 116C400 113.7 398.2 112 396 112C393.7 112 392 113.7 392 116C392 118.2 393.7 120 396 120Z"
+                                                            data-i="0.09" class="ill-f-panel ill-s-text-panel"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.2"
+                                                            d="M236 154H56C51.5 154 48 157.5 48 162V186C48 190.4 51.5 194 56 194H236C240.4 194 244 190.4 244 186V162C244 157.5 240.4 154 236 154Z"
+                                                            data-i="0.13" class="ill-f-panel ill-s-line-panel"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.2"
+                                                            d="M584 154H404C399.5 154 396 157.5 396 162V186C396 190.4 399.5 194 404 194H584C588.4 194 592 190.4 592 186V162C592 157.5 588.4 154 584 154Z"
+                                                            data-i="0.16" class="ill-f-panel ill-s-line-panel"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.2"
+                                                            d="M244 178C246.2 178 248 176.2 248 174C248 171.7 246.2 170 244 170C241.7 170 240 171.7 240 174C240 176.2 241.7 178 244 178Z"
+                                                            data-i="0.19" class="ill-f-panel ill-s-text-panel"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.2"
+                                                            d="M396 178C398.2 178 400 176.2 400 174C400 171.7 398.2 170 396 170C393.7 170 392 171.7 392 174C392 176.2 393.7 178 396 178Z"
+                                                            data-i="0.22" class="ill-f-panel ill-s-text-panel"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.2"
+                                                            d="M236 212H56C51.5 212 48 215.5 48 220V244C48 248.4 51.5 252 56 252H236C240.4 252 244 248.4 244 244V220C244 215.5 240.4 212 236 212Z"
+                                                            data-i="0.25" class="ill-f-panel ill-s-line-panel"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.2"
+                                                            d="M584 212H404C399.5 212 396 215.5 396 220V244C396 248.4 399.5 252 404 252H584C588.4 252 592 248.4 592 244V220C592 215.5 588.4 212 584 212Z"
+                                                            data-i="0.28" class="ill-f-panel ill-s-line-panel"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.2"
+                                                            d="M244 236C246.2 236 248 234.2 248 232C248 229.7 246.2 228 244 228C241.7 228 240 229.7 240 232C240 234.2 241.7 236 244 236Z"
+                                                            data-i="0.31" class="ill-f-panel ill-s-text-panel"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.2"
+                                                            d="M396 236C398.2 236 400 234.2 400 232C400 229.7 398.2 228 396 228C393.7 228 392 229.7 392 232C392 234.2 393.7 236 396 236Z"
+                                                            data-i="0.35" class="ill-f-panel ill-s-text-panel"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.2"
+                                                            d="M236 270H56C51.5 270 48 273.5 48 278V302C48 306.4 51.5 310 56 310H236C240.4 310 244 306.4 244 302V278C244 273.5 240.4 270 236 270Z"
+                                                            data-i="0.38" class="ill-f-panel ill-s-line-panel"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.2"
+                                                            d="M584 270H404C399.5 270 396 273.5 396 278V302C396 306.4 399.5 310 404 310H584C588.4 310 592 306.4 592 302V278C592 273.5 588.4 270 584 270Z"
+                                                            data-i="0.41" class="ill-f-panel ill-s-line-panel"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.2"
+                                                            d="M244 294C246.2 294 248 292.2 248 290C248 287.7 246.2 286 244 286C241.7 286 240 287.7 240 290C240 292.2 241.7 294 244 294Z"
+                                                            data-i="0.44" class="ill-f-panel ill-s-text-panel"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.2"
+                                                            d="M396 294C398.2 294 400 292.2 400 290C400 287.7 398.2 286 396 286C393.7 286 392 287.7 392 290C392 292.2 393.7 294 396 294Z"
+                                                            data-i="0.47" class="ill-f-panel ill-s-text-panel"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.2"
+                                                            d="M236 328H56C51.5 328 48 331.5 48 336V360C48 364.4 51.5 368 56 368H236C240.4 368 244 364.4 244 360V336C244 331.5 240.4 328 236 328Z"
+                                                            data-i="0.5" class="ill-f-panel ill-s-line-panel"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.2"
+                                                            d="M584 328H404C399.5 328 396 331.5 396 336V360C396 364.4 399.5 368 404 368H584C588.4 368 592 364.4 592 360V336C592 331.5 588.4 328 584 328Z"
+                                                            data-i="0.53" class="ill-f-panel ill-s-line-panel"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.2"
+                                                            d="M244 352C246.2 352 248 350.2 248 348C248 345.7 246.2 344 244 344C241.7 344 240 345.7 240 348C240 350.2 241.7 352 244 352Z"
+                                                            data-i="0.57" class="ill-f-panel ill-s-text-panel"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.2"
+                                                            d="M396 352C398.2 352 400 350.2 400 348C400 345.7 398.2 344 396 344C393.7 344 392 345.7 392 348C392 350.2 393.7 352 396 352Z"
+                                                            data-i="0.6" class="ill-f-panel ill-s-text-panel"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="2" d="M248 116C318 116 322 116 392 116"
+                                                            data-i="0.63" class="ill-s-accent ill-s-accent"></path>
+                                                        <path
+                                                            d="M296.7 119.2C298.4 119.2 299.9 117.7 299.9 116C299.9 114.2 298.4 112.8 296.7 112.8C294.9 112.8 293.5 114.2 293.5 116C293.5 117.7 294.9 119.2 296.7 119.2Z"
+                                                            data-i="0.66" class="ill-f-accent ill-f-accent"></path>
+                                                        <path
+                                                            d="M340.7 119.2C342.4 119.2 343.9 117.7 343.9 116C343.9 114.2 342.4 112.8 340.7 112.8C338.9 112.8 337.5 114.2 337.5 116C337.5 117.7 338.9 119.2 340.7 119.2Z"
+                                                            data-i="0.69" class="ill-f-accent ill-f-accent"></path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.2" d="M248 174C318 174 322 232 392 232"
+                                                            data-i="0.72" class="ill-s-line-panel"></path>
+                                                        <path
+                                                            d="M296.7 189.1C298.1 189.1 299.3 187.9 299.3 186.5C299.3 185.0 298.1 183.9 296.7 183.9C295.2 183.9 294.1 185.0 294.1 186.5C294.1 187.9 295.2 189.1 296.7 189.1Z"
+                                                            data-i="0.75" class="ill-f-panel-muted ill-f-panel-muted">
+                                                        </path>
+                                                        <path
+                                                            d="M340.7 220.6C342.1 220.6 343.3 219.4 343.3 218C343.3 216.5 342.1 215.4 340.7 215.4C339.2 215.4 338.1 216.5 338.1 218C338.1 219.4 339.2 220.6 340.7 220.6Z"
+                                                            data-i="0.79" class="ill-f-panel-muted ill-f-panel-muted">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.2" d="M248 232C318 232 322 348 392 348"
+                                                            data-i="0.82" class="ill-s-line-panel"></path>
+                                                        <path
+                                                            d="M296.7 259.7C298.1 259.7 299.3 258.5 299.3 257.1C299.3 255.6 298.1 254.5 296.7 254.5C295.2 254.5 294.1 255.6 294.1 257.1C294.1 258.5 295.2 259.7 296.7 259.7Z"
+                                                            data-i="0.85" class="ill-f-panel-muted ill-f-panel-muted">
+                                                        </path>
+                                                        <path
+                                                            d="M340.7 322.6C342.1 322.6 343.3 321.4 343.3 320C343.3 318.5 342.1 317.4 340.7 317.4C339.2 317.4 338.1 318.5 338.1 320C338.1 321.4 339.2 322.6 340.7 322.6Z"
+                                                            data-i="0.88" class="ill-f-panel-muted ill-f-panel-muted">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.2" d="M248 290C318 290 322 174 392 174"
+                                                            data-i="0.91" class="ill-s-line-panel"></path>
+                                                        <path
+                                                            d="M296.7 267.5C298.1 267.5 299.3 266.3 299.3 264.9C299.3 263.4 298.1 262.3 296.7 262.3C295.2 262.3 294.1 263.4 294.1 264.9C294.1 266.3 295.2 267.5 296.7 267.5Z"
+                                                            data-i="0.94" class="ill-f-panel-muted ill-f-panel-muted">
+                                                        </path>
+                                                        <path
+                                                            d="M340.7 204.6C342.1 204.6 343.3 203.4 343.3 202C343.3 200.5 342.1 199.4 340.7 199.4C339.2 199.4 338.1 200.5 338.1 202C338.1 203.4 339.2 204.6 340.7 204.6Z"
+                                                            data-i="0.97" class="ill-f-panel-muted ill-f-panel-muted">
+                                                        </path>
+                                                        <path stroke-linejoin="round" stroke-linecap="round"
+                                                            stroke-width="1.2" d="M248 348C318 348 322 290 392 290"
+                                                            data-i="1.01" class="ill-s-line-panel"></path>
+                                                        <path
+                                                            d="M296.7 338.1C298.1 338.1 299.3 336.9 299.3 335.5C299.3 334.0 298.1 332.9 296.7 332.9C295.2 332.9 294.1 334.0 294.1 335.5C294.1 336.9 295.2 338.1 296.7 338.1Z"
+                                                            data-i="1.04" class="ill-f-panel-muted ill-f-panel-muted">
+                                                        </path>
+                                                        <path
+                                                            d="M340.7 306.6C342.1 306.6 343.3 305.4 343.3 304C343.3 302.5 342.1 301.4 340.7 301.4C339.2 301.4 338.1 302.5 338.1 304C338.1 305.4 339.2 306.6 340.7 306.6Z"
+                                                            data-i="1.07" class="ill-f-panel-muted ill-f-panel-muted">
+                                                        </path>
+                                                        <path d="M592 392H48V393H592V392Z" data-i="1.1"
+                                                            class="ill-f-line-panel"></path>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g><text data-i="0.45" font-weight="500" font-size="12" y="67.8" x="48"
+                                class="ill-t ill-f-panel-muted ill-t ill-f-panel-muted">Carefront</text><text
+                                data-i="0.5" font-weight="500" font-size="12" y="67.8" x="396"
+                                class="ill-t ill-f-panel-muted ill-t ill-f-panel-muted">Your EHR, FHIR R4</text><text
+                                data-i="0.56" font-size="13" y="119.7" x="64"
+                                class="ill-t ill-f-text-panel ill-t ill-f-text-panel">Appointment</text><text
+                                data-i="0.61" font-size="13" y="119.7" x="412"
+                                class="ill-t ill-f-text-panel ill-t ill-f-text-panel">Encounter</text><text
+                                data-i="0.67" font-size="13" y="177.7" x="64"
+                                class="ill-t ill-f-text-panel ill-t ill-f-text-panel">Visit note</text><text
+                                data-i="0.72" font-size="13" y="177.7" x="412"
+                                class="ill-t ill-f-text-panel ill-t ill-f-text-panel">Claim</text><text data-i="0.77"
+                                font-size="13" y="235.7" x="64"
+                                class="ill-t ill-f-text-panel ill-t ill-f-text-panel">Lab order</text><text
+                                data-i="0.83" font-size="13" y="235.7" x="412"
+                                class="ill-t ill-f-text-panel ill-t ill-f-text-panel">DocumentReference</text><text
+                                data-i="0.88" font-size="13" y="293.7" x="64"
+                                class="ill-t ill-f-text-panel ill-t ill-f-text-panel">Claim</text><text data-i="0.93"
+                                font-size="13" y="293.7" x="412"
+                                class="ill-t ill-f-text-panel ill-t ill-f-text-panel">AllergyIntolerance</text><text
+                                data-i="0.99" font-size="13" y="351.7" x="64"
+                                class="ill-t ill-f-text-panel ill-t ill-f-text-panel">Allergy</text><text data-i="1.04"
+                                font-size="13" y="351.7" x="412"
+                                class="ill-t ill-f-text-panel ill-t ill-f-text-panel">ServiceRequest</text><text
+                                data-i="1.1" font-weight="500" font-size="12" y="415.8" x="48"
+                                class="ill-t ill-f-panel-muted ill-t ill-f-panel-muted">Two way, HL7 V2 +
+                                FHIR</text><text data-i="1.15" font-weight="500" font-size="12" y="415.8" x="512.1"
+                                class="ill-t ill-f-accent ill-t ill-f-accent">Last sync 1.6 s</text>
+                            <defs>
+                                <clipPath id="ia-mod-integrations-clip0_78_2">
+                                    <rect fill="white" rx="16" height="460" width="640"></rect>
+                                </clipPath>
+                            </defs>
+                        </svg></div>
+                </div>
+            </section>
+            <section class="section">
+                <div id="record" class="anchor"></div>
+                <div class="split-grid">
+                    <div class="split-copy">
+                        <div class="mono-label">The record</div>
+                        <h2 class="heading-xl">Every patient, one living record.</h2>
+                        <p class="text-lead">See where a patient has been and what should happen next, on one screen the
+                            whole team shares.</p><a href="/contact" class="button">Book a demo</a>
+                    </div>
+                    <div class="visit-card">
+                        <div class="visit-card_head">
+                            <div class="visit-avatar">AS</div>
+                            <div class="visit-who">
+                                <div class="visit-name">Ana Silva</div>
+                                <div class="visit-sub">34, MRN 20419, Bayline PPO</div>
+                            </div>
+                            <div class="visit-next">
+                                <div class="visit-next_label">Next visit</div>
+                                <div class="visit-next_value">Thu 5 Nov, 09:30, Room 2</div>
+                            </div>
+                        </div>
+                        <div class="visit-vitals">
+                            <div class="vital is-alert">
+                                <div class="vital_label">Blood pressure</div>
+                                <div class="vital_value-row">
+                                    <div class="vital_value is-alert">152/96</div>
+                                    <div class="vital_unit">mmHg</div>
+                                </div><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 180 26" width="180" height="26" preserveAspectRatio="none"
+                                    class="vital_trend is-alert vital_trend is-alert">
+                                    <path
+                                        d="M0.0 15.2L22.5 16.9L45.0 18.7L67.5 21.3L90.0 23.0L112.5 19.5L135.0 16.0L157.5 9.1L180.0 3.0"
+                                        stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"
+                                        stroke-linecap="round"></path>
+                                </svg>
+                                <div class="vital_note is-alert">Up 14 since June</div>
+                            </div>
+                            <div class="vital">
+                                <div class="vital_label">LDL</div>
+                                <div class="vital_value-row">
+                                    <div class="vital_value">132</div>
+                                    <div class="vital_unit">mg/dL</div>
+                                </div><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 180 26" width="180" height="26" preserveAspectRatio="none"
+                                    class="vital_trend vital_trend">
+                                    <path d="M0.0 23.0L45.0 20.1L90.0 14.4L135.0 8.7L180.0 3.0" stroke="currentColor"
+                                        stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"></path>
+                                </svg>
+                                <div class="vital_note">Above goal of 100</div>
+                            </div>
+                            <div class="vital">
+                                <div class="vital_label">Weight</div>
+                                <div class="vital_value-row">
+                                    <div class="vital_value">68.2</div>
+                                    <div class="vital_unit">kg</div>
+                                </div><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 180 26" width="180" height="26" preserveAspectRatio="none"
+                                    class="vital_trend vital_trend">
+                                    <path d="M0.0 3.0L36.0 18.0L72.0 8.0L108.0 13.0L144.0 23.0L180.0 13.0"
+                                        stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"
+                                        stroke-linecap="round"></path>
+                                </svg>
+                                <div class="vital_note">Stable for a year</div>
+                            </div>
+                        </div>
+                        <div class="visit-body">
+                            <div class="visit-col">
+                                <div class="visit-col_title">Since the last visit</div>
+                                <div class="event">
+                                    <div class="event_icon is-alert"><svg aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            width="14" height="14" stroke="currentColor" stroke-width="1.6"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M22 12H18L15 20L9 4L6 12H2"></path>
+                                        </svg></div>
+                                    <div class="event_text">
+                                        <div class="event_title">Home reading flagged</div>
+                                        <div class="event_sub is-alert">152/96 from her cuff</div>
+                                    </div>
+                                    <div class="event_date">28 Oct</div>
+                                </div>
+                                <div class="event">
+                                    <div class="event_icon"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                            fill="none" viewBox="0 0 24 24" width="14" height="14" stroke="currentColor"
+                                            stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M12 2.5L21.5 7.5L12 12.5L2.5 7.5L12 2.5Z"></path>
+                                            <path d="M2.5 12L12 17L21.5 12"></path>
+                                            <path d="M2.5 16.5L12 21.5L21.5 16.5"></path>
+                                        </svg></div>
+                                    <div class="event_text">
+                                        <div class="event_title">Message from Ana</div>
+                                        <div class="event_sub">Headaches in the morning</div>
+                                    </div>
+                                    <div class="event_date">18 Aug</div>
+                                </div>
+                                <div class="event">
+                                    <div class="event_icon"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                            fill="none" viewBox="0 0 24 24" width="14" height="14" stroke="currentColor"
+                                            stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                                            <path
+                                                d="M12 3L13.9 8.6L19.5 10.5L13.9 12.4L12 18L10.1 12.4L4.5 10.5L10.1 8.6L12 3Z">
+                                            </path>
+                                            <path d="M19 3V6"></path>
+                                            <path d="M17.5 4.5H20.5"></path>
+                                        </svg></div>
+                                    <div class="event_text">
+                                        <div class="event_title">Lab results</div>
+                                        <div class="event_sub">LDL 132, A1C 5.6</div>
+                                    </div>
+                                    <div class="event_date">02 Jun</div>
+                                </div>
+                            </div>
+                            <div class="visit-col is-prep">
+                                <div class="visit-col_title">Prep for Thursday</div>
+                                <div class="prep">
+                                    <div class="prep_check is-done"><svg aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            width="12" height="12" stroke="currentColor" stroke-width="1.6"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M20 6L9 17L4 12"></path>
+                                        </svg></div>
+                                    <div class="prep_text">
+                                        <div class="prep_title">Recheck blood pressure</div>
+                                        <div class="prep_sub">Booked automatically</div>
+                                    </div>
+                                    <div class="prep_owner">LO</div>
+                                </div>
+                                <div class="prep">
+                                    <div class="prep_check"></div>
+                                    <div class="prep_text">
+                                        <div class="prep_title">Discuss statin options</div>
+                                        <div class="prep_sub">Suggested by the record</div>
+                                    </div>
+                                    <div class="prep_owner">LO</div>
+                                </div>
+                                <div class="prep">
+                                    <div class="prep_check"></div>
+                                    <div class="prep_text">
+                                        <div class="prep_title">Refill lisinopril</div>
+                                        <div class="prep_sub">Due in 12 days</div>
+                                    </div>
+                                    <div class="prep_owner">MK</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="visit-card_foot">
+                            <div class="visit-dot"></div>
+                            <div class="visit-foot_text">Synced with Cobalt EHR 2 min ago</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <div class="cta-box">
+                    <div class="cta-stack_wrap"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 900 280" width="900" height="280" class="cta-weave cta-weave">
+                            <g class="th th-4">
+                                <path
+                                    d="M20 30.0C200 30.0 260 116.0 360 116.0L360 116.0L370 117.4L380 119.3L390 121.2L400 122.3L410 122.0L420 120.7L430 118.9L440 117.8L450 118.4L460 120.9L470 125.0L480 129.7L490 133.6L500 135.9L510 135.9L520 134.1L530 131.6L540 129.5L550 128.8L560 129.9L570 132.3L580 135.2L590 137.8L600 139.3L610 139.9L620 140.0"
+                                    stroke-width="1.3" stroke-linejoin="round" class="ill-s-strong"></path>
+                                <circle cx="20" cy="30.0" r="3.5" stroke-width="1.3" class="ill-f-raised ill-s-ink">
+                                </circle>
+                            </g>
+                            <g class="th th-3">
+                                <path
+                                    d="M20 66.7C200 66.7 260 124.0 360 124.0L360 124.0L370 125.5L380 126.7L390 127.2L400 126.5L410 125.0L420 123.6L430 123.1L440 124.3L450 127.2L460 131.3L470 135.3L480 138.0L490 138.7L500 137.3L510 134.5L520 131.5L530 129.5L540 129.3L550 131.0L560 133.9L570 136.9L580 139.3L590 140.4L600 140.4L610 140.1L620 140.0"
+                                    stroke-width="1.3" stroke-linejoin="round" stroke-dasharray="3 4"
+                                    class="ill-s-strong"></path>
+                                <circle cx="20" cy="66.7" r="3.5" stroke-width="1.3" class="ill-f-raised ill-s-ink">
+                                </circle>
+                            </g>
+                            <g class="th th-2">
+                                <path
+                                    d="M20 103.3C200 103.3 260 132.0 360 132.0L360 132.0L370 132.9L380 133.0L390 132.1L400 130.7L410 129.6L420 129.6L430 131.2L440 134.2L450 137.8L460 140.8L470 142.2L480 141.4L490 138.7L500 135.2L510 132.2L520 130.7L530 131.2L540 133.5L550 136.7L560 139.7L570 141.6L580 142.0L590 141.3L600 140.3L610 139.7L620 140.0"
+                                    stroke-width="1.3" stroke-linejoin="round" class="ill-s-strong"></path>
+                                <circle cx="20" cy="103.3" r="3.5" stroke-width="1.3" class="ill-f-raised ill-s-ink">
+                                </circle>
+                            </g>
+                            <g class="th th-1">
+                                <path
+                                    d="M20 140.0C200 140.0 260 140.0 360 140.0L360 140.0L370 139.9L380 139.0L390 137.7L400 136.8L410 137.1L420 138.9L430 141.6L440 144.4L450 146.1L460 146.0L470 143.9L480 140.4L490 136.7L500 134.0L510 133.2L520 134.6L530 137.5L540 140.8L550 143.3L560 144.4L570 143.9L580 142.3L590 140.6L600 139.5L610 139.3L620 140.0"
+                                    stroke-width="2" stroke-linejoin="round" class="ill-s-accent"></path>
+                                <circle cx="20" cy="140.0" r="3.5" stroke-width="1.3" class="ill-f-raised ill-s-accent">
+                                </circle>
+                            </g>
+                            <g class="th th-2">
+                                <path
+                                    d="M20 176.7C200 176.7 260 148.0 360 148.0L360 148.0L370 147.0L380 145.7L390 145.0L400 145.3L410 146.8L420 149.0L430 150.7L440 151.2L450 149.8L460 146.7L470 142.7L480 139.1L490 137.1L500 137.2L510 139.4L520 142.6L530 145.6L540 147.4L550 147.4L560 145.7L570 143.2L580 140.9L590 139.4L600 139.0L610 139.5L620 140.0"
+                                    stroke-width="1.3" stroke-linejoin="round" class="ill-s-strong"></path>
+                                <circle cx="20" cy="176.7" r="3.5" stroke-width="1.3" class="ill-f-raised ill-s-ink">
+                                </circle>
+                            </g>
+                            <g class="th th-3">
+                                <path
+                                    d="M20 213.3C200 213.3 260 156.0 360 156.0L360 156.0L370 154.6L380 153.7L390 153.9L400 154.9L410 156.3L420 156.9L430 156.2L440 153.7L450 150.0L460 146.0L470 142.9L480 141.8L490 142.8L500 145.4L510 148.6L520 151.0L530 151.6L540 150.3L550 147.5L560 144.1L570 141.3L580 139.7L590 139.4L600 139.8L610 140.2L620 140.0"
+                                    stroke-width="1.3" stroke-linejoin="round" stroke-dasharray="3 4"
+                                    class="ill-s-strong"></path>
+                                <circle cx="20" cy="213.3" r="3.5" stroke-width="1.3" class="ill-f-raised ill-s-ink">
+                                </circle>
+                            </g>
+                            <g class="th th-4">
+                                <path
+                                    d="M20 250.0C200 250.0 260 164.0 360 164.0L360 164.0L370 162.8L380 162.5L390 163.0L400 163.5L410 163.2L420 161.4L430 158.2L440 154.3L450 150.6L460 148.2L470 147.9L480 149.6L490 152.4L500 155.1L510 156.4L520 155.7L530 153.0L540 149.1L550 145.2L560 142.2L570 140.7L580 140.6L590 141.2L600 141.7L610 141.3L620 140.0"
+                                    stroke-width="1.3" stroke-linejoin="round" class="ill-s-strong"></path>
+                                <circle cx="20" cy="250.0" r="3.5" stroke-width="1.3" class="ill-f-raised ill-s-ink">
+                                </circle>
+                            </g>
+                            <g class="cord">
+                                <path d="M620 140H870" stroke-width="4" stroke-linecap="round" class="ill-s-ink"></path>
+                                <path d="M620 140H870" stroke-width="1.5" stroke-dasharray="1 7" stroke-linecap="round"
+                                    class="ill-s-accent cord-flow"></path>
+                                <circle cx="870" cy="140" r="8" class="ill-f-accent cord-end"></circle>
+                            </g>
+                        </svg></div>
+                    <h2 class="heading-xl is-center">Bring every patient into one record.</h2>
+                    <p class="text-lead is-center">See Carefront on your own schedule, with your own EHR, in a 30 minute
+                        walkthrough.</p>
+                    <div class="button-row is-center"><a href="/contact" class="button w-inline-block">Book a demo<svg
+                                width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 10L10 4M10 4H5M10 4V9" stroke="currentColor" stroke-width="1.4"
+                                    stroke-linecap="round"></path>
+                            </svg></a><a href="/sign-up" class="button is-secondary">Start free trial</a></div>
+                </div>
+            </section>
+            <footer class="footer">
+                <div class="footer_panel">
+                    <div class="footer_top">
+                        <div class="footer_brand"><a href="/" class="footer_logo w-inline-block">
+                                <div class="nav_brand-mark"><svg aria-hidden="true" height="22" width="24"
+                                        viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-width="3" stroke="currentColor"
+                                            d="M17.6 5.3A8 8 0 1 0 17.6 16.7"></path>
+                                        <circle fill="#2f6bff" r="2.6" cy="11" cx="19.6"></circle>
+                                    </svg></div>
+                                <div class="nav_brand-text">Carefront</div>
+                            </a>
+                            <p class="footer_tagline">The operating layer for every patient interaction.</p>
+                        </div>
+                        <div class="footer_news">
+                            <div class="mono-label is-panel">Notes from the front desk</div>
+                            <p class="footer_tagline">One short email a month on running a calmer clinic.</p>
+                            <div class="footer_form-block">
+                                <div class="footer_form w-form w-form-loading">
+                                    <form method="get" name="" data-name="newsletter" class="footer_form-fields"
+                                        data-wf-page-id="6aec83b44f4f0425b95841cb"
+                                        data-wf-element-id="f0dec401-a56e-b092-397c-fd7e18a03343"
+                                        data-turnstile-sitekey="0x4AAAAAAAQTptj2So4dx43e" aria-label="newsletter"><input
+                                            class="footer_input w-input" maxlength="256" name="email" data-name="email"
+                                            aria-label="Work email" placeholder="Work email" type="email" id="field"
+                                            required=""><input type="submit" data-wait="Please wait..."
+                                            class="footer_submit w-button w-form-loading" value="Subscribe" disabled="">
+                                        <div>
+                                            <div>
+                                                <div></div><input type="hidden" name="cf-turnstile-response"
+                                                    id="cf-chl-widget-7yzsg_response">
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div class="footer_form-message w-form-done" tabindex="-1" role="region"
+                                        aria-label="newsletter success">
+                                        <div>You're on the list. The first note arrives at the start of next month.
+                                        </div>
+                                    </div>
+                                    <div class="footer_form-message w-form-fail" tabindex="-1" role="region"
+                                        aria-label="newsletter failure">
+                                        <div>That didn't go through. Check your email address and try again.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer_cols">
+                        <div class="footer_col">
+                            <div class="mono-label is-panel">Platform</div><a href="/platform#scheduling"
+                                class="footer_link">Scheduling</a><a href="/platform#intake"
+                                class="footer_link">Intake</a><a href="/platform#messaging"
+                                class="footer_link">Messaging</a><a href="/platform#billing"
+                                class="footer_link">Billing</a><a href="/platform#integrations"
+                                class="footer_link">Integrations</a>
+                        </div>
+                        <div class="footer_col">
+                            <div class="mono-label is-panel">Solutions</div><a href="/#customers"
+                                class="footer_link">Primary care</a><a href="/#customers"
+                                class="footer_link">Specialty</a><a href="/#customers" class="footer_link">Dental</a><a
+                                href="/#customers" class="footer_link">Behavioral</a>
+                        </div>
+                        <div class="footer_col">
+                            <div class="mono-label is-panel">Company</div><a href="/about"
+                                class="footer_link">About</a><a href="/#customers" class="footer_link">Customers</a><a
+                                href="/about#careers" class="footer_link">Careers</a><a href="/contact"
+                                class="footer_link">Contact</a>
+                        </div>
+                        <div class="footer_col">
+                            <div class="mono-label is-panel">Resources</div><a href="/research"
+                                class="footer_link">Research</a><a href="/changelog" class="footer_link">Changelog</a><a
+                                href="/privacy#security" class="footer_link">Security</a><a href="/instructions"
+                                class="footer_link">Instructions</a><a href="/style-guide" class="footer_link">Style
+                                Guide</a>
+                        </div>
+                        <div class="footer_col is-trust">
+                            <div class="mono-label is-panel">Trust</div>
+                            <div class="footer_trust">
+                                <div class="tier_check"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 12 12" height="14" width="14">
+                                        <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5"
+                                            stroke="currentColor" d="M2.5 6.2L5 8.5L9.5 3.5"></path>
+                                    </svg></div>
+                                <div>HIPAA</div>
+                            </div>
+                            <div class="footer_trust">
+                                <div class="tier_check"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 12 12" height="14" width="14">
+                                        <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5"
+                                            stroke="currentColor" d="M2.5 6.2L5 8.5L9.5 3.5"></path>
+                                    </svg></div>
+                                <div>SOC 2 Type II</div>
+                            </div>
+                            <div class="footer_trust">
+                                <div class="tier_check"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 12 12" height="14" width="14">
+                                        <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5"
+                                            stroke="currentColor" d="M2.5 6.2L5 8.5L9.5 3.5"></path>
+                                    </svg></div>
+                                <div>HITRUST</div>
+                            </div>
+                            <div class="footer_trust">
+                                <div class="tier_check"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 12 12" height="14" width="14">
+                                        <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5"
+                                            stroke="currentColor" d="M2.5 6.2L5 8.5L9.5 3.5"></path>
+                                    </svg></div>
+                                <div>GDPR</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer_bottom">
+                        <div class="footer_legal">© 2026 Carefront Health Systems</div>
+                        <div class="footer_status">
+                            <div class="footer_status-dot"></div>
+                            <div>All systems normal</div>
+                        </div>
+                        <div class="footer_legal-links"><a href="/privacy" class="footer_legal-link">Privacy</a><a
+                                href="/terms" class="footer_legal-link">Terms</a><a href="/licenses"
+                                class="footer_legal-link">Licenses</a></div>
+                    </div>
+                    <div class="footer_schedule"><svg aria-hidden="true" fill="none"
+                            preserveAspectRatio="xMidYMin slice" viewBox="0 0 1150 240"
+                            xmlns="http://www.w3.org/2000/svg" class="footer_schedule-svg footer_schedule-svg">
+                            <line stroke-width="1" y2="240" x2="0" y1="28" x1="0"
+                                class="ill-s-line-panel ill-s-line-panel"></line><text font-size="11" y="18" x="6"
+                                class="ill-t ill-f-panel-subtle ill-t ill-f-panel-subtle">07:00</text>
+                            <line stroke-width="1" y2="240" x2="92.5" y1="28" x1="92.5"
+                                class="ill-s-line-panel ill-s-line-panel"></line><text font-size="11" y="18" x="98.5"
+                                class="ill-t ill-f-panel-subtle ill-t ill-f-panel-subtle">08:00</text>
+                            <line stroke-width="1" y2="240" x2="185" y1="28" x1="185"
+                                class="ill-s-line-panel ill-s-line-panel"></line><text font-size="11" y="18" x="191"
+                                class="ill-t ill-f-panel-subtle ill-t ill-f-panel-subtle">09:00</text>
+                            <line stroke-width="1" y2="240" x2="277.5" y1="28" x1="277.5"
+                                class="ill-s-line-panel ill-s-line-panel"></line><text font-size="11" y="18" x="283.5"
+                                class="ill-t ill-f-panel-subtle ill-t ill-f-panel-subtle">10:00</text>
+                            <line stroke-width="1" y2="240" x2="370" y1="28" x1="370"
+                                class="ill-s-line-panel ill-s-line-panel"></line><text font-size="11" y="18" x="376"
+                                class="ill-t ill-f-panel-subtle ill-t ill-f-panel-subtle">11:00</text>
+                            <line stroke-width="1" y2="240" x2="462.5" y1="28" x1="462.5"
+                                class="ill-s-line-panel ill-s-line-panel"></line><text font-size="11" y="18" x="468.5"
+                                class="ill-t ill-f-panel-subtle ill-t ill-f-panel-subtle">12:00</text>
+                            <line stroke-width="1" y2="240" x2="555" y1="28" x1="555"
+                                class="ill-s-line-panel ill-s-line-panel"></line><text font-size="11" y="18" x="561"
+                                class="ill-t ill-f-panel-subtle ill-t ill-f-panel-subtle">13:00</text>
+                            <line stroke-width="1" y2="240" x2="647.5" y1="28" x1="647.5"
+                                class="ill-s-line-panel ill-s-line-panel"></line><text font-size="11" y="18" x="653.5"
+                                class="ill-t ill-f-panel-subtle ill-t ill-f-panel-subtle">14:00</text>
+                            <line stroke-width="1" y2="240" x2="740" y1="28" x1="740"
+                                class="ill-s-line-panel ill-s-line-panel"></line><text font-size="11" y="18" x="746"
+                                class="ill-t ill-f-panel-subtle ill-t ill-f-panel-subtle">15:00</text>
+                            <line stroke-width="1" y2="240" x2="832.5" y1="28" x1="832.5"
+                                class="ill-s-line-panel ill-s-line-panel"></line><text font-size="11" y="18" x="838.5"
+                                class="ill-t ill-f-panel-subtle ill-t ill-f-panel-subtle">16:00</text>
+                            <line stroke-width="1" y2="240" x2="925" y1="28" x1="925"
+                                class="ill-s-line-panel ill-s-line-panel"></line><text font-size="11" y="18" x="931"
+                                class="ill-t ill-f-panel-subtle ill-t ill-f-panel-subtle">17:00</text>
+                            <line stroke-width="1" y2="240" x2="1017.5" y1="28" x1="1017.5"
+                                class="ill-s-line-panel ill-s-line-panel"></line><text font-size="11" y="18" x="1023.5"
+                                class="ill-t ill-f-panel-subtle ill-t ill-f-panel-subtle">18:00</text>
+                            <line stroke-width="1" y2="240" x2="1110" y1="28" x1="1110"
+                                class="ill-s-line-panel ill-s-line-panel"></line><text font-size="11" y="18" x="1116"
+                                class="ill-t ill-f-panel-subtle ill-t ill-f-panel-subtle">19:00</text>
+                            <rect rx="4" height="34" width="79.3" y="40" x="18.5"
+                                class="ill-f-panel-raised ill-f-panel-raised"></rect>
+                            <rect rx="4" height="34" width="79.2" y="40" x="138.8" class="ill-f-accent ill-f-accent">
+                            </rect>
+                            <rect rx="4" height="34" width="51.5" y="40" x="277.5"
+                                class="ill-f-panel-raised ill-f-panel-raised"></rect>
+                            <rect rx="4" height="34" width="125.5" y="40" x="388.5"
+                                class="ill-f-panel-raised ill-f-panel-raised"></rect>
+                            <rect rx="4" height="34" width="70.0" y="40" x="564.3" class="ill-f-accent ill-f-accent">
+                            </rect>
+                            <rect rx="4" height="34" width="125.5" y="40" x="684.5"
+                                class="ill-f-panel-raised ill-f-panel-raised"></rect>
+                            <rect rx="4" height="34" width="79.3" y="40" x="878.8"
+                                class="ill-f-panel-raised ill-f-panel-raised"></rect>
+                            <rect rx="4" height="34" width="79.2" y="40" x="999.0"
+                                class="ill-f-panel-raised ill-f-panel-raised"></rect>
+                            <rect rx="4" height="34" width="107.0" y="88" x="55.5"
+                                class="ill-f-panel-raised ill-f-panel-raised"></rect>
+                            <rect rx="4" height="34" width="79.2" y="88" x="203.5"
+                                class="ill-f-panel-raised ill-f-panel-raised"></rect>
+                            <rect rx="4" height="34" width="125.5" y="88" x="323.8" class="ill-f-accent ill-f-accent">
+                            </rect>
+                            <rect rx="4" height="34" width="70.0" y="88" x="499.5"
+                                class="ill-f-panel-raised ill-f-panel-raised"></rect>
+                            <rect rx="4" height="34" width="97.7" y="88" x="647.5"
+                                class="ill-f-panel-raised ill-f-panel-raised"></rect>
+                            <rect rx="4" height="34" width="51.5" y="88" x="795.5" class="ill-f-accent ill-f-accent">
+                            </rect>
+                            <rect rx="4" height="34" width="134.8" y="88" x="906.5"
+                                class="ill-f-panel-raised ill-f-panel-raised"></rect>
+                            <rect rx="4" height="34" width="70.0" y="136" x="9.3"
+                                class="ill-f-panel-raised ill-f-panel-raised"></rect>
+                            <rect rx="4" height="34" width="144.0" y="136" x="120.3"
+                                class="ill-f-panel-raised ill-f-panel-raised"></rect>
+                            <rect rx="4" height="34" width="60.7" y="136" x="314.5"
+                                class="ill-f-panel-raised ill-f-panel-raised"></rect>
+                            <rect rx="4" height="34" width="79.3" y="136" x="425.5"
+                                class="ill-f-panel-raised ill-f-panel-raised"></rect>
+                            <rect rx="4" height="34" width="144.0" y="136" x="555.0" class="ill-f-accent ill-f-accent">
+                            </rect>
+                            <rect rx="4" height="34" width="79.3" y="136" x="749.3"
+                                class="ill-f-panel-raised ill-f-panel-raised"></rect>
+                            <rect rx="4" height="34" width="60.7" y="136" x="869.5"
+                                class="ill-f-panel-raised ill-f-panel-raised"></rect>
+                            <rect rx="4" height="34" width="116.3" y="136" x="980.5"
+                                class="ill-f-panel-raised ill-f-panel-raised"></rect>
+                            <rect rx="4" height="34" width="97.8" y="184" x="83.3"
+                                class="ill-f-panel-raised ill-f-panel-raised"></rect>
+                            <rect rx="4" height="34" width="60.7" y="184" x="240.5"
+                                class="ill-f-panel-raised ill-f-panel-raised"></rect>
+                            <rect rx="4" height="34" width="97.8" y="184" x="360.8"
+                                class="ill-f-panel-raised ill-f-panel-raised"></rect>
+                            <rect rx="4" height="34" width="70.0" y="184" x="518.0" class="ill-f-accent ill-f-accent">
+                            </rect>
+                            <rect rx="4" height="34" width="79.2" y="184" x="638.3"
+                                class="ill-f-panel-raised ill-f-panel-raised"></rect>
+                            <rect rx="4" height="34" width="144.0" y="184" x="767.8"
+                                class="ill-f-panel-raised ill-f-panel-raised"></rect>
+                            <rect rx="4" height="34" width="70.0" y="184" x="952.8"
+                                class="ill-f-panel-raised ill-f-panel-raised"></rect>
+                            <line stroke-width="1.5" y2="240" x2="485.6" y1="28" x1="485.6"
+                                class="ill-s-text-panel ill-s-text-panel"></line>
+                            <circle r="4.5" cy="28" cx="485.6" class="ill-f-text-panel ill-f-text-panel"></circle>
+                        </svg></div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6aec83b44f4f0425b95841e3"
+        type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+        crossorigin="anonymous"></script>
+    <script src="{{ asset('hmxtech/6aec83b44f4f0425b95841e3/js/webflow.schunk.efb220150c6bf06b.js') }}"
+        type="text/javascript" integrity="sha384-M5g7g8L9HlkqeyHNOn9zSh8ZtiN83Kb/VMbJFMdWVs4hUgzrCr701of4XbZzJRGY"
+        crossorigin="anonymous"></script>
+    <script src="{{ asset('hmxtech/6aec83b44f4f0425b95841e3/js/webflow.3e78af3c.f091fcab5f62be66.js') }}"
+        type="text/javascript" integrity="sha384-d6nPGYxcWIkP50JsUsxnuG/dr2GOdT7dFk9Z89rbCOELaJQtPGUFwndvTzwx5xHs"
+        crossorigin="anonymous"></script>
+    <script src="{{ asset('hmxtech/gsap/3.15.0/gsap.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('hmxtech/gsap/3.15.0/ScrollTrigger.min.js') }}" type="text/javascript"></script>
+</body>
+
+</html>

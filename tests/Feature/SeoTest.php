@@ -1,5 +1,7 @@
 <?php
 
+use Statamic\Facades\GlobalSet;
+
 /**
  * Decode every JSON-LD block in a rendered page.
  *
@@ -57,7 +59,7 @@ test('llms.txt summarises the company from the CMS', function () {
 
     expect($response->headers->get('Content-Type'))->toContain('text/plain')
         ->and($response->getContent())
-        ->toStartWith('# Seedstone')
+        ->toStartWith('# '.GlobalSet::findByHandle('settings')->inDefaultSite()->get('site_name'))
         ->toContain('## Products')
         ->toContain('[Cashewnut]('.config('app.url').'/products/cashewnut)')
         ->toContain('## Services')

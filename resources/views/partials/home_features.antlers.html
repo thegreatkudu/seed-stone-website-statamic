@@ -1,0 +1,84 @@
+{{# ============================================================ #}}
+{{# HOME FEATURES — "What we do" three-card section (#services).  #}}
+{{# Content: Home entry → "Features" tab.                         #}}
+{{# Built on the export's section / section-header / feature-grid #}}
+{{# classes; additions live in /hmxtech/css/hmxtech-features.css. #}}
+{{# Cards without an uploaded image show a built-in preview.      #}}
+{{# Cards fade in via the export's site-wide .feature interaction. #}}
+{{# ============================================================ #}}
+{{ if features_cards }}
+<section class="section hx-features" id="services" aria-labelledby="hx-features-heading">
+  <div class="section-header is-split">
+    <div class="hx-features_intro" data-hx-reveal>
+      {{ if features_tag }}
+      <div class="hx-tag"><span class="hx-tag_square"></span>{{ features_tag }}</div>
+      {{ /if }}
+      <h2 class="heading-xl" id="hx-features-heading">{{ features_heading }}{{ if features_heading_muted }} <span class="hx-muted">{{ features_heading_muted }}</span>{{ /if }}</h2>
+    </div>
+    {{ if features_text }}
+    <div class="section-header_aside" data-hx-reveal>
+      <p class="text-lead">{{ features_text }}</p>
+    </div>
+    {{ /if }}
+  </div>
+
+  <div class="feature-grid hx-features_grid">
+    {{ features_cards }}
+    <article class="feature hx-feature{{ if first }} is-first{{ /if }}">
+      <div class="hx-feature_num">{{ if count < 10 }}0{{ /if }}{{ count }}</div>
+      <div class="hx-feature_copy">
+        <h3 class="heading-m">{{ title }}</h3>
+        {{ if text }}<p class="text-lead">{{ text }}</p>{{ /if }}
+      </div>
+
+      <div class="hx-feature_panel">
+        {{ if image }}
+          <img class="hx-feature_image" src="{{ glide:image width='800' fit='max' format='webp' }}"
+            srcset="{{ glide:image width='448' fit='max' format='webp' }} 448w, {{ glide:image width='800' fit='max' format='webp' }} 800w"
+            sizes="(min-width: 992px) 400px, 90vw" alt="{{ image_alt }}" loading="lazy" decoding="async">
+        {{ elseif count == 1 }}
+          {{# Built-in preview: a drawing set moving through design review. #}}
+          <div class="hx-mock" aria-hidden="true">
+            <div class="hx-mock_head">
+              <span class="hx-mock_app">DS</span>
+              <span class="hx-mock_title">Drawing set · Rev C</span>
+              <span class="hx-mock_meta">Design</span>
+            </div>
+            <div class="hx-mock_row"><span class="hx-mock_dot is-violet"></span><span>Architectural</span><span class="hx-mock_status is-done">Approved</span></div>
+            <div class="hx-mock_row"><span class="hx-mock_dot is-violet"></span><span>Structural</span><span class="hx-mock_status is-done">Approved</span></div>
+            <div class="hx-mock_row"><span class="hx-mock_dot is-magenta"></span><span>Water and sanitation</span><span class="hx-mock_status">In review</span></div>
+            <div class="hx-mock_row"><span class="hx-mock_dot"></span><span>Site supervision</span><span class="hx-mock_meta">Weekly</span></div>
+          </div>
+        {{ elseif count == 2 }}
+          {{# Built-in preview: progress on a building site, stage by stage. #}}
+          <div class="hx-mock" aria-hidden="true">
+            <div class="hx-mock_head">
+              <span class="hx-mock_rec"></span>
+              <span class="hx-mock_title">Office block · Site report</span>
+              <span class="hx-mock_meta">Week 18</span>
+            </div>
+            <div class="hx-mock_stage"><span>Substructure</span><span class="hx-mock_meta">100%</span><span class="hx-mock_bar"><i style="--p:1"></i></span></div>
+            <div class="hx-mock_stage"><span>Frame and slabs</span><span class="hx-mock_meta">72%</span><span class="hx-mock_bar"><i style="--p:.72"></i></span></div>
+            <div class="hx-mock_stage"><span>Roofing</span><span class="hx-mock_meta">30%</span><span class="hx-mock_bar"><i style="--p:.3"></i></span></div>
+            <div class="hx-mock_chip">Concrete cubes passed · 28 days</div>
+          </div>
+        {{ elseif count == 3 }}
+          {{# Built-in preview: road works by chainage. #}}
+          <div class="hx-mock" aria-hidden="true">
+            <div class="hx-mock_head">
+              <span class="hx-mock_title">Road works</span>
+              <span class="hx-mock_meta">Km 0+000 – 4+200</span>
+            </div>
+            <div class="hx-mock_road"><span class="is-done" style="--w:38%"></span><span class="is-active" style="--w:24%"></span><span style="--w:38%"></span></div>
+            <div class="hx-mock_row"><span class="hx-mock_dot is-violet"></span><span>Earthworks</span><span class="hx-mock_status is-done">Complete</span></div>
+            <div class="hx-mock_row"><span class="hx-mock_dot is-magenta"></span><span>Base course</span><span class="hx-mock_status">Km 1+600</span></div>
+            <div class="hx-mock_row"><span class="hx-mock_dot is-blue"></span><span>Culverts and drainage</span><span class="hx-mock_meta">6 of 9</span></div>
+            <div class="hx-mock_row is-muted"><span class="hx-mock_dot"></span><span>Surfacing</span><span class="hx-mock_meta">Next</span></div>
+          </div>
+        {{ /if }}
+      </div>
+    </article>
+    {{ /features_cards }}
+  </div>
+</section>
+{{ /if }}

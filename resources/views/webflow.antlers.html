@@ -1,0 +1,30 @@
+<!doctype html>
+{{# ============================================================ #}}
+{{# WEBFLOW LAYOUT — wraps every page converted from the Webflow #}}
+{{# export. Templates set {{ section:wf_page }} (the page's       #}}
+{{# data-wf-page id, needed by Webflow interactions) and may     #}}
+{{# inject {{ section:head_css }} / {{ section:footer_scripts }}.  #}}
+{{# Assets are served from /public/hmxtech.                      #}}
+{{# ============================================================ #}}
+<html data-wf-domain="carefront.webflow.io" data-wf-page="{{ yield:wf_page }}"
+  data-wf-site="6aec83b44f4f0425b95841e3" lang="{{ site:short_locale }}" class="w-mod-js w-mod-ix3">
+
+<head>
+  {{ partial:layout/webflow/head }}
+</head>
+
+<body>
+  <div class="page-wrapper">
+    <div class="rails">
+      {{ partial:layout/webflow/nav }}
+
+      {{ template_content }}
+
+      {{ partial:layout/webflow/footer }}
+    </div>
+  </div>
+  {{ partial:layout/webflow/scripts }}
+  {{ yield:footer_scripts }}
+</body>
+
+</html>

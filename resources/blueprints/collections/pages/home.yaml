@@ -1,0 +1,270 @@
+title: 'Home Page'
+hide: true
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: nav_title
+            field:
+              type: text
+              display: 'Navigation Title'
+              instructions: 'Optionally override the title shown in the navigation menu.'
+              placeholder: 'Defaults to the page title'
+      -
+        display: Builder
+        fields:
+          -
+            import: page_builder
+  hero:
+    display: 'Hero Slider'
+    sections:
+      -
+        display: 'Slides'
+        instructions: 'Full-width image slides at the top of the home page. Use landscape images of at least 2400 × 1350 px; the left side sits under a dark overlay, so keep the subject towards the right.'
+        fields:
+          -
+            handle: hero_slides
+            field:
+              type: grid
+              display: 'Slides'
+              mode: stacked
+              min_rows: 1
+              max_rows: 6
+              add_row: 'Add slide'
+              reorderable: true
+              listable: hidden
+              fields:
+                -
+                  handle: image
+                  field:
+                    type: assets
+                    display: 'Background Image'
+                    container: assets
+                    folder: hero
+                    max_files: 1
+                    mode: grid
+                    validate:
+                      - required
+                -
+                  handle: image_alt
+                  field:
+                    type: text
+                    display: 'Image Description'
+                    instructions: 'Describe the photo for screen readers. Leave empty if it is purely decorative.'
+                -
+                  handle: tab_label
+                  field:
+                    type: text
+                    display: 'Tab Label'
+                    instructions: 'Short name shown on the slide tab, e.g. "Scheduling".'
+                    character_limit: 24
+                    width: 50
+                    validate:
+                      - required
+                -
+                  handle: eyebrow
+                  field:
+                    type: text
+                    display: 'Eyebrow'
+                    instructions: 'Small label above the headline.'
+                    width: 50
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: 'Headline'
+                    instructions: 'Shown in white.'
+                    width: 50
+                    validate:
+                      - required
+                -
+                  handle: heading_muted
+                  field:
+                    type: text
+                    display: 'Headline (Continued)'
+                    instructions: 'Follows the headline in a softer tone.'
+                    width: 50
+                -
+                  handle: text
+                  field:
+                    type: textarea
+                    display: 'Supporting Text'
+                    character_limit: 180
+                -
+                  handle: primary_label
+                  field:
+                    type: text
+                    display: 'Primary Button Label'
+                    width: 50
+                -
+                  handle: primary_url
+                  field:
+                    type: link
+                    display: 'Primary Button Link'
+                    width: 50
+                -
+                  handle: secondary_label
+                  field:
+                    type: text
+                    display: 'Secondary Button Label'
+                    width: 50
+                -
+                  handle: secondary_url
+                  field:
+                    type: link
+                    display: 'Secondary Button Link'
+                    width: 50
+      -
+        display: 'Behaviour'
+        fields:
+          -
+            handle: hero_autoplay
+            field:
+              type: toggle
+              display: 'Autoplay'
+              instructions: 'Advance slides automatically. Visitors who prefer reduced motion always get manual slides.'
+              default: true
+              width: 50
+          -
+            handle: hero_interval
+            field:
+              type: integer
+              display: 'Seconds Per Slide'
+              default: 7
+              width: 50
+              validate:
+                - 'min:4'
+                - 'max:20'
+  features:
+    display: 'Features'
+    sections:
+      -
+        display: 'Everything You Need'
+        instructions: 'The three-card section shown right after the hero slider.'
+        fields:
+          -
+            handle: features_tag
+            field:
+              type: text
+              display: 'Tag'
+              width: 50
+          -
+            handle: features_heading
+            field:
+              type: text
+              display: 'Headline'
+              width: 50
+          -
+            handle: features_heading_muted
+            field:
+              type: text
+              display: 'Headline (Continued)'
+              instructions: 'Follows the headline in a softer tone.'
+              width: 50
+          -
+            handle: features_text
+            field:
+              type: textarea
+              display: 'Intro Text'
+              width: 50
+          -
+            handle: features_cards
+            field:
+              type: grid
+              display: 'Cards'
+              mode: stacked
+              min_rows: 1
+              max_rows: 6
+              add_row: 'Add card'
+              reorderable: true
+              listable: hidden
+              fields:
+                -
+                  handle: title
+                  field:
+                    type: text
+                    display: 'Title'
+                    width: 50
+                    validate:
+                      - required
+                -
+                  handle: text
+                  field:
+                    type: textarea
+                    display: 'Text'
+                    width: 50
+                -
+                  handle: image
+                  field:
+                    type: assets
+                    display: 'Preview Image'
+                    instructions: 'Optional. Without an image, the first three cards show built-in product previews.'
+                    container: assets
+                    folder: features
+                    max_files: 1
+                    mode: grid
+                    width: 50
+                -
+                  handle: image_alt
+                  field:
+                    type: text
+                    display: 'Image Description'
+                    width: 50
+  seo:
+    display: SEO
+    sections:
+      -
+        fields:
+          -
+            import: seo
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+          -
+            handle: parent
+            field:
+              type: entries
+              collections:
+                - pages
+              max_items: 1
+              listable: false
+              localizable: true
+          -
+            handle: banner_image
+            field:
+              container: assets
+              folder: images/site
+              max_files: 1
+              type: assets
+              display: 'Banner Image'
+              instructions: 'Background of the page title banner. Leave empty to use the default from Globals → Settings.'
+              listable: hidden
+          -
+            handle: show_title
+            field:
+              default: false
+              type: toggle
+              display: 'Show Title'
+              icon: toggle
+              instructions: 'Toggle this to show the Title of the page in the header.'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false

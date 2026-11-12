@@ -1,0 +1,55 @@
+title: 'Walkthrough Request'
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: first_name
+            field:
+              type: text
+              display: 'First Name'
+              validate:
+                - required
+          -
+            handle: last_name
+            field:
+              type: text
+              display: 'Last Name'
+              validate:
+                - required
+          -
+            handle: email
+            field:
+              type: text
+              display: 'Work Email'
+              input_type: email
+              validate:
+                - required
+                - email
+          -
+            handle: clinic
+            field:
+              type: text
+              display: 'Clinic'
+          -
+            handle: providers
+            field:
+              type: select
+              display: 'Providers'
+              options:
+                1-3: '1 to 3'
+                4-10: '4 to 10'
+                11-25: '11 to 25'
+                26+: '26 or more'
+          -
+            handle: message
+            field:
+              type: textarea
+              display: 'Message'
+          -
+            handle: newsletter
+            field:
+              type: text
+              display: 'Wants Monthly Notes'

@@ -1,0 +1,9 @@
+title: 'Walkthrough Request'
+honeypot: website
+store: true
+email:
+  -
+    to: info@hmxtech.co.tz
+    reply_to: '{{ email }}'
+    subject: 'New walkthrough request from the website'
+    markdown: true
