@@ -111,6 +111,7 @@ Route::redirect('/about', '/portfolio', 301);
 Route::redirect('/research', '/publications', 301);
 Route::redirect('/changelog', '/news', 301);
 Route::redirect('/pricing', '/how-we-work', 301);
+Route::redirect('/posts/harbor-family-no-shows', '/posts/why-the-ruvu-to-mlandizi-road-keeps-failing-in-the-rain', 301);
 
 Route::redirect('/services', '/our-services', 301);
 Route::redirect('/services/', '/our-services', 301);

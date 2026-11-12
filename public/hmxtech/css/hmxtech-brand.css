@@ -395,3 +395,13 @@ section[id] {
     animation: none;
   }
 }
+
+/* Article: link to the full paper under the body. */
+.hx-post_pdf {
+  margin-top: 32px;
+}
+
+/* Article covers are often diagrams: show them whole instead of cropping. */
+.post-cover_img.hx-post_cover {
+  aspect-ratio: auto;
+}

@@ -16,79 +16,50 @@
 	</style>
 {{ /section:head_css }}
 
+			{{# Article fields come from the post entry (blueprint: Article). #}}
 			<section class="post-header">
-				<div class="crumbs"><a href="/research" class="crumbs_link">Research</a><span
+				<div class="crumbs"><a href="/news" class="crumbs_link">News</a><span
 						class="crumbs_sep">/</span>
-					<div class="crumbs_current">Operations</div>
+					<div class="crumbs_current">{{ topic ?? 'Article' }}</div>
 				</div>
-				<div class="eyebrow">Operations</div>
-				<h1 class="post-header_title">How Harbor Family cut no-shows by a third</h1>
-				<p class="post-header_summary">Two-way reminders, a waitlist that fills itself and one small change to
-					the confirmation text.</p>
+				{{ if topic }}<div class="eyebrow">{{ topic }}</div>{{ /if }}
+				<h1 class="post-header_title">{{ title }}</h1>
+				{{ if summary }}<p class="post-header_summary">{{ summary }}</p>{{ /if }}
 				<div class="byline">
-					<div class="post-avatar">MT</div>
+					<div class="post-avatar">HX</div>
 					<div class="byline_main">
 						<div class="byline_row">
-							<div class="byline_name">Mei Tanaka</div>
-							<div class="byline_sep">,</div>
-							<div class="byline_name">Clinical Lead</div>
+							<div class="byline_name">{{ author_name ?? 'HMXTECH Engineering' }}</div>
+							{{ if author_role }}<div class="byline_sep">,</div>
+							<div class="byline_name">{{ author_role }}</div>{{ /if }}
 						</div>
 						<div class="byline_row is-meta">
-							<div class="byline_meta">November 2, 2026</div>
-							<div class="byline_sep">,</div>
-							<div class="byline_meta">7 min read</div>
+							<div class="byline_meta"><time datetime="{{ date format='Y-m-d' }}">{{ date format='F j, Y' }}</time></div>
+							{{ if read_time }}<div class="byline_sep">,</div>
+							<div class="byline_meta">{{ read_time }} min read</div>{{ /if }}
 						</div>
 					</div>
 				</div>
 			</section>
+			{{ if featured_image }}
 			<section class="post-cover">
-				<div class="post-cover_frame"><img
-						src="/hmxtech/6aec83b44f4f0425b95841e1/6aec83b44f4f0425b9584222_6aeb4a055389b082880e70d5_post-cover.webp"
-						loading="lazy"
-						alt="Chart of 24 weeks of Mondays at Harbor Family showing missed visits falling and slots filled from the waitlist"
-						class="post-cover_img"></div>
+				<div class="post-cover_frame"><img src="{{ featured_image:url }}" alt="{{ image_alt ?? '' }}" class="post-cover_img hx-post_cover"></div>
 			</section>
+			{{ /if }}
 			<section class="post-body">
 				<div class="post-grid">
 					<article class="post-article">
 						<div class="post-rich w-richtext">
-							<p>Harbor Family runs three locations and about forty visits a day per site. Before
-								Carefront, roughly one in six appointments ended as a no-show. Not because patients did
-								not care, but because a reminder they could not answer was easy to ignore.</p>
-							<h2 id="one-way">The problem with one-way reminders</h2>
-							<p>A reminder that says "reply STOP to opt out" teaches people that the message is not for
-								them. The front desk then spent the morning calling the people who did not show up,
-								instead of the people who would have rescheduled if anyone had asked.</p>
-							<blockquote>We stopped chasing patients. The schedule started fixing itself, because people
-								could just text back. Dr. Lena Ortiz, Medical director</blockquote>
-							<h2 id="replies">Letting patients reply</h2>
-							<p>Every reminder now arrives as a normal text from the clinic number. Patients reply with a
-								time, a question or a simple yes, and the reply lands in the same thread the front desk
-								already works from.</p>
-							<ul>
-								<li>Reminders 72 hours and 2 hours before the visit</li>
-								<li>Replies routed to whoever owns that patient today</li>
-								<li>Reschedule links that respect provider buffers</li>
-							</ul>
-							<h2 id="waitlist">A waitlist that fills itself</h2>
-							<p>When a patient cancels, Carefront offers the slot to the waitlist in order, by text, with
-								a two-hour hold. Most freed slots are filled before anyone on the team notices they
-								opened.</p>
-							<h3>The confirmation text</h3>
-							<p>The smallest change had the biggest effect. The confirmation now names the provider and
-								the room, and asks one question: "Still good for Friday at 10:15?" A yes takes one tap.
-								A no opens the reschedule link.</p>
-							<h2 id="results">What changed in 90 days</h2>
-							<p>Within ninety days no-shows were down by a third across all three locations, and the
-								morning call list was gone. The front desk now spends that hour on new patient calls.
-							</p>
+							{{ content }}
 						</div>
+						{{ if pdf_url }}
+						<a href="{{ pdf_url }}" target="_blank" rel="noopener" class="button is-secondary hx-post_pdf">Download the paper (PDF)</a>
+						{{ /if }}
 						<div class="author-card">
-							<div class="post-avatar is-large">MT</div>
+							<div class="post-avatar is-large">HX</div>
 							<div class="author-card_main">
-								<div class="author-card_name">Mei Tanaka</div>
-								<p class="author-card_bio">Clinical Lead at Carefront. Ran a front desk for six years
-									before joining the team.</p>
+								<div class="author-card_name">{{ author_name ?? 'HMXTECH Engineering' }}</div>
+								{{ if author_bio }}<p class="author-card_bio">{{ author_bio }}</p>{{ /if }}
 							</div>
 						</div>
 					</article>
@@ -96,65 +67,23 @@
 			</section>
 			<section class="section">
 				<div class="related-head">
-					<h2 class="heading-related">Keep reading</h2><a href="/research" class="text-link">All research<span
-							class="text-link_icon"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-								xmlns="http://www.w3.org/2000/svg">
-								<path d="M4 10L10 4M10 4H5M10 4V9" stroke="currentColor" stroke-width="1.4"
-									stroke-linecap="round"></path>
-							</svg></span></a>
+					<h2 class="heading-related">Related publications</h2><a href="/publications" class="text-link">All publications<span class="text-link_icon"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 10L10 4M10 4H5M10 4V9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"></path></svg></span></a>
 				</div>
 				<div class="w-dyn-list">
 					<div role="list" class="post-list w-dyn-items">
-						<div role="listitem" class="w-dyn-item"><a href="/posts/same-day-claims"
+						{{ collection:publications :topic:is="related_topic:value ?? 'roads'" featured:isnt="true" limit="3" }}
+						<div role="listitem" class="w-dyn-item"><a href="{{ pdf_url }}" target="_blank" rel="noopener"
 								class="post-card w-inline-block">
-								<div class="post-card_media"><img
-										src="/hmxtech/6aec83b44f4f0425b95841e1/6aec83b44f4f0425b9584243_6aeb4a023adb42d8240afc0d_cover-claims.webp"
-										loading="lazy" alt="A 09:30 visit turning into a claim sent at 09:42"
-										class="post-card_img"></div>
-								<div class="post-card_tag">Billing</div>
-								<h3 class="post-card_title">Same-day claims without a billing team</h3>
-								<p class="post-card_text">What changes when charges are coded from the visit note
-									instead of a spreadsheet.</p>
+								<div class="post-card_media"><img src="/hmxtech/img/publications/{{ topic:value }}.webp"
+										loading="lazy" width="832" height="500" alt="" class="post-card_img"></div>
+								<div class="post-card_tag">{{ topic:label }}</div>
+								<h3 class="post-card_title">{{ title }}</h3>
+								<p class="post-card_text">{{ summary }}</p>
 								<div class="post-card_meta">
-									<div>October 24, 2026</div>
-									<div class="byline_sep">,</div>
-									<div>6 min read</div>
+									<div>Free PDF</div>
 								</div>
 							</a></div>
-						<div role="listitem" class="w-dyn-item"><a href="/posts/check-in-from-the-car"
-								class="post-card w-inline-block">
-								<div class="post-card_media"><img
-										src="/hmxtech/6aec83b44f4f0425b95841e1/6aec83b44f4f0425b9584263_6aeb4a02d555a9c075cfff34_cover-checkin.webp"
-										loading="lazy"
-										alt="Phone notification saying a patient has arrived in parking spot 4"
-										class="post-card_img"></div>
-								<div class="post-card_tag">Patient experience</div>
-								<h3 class="post-card_title">The check-in that starts in the car</h3>
-								<p class="post-card_text">Why the waiting room is the worst part of a visit, and how to
-									skip it.</p>
-								<div class="post-card_meta">
-									<div>October 15, 2026</div>
-									<div class="byline_sep">,</div>
-									<div>5 min read</div>
-								</div>
-							</a></div>
-						<div role="listitem" class="w-dyn-item"><a href="/posts/one-record-architecture"
-								class="post-card w-inline-block">
-								<div class="post-card_media"><img
-										src="/hmxtech/6aec83b44f4f0425b95841e1/6aec83b44f4f0425b9584283_6aeb4a02d555a9c075cfff6d_cover-architecture.webp"
-										loading="lazy"
-										alt="Diagram of scheduling, intake, messaging, billing and sync all connected to one patient record"
-										class="post-card_img"></div>
-								<div class="post-card_tag">Product</div>
-								<h3 class="post-card_title">One record, five modules: the architecture</h3>
-								<p class="post-card_text">A plain-language tour of how every part of Carefront reads and
-									writes the same patient.</p>
-								<div class="post-card_meta">
-									<div>October 3, 2026</div>
-									<div class="byline_sep">,</div>
-									<div>9 min read</div>
-								</div>
-							</a></div>
+						{{ /collection:publications }}
 					</div>
 				</div>
 			</section>
@@ -220,14 +149,13 @@
 								<circle cx="870" cy="140" r="8" class="ill-f-accent cord-end"></circle>
 							</g>
 						</svg></div>
-					<h2 class="heading-xl is-center">Bring every patient into one record.</h2>
-					<p class="text-lead is-center">See Carefront on your own schedule, with your own EHR, in a 30 minute
-						walkthrough.</p>
-					<div class="button-row is-center"><a href="/contact" class="button w-inline-block">Book a demo<svg
+					<h2 class="heading-xl is-center">Building on difficult ground?</h2>
+					<p class="text-lead is-center">Talk to an engineer about soil testing, drainage and pavement design before you build.</p>
+					<div class="button-row is-center"><a href="/contact" class="button w-inline-block">Get a quote<svg
 								width="14" height="14" viewBox="0 0 14 14" fill="none"
 								xmlns="http://www.w3.org/2000/svg">
 								<path d="M4 10L10 4M10 4H5M10 4V9" stroke="currentColor" stroke-width="1.4"
 									stroke-linecap="round"></path>
-							</svg></a><a href="/sign-up" class="button is-secondary">Start free trial</a></div>
+							</svg></a><a href="tel:+255758526792" class="button is-secondary">Call +255 758 526 792</a></div>
 				</div>
 			</section>
