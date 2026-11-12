@@ -462,3 +462,254 @@ section[id] {
     padding: 12px;
   }
 }
+
+/* Home: Truss Analyzer shown as a web app in a browser window (replaces the phone mock-up). */
+.hx-webapp {
+  height: 640px;
+}
+
+.hx-web {
+  position: absolute;
+  top: 112px;
+  left: 40px;
+  right: -48px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 12px;
+  background-color: var(--_carefront-color---bg--paper);
+  box-shadow: 0 40px 80px #00000059;
+  color: var(--_carefront-color---text--primary);
+  font-size: 13px;
+}
+
+.hx-web_bar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--_carefront-color---line--paper);
+  background-color: var(--_carefront-color---bg--subtle);
+}
+
+.hx-web_dots {
+  display: flex;
+  gap: 6px;
+}
+
+.hx-web_dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--_carefront-color---line--strong);
+}
+
+.hx-web_url {
+  display: inline-flex;
+  flex: 1;
+  align-items: center;
+  gap: 6px;
+  max-width: 280px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background-color: var(--_carefront-color---bg--raised);
+  color: var(--_carefront-color---text--muted);
+  font-size: 12px;
+}
+
+.hx-web_head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 20px;
+  border-bottom: 1px solid var(--_carefront-color---line--paper);
+}
+
+.hx-web_head .phone_clinic {
+  white-space: nowrap;
+}
+
+.hx-web_tabs {
+  display: flex;
+  gap: 4px;
+  margin-right: 28px;
+}
+
+.hx-web_tabs span {
+  padding: 5px 10px;
+  border-radius: 6px;
+  color: var(--_carefront-color---text--muted);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.hx-web_tabs .is-active {
+  background-color: var(--_carefront-color---accent--default);
+  color: var(--_carefront-color---accent--on);
+}
+
+.hx-web_app {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 230px;
+}
+
+.hx-web_canvas {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 18px 20px;
+  border-right: 1px solid var(--_carefront-color---line--paper);
+  background-image: radial-gradient(circle, var(--_carefront-color---line--paper) 1px, transparent 1.4px);
+  background-size: 16px 16px;
+}
+
+.hx-web_side {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 16px 64px 16px 16px;
+  box-sizing: content-box;
+}
+
+.hx-web_pass {
+  padding: 14px;
+  row-gap: 12px;
+}
+
+.hx-web_pass .pass_time {
+  font-size: 30px;
+  white-space: nowrap;
+}
+
+.hx-truss {
+  width: 100%;
+  height: auto;
+}
+
+.hx-truss_m {
+  stroke: var(--_carefront-color---text--muted);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+}
+
+.hx-truss_m.is-comp {
+  stroke: var(--hmx-magenta);
+  stroke-width: 3.5;
+}
+
+.hx-truss_m.is-tens {
+  stroke: var(--_carefront-color---accent--default);
+  stroke-width: 3.5;
+}
+
+.hx-truss_j {
+  fill: var(--_carefront-color---bg--raised);
+  stroke: var(--_carefront-color---text--primary);
+  stroke-width: 1.5;
+}
+
+.hx-truss_sup {
+  fill: none;
+  stroke: var(--_carefront-color---text--primary);
+  stroke-width: 1.4;
+}
+
+.hx-truss_load {
+  fill: none;
+  stroke: var(--hmx-royal-blue);
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.hx-truss_t {
+  fill: var(--_carefront-color---text--primary);
+  font-family: Schibsted Grotesk, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.hx-truss_t.is-load {
+  fill: var(--hmx-royal-blue);
+  font-size: 11px;
+}
+
+.hx-web_legend {
+  display: flex;
+  gap: 16px;
+  color: var(--_carefront-color---text--muted);
+  font-size: 11px;
+}
+
+.hx-web_legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.hx-web_legend span::before {
+  width: 14px;
+  height: 3px;
+  border-radius: 2px;
+  content: "";
+}
+
+.hx-web_legend .is-comp::before { background-color: var(--hmx-magenta); }
+.hx-web_legend .is-tens::before { background-color: var(--_carefront-color---accent--default); }
+
+.hx-webapp_toast {
+  top: 40px;
+  left: auto;
+  right: 32px;
+  margin-left: 0;
+}
+
+@media screen and (max-width: 991px) {
+  .hx-web {
+    right: -24px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .hx-webapp {
+    height: 560px;
+  }
+
+  .hx-web {
+    top: 96px;
+    left: 16px;
+    transform: none;
+  }
+
+  .hx-web_app {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hx-web_canvas {
+    border-right: 0;
+  }
+
+  .hx-web_side {
+    padding-right: 40px;
+  }
+
+  .hx-web_tabs {
+    margin-right: 8px;
+  }
+
+  .hx-web_tabs span {
+    padding: 4px 7px;
+    font-size: 11px;
+  }
+
+  .hx-web_head {
+    padding: 10px 14px;
+  }
+
+  .hx-webapp_toast {
+    right: 16px;
+    left: 16px;
+    width: auto;
+  }
+}

@@ -8,7 +8,7 @@ test('the home page presents HMXTECH construction content', function () {
         ->assertSee('One team for every stage, from the first survey to the final handover.')
         ->assertSee('Built for work that stands for decades.')
         ->assertSee('Every project, one living site record.')
-        ->assertSee('Truss analysis, in your pocket.')
+        ->assertSee('Truss analysis, right in your browser.')
         ->assertSee('Tested in the lab, proven on site.')
         ->assertSee('Engineering that is researched, not guessed.')
         ->assertSee('Priced per project, delivered by registered engineers.')

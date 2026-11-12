@@ -758,115 +758,73 @@
       </section>
       <section class="section">
         <div class="app-grid">
-          <div class="radar">
+          <div class="radar hx-webapp">
             <div class="radar_sweep"></div>
-            <div class="radar_min is-a">4 M</div>
-            <div class="radar_min is-b">8 M</div>
-            <div class="radar_min is-c">12 M</div><svg xmlns="http://www.w3.org/2000/svg" fill="none"
-              viewBox="0 0 200 460" height="460" width="200" class="radar_route radar_route">
-              <path stroke-linecap="round" stroke-dasharray="2 6" stroke-width="1.5" stroke="currentColor"
-                d="M-10 450C60 420 40 260 180 212"></path>
-              <circle fill-opacity="0.18" fill="currentColor" r="9" cy="389.2" cx="37.7"></circle>
-              <circle fill="currentColor" r="3.5" cy="389.2" cx="37.7"></circle>
-              <circle fill-opacity="0.18" fill="currentColor" r="9" cy="296.1" cx="79.3"></circle>
-              <circle fill="currentColor" r="3.5" cy="296.1" cx="79.3"></circle>
-              <circle fill-opacity="0.18" fill="currentColor" r="9" cy="225.5" cx="149.3"></circle>
-              <circle fill="currentColor" r="3.5" cy="225.5" cx="149.3"></circle>
-            </svg>
-            <div class="radar_stop is-1">
-              <div>Joint A</div>
-              <div class="mono-label is-panel">Pin support</div>
-            </div>
-            <div class="radar_stop is-2">
-              <div>Joint C</div>
-              <div class="mono-label is-panel">10 kN load</div>
-            </div>
-            <div class="radar_stop is-3">
-              <div>Joint E</div>
-              <div class="mono-label is-panel">Roller support</div>
-            </div>
-            <div class="notification">
-              <div class="notification_icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                  height="16" width="16">
-                  <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.8" stroke="currentColor"
-                    d="M6 8a6 6 0 1 1 12 0c0 7 3 9 3 9H3s3-2 3-9M10.3 21a1.94 1.94 0 0 0 3.4 0"></path>
-                </svg></div>
+            <div class="notification hx-webapp_toast">
+              <div class="notification_icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="16" width="16"><path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.8" stroke="currentColor" d="M20 6L9 17l-5-5"></path></svg></div>
               <div class="notification_body">
                 <div class="ui-card_row">
                   <div class="ui-card_strong">Truss solved</div>
-                  <div class="ui-card_meta">now</div>
+                  <div class="ui-card_meta">0.2 s</div>
                 </div>
                 <div class="ui-card_meta">Max compression AB, −29.86 kN.</div>
               </div>
             </div>
-            <div class="phone">
-              <div class="phone_screen">
-                <div class="phone_status">
-                  <div>9:41</div>
-                  <div class="phone_island"></div>
-                  <div class="mono-label is-dark">5G</div>
+            <div class="hx-web">
+              <div class="hx-web_bar">
+                <div class="hx-web_dots"><span></span><span></span><span></span></div>
+                <div class="hx-web_url"><svg width="10" height="10" viewBox="0 0 12 12" fill="none" aria-hidden="true"><rect x="2.5" y="5.5" width="7" height="5" rx="1" stroke="currentColor" stroke-width="1.2"></rect><path d="M4 5.5V4a2 2 0 0 1 4 0v1.5" stroke="currentColor" stroke-width="1.2"></path></svg>hmxtech.co.tz/truss</div>
+              </div>
+              <div class="hx-web_head">
+                <div class="phone_clinic">
+                  <div class="avatar">HX</div>
+                  <div>Truss Analyzer</div>
                 </div>
-                <div class="phone_head">
-                  <div class="phone_clinic">
-                    <div class="avatar">HX</div>
-                    <div>Truss Analyzer</div>
-                  </div>
-                </div>
-                <div>
-                  <div class="mono-label">Workbook sample</div>
-                  <div class="phone_greet">5 joints, 8 members.</div>
-                </div>
-                <div class="pass">
+                <div class="hx-web_tabs"><span>Model</span><span class="is-active">Solve</span><span>Report</span></div>
+              </div>
+              <div class="hx-web_app">
+                <div class="hx-web_canvas">
                   <div class="ui-card_row">
-                    <div class="mono-label is-panel">Analysis</div>
-                    <div class="chip">Solved</div>
+                    <div class="mono-label">Workbook sample</div>
+                    <div class="ui-card_meta">5 joints, 8 members</div>
+                  </div>
+                  <svg viewBox="0 0 320 190" class="hx-truss" role="img" aria-label="Five-joint plane truss with a pin support at A, a roller at E and a 10 kN load at C. Member AB is in compression, DE and BE are in tension.">
+                    <line x1="24" y1="142" x2="112" y2="52" class="hx-truss_m is-comp"></line><line x1="112" y1="52" x2="208" y2="52" class="hx-truss_m "></line><line x1="208" y1="52" x2="296" y2="142" class="hx-truss_m is-tens"></line><line x1="24" y1="142" x2="160" y2="142" class="hx-truss_m "></line><line x1="160" y1="142" x2="296" y2="142" class="hx-truss_m "></line><line x1="112" y1="52" x2="160" y2="142" class="hx-truss_m "></line><line x1="160" y1="142" x2="208" y2="52" class="hx-truss_m "></line><line x1="112" y1="52" x2="296" y2="142" class="hx-truss_m is-tens"></line>
+                    <path d="M24 146 L14 162 H34 Z" class="hx-truss_sup"></path>
+                    <path d="M296 146 L286 158 H306 Z" class="hx-truss_sup"></path><circle cx="291" cy="163" r="3" class="hx-truss_sup"></circle><circle cx="301" cy="163" r="3" class="hx-truss_sup"></circle>
+                    <path d="M160 150 V178 M154 170 L160 178 L166 170" class="hx-truss_load"></path>
+                    <text x="170" y="178" class="hx-truss_t is-load">10 kN</text>
+                    <circle cx="24" cy="142" r="4.5" class="hx-truss_j"></circle><circle cx="112" cy="52" r="4.5" class="hx-truss_j"></circle><circle cx="160" cy="142" r="4.5" class="hx-truss_j"></circle><circle cx="208" cy="52" r="4.5" class="hx-truss_j"></circle><circle cx="296" cy="142" r="4.5" class="hx-truss_j"></circle>
+                    <text x="4" y="138" class="hx-truss_t">A</text><text x="108" y="42" class="hx-truss_t">B</text><text x="142" y="160" class="hx-truss_t">C</text><text x="204" y="42" class="hx-truss_t">D</text><text x="306" y="138" class="hx-truss_t">E</text>
+                  </svg>
+                  <div class="hx-web_legend"><span class="is-comp">Compression</span><span class="is-tens">Tension</span></div>
+                </div>
+                <div class="hx-web_side">
+                  <div class="pass hx-web_pass">
+                    <div class="ui-card_row">
+                      <div class="mono-label is-panel">Analysis</div>
+                      <div class="chip">Solved</div>
+                    </div>
+                    <div>
+                      <div class="pass_time">28.29 kN</div>
+                      <div class="text-panel is-small">Max tension, member DE</div>
+                    </div>
+                    <div class="pass_steps">
+                      <div class="pass_line"></div>
+                      <div class="pass_line-fill"></div>
+                      <div class="pass_step"><div class="pass_dot"></div><div>Model</div></div>
+                      <div class="pass_step"><div class="pass_dot"></div><div>Solve</div></div>
+                      <div class="pass_step"><div class="pass_dot is-todo"></div><div>Report</div></div>
+                    </div>
+                  </div>
+                  <div class="ui-card_row hx-web_forces">
+                    <div class="mono-label">Member forces</div>
+                    <div class="ui-card_strong">8 of 8</div>
                   </div>
                   <div>
-                    <div class="pass_time">28.29 kN</div>
-                    <div class="text-panel is-small">Max tension, member DE</div>
-                  </div>
-                  <div class="pass_steps">
-                    <div class="pass_line"></div>
-                    <div class="pass_line-fill"></div>
-                    <div class="pass_step">
-                      <div class="pass_dot"></div>
-                      <div>Model</div>
-                    </div>
-                    <div class="pass_step">
-                      <div class="pass_dot"></div>
-                      <div>Solve</div>
-                    </div>
-                    <div class="pass_step">
-                      <div class="pass_dot is-todo"></div>
-                      <div>Report</div>
-                    </div>
-                  </div>
-                  <div aria-hidden="true" class="button is-block">See member forces</div>
-                </div>
-                <div class="ui-card_row">
-                  <div class="mono-label">Member forces</div>
-                  <div class="ui-card_strong">8 of 8</div>
-                </div>
-                <div>
-                  <div class="list-row">
-                    <div>AB · −29.86 kN</div>
-                    <div class="check-dot is-done"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                        viewBox="0 0 12 12" height="10" width="10">
-                        <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6" stroke="currentColor"
-                          d="M2.5 6.2L5 8.5L9.5 3.5"></path>
-                      </svg></div>
-                  </div>
-                  <div class="list-row">
-                    <div>DE · +28.29 kN</div>
-                    <div class="check-dot is-done"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                        viewBox="0 0 12 12" height="10" width="10">
-                        <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6" stroke="currentColor"
-                          d="M2.5 6.2L5 8.5L9.5 3.5"></path>
-                      </svg></div>
-                  </div>
-                  <div class="list-row">
-                    <div>BE · +7.50 kN</div>
-                    <div class="pay-chip">View</div>
+                    <div class="list-row"><div>AB · −29.86 kN</div><div class="check-dot is-done"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12" height="10" width="10"><path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6" stroke="currentColor" d="M2.5 6.2L5 8.5L9.5 3.5"></path></svg></div></div>
+                    <div class="list-row"><div>DE · +28.29 kN</div><div class="check-dot is-done"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12" height="10" width="10"><path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.6" stroke="currentColor" d="M2.5 6.2L5 8.5L9.5 3.5"></path></svg></div></div>
+                    <div class="list-row"><div>BE · +7.50 kN</div><div class="pay-chip">View</div></div>
                   </div>
                 </div>
               </div>
@@ -874,7 +832,7 @@
           </div>
           <div class="split-copy app-grid_copy">
             <div class="mono-label">Truss Analyzer</div>
-            <h2 class="heading-xl">Truss analysis, in your pocket.</h2>
+            <h2 class="heading-xl">Truss analysis, right in your browser.</h2>
             <p class="text-lead">Our free web app solves plane trusses by the Northing-Easting method, after the 2012 workbook by Eng. Prof. Duwa Hamisi Chengula of MUST, and handles indeterminate trusses with the stiffness method.</p>
             <div class="points">
               <div class="point">
@@ -887,7 +845,7 @@
               <div class="point">
                 <div class="point_mark"></div>
                 <div>
-                  <div class="point_title">Solve in one tap</div>
+                  <div class="point_title">Solve in one click</div>
                   <div class="text-small">Member forces, reactions, tension or compression, and an equilibrium check.</div>
                 </div>
               </div>
