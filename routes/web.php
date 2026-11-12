@@ -107,6 +107,8 @@ use Statamic\Facades\GlobalSet;
 
 // Route::statamic('search', 'search');
 
+Route::redirect('/about', '/portfolio', 301);
+
 Route::redirect('/services', '/our-services', 301);
 Route::redirect('/services/', '/our-services', 301);
 

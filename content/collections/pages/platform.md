@@ -1,10 +1,10 @@
 ---
 id: 43e7af23-ca2a-4e23-b815-7c3a0ed5657e
 blueprint: page
-title: Platform
-nav_title: Platform
-seo_title: 'Platform: scheduling, intake and billing'
-seo_description: 'Five modules on one record: scheduling, intake, messaging, billing and two way EHR sync. See how Carefront connects every step of every patient visit.'
+title: Services
+nav_title: Services
+seo_title: 'Engineering consultancy, design and construction services'
+seo_description: 'Consultancy, structural design, building construction, civil works and materials testing from HMXTECH, an ERB and CRB registered firm in Mbeya, Tanzania.'
 template: webflow/platform
 layout: webflow
 parent: home
