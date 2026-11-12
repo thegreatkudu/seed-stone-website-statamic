@@ -60,7 +60,7 @@ test('webflow forms post to their Statamic form handlers', function (string $uri
     'contact walkthrough' => ['/contact', 'walkthrough', 'walkthrough'],
     'research newsletter' => ['/publications', 'newsletter', 'newsletter-research'],
     'changelog newsletter' => ['/news', 'newsletter', 'newsletter-changelog'],
-    'footer newsletter' => ['/pricing', 'newsletter', 'newsletter-footer'],
+    'footer newsletter' => ['/how-we-work', 'newsletter', 'newsletter-footer'],
 ]);
 
 test('a walkthrough request is stored and replaces the form with the success message', function () {
