@@ -66,6 +66,13 @@
     linear-gradient(0deg, rgb(14 12 29 / .85) 0%, rgb(14 12 29 / 0) 30%);
 }
 
+/* Images with the brand wash built in: darken only behind the text. */
+.hx-hero_scrim.is-light {
+  background:
+    linear-gradient(90deg, rgb(14 12 29 / .82) 0%, rgb(14 12 29 / .6) 40%, rgb(14 12 29 / .1) 70%, rgb(14 12 29 / 0) 100%),
+    linear-gradient(0deg, rgb(14 12 29 / .75) 0%, rgb(14 12 29 / 0) 30%);
+}
+
 /* ---- Travelling-node line ---------------------------------------------- */
 .hx-hero_line {
   position: absolute;
@@ -446,6 +453,11 @@
   .hx-hero_scrim {
     background:
       linear-gradient(0deg, rgb(14 12 29 / .96) 0%, rgb(14 12 29 / .86) 55%, rgb(14 12 29 / .45) 100%);
+  }
+
+  .hx-hero_scrim.is-light {
+    background:
+      linear-gradient(0deg, rgb(14 12 29 / .9) 0%, rgb(14 12 29 / .7) 55%, rgb(14 12 29 / .2) 100%);
   }
 
   .hx-hero_tabs {

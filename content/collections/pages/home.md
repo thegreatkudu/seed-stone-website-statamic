@@ -28,8 +28,9 @@ hero_interval: 7
 hero_slides:
   -
     id: hxslide01
-    image: hero/hmx-hero-1.webp
-    image_alt: 'Site engineer surveying a building site with tower cranes behind'
+    image: hero/hmx-hero-gradient.webp
+    image_alt: 'Building floor plan drawings and rolled plans under a magenta to blue wash'
+    has_brand_wash: true
     tab_label: Buildings
     eyebrow: 'Registered building contractor · CRB B5'
     heading: 'Your building is'

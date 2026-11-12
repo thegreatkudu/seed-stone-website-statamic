@@ -17,9 +17,9 @@
           srcset="{{ glide:image width='960' fit='crop_focal' format='webp' }} 960w, {{ glide:image width='1440' fit='crop_focal' format='webp' }} 1440w, {{ glide:image width='1920' fit='crop_focal' format='webp' }} 1920w, {{ glide:image width='2560' fit='crop_focal' format='webp' }} 2560w"
           sizes="(min-width: 1392px) 1392px, 100vw" alt="" {{ if first }}fetchpriority="high"{{ else }}loading="lazy"{{ /if }} decoding="async">
         {{ /if }}
+        <div class="hx-hero_scrim{{ if has_brand_wash }} is-light{{ /if }}"></div>
       </div>
     {{ /hero_slides }}
-    <div class="hx-hero_scrim"></div>
   </div>
 
   <div class="hx-hero_line" aria-hidden="true">

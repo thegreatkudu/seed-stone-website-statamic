@@ -62,6 +62,13 @@ tabs:
                     display: 'Image Description'
                     instructions: 'Describe the photo for screen readers. Leave empty if it is purely decorative.'
                 -
+                  handle: has_brand_wash
+                  field:
+                    type: toggle
+                    display: 'Image has the brand colour wash'
+                    instructions: 'Turn on for images that already carry the magenta to blue wash, so the slide is darkened less and the colour shows.'
+                    default: false
+                -
                   handle: tab_label
                   field:
                     type: text
