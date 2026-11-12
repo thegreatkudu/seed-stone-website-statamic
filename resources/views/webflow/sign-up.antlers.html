@@ -1,200 +1,116 @@
 {{ section:wf_page }}6aec83b44f4f0425b95841d3{{ /section:wf_page }}
 
-{{ section:head_css }}
-    <style>
-        html.w-mod-js:not(.w-mod-ix3):is(.rs-pat.is-1) {
-            visibility: hidden !important;
-        }
+{{# ============================================================ #}}
+{{# Client portal auth page. The forms are not connected to a     #}}
+{{# backend yet: /hmxtech/js/hmxtech-auth.js shows a notice on    #}}
+{{# submit. Point the form action at the portal when it is live.  #}}
+{{# ============================================================ #}}
 
-        html.w-mod-js:not(.w-mod-ix3):is(.rs-pat.is-1) * {
-            visibility: hidden !important;
-        }
-
-        html.w-mod-js:not(.w-mod-ix3) :is([data-wf-target*='["6aec83b44f4f0425b95841ca","8f53d73e-da14-aadc-b6ee-3fabd5df89a4"]'], [data-wf-target*='["6aec83b44f4f0425b95841ca","8f53d73e-da14-aadc-b6ee-3fabd5df89de"]'], .feature, [data-wf-target*='["6aec83b44f4f0425b95841ca","fc1a0d03-a5a7-6eb0-ce55-d1ec96b94892"]'], [data-wf-target*='["6aec83b44f4f0425b95841ca","fc1a0d03-a5a7-6eb0-ce55-d1ec96b94894"]'], [data-wf-target*='["6aec83b44f4f0425b95841ca","fc1a0d03-a5a7-6eb0-ce55-d1ec96b94899"]'], [data-wf-target*='["6aec83b44f4f0425b95841ca","fc1a0d03-a5a7-6eb0-ce55-d1ec96b9495d"]'], .record-stack .rs-layer.is-1, .record-stack .rs-layer.is-2, .record-stack .rs-layer.is-3, .record-stack .svg-dash, .rs-pat.is-1, .rs-leader .svg-dot, .rs-leader .svg-leader, .module-scene.is-1 .ui-card, .pattern-tile .snippet > *, .pattern-tile .check-dot.is-done, .pattern-tile .progress_fill, .pattern-tile .bubble.is-reply, .pattern-tile .typing, .pattern-tile .steps_line, .pattern-tile .steps_dot, .pattern-tile .ui-card_row .chip, .nav_mobile) {
-            visibility: hidden !important;
-        }
-    </style>
-{{ /section:head_css }}
-
-    <div class="auth_page">
+    <div class="auth_page hx-auth">
         <div class="auth_main">
-            <div class="auth_head"><a href="/" class="auth_brand w-inline-block"><svg aria-hidden="true" height="22"
-                        width="24" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-width="3" stroke="currentColor"
-                            d="M17.6 5.3A8 8 0 1 0 17.6 16.7"></path>
-                        <circle class="brand-mark_dot" fill="#e21dd3" r="2.6" cy="11" cx="19.6"></circle>
-                    </svg>
-                    <div class="auth_brand-text">Carefront</div>
+            <div class="auth_head"><a href="/" class="auth_brand w-inline-block" aria-label="HMXTECH home"><img class="hx-auth_logo" src="/hmxtech/brand/logo-color.svg" alt="" width="58" height="24">
+                    <div class="auth_brand-text hx-wordmark">HMXTECH</div>
                 </a>
                 <div class="auth_switch">
                     <div>Have an account?</div><a href="/sign-in" class="auth_switch-link w-inline-block">
-                        <div class="auth_strong">Sign in</div><svg fill="none" viewBox="0 0 14 14" height="14"
-                            width="14" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-width="1.4" stroke="currentColor"
-                                d="M4 10L10 4M10 4H5M10 4V9"></path>
-                        </svg>
+                        <div class="auth_strong">Sign in</div><svg fill="none" viewBox="0 0 14 14" height="14" width="14" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path stroke-linecap="round" stroke-width="1.4" stroke="currentColor" d="M4 10L10 4M10 4H5M10 4V9"></path></svg>
                     </a>
                 </div>
             </div>
             <div class="auth_body">
                 <div class="auth_content">
                     <div class="auth_intro">
-                        <div class="auth_eyebrow">Start free trial</div>
-                        <h1 class="auth_title">Set up your clinic in about ten minutes.</h1>
-                        <p class="auth_lead">14 days on the Practice plan. No card, no migration fees.</p>
+                        <div class="auth_eyebrow">Create account</div>
+                        <h1 class="auth_title">Follow your project from anywhere.</h1>
+                        <p class="auth_lead">One account for your HMXTECH projects: drawings, site reports and certificates in one place.</p>
+                        <p class="hx-auth_notice" role="note"><span class="hx-auth_notice-dot" aria-hidden="true"></span><span>The client portal opens soon. Until then, call <a href="tel:+255758526792" class="auth_legal-link">+255 758 526 792</a> or email <a href="mailto:info@hmxtech.co.tz" class="auth_legal-link">info@hmxtech.co.tz</a> for project updates.</span></p>
                     </div>
-                    <div class="w-form w-form-loading">
-                        <form method="get" name="" data-name="sign-up" data-wf-page-id="6aec83b44f4f0425b95841d3"
-                            data-wf-element-id="56856510-0ff9-0e22-ebef-d571e77f98e0" aria-label="sign-up">
+                    <div class="w-form">
+                        <form method="post" action="" data-hx-auth aria-label="Create account" novalidate>
                             <div class="auth_fields">
                                 <div class="auth_row">
-                                    <div class="auth_field"><label for="" class="auth_label">First name</label>
+                                    <div class="auth_field"><label for="signup-first-name" class="auth_label">First name</label>
                                         <div class="auth_input-wrap"><input class="auth_input w-input" maxlength="256"
-                                                name="first-name" data-name="first-name" placeholder="Ana" type="text"
-                                                id="first-name"></div>
+                                                name="first_name" placeholder="Asha" type="text" id="signup-first-name"
+                                                autocomplete="given-name" required></div>
                                     </div>
-                                    <div class="auth_field"><label for="" class="auth_label">Last name</label>
+                                    <div class="auth_field"><label for="signup-last-name" class="auth_label">Last name</label>
                                         <div class="auth_input-wrap"><input class="auth_input w-input" maxlength="256"
-                                                name="last-name" data-name="last-name" placeholder="Silva" type="text"
-                                                id="last-name"></div>
+                                                name="last_name" placeholder="Mwakalinga" type="text" id="signup-last-name"
+                                                autocomplete="family-name" required></div>
                                     </div>
                                 </div>
-                                <div class="auth_field"><label for="" class="auth_label">Work email</label>
-                                    <div class="auth_input-wrap"><input class="auth_input w-input" maxlength="256"
-                                            name="email" data-name="email" placeholder="ana@harborfamily.com"
-                                            type="email" id="email"></div>
-                                </div>
-                                <div class="auth_field"><label for="" class="auth_label">Clinic name</label>
-                                    <div class="auth_input-wrap"><input class="auth_input w-input" maxlength="256"
-                                            name="clinic" data-name="clinic" placeholder="Harbor Family Clinic"
-                                            type="text" id="clinic"></div>
-                                </div>
-                                <div class="auth_field"><label for="" class="auth_label">Password</label>
-                                    <div class="auth_input-wrap"><input class="auth_input w-input" maxlength="256"
-                                            name="password" data-name="password" placeholder="At least 12 characters"
-                                            type="password" id="password">
-                                        <div class="auth_show">Show</div>
+                                <div class="auth_row">
+                                    <div class="auth_field"><label for="signup-email" class="auth_label">Email</label>
+                                        <div class="auth_input-wrap"><input class="auth_input w-input" maxlength="256"
+                                                name="email" placeholder="you@example.com" type="email" id="signup-email"
+                                                autocomplete="email" required></div>
+                                    </div>
+                                    <div class="auth_field"><label for="signup-phone" class="auth_label">Phone</label>
+                                        <div class="auth_input-wrap"><input class="auth_input w-input" maxlength="30"
+                                                name="phone" placeholder="+255 7xx xxx xxx" type="tel" id="signup-phone"
+                                                autocomplete="tel"></div>
                                     </div>
                                 </div>
-                                <div class="auth_meter">
-                                    <div class="auth_meter-bar"></div>
-                                    <div class="auth_meter-bar"></div>
-                                    <div class="auth_meter-bar"></div>
+                                <div class="auth_field"><label for="signup-role" class="auth_label">I am a</label>
+                                    <div class="auth_input-wrap"><select class="auth_input hx-auth_select w-select" name="role" id="signup-role" required>
+                                            <option value="client">Client or project owner</option>
+                                            <option value="engineer">Engineer or consultant</option>
+                                            <option value="contractor">Contractor</option>
+                                            <option value="student">Student</option>
+                                        </select></div>
+                                </div>
+                                <div class="auth_field"><label for="signup-password" class="auth_label">Password</label>
+                                    <div class="auth_input-wrap"><input class="auth_input w-input" maxlength="256"
+                                            name="password" placeholder="At least 12 characters" type="password"
+                                            id="signup-password" autocomplete="new-password" minlength="12" required
+                                            data-hx-strength aria-describedby="signup-password-hint">
+                                        <button type="button" class="auth_show hx-auth_show" data-hx-show="signup-password" aria-controls="signup-password" aria-pressed="false">Show</button>
+                                    </div>
+                                </div>
+                                <div class="auth_meter hx-auth_meter" aria-hidden="true" data-hx-meter>
+                                    <div class="auth_meter-off"></div>
+                                    <div class="auth_meter-off"></div>
+                                    <div class="auth_meter-off"></div>
                                     <div class="auth_meter-off"></div>
                                 </div>
-                                <div class="auth_hint">Strong. 12 characters with a number.</div>
-                                <div class="auth_check-row">
-                                    <div class="auth_check"><svg fill="none" viewBox="0 0 10 10" height="10" width="10"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5"
-                                                stroke="currentColor" d="M2 5.2L4.2 7.4L8 3"></path>
-                                        </svg></div>
-                                    <div><span>I agree to the <a href="/terms" class="auth_legal-link">Terms</a> and the
-                                            <a href="/terms" class="auth_legal-link">Business Associate
-                                                Agreement</a></span></div>
-                                </div><a href="/onboarding-verify" class="button auth_cta">Create account</a>
+                                <div class="auth_hint" id="signup-password-hint" data-hx-hint>Use 12 or more characters with a number.</div>
+                                <label class="auth_check-row hx-auth_check-row"><input type="checkbox" name="terms" class="hx-auth_checkbox" required>
+                                    <span>I agree to the <a href="/terms" class="auth_legal-link">Terms</a> and the <a href="/privacy" class="auth_legal-link">Privacy policy</a></span></label>
+                                <button type="submit" class="button auth_cta">Create account</button>
                             </div>
                         </form>
-                        <div class="w-form-done" tabindex="-1" role="region" aria-label="sign-up success">
-                            <div>Your trial is ready. Check your inbox for a six-digit code to verify your email.</div>
-                        </div>
-                        <div class="w-form-fail" tabindex="-1" role="region" aria-label="sign-up failure">
-                            <div>We couldn't create your account. Check the fields above and try again.</div>
+                        <div class="w-form-fail hx-auth_msg" tabindex="-1" role="status" aria-live="polite" data-hx-auth-msg hidden>
+                            <div>The client portal is not open yet. Call +255 758 526 792 or email info@hmxtech.co.tz and an engineer will update you on your project.</div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="auth_foot">
-                <div>Every plan includes a signed BAA. Patient data stays in the US.</div>
+                <div>We use your details only to run your account and your projects.</div>
             </div>
         </div>
-        <div class="auth_art">
+        <div class="auth_art hx-auth_art">
             <div class="auth_art-cap">
-                <div>Fig. 2, what the next ten minutes look like</div>
+                <div>Fig. 2, after you create an account</div>
+                <div class="auth_art-now">About 5 minutes</div>
             </div>
-            <div class="auth_art-figure"><svg fill="none" viewBox="96 128 412 644" xmlns="http://www.w3.org/2000/svg"
-                    aria-label="The five onboarding steps as a thread, from your account to record ready" role="img"
-                    class="ill-art auth-art_svg ia-steps">
-                    <g>
-                        <path stroke-linecap="round" stroke-width="1.4" d="M199.5 206C199.5 234 338 234 338 262"
-                            data-i="0.0" class="ill-s-accent ill-s-accent"></path>
-                        <path stroke-dasharray="3 4" stroke-linecap="round" stroke-width="1.4"
-                            d="M338 328C338 356 256.5 356 256.5 384" data-i="0.06"
-                            class="ill-s-panel-muted ill-s-panel-muted"></path>
-                        <path stroke-dasharray="3 4" stroke-linecap="round" stroke-width="1.4"
-                            d="M256.5 450C256.5 478 387.5 478 387.5 506" data-i="0.11"
-                            class="ill-s-panel-muted ill-s-panel-muted"></path>
-                        <path stroke-dasharray="3 4" stroke-linecap="round" stroke-width="1.4"
-                            d="M387.5 572C387.5 606 336 606 336 640" data-i="0.17"
-                            class="ill-s-panel-muted ill-s-panel-muted"></path>
-                        <path stroke-width="1.4"
-                            d="M336 712C355.8 712 372 695.8 372 676C372 656.1 355.8 640 336 640C316.1 640 300 656.1 300 676C300 695.8 316.1 712 336 712Z"
-                            data-i="0.22" class="ill-s-accent ill-s-accent"></path>
-                        <path
-                            d="M336 700C349.2 700 360 689.2 360 676C360 662.7 349.2 652 336 652C322.7 652 312 662.7 312 676C312 689.2 322.7 700 336 700Z"
-                            data-i="0.28" class="ill-f-accent ill-f-accent"></path>
-                        <path stroke-linejoin="round" stroke-linecap="round" stroke-width="2.4"
-                            d="M326 676.5L333 683.5L347 669.5" data-i="0.33" class="ill-s-on"></path>
-                    </g>
-                    <g>
-                        <rect rx="9.5" height="65" width="158" y="140.5" x="120.5" data-i="0.39"
-                            class="ill-f-panel-deep"></rect>
-                        <rect rx="9.5" height="65" width="158" y="140.5" x="120.5" data-i="0.44"
-                            class="ill-s-line-panel"></rect>
-                        <rect rx="10" height="20" width="20" y="163" x="137" data-i="0.5"
-                            class="ill-f-accent ill-f-accent"></rect>
-                        <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5"
-                            d="M144 173.2L146.2 175.4L150 171" data-i="0.55" class="ill-s-on"></path>
-                    </g>
-                    <g>
-                        <rect rx="9.5" height="65" width="155" y="262.5" x="260.5" data-i="0.61"
-                            class="ill-f-panel-deep"></rect>
-                        <rect rx="9.5" height="65" width="155" y="262.5" x="260.5" data-i="0.66"
-                            class="ill-s-line-panel"></rect>
-                        <rect rx="9.5" height="19" width="19" y="285.5" x="277.5" data-i="0.72"
-                            class="ill-s-panel-muted ill-s-panel-muted"></rect>
-                    </g>
-                    <g>
-                        <rect rx="9.5" height="65" width="212" y="384.5" x="150.5" data-i="0.77"
-                            class="ill-f-panel-deep"></rect>
-                        <rect rx="9.5" height="65" width="212" y="384.5" x="150.5" data-i="0.83"
-                            class="ill-s-line-panel"></rect>
-                        <rect rx="9.5" height="19" width="19" y="407.5" x="167.5" data-i="0.88"
-                            class="ill-s-panel-muted ill-s-panel-muted"></rect>
-                    </g>
-                    <g>
-                        <rect rx="9.5" height="65" width="194" y="506.5" x="290.5" data-i="0.94"
-                            class="ill-f-panel-deep"></rect>
-                        <rect rx="9.5" height="65" width="194" y="506.5" x="290.5" data-i="0.99"
-                            class="ill-s-line-panel"></rect>
-                        <rect rx="9.5" height="19" width="19" y="529.5" x="307.5" data-i="1.04"
-                            class="ill-s-panel-muted ill-s-panel-muted"></rect>
-                    </g><text font-weight="500" font-size="15" data-i="0.57"
-                        class="ill-t ill-f-text-panel ill-t ill-f-text-panel">
-                        <tspan y="169.891" x="169">Your account</tspan>
-                    </text><text font-size="12" data-i="0.64" class="ill-t ill-f-accent ill-t ill-f-accent">
-                        <tspan y="187.812" x="169">Done</tspan>
-                    </text><text font-weight="500" font-size="15" data-i="0.71"
-                        class="ill-t ill-f-text-panel ill-t ill-f-text-panel">
-                        <tspan y="291.891" x="309">Clinic details</tspan>
-                    </text><text font-size="12" data-i="0.78" class="ill-t ill-f-panel-muted ill-t ill-f-panel-muted">
-                        <tspan y="309.812" x="309">2 min</tspan>
-                    </text><text font-weight="500" font-size="15" data-i="0.85"
-                        class="ill-t ill-f-text-panel ill-t ill-f-text-panel">
-                        <tspan y="413.891" x="199">Providers and rooms</tspan>
-                    </text><text font-size="12" data-i="0.92" class="ill-t ill-f-panel-muted ill-t ill-f-panel-muted">
-                        <tspan y="431.812" x="199">3 min</tspan>
-                    </text><text font-weight="500" font-size="15" data-i="0.99"
-                        class="ill-t ill-f-text-panel ill-t ill-f-text-panel">
-                        <tspan y="535.891" x="339">Connect your EHR</tspan>
-                    </text><text font-size="12" data-i="1.06" class="ill-t ill-f-panel-muted ill-t ill-f-panel-muted">
-                        <tspan y="553.812" x="339">3 min</tspan>
-                    </text><text font-weight="500" font-size="15" data-i="1.13"
-                        class="ill-t ill-f-text-panel ill-t ill-f-text-panel">
-                        <tspan y="738.891" x="288.5">Record ready</tspan>
-                    </text><text font-size="12" data-i="1.2" class="ill-t ill-f-panel-muted ill-t ill-f-panel-muted">
-                        <tspan y="758.812" x="264.5">Today’s schedule, synced</tspan>
-                    </text>
-                </svg></div>
+            <div class="auth_art-figure">
+                <ol class="hx-steps" aria-label="What happens after you create an account">
+                    <li class="hx-step is-done" style="--d:0"><span class="hx-step_node" aria-hidden="true"><svg viewBox="0 0 10 10" width="10" height="10" fill="none"><path d="M2 5.2L4.2 7.4L8 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="hx-step_text"><span class="hx-step_title">Your account</span><span class="hx-step_meta">Done</span></span></li>
+                    <li class="hx-step " style="--d:1"><span class="hx-step_node" aria-hidden="true">02</span><span class="hx-step_text"><span class="hx-step_title">Your details</span><span class="hx-step_meta">1 min</span></span></li>
+                    <li class="hx-step " style="--d:2"><span class="hx-step_node" aria-hidden="true">03</span><span class="hx-step_text"><span class="hx-step_title">Add a project</span><span class="hx-step_meta">Site, client and contract</span></span></li>
+                    <li class="hx-step " style="--d:3"><span class="hx-step_node" aria-hidden="true">04</span><span class="hx-step_text"><span class="hx-step_title">Invite your team</span><span class="hx-step_meta">Engineers, contractor, client</span></span></li>
+                    <li class="hx-step is-last" style="--d:4"><span class="hx-step_node" aria-hidden="true">05</span><span class="hx-step_text"><span class="hx-step_title">Project room ready</span><span class="hx-step_meta">Drawings, site reports and certificates in one place</span></span></li>
+                </ol>
+            </div>
+            <div class="auth_art-legend">
+                <div class="auth_art-key"><div class="auth_art-seen"></div><div>Done</div></div>
+                <div class="auth_art-key"><div class="auth_art-open"></div><div>Next</div></div>
+            </div>
         </div>
     </div>
+
+{{ section:footer_scripts }}
+    <script src="/hmxtech/js/hmxtech-auth.js" defer></script>
+{{ /section:footer_scripts }}
