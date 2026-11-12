@@ -405,3 +405,60 @@ section[id] {
 .post-cover_img.hx-post_cover {
   aspect-ratio: auto;
 }
+
+/* Back to top (replaces the Webflow badge in the same corner). */
+.hx-top {
+  position: fixed;
+  right: 12px;
+  bottom: 12px;
+  z-index: 50;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 14px 9px 12px;
+  border: 1px solid rgb(255 255 255 / .12);
+  border-radius: 999px;
+  background-color: var(--hmx-ink, #0e0c1d);
+  box-shadow: 0 12px 24px -10px rgb(14 12 29 / .45);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1;
+  text-decoration: none;
+  transition: opacity .3s ease, transform .3s ease, background-color .2s ease;
+}
+
+.hx-top:hover {
+  background-color: var(--hmx-violet, #8a2bf2);
+}
+
+.hx-top:focus-visible {
+  outline: 2px solid var(--hmx-magenta, #e21dd3);
+  outline-offset: 3px;
+}
+
+.hx-top.is-ready:not(.is-visible) {
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hx-top {
+    transition: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .hx-top span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+
+  .hx-top {
+    padding: 12px;
+  }
+}
