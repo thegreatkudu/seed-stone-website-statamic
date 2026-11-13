@@ -31,25 +31,24 @@
           <div class="platform_rail is-right"></div>
           <div class="platform_grid">
             <div class="platform_copy">
-              <h2 class="heading-panel">One team for every stage, from the first survey to the final handover.</h2>
-              <p class="text-panel">Feasibility, design, tendering, construction and supervision share one set of drawings and one
-                site record, so every stage knows what was decided before it.</p>
+              <h2 class="heading-panel">{{ stages_heading }}</h2>
+              <p class="text-panel">{{ stages_text }}</p>
               <div class="module-index"><a type="button"
                   data-wf-target="[[[&quot;6aec83b44f4f0425b95841ca&quot;,&quot;edc8332b-d204-65fe-18ae-599734f4b70f&quot;],[]]]"
                   href="#" class="module-tab is-active is-1 w-button"><span
-                    class="module-tab_num">01</span><span>Feasibility</span></a><a type="button"
+                    class="module-tab_num">01</span><span>{{ stages:0:label }}</span></a><a type="button"
                   data-wf-target="[[[&quot;6aec83b44f4f0425b95841ca&quot;,&quot;edc8332b-d204-65fe-18ae-599734f4b714&quot;],[]]]"
                   href="#" class="module-tab is-2 w-button"><span
-                    class="module-tab_num">02</span><span>Design</span></a><a type="button"
+                    class="module-tab_num">02</span><span>{{ stages:1:label }}</span></a><a type="button"
                   data-wf-target="[[[&quot;6aec83b44f4f0425b95841ca&quot;,&quot;edc8332b-d204-65fe-18ae-599734f4b719&quot;],[]]]"
                   href="#" class="module-tab is-3 w-button"><span
-                    class="module-tab_num">03</span><span>Tendering</span></a><a type="button"
+                    class="module-tab_num">03</span><span>{{ stages:2:label }}</span></a><a type="button"
                   data-wf-target="[[[&quot;6aec83b44f4f0425b95841ca&quot;,&quot;edc8332b-d204-65fe-18ae-599734f4b71e&quot;],[]]]"
                   href="#" class="module-tab is-4 w-button"><span
-                    class="module-tab_num">04</span><span>Construction</span></a><a type="button"
+                    class="module-tab_num">04</span><span>{{ stages:3:label }}</span></a><a type="button"
                   data-wf-target="[[[&quot;6aec83b44f4f0425b95841ca&quot;,&quot;edc8332b-d204-65fe-18ae-599734f4b723&quot;],[]]]"
                   href="#" class="module-tab is-5 w-button"><span
-                    class="module-tab_num">05</span><span>Handover</span></a></div>
+                    class="module-tab_num">05</span><span>{{ stages:4:label }}</span></a></div>
             </div>
             <div class="platform_visual">
               <div class="record-stack_wrap"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 620 540" height="540" width="620" class="record-stack">
@@ -483,29 +482,24 @@
               </div>
               <div class="platform_desc">
                 <div class="module-desc is-1">
-                  <div class="mono-label is-panel">Feasibility</div>
-                  <p class="text-panel is-small">Site surveys, soil tests and feasibility studies set a sound budget
-                    before any design starts.</p>
+                  <div class="mono-label is-panel">{{ stages:0:label }}</div>
+                  <p class="text-panel is-small">{{ stages:0:text }}</p>
                 </div>
                 <div class="module-desc is-2">
-                  <div class="mono-label is-panel">Design</div>
-                  <p class="text-panel is-small">Architectural, structural and services drawings, analysed and checked
-                    by registered engineers.</p>
+                  <div class="mono-label is-panel">{{ stages:1:label }}</div>
+                  <p class="text-panel is-small">{{ stages:1:text }}</p>
                 </div>
                 <div class="module-desc is-3">
-                  <div class="mono-label is-panel">Tendering</div>
-                  <p class="text-panel is-small">Open, selected or design and build tendering, force account and labour
-                    based technology.</p>
+                  <div class="mono-label is-panel">{{ stages:2:label }}</div>
+                  <p class="text-panel is-small">{{ stages:2:text }}</p>
                 </div>
                 <div class="module-desc is-4">
-                  <div class="mono-label is-panel">Construction</div>
-                  <p class="text-panel is-small">Daily site reports, material tests and interim certificates, supervised
-                    to specification.</p>
+                  <div class="mono-label is-panel">{{ stages:3:label }}</div>
+                  <p class="text-panel is-small">{{ stages:3:text }}</p>
                 </div>
                 <div class="module-desc is-5">
-                  <div class="mono-label is-panel">Handover</div>
-                  <p class="text-panel is-small">Final inspection, as-built drawings and a defects liability period that
-                    keeps us accountable.</p>
+                  <div class="mono-label is-panel">{{ stages:4:label }}</div>
+                  <p class="text-panel is-small">{{ stages:4:text }}</p>
                 </div>
               </div>
             </div>
@@ -514,9 +508,9 @@
       </section>
       <section class="section" id="projects">
         <div class="section-header is-split">
-          <h2 class="heading-xl">Built for work that stands for decades.</h2>
+          <h2 class="heading-xl">{{ projects_heading }}</h2>
           <div class="section-header_aside">
-            <p class="text-lead">Every project is designed by registered engineers and built by a registered contractor. Nothing is guessed, nothing is left to chance.</p><a href="/contact" class="text-link">Talk to an engineer<span
+            <p class="text-lead">{{ projects_text }}</p><a href="{{ projects_link_url }}" class="text-link">{{ projects_link_label }}<span
                 class="text-link_icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14"
                   height="14" width="14">
                   <path stroke-linecap="round" stroke-width="1.4" stroke="currentColor" d="M4 10L10 4M10 4H5M10 4V9">
@@ -527,7 +521,7 @@
         <div class="feature-grid">
           <div class="feature is-first"
             style="translate: none; rotate: none; scale: none; transform: translate(0px, 28px); opacity: 0;">
-            <div class="mono-label">Buildings</div>
+            <div class="mono-label">{{ project_cards:0:tag }}</div>
             <div class="pattern-tile">
               <div class="pattern-tile_fade"></div>
               <div class="snippet">
@@ -566,12 +560,12 @@
                   style="translate: none; rotate: none; scale: none; transform: translate(0px, 8px); opacity: 0;">2 of 3 stages signed off</div>
               </div>
             </div>
-            <h3 class="heading-m">Homes, offices and factories</h3>
-            <p class="text-small">Residential, multistorey, apartments, warehouses and godowns.</p>
+            <h3 class="heading-m">{{ project_cards:0:title }}</h3>
+            <p class="text-small">{{ project_cards:0:text }}</p>
           </div>
           <div class="feature"
             style="translate: none; rotate: none; scale: none; transform: translate(0px, 28px); opacity: 0;">
-            <div class="mono-label">Structures</div>
+            <div class="mono-label">{{ project_cards:1:tag }}</div>
             <div class="pattern-tile">
               <div class="pattern-tile_fade"></div>
               <div class="snippet">
@@ -594,12 +588,12 @@
                     class="typing_dot"></span><span class="typing_dot"></span><span class="typing_dot"></span></div>
               </div>
             </div>
-            <h3 class="heading-m">Bridges, towers, dams and tanks</h3>
-            <p class="text-small">Culverts and steel structures, designed and built.</p>
+            <h3 class="heading-m">{{ project_cards:1:title }}</h3>
+            <p class="text-small">{{ project_cards:1:text }}</p>
           </div>
           <div class="feature"
             style="translate: none; rotate: none; scale: none; transform: translate(0px, 28px); opacity: 0;">
-            <div class="mono-label">Roads</div>
+            <div class="mono-label">{{ project_cards:2:tag }}</div>
             <div class="pattern-tile">
               <div class="pattern-tile_fade"></div>
               <div class="snippet">
@@ -641,59 +635,29 @@
                   style="translate: none; rotate: none; scale: none; transform: translate(0px, 8px); opacity: 0;">Field density, compaction test</div>
               </div>
             </div>
-            <h3 class="heading-m">Roads that carry the load</h3>
-            <p class="text-small">Asphalt and concrete roads, monitored and evaluated.</p>
+            <h3 class="heading-m">{{ project_cards:2:title }}</h3>
+            <p class="text-small">{{ project_cards:2:text }}</p>
           </div>
         </div>
         <div class="trust-row">
-          <div class="trust-item is-first">
+          {{ registrations }}
+          <div class="trust-item{{ if first }} is-first{{ /if }}{{ if last }} is-last{{ /if }}">
             <div class="trust-status">
               <div class="trust-dot"></div>
-              <div class="mono-label">Registered</div>
+              <div class="mono-label">{{ status }}</div>
             </div>
-            <div class="trust-label">BRELA</div>
-            <div class="trust-meta">Company No. 478140</div>
+            <div class="trust-label">{{ label }}</div>
+            <div class="trust-meta">{{ meta }}</div>
           </div>
-          <div class="trust-item">
-            <div class="trust-status">
-              <div class="trust-dot"></div>
-              <div class="mono-label">Consulting firm</div>
-            </div>
-            <div class="trust-label">ERB</div>
-            <div class="trust-meta">Registration No. 238L</div>
-          </div>
-          <div class="trust-item">
-            <div class="trust-status">
-              <div class="trust-dot"></div>
-              <div class="mono-label">Building contractor</div>
-            </div>
-            <div class="trust-label">CRB B5</div>
-            <div class="trust-meta">B5/1393/07/2021</div>
-          </div>
-          <div class="trust-item">
-            <div class="trust-status">
-              <div class="trust-dot"></div>
-              <div class="mono-label">Civil works contractor</div>
-            </div>
-            <div class="trust-label">CRB C6</div>
-            <div class="trust-meta">C6/2288/07/2021</div>
-          </div>
-          <div class="trust-item is-last">
-            <div class="trust-status">
-              <div class="trust-dot"></div>
-              <div class="mono-label">Since 2020</div>
-            </div>
-            <div class="trust-label">Tanzania</div>
-            <div class="trust-meta">Within and beyond its borders</div>
-          </div>
+          {{ /registrations }}
         </div>
       </section>
       <section class="section">
         <div class="split-grid">
           <div class="split-copy">
-            <div class="mono-label">The site record</div>
-            <h2 class="heading-xl">Every project, one living site record.</h2>
-            <p class="text-lead">See where a project stands and what happens next: progress, tests, cost and site actions in one report the client and our engineers share.</p><a href="/contact" class="button">Start a project</a>
+            <div class="mono-label">{{ record_tag }}</div>
+            <h2 class="heading-xl">{{ record_heading }}</h2>
+            <p class="text-lead">{{ record_text }}</p>{{ if record_button_label }}<a href="{{ record_button_url }}" class="button">{{ record_button_label }}</a>{{ /if }}
           </div>
           <div class="visit-card">
             <div class="visit-card_head">
@@ -905,33 +869,24 @@
             </div>
           </div>
           <div class="split-copy app-grid_copy">
-            <div class="mono-label">Truss Analyzer</div>
-            <h2 class="heading-xl">Truss analysis, right in your browser.</h2>
-            <p class="text-lead">Our free web app solves plane trusses by the Northing-Easting method, after the 2012 workbook by Eng. Prof. Duwa Hamisi Chengula of MUST, and handles indeterminate trusses with the stiffness method.</p>
+            <div class="mono-label">{{ truss_tag }}</div>
+            <h2 class="heading-xl">{{ truss_heading }}</h2>
+            <p class="text-lead">{{ truss_text }}</p>
+            {{ if truss_points }}
             <div class="points">
+              {{ truss_points }}
               <div class="point">
                 <div class="point_mark"></div>
                 <div>
-                  <div class="point_title">Model joints and members</div>
-                  <div class="text-small">Enter coordinates, supports and loads, or start from a Pratt or Fink example.</div>
+                  <div class="point_title">{{ title }}</div>
+                  <div class="text-small">{{ text }}</div>
                 </div>
               </div>
-              <div class="point">
-                <div class="point_mark"></div>
-                <div>
-                  <div class="point_title">Solve in one click</div>
-                  <div class="text-small">Member forces, reactions, tension or compression, and an equilibrium check.</div>
-                </div>
-              </div>
-              <div class="point">
-                <div class="point_mark"></div>
-                <div>
-                  <div class="point_title">Learn the method</div>
-                  <div class="text-small">Step-by-step working and a built-in joint calculator.</div>
-                </div>
-              </div>
-            </div><a href="https://hmxtech.co.tz/truss/" class="button">Open Truss Analyzer</a>
-            <div class="mono-label">Free. Works in any browser, with a Windows version too.</div>
+              {{ /truss_points }}
+            </div>
+            {{ /if }}
+            {{ if truss_button_label }}<a href="{{ truss_button_url }}" class="button">{{ truss_button_label }}</a>{{ /if }}
+            {{ if truss_note }}<div class="mono-label">{{ truss_note }}</div>{{ /if }}
           </div>
         </div>
       </section>
@@ -939,14 +894,15 @@
         <div class="ehr-panel">
           <div class="ehr-panel_grid">
             <div class="ehr-panel_copy">
-              <div class="mono-label is-panel">Analysis and design</div>
+              <div class="mono-label is-panel">{{ lab_tag }}</div>
+              {{ if lab_topics }}
               <div class="tag-row">
-                <div class="tag is-accent">Geotechnical</div>
-                <div class="tag is-accent">Concrete mix design</div>
+                {{ lab_topics }}<div class="tag is-accent">{{ value }}</div>{{ /lab_topics }}
               </div>
-              <h2 class="heading-panel">Tested in the lab, proven on site.</h2>
-              <p class="text-panel">Soil testing, geotechnical investigation and concrete mix design back every design we sign, so foundations and structures perform as calculated.</p><a href="/contact"
-                class="button">Talk to our engineers<span class="text-link_icon"><svg
+              {{ /if }}
+              <h2 class="heading-panel">{{ lab_heading }}</h2>
+              <p class="text-panel">{{ lab_text }}</p><a href="{{ lab_button_url }}"
+                class="button">{{ lab_button_label }}<span class="text-link_icon"><svg
                     xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14" height="14" width="14">
                     <path stroke-linecap="round" stroke-width="1.4" stroke="currentColor" d="M4 10L10 4M10 4H5M10 4V9">
                     </path>
@@ -1079,70 +1035,57 @@
         <div id="research" class="anchor"></div>
         <div class="section-header is-split">
           <div class="split-copy">
-            <div class="mono-label">Research</div>
-            <h2 class="heading-xl">Engineering that is researched, not guessed.</h2>
+            <div class="mono-label">{{ research_tag }}</div>
+            <h2 class="heading-xl">{{ research_heading }}</h2>
           </div>
           <div class="section-header_aside">
-            <p class="text-lead">Our engineers publish research on roads, materials and public building procurement in Tanzania, and bring what they learn to every site.</p><a href="/publications" class="text-link">All publications<span class="text-link_icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14" height="14" width="14"><path stroke-linecap="round" stroke-width="1.4" stroke="currentColor" d="M4 10L10 4M10 4H5M10 4V9"></path></svg></span></a>
+            <p class="text-lead">{{ research_text }}</p><a href="{{ research_link_url }}" class="text-link">{{ research_link_label }}<span class="text-link_icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14" height="14" width="14"><path stroke-linecap="round" stroke-width="1.4" stroke="currentColor" d="M4 10L10 4M10 4H5M10 4V9"></path></svg></span></a>
           </div>
         </div>
         <div class="quote-feature">
           <div class="quote-feature_main">
             <div class="quote-mark">“</div>
-            <p class="quote-text">Rising groundwater from the Ruvu River was traced as the cause of potholes, cracks, heaves and ruts on the Ruvu to Mlandizi embankment, despite frequent maintenance.</p>
+            <p class="quote-text">{{ research_quote }}</p>
             <div class="author">
-              <div class="monogram">RP</div>
+              <div class="monogram">{{ research_quote_initials }}</div>
               <div>
-                <div class="ui-card_strong is-14">Effects of Waterlogging on the Performance of Ruvu to Mlandizi Road Pavement</div>
-                <div class="ui-card_meta is-13">Featured publication · Road pavements</div>
+                <div class="ui-card_strong is-14">{{ research_quote_source }}</div>
+                <div class="ui-card_meta is-13">{{ research_quote_meta }}</div>
               </div>
             </div>
           </div>
           <div class="metrics">
-            <div class="metric">
-              <div class="mono-label">Incorporated</div>
-              <div class="metric_value">2020</div>
-              <div class="ui-card_meta is-13">in Tanzania, BRELA No. 478140</div>
+            {{ research_metrics }}
+            <div class="metric{{ if count == 2 }} is-second{{ /if }}">
+              <div class="mono-label">{{ label }}</div>
+              <div class="metric_value">{{ value }}</div>
+              <div class="ui-card_meta is-13">{{ text }}</div>
             </div>
-            <div class="metric is-second">
-              <div class="mono-label">Registrations</div>
-              <div class="metric_value">3</div>
-              <div class="ui-card_meta is-13">ERB consulting, CRB building and CRB civil works</div>
-            </div>
+            {{ /research_metrics }}
           </div>
         </div>
+        {{ if research_papers }}
         <div class="quotes">
+          {{ research_papers }}
           <div class="quote">
-            <p class="quote_text">Investigating TANROADS’ Performance in Tendering and Supervision of Road Projects: A Review</p>
+            <p class="quote_text">{{ title }}</p>
             <div>
-              <div class="ui-card_strong">Road procurement</div>
-              <div class="ui-card_meta">Publication</div>
+              <div class="ui-card_strong">{{ topic }}</div>
+              <div class="ui-card_meta">{{ label }}</div>
             </div>
           </div>
-          <div class="quote">
-            <p class="quote_text">Improving Strength of Composite Waste PET Plastics Wall Cladding by Reinforcing with Waste Tyre Steel Fibres</p>
-            <div>
-              <div class="ui-card_strong">Sustainable materials</div>
-              <div class="ui-card_meta">Publication</div>
-            </div>
-          </div>
-          <div class="quote">
-            <p class="quote_text">Stakeholders’ Awareness and Perceptions on the Use of the Force Account Method in Public Building Construction Projects in Tanzania</p>
-            <div>
-              <div class="ui-card_strong">Public building procurement</div>
-              <div class="ui-card_meta">Publication</div>
-            </div>
-          </div>
+          {{ /research_papers }}
         </div>
+        {{ /if }}
       </section>
       <section class="section">
         <div class="section-header is-split">
           <div class="pricing-intro">
-            <div class="mono-label">How we deliver</div>
-            <h2 class="heading-xl">Priced per project, delivered by registered engineers.</h2>
+            <div class="mono-label">{{ delivery_tag }}</div>
+            <h2 class="heading-xl">{{ delivery_heading }}</h2>
           </div>
           <div class="section-header_aside">
-            <p class="text-lead">Every quote is built from your drawings and bill of quantities. Choose the route that fits your procurement.</p>
+            <p class="text-lead">{{ delivery_text }}</p>
           </div>
         </div>
         <div class="pricing-grid">
@@ -1159,46 +1102,20 @@
                   </g>
                 </svg></div>
             </div>
-            <h3 class="tier_name">Consultancy</h3>
-            <p class="text-small">For public institutions, private institutions and individual clients.</p>
+            <h3 class="tier_name">{{ delivery_tiers:0:name }}</h3>
+            <p class="text-small">{{ delivery_tiers:0:text }}</p>
             <div class="tier_price">
-              <div class="tier_amount">ERB</div>
-              <div class="tier_unit">Registration No. 238L</div>
+              <div class="tier_amount">{{ delivery_tiers:0:amount }}</div>
+              <div class="tier_unit">{{ delivery_tiers:0:unit }}</div>
             </div>
-            <div class="tier_cta"><a href="/contact" class="button is-secondary">Request a proposal</a></div>
+            <div class="tier_cta"><a href="{{ delivery_tiers:0:button_url }}" class="button is-secondary">{{ delivery_tiers:0:button_label }}</a></div>
             <div class="tier_list">
+              {{ delivery_tiers:0:items }}
               <div class="tier_item">
-                <div class="tier_check"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
-                    height="14" width="14">
-                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor"
-                      d="M2.5 6.2L5 8.5L9.5 3.5"></path>
-                  </svg></div>
-                <div>Feasibility studies and economic analysis</div>
+                <div class="tier_check"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12" height="14" width="14"><path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor" d="M2.5 6.2L5 8.5L9.5 3.5"></path></svg></div>
+                <div>{{ value }}</div>
               </div>
-              <div class="tier_item">
-                <div class="tier_check"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
-                    height="14" width="14">
-                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor"
-                      d="M2.5 6.2L5 8.5L9.5 3.5"></path>
-                  </svg></div>
-                <div>Design of buildings, roads and structures</div>
-              </div>
-              <div class="tier_item">
-                <div class="tier_check"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
-                    height="14" width="14">
-                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor"
-                      d="M2.5 6.2L5 8.5L9.5 3.5"></path>
-                  </svg></div>
-                <div>Geotechnical investigation and soil testing</div>
-              </div>
-              <div class="tier_item">
-                <div class="tier_check"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
-                    height="14" width="14">
-                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor"
-                      d="M2.5 6.2L5 8.5L9.5 3.5"></path>
-                  </svg></div>
-                <div>Construction supervision</div>
-              </div>
+              {{ /delivery_tiers:0:items }}
             </div>
           </div>
           <div class="tier is-featured">
@@ -1214,56 +1131,22 @@
                     <circle stroke-width="1.4" r="4.5" cy="29" cx="32" class="ill-f-raised ill-s-accent"></circle>
                   </g>
                 </svg></div>
-              <div class="tier_badge">Concept to completion</div>
+              {{ if delivery_tiers:1:badge }}<div class="tier_badge">{{ delivery_tiers:1:badge }}</div>{{ /if }}
             </div>
-            <h3 class="tier_name">Design and build</h3>
-            <p class="text-small is-panel">One contract for design and construction, with one accountable team.</p>
+            <h3 class="tier_name">{{ delivery_tiers:1:name }}</h3>
+            <p class="text-small is-panel">{{ delivery_tiers:1:text }}</p>
             <div class="tier_price">
-              <div class="tier_amount">One</div>
-              <div class="tier_unit is-panel">contract, from survey to handover</div>
+              <div class="tier_amount">{{ delivery_tiers:1:amount }}</div>
+              <div class="tier_unit is-panel">{{ delivery_tiers:1:unit }}</div>
             </div>
-            <div class="tier_cta"><a href="/contact" class="button">Get a quote</a></div>
+            <div class="tier_cta"><a href="{{ delivery_tiers:1:button_url }}" class="button">{{ delivery_tiers:1:button_label }}</a></div>
             <div class="tier_list is-panel">
+              {{ delivery_tiers:1:items }}
               <div class="tier_item">
-                <div class="tier_check"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
-                    height="14" width="14">
-                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor"
-                      d="M2.5 6.2L5 8.5L9.5 3.5"></path>
-                  </svg></div>
-                <div>Everything in Consultancy</div>
+                <div class="tier_check"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12" height="14" width="14"><path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor" d="M2.5 6.2L5 8.5L9.5 3.5"></path></svg></div>
+                <div>{{ value }}</div>
               </div>
-              <div class="tier_item">
-                <div class="tier_check"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
-                    height="14" width="14">
-                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor"
-                      d="M2.5 6.2L5 8.5L9.5 3.5"></path>
-                  </svg></div>
-                <div>Building construction, CRB B5</div>
-              </div>
-              <div class="tier_item">
-                <div class="tier_check"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
-                    height="14" width="14">
-                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor"
-                      d="M2.5 6.2L5 8.5L9.5 3.5"></path>
-                  </svg></div>
-                <div>Civil works, CRB C6</div>
-              </div>
-              <div class="tier_item">
-                <div class="tier_check"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
-                    height="14" width="14">
-                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor"
-                      d="M2.5 6.2L5 8.5L9.5 3.5"></path>
-                  </svg></div>
-                <div>Concrete mix design and testing</div>
-              </div>
-              <div class="tier_item">
-                <div class="tier_check"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
-                    height="14" width="14">
-                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor"
-                      d="M2.5 6.2L5 8.5L9.5 3.5"></path>
-                  </svg></div>
-                <div>Defects liability support</div>
-              </div>
+              {{ /delivery_tiers:1:items }}
             </div>
           </div>
           <div class="tier">
@@ -1290,60 +1173,26 @@
                   </g>
                 </svg></div>
             </div>
-            <h3 class="tier_name">Construction</h3>
-            <p class="text-small">For tendered building and civil works projects.</p>
+            <h3 class="tier_name">{{ delivery_tiers:2:name }}</h3>
+            <p class="text-small">{{ delivery_tiers:2:text }}</p>
             <div class="tier_price">
-              <div class="tier_amount">CRB</div>
-              <div class="tier_unit">B5 building · C6 civil works</div>
+              <div class="tier_amount">{{ delivery_tiers:2:amount }}</div>
+              <div class="tier_unit">{{ delivery_tiers:2:unit }}</div>
             </div>
-            <div class="tier_cta"><a href="/contact" class="button is-secondary">Invite us to tender</a></div>
+            <div class="tier_cta"><a href="{{ delivery_tiers:2:button_url }}" class="button is-secondary">{{ delivery_tiers:2:button_label }}</a></div>
             <div class="tier_list">
+              {{ delivery_tiers:2:items }}
               <div class="tier_item">
-                <div class="tier_check"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
-                    height="14" width="14">
-                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor"
-                      d="M2.5 6.2L5 8.5L9.5 3.5"></path>
-                  </svg></div>
-                <div>Open competitive tendering</div>
+                <div class="tier_check"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12" height="14" width="14"><path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor" d="M2.5 6.2L5 8.5L9.5 3.5"></path></svg></div>
+                <div>{{ value }}</div>
               </div>
-              <div class="tier_item">
-                <div class="tier_check"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
-                    height="14" width="14">
-                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor"
-                      d="M2.5 6.2L5 8.5L9.5 3.5"></path>
-                  </svg></div>
-                <div>Selected tendering</div>
-              </div>
-              <div class="tier_item">
-                <div class="tier_check"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
-                    height="14" width="14">
-                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor"
-                      d="M2.5 6.2L5 8.5L9.5 3.5"></path>
-                  </svg></div>
-                <div>Force account method</div>
-              </div>
-              <div class="tier_item">
-                <div class="tier_check"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
-                    height="14" width="14">
-                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor"
-                      d="M2.5 6.2L5 8.5L9.5 3.5"></path>
-                  </svg></div>
-                <div>Labour based technology</div>
-              </div>
-              <div class="tier_item">
-                <div class="tier_check"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
-                    height="14" width="14">
-                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor"
-                      d="M2.5 6.2L5 8.5L9.5 3.5"></path>
-                  </svg></div>
-                <div>Repair and maintenance works</div>
-              </div>
+              {{ /delivery_tiers:2:items }}
             </div>
           </div>
         </div>
         <div class="pricing-note">
-          <div class="mono-label">Working within and beyond Tanzania’s borders</div><a
-            href="/contact" class="text-link">Request a quote<span class="text-link_icon"><svg
+          <div class="mono-label">{{ delivery_note }}</div><a
+            href="{{ delivery_note_link_url }}" class="text-link">{{ delivery_note_link_label }}<span class="text-link_icon"><svg
                 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14" height="14" width="14">
                 <path stroke-linecap="round" stroke-width="1.4" stroke="currentColor" d="M4 10L10 4M10 4H5M10 4V9">
                 </path>
@@ -1353,136 +1202,25 @@
       <section class="section">
         <div class="faq-grid">
           <div class="faq-intro">
-            <div class="mono-label">FAQ</div>
-            <h2 class="heading-xl">Questions, answered.</h2>
-            <p class="text-lead">Can’t find what you need? Call +255 758 526 792 or email info@hmxtech.co.tz.</p><a
-              href="/contact" class="text-link">Talk to an engineer<span class="text-link_icon"><svg
-                  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14" height="14" width="14">
-                  <path stroke-linecap="round" stroke-width="1.4" stroke="currentColor" d="M4 10L10 4M10 4H5M10 4V9">
-                  </path>
-                </svg></span></a>
+            <div class="mono-label">{{ faq_tag }}</div>
+            <h2 class="heading-xl">{{ faq_heading }}</h2>
+            {{ if faq_text }}<p class="text-lead">{{ faq_text }}</p>{{ /if }}
+            {{ if faq_link_label }}<a href="{{ faq_link_url }}" class="text-link">{{ faq_link_label }}<span class="text-link_icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14" height="14" width="14"><path stroke-linecap="round" stroke-width="1.4" stroke="currentColor" d="M4 10L10 4M10 4H5M10 4V9"></path></svg></span></a>{{ /if }}
           </div>
-          <div class="faq-list">
+          <div class="faq-list" data-hx-faq>
+            {{ faqs }}
             <div class="faq-item">
-              <div
-                data-wf-target="[[[&quot;6aec83b44f4f0425b95841ca&quot;,&quot;0b5c6277-6244-35b8-1e39-50d6161bc838&quot;],[]]]"
-                class="faq-question">
-                <div class="faq-question_text">Is HMXTECH a registered company?</div>
-                <div class="faq-icon">
-                  <div
-                    data-wf-target="[[[&quot;6aec83b44f4f0425b95841ca&quot;,&quot;0b5c6277-6244-35b8-1e39-50d6161bc836&quot;],[]]]"
-                    class="faq-icon_inner"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
-                      height="12" width="12">
-                      <path stroke-linecap="round" stroke-width="1.4" stroke="currentColor" d="M6 1V11M1 6H11"></path>
-                    </svg></div>
-                </div>
-              </div>
-              <div
-                data-wf-target="[[[&quot;6aec83b44f4f0425b95841ca&quot;,&quot;0b5c6277-6244-35b8-1e39-50d6161bc83b&quot;],[]]]"
-                class="faq-answer">
-                <p class="faq-answer_text">Yes. HMXTECH Company Limited was incorporated in Tanzania in 2020 and is registered with BRELA (No. 478140), the Engineers Registration Board (No. 238L) and the Contractors Registration Board as a building contractor (B5/1393/07/2021) and civil works contractor (C6/2288/07/2021).</p>
+              <button type="button" class="faq-question" id="hx-faq-q{{ count }}" aria-expanded="false" aria-controls="hx-faq-a{{ count }}">
+                <span class="faq-question_text">{{ question }}</span>
+                <span class="faq-icon" aria-hidden="true">
+                  <span class="faq-icon_inner"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12" height="12" width="12"><path stroke-linecap="round" stroke-width="1.4" stroke="currentColor" d="M6 1V11M1 6H11"></path></svg></span>
+                </span>
+              </button>
+              <div class="faq-answer" id="hx-faq-a{{ count }}" role="region" aria-labelledby="hx-faq-q{{ count }}">
+                <p class="faq-answer_text">{{ answer }}</p>
               </div>
             </div>
-            <div class="faq-item">
-              <div
-                data-wf-target="[[[&quot;6aec83b44f4f0425b95841ca&quot;,&quot;0b5c6277-6244-35b8-1e39-50d6161bc845&quot;],[]]]"
-                class="faq-question">
-                <div class="faq-question_text">What kind of projects do you take on?</div>
-                <div class="faq-icon">
-                  <div
-                    data-wf-target="[[[&quot;6aec83b44f4f0425b95841ca&quot;,&quot;0b5c6277-6244-35b8-1e39-50d6161bc843&quot;],[]]]"
-                    class="faq-icon_inner"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
-                      height="12" width="12">
-                      <path stroke-linecap="round" stroke-width="1.4" stroke="currentColor" d="M6 1V11M1 6H11"></path>
-                    </svg></div>
-                </div>
-              </div>
-              <div
-                data-wf-target="[[[&quot;6aec83b44f4f0425b95841ca&quot;,&quot;0b5c6277-6244-35b8-1e39-50d6161bc848&quot;],[]]]"
-                class="faq-answer">
-                <p class="faq-answer_text">Buildings, from houses and apartments to offices, factories, warehouses and godowns; structures such as bridges, culverts, towers, dams and tanks; and civil works including roads, water supply and sanitation, drainage and irrigation.</p>
-              </div>
-            </div>
-            <div class="faq-item">
-              <div
-                data-wf-target="[[[&quot;6aec83b44f4f0425b95841ca&quot;,&quot;0b5c6277-6244-35b8-1e39-50d6161bc852&quot;],[]]]"
-                class="faq-question">
-                <div class="faq-question_text">Can you design and build, or only one of the two?</div>
-                <div class="faq-icon">
-                  <div
-                    data-wf-target="[[[&quot;6aec83b44f4f0425b95841ca&quot;,&quot;0b5c6277-6244-35b8-1e39-50d6161bc850&quot;],[]]]"
-                    class="faq-icon_inner"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
-                      height="12" width="12">
-                      <path stroke-linecap="round" stroke-width="1.4" stroke="currentColor" d="M6 1V11M1 6H11"></path>
-                    </svg></div>
-                </div>
-              </div>
-              <div
-                data-wf-target="[[[&quot;6aec83b44f4f0425b95841ca&quot;,&quot;0b5c6277-6244-35b8-1e39-50d6161bc855&quot;],[]]]"
-                class="faq-answer">
-                <p class="faq-answer_text">Both. As a registered consulting firm and contractor we can design and supervise a project for you, build to another engineer’s design, or take the whole project on a design and build contract.</p>
-              </div>
-            </div>
-            <div class="faq-item">
-              <div
-                data-wf-target="[[[&quot;6aec83b44f4f0425b95841ca&quot;,&quot;0b5c6277-6244-35b8-1e39-50d6161bc85f&quot;],[]]]"
-                class="faq-question">
-                <div class="faq-question_text">How do you price a project?</div>
-                <div class="faq-icon">
-                  <div
-                    data-wf-target="[[[&quot;6aec83b44f4f0425b95841ca&quot;,&quot;0b5c6277-6244-35b8-1e39-50d6161bc85d&quot;],[]]]"
-                    class="faq-icon_inner"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
-                      height="12" width="12">
-                      <path stroke-linecap="round" stroke-width="1.4" stroke="currentColor" d="M6 1V11M1 6H11"></path>
-                    </svg></div>
-                </div>
-              </div>
-              <div
-                data-wf-target="[[[&quot;6aec83b44f4f0425b95841ca&quot;,&quot;0b5c6277-6244-35b8-1e39-50d6161bc862&quot;],[]]]"
-                class="faq-answer">
-                <p class="faq-answer_text">Every project is priced from its drawings and bill of quantities. We take part in open competitive tendering, selected tendering, design and build tendering, the force account method and labour based technology.</p>
-              </div>
-            </div>
-            <div class="faq-item">
-              <div
-                data-wf-target="[[[&quot;6aec83b44f4f0425b95841ca&quot;,&quot;0b5c6277-6244-35b8-1e39-50d6161bc86c&quot;],[]]]"
-                class="faq-question">
-                <div class="faq-question_text">Where do you work?</div>
-                <div class="faq-icon">
-                  <div
-                    data-wf-target="[[[&quot;6aec83b44f4f0425b95841ca&quot;,&quot;0b5c6277-6244-35b8-1e39-50d6161bc86a&quot;],[]]]"
-                    class="faq-icon_inner"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
-                      height="12" width="12">
-                      <path stroke-linecap="round" stroke-width="1.4" stroke="currentColor" d="M6 1V11M1 6H11"></path>
-                    </svg></div>
-                </div>
-              </div>
-              <div
-                data-wf-target="[[[&quot;6aec83b44f4f0425b95841ca&quot;,&quot;0b5c6277-6244-35b8-1e39-50d6161bc86f&quot;],[]]]"
-                class="faq-answer">
-                <p class="faq-answer_text">We are based in Mbeya (P.O. Box 1897) and carry out projects across Tanzania and beyond its borders.</p>
-              </div>
-            </div>
-            <div class="faq-item">
-              <div
-                data-wf-target="[[[&quot;6aec83b44f4f0425b95841ca&quot;,&quot;0b5c6277-6244-35b8-1e39-50d6161bc879&quot;],[]]]"
-                class="faq-question">
-                <div class="faq-question_text">Is the Truss Analyzer really free?</div>
-                <div class="faq-icon">
-                  <div
-                    data-wf-target="[[[&quot;6aec83b44f4f0425b95841ca&quot;,&quot;0b5c6277-6244-35b8-1e39-50d6161bc877&quot;],[]]]"
-                    class="faq-icon_inner"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
-                      height="12" width="12">
-                      <path stroke-linecap="round" stroke-width="1.4" stroke="currentColor" d="M6 1V11M1 6H11"></path>
-                    </svg></div>
-                </div>
-              </div>
-              <div
-                data-wf-target="[[[&quot;6aec83b44f4f0425b95841ca&quot;,&quot;0b5c6277-6244-35b8-1e39-50d6161bc87c&quot;],[]]]"
-                class="faq-answer">
-                <p class="faq-answer_text">Yes. The Truss Analyzer web app is free to use in any browser, with a Windows version too. It follows the Northing-Easting method and checks indeterminate trusses with the stiffness method.</p>
-              </div>
-            </div>
+            {{ /faqs }}
           </div>
         </div>
       </section>
@@ -1539,16 +1277,17 @@
                 <circle r="8" cy="140" cx="870" class="ill-f-accent cord-end"></circle>
               </g>
             </svg></div>
-          <h2 class="heading-xl is-center">Let’s build what comes next.</h2>
-          <p class="text-lead is-center">Share your drawings or your idea. Our engineers in Mbeya will visit the site and come back with a clear plan and quote.</p>
-          <div class="button-row is-center"><a href="/contact" class="button w-inline-block">Get a quote<svg
+          <h2 class="heading-xl is-center">{{ cta_heading }}</h2>
+          {{ if cta_text }}<p class="text-lead is-center">{{ cta_text }}</p>{{ /if }}
+          <div class="button-row is-center"><a href="{{ cta_primary_url }}" class="button w-inline-block">{{ cta_primary_label }}<svg
                 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14" height="14" width="14">
                 <path stroke-linecap="round" stroke-width="1.4" stroke="currentColor" d="M4 10L10 4M10 4H5M10 4V9">
                 </path>
-              </svg></a><a href="tel:+255758526792" class="button is-secondary">Call +255 758 526 792</a></div>
+              </svg></a>{{ if cta_secondary_label }}<a href="{{ cta_secondary_url }}" class="button is-secondary">{{ cta_secondary_label }}</a>{{ /if }}</div>
         </div>
       </section>
 
 {{ section:footer_scripts }}
   <script src="/hmxtech/js/hmxtech-hero-slider.js" defer></script>
+  <script src="/hmxtech/js/hmxtech-faq.js" defer></script>
 {{ /section:footer_scripts }}

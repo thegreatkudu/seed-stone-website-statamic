@@ -786,3 +786,21 @@ section[id] {
       var(--_carefront-color---bg--panel);
   }
 }
+
+/* ---- FAQ questions are real buttons (keyboard + screen readers) --------- */
+button.faq-question {
+  width: 100%;
+  margin: 0;
+  padding-left: 0;
+  padding-right: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+}
+
+button.faq-question:focus-visible {
+  outline: 2px solid var(--_carefront-color---accent--default);
+  outline-offset: 4px;
+}
