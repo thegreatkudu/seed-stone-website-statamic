@@ -1,0 +1,121 @@
+title: 'News Page'
+hide: true
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: nav_title
+            field:
+              type: text
+              display: 'Navigation Title'
+              instructions: 'Optionally override the title shown in the navigation menu.'
+              placeholder: 'Defaults to the page title'
+  hero:
+    display: Hero
+    sections:
+      -
+        display: 'Page Header'
+        fields:
+          -
+            handle: hero_tag
+            field:
+              type: text
+              display: 'Small Label'
+              width: 50
+          -
+            handle: hero_heading
+            field:
+              type: text
+              display: Headline
+              width: 50
+              validate:
+                - required
+          -
+            handle: hero_text
+            field:
+              type: textarea
+              display: 'Intro Text'
+          -
+            handle: hero_form_button
+            field:
+              type: text
+              display: 'Sign-Up Button Label'
+              instructions: 'The email sign-up under the header.'
+              width: 33
+              validate:
+                - required
+          -
+            handle: hero_form_success
+            field:
+              type: text
+              display: 'Sign-Up Thank-You Message'
+              width: 66
+              validate:
+                - required
+          -
+            handle: hero_form_error
+            field:
+              type: text
+              display: 'Sign-Up Error Message'
+              validate:
+                - required
+  listing:
+    display: List
+    sections:
+      -
+        display: 'News List'
+        instructions: 'Articles come from Collections → Posts (Article blueprint) and the other cards from Collections → News.'
+        fields:
+          -
+            handle: list_label
+            field:
+              type: text
+              display: 'Label Above the List'
+              validate:
+                - required
+  newsletter:
+    display: Newsletter
+    sections:
+      -
+        display: 'Newsletter Panel'
+        instructions: 'The sign-up panel at the bottom of the page. Sign-ups appear under Forms → Newsletter.'
+        fields:
+          -
+            import: newsletter_panel
+            prefix: newsletter_
+  seo:
+    display: SEO
+    sections:
+      -
+        fields:
+          -
+            import: seo
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+          -
+            handle: parent
+            field:
+              type: entries
+              collections:
+                - pages
+              max_items: 1
+              listable: false
+              localizable: true

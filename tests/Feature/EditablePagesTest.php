@@ -13,6 +13,8 @@ dataset('editable pages', [
     'contact' => ['/contact', 'contact'],
     'how we work' => ['/how-we-work', 'how_we_work'],
     'portfolio' => ['/portfolio', 'portfolio'],
+    'publications' => ['/publications', 'publications'],
+    'news' => ['/news', 'news'],
 ]);
 
 /**

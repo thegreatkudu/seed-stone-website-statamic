@@ -17,24 +17,24 @@
 {{ /section:head_css }}
 
             <section class="page-hero">
-                <div class="eyebrow">News</div>
-                <h1 class="page-hero_title">What is new at HMXTECH.</h1>
-                <p class="page-hero_text">Engineering events, training and company news from Mbeya and across Tanzania.</p>
+                <div class="eyebrow">{{ hero_tag }}</div>
+                <h1 class="page-hero_title">{{ hero_heading }}</h1>
+                {{ if hero_text }}<p class="page-hero_text">{{ hero_text }}</p>{{ /if }}
                 <div id="newsletter-changelog" class="w-form">
                     {{ if ! {form:success in="newsletter"} }}{{ form:create in="newsletter" redirect="{uri}#newsletter-changelog" error_redirect="{uri}#newsletter-changelog" attr:id="wf-form-Changelog-updates" attr:name="wf-form-Changelog-updates" data-name="Changelog updates" class="subscribe" aria-label="Changelog updates" data-wf-no-turnstile="true" }}
 <div style="display:none" aria-hidden="true"><input type="text" name="website" tabindex="-1" autocomplete="off"></div><input type="hidden" name="source" value="changelog"><input
                             class="field_input is-raised w-input" autocomplete="email" maxlength="256" name="email" aria-label="Email address"
                             data-name="email" placeholder="Email address" type="email" id="field-2" required="" value="{{ old:email }}"><input
-                            type="submit" data-wait="Please wait..." class="button is-dark w-button" value="Get updates"
+                            type="submit" data-wait="Please wait..." class="button is-dark w-button" value="{{ hero_form_button }}"
                            >
                     {{ /form:create }}{{ /if }}
                     <div class="form-msg w-form-done" {{ if {form:success in="newsletter"} }}style="display:block" {{ /if }} tabindex="-1" role="region"
                         aria-label="Changelog updates success">
-                        <div>You are on the list. We will email you when there is news.</div>
+                        <div>{{ hero_form_success }}</div>
                     </div>
                     <div class="form-msg is-error w-form-fail" {{ if {form:errors in="newsletter"} && old:source == 'changelog' }}style="display:block" {{ /if }} tabindex="-1" role="region"
                         aria-label="Changelog updates failure">
-                        <div>That did not send. Check the email address and try again.</div>
+                        <div>{{ hero_form_error }}</div>
                     </div>
                 </div>
             </section>
@@ -42,7 +42,7 @@
             <section class="section">
                 <div id="latest" class="anchor"></div>
                 <div class="latest-head">
-                    <div class="eyebrow">Latest</div>
+                    <div class="eyebrow">{{ list_label }}</div>
                 </div>
                 <div class="w-dyn-list">
                     <div role="list" class="post-list w-dyn-items">
@@ -84,9 +84,9 @@
             <section class="section is-news">
                 <div class="newsletter">
                     <div class="newsletter_copy">
-                        <div class="eyebrow">Newsletter</div>
-                        <h2 class="heading-section is-small">One short email a month.</h2>
-                        <p class="text-body">Engineering events, training and new papers from HMXTECH, and nothing else. Unsubscribe any time.</p>
+                        <div class="eyebrow">{{ newsletter_tag }}</div>
+                        <h2 class="heading-section is-small">{{ newsletter_heading }}</h2>
+                        {{ if newsletter_text }}<p class="text-body">{{ newsletter_text }}</p>{{ /if }}
                     </div>
                     <div id="newsletter-news" class="w-form">
                         {{ if ! {form:success in="newsletter"} }}{{ form:create in="newsletter" redirect="{uri}#newsletter-news" error_redirect="{uri}#newsletter-news" attr:id="wf-form-News-newsletter" attr:name="wf-form-News-newsletter" data-name="News newsletter" class="subscribe" aria-label="News newsletter" data-wf-no-turnstile="true" }}
@@ -94,14 +94,14 @@
                                 class="field_input is-raised w-input" autocomplete="email" maxlength="256" name="email" aria-label="Email address"
                                 data-name="email" placeholder="Email address" type="email" id="field-news" required="" value="{{ old:email }}"><input
                                 type="submit" data-wait="Please wait..." class="button w-button"
-                                value="Subscribe">{{ /form:create }}{{ /if }}
+                                value="{{ newsletter_button }}">{{ /form:create }}{{ /if }}
                         <div class="form-msg w-form-done" {{ if {form:success in="newsletter"} }}style="display:block" {{ /if }} tabindex="-1" role="region"
                             aria-label="News newsletter success">
-                            <div>You are subscribed. The next email lands at the start of the month.</div>
+                            <div>{{ newsletter_success }}</div>
                         </div>
                         <div class="form-msg is-error w-form-fail" {{ if {form:errors in="newsletter"} && old:source == 'news' }}style="display:block" {{ /if }} tabindex="-1" role="region"
                             aria-label="News newsletter failure">
-                            <div>That did not send. Check the email address and try again.</div>
+                            <div>{{ newsletter_error }}</div>
                         </div>
                     </div>
                 </div>

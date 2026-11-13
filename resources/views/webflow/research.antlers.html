@@ -18,9 +18,9 @@
 
             {{# Papers come from the Publications collection (Control Panel → Collections → Publications). #}}
             <section class="page-hero">
-                <div class="eyebrow">Publications</div>
-                <h1 class="page-hero_title">Research from the field and the lab.</h1>
-                <p class="page-hero_text">Papers by HMXTECH engineers and their collaborators on roads, materials, bridges, water and public procurement in Tanzania. Every paper is free to download.</p>
+                <div class="eyebrow">{{ hero_tag }}</div>
+                <h1 class="page-hero_title">{{ hero_heading }}</h1>
+                {{ if hero_text }}<p class="page-hero_text">{{ hero_text }}</p>{{ /if }}
             </section>
             {{ collection:publications featured:is="true" limit="1" }}
             <section class="featured-wrap">
@@ -60,7 +60,7 @@
             <section class="section">
                 <div id="latest" class="anchor"></div>
                 <div class="latest-head">
-                    <div class="eyebrow">All publications</div>
+                    <div class="eyebrow">{{ list_label }}</div>
                 </div>
                 <div class="w-dyn-list">
                     <div role="list" class="post-list w-dyn-items">
@@ -85,9 +85,9 @@
             <section class="section is-news">
                 <div class="newsletter">
                     <div class="newsletter_copy">
-                        <div class="eyebrow">Newsletter</div>
-                        <h2 class="heading-section is-small">New papers by email.</h2>
-                        <p class="text-body">A short note when we publish a new paper or open a new tool. Nothing else.</p>
+                        <div class="eyebrow">{{ newsletter_tag }}</div>
+                        <h2 class="heading-section is-small">{{ newsletter_heading }}</h2>
+                        {{ if newsletter_text }}<p class="text-body">{{ newsletter_text }}</p>{{ /if }}
                     </div>
                     <div id="newsletter-research" class="w-form">
                         {{ if ! {form:success in="newsletter"} }}{{ form:create in="newsletter" redirect="{uri}#newsletter-research" error_redirect="{uri}#newsletter-research" attr:id="wf-form-Research-newsletter" attr:name="wf-form-Research-newsletter" data-name="Research newsletter" class="subscribe" aria-label="Research newsletter" data-wf-no-turnstile="true" }}
@@ -95,14 +95,14 @@
                                 class="field_input is-raised w-input" autocomplete="email" maxlength="256" name="email" aria-label="Email address"
                                 data-name="email" placeholder="Email address" type="email" id="field-2" required="" value="{{ old:email }}"><input
                                 type="submit" data-wait="Please wait..." class="button w-button"
-                                value="Subscribe">{{ /form:create }}{{ /if }}
+                                value="{{ newsletter_button }}">{{ /form:create }}{{ /if }}
                         <div class="form-msg w-form-done" {{ if {form:success in="newsletter"} }}style="display:block" {{ /if }} tabindex="-1" role="region"
                             aria-label="Research newsletter success">
-                            <div>You are subscribed. We will email you when the next paper is out.</div>
+                            <div>{{ newsletter_success }}</div>
                         </div>
                         <div class="form-msg is-error w-form-fail" {{ if {form:errors in="newsletter"} && old:source == 'research' }}style="display:block" {{ /if }} tabindex="-1" role="region"
                             aria-label="Research newsletter failure">
-                            <div>That did not send. Check the email address and try again.</div>
+                            <div>{{ newsletter_error }}</div>
                         </div>
                     </div>
                 </div>
