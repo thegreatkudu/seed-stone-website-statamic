@@ -21,6 +21,26 @@ test('the news page lists every item from the collection in order', function () 
         ->assertSee('4 Mar 2024');
 });
 
+test('the news page shows the article and news items as Latest cards', function () {
+    $this->get('/news')
+        ->assertSee('class="latest-head"', false)
+        ->assertSee('role="list" class="post-list w-dyn-items"', false)
+        ->assertSeeInOrder([
+            'href="/news/why-the-ruvu-to-mlandizi-road-keeps-failing-in-the-rain" class="post-card',
+            'Truss Analyzer, free in your browser and on Windows',
+        ], false)
+        ->assertSee('class="hx-news-cover is-event"', false)
+        ->assertSee('target="_blank" rel="noopener" class="post-card w-inline-block"', false)
+        ->assertDontSee('class="releases"', false);
+});
+
+test('the news page ends with the newsletter panel', function () {
+    $this->get('/news')
+        ->assertSee('One short email a month.')
+        ->assertSee('id="newsletter-news"', false)
+        ->assertSee('name="source" value="news"', false);
+});
+
 test('no healthcare template copy is left on the news page', function () {
     $html = strip_tags($this->get('/news')->getContent());
 

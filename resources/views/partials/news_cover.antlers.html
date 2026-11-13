@@ -1,0 +1,18 @@
+{{# Brand cover for News cards without a photo: blueprint grid on the brand  #}}
+{{# gradient with a line icon for the item type. Params: kind, source.      #}}
+<div class="hx-news-cover is-{{ kind ?? 'announcement' }}" aria-hidden="true">
+  <svg class="hx-news-cover_icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    {{ if kind == 'event' }}
+    <rect x="10" y="14" width="44" height="40" rx="3"></rect><path d="M10 24h44M21 9v9M43 9v9"></path><path d="M19 33h6M29 33h6M39 33h6M19 43h6M29 43h6"></path><rect x="38" y="40" width="8" height="7" rx="1" fill="currentColor" fill-opacity=".25"></rect>
+    {{ elseif kind == 'training' }}
+    <path d="M32 13L5 25l27 12 27-12z"></path><path d="M16 31v10c0 4 7 8 16 8s16-4 16-8V31"></path><path d="M57 26v13"></path><circle cx="57" cy="41" r="2" fill="currentColor"></circle>
+    {{ elseif kind == 'tool' }}
+    <path d="M6 46h52M6 46l13-22h26l13 22M19 24l13 22 13-22M19 24l-13 22"></path><circle cx="6" cy="46" r="2"></circle><circle cx="19" cy="24" r="2"></circle><circle cx="32" cy="46" r="2"></circle><circle cx="45" cy="24" r="2"></circle><circle cx="58" cy="46" r="2"></circle><path d="M3 54l3-6 3 6zM55 54h6M32 12v8M29 17l3 3 3-3"></path>
+    {{ elseif kind == 'company' }}
+    <path d="M10 54h44M16 54V18l16-8 16 8v36"></path><path d="M24 26h4M36 26h4M24 34h4M36 34h4M24 42h4M36 42h4M29 54v-6h6v6"></path>
+    {{ else }}
+    <path d="M14 10h26l10 10v34H14z"></path><path d="M40 10v10h10"></path><path d="M21 28h22M21 35h22M21 42h14"></path><circle cx="44" cy="46" r="7" fill="currentColor" fill-opacity=".2"></circle><path d="M41 46l2 2 4-4"></path>
+    {{ /if }}
+  </svg>
+  {{ if source }}<div class="hx-news-cover_label">{{ source }}</div>{{ /if }}
+</div>

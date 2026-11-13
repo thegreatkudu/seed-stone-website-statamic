@@ -60,6 +60,7 @@ test('webflow forms post to their Statamic form handlers', function (string $uri
     'contact quote request' => ['/contact', 'project_enquiry', 'quote'],
     'research newsletter' => ['/publications', 'newsletter', 'newsletter-research'],
     'changelog newsletter' => ['/news', 'newsletter', 'newsletter-changelog'],
+    'news newsletter' => ['/news', 'newsletter', 'newsletter-news'],
     'footer newsletter' => ['/how-we-work', 'newsletter', 'newsletter-footer'],
 ]);
 
