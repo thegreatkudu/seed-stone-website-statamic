@@ -1,66 +1,63 @@
+{{# ============================================================ #}}
+{{# SITE HEADER: content from Globals → Header (site_header).     #}}
+{{# Desktop and mobile menus read the same fields. Links starting #}}
+{{# with http open in a new tab.                                  #}}
+{{# ============================================================ #}}
 <nav class="nav_component"><a href="/" {{ if is_homepage }}aria-current="page" {{ /if }}class="nav_brand w-inline-block{{ if is_homepage }} w--current{{ /if }}">
           <img class="nav_brand-mark hx-logo" src="/hmxtech/brand/logo-color.svg" alt="" width="68" height="28">
           <div class="nav_brand-text hx-wordmark">HMXTECH</div>
         </a>
-        <div class="nav_menu"><a href="/features" {{ if uri == '/features' }}aria-current="page" {{ /if }}class="nav_link{{ if uri == '/features' }} w--current{{ /if }}">Features</a><a href="/#projects" class="nav_link">Projects</a><a href="/portfolio" {{ if uri == '/portfolio' }}aria-current="page" {{ /if }}class="nav_link{{ if uri == '/portfolio' }} w--current{{ /if }}">Portfolio</a><a href="/publications" {{ if uri == '/publications' }}aria-current="page" {{ /if }}class="nav_link{{ if uri == '/publications' }} w--current{{ /if }}">Publications</a><a href="/news" {{ if uri == '/news' }}aria-current="page" {{ /if }}class="nav_link{{ if uri == '/news' }} w--current{{ /if }}">News</a>
+        <div class="nav_menu">{{ site_header:menu_links }}<a href="{{ url }}" {{ if uri == url }}aria-current="page" {{ /if }}{{ if url | starts_with('http') }}target="_blank" rel="noopener" {{ /if }}class="nav_link{{ if uri == url }} w--current{{ /if }}">{{ label }}</a>{{ /site_header:menu_links }}
+          {{ if site_header:dropdown_items }}
           <div data-hover="true" data-delay="80" class="nav_dropdown w-dropdown">
             <div class="nav_dropdown-toggle w-dropdown-toggle" id="w-dropdown-toggle-0"
               aria-controls="w-dropdown-list-0" aria-haspopup="menu" aria-expanded="false" role="button" tabindex="0">
-              <div>Truss Analyzer</div>
+              <div>{{ site_header:dropdown_label }}</div>
               <div class="nav_dropdown-icon w-icon-dropdown-toggle" aria-hidden="true"></div>
             </div>
             <nav class="nav_panel w-dropdown-list" id="w-dropdown-list-0" aria-labelledby="w-dropdown-toggle-0">
               <div class="nav_panel-box">
-                <div class="nav_panel-list"><a href="https://hmxtech.co.tz/truss/" target="_blank" rel="noopener" class="nav_item w-inline-block" tabindex="0">
-                    <div class="nav_item-icon"><svg fill="none" viewBox="0 0 18 18" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><rect x="2.5" y="3.5" width="13" height="11" rx="1.5" stroke="currentColor" stroke-width="1.3"></rect><path d="M2.5 6.5H15.5" stroke="currentColor" stroke-width="1.3"></path><path d="M5 12L7.5 8.5L10 12H5Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"></path></svg></div>
+                <div class="nav_panel-list">{{ site_header:dropdown_items }}<a href="{{ url }}" {{ if url | starts_with('http') }}target="_blank" rel="noopener" {{ /if }}class="nav_item w-inline-block" tabindex="0">
+                    <div class="nav_item-icon">{{ partial:partials/nav_icon :icon="icon:value" }}</div>
                     <div class="nav_item-text">
-                      <div class="nav_item-title">Truss Analyzer (Web)</div>
-                      <div class="nav_item-desc">Solve plane trusses in your browser. Free, nothing to install.</div>
+                      <div class="nav_item-title">{{ title }}</div>
+                      {{ if description }}<div class="nav_item-desc">{{ description }}</div>{{ /if }}
                     </div>
-                  </a><a href="https://hmxtech.co.tz/truss/app.html" target="_blank" rel="noopener" class="nav_item w-inline-block" tabindex="0">
-                    <div class="nav_item-icon"><svg fill="none" viewBox="0 0 18 18" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 4.2L8 3.4V8.5H2.5V4.2Z M10 3.1L15.5 2.3V8.5H10V3.1Z M2.5 10.5H8V14.6L2.5 13.8V10.5Z M10 10.5H15.5V15.7L10 14.9V10.5Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"></path></svg></div>
-                    <div class="nav_item-text">
-                      <div class="nav_item-title">Truss Analyzer 1.1 for Windows</div>
-                      <div class="nav_item-desc">The desktop version of the same solver.</div>
-                    </div>
-                  </a><a href="https://hmxtech.co.tz/truss/README.txt" target="_blank" rel="noopener" class="nav_item w-inline-block" tabindex="0">
-                    <div class="nav_item-icon"><svg fill="none" viewBox="0 0 18 18" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M4.5 2.5H10.5L13.5 5.5V15.5H4.5V2.5Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"></path><path d="M7 9H11M7 12H11" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"></path></svg></div>
-                    <div class="nav_item-text">
-                      <div class="nav_item-title">Read me</div>
-                      <div class="nav_item-desc">How to model joints, members, supports and loads.</div>
-                    </div>
-                  </a></div><a href="https://hmxtech.co.tz/truss/" target="_blank" rel="noopener" class="nav_feature w-inline-block" tabindex="0">
+                  </a>{{ /site_header:dropdown_items }}</div>{{ if site_header:feature_title }}<a href="{{ site_header:feature_url }}" {{ if site_header:feature_url | starts_with('http') }}target="_blank" rel="noopener" {{ /if }}class="nav_feature w-inline-block" tabindex="0">
                   <div class="nav_feature-media"><img
-                      src="/hmxtech/img/truss-analyzer-feature.webp" loading="lazy" width="1520" height="920" alt="Blueprint of a Pratt truss with member forces" class="nav_feature-img"></div>
-                  <div class="nav_feature-eyebrow">Free tool</div>
-                  <div class="nav_feature-title">Member forces and reactions for any plane truss</div>
+                      src="{{ if site_header:feature_image }}{{ glide:site_header:feature_image width='760' format='webp' }}{{ else }}/hmxtech/img/truss-analyzer-feature.webp{{ /if }}" loading="lazy" width="1520" height="920" alt="{{ site_header:feature_image_alt }}" class="nav_feature-img"></div>
+                  {{ if site_header:feature_eyebrow }}<div class="nav_feature-eyebrow">{{ site_header:feature_eyebrow }}</div>{{ /if }}
+                  <div class="nav_feature-title">{{ site_header:feature_title }}</div>
                   <div class="nav_feature-meta">
-                    <div>Open the app</div><svg fill="none" viewBox="0 0 14 14" height="14" width="14" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-width="1.4" stroke="currentColor" d="M4 10L10 4M10 4H5M10 4V9"></path></svg>
+                    <div>{{ site_header:feature_link_label }}</div><svg fill="none" viewBox="0 0 14 14" height="14" width="14" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-width="1.4" stroke="currentColor" d="M4 10L10 4M10 4H5M10 4V9"></path></svg>
                   </div>
-                </a>
+                </a>{{ /if }}
               </div>
             </nav>
           </div>
+          {{ /if }}
         </div>
-        <div class="nav_actions"><a href="http://software.hmxtech.co.tz/signup" target="_blank" rel="noopener" class="nav_link is-signin">Register</a><a href="/contact" {{ if uri == '/contact' }}aria-current="page" {{ /if }}class="button is-nav{{ if uri == '/contact' }} w--current{{ /if }}">Get a quote</a>
+        <div class="nav_actions">{{ if site_header:register_label }}<a href="{{ site_header:register_url }}" {{ if site_header:register_url | starts_with('http') }}target="_blank" rel="noopener" {{ /if }}class="nav_link is-signin">{{ site_header:register_label }}</a>{{ /if }}<a href="{{ site_header:quote_url }}" {{ if uri == site_header:quote_url }}aria-current="page" {{ /if }}class="button is-nav{{ if uri == site_header:quote_url }} w--current{{ /if }}">{{ site_header:quote_label }}</a>
           <div class="nav_menu-button">
             <div class="nav_menu-line is-top"></div>
             <div class="nav_menu-line is-bottom"></div>
           </div>
         </div>
         <div class="nav_mobile"
-          style="translate: none; rotate: none; scale: none; transform: translate(0px, -8px); opacity: 0;"><a href="/features" {{ if uri == '/features' }}aria-current="page" {{ /if }}class="nav_mobile-link{{ if uri == '/features' }} w--current{{ /if }}">Features</a><a href="/#projects" class="nav_mobile-link">Projects</a><a href="/portfolio" {{ if uri == '/portfolio' }}aria-current="page" {{ /if }}class="nav_mobile-link{{ if uri == '/portfolio' }} w--current{{ /if }}">Portfolio</a><a href="/publications" {{ if uri == '/publications' }}aria-current="page" {{ /if }}class="nav_mobile-link{{ if uri == '/publications' }} w--current{{ /if }}">Publications</a><a href="/news" {{ if uri == '/news' }}aria-current="page" {{ /if }}class="nav_mobile-link{{ if uri == '/news' }} w--current{{ /if }}">News</a>
+          style="translate: none; rotate: none; scale: none; transform: translate(0px, -8px); opacity: 0;">{{ site_header:menu_links }}<a href="{{ url }}" {{ if uri == url }}aria-current="page" {{ /if }}{{ if url | starts_with('http') }}target="_blank" rel="noopener" {{ /if }}class="nav_mobile-link{{ if uri == url }} w--current{{ /if }}">{{ label }}</a>{{ /site_header:menu_links }}
+          {{ if site_header:dropdown_items }}
           <div data-hover="false" data-delay="0" class="nav_mobile-dd w-dropdown">
             <div class="nav_mobile-toggle w-dropdown-toggle" id="w-dropdown-toggle-2" aria-controls="w-dropdown-list-2"
               aria-haspopup="menu" aria-expanded="false" role="button" tabindex="0">
-              <div>Truss Analyzer</div>
+              <div>{{ site_header:dropdown_label }}</div>
               <div class="nav_mobile-icon w-icon-dropdown-toggle" aria-hidden="true"></div>
             </div>
             <nav class="nav_mobile-list w-dropdown-list" id="w-dropdown-list-2" aria-labelledby="w-dropdown-toggle-2">
-              <div class="nav_mobile-subs"><a href="https://hmxtech.co.tz/truss/" target="_blank" rel="noopener" class="nav_msub w-inline-block" tabindex="0"><div class="nav_msub-title">Truss Analyzer (Web)</div><div class="nav_msub-desc">Free, in your browser</div></a><a href="https://hmxtech.co.tz/truss/app.html" target="_blank" rel="noopener" class="nav_msub w-inline-block" tabindex="0"><div class="nav_msub-title">Truss Analyzer 1.1 for Windows</div><div class="nav_msub-desc">Desktop version</div></a><a href="https://hmxtech.co.tz/truss/README.txt" target="_blank" rel="noopener" class="nav_msub w-inline-block" tabindex="0"><div class="nav_msub-title">Read me</div><div class="nav_msub-desc">How to use the solver</div></a></div>
+              <div class="nav_mobile-subs">{{ site_header:dropdown_items }}<a href="{{ url }}" {{ if url | starts_with('http') }}target="_blank" rel="noopener" {{ /if }}class="nav_msub w-inline-block" tabindex="0"><div class="nav_msub-title">{{ title }}</div>{{ if mobile_description }}<div class="nav_msub-desc">{{ mobile_description }}</div>{{ /if }}</a>{{ /site_header:dropdown_items }}</div>
             </nav>
           </div>
-          <div class="nav_mobile-cta"><a href="/contact" {{ if uri == '/contact' }}aria-current="page" {{ /if }}class="button{{ if uri == '/contact' }} w--current{{ /if }}">Get a quote</a><a href="http://software.hmxtech.co.tz/signup" target="_blank" rel="noopener"
-              class="button is-secondary">Register</a></div>
+          {{ /if }}
+          <div class="nav_mobile-cta"><a href="{{ site_header:quote_url }}" {{ if uri == site_header:quote_url }}aria-current="page" {{ /if }}class="button{{ if uri == site_header:quote_url }} w--current{{ /if }}">{{ site_header:quote_label }}</a>{{ if site_header:register_label }}<a href="{{ site_header:register_url }}" {{ if site_header:register_url | starts_with('http') }}target="_blank" rel="noopener" {{ /if }}
+              class="button is-secondary">{{ site_header:register_label }}</a>{{ /if }}</div>
         </div>
       </nav>

@@ -8,7 +8,7 @@ use Statamic\Facades\Taxonomy;
 
 test('only the HMXTECH collections, globals, menus and taxonomies remain', function () {
     expect(Collection::handles()->sort()->values()->all())->toBe(['news', 'pages', 'posts', 'publications'])
-        ->and(GlobalSet::all()->map->handle()->values()->all())->toBe(['settings'])
+        ->and(GlobalSet::all()->map->handle()->sort()->values()->all())->toBe(['settings', 'site_footer', 'site_header'])
         ->and(Nav::all())->toBeEmpty()
         ->and(Taxonomy::all())->toBeEmpty()
         ->and(Entry::query()->where('collection', 'posts')->get()->map->blueprint()->map->handle()->unique()->values()->all())->toBe(['article']);

@@ -5,11 +5,11 @@
                 <img class="nav_brand-mark hx-logo" src="/hmxtech/brand/logo-for-dark-bg.svg" alt="" width="68" height="28">
           <div class="nav_brand-text hx-wordmark">HMXTECH</div>
               </a>
-              <p class="footer_tagline">Your building is our business. Engineering consultancy and construction from Mbeya, Tanzania.</p>
+              {{ if site_footer:tagline }}<p class="footer_tagline">{{ site_footer:tagline }}</p>{{ /if }}
             </div>
             <div class="footer_news">
-              <div class="mono-label is-panel">News from site</div>
-              <p class="footer_tagline">Occasional updates on our projects, research and engineering events.</p>
+              <div class="mono-label is-panel">{{ site_footer:newsletter_label }}</div>
+              {{ if site_footer:newsletter_text }}<p class="footer_tagline">{{ site_footer:newsletter_text }}</p>{{ /if }}
               <div class="footer_form-block">
                 <div id="newsletter-footer" class="footer_form w-form">
                   {{ if ! {form:success in="newsletter"} }}{{ form:create in="newsletter" redirect="{uri}#newsletter-footer" error_redirect="{uri}#newsletter-footer" data-name="newsletter" class="footer_form-fields" aria-label="newsletter" data-wf-no-turnstile="true" }}
@@ -17,77 +17,48 @@
                       class="footer_input w-input" maxlength="256" name="email" data-name="email"
                       aria-label="Email address" placeholder="Email address" type="email" id="field" required="" value="{{ old:email }}"><input
                       type="submit" data-wait="Please wait..." class="footer_submit w-button"
-                      value="Subscribe">{{ /form:create }}{{ /if }}
+                      value="{{ site_footer:newsletter_button }}">{{ /form:create }}{{ /if }}
                   <div class="footer_form-message w-form-done" {{ if {form:success in="newsletter"} }}style="display:block" {{ /if }} tabindex="-1" role="region"
                     aria-label="newsletter success">
-                    <div>You're on the list. We'll send our next update to this address.</div>
+                    <div>{{ site_footer:newsletter_success }}</div>
                   </div>
                   <div class="footer_form-message w-form-fail" {{ if {form:errors in="newsletter"} && old:source == 'footer' }}style="display:block" {{ /if }} tabindex="-1" role="region"
                     aria-label="newsletter failure">
-                    <div>That didn't go through. Check your email address and try again.</div>
+                    <div>{{ site_footer:newsletter_error }}</div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <div class="footer_cols">
+            {{ site_footer:columns }}
             <div class="footer_col">
-              <div class="mono-label is-panel">Services</div><a href="/features" class="footer_link">Consultancy</a><a href="/features" class="footer_link">Analysis and design</a><a href="/features" class="footer_link">Building construction</a><a href="/features" class="footer_link">Civil works</a><a href="/features" class="footer_link">Materials testing</a>
+              <div class="mono-label is-panel">{{ heading }}</div>{{ links }}<a href="{{ url }}" {{ if highlight_current && uri == url }}aria-current="page" {{ /if }}{{ if url | starts_with('http') }}target="_blank" rel="noopener" {{ /if }}class="footer_link{{ if highlight_current && uri == url }} w--current{{ /if }}">{{ label }}</a>{{ /links }}
             </div>
-            <div class="footer_col">
-              <div class="mono-label is-panel">Get in touch</div><a href="tel:+255758526792" class="footer_link">+255 758 526 792</a><a
-                href="tel:+255767307685" class="footer_link">+255 767 307 685</a><a href="mailto:info@hmxtech.co.tz"
-                class="footer_link">info@hmxtech.co.tz</a><a href="/contact" class="footer_link">P.O. Box 1897, Mbeya</a>
-            </div>
-            <div class="footer_col">
-              <div class="mono-label is-panel">Company</div><a href="/portfolio" {{ if uri == '/portfolio' }}aria-current="page" {{ /if }}class="footer_link{{ if uri == '/portfolio' }} w--current{{ /if }}">Portfolio</a><a href="/#projects" class="footer_link">Projects</a><a href="/how-we-work" {{ if uri == '/how-we-work' }}aria-current="page" {{ /if }}class="footer_link{{ if uri == '/how-we-work' }} w--current{{ /if }}">How we work</a><a href="/contact" {{ if uri == '/contact' }}aria-current="page" {{ /if }}class="footer_link{{ if uri == '/contact' }} w--current{{ /if }}">Contact</a>
-            </div>
-            <div class="footer_col">
-              <div class="mono-label is-panel">Resources</div><a href="/publications" {{ if uri == '/publications' }}aria-current="page" {{ /if }}class="footer_link{{ if uri == '/publications' }} w--current{{ /if }}">Publications</a><a href="/news" {{ if uri == '/news' }}aria-current="page" {{ /if }}class="footer_link{{ if uri == '/news' }} w--current{{ /if }}">News</a><a href="https://hmxtech.co.tz/truss/" target="_blank" rel="noopener" class="footer_link">Truss Analyzer (Web)</a><a href="https://hmxtech.co.tz/truss/app.html" target="_blank" rel="noopener" class="footer_link">Truss Analyzer for Windows</a><a href="http://software.hmxtech.co.tz/signup" target="_blank" rel="noopener" class="footer_link">Register</a>
-            </div>
+            {{ /site_footer:columns }}
+            {{ if site_footer:registrations }}
             <div class="footer_col is-trust">
-              <div class="mono-label is-panel">Registered</div>
+              <div class="mono-label is-panel">{{ site_footer:registered_label }}</div>
+              {{ site_footer:registrations }}
               <div class="footer_trust">
                 <div class="tier_check"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
                     height="14" width="14">
                     <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor"
                       d="M2.5 6.2L5 8.5L9.5 3.5"></path>
                   </svg></div>
-                <div>BRELA 478140</div>
+                <div>{{ value }}</div>
               </div>
-              <div class="footer_trust">
-                <div class="tier_check"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
-                    height="14" width="14">
-                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor"
-                      d="M2.5 6.2L5 8.5L9.5 3.5"></path>
-                  </svg></div>
-                <div>ERB 238L</div>
-              </div>
-              <div class="footer_trust">
-                <div class="tier_check"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
-                    height="14" width="14">
-                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor"
-                      d="M2.5 6.2L5 8.5L9.5 3.5"></path>
-                  </svg></div>
-                <div>CRB B5 building</div>
-              </div>
-              <div class="footer_trust">
-                <div class="tier_check"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
-                    height="14" width="14">
-                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor"
-                      d="M2.5 6.2L5 8.5L9.5 3.5"></path>
-                  </svg></div>
-                <div>CRB C6 civil works</div>
-              </div>
+              {{ /site_footer:registrations }}
             </div>
+            {{ /if }}
           </div>
           <div class="footer_bottom">
-            <div class="footer_legal">© 2026 HMXTECH Company Limited</div>
-            <div class="footer_status">
+            <div class="footer_legal">© {{ now format="Y" }} {{ site_footer:copyright }}</div>
+            {{ if site_footer:status }}<div class="footer_status">
               <div class="footer_status-dot"></div>
-              <div>Taking on new projects</div>
-            </div>
-            <div class="footer_legal-links"><a href="/privacy" {{ if uri == '/privacy' }}aria-current="page" {{ /if }}class="footer_legal-link{{ if uri == '/privacy' }} w--current{{ /if }}">Privacy</a><a href="/terms" {{ if uri == '/terms' }}aria-current="page" {{ /if }}class="footer_legal-link{{ if uri == '/terms' }} w--current{{ /if }}">Terms</a><a href="/licenses" {{ if uri == '/licenses' }}aria-current="page" {{ /if }}class="footer_legal-link{{ if uri == '/licenses' }} w--current{{ /if }}">Licenses</a></div>
+              <div>{{ site_footer:status }}</div>
+            </div>{{ /if }}
+            <div class="footer_legal-links">{{ site_footer:legal_links }}<a href="{{ url }}" {{ if uri == url }}aria-current="page" {{ /if }}{{ if url | starts_with('http') }}target="_blank" rel="noopener" {{ /if }}class="footer_legal-link{{ if uri == url }} w--current{{ /if }}">{{ label }}</a>{{ /site_footer:legal_links }}</div>
           </div>
           <div class="footer_schedule"><svg aria-hidden="true" fill="none" preserveAspectRatio="xMidYMin slice" viewBox="0 0 1150 240" xmlns="http://www.w3.org/2000/svg" class="footer_schedule-svg">
               <line x1="0.0" y1="28" x2="0.0" y2="240" stroke-width="1" class="ill-s-line-panel"></line>

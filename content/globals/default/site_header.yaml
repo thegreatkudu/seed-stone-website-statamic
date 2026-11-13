@@ -1,0 +1,53 @@
+menu_links:
+  -
+    id: hxnav01
+    label: Features
+    url: /features
+  -
+    id: hxnav02
+    label: Projects
+    url: '/#projects'
+  -
+    id: hxnav03
+    label: Portfolio
+    url: /portfolio
+  -
+    id: hxnav04
+    label: Publications
+    url: /publications
+  -
+    id: hxnav05
+    label: News
+    url: /news
+dropdown_label: 'Truss Analyzer'
+dropdown_items:
+  -
+    id: hxdd01
+    title: 'Truss Analyzer (Web)'
+    url: 'https://hmxtech.co.tz/truss/'
+    description: 'Solve plane trusses in your browser. Free, nothing to install.'
+    mobile_description: 'Free, in your browser'
+    icon: browser
+  -
+    id: hxdd02
+    title: 'Truss Analyzer 1.1 for Windows'
+    url: 'https://hmxtech.co.tz/truss/app.html'
+    description: 'The desktop version of the same solver.'
+    mobile_description: 'Desktop version'
+    icon: windows
+  -
+    id: hxdd03
+    title: 'Read me'
+    url: 'https://hmxtech.co.tz/truss/README.txt'
+    description: 'How to model joints, members, supports and loads.'
+    mobile_description: 'How to use the solver'
+    icon: document
+feature_eyebrow: 'Free tool'
+feature_title: 'Member forces and reactions for any plane truss'
+feature_link_label: 'Open the app'
+feature_url: 'https://hmxtech.co.tz/truss/'
+feature_image_alt: 'Blueprint of a Pratt truss with member forces'
+register_label: Register
+register_url: 'http://software.hmxtech.co.tz/signup'
+quote_label: 'Get a quote'
+quote_url: /contact

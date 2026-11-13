@@ -1,0 +1,173 @@
+tabs:
+  brand:
+    display: 'Brand & Newsletter'
+    sections:
+      -
+        display: 'Beside the Logo'
+        fields:
+          -
+            handle: tagline
+            field:
+              type: textarea
+              display: Tagline
+      -
+        display: 'Newsletter Sign-Up'
+        instructions: 'Sign-ups appear under Forms → Newsletter.'
+        fields:
+          -
+            handle: newsletter_label
+            field:
+              type: text
+              display: 'Small Label'
+              width: 50
+          -
+            handle: newsletter_text
+            field:
+              type: text
+              display: Text
+              width: 50
+          -
+            handle: newsletter_button
+            field:
+              type: text
+              display: 'Button Label'
+              width: 33
+              validate:
+                - required
+          -
+            handle: newsletter_success
+            field:
+              type: text
+              display: 'Thank-You Message'
+              width: 66
+              validate:
+                - required
+          -
+            handle: newsletter_error
+            field:
+              type: text
+              display: 'Error Message'
+              validate:
+                - required
+  links:
+    display: 'Link Columns'
+    sections:
+      -
+        display: 'Link Columns'
+        fields:
+          -
+            handle: columns
+            field:
+              type: grid
+              display: Columns
+              instructions: 'Four fit beside the registrations column. Drag to reorder.'
+              mode: stacked
+              min_rows: 1
+              max_rows: 5
+              add_row: 'Add column'
+              reorderable: true
+              listable: hidden
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+                    width: 66
+                    validate:
+                      - required
+                -
+                  handle: highlight_current
+                  field:
+                    type: toggle
+                    display: 'Highlight the Current Page'
+                    instructions: 'Turn off when several links in this column go to the same page.'
+                    width: 33
+                    default: true
+                -
+                  handle: links
+                  field:
+                    type: grid
+                    display: Links
+                    instructions: 'Start with / for a page on this site, https:// for another site (opens in a new tab), tel: for a phone or mailto: for an email.'
+                    mode: table
+                    min_rows: 1
+                    add_row: 'Add link'
+                    reorderable: true
+                    listable: hidden
+                    fields:
+                      -
+                        handle: label
+                        field:
+                          type: text
+                          display: Label
+                          validate:
+                            - required
+                      -
+                        handle: url
+                        field:
+                          type: text
+                          display: Link
+                          validate:
+                            - required
+          -
+            handle: registered_label
+            field:
+              type: text
+              display: 'Registrations Heading'
+              width: 50
+          -
+            handle: registrations
+            field:
+              type: list
+              display: Registrations
+              instructions: 'Each line shows with a tick. Leave empty to hide the column.'
+              width: 50
+  bottom:
+    display: 'Bottom Bar'
+    sections:
+      -
+        display: 'Bottom Bar'
+        fields:
+          -
+            handle: copyright
+            field:
+              type: text
+              display: 'Copyright Name'
+              instructions: 'Shown after "© year"; the year updates itself.'
+              width: 50
+              validate:
+                - required
+          -
+            handle: status
+            field:
+              type: text
+              display: 'Status Note'
+              instructions: 'Beside the green dot, e.g. "Taking on new projects". Leave empty to hide.'
+              width: 50
+          -
+            handle: legal_links
+            field:
+              type: grid
+              display: 'Legal Links'
+              instructions: 'Start with / for a page on this site, https:// for another site (opens in a new tab), tel: for a phone or mailto: for an email.'
+              mode: table
+              min_rows: 1
+              add_row: 'Add link'
+              reorderable: true
+              listable: hidden
+              fields:
+                -
+                  handle: label
+                  field:
+                    type: text
+                    display: Label
+                    validate:
+                      - required
+                -
+                  handle: url
+                  field:
+                    type: text
+                    display: Link
+                    validate:
+                      - required

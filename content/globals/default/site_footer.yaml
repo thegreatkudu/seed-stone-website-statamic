@@ -1,0 +1,120 @@
+tagline: 'Your building is our business. Engineering consultancy and construction from Mbeya, Tanzania.'
+newsletter_label: 'News from site'
+newsletter_text: 'Occasional updates on our projects, research and engineering events.'
+newsletter_button: Subscribe
+newsletter_success: "You're on the list. We'll send our next update to this address."
+newsletter_error: "That didn't go through. Check your email address and try again."
+columns:
+  -
+    id: hxfc01
+    heading: Services
+    links:
+      -
+        id: hxfl101
+        label: Consultancy
+        url: /features
+      -
+        id: hxfl102
+        label: 'Analysis and design'
+        url: /features
+      -
+        id: hxfl103
+        label: 'Building construction'
+        url: /features
+      -
+        id: hxfl104
+        label: 'Civil works'
+        url: /features
+      -
+        id: hxfl105
+        label: 'Materials testing'
+        url: /features
+    highlight_current: false
+  -
+    id: hxfc02
+    heading: 'Get in touch'
+    links:
+      -
+        id: hxfl201
+        label: '+255 758 526 792'
+        url: 'tel:+255758526792'
+      -
+        id: hxfl202
+        label: '+255 767 307 685'
+        url: 'tel:+255767307685'
+      -
+        id: hxfl203
+        label: info@hmxtech.co.tz
+        url: 'mailto:info@hmxtech.co.tz'
+      -
+        id: hxfl204
+        label: 'P.O. Box 1897, Mbeya'
+        url: /contact
+    highlight_current: false
+  -
+    id: hxfc03
+    heading: Company
+    links:
+      -
+        id: hxfl301
+        label: Portfolio
+        url: /portfolio
+      -
+        id: hxfl302
+        label: Projects
+        url: '/#projects'
+      -
+        id: hxfl303
+        label: 'How we work'
+        url: /how-we-work
+      -
+        id: hxfl304
+        label: Contact
+        url: /contact
+    highlight_current: true
+  -
+    id: hxfc04
+    heading: Resources
+    links:
+      -
+        id: hxfl401
+        label: Publications
+        url: /publications
+      -
+        id: hxfl402
+        label: News
+        url: /news
+      -
+        id: hxfl403
+        label: 'Truss Analyzer (Web)'
+        url: 'https://hmxtech.co.tz/truss/'
+      -
+        id: hxfl404
+        label: 'Truss Analyzer for Windows'
+        url: 'https://hmxtech.co.tz/truss/app.html'
+      -
+        id: hxfl405
+        label: Register
+        url: 'http://software.hmxtech.co.tz/signup'
+    highlight_current: true
+registered_label: Registered
+registrations:
+  - 'BRELA 478140'
+  - 'ERB 238L'
+  - 'CRB B5 building'
+  - 'CRB C6 civil works'
+copyright: 'HMXTECH Company Limited'
+status: 'Taking on new projects'
+legal_links:
+  -
+    id: hxleg01
+    label: Privacy
+    url: /privacy
+  -
+    id: hxleg02
+    label: Terms
+    url: /terms
+  -
+    id: hxleg03
+    label: Licenses
+    url: /licenses

@@ -1,0 +1,177 @@
+tabs:
+  menu:
+    display: Menu
+    sections:
+      -
+        display: 'Menu Links'
+        fields:
+          -
+            handle: menu_links
+            field:
+              type: grid
+              display: Links
+              instructions: 'Start with / for a page on this site (e.g. /features) or https:// for another site, which opens in a new tab.'
+              mode: table
+              min_rows: 1
+              max_rows: 8
+              add_row: 'Add link'
+              reorderable: true
+              listable: hidden
+              fields:
+                -
+                  handle: label
+                  field:
+                    type: text
+                    display: Label
+                    validate:
+                      - required
+                -
+                  handle: url
+                  field:
+                    type: text
+                    display: Link
+                    validate:
+                      - required
+      -
+        display: Dropdown
+        fields:
+          -
+            handle: dropdown_label
+            field:
+              type: text
+              display: 'Dropdown Label'
+              instructions: 'Leave the items empty to hide the dropdown.'
+          -
+            handle: dropdown_items
+            field:
+              type: grid
+              display: 'Dropdown Items'
+              mode: stacked
+              min_rows: 0
+              max_rows: 4
+              add_row: 'Add item'
+              reorderable: true
+              listable: hidden
+              fields:
+                -
+                  handle: title
+                  field:
+                    type: text
+                    display: Title
+                    width: 50
+                    validate:
+                      - required
+                -
+                  handle: url
+                  field:
+                    type: text
+                    display: Link
+                    instructions: 'Start with / for a page on this site (e.g. /features) or https:// for another site, which opens in a new tab.'
+                    width: 50
+                    validate:
+                      - required
+                -
+                  handle: description
+                  field:
+                    type: text
+                    display: Description
+                    instructions: 'Shown on desktop.'
+                    width: 50
+                -
+                  handle: mobile_description
+                  field:
+                    type: text
+                    display: 'Short Description'
+                    instructions: 'Shown in the phone menu.'
+                    width: 50
+                -
+                  handle: icon
+                  field:
+                    type: button_group
+                    display: Icon
+                    options:
+                      browser: Browser
+                      windows: Windows
+                      document: Document
+                    default: browser
+      -
+        display: 'Dropdown Feature Card'
+        fields:
+          -
+            handle: feature_eyebrow
+            field:
+              type: text
+              display: 'Small Label'
+              width: 50
+          -
+            handle: feature_title
+            field:
+              type: text
+              display: Title
+              instructions: 'Leave empty to hide the card.'
+              width: 50
+          -
+            handle: feature_link_label
+            field:
+              type: text
+              display: 'Link Label'
+              width: 50
+          -
+            handle: feature_url
+            field:
+              type: text
+              display: Link
+              instructions: 'Start with / for a page on this site (e.g. /features) or https:// for another site, which opens in a new tab.'
+              width: 50
+          -
+            handle: feature_image
+            field:
+              type: assets
+              display: Image
+              instructions: 'Optional; the truss drawing is used when empty.'
+              container: assets
+              max_files: 1
+              mode: grid
+          -
+            handle: feature_image_alt
+            field:
+              type: text
+              display: 'Image Description'
+              instructions: 'For screen readers.'
+  buttons:
+    display: Buttons
+    sections:
+      -
+        display: 'Header Buttons'
+        fields:
+          -
+            handle: register_label
+            field:
+              type: text
+              display: 'Register Link Label'
+              instructions: 'Leave empty to hide.'
+              width: 50
+          -
+            handle: register_url
+            field:
+              type: text
+              display: 'Register Link'
+              instructions: 'Start with / for a page on this site (e.g. /features) or https:// for another site, which opens in a new tab.'
+              width: 50
+          -
+            handle: quote_label
+            field:
+              type: text
+              display: 'Main Button Label'
+              width: 50
+              validate:
+                - required
+          -
+            handle: quote_url
+            field:
+              type: text
+              display: 'Main Button Link'
+              instructions: 'Start with / for a page on this site (e.g. /features) or https:// for another site, which opens in a new tab.'
+              width: 50
+              validate:
+                - required
