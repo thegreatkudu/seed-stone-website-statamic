@@ -14,7 +14,11 @@
 
   button.addEventListener('click', function (event) {
     event.preventDefault();
-    window.scrollTo({ top: 0, behavior: reduceMotion.matches ? 'auto' : 'smooth' });
+    if (window.hxLenis) {
+      window.hxLenis.scrollTo(0);
+    } else {
+      window.scrollTo({ top: 0, behavior: reduceMotion.matches ? 'auto' : 'smooth' });
+    }
     var target = document.querySelector('.nav_logo, a, button');
     if (target) {
       target.focus({ preventScroll: true });

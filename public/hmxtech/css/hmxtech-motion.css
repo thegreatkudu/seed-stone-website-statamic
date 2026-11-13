@@ -1,0 +1,39 @@
+/* ==========================================================================
+   HMXTECH motion: pre-paint hiding for /hmxtech/js/hmxtech-motion.js and the
+   Lenis smooth-scroll base styles.
+   Hidden only while <html> has .hx-motion (set in the head, skipped for
+   reduced motion) and not yet .hx-motion-ready (set by the script once it has
+   taken over, or by a 4 s failsafe), the same guard Webflow IX3 uses.
+   ========================================================================== */
+
+html.hx-motion:not(.hx-motion-ready) :is(
+  h1, h2, .eyebrow, .hx-tag, .text-lead, .page-hero_text, .post-header_summary, .button-row,
+  .post-list > *, .post-grid > *, .pricing-grid > *, .faq-list > *, .points > *, .channels > *,
+  .platform-index > *, .license-list > *, .about-stats > *, .values-grid > *, .team-grid > *,
+  .steps > *, .hx-steps > *, .releases > *, .quotes > *, .tag-row > *, .filter-chips > *,
+  .trust-row > *, .post-cover, .post-feature, .form-card, .auth_card, .w-richtext > *
+):not(:is(.nav_component, .hx-hero, .footer) *) {
+  visibility: hidden;
+}
+
+/* Lenis 1.1.14 (MIT) */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}

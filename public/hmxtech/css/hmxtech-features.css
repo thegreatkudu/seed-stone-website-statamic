@@ -288,30 +288,11 @@
   left: 13px;
 }
 
-/* ---- Scroll reveal (only when JavaScript is running) ------------------------ */
-.hx-js [data-hx-reveal] {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity .7s ease, transform .7s cubic-bezier(.22, .61, .36, 1);
-  transition-delay: calc(var(--hx-delay, 0) * 110ms);
-}
-
-.hx-js [data-hx-reveal].is-visible {
-  opacity: 1;
-  transform: none;
-}
-
 @keyframes hx-pulse {
   50% { box-shadow: 0 0 0 6px rgb(226 29 211 / 0); }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hx-js [data-hx-reveal] {
-    opacity: 1;
-    transform: none;
-    transition: none;
-  }
-
   .hx-mock,
   .hx-mock_rec {
     transition: none;
