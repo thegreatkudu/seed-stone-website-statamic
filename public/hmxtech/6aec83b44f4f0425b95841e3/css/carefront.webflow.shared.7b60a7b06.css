@@ -2134,7 +2134,7 @@ textarea.w-input, textarea.w-select {
 
 @font-face {
   font-family: "Brygada 1918";
-  src: url("https://webflow-files-prod.global.ssl.fastly.net/6aec83b44f4f0425b95841e3/6aec83b44f4f0425b9584225_6aeb125a4934472eac7efaca-brygada-1918-latin-400-normal.woff2") format("woff2");
+  src: url("/hmxtech/fonts/brygada-1918-latin-400-normal.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -2142,7 +2142,7 @@ textarea.w-input, textarea.w-select {
 
 @font-face {
   font-family: "Brygada 1918";
-  src: url("https://webflow-files-prod.global.ssl.fastly.net/6aec83b44f4f0425b95841e3/6aec83b44f4f0425b9584226_6aeb125a138c252ac501241d-brygada-1918-latin-500-normal.woff2") format("woff2");
+  src: url("/hmxtech/fonts/brygada-1918-latin-500-normal.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -2150,7 +2150,7 @@ textarea.w-input, textarea.w-select {
 
 @font-face {
   font-family: Schibsted Grotesk;
-  src: url("https://webflow-files-prod.global.ssl.fastly.net/6aec83b44f4f0425b95841e3/6aec83b44f4f0425b958422a_6aeb3e360a2fc7ae0b4d30ef-schibsted-grotesk-latin-400-normal.woff2") format("woff2");
+  src: url("/hmxtech/fonts/schibsted-grotesk-latin-400-normal.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -2158,7 +2158,7 @@ textarea.w-input, textarea.w-select {
 
 @font-face {
   font-family: Schibsted Grotesk;
-  src: url("https://webflow-files-prod.global.ssl.fastly.net/6aec83b44f4f0425b95841e3/6aec83b44f4f0425b958422b_6aeb3e36104f7b9d5992ae13-schibsted-grotesk-latin-500-normal.woff2") format("woff2");
+  src: url("/hmxtech/fonts/schibsted-grotesk-latin-500-normal.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -2166,7 +2166,7 @@ textarea.w-input, textarea.w-select {
 
 @font-face {
   font-family: Schibsted Grotesk;
-  src: url("https://webflow-files-prod.global.ssl.fastly.net/6aec83b44f4f0425b95841e3/6aec83b44f4f0425b958422c_6aeb3e36a13b4259d61ebb87-schibsted-grotesk-latin-600-normal.woff2") format("woff2");
+  src: url("/hmxtech/fonts/schibsted-grotesk-latin-600-normal.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -2249,7 +2249,7 @@ textarea.w-input, textarea.w-select {
 
 .w-checkbox-input--inputType-custom.w--redirected-checked {
   background-color: #3898ec;
-  background-image: url("https://d3e54v103j8qbb.cloudfront.net/static/custom-checkbox-checkmark.589d534424.svg");
+  background-image: url("/hmxtech/images/custom-checkbox-checkmark.svg");
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;

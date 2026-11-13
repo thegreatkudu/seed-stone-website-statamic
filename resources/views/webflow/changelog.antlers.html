@@ -23,7 +23,7 @@
                 <div id="newsletter-changelog" class="w-form">
                     {{ if ! {form:success in="newsletter"} }}{{ form:create in="newsletter" redirect="{uri}#newsletter-changelog" error_redirect="{uri}#newsletter-changelog" attr:id="wf-form-Changelog-updates" attr:name="wf-form-Changelog-updates" data-name="Changelog updates" class="subscribe" aria-label="Changelog updates" data-wf-no-turnstile="true" }}
 <div style="display:none" aria-hidden="true"><input type="text" name="website" tabindex="-1" autocomplete="off"></div><input type="hidden" name="source" value="changelog"><input
-                            class="field_input is-raised w-input" autocomplete="email" maxlength="256" name="email"
+                            class="field_input is-raised w-input" autocomplete="email" maxlength="256" name="email" aria-label="Email address"
                             data-name="email" placeholder="Email address" type="email" id="field-2" required="" value="{{ old:email }}"><input
                             type="submit" data-wait="Please wait..." class="button is-dark w-button" value="Get updates"
                            >
@@ -91,7 +91,7 @@
                     <div id="newsletter-news" class="w-form">
                         {{ if ! {form:success in="newsletter"} }}{{ form:create in="newsletter" redirect="{uri}#newsletter-news" error_redirect="{uri}#newsletter-news" attr:id="wf-form-News-newsletter" attr:name="wf-form-News-newsletter" data-name="News newsletter" class="subscribe" aria-label="News newsletter" data-wf-no-turnstile="true" }}
 <div style="display:none" aria-hidden="true"><input type="text" name="website" tabindex="-1" autocomplete="off"></div><input type="hidden" name="source" value="news"><input
-                                class="field_input is-raised w-input" autocomplete="email" maxlength="256" name="email"
+                                class="field_input is-raised w-input" autocomplete="email" maxlength="256" name="email" aria-label="Email address"
                                 data-name="email" placeholder="Email address" type="email" id="field-news" required="" value="{{ old:email }}"><input
                                 type="submit" data-wait="Please wait..." class="button w-button"
                                 value="Subscribe">{{ /form:create }}{{ /if }}

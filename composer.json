@@ -55,9 +55,9 @@
             "@php artisan config:clear --ansi",
             "@php artisan test"
         ],
-        "pre-update-cmd": [ 
-            "Statamic\\Console\\Composer\\Scripts::preUpdateCmd" 
-        ],  
+        "pre-update-cmd": [
+            "Statamic\\Console\\Composer\\Scripts::preUpdateCmd"
+        ],
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi",
@@ -76,6 +76,15 @@
         ],
         "pre-package-uninstall": [
             "Illuminate\\Foundation\\ComposerScripts::prePackageUninstall"
+        ],
+        "deploy": [
+            "@php artisan down --retry=30",
+            "@php artisan migrate --force",
+            "@php please stache:refresh",
+            "@php please search:update --all",
+            "@php please glide:clear",
+            "@php artisan optimize",
+            "@php artisan up"
         ]
     },
     "extra": {

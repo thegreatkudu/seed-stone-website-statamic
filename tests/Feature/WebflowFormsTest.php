@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Mail;
 use Statamic\Facades\Form;
+use Statamic\Forms\Email;
 
 /**
  * Collect the field values a browser would send for the form posting to $action.
@@ -135,3 +136,26 @@ test('a failed footer sign-up only flags the footer form', function () {
     expect(substr_count($page, 'w-form-fail" style="display:block"'))->toBe(1)
         ->and($page)->toMatch('/footer_form-message w-form-fail" style="display:block"/');
 });
+
+test('a submitted form sends its email to the HMXTECH inbox', function (string $uri, string $handle, array $input, string $subject) {
+    $form = webflowFormPayload($this->get($uri)->getContent(), $handle);
+
+    $this->post($form['action'], $form['fields'] + $input)->assertRedirect();
+
+    Mail::assertSent(Email::class, function (Email $mail) use ($input, $subject) {
+        $mail->build();
+
+        return $mail->hasTo('info@hmxtech.co.tz')
+            && $mail->hasReplyTo($input['email'])
+            && $mail->subject === $subject;
+    });
+})->with([
+    'quote request' => ['/contact', 'project_enquiry', [
+        'first_name' => 'Asha',
+        'last_name' => 'Mwakalinga',
+        'email' => 'asha.mail@example.test',
+        'project_type' => 'building',
+        'message' => 'A warehouse in Mbalizi.',
+    ], 'New quote request from the website'],
+    'news sign-up' => ['/news', 'newsletter', ['email' => 'news.mail@example.test'], 'New newsletter sign-up'],
+]);

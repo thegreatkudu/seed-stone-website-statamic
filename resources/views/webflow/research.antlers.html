@@ -92,7 +92,7 @@
                     <div id="newsletter-research" class="w-form">
                         {{ if ! {form:success in="newsletter"} }}{{ form:create in="newsletter" redirect="{uri}#newsletter-research" error_redirect="{uri}#newsletter-research" attr:id="wf-form-Research-newsletter" attr:name="wf-form-Research-newsletter" data-name="Research newsletter" class="subscribe" aria-label="Research newsletter" data-wf-no-turnstile="true" }}
 <div style="display:none" aria-hidden="true"><input type="text" name="website" tabindex="-1" autocomplete="off"></div><input type="hidden" name="source" value="research"><input
-                                class="field_input is-raised w-input" autocomplete="email" maxlength="256" name="email"
+                                class="field_input is-raised w-input" autocomplete="email" maxlength="256" name="email" aria-label="Email address"
                                 data-name="email" placeholder="Email address" type="email" id="field-2" required="" value="{{ old:email }}"><input
                                 type="submit" data-wait="Please wait..." class="button w-button"
                                 value="Subscribe">{{ /form:create }}{{ /if }}
