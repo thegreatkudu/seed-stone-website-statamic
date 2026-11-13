@@ -28,7 +28,7 @@ hero_interval: 7
 hero_slides:
   -
     id: hxslide01
-    image: hero/hmx-hero-buildings.jpg
+    image: hero/hmx-hero-buildings.webp
     image_alt: 'Tower cranes over the steel frame of a multi-storey building under construction'
     has_brand_wash: true
     tab_label: Buildings
@@ -57,7 +57,7 @@ hero_slides:
   -
     id: hxslide03
     image: hero/hmx-hero-consultancy.webp
-    image_alt: 'Pencil resting on an architectural floor plan drawing'
+    image_alt: 'Marker pens resting on a site layout drawing'
     has_brand_wash: true
     tab_label: Consultancy
     eyebrow: 'Engineering consulting firm · ERB 238L'

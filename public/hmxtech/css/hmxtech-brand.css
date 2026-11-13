@@ -768,3 +768,21 @@ section[id] {
 }
 
 .post-card:hover .hx-card_link { color: var(--_carefront-color---accent--default); }
+
+/* ---- Photo behind a dark call-to-action band (Portfolio) ----------------- */
+.careers_band.hx-photo-band {
+  background:
+    linear-gradient(90deg, rgb(14 12 29 / .94) 0%, rgb(14 12 29 / .82) 50%, rgb(138 43 242 / .5) 100%),
+    var(--hx-band-img) center 40% / cover no-repeat,
+    var(--_carefront-color---bg--panel);
+  min-height: 320px;
+}
+
+@media screen and (max-width: 767px) {
+  .careers_band.hx-photo-band {
+    background:
+      linear-gradient(rgb(14 12 29 / .86), rgb(14 12 29 / .86)),
+      var(--hx-band-img) center / cover no-repeat,
+      var(--_carefront-color---bg--panel);
+  }
+}
