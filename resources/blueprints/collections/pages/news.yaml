@@ -74,7 +74,7 @@ tabs:
     sections:
       -
         display: 'News List'
-        instructions: 'Articles come from Collections → Posts (Article blueprint) and the other cards from Collections → News.'
+        instructions: 'Every card comes from Collections → News: write an Article or a News Item there and it gets its own page, newest first.'
         fields:
           -
             handle: list_label

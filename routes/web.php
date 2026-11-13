@@ -114,7 +114,7 @@ Route::get('/sitemap.xml', function () use ($indexableEntries) {
 
 /*
  * llms.txt — plain-text summary for AI assistants (ChatGPT, Claude, Perplexity…).
- * Built live from Globals → Settings and the Pages, Posts and Publications
+ * Built live from Globals → Settings and the Pages, News and Publications
  * collections, so it never drifts from what editors publish in the CP.
  */
 Route::get('/llms.txt', function () use ($indexableEntries) {
@@ -164,25 +164,28 @@ Route::get('/llms.txt', function () use ($indexableEntries) {
 
     if ($posts->isNotEmpty()) {
         $lines[] = '';
-        $lines[] = '## Latest Articles';
+        $lines[] = '## Latest News';
 
         foreach ($posts as $post) {
             $lines[] = "- [{$post->get('title')}]({$url($post)})";
         }
     }
 
+    /** Uploaded PDF first, then a link to a paper hosted elsewhere. */
+    $paperUrl = fn ($entry) => $entry->augmentedValue('pdf')->value()?->absoluteUrl() ?? $entry->get('pdf_url');
+
     $publications = Entry::query()
         ->where('collection', 'publications')
         ->where('published', true)
         ->get()
-        ->filter(fn ($entry) => filled($entry->get('pdf_url')));
+        ->filter(fn ($entry) => filled($paperUrl($entry)));
 
     if ($publications->isNotEmpty()) {
         $lines[] = '';
         $lines[] = '## Publications';
 
         foreach ($publications as $publication) {
-            $lines[] = "- [{$publication->get('title')}]({$publication->get('pdf_url')})";
+            $lines[] = "- [{$publication->get('title')}]({$paperUrl($publication)})";
         }
     }
 

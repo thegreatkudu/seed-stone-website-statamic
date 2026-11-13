@@ -38,7 +38,7 @@
                     </div>
                 </div>
             </section>
-            {{# Latest: HMXTECH articles (Posts collection, Article blueprint) first, then the News collection items in the order set in the Control Panel. #}}
+            {{# Latest: every entry in the News collection (Articles and News Items), newest first. Each card opens its own page. #}}
             <section class="section">
                 <div id="latest" class="anchor"></div>
                 <div class="latest-head">
@@ -46,37 +46,9 @@
                 </div>
                 <div class="w-dyn-list">
                     <div role="list" class="post-list w-dyn-items">
-                        {{ collection:posts blueprint:is="article" sort="date:desc" }}
-                        <div role="listitem" class="w-dyn-item">
-                            <a href="{{ url }}" class="post-card w-inline-block">
-                                <div class="post-card_media">
-                                    {{ if featured_image }}<img src="{{ glide:featured_image width='832' height='500' fit='crop_focal' format='webp' }}" loading="lazy" decoding="async" alt="{{ image_alt ?? '' }}" class="post-card_img">{{ /if }}
-                                </div>
-                                <div class="post-card_tag">{{ topic ?? 'Article' }}</div>
-                                <h3 class="post-card_title">{{ title }}</h3>
-                                <p class="post-card_text">{{ summary }}</p>
-                                <div class="post-card_meta"><div>{{ date format="F j, Y" }}</div>{{ if read_time }}<div class="byline_sep">,</div><div>{{ read_time }} min read</div>{{ /if }}</div>
-                            </a>
-                        </div>
+                        {{ collection:posts sort="date:desc" }}
+                        <div role="listitem" class="w-dyn-item">{{ partial:partials/post_card }}</div>
                         {{ /collection:posts }}
-                        {{ collection:news }}
-                        <div role="listitem" class="w-dyn-item">
-                            <a href="{{ link_url ?? '/contact' }}" {{ if link_url }}target="_blank" rel="noopener" {{ /if }}class="post-card w-inline-block">
-                                <div class="post-card_media">
-                                    {{ if image }}
-                                    <img src="{{ glide:image width='832' height='500' fit='crop_focal' format='webp' }}" loading="lazy" decoding="async" alt="{{ image_alt ?? '' }}" class="post-card_img">
-                                    {{ else }}
-                                    {{ partial:partials/news_cover :kind="kind:value" :source="source" }}
-                                    {{ /if }}
-                                </div>
-                                <div class="post-card_tag">{{ kind:label }}</div>
-                                <h3 class="post-card_title">{{ title }}</h3>
-                                <p class="post-card_text">{{ summary }}</p>
-                                <div class="post-card_meta">{{ if when }}<div>{{ when }}</div><div class="byline_sep">,</div>{{ /if }}<div>{{ source }}</div></div>
-                                {{ if link_label }}<div class="hx-card_link">{{ link_label }}<span class="text-link_icon"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 10L10 4M10 4H5M10 4V9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"></path></svg></span></div>{{ /if }}
-                            </a>
-                        </div>
-                        {{ /collection:news }}
                     </div>
                 </div>
             </section>

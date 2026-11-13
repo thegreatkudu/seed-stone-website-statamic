@@ -4,7 +4,7 @@ blueprint: publication
 title: 'Design of Hot Marshall Asphalt Concrete Mixes by Using Cinder Aggregates for Construction of Sealed Layer of Low Volume Roads in Mbeya Tanzania'
 topic: roads
 summary: 'Stability, flow and volumetric tests on asphalt mixes made with local cinder aggregates for sealing low volume roads.'
-pdf_url: 'https://software.hmxtech.co.tz/static/uploads/Design-of-Hot-Marshall-Asphalt-Concrete-Mixes-by-Using-Cinder-Aggregates-for-Construction-of-Sealed-Layer-of-Low-Volume-Roads-in-Mbeya-Tanzania.pdf'
+pdf: files/publications/design-of-hot-marshall-asphalt-concrete-mixes-by-using-cinder-aggregates-for-con.pdf
 featured: false
 published: true
 ---

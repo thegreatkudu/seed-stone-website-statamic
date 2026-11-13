@@ -16,25 +16,28 @@
 	</style>
 {{ /section:head_css }}
 
-			{{# Article fields come from the post entry (blueprint: Article). #}}
+			{{# One template for the News collection: Article and News Item blueprints. #}}
+			{{ is_news = blueprint:handle == 'news_item' }}
 			<section class="post-header">
 				<div class="crumbs"><a href="/news" class="crumbs_link">News</a><span
 						class="crumbs_sep">/</span>
-					<div class="crumbs_current">{{ topic ?? 'Article' }}</div>
+					<div class="crumbs_current">{{ if is_news }}{{ kind:label }}{{ else }}{{ topic ?? 'Article' }}{{ /if }}</div>
 				</div>
-				{{ if topic }}<div class="eyebrow">{{ topic }}</div>{{ /if }}
+				{{ if is_news }}<div class="eyebrow">{{ kind:label }}</div>{{ elseif topic }}<div class="eyebrow">{{ topic }}</div>{{ /if }}
 				<h1 class="post-header_title">{{ title }}</h1>
 				{{ if summary }}<p class="post-header_summary">{{ summary }}</p>{{ /if }}
 				<div class="byline">
 					<div class="post-avatar">HX</div>
 					<div class="byline_main">
 						<div class="byline_row">
-							<div class="byline_name">{{ author_name ?? 'HMXTECH Engineering' }}</div>
+							{{ if is_news }}<div class="byline_name">{{ source ?? 'HMXTECH' }}</div>{{ else }}<div class="byline_name">{{ author_name ?? 'HMXTECH Engineering' }}</div>
 							{{ if author_role }}<div class="byline_sep">,</div>
-							<div class="byline_name">{{ author_role }}</div>{{ /if }}
+							<div class="byline_name">{{ author_role }}</div>{{ /if }}{{ /if }}
 						</div>
 						<div class="byline_row is-meta">
 							<div class="byline_meta"><time datetime="{{ date format='Y-m-d' }}">{{ date format='F j, Y' }}</time></div>
+							{{ if is_news && when }}<div class="byline_sep">,</div>
+							<div class="byline_meta">Event: {{ when }}{{ if venue }}, {{ venue }}{{ /if }}</div>{{ /if }}
 							{{ if read_time }}<div class="byline_sep">,</div>
 							<div class="byline_meta">{{ read_time }} min read</div>{{ /if }}
 						</div>
@@ -52,9 +55,16 @@
 						<div class="post-rich w-richtext">
 							{{ content }}
 						</div>
-						{{ if pdf_url }}
-						<a href="{{ pdf_url }}" target="_blank" rel="noopener" class="button is-secondary hx-post_pdf">Download the paper (PDF)</a>
+						{{ if pdf }}
+						<a href="{{ pdf:url }}" target="_blank" rel="noopener" class="button is-secondary hx-post_pdf">Download the paper (PDF)</a>
 						{{ /if }}
+						{{ if attachment || link_url }}
+						<div class="button-row hx-post_actions">
+							{{ if attachment }}<a href="{{ attachment:url }}" target="_blank" rel="noopener" class="button">{{ attachment_label ?? 'Download' }}</a>{{ /if }}
+							{{ if link_url }}<a href="{{ link_url }}" {{ if link_url | starts_with('http') }}target="_blank" rel="noopener" {{ /if }}class="button is-secondary">{{ link_label ?? 'Open' }}</a>{{ /if }}
+						</div>
+						{{ /if }}
+						{{ unless is_news }}
 						<div class="author-card">
 							<div class="post-avatar is-large">HX</div>
 							<div class="author-card_main">
@@ -62,9 +72,24 @@
 								{{ if author_bio }}<p class="author-card_bio">{{ author_bio }}</p>{{ /if }}
 							</div>
 						</div>
+						{{ /unless }}
 					</article>
 				</div>
 			</section>
+			{{ if is_news }}
+			<section class="section">
+				<div class="related-head">
+					<h2 class="heading-related">More news</h2><a href="/news" class="text-link">All news<span class="text-link_icon"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 10L10 4M10 4H5M10 4V9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"></path></svg></span></a>
+				</div>
+				<div class="w-dyn-list">
+					<div role="list" class="post-list w-dyn-items">
+						{{ collection:posts :id:isnt="id" sort="date:desc" limit="3" }}
+						<div role="listitem" class="w-dyn-item">{{ partial:partials/post_card }}</div>
+						{{ /collection:posts }}
+					</div>
+				</div>
+			</section>
+			{{ else }}
 			<section class="section">
 				<div class="related-head">
 					<h2 class="heading-related">Related publications</h2><a href="/publications" class="text-link">All publications<span class="text-link_icon"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 10L10 4M10 4H5M10 4V9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"></path></svg></span></a>
@@ -72,7 +97,7 @@
 				<div class="w-dyn-list">
 					<div role="list" class="post-list w-dyn-items">
 						{{ collection:publications :topic:is="related_topic:value ?? 'roads'" featured:isnt="true" limit="3" }}
-						<div role="listitem" class="w-dyn-item"><a href="{{ pdf_url }}" target="_blank" rel="noopener"
+						<div role="listitem" class="w-dyn-item"><a href="{{ pdf:url ?? pdf_url }}" target="_blank" rel="noopener"
 								class="post-card w-inline-block">
 								<div class="post-card_media"><img src="/hmxtech/img/publications/{{ topic:value }}.webp"
 										loading="lazy" width="832" height="500" alt="" class="post-card_img"></div>
@@ -87,6 +112,8 @@
 					</div>
 				</div>
 			</section>
+			{{ /if }}
+			{{ if cta_heading }}
 			<section class="section">
 				<div class="cta-box">
 					<div class="cta-stack_wrap"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -149,8 +176,8 @@
 								<circle cx="870" cy="140" r="8" class="ill-f-accent cord-end"></circle>
 							</g>
 						</svg></div>
-					<h2 class="heading-xl is-center">Building on difficult ground?</h2>
-					<p class="text-lead is-center">Talk to an engineer about soil testing, drainage and pavement design before you build.</p>
+					<h2 class="heading-xl is-center">{{ cta_heading }}</h2>
+					{{ if cta_text }}<p class="text-lead is-center">{{ cta_text }}</p>{{ /if }}
 					<div class="button-row is-center"><a href="/contact" class="button w-inline-block">Get a quote<svg
 								width="14" height="14" viewBox="0 0 14 14" fill="none"
 								xmlns="http://www.w3.org/2000/svg">
@@ -159,3 +186,4 @@
 							</svg></a><a href="tel:+255758526792" class="button is-secondary">Call +255 758 526 792</a></div>
 				</div>
 			</section>
+			{{ /if }}

@@ -15,7 +15,7 @@ test('the article is rendered from the post entry', function () {
             'Download the paper (PDF)',
             'Related publications',
         ])
-        ->assertSee('Effects-of-Water-logging-on-the-Performance-of-Ruvu-to-Mlandizi-Road-Pavement.pdf', false)
+        ->assertSee('/assets/files/publications/effects-of-waterlogging-on-the-performance-of-ruvu-to-mlandizi-road-pavement.pdf', false)
         ->assertSee('datetime="2026-11-12"', false);
 });
 

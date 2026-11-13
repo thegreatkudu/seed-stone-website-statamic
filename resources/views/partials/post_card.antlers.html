@@ -1,0 +1,15 @@
+{{# News card for any entry in the News collection (Article or News Item). Every card opens the entry's own page. #}}
+<a href="{{ url }}" class="post-card w-inline-block">
+    <div class="post-card_media">
+        {{ if featured_image }}
+        <img src="{{ glide:featured_image width='832' height='500' fit='crop_focal' format='webp' }}" loading="lazy" decoding="async" alt="{{ image_alt ?? '' }}" class="post-card_img">
+        {{ elseif blueprint:handle == 'news_item' }}
+        {{ partial:partials/news_cover :kind="kind:value" :source="source" }}
+        {{ /if }}
+    </div>
+    <div class="post-card_tag">{{ if blueprint:handle == 'news_item' }}{{ kind:label }}{{ else }}{{ topic ?? 'Article' }}{{ /if }}</div>
+    <h3 class="post-card_title">{{ title }}</h3>
+    <p class="post-card_text">{{ summary }}</p>
+    <div class="post-card_meta">{{ if blueprint:handle == 'news_item' }}<div>{{ when ?? {date format="F j, Y"} }}</div>{{ if source }}<div class="byline_sep">,</div><div>{{ source }}</div>{{ /if }}{{ else }}<div>{{ date format="F j, Y" }}</div>{{ if read_time }}<div class="byline_sep">,</div><div>{{ read_time }} min read</div>{{ /if }}{{ /if }}</div>
+    <div class="hx-card_link">{{ if blueprint:handle == 'news_item' }}Read more{{ else }}Read the article{{ /if }}<span class="text-link_icon"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 10L10 4M10 4H5M10 4V9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"></path></svg></span></div>
+</a>

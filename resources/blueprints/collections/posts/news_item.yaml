@@ -1,0 +1,142 @@
+title: 'News Item'
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              display: Title
+              validate:
+                - required
+          -
+            handle: kind
+            field:
+              type: button_group
+              display: Type
+              instructions: 'Sets the label shown above the title.'
+              options:
+                event: Event
+                training: Training
+                announcement: Announcement
+                tool: 'Free tool'
+                company: 'Company news'
+              default: announcement
+              validate:
+                - required
+          -
+            handle: summary
+            field:
+              type: textarea
+              display: Summary
+              instructions: 'One or two sentences shown on the News page, under the title and in search results.'
+              validate:
+                - required
+                - 'max:400'
+          -
+            handle: featured_image
+            field:
+              type: assets
+              display: 'Cover Image'
+              instructions: 'Optional. Shown at the top of the page and on the News card.'
+              container: assets
+              max_files: 1
+              mode: grid
+          -
+            handle: image_alt
+            field:
+              type: text
+              display: 'Cover Image Description'
+              instructions: 'Describe the image for people who cannot see it.'
+          -
+            handle: content
+            field:
+              type: markdown
+              display: 'Full Story'
+              instructions: 'Write in Markdown: ## for section headings, - for lists, **bold**, and [text](https://link) for links.'
+      -
+        display: 'Event Details'
+        fields:
+          -
+            handle: when
+            field:
+              type: text
+              display: 'Event Date'
+              instructions: 'As it should read, e.g. "25 May 2023". Leave empty if not an event.'
+              width: 33
+          -
+            handle: venue
+            field:
+              type: text
+              display: Venue
+              width: 33
+          -
+            handle: source
+            field:
+              type: text
+              display: Organiser
+              width: 33
+      -
+        display: 'Attachment and Link'
+        fields:
+          -
+            handle: attachment
+            field:
+              type: assets
+              display: Attachment
+              instructions: 'Optional poster, invitation or PDF, uploaded here.'
+              container: assets
+              folder: files/news
+              restrict: true
+              max_files: 1
+              mode: list
+          -
+            handle: attachment_label
+            field:
+              type: text
+              display: 'Attachment Button Text'
+              instructions: 'e.g. Download the invitation'
+              width: 50
+          -
+            handle: link_url
+            field:
+              type: text
+              display: Link
+              instructions: 'Optional. A page to open, e.g. /contact or https://hmxtech.co.tz/truss/'
+              width: 50
+          -
+            handle: link_label
+            field:
+              type: text
+              display: 'Link Button Text'
+              width: 50
+  seo:
+    display: SEO
+    sections:
+      -
+        fields:
+          -
+            import: seo
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              display: Slug
+              validate:
+                - required
+          -
+            handle: date
+            field:
+              type: date
+              display: Date
+              instructions: 'Newest first on the News page.'
+              validate:
+                - required

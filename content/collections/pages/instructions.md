@@ -32,11 +32,11 @@ sections:
   -
     id: hxguide05
     title: Publications
-    body: '<p>Open <strong>Collections → Publications</strong> and press <strong>Create entry</strong>. Add the title, topic, a one or two sentence summary and the full link to the PDF. Drag papers in the list to change their order. Turn on <strong>Featured</strong> to show a paper in the large card at the top of the page.</p>'
+    body: '<p>Open <strong>Collections → Publications</strong> and press <strong>Create entry</strong>. Add the title, topic and a one or two sentence summary, then upload the paper in <strong>Paper (PDF)</strong>. The file is stored on this website. Drag papers in the list to change their order. Turn on <strong>Featured</strong> to show a paper in the large card at the top of the page.</p>'
   -
     id: hxguide06
     title: 'News and articles'
-    body: '<p>Open <strong>Collections → News</strong>. Each item has a type, an optional date and organiser, a short summary and an optional link to a poster or PDF. Items appear in the order you set by dragging them in the list, so put the newest at the top.</p><p>Longer articles written by the team go in <strong>Collections → Posts</strong> and are shown first on the News page.</p>'
+    body: '<p>Open <strong>Collections → News</strong> and press <strong>Create entry</strong>, then choose <strong>News Item</strong> for events, training and announcements, or <strong>Article</strong> for a longer piece written by the team. Every entry gets its own page and appears on the News page, newest first by its date.</p><p>A news item has a type, a summary, the full story, optional event details (date, venue, organiser) and an optional attachment such as a poster or PDF, uploaded straight into the entry. An article can attach the paper it is based on.</p>'
   -
     id: hxguide07
     title: 'Quote requests and sign-ups'

@@ -40,15 +40,25 @@ tabs:
                 - required
                 - 'max:260'
           -
+            handle: pdf
+            field:
+              type: assets
+              display: 'Paper (PDF)'
+              instructions: 'Upload the PDF. It is stored on this website and opens in a new tab.'
+              container: assets
+              folder: files/publications
+              restrict: true
+              max_files: 1
+              mode: list
+          -
             handle: pdf_url
             field:
               type: text
               input_type: url
-              display: 'PDF link'
-              instructions: 'Full URL of the paper, e.g. https://software.hmxtech.co.tz/static/uploads/paper.pdf'
-              required: true
+              display: 'Or Link to the Paper Elsewhere'
+              instructions: 'Only if the paper is published on another site, e.g. a journal. Leave empty when you upload the PDF above.'
               validate:
-                - required
+                - nullable
                 - url
   sidebar:
     display: Sidebar

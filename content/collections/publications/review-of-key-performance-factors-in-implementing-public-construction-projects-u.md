@@ -4,7 +4,7 @@ blueprint: publication
 title: 'Review of Key Performance Factors in Implementing Public Construction Projects Using Force Account Method in Tanzania'
 topic: procurement
 summary: 'A literature review of the factors that help public projects get the full benefit of the Force Account Method used since 2016.'
-pdf_url: 'https://software.hmxtech.co.tz/static/uploads/Review-of-Key-Performance-Factors-in-Implementing-Public-Construction-Projects-Using-Force-Account-Method-in-Tanzania.pdf'
+pdf: files/publications/review-of-key-performance-factors-in-implementing-public-construction-projects-u.pdf
 featured: false
 published: true
 ---

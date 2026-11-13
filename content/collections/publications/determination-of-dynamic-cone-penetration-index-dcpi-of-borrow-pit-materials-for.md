@@ -4,7 +4,7 @@ blueprint: publication
 title: 'Determination of Dynamic Cone Penetration Index (DCPI) of Borrow Pit Materials for Construction of Low Volume Roads in Dodoma Tanzania'
 topic: roads
 summary: 'DCP index and plasticity results for five Dodoma borrow pits used to build low volume roads.'
-pdf_url: 'https://software.hmxtech.co.tz/static/uploads/Determination-of-Dynamic-Cone-penetration-Index-(DCPI)-of-Borrow-pit-Materials-for-Construction-of-Low-Volume-Roads-in-Dodoma-Tanzania.pdf'
+pdf: files/publications/determination-of-dynamic-cone-penetration-index-dcpi-of-borrow-pit-materials-for.pdf
 featured: false
 published: true
 ---

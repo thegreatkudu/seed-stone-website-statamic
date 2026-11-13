@@ -12,9 +12,24 @@ test('the publications page lists every paper from the collection', function () 
 
     expect($papers)->toHaveCount(22);
 
-    $papers->each(fn ($paper) => $response
-        ->assertSee($paper->get('title'))
-        ->assertSee('href="'.$paper->get('pdf_url').'"', false));
+    $papers->each(fn ($paper) => $response->assertSee($paper->get('title')));
+
+    $papers->filter(fn ($paper) => $paper->get('pdf'))->each(fn ($paper) => $response
+        ->assertSee('href="'.$paper->augmentedValue('pdf')->value()->url().'"', false));
+});
+
+test('paper PDFs are stored on this website, not on another server', function () {
+    $papers = Entry::query()->where('collection', 'publications')->get();
+    $withFile = $papers->filter(fn ($paper) => $paper->get('pdf'));
+
+    expect($withFile)->toHaveCount(21)
+        ->and($papers->filter(fn ($paper) => str_contains((string) $paper->get('pdf_url'), 'software.hmxtech.co.tz')))->toBeEmpty();
+
+    $withFile->each(fn ($paper) => expect(file_exists(public_path('assets/'.$paper->get('pdf'))))->toBeTrue());
+
+    $this->get('/publications')
+        ->assertDontSee('software.hmxtech.co.tz/static')
+        ->assertSee('PDF coming soon');
 });
 
 test('the featured paper is shown once in the large feature', function () {

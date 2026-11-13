@@ -27,7 +27,7 @@
                 <div class="w-dyn-list">
                     <div role="list" class="w-dyn-items">
                         <div role="listitem" class="w-dyn-item">
-                            <div class="post-feature"><a href="{{ pdf_url }}" target="_blank" rel="noopener"
+                            <div class="post-feature"><a href="{{ pdf:url ?? pdf_url }}" target="_blank" rel="noopener"
                                     class="post-feature_media w-inline-block"><img
                                         src="{{ if cover_image }}{{ cover_image:url }}{{ else }}/hmxtech/img/publications/{{ topic:value }}.webp{{ /if }}"
                                         loading="lazy" alt="{{ cover_alt ?? '' }}" class="post-feature_img"></a>
@@ -36,7 +36,7 @@
                                         <div class="tag is-new">Featured</div>
                                         <div class="post-card_tag">{{ topic:label }}</div>
                                     </div>
-                                    <h2 class="post-feature_title"><a href="{{ pdf_url }}" target="_blank" rel="noopener"
+                                    <h2 class="post-feature_title"><a href="{{ pdf:url ?? pdf_url }}" target="_blank" rel="noopener"
                                             class="post-feature_link">{{ title }}</a></h2>
                                     <p class="post-feature_text">{{ summary }}</p>
                                     <div class="byline">
@@ -49,7 +49,7 @@
                                                 <div class="byline_meta">Opens in a new tab</div>
                                             </div>
                                         </div>
-                                    </div><a href="{{ pdf_url }}" target="_blank" rel="noopener" class="text-link">Read the paper<span class="text-link_icon"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 10L10 4M10 4H5M10 4V9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"></path></svg></span></a>
+                                    </div><a href="{{ pdf:url ?? pdf_url }}" target="_blank" rel="noopener" class="text-link">Read the paper<span class="text-link_icon"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 10L10 4M10 4H5M10 4V9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"></path></svg></span></a>
                                 </div>
                             </div>
                         </div>
@@ -65,19 +65,19 @@
                 <div class="w-dyn-list">
                     <div role="list" class="post-list w-dyn-items">
                         {{ collection:publications featured:isnt="true" }}
-                        <div role="listitem" class="w-dyn-item"><a href="{{ pdf_url }}" target="_blank" rel="noopener"
-                                class="post-card w-inline-block">
+                        <div role="listitem" class="w-dyn-item">{{ if pdf || pdf_url }}<a href="{{ pdf:url ?? pdf_url }}" target="_blank" rel="noopener"
+                                class="post-card w-inline-block">{{ else }}<div class="post-card w-inline-block">{{ /if }}
                                 <div class="post-card_media"><img src="/hmxtech/img/publications/{{ topic:value }}.webp"
                                         loading="lazy" width="832" height="500" alt="" class="post-card_img"></div>
                                 <div class="post-card_tag">{{ topic:label }}</div>
                                 <h3 class="post-card_title">{{ title }}</h3>
                                 <p class="post-card_text">{{ summary }}</p>
                                 <div class="post-card_meta">
-                                    <div>Free PDF</div>
+                                    {{ if pdf || pdf_url }}<div>Free PDF</div>
                                     <div class="byline_sep">,</div>
-                                    <div>Opens in a new tab</div>
+                                    <div>Opens in a new tab</div>{{ else }}<div>PDF coming soon</div>{{ /if }}
                                 </div>
-                            </a></div>
+                            {{ if pdf || pdf_url }}</a>{{ else }}</div>{{ /if }}</div>
                         {{ /collection:publications }}
                     </div>
                 </div>

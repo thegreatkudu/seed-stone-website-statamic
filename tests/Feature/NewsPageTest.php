@@ -2,36 +2,35 @@
 
 use Statamic\Facades\Entry;
 
-test('the news page lists every item from the collection in order', function () {
-    $titles = Entry::query()->where('collection', 'news')->get()
-        ->sortBy(fn ($item) => $item->order())
+test('the news page lists every entry of the News collection, newest first', function () {
+    $titles = Entry::query()->where('collection', 'posts')->get()
+        ->sortByDesc(fn ($item) => $item->date())
         ->map(fn ($item) => $item->get('title'))
         ->values()
         ->all();
 
-    expect($titles)->toHaveCount(7)
-        ->and($titles[0])->toBe('Truss Analyzer, free in your browser and on Windows');
+    expect($titles)->toHaveCount(8);
 
     $this->get('/news')
         ->assertSuccessful()
         ->assertSee('<title>News: engineering events, training and company updates | HMXTECH</title>', false)
         ->assertSee('What is new at HMXTECH.')
         ->assertSeeInOrder($titles)
-        ->assertSee('href="https://software.hmxtech.co.tz/static/uploads/WORLD-ENGINEERING-DAY-ON-04-MARCH-2024.jpg"', false)
         ->assertSee('4 Mar 2024');
 });
 
-test('the news page shows the article and news items as Latest cards', function () {
-    $this->get('/news')
+test('every news card opens its own page on this site', function () {
+    $html = $this->get('/news')
         ->assertSee('class="latest-head"', false)
-        ->assertSee('role="list" class="post-list w-dyn-items"', false)
-        ->assertSeeInOrder([
-            'href="/news/why-the-ruvu-to-mlandizi-road-keeps-failing-in-the-rain" class="post-card',
-            'Truss Analyzer, free in your browser and on Windows',
-        ], false)
         ->assertSee('class="hx-news-cover is-event"', false)
-        ->assertSee('target="_blank" rel="noopener" class="post-card w-inline-block"', false)
-        ->assertDontSee('class="releases"', false);
+        ->assertDontSee('class="releases"', false)
+        ->getContent();
+
+    preg_match_all('/<a href="([^"]+)" class="post-card/', $html, $links);
+
+    expect($links[1])->toHaveCount(8)
+        ->and(collect($links[1])->every(fn ($href) => str_starts_with($href, '/news/')))->toBeTrue()
+        ->and($html)->not->toContain('software.hmxtech.co.tz/static');
 });
 
 test('the news page ends with the newsletter panel', function () {

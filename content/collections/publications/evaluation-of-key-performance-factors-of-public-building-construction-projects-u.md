@@ -4,7 +4,7 @@ blueprint: publication
 title: 'Evaluation of Key Performance Factors of Public Building Construction Projects under the Force Account Method'
 topic: procurement
 summary: 'A case study of Ministry of Education projects identifying the factors that decide whether Force Account building projects succeed.'
-pdf_url: 'https://software.hmxtech.co.tz/static/uploads/Evaluation-of-Key-Performance-Factors-of-Public-Building-Construction-Projects-under-the-Force-Account-Method.pdf'
+pdf: files/publications/evaluation-of-key-performance-factors-of-public-building-construction-projects-u.pdf
 featured: false
 published: true
 ---

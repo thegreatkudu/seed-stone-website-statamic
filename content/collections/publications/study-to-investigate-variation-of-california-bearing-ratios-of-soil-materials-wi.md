@@ -4,7 +4,7 @@ blueprint: publication
 title: 'Study to Investigate Variation of California Bearing Ratios of Soil Materials with Changes of Soaking Duration'
 topic: materials
 summary: 'How CBR values of cinder, pozzolan, clay and their blend change as soaking time increases.'
-pdf_url: 'https://software.hmxtech.co.tz/static/uploads/Study-to-Investigate-Variation-of-California-Bearing-Rations-of-Soil-Materials-with-Soaking-Duration.pdf'
+pdf: files/publications/study-to-investigate-variation-of-california-bearing-ratios-of-soil-materials-wi.pdf
 featured: false
 published: true
 ---

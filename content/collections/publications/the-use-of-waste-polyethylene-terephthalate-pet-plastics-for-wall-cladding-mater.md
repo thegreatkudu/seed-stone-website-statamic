@@ -4,7 +4,7 @@ blueprint: publication
 title: 'The Use of Waste Polyethylene Terephthalate (PET) Plastics for Wall Cladding Materials in Mbeya Tanzania'
 topic: materials
 summary: 'Using waste PET plastic as a binder for low-cost wall cladding, while keeping plastic out of dump sites.'
-pdf_url: 'https://software.hmxtech.co.tz/static/uploads/The-Use-of-Waste-Polyethylene-Terephthalate-(PET)-Plastics-for-Wall-Cladding-Materials-in-Tanzania.pdf'
+pdf: files/publications/the-use-of-waste-polyethylene-terephthalate-pet-plastics-for-wall-cladding-mater.pdf
 featured: false
 published: true
 ---

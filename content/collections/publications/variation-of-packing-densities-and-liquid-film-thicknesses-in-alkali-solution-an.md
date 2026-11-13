@@ -4,7 +4,7 @@ blueprint: publication
 title: 'Variation of Packing Densities and Liquid Film Thicknesses in Alkali Solution and Water in Natural Pozzolan Calcium Hydroxide Pastes and Mortars'
 topic: materials
 summary: 'How wet packing density and liquid film thickness change between alkali solution and water in pozzolan-lime mortars.'
-pdf_url: 'https://software.hmxtech.co.tz/static/uploads/Variation-of-Packing-Densities-and-Liquid-Film-Thicknesses-in-Alkali-Solution-and-Water.pdf'
+pdf: files/publications/variation-of-packing-densities-and-liquid-film-thicknesses-in-alkali-solution-an.pdf
 featured: false
 published: true
 ---

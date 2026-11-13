@@ -4,7 +4,7 @@ blueprint: publication
 title: 'The Use of Blended Cinder Aggregates for Concrete Mixes'
 topic: materials
 summary: 'Concrete mix design with volcanic cinder aggregates from Mbeya blended with crushed stone.'
-pdf_url: 'https://software.hmxtech.co.tz/static/uploads/The-Use-of-Blended-Cinder-Aggregates-for-Concrete-Mixes.pdf'
+pdf: files/publications/the-use-of-blended-cinder-aggregates-for-concrete-mixes.pdf
 featured: false
 published: true
 ---

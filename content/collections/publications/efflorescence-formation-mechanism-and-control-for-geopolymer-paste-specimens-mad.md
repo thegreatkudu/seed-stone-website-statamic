@@ -4,7 +4,7 @@ blueprint: publication
 title: 'Efflorescence Formation Mechanism and Control for Geopolymer Paste Specimens Made from Natural Pozzolan and Calcium Hydroxide Binders'
 topic: materials
 summary: 'Why efflorescence forms on pozzolan-lime geopolymer pastes, and how to control it.'
-pdf_url: 'https://software.hmxtech.co.tz/static/uploads/Efflorescence-Formation-Mechanism-and-Control-for-Geopolymer-Paste-Specimens-Made-from-Pozzolan--Binders.pdf'
+pdf: files/publications/efflorescence-formation-mechanism-and-control-for-geopolymer-paste-specimens-mad.pdf
 featured: false
 published: true
 ---
