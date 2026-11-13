@@ -78,7 +78,7 @@
             "Illuminate\\Foundation\\ComposerScripts::prePackageUninstall"
         ],
         "deploy": [
-            "@php artisan down --retry=30",
+            "@php artisan down --retry=30 --render=errors::503",
             "@php artisan migrate --force",
             "@php please stache:refresh",
             "@php please search:update --all",

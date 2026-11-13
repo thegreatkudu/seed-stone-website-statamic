@@ -804,3 +804,19 @@ button.faq-question:focus-visible {
   outline: 2px solid var(--_carefront-color---accent--default);
   outline-offset: 4px;
 }
+
+/* ---- Standalone error pages (401, 403, 419, 429, 500, 503) -------------- */
+.hx-error_footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px 24px;
+  padding: 24px;
+  border-top: 1px solid var(--_carefront-color---line--paper);
+  color: var(--_carefront-color---text--muted);
+  font-size: 14px;
+}
+
+.hx-error_footer a {
+  color: inherit;
+}
