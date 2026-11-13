@@ -5,7 +5,7 @@ taxonomies:
   - categories
   - tags
 revisions: false
-route: '/posts/{slug}'
+route: '/news/{slug}'
 date: true
 sort_dir: asc
 date_behavior:

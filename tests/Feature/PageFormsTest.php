@@ -11,5 +11,5 @@ test('page forms post to their Statamic form handlers', function (string $uri, s
     'contact page' => ['/contact-us', 'contact'],
     'product quote' => ['/products/cashewnut', 'quote'],
     'service quote' => ['/services/direct-sourcing', 'quote'],
-    'blog newsletter' => ['/posts/a-guide-to-exporting-crops-from-tanzania', 'newsletter'],
+    'blog newsletter' => ['/news/a-guide-to-exporting-crops-from-tanzania', 'newsletter'],
 ]);

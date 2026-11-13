@@ -1,6 +1,6 @@
 <?php
 
-const ARTICLE_URI = '/posts/why-the-ruvu-to-mlandizi-road-keeps-failing-in-the-rain';
+const ARTICLE_URI = '/news/why-the-ruvu-to-mlandizi-road-keeps-failing-in-the-rain';
 
 test('the article is rendered from the post entry', function () {
     $this->get(ARTICLE_URI)

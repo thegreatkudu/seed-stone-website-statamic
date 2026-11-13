@@ -1,7 +1,7 @@
 <?php
 
 test('the platform page presents the HMXTECH services', function () {
-    $this->get('/platform')
+    $this->get('/features')
         ->assertSuccessful()
         ->assertSee('<title>Engineering consultancy, design and construction services | HMXTECH</title>', false)
         ->assertSee('Five services. One registered team.')
@@ -18,7 +18,7 @@ test('the platform page presents the HMXTECH services', function () {
 });
 
 test('no healthcare template copy is left on the platform page', function () {
-    $html = strip_tags($this->get('/platform')->getContent());
+    $html = strip_tags($this->get('/features')->getContent());
 
     expect($html)->not->toContain('Carefront')
         ->not->toContain('patient')
@@ -28,7 +28,7 @@ test('no healthcare template copy is left on the platform page', function () {
 });
 
 test('the navigation mirrors the HMXTECH site menu', function () {
-    $this->get('/platform')
+    $this->get('/features')
         ->assertSeeInOrder(['>Features</a>', '>Projects</a>', '>Portfolio</a>', '>Publications</a>', '>News</a>', 'Truss Analyzer'], false)
         ->assertSee('href="https://hmxtech.co.tz/truss/app.html"', false)
         ->assertSee('href="https://hmxtech.co.tz/truss/README.txt"', false)

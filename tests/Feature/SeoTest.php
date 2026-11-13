@@ -34,7 +34,7 @@ test('key pages render SEO tags and valid structured data', function (string $ur
     'home' => ['/', 'WebPage'],
     'product' => ['/products/cashewnut', 'Product'],
     'service' => ['/services/direct-sourcing', 'Service'],
-    'post' => ['/posts/a-guide-to-exporting-crops-from-tanzania', 'BlogPosting'],
+    'post' => ['/news/a-guide-to-exporting-crops-from-tanzania', 'BlogPosting'],
     'faq' => ['/faqs', 'FAQPage'],
 ]);
 
