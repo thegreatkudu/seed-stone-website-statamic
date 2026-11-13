@@ -19,11 +19,11 @@
 			<section class="section">
 				<div class="section-header is-split">
 					<div class="pricing-intro">
-						<div class="mono-label">How we work</div>
-						<h1 class="heading-xl">Three ways to work with us.</h1>
+						<div class="mono-label">{{ intro_tag }}</div>
+						<h1 class="heading-xl">{{ intro_heading }}</h1>
 					</div>
 					<div class="section-header_aside">
-						<p class="text-lead">Every quote is built from your drawings and bill of quantities. Choose consultancy, design and build, or construction, whichever fits your procurement.</p>
+						{{ if intro_text }}<p class="text-lead">{{ intro_text }}</p>{{ /if }}
 					</div>
 				</div>
 				<div class="pricing-grid">
@@ -40,46 +40,20 @@
                   </g>
                 </svg></div>
             </div>
-            <h3 class="tier_name">Consultancy</h3>
-            <p class="text-small">For public institutions, private institutions and individual clients.</p>
+            <h3 class="tier_name">{{ routes:0:name }}</h3>
+            <p class="text-small">{{ routes:0:text }}</p>
             <div class="tier_price">
-              <div class="tier_amount">ERB</div>
-              <div class="tier_unit">Registration No. 238L</div>
+              <div class="tier_amount">{{ routes:0:amount }}</div>
+              <div class="tier_unit">{{ routes:0:unit }}</div>
             </div>
-            <div class="tier_cta"><a href="/contact" class="button is-secondary">Request a proposal</a></div>
+            <div class="tier_cta"><a href="{{ routes:0:button_url }}" class="button is-secondary">{{ routes:0:button_label }}</a></div>
             <div class="tier_list">
+              {{ routes:0:items }}
               <div class="tier_item">
-                <div class="tier_check"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
-                    height="14" width="14">
-                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor"
-                      d="M2.5 6.2L5 8.5L9.5 3.5"></path>
-                  </svg></div>
-                <div>Feasibility studies and economic analysis</div>
+                <div class="tier_check"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12" height="14" width="14"><path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor" d="M2.5 6.2L5 8.5L9.5 3.5"></path></svg></div>
+                <div>{{ value }}</div>
               </div>
-              <div class="tier_item">
-                <div class="tier_check"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
-                    height="14" width="14">
-                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor"
-                      d="M2.5 6.2L5 8.5L9.5 3.5"></path>
-                  </svg></div>
-                <div>Design of buildings, roads and structures</div>
-              </div>
-              <div class="tier_item">
-                <div class="tier_check"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
-                    height="14" width="14">
-                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor"
-                      d="M2.5 6.2L5 8.5L9.5 3.5"></path>
-                  </svg></div>
-                <div>Geotechnical investigation and soil testing</div>
-              </div>
-              <div class="tier_item">
-                <div class="tier_check"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
-                    height="14" width="14">
-                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor"
-                      d="M2.5 6.2L5 8.5L9.5 3.5"></path>
-                  </svg></div>
-                <div>Construction supervision</div>
-              </div>
+              {{ /routes:0:items }}
             </div>
           </div>
           <div class="tier is-featured">
@@ -95,56 +69,22 @@
                     <circle stroke-width="1.4" r="4.5" cy="29" cx="32" class="ill-f-raised ill-s-accent"></circle>
                   </g>
                 </svg></div>
-              <div class="tier_badge">Concept to completion</div>
+              {{ if routes:1:badge }}<div class="tier_badge">{{ routes:1:badge }}</div>{{ /if }}
             </div>
-            <h3 class="tier_name">Design and build</h3>
-            <p class="text-small is-panel">One contract for design and construction, with one accountable team.</p>
+            <h3 class="tier_name">{{ routes:1:name }}</h3>
+            <p class="text-small is-panel">{{ routes:1:text }}</p>
             <div class="tier_price">
-              <div class="tier_amount">One</div>
-              <div class="tier_unit is-panel">contract, from survey to handover</div>
+              <div class="tier_amount">{{ routes:1:amount }}</div>
+              <div class="tier_unit is-panel">{{ routes:1:unit }}</div>
             </div>
-            <div class="tier_cta"><a href="/contact" class="button">Get a quote</a></div>
+            <div class="tier_cta"><a href="{{ routes:1:button_url }}" class="button">{{ routes:1:button_label }}</a></div>
             <div class="tier_list is-panel">
+              {{ routes:1:items }}
               <div class="tier_item">
-                <div class="tier_check"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
-                    height="14" width="14">
-                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor"
-                      d="M2.5 6.2L5 8.5L9.5 3.5"></path>
-                  </svg></div>
-                <div>Everything in Consultancy</div>
+                <div class="tier_check"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12" height="14" width="14"><path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor" d="M2.5 6.2L5 8.5L9.5 3.5"></path></svg></div>
+                <div>{{ value }}</div>
               </div>
-              <div class="tier_item">
-                <div class="tier_check"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
-                    height="14" width="14">
-                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor"
-                      d="M2.5 6.2L5 8.5L9.5 3.5"></path>
-                  </svg></div>
-                <div>Building construction, CRB B5</div>
-              </div>
-              <div class="tier_item">
-                <div class="tier_check"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
-                    height="14" width="14">
-                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor"
-                      d="M2.5 6.2L5 8.5L9.5 3.5"></path>
-                  </svg></div>
-                <div>Civil works, CRB C6</div>
-              </div>
-              <div class="tier_item">
-                <div class="tier_check"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
-                    height="14" width="14">
-                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor"
-                      d="M2.5 6.2L5 8.5L9.5 3.5"></path>
-                  </svg></div>
-                <div>Concrete mix design and testing</div>
-              </div>
-              <div class="tier_item">
-                <div class="tier_check"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
-                    height="14" width="14">
-                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor"
-                      d="M2.5 6.2L5 8.5L9.5 3.5"></path>
-                  </svg></div>
-                <div>Defects liability support</div>
-              </div>
+              {{ /routes:1:items }}
             </div>
           </div>
           <div class="tier">
@@ -171,310 +111,96 @@
                   </g>
                 </svg></div>
             </div>
-            <h3 class="tier_name">Construction</h3>
-            <p class="text-small">For tendered building and civil works projects.</p>
+            <h3 class="tier_name">{{ routes:2:name }}</h3>
+            <p class="text-small">{{ routes:2:text }}</p>
             <div class="tier_price">
-              <div class="tier_amount">CRB</div>
-              <div class="tier_unit">B5 building · C6 civil works</div>
+              <div class="tier_amount">{{ routes:2:amount }}</div>
+              <div class="tier_unit">{{ routes:2:unit }}</div>
             </div>
-            <div class="tier_cta"><a href="/contact" class="button is-secondary">Invite us to tender</a></div>
+            <div class="tier_cta"><a href="{{ routes:2:button_url }}" class="button is-secondary">{{ routes:2:button_label }}</a></div>
             <div class="tier_list">
+              {{ routes:2:items }}
               <div class="tier_item">
-                <div class="tier_check"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
-                    height="14" width="14">
-                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor"
-                      d="M2.5 6.2L5 8.5L9.5 3.5"></path>
-                  </svg></div>
-                <div>Open competitive tendering</div>
+                <div class="tier_check"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12" height="14" width="14"><path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor" d="M2.5 6.2L5 8.5L9.5 3.5"></path></svg></div>
+                <div>{{ value }}</div>
               </div>
-              <div class="tier_item">
-                <div class="tier_check"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
-                    height="14" width="14">
-                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor"
-                      d="M2.5 6.2L5 8.5L9.5 3.5"></path>
-                  </svg></div>
-                <div>Selected tendering</div>
-              </div>
-              <div class="tier_item">
-                <div class="tier_check"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
-                    height="14" width="14">
-                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor"
-                      d="M2.5 6.2L5 8.5L9.5 3.5"></path>
-                  </svg></div>
-                <div>Force account method</div>
-              </div>
-              <div class="tier_item">
-                <div class="tier_check"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
-                    height="14" width="14">
-                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor"
-                      d="M2.5 6.2L5 8.5L9.5 3.5"></path>
-                  </svg></div>
-                <div>Labour based technology</div>
-              </div>
-              <div class="tier_item">
-                <div class="tier_check"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12"
-                    height="14" width="14">
-                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor"
-                      d="M2.5 6.2L5 8.5L9.5 3.5"></path>
-                  </svg></div>
-                <div>Repair and maintenance works</div>
-              </div>
+              {{ /routes:2:items }}
             </div>
           </div>
         </div>
         <div class="pricing-note">
-					<div class="mono-label">Working within and beyond Tanzania’s borders</div><a
-						href="#compare" class="text-link">Compare all three routes<span class="text-link_icon"><svg
+					<div class="mono-label">{{ routes_note }}</div>{{ if routes_note_link_label }}<a
+						href="{{ routes_note_link_url }}" class="text-link">{{ routes_note_link_label }}<span class="text-link_icon"><svg
 								width="14" height="14" viewBox="0 0 14 14" fill="none"
 								xmlns="http://www.w3.org/2000/svg">
 								<path d="M4 10L10 4M10 4H5M10 4V9" stroke="currentColor" stroke-width="1.4"
 									stroke-linecap="round"></path>
-							</svg></span></a>
+							</svg></span></a>{{ /if }}
 				</div>
 			</section>
 			<section class="section">
 				<div id="compare" class="anchor"></div>
 				<div class="section-header is-split">
 					<div class="split-copy">
-						<div class="mono-label">Compare</div>
-						<h2 class="heading-xl">Every route, side by side.</h2>
+						<div class="mono-label">{{ compare_tag }}</div>
+						<h2 class="heading-xl">{{ compare_heading }}</h2>
 					</div>
 					<div class="section-header_aside">
-						<p class="text-lead">Every route is led by registered engineers, with materials tested before they are used.</p>
+						{{ if compare_text }}<p class="text-lead">{{ compare_text }}</p>{{ /if }}
 					</div>
 				</div>
 				<div class="compare">
 					<div class="compare_row is-head">
-						<div class="compare_label">Routes</div>
+						<div class="compare_label">{{ compare_first_column }}</div>
 						<div class="compare_cell is-plan">
-							<div class="compare_plan">Consultancy</div>
-							<div class="compare_price">ERB<span class="compare_unit">/ 238L</span></div><a
-								href="/contact" class="button is-small is-secondary">Request a proposal</a>
+							<div class="compare_plan">{{ routes:0:name }}</div>
+							<div class="compare_price">{{ routes:0:amount }}<span class="compare_unit">/ {{ routes:0:compare_unit }}</span></div><a
+								href="{{ routes:0:button_url }}" class="button is-small is-secondary">{{ routes:0:button_label }}</a>
 						</div>
 						<div class="compare_cell is-plan is-featured">
-							<div class="compare_plan">Design and build</div>
-							<div class="compare_price">One<span class="compare_unit">/ contract</span></div><a
-								href="/contact" class="button is-small">Get a quote</a>
+							<div class="compare_plan">{{ routes:1:name }}</div>
+							<div class="compare_price">{{ routes:1:amount }}<span class="compare_unit">/ {{ routes:1:compare_unit }}</span></div><a
+								href="{{ routes:1:button_url }}" class="button is-small">{{ routes:1:button_label }}</a>
 						</div>
 						<div class="compare_cell is-plan">
-							<div class="compare_plan">Construction</div>
-							<div class="compare_price">CRB<span class="compare_unit">/ B5 · C6</span></div><a href="/contact"
-								class="button is-small is-secondary">Invite us to tender</a>
+							<div class="compare_plan">{{ routes:2:name }}</div>
+							<div class="compare_price">{{ routes:2:amount }}<span class="compare_unit">/ {{ routes:2:compare_unit }}</span></div><a
+								href="{{ routes:2:button_url }}" class="button is-small is-secondary">{{ routes:2:button_label }}</a>
 						</div>
 					</div>
-					<div class="compare_group">Planning</div>
+					{{ compare_groups }}
+					<div class="compare_group">{{ title }}</div>
+					{{ rows }}
 					<div class="compare_row">
-						<div class="compare_label">Feasibility and economic analysis</div>
-						<div class="compare_cell"><span aria-label="Included" class="compare_check"></span></div>
-						<div class="compare_cell is-featured"><span aria-label="Included" class="compare_check"></span></div>
-						<div class="compare_cell"><span aria-label="Not included" class="compare_dash"></span></div>
+						<div class="compare_label">{{ label }}</div>
+						<div class="compare_cell">{{ if consultancy:value == "yes" }}<span aria-label="Included" class="compare_check"></span>{{ elseif consultancy:value == "no" || ! consultancy:value }}<span aria-label="Not included" class="compare_dash"></span>{{ else }}<span class="compare_text">{{ consultancy:value }}</span>{{ /if }}</div>
+						<div class="compare_cell is-featured">{{ if design_build:value == "yes" }}<span aria-label="Included" class="compare_check"></span>{{ elseif design_build:value == "no" || ! design_build:value }}<span aria-label="Not included" class="compare_dash"></span>{{ else }}<span class="compare_text">{{ design_build:value }}</span>{{ /if }}</div>
+						<div class="compare_cell">{{ if construction:value == "yes" }}<span aria-label="Included" class="compare_check"></span>{{ elseif construction:value == "no" || ! construction:value }}<span aria-label="Not included" class="compare_dash"></span>{{ else }}<span class="compare_text">{{ construction:value }}</span>{{ /if }}</div>
 					</div>
-					<div class="compare_row">
-						<div class="compare_label">Topographic survey</div>
-						<div class="compare_cell"><span aria-label="Included" class="compare_check"></span></div>
-						<div class="compare_cell is-featured"><span aria-label="Included" class="compare_check"></span></div>
-						<div class="compare_cell"><span aria-label="Not included" class="compare_dash"></span></div>
-					</div>
-					<div class="compare_row">
-						<div class="compare_label">Soil investigation and testing</div>
-						<div class="compare_cell"><span aria-label="Included" class="compare_check"></span></div>
-						<div class="compare_cell is-featured"><span aria-label="Included" class="compare_check"></span></div>
-						<div class="compare_cell"><span aria-label="Included" class="compare_check"></span></div>
-					</div>
-					<div class="compare_row">
-						<div class="compare_label">Cost estimate and bill of quantities</div>
-						<div class="compare_cell"><span aria-label="Included" class="compare_check"></span></div>
-						<div class="compare_cell is-featured"><span aria-label="Included" class="compare_check"></span></div>
-						<div class="compare_cell"><span aria-label="Included" class="compare_check"></span></div>
-					</div>
-					<div class="compare_group">Design</div>
-					<div class="compare_row">
-						<div class="compare_label">Architectural and structural design</div>
-						<div class="compare_cell"><span aria-label="Included" class="compare_check"></span></div>
-						<div class="compare_cell is-featured"><span aria-label="Included" class="compare_check"></span></div>
-						<div class="compare_cell"><span aria-label="Not included" class="compare_dash"></span></div>
-					</div>
-					<div class="compare_row">
-						<div class="compare_label">Road, drainage and culvert design</div>
-						<div class="compare_cell"><span aria-label="Included" class="compare_check"></span></div>
-						<div class="compare_cell is-featured"><span aria-label="Included" class="compare_check"></span></div>
-						<div class="compare_cell"><span aria-label="Not included" class="compare_dash"></span></div>
-					</div>
-					<div class="compare_row">
-						<div class="compare_label">Truss and frame analysis</div>
-						<div class="compare_cell"><span aria-label="Included" class="compare_check"></span></div>
-						<div class="compare_cell is-featured"><span aria-label="Included" class="compare_check"></span></div>
-						<div class="compare_cell"><span aria-label="Not included" class="compare_dash"></span></div>
-					</div>
-					<div class="compare_group">Construction</div>
-					<div class="compare_row">
-						<div class="compare_label">Building works, CRB B5</div>
-						<div class="compare_cell"><span aria-label="Not included" class="compare_dash"></span></div>
-						<div class="compare_cell is-featured"><span aria-label="Included" class="compare_check"></span></div>
-						<div class="compare_cell"><span aria-label="Included" class="compare_check"></span></div>
-					</div>
-					<div class="compare_row">
-						<div class="compare_label">Civil works, CRB C6</div>
-						<div class="compare_cell"><span aria-label="Not included" class="compare_dash"></span></div>
-						<div class="compare_cell is-featured"><span aria-label="Included" class="compare_check"></span></div>
-						<div class="compare_cell"><span aria-label="Included" class="compare_check"></span></div>
-					</div>
-					<div class="compare_row">
-						<div class="compare_label">Force account and labour based works</div>
-						<div class="compare_cell"><span aria-label="Not included" class="compare_dash"></span></div>
-						<div class="compare_cell is-featured"><span aria-label="Included" class="compare_check"></span></div>
-						<div class="compare_cell"><span aria-label="Included" class="compare_check"></span></div>
-					</div>
-					<div class="compare_group">Quality</div>
-					<div class="compare_row">
-						<div class="compare_label">Concrete mix design and cube tests</div>
-						<div class="compare_cell"><span aria-label="Included" class="compare_check"></span></div>
-						<div class="compare_cell is-featured"><span aria-label="Included" class="compare_check"></span></div>
-						<div class="compare_cell"><span aria-label="Included" class="compare_check"></span></div>
-					</div>
-					<div class="compare_row">
-						<div class="compare_label">Independent site supervision</div>
-						<div class="compare_cell"><span aria-label="Included" class="compare_check"></span></div>
-						<div class="compare_cell is-featured"><span aria-label="Not included" class="compare_dash"></span></div>
-						<div class="compare_cell"><span aria-label="Not included" class="compare_dash"></span></div>
-					</div>
-					<div class="compare_row">
-						<div class="compare_label">Interim valuations and certificates</div>
-						<div class="compare_cell"><span aria-label="Included" class="compare_check"></span></div>
-						<div class="compare_cell is-featured"><span aria-label="Included" class="compare_check"></span></div>
-						<div class="compare_cell"><span aria-label="Included" class="compare_check"></span></div>
-					</div>
-					<div class="compare_group">Handover</div>
-					<div class="compare_row">
-						<div class="compare_label">As-built drawings</div>
-						<div class="compare_cell"><span aria-label="Not included" class="compare_dash"></span></div>
-						<div class="compare_cell is-featured"><span aria-label="Included" class="compare_check"></span></div>
-						<div class="compare_cell"><span aria-label="Included" class="compare_check"></span></div>
-					</div>
-					<div class="compare_row">
-						<div class="compare_label">Defects liability support</div>
-						<div class="compare_cell"><span aria-label="Not included" class="compare_dash"></span></div>
-						<div class="compare_cell is-featured"><span aria-label="Included" class="compare_check"></span></div>
-						<div class="compare_cell"><span aria-label="Included" class="compare_check"></span></div>
-					</div>
-					<div class="compare_row">
-						<div class="compare_label">Repair and maintenance works</div>
-						<div class="compare_cell"><span aria-label="Not included" class="compare_dash"></span></div>
-						<div class="compare_cell is-featured"><span aria-label="Included" class="compare_check"></span></div>
-						<div class="compare_cell"><span aria-label="Included" class="compare_check"></span></div>
-					</div>
-					<div class="compare_row">
-						<div class="compare_label">Progress reports</div>
-						<div class="compare_cell"><span class="compare_text">Each stage</span></div>
-						<div class="compare_cell is-featured"><span class="compare_text">Weekly</span></div>
-						<div class="compare_cell"><span class="compare_text">Per contract</span></div>
-					</div>
+					{{ /rows }}
+					{{ /compare_groups }}
 				</div>
 			</section>
 			<section class="section">
 				<div class="faq-grid">
 					<div class="faq-intro">
-						<div class="mono-label">FAQ</div>
-						<h2 class="heading-xl">Questions, answered.</h2>
-						<p class="text-lead">Can’t find what you need? Call +255 758 526 792 or email info@hmxtech.co.tz.</p><a
-							href="/contact" class="text-link">Talk to an engineer<span class="text-link_icon"><svg
-									width="14" height="14" viewBox="0 0 14 14" fill="none"
-									xmlns="http://www.w3.org/2000/svg">
-									<path d="M4 10L10 4M10 4H5M10 4V9" stroke="currentColor" stroke-width="1.4"
-										stroke-linecap="round"></path>
-								</svg></span></a>
+						<div class="mono-label">{{ faq_tag }}</div>
+						<h2 class="heading-xl">{{ faq_heading }}</h2>
+						{{ if faq_text }}<p class="text-lead">{{ faq_text }}</p>{{ /if }}
+						{{ if faq_link_label }}<a href="{{ faq_link_url }}" class="text-link">{{ faq_link_label }}<span class="text-link_icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14" height="14" width="14"><path stroke-linecap="round" stroke-width="1.4" stroke="currentColor" d="M4 10L10 4M10 4H5M10 4V9"></path></svg></span></a>{{ /if }}
 					</div>
 					<div class="faq-list" data-hx-faq>
+						{{ faqs }}
 						<div class="faq-item">
-							<div class="faq-question">
-								<div class="faq-question_text">How do you price a project?</div>
-								<div class="faq-icon">
-									<div class="faq-icon_inner"><svg width="12" height="12" viewBox="0 0 12 12"
-											fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M6 1V11M1 6H11" stroke="currentColor" stroke-width="1.4"
-												stroke-linecap="round"></path>
-										</svg></div>
-								</div>
-							</div>
-							<div class="faq-answer">
-								<p class="faq-answer_text">Every quote is built from your drawings and bill of quantities. If you have no drawings yet, we start with a site visit and a feasibility estimate, then quote the design.</p>
+							<button type="button" class="faq-question" id="hx-faq-q{{ count }}" aria-expanded="false" aria-controls="hx-faq-a{{ count }}">
+								<span class="faq-question_text">{{ question }}</span>
+								<span class="faq-icon" aria-hidden="true"><span class="faq-icon_inner"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 1V11M1 6H11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"></path></svg></span></span>
+							</button>
+							<div class="faq-answer" id="hx-faq-a{{ count }}" role="region" aria-labelledby="hx-faq-q{{ count }}">
+								<p class="faq-answer_text">{{ answer }}</p>
 							</div>
 						</div>
-						<div class="faq-item">
-							<div class="faq-question">
-								<div class="faq-question_text">What do you need from us for a quote?</div>
-								<div class="faq-icon">
-									<div class="faq-icon_inner"><svg width="12" height="12" viewBox="0 0 12 12"
-											fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M6 1V11M1 6H11" stroke="currentColor" stroke-width="1.4"
-												stroke-linecap="round"></path>
-										</svg></div>
-								</div>
-							</div>
-							<div class="faq-answer">
-								<p class="faq-answer_text">The site location, what you want to build, and any drawings, surveys or title documents you already have. A phone call or a visit to our Mbeya office is enough to start.</p>
-							</div>
-						</div>
-						<div class="faq-item">
-							<div class="faq-question">
-								<div class="faq-question_text">Can you work on public and donor funded projects?</div>
-								<div class="faq-icon">
-									<div class="faq-icon_inner"><svg width="12" height="12" viewBox="0 0 12 12"
-											fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M6 1V11M1 6H11" stroke="currentColor" stroke-width="1.4"
-												stroke-linecap="round"></path>
-										</svg></div>
-								</div>
-							</div>
-							<div class="faq-answer">
-								<p class="faq-answer_text">Yes. We take part in open and selected tendering, and support projects delivered under the Force Account Method and labour based technology.</p>
-							</div>
-						</div>
-						<div class="faq-item">
-							<div class="faq-question">
-								<div class="faq-question_text">Do you offer supervision only?</div>
-								<div class="faq-icon">
-									<div class="faq-icon_inner"><svg width="12" height="12" viewBox="0 0 12 12"
-											fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M6 1V11M1 6H11" stroke="currentColor" stroke-width="1.4"
-												stroke-linecap="round"></path>
-										</svg></div>
-								</div>
-							</div>
-							<div class="faq-answer">
-								<p class="faq-answer_text">Yes. As ERB registered consulting engineers (238L) we can supervise works built by another contractor, check quality and certify valuations.</p>
-							</div>
-						</div>
-						<div class="faq-item">
-							<div class="faq-question">
-								<div class="faq-question_text">Do you work outside Mbeya?</div>
-								<div class="faq-icon">
-									<div class="faq-icon_inner"><svg width="12" height="12" viewBox="0 0 12 12"
-											fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M6 1V11M1 6H11" stroke="currentColor" stroke-width="1.4"
-												stroke-linecap="round"></path>
-										</svg></div>
-								</div>
-							</div>
-							<div class="faq-answer">
-								<p class="faq-answer_text">Yes. We are based in Mbeya and work across Tanzania and beyond its borders.</p>
-							</div>
-						</div>
-						<div class="faq-item">
-							<div class="faq-question">
-								<div class="faq-question_text">How do you control quality on site?</div>
-								<div class="faq-icon">
-									<div class="faq-icon_inner"><svg width="12" height="12" viewBox="0 0 12 12"
-											fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M6 1V11M1 6H11" stroke="currentColor" stroke-width="1.4"
-												stroke-linecap="round"></path>
-										</svg></div>
-								</div>
-							</div>
-							<div class="faq-answer">
-								<p class="faq-answer_text">Soil, concrete and steel are tested before we rely on them, and every stage is checked by a registered engineer before work moves on.</p>
-							</div>
-						</div>
+						{{ /faqs }}
 					</div>
 				</div>
 			</section>
@@ -540,14 +266,14 @@
 								<circle cx="870" cy="140" r="8" class="ill-f-accent cord-end"></circle>
 							</g>
 						</svg></div>
-					<h2 class="heading-xl is-center">Tell us what you want to build.</h2>
-					<p class="text-lead is-center">Share your site and drawings. A registered engineer will reply with next steps and a quote.</p>
-					<div class="button-row is-center"><a href="/contact" class="button w-inline-block">Get a quote<svg
+					<h2 class="heading-xl is-center">{{ cta_heading }}</h2>
+					{{ if cta_text }}<p class="text-lead is-center">{{ cta_text }}</p>{{ /if }}
+					<div class="button-row is-center"><a href="{{ cta_primary_url }}" class="button w-inline-block">{{ cta_primary_label }}<svg
 								width="14" height="14" viewBox="0 0 14 14" fill="none"
 								xmlns="http://www.w3.org/2000/svg">
 								<path d="M4 10L10 4M10 4H5M10 4V9" stroke="currentColor" stroke-width="1.4"
 									stroke-linecap="round"></path>
-							</svg></a><a href="tel:+255758526792" class="button is-secondary">Call +255 758 526 792</a></div>
+							</svg></a>{{ if cta_secondary_label }}<a href="{{ cta_secondary_url }}" class="button is-secondary">{{ cta_secondary_label }}</a>{{ /if }}</div>
 				</div>
 			</section>
 

@@ -1,0 +1,387 @@
+title: 'How We Work Page'
+hide: true
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: nav_title
+            field:
+              type: text
+              display: 'Navigation Title'
+              instructions: 'Optionally override the title shown in the navigation menu.'
+              placeholder: 'Defaults to the page title'
+  intro:
+    display: 'Intro'
+    sections:
+      -
+        display: 'Page Header'
+        fields:
+          -
+            handle: intro_tag
+            field:
+              type: text
+              display: 'Small Label'
+              width: 50
+          -
+            handle: intro_heading
+            field:
+              type: text
+              display: 'Headline'
+              width: 50
+              validate:
+                - required
+          -
+            handle: intro_text
+            field:
+              type: textarea
+              display: 'Intro Text'
+  routes:
+    display: 'Routes'
+    sections:
+      -
+        display: 'Ways to Work With Us'
+        instructions: 'The three route cards, in order. Each has its own fixed icon, so there are always three. The middle one is highlighted and can carry a badge. Names, big text and buttons are also used at the top of the comparison table.'
+        fields:
+          -
+            handle: routes
+            field:
+              type: grid
+              display: 'Routes'
+              instructions: ''
+              mode: stacked
+              min_rows: 3
+              max_rows: 3
+              reorderable: false
+              listable: hidden
+              fields:
+                -
+                  handle: name
+                  field:
+                    type: text
+                    display: 'Name'
+                    width: 50
+                    validate:
+                      - required
+                -
+                  handle: badge
+                  field:
+                    type: text
+                    display: 'Badge'
+                    instructions: 'Middle route only, e.g. "Concept to completion".'
+                    width: 50
+                -
+                  handle: text
+                  field:
+                    type: text
+                    display: 'Short Description'
+                -
+                  handle: amount
+                  field:
+                    type: text
+                    display: 'Big Text'
+                    instructions: 'e.g. "ERB"'
+                    width: 33
+                -
+                  handle: unit
+                  field:
+                    type: text
+                    display: 'Text Beside It'
+                    instructions: 'e.g. "Registration No. 238L"'
+                    width: 33
+                -
+                  handle: compare_unit
+                  field:
+                    type: text
+                    display: 'Short Text in the Table'
+                    instructions: 'Shown after the big text in the comparison table, e.g. "238L".'
+                    width: 33
+                -
+                  handle: button_label
+                  field:
+                    type: text
+                    display: 'Button Label'
+                    width: 50
+                    validate:
+                      - required
+                -
+                  handle: button_url
+                  field:
+                    type: link
+                    display: 'Button Link'
+                    width: 50
+                -
+                  handle: items
+                  field:
+                    type: list
+                    display: 'What Is Included'
+                    instructions: 'One item per line, shown with a tick.'
+          -
+            handle: routes_note
+            field:
+              type: text
+              display: 'Note Under the Cards'
+          -
+            handle: routes_note_link_label
+            field:
+              type: text
+              display: 'Note Link Label'
+              width: 50
+          -
+            handle: routes_note_link_url
+            field:
+              type: link
+              display: 'Note Link'
+              width: 50
+  compare:
+    display: 'Comparison'
+    sections:
+      -
+        display: 'Every Route, Side by Side'
+        instructions: 'The comparison table. For each row choose Included (tick) or Not included (dash) per route, or type a short text such as "Weekly".'
+        fields:
+          -
+            handle: compare_tag
+            field:
+              type: text
+              display: 'Small Label'
+              width: 50
+          -
+            handle: compare_heading
+            field:
+              type: text
+              display: 'Headline'
+              width: 50
+              validate:
+                - required
+          -
+            handle: compare_text
+            field:
+              type: textarea
+              display: 'Intro Text'
+          -
+            handle: compare_first_column
+            field:
+              type: text
+              display: 'First Column Heading'
+              instructions: 'e.g. "Routes"'
+          -
+            handle: compare_groups
+            field:
+              type: grid
+              display: 'Groups'
+              instructions: 'Each group has a heading row, then its rows.'
+              mode: stacked
+              min_rows: 1
+              add_row: 'Add group'
+              reorderable: true
+              listable: hidden
+              fields:
+                -
+                  handle: title
+                  field:
+                    type: text
+                    display: 'Group Heading'
+                    validate:
+                      - required
+                -
+                  handle: rows
+                  field:
+                    type: grid
+                    display: 'Rows'
+                    instructions: ''
+                    mode: table
+                    min_rows: 1
+                    add_row: 'Add row'
+                    reorderable: true
+                    listable: hidden
+                    fields:
+                      -
+                        handle: label
+                        field:
+                          type: text
+                          display: 'Row'
+                          width: 25
+                          validate:
+                            - required
+                      -
+                        handle: consultancy
+                        field:
+                          type: select
+                          display: 'Route 1'
+                          width: 25
+                          options:
+                            'yes': Included
+                            'no': 'Not included'
+                          taggable: true
+                          clearable: true
+                          max_items: 1
+                      -
+                        handle: design_build
+                        field:
+                          type: select
+                          display: 'Route 2'
+                          width: 25
+                          options:
+                            'yes': Included
+                            'no': 'Not included'
+                          taggable: true
+                          clearable: true
+                          max_items: 1
+                      -
+                        handle: construction
+                        field:
+                          type: select
+                          display: 'Route 3'
+                          width: 25
+                          options:
+                            'yes': Included
+                            'no': 'Not included'
+                          taggable: true
+                          clearable: true
+                          max_items: 1
+  faq:
+    display: 'FAQ'
+    sections:
+      -
+        display: 'Questions, Answered'
+        fields:
+          -
+            handle: faq_tag
+            field:
+              type: text
+              display: 'Small Label'
+              width: 50
+          -
+            handle: faq_heading
+            field:
+              type: text
+              display: 'Headline'
+              width: 50
+              validate:
+                - required
+          -
+            handle: faq_text
+            field:
+              type: textarea
+              display: 'Intro Text'
+          -
+            handle: faq_link_label
+            field:
+              type: text
+              display: 'Link Label'
+              width: 50
+          -
+            handle: faq_link_url
+            field:
+              type: link
+              display: 'Link'
+              width: 50
+          -
+            handle: faqs
+            field:
+              type: grid
+              display: 'Questions'
+              instructions: 'Add, remove or reorder freely.'
+              mode: stacked
+              min_rows: 1
+              add_row: 'Add question'
+              reorderable: true
+              listable: hidden
+              fields:
+                -
+                  handle: question
+                  field:
+                    type: text
+                    display: 'Question'
+                    validate:
+                      - required
+                -
+                  handle: answer
+                  field:
+                    type: textarea
+                    display: 'Answer'
+                    validate:
+                      - required
+  closing:
+    display: 'Closing'
+    sections:
+      -
+        display: 'Closing Call to Action'
+        instructions: 'The last block on the page, above the footer.'
+        fields:
+          -
+            handle: cta_heading
+            field:
+              type: text
+              display: 'Headline'
+              validate:
+                - required
+          -
+            handle: cta_text
+            field:
+              type: textarea
+              display: 'Text'
+          -
+            handle: cta_primary_label
+            field:
+              type: text
+              display: 'Main Button Label'
+              width: 50
+              validate:
+                - required
+          -
+            handle: cta_primary_url
+            field:
+              type: link
+              display: 'Main Button Link'
+              width: 50
+          -
+            handle: cta_secondary_label
+            field:
+              type: text
+              display: 'Second Button Label'
+              instructions: 'Leave empty to hide it.'
+              width: 50
+          -
+            handle: cta_secondary_url
+            field:
+              type: link
+              display: 'Second Button Link'
+              instructions: 'For a phone number, type tel: then the number, e.g. tel:+255758526792'
+              width: 50
+  seo:
+    display: SEO
+    sections:
+      -
+        fields:
+          -
+            import: seo
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+          -
+            handle: parent
+            field:
+              type: entries
+              collections:
+                - pages
+              max_items: 1
+              listable: false
+              localizable: true
