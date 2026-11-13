@@ -11,15 +11,15 @@
             <div class="auth_head"><a href="/" class="auth_brand w-inline-block" aria-label="HMXTECH home"><img class="hx-auth_logo" src="/hmxtech/brand/logo-color.svg" alt="" width="58" height="24">
                     <div class="auth_brand-text hx-wordmark">HMXTECH</div>
                 </a><a href="/" class="auth_head-link w-inline-block">
-                    <div>Back to hmxtech.co.tz</div><svg fill="none" viewBox="0 0 14 14" height="14" width="14" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path stroke-linecap="round" stroke-width="1.4" stroke="currentColor" d="M4 10L10 4M10 4H5M10 4V9"></path></svg>
+                    <div>{{ back_label }}</div><svg fill="none" viewBox="0 0 14 14" height="14" width="14" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path stroke-linecap="round" stroke-width="1.4" stroke="currentColor" d="M4 10L10 4M10 4H5M10 4V9"></path></svg>
                 </a></div>
             <div class="auth_body">
                 <div class="auth_content">
                     <div class="auth_intro">
-                        <div class="auth_eyebrow">Client portal</div>
-                        <h1 class="auth_title">Welcome back to your project.</h1>
-                        <p class="auth_lead">Sign in to see the drawings, site reports and certificates for your projects.</p>
-                        <p class="hx-auth_notice" role="note"><span class="hx-auth_notice-dot" aria-hidden="true"></span><span>The client portal opens soon. Until then, call <a href="tel:+255758526792" class="auth_legal-link">+255 758 526 792</a> or email <a href="mailto:info@hmxtech.co.tz" class="auth_legal-link">info@hmxtech.co.tz</a> for project updates.</span></p>
+                        <div class="auth_eyebrow">{{ intro_tag }}</div>
+                        <h1 class="auth_title">{{ intro_heading }}</h1>
+                        {{ if intro_text }}<p class="auth_lead">{{ intro_text }}</p>{{ /if }}
+                        {{ if notice }}<p class="hx-auth_notice" role="note"><span class="hx-auth_notice-dot" aria-hidden="true"></span><span>{{ notice | strip_tags('p') | replace('<a ', '<a class="auth_legal-link" ') }}</span></p>{{ /if }}
                     </div>
                     <div class="w-form">
                         <form method="post" action="" data-hx-auth aria-label="Sign in" novalidate>
@@ -40,43 +40,42 @@
                                 </div>
                                 <label class="auth_check-row hx-auth_check-row"><input type="checkbox" name="remember" class="hx-auth_checkbox">
                                     <span>Keep me signed in on this device</span></label>
-                                <button type="submit" class="button auth_cta">Sign in</button>
+                                <button type="submit" class="button auth_cta">{{ form_button }}</button>
                             </div>
                         </form>
                         <div class="w-form-fail hx-auth_msg" tabindex="-1" role="status" aria-live="polite" data-hx-auth-msg hidden>
-                            <div>The client portal is not open yet. Call +255 758 526 792 or email info@hmxtech.co.tz and an engineer will update you on your project.</div>
+                            <div>{{ closed_message }}</div>
                         </div>
                     </div>
+                    {{ if alt_links }}
                     <div class="auth_or">
                         <div class="auth_or-line"></div>
                         <div>or</div>
                         <div class="auth_or-line"></div>
                     </div>
-                    <div class="auth_alt"><a href="/contact" class="auth_alt-btn">Ask an engineer</a><a
-                            href="https://hmxtech.co.tz/truss/" target="_blank" rel="noopener" class="auth_alt-btn">Open Truss Analyzer</a></div>
+                    <div class="auth_alt">{{ alt_links }}<a href="{{ url }}" {{ if url | starts_with('http') }}target="_blank" rel="noopener" {{ /if }}class="auth_alt-btn">{{ label }}</a>{{ /alt_links }}</div>
+                    {{ /if }}
                     <div class="auth_switch">
-                        <div>New to HMXTECH?</div><a href="/sign-up" class="auth_switch-link w-inline-block">
-                            <div>Create an account</div><svg fill="none" viewBox="0 0 14 14" height="14" width="14" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path stroke-linecap="round" stroke-width="1.4" stroke="currentColor" d="M4 10L10 4M10 4H5M10 4V9"></path></svg>
+                        <div>{{ switch_text }}</div><a href="{{ switch_url }}" class="auth_switch-link w-inline-block">
+                            <div>{{ switch_link_label }}</div><svg fill="none" viewBox="0 0 14 14" height="14" width="14" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path stroke-linecap="round" stroke-width="1.4" stroke="currentColor" d="M4 10L10 4M10 4H5M10 4V9"></path></svg>
                         </a>
                     </div>
                 </div>
             </div>
             <div class="auth_foot">
+                {{ foot_badges }}
                 <div class="auth_badge">
                     <div class="auth_dot"></div>
-                    <div>ERB 238L</div>
+                    <div>{{ value }}</div>
                 </div>
-                <div class="auth_badge">
-                    <div class="auth_dot"></div>
-                    <div>CRB B5 · C6</div>
-                </div>
-                <div>Project files are private to your project team.</div>
+                {{ /foot_badges }}
+                {{ if foot_note }}<div>{{ foot_note }}</div>{{ /if }}
             </div>
         </div>
         <div class="auth_art hx-auth_art">
             <div class="auth_art-cap">
-                <div>Fig. 1, office block, section A–A</div>
-                <div class="auth_art-now">Week 18</div>
+                <div>{{ art_caption }}</div>
+                <div class="auth_art-now">{{ art_caption_note }}</div>
             </div>
             <div class="auth_art-figure"><svg class="hx-auth_svg" viewBox="40 60 600 560" xmlns="http://www.w3.org/2000/svg" role="img"
                     aria-label="Section through a five-level office block: foundations, ground and level 1 complete, level 2 in progress with a slab pour on Thursday, level 3 and roof next">

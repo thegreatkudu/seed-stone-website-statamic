@@ -17,37 +17,15 @@
 {{ /section:head_css }}
 
       <section class="page-hero">
-        <div class="eyebrow">Instructions</div>
-        <h1 class="page-hero_title">How to update this website.</h1>
-        <p class="page-hero_text">A short guide for the HMXTECH team. Pages, publications, news and form submissions are all managed in the Statamic control panel, with no code needed.</p>
+        <div class="eyebrow">{{ hero_tag }}</div>
+        <h1 class="page-hero_title">{{ hero_heading }}</h1>
+        {{ if hero_text }}<p class="page-hero_text">{{ hero_text }}</p>{{ /if }}
       </section>
       <section class="license-list">
-        <div class="license-group">
-          <div class="license-group_label">Signing in</div>
-          <p class="instructions_text">Go to <strong>/cp</strong> on this website and sign in with your staff account. Everything below is edited there and goes live as soon as you press Save. Ask the site administrator if you need an account or a password reset.</p>
-        </div>
-        <div class="license-group">
-          <div class="license-group_label">Home page</div>
-          <p class="instructions_text">Open <strong>Collections → Pages → Home</strong>. The <strong>Hero Slider</strong> tab holds the three slides: photo, image description, eyebrow, headline and buttons. Use real, sharp project photos at least 2000 pixels wide. The <strong>Features</strong> tab holds the “What we do” cards.</p>
-        </div>
-        <div class="license-group">
-          <div class="license-group_label">Publications</div>
-          <p class="instructions_text">Open <strong>Collections → Publications</strong> and press <strong>Create entry</strong>. Add the title, topic, a one or two sentence summary and the full link to the PDF. Drag papers in the list to change their order. Turn on <strong>Featured</strong> to show a paper in the large card at the top of the page.</p>
-        </div>
-        <div class="license-group">
-          <div class="license-group_label">News</div>
-          <p class="instructions_text">Open <strong>Collections → News</strong>. Each item has a type, an optional date and organiser, a short summary and an optional link to a poster or PDF. New items appear in the order you set by dragging them in the list, so put the newest at the top.</p>
-        </div>
-        <div class="license-group">
-          <div class="license-group_label">Quote requests and sign-ups</div>
-          <p class="instructions_text">Every quote request is emailed to info@hmxtech.co.tz and saved under <strong>Forms → Project Enquiry</strong>. News sign-ups are saved under <strong>Forms → Newsletter</strong>. You can export both as a spreadsheet from the same screen.</p>
-        </div>
-        <div class="license-group">
-          <div class="license-group_label">Company details and search</div>
-          <p class="instructions_text">Open <strong>Globals → Settings</strong> to change the phone number, email, address, company description and the default text search engines show. Each page also has its own SEO title and description on the page itself.</p>
-        </div>
-        <div class="license-group">
-          <div class="license-group_label">Colours, type and components</div>
-          <p class="instructions_text">The brand colours, type and components are documented in the <a href="/style-guide" class="text-link">Style guide</a>. Changes to colours or layout are made by a developer in the website code, so the whole site stays consistent.</p>
-        </div>
-      </section>
+                {{ sections }}
+                <div class="license-group">
+                    <div class="license-group_label">{{ title }}</div>
+                    {{ body | replace('<p>', '<p class="instructions_text">') | replace('<a ', '<a class="text-link" ') }}
+                </div>
+                {{ /sections }}
+            </section>

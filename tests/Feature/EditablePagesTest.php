@@ -18,6 +18,9 @@ dataset('editable pages', [
     'privacy' => ['/privacy', 'legal'],
     'terms' => ['/terms', 'legal'],
     'licenses' => ['/licenses', 'licenses'],
+    'sign in' => ['/sign-in', 'sign_in'],
+    'sign up' => ['/sign-up', 'sign_up'],
+    'instructions' => ['/instructions', 'guide'],
 ]);
 
 /**

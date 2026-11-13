@@ -1,0 +1,183 @@
+title: 'Sign-Up Page'
+hide: true
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: nav_title
+            field:
+              type: text
+              display: 'Navigation Title'
+              instructions: 'Optionally override the title shown in the navigation menu.'
+              placeholder: 'Defaults to the page title'
+  intro:
+    display: Intro
+    sections:
+      -
+        display: Intro
+        fields:
+          -
+            handle: intro_tag
+            field:
+              type: text
+              display: 'Small Label'
+              width: 50
+          -
+            handle: intro_heading
+            field:
+              type: text
+              display: Headline
+              width: 50
+              validate:
+                - required
+          -
+            handle: intro_text
+            field:
+              type: textarea
+              display: Text
+          -
+            handle: notice
+            field:
+              type: bard
+              display: Notice
+              instructions: 'The highlighted note under the intro. Leave empty to hide.'
+              buttons:
+                - bold
+                - italic
+                - anchor
+              save_html: true
+              toolbar_mode: fixed
+              remove_empty_nodes: trim
+  form:
+    display: Form
+    sections:
+      -
+        display: Form
+        fields:
+          -
+            handle: form_button
+            field:
+              type: text
+              display: 'Button Label'
+              width: 50
+              validate:
+                - required
+          -
+            handle: closed_message
+            field:
+              type: textarea
+              display: 'Message While the Portal Is Closed'
+              instructions: 'Shown when someone presses the button. The form fields themselves are fixed until the portal is connected.'
+              validate:
+                - required
+          -
+            handle: switch_text
+            field:
+              type: text
+              display: 'Switch Question'
+              width: 33
+          -
+            handle: switch_link_label
+            field:
+              type: text
+              display: 'Switch Link Label'
+              instructions: 'e.g. "Sign in".'
+              width: 33
+              validate:
+                - required
+          -
+            handle: switch_url
+            field:
+              type: text
+              display: 'Switch Link'
+              width: 33
+              validate:
+                - required
+      -
+        display: 'Footer Line'
+        fields:
+          -
+            handle: foot_note
+            field:
+              type: text
+              display: Note
+  art:
+    display: 'Side Panel'
+    sections:
+      -
+        display: 'Side Panel'
+        instructions: 'The drawing itself is part of the design.'
+        fields:
+          -
+            handle: art_caption
+            field:
+              type: text
+              display: Caption
+              width: 66
+          -
+            handle: art_caption_note
+            field:
+              type: text
+              display: 'Caption Note'
+              width: 33
+          -
+            handle: steps
+            field:
+              type: grid
+              display: Steps
+              instructions: 'The first step shows a tick; the rest are numbered.'
+              mode: table
+              min_rows: 1
+              max_rows: 7
+              add_row: 'Add step'
+              reorderable: true
+              listable: hidden
+              fields:
+                -
+                  handle: title
+                  field:
+                    type: text
+                    display: Title
+                    validate:
+                      - required
+                -
+                  handle: meta
+                  field:
+                    type: text
+                    display: Detail
+  seo:
+    display: SEO
+    sections:
+      -
+        fields:
+          -
+            import: seo
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+          -
+            handle: parent
+            field:
+              type: entries
+              collections:
+                - pages
+              max_items: 1
+              listable: false
+              localizable: true

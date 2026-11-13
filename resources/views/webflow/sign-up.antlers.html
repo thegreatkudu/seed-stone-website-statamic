@@ -12,18 +12,18 @@
                     <div class="auth_brand-text hx-wordmark">HMXTECH</div>
                 </a>
                 <div class="auth_switch">
-                    <div>Have an account?</div><a href="/sign-in" class="auth_switch-link w-inline-block">
-                        <div class="auth_strong">Sign in</div><svg fill="none" viewBox="0 0 14 14" height="14" width="14" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path stroke-linecap="round" stroke-width="1.4" stroke="currentColor" d="M4 10L10 4M10 4H5M10 4V9"></path></svg>
+                    <div>{{ switch_text }}</div><a href="{{ switch_url }}" class="auth_switch-link w-inline-block">
+                        <div class="auth_strong">{{ switch_link_label }}</div><svg fill="none" viewBox="0 0 14 14" height="14" width="14" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path stroke-linecap="round" stroke-width="1.4" stroke="currentColor" d="M4 10L10 4M10 4H5M10 4V9"></path></svg>
                     </a>
                 </div>
             </div>
             <div class="auth_body">
                 <div class="auth_content">
                     <div class="auth_intro">
-                        <div class="auth_eyebrow">Create account</div>
-                        <h1 class="auth_title">Follow your project from anywhere.</h1>
-                        <p class="auth_lead">One account for your HMXTECH projects: drawings, site reports and certificates in one place.</p>
-                        <p class="hx-auth_notice" role="note"><span class="hx-auth_notice-dot" aria-hidden="true"></span><span>The client portal opens soon. Until then, call <a href="tel:+255758526792" class="auth_legal-link">+255 758 526 792</a> or email <a href="mailto:info@hmxtech.co.tz" class="auth_legal-link">info@hmxtech.co.tz</a> for project updates.</span></p>
+                        <div class="auth_eyebrow">{{ intro_tag }}</div>
+                        <h1 class="auth_title">{{ intro_heading }}</h1>
+                        {{ if intro_text }}<p class="auth_lead">{{ intro_text }}</p>{{ /if }}
+                        {{ if notice }}<p class="hx-auth_notice" role="note"><span class="hx-auth_notice-dot" aria-hidden="true"></span><span>{{ notice | strip_tags('p') | replace('<a ', '<a class="auth_legal-link" ') }}</span></p>{{ /if }}
                     </div>
                     <div class="w-form">
                         <form method="post" action="" data-hx-auth aria-label="Create account" novalidate>
@@ -77,31 +77,29 @@
                                 <div class="auth_hint" id="signup-password-hint" data-hx-hint>Use 12 or more characters with a number.</div>
                                 <label class="auth_check-row hx-auth_check-row"><input type="checkbox" name="terms" class="hx-auth_checkbox" required>
                                     <span>I agree to the <a href="/terms" class="auth_legal-link">Terms</a> and the <a href="/privacy" class="auth_legal-link">Privacy policy</a></span></label>
-                                <button type="submit" class="button auth_cta">Create account</button>
+                                <button type="submit" class="button auth_cta">{{ form_button }}</button>
                             </div>
                         </form>
                         <div class="w-form-fail hx-auth_msg" tabindex="-1" role="status" aria-live="polite" data-hx-auth-msg hidden>
-                            <div>The client portal is not open yet. Call +255 758 526 792 or email info@hmxtech.co.tz and an engineer will update you on your project.</div>
+                            <div>{{ closed_message }}</div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="auth_foot">
-                <div>We use your details only to run your account and your projects.</div>
+                {{ if foot_note }}<div>{{ foot_note }}</div>{{ /if }}
             </div>
         </div>
         <div class="auth_art hx-auth_art">
             <div class="auth_art-cap">
-                <div>Fig. 2, after you create an account</div>
-                <div class="auth_art-now">About 5 minutes</div>
+                <div>{{ art_caption }}</div>
+                <div class="auth_art-now">{{ art_caption_note }}</div>
             </div>
             <div class="auth_art-figure">
                 <ol class="hx-steps" aria-label="What happens after you create an account">
-                    <li class="hx-step is-done" style="--d:0"><span class="hx-step_node" aria-hidden="true"><svg viewBox="0 0 10 10" width="10" height="10" fill="none"><path d="M2 5.2L4.2 7.4L8 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="hx-step_text"><span class="hx-step_title">Your account</span><span class="hx-step_meta">Done</span></span></li>
-                    <li class="hx-step " style="--d:1"><span class="hx-step_node" aria-hidden="true">02</span><span class="hx-step_text"><span class="hx-step_title">Your details</span><span class="hx-step_meta">1 min</span></span></li>
-                    <li class="hx-step " style="--d:2"><span class="hx-step_node" aria-hidden="true">03</span><span class="hx-step_text"><span class="hx-step_title">Add a project</span><span class="hx-step_meta">Site, client and contract</span></span></li>
-                    <li class="hx-step " style="--d:3"><span class="hx-step_node" aria-hidden="true">04</span><span class="hx-step_text"><span class="hx-step_title">Invite your team</span><span class="hx-step_meta">Engineers, contractor, client</span></span></li>
-                    <li class="hx-step is-last" style="--d:4"><span class="hx-step_node" aria-hidden="true">05</span><span class="hx-step_text"><span class="hx-step_title">Project room ready</span><span class="hx-step_meta">Drawings, site reports and certificates in one place</span></span></li>
+                    {{ steps }}
+                    <li class="hx-step {{ if first }}is-done{{ elseif last }}is-last{{ /if }}" style="--d:{{ index }}"><span class="hx-step_node" aria-hidden="true">{{ if first }}<svg viewBox="0 0 10 10" width="10" height="10" fill="none"><path d="M2 5.2L4.2 7.4L8 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>{{ else }}{{ if count < 10 }}0{{ /if }}{{ count }}{{ /if }}</span><span class="hx-step_text"><span class="hx-step_title">{{ title }}</span>{{ if meta }}<span class="hx-step_meta">{{ meta }}</span>{{ /if }}</span></li>
+                    {{ /steps }}
                 </ol>
             </div>
             <div class="auth_art-legend">
