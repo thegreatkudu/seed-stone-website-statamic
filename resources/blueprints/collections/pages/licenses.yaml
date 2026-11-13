@@ -1,0 +1,136 @@
+title: 'Licenses Page'
+hide: true
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: nav_title
+            field:
+              type: text
+              display: 'Navigation Title'
+              instructions: 'Optionally override the title shown in the navigation menu.'
+              placeholder: 'Defaults to the page title'
+  hero:
+    display: Hero
+    sections:
+      -
+        display: 'Page Header'
+        fields:
+          -
+            handle: hero_tag
+            field:
+              type: text
+              display: 'Small Label'
+              width: 50
+          -
+            handle: hero_heading
+            field:
+              type: text
+              display: Headline
+              width: 50
+              validate:
+                - required
+          -
+            handle: hero_text
+            field:
+              type: textarea
+              display: 'Intro Text'
+  credits:
+    display: Credits
+    sections:
+      -
+        display: Credits
+        fields:
+          -
+            handle: groups
+            field:
+              type: grid
+              display: Groups
+              instructions: 'e.g. Fonts, Brand and images, Website and software.'
+              mode: stacked
+              min_rows: 1
+              add_row: 'Add group'
+              reorderable: true
+              listable: hidden
+              fields:
+                -
+                  handle: title
+                  field:
+                    type: text
+                    display: 'Group Heading'
+                    validate:
+                      - required
+                -
+                  handle: items
+                  field:
+                    type: grid
+                    display: Credits
+                    mode: table
+                    min_rows: 1
+                    add_row: 'Add credit'
+                    reorderable: true
+                    listable: hidden
+                    fields:
+                      -
+                        handle: name
+                        field:
+                          type: text
+                          display: Name
+                          validate:
+                            - required
+                      -
+                        handle: by
+                        field:
+                          type: text
+                          display: 'Made By'
+                      -
+                        handle: license
+                        field:
+                          type: text
+                          display: Licence
+                      -
+                        handle: link_label
+                        field:
+                          type: text
+                          display: 'Link Text'
+                      -
+                        handle: link_url
+                        field:
+                          type: link
+                          display: Link
+  seo:
+    display: SEO
+    sections:
+      -
+        fields:
+          -
+            import: seo
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+          -
+            handle: parent
+            field:
+              type: entries
+              collections:
+                - pages
+              max_items: 1
+              listable: false
+              localizable: true

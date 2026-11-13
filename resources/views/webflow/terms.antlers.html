@@ -17,75 +17,17 @@
 {{ /section:head_css }}
 
             <section class="page-hero">
-                <div class="eyebrow">Legal</div>
-                <h1 class="page-hero_title">Terms of use.</h1>
-                <p class="page-hero_text">The terms for using the HMXTECH Company Limited website, its forms, publications and free tools. Last updated November 2026.</p>
+                <div class="eyebrow">{{ hero_tag }}</div>
+                <h1 class="page-hero_title">{{ hero_heading }}</h1>
+                {{ if hero_text }}<p class="page-hero_text">{{ hero_text }}</p>{{ /if }}
             </section>
             <section class="license-list is-legal">
-                <div class="legal-row">
-                    <h2 class="legal-row_title">About these terms</h2>
+                {{ sections }}
+                <div {{ if anchor }}id="{{ anchor }}" {{ /if }}class="legal-row">
+                    <h2 class="legal-row_title">{{ title }}</h2>
                     <div class="legal-row_body">
-                        <p class="legal-row_text">These terms apply to hmxtech.co.tz and the pages, forms, publications and tools on it, run by HMXTECH Company Limited, P.O. Box 1897, Mbeya, Tanzania. By using the site you accept them.</p>
+                        {{ body | replace('<p>', '<p class="legal-row_text">') | replace('<a ', '<a class="text-link" ') }}
                     </div>
                 </div>
-                <div class="legal-row">
-                    <h2 class="legal-row_title">Information on this site</h2>
-                    <div class="legal-row_body">
-                        <p class="legal-row_text">The information on this website is general. It is not engineering advice for your project. Designs, calculations and site instructions are only given under a written agreement with a registered engineer.</p>
-                    </div>
-                </div>
-                <div class="legal-row">
-                    <h2 class="legal-row_title">Quotes and contracts</h2>
-                    <div class="legal-row_body">
-                        <p class="legal-row_text">A quote is valid only when HMXTECH issues it in writing. Consultancy, design and construction work is governed by the contract signed for each project, which takes precedence over these terms.</p>
-                    </div>
-                </div>
-                <div class="legal-row">
-                    <h2 class="legal-row_title">Publications</h2>
-                    <div class="legal-row_body">
-                        <p class="legal-row_text">The papers on our Publications page are free to download for study and research. Please cite the authors and the source when you use them. Copyright stays with the authors and the original publishers.</p>
-                    </div>
-                </div>
-                <div class="legal-row">
-                    <h2 class="legal-row_title">Truss Analyzer</h2>
-                    <div class="legal-row_body">
-                        <p class="legal-row_text">Truss Analyzer is a free tool provided as it is. Its results must be checked by a qualified engineer before they are used in any design or construction. HMXTECH is not responsible for decisions based only on its output.</p>
-                    </div>
-                </div>
-                <div class="legal-row">
-                    <h2 class="legal-row_title">Client portal accounts</h2>
-                    <div class="legal-row_body">
-                        <p class="legal-row_text">When the client portal opens, you must keep your login details private and tell us if you think someone else has used your account. You are responsible for what happens under your account. We may suspend accounts that are misused.</p>
-                    </div>
-                </div>
-                <div class="legal-row">
-                    <h2 class="legal-row_title">Acceptable use</h2>
-                    <div class="legal-row_body">
-                        <p class="legal-row_text">Do not try to break or bypass the security of the site, send spam or misleading information through our forms, or copy the site’s content for commercial use without our written permission.</p>
-                    </div>
-                </div>
-                <div class="legal-row">
-                    <h2 class="legal-row_title">Our name and content</h2>
-                    <div class="legal-row_body">
-                        <p class="legal-row_text">The HMXTECH name, logo, illustrations and written content belong to HMXTECH Company Limited. Fonts, software and the website design are used under their own licences, listed on the <a href="/licenses" class="text-link">Licenses</a> page.</p>
-                    </div>
-                </div>
-                <div class="legal-row">
-                    <h2 class="legal-row_title">Liability</h2>
-                    <div class="legal-row_body">
-                        <p class="legal-row_text">As far as the law allows, HMXTECH is not liable for any indirect loss caused by using this website or relying on its general information. Nothing in these terms limits liability that cannot be limited under Tanzanian law.</p>
-                    </div>
-                </div>
-                <div class="legal-row">
-                    <h2 class="legal-row_title">Governing law</h2>
-                    <div class="legal-row_body">
-                        <p class="legal-row_text">These terms are governed by the laws of the United Republic of Tanzania, and the courts of Tanzania have jurisdiction over any dispute about them.</p>
-                    </div>
-                </div>
-                <div class="legal-row">
-                    <h2 class="legal-row_title">Changes and questions</h2>
-                    <div class="legal-row_body">
-                        <p class="legal-row_text">We may update these terms and will change the date at the top when we do. Questions? Email <a href="mailto:info@hmxtech.co.tz" class="text-link">info@hmxtech.co.tz</a>.</p>
-                    </div>
-                </div>
+                {{ /sections }}
             </section>

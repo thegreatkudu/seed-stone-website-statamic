@@ -15,6 +15,9 @@ dataset('editable pages', [
     'portfolio' => ['/portfolio', 'portfolio'],
     'publications' => ['/publications', 'publications'],
     'news' => ['/news', 'news'],
+    'privacy' => ['/privacy', 'legal'],
+    'terms' => ['/terms', 'legal'],
+    'licenses' => ['/licenses', 'licenses'],
 ]);
 
 /**
@@ -74,6 +77,6 @@ test('every piece of text entered in the control panel is shown on the page', fu
     expect($strings)->not->toBeEmpty();
 
     foreach ($strings as $text) {
-        $response->assertSee($text);
+        $response->assertSee($text, false);
     }
 })->with('editable pages');
