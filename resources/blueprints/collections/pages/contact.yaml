@@ -1,0 +1,230 @@
+title: 'Contact Page'
+hide: true
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: nav_title
+            field:
+              type: text
+              display: 'Navigation Title'
+              instructions: 'Optionally override the title shown in the navigation menu.'
+              placeholder: 'Defaults to the page title'
+  intro:
+    display: 'Intro'
+    sections:
+      -
+        display: 'Page Header'
+        instructions: 'The heading, contact channels and office on the left of the quote form.'
+        fields:
+          -
+            handle: intro_tag
+            field:
+              type: text
+              display: 'Small Label'
+              width: 50
+          -
+            handle: intro_heading
+            field:
+              type: text
+              display: 'Headline'
+              width: 50
+              validate:
+                - required
+          -
+            handle: intro_text
+            field:
+              type: textarea
+              display: 'Intro Text'
+          -
+            handle: channels
+            field:
+              type: grid
+              display: 'Contact Channels'
+              instructions: 'Email addresses and phone numbers, each with a short note.'
+              mode: stacked
+              min_rows: 0
+              max_rows: 5
+              add_row: 'Add channel'
+              reorderable: true
+              listable: hidden
+              fields:
+                -
+                  handle: label
+                  field:
+                    type: text
+                    display: 'Label'
+                    instructions: 'e.g. "Email" or "Phone"'
+                    width: 33
+                    validate:
+                      - required
+                -
+                  handle: value
+                  field:
+                    type: text
+                    display: 'Shown As'
+                    instructions: 'e.g. "+255 758 526 792"'
+                    width: 66
+                    validate:
+                      - required
+                -
+                  handle: link
+                  field:
+                    type: link
+                    display: 'Link'
+                    instructions: 'mailto: or tel: link, e.g. tel:+255758526792'
+                    width: 50
+                -
+                  handle: note
+                  field:
+                    type: text
+                    display: 'Note'
+                    instructions: 'e.g. "Monday to Saturday, office hours"'
+                    width: 50
+          -
+            handle: office_title
+            field:
+              type: text
+              display: 'Office Name'
+              width: 50
+          -
+            handle: office_text
+            field:
+              type: text
+              display: 'Office Address'
+              width: 50
+  quote_form:
+    display: 'Quote Form'
+    sections:
+      -
+        display: 'Request a Quote'
+        instructions: 'The form fields themselves are fixed, so submissions keep the same structure. Submissions appear under Forms → Project enquiry and are emailed to info@hmxtech.co.tz.'
+        fields:
+          -
+            handle: form_title
+            field:
+              type: text
+              display: 'Form Title'
+              validate:
+                - required
+          -
+            handle: form_success
+            field:
+              type: textarea
+              display: 'Thank-You Message'
+              instructions: 'Shown after a visitor sends the form.'
+              validate:
+                - required
+          -
+            handle: form_error
+            field:
+              type: textarea
+              display: 'Error Message'
+              instructions: 'Shown when the form could not be sent.'
+              validate:
+                - required
+          -
+            handle: form_note
+            field:
+              type: text
+              display: 'Note Under the Form'
+              instructions: 'e.g. how you use their details.'
+  faq:
+    display: 'FAQ'
+    sections:
+      -
+        display: 'Questions, Answered'
+        fields:
+          -
+            handle: faq_tag
+            field:
+              type: text
+              display: 'Small Label'
+              width: 50
+          -
+            handle: faq_heading
+            field:
+              type: text
+              display: 'Headline'
+              width: 50
+              validate:
+                - required
+          -
+            handle: faq_text
+            field:
+              type: textarea
+              display: 'Intro Text'
+          -
+            handle: faq_link_label
+            field:
+              type: text
+              display: 'Link Label'
+              width: 50
+          -
+            handle: faq_link_url
+            field:
+              type: link
+              display: 'Link'
+              width: 50
+          -
+            handle: faqs
+            field:
+              type: grid
+              display: 'Questions'
+              instructions: 'Add, remove or reorder freely.'
+              mode: stacked
+              min_rows: 1
+              add_row: 'Add question'
+              reorderable: true
+              listable: hidden
+              fields:
+                -
+                  handle: question
+                  field:
+                    type: text
+                    display: 'Question'
+                    validate:
+                      - required
+                -
+                  handle: answer
+                  field:
+                    type: textarea
+                    display: 'Answer'
+                    validate:
+                      - required
+  seo:
+    display: SEO
+    sections:
+      -
+        fields:
+          -
+            import: seo
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+          -
+            handle: parent
+            field:
+              type: entries
+              collections:
+                - pages
+              max_items: 1
+              listable: false
+              localizable: true
