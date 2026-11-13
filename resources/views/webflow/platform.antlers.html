@@ -18,66 +18,36 @@
 
             <section class="section_hero is-shell">
                 <div class="hero_header">
-                    <div class="mono-label hero_label">Services</div>
-                    <h1 class="heading-display">Five services. One registered team.</h1>
-                    <p class="text-lead is-center">Consultancy, design, building, civil works and materials testing from one Mbeya firm registered with ERB and CRB. Take one service, or all five.</p>
-                    <div class="button-row is-center"><a href="/contact" class="button">Get a quote</a><a href="/how-we-work" class="button is-secondary">How we work</a></div>
+                    <div class="mono-label hero_label">{{ hero_tag }}</div>
+                    <h1 class="heading-display">{{ hero_heading }}</h1>
+                    {{ if hero_text }}<p class="text-lead is-center">{{ hero_text }}</p>{{ /if }}
+                    <div class="button-row is-center"><a href="{{ hero_primary_url }}" class="button">{{ hero_primary_label }}</a>{{ if hero_secondary_label }}<a href="{{ hero_secondary_url }}" class="button is-secondary">{{ hero_secondary_label }}</a>{{ /if }}</div>
                 </div>
             </section>
             <section class="section is-index">
-                <div class="platform-index"><a href="#scheduling" class="module-index_item w-inline-block">
+                <div class="platform-index">{{ services }}<a href="#{{ tag | slugify }}" class="module-index_item w-inline-block">
                         <div class="module-index_row">
-                            <div class="module-index_num">01</div>
-                            <div class="module-index_title">Consultancy</div>
+                            <div class="module-index_num">{{ if count < 10 }}0{{ /if }}{{ count }}</div>
+                            <div class="module-index_title">{{ tag }}</div>
                         </div>
-                        <div class="module-index_desc">Feasibility to supervision</div>
-                    </a><a href="#intake" class="module-index_item w-inline-block">
-                        <div class="module-index_row">
-                            <div class="module-index_num">02</div>
-                            <div class="module-index_title">Design</div>
-                        </div>
-                        <div class="module-index_desc">Analysis and drawings</div>
-                    </a><a href="#messaging" class="module-index_item w-inline-block">
-                        <div class="module-index_row">
-                            <div class="module-index_num">03</div>
-                            <div class="module-index_title">Building</div>
-                        </div>
-                        <div class="module-index_desc">CRB class B5 contractor</div>
-                    </a><a href="#billing" class="module-index_item w-inline-block">
-                        <div class="module-index_row">
-                            <div class="module-index_num">04</div>
-                            <div class="module-index_title">Civil works</div>
-                        </div>
-                        <div class="module-index_desc">CRB class C6 contractor</div>
-                    </a><a href="#integrations" class="module-index_item w-inline-block">
-                        <div class="module-index_row">
-                            <div class="module-index_num">05</div>
-                            <div class="module-index_title">Testing</div>
-                        </div>
-                        <div class="module-index_desc">Soil, concrete and steel</div>
-                    </a></div>
+                        <div class="module-index_desc">{{ summary }}</div>
+                    </a>{{ /services }}</div>
             </section>
             <section class="section">
-                <div id="scheduling" class="anchor"></div>
+                <div id="{{ services:0:tag | slugify }}" class="anchor"></div>
                 <div class="module-grid">
                     <div class="module-copy reveal">
-                        <div class="mono-label">Consultancy</div>
-                        <h2 class="heading-l">From the first site visit to the final certificate.</h2>
-                        <p class="text-lead">We are registered with ERB as consulting engineers (No. 238L). Feasibility, site investigation and supervision are led by engineers, so every decision on site is checked.</p>
+                        <div class="mono-label">{{ services:0:tag }}</div>
+                        <h2 class="heading-l">{{ services:0:heading }}</h2>
+                        <p class="text-lead">{{ services:0:text }}</p>
                         <div class="points">
+                            {{ services:0:points }}
                             <div class="point">
                                 <div class="point_mark"></div>
-                                <div class="point_title">Feasibility studies and cost estimates</div>
+                                <div class="point_title">{{ value }}</div>
                             </div>
-                            <div class="point">
-                                <div class="point_mark"></div>
-                                <div class="point_title">Topographic survey and site investigation</div>
-                            </div>
-                            <div class="point">
-                                <div class="point_mark"></div>
-                                <div class="point_title">Supervision and contract administration</div>
-                            </div>
-                        </div><a href="/contact" class="text-link">Ask about consultancy<span
+                            {{ /services:0:points }}
+                        </div><a href="{{ services:0:link_url }}" class="text-link">{{ services:0:link_label }}<span
                                 class="text-link_icon"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path d="M4 10L10 4M10 4H5M10 4V9" stroke="currentColor" stroke-width="1.4"
@@ -936,26 +906,20 @@
                 </div>
             </section>
             <section class="section">
-                <div id="intake" class="anchor"></div>
+                <div id="{{ services:1:tag | slugify }}" class="anchor"></div>
                 <div class="module-grid is-flip">
                     <div class="module-copy reveal">
-                        <div class="mono-label">Design</div>
-                        <h2 class="heading-l">Drawings checked before a bar is cut.</h2>
-                        <p class="text-lead">Architectural and structural design built on real site data. Every member is analysed and every drawing is reviewed before it reaches site.</p>
+                        <div class="mono-label">{{ services:1:tag }}</div>
+                        <h2 class="heading-l">{{ services:1:heading }}</h2>
+                        <p class="text-lead">{{ services:1:text }}</p>
                         <div class="points">
+                            {{ services:1:points }}
                             <div class="point">
                                 <div class="point_mark"></div>
-                                <div class="point_title">Architectural and structural drawings</div>
+                                <div class="point_title">{{ value }}</div>
                             </div>
-                            <div class="point">
-                                <div class="point_mark"></div>
-                                <div class="point_title">Analysis of frames, slabs and trusses</div>
-                            </div>
-                            <div class="point">
-                                <div class="point_mark"></div>
-                                <div class="point_title">Bills of quantities and specifications</div>
-                            </div>
-                        </div><a href="/contact" class="text-link">Ask about design<span class="text-link_icon"><svg
+                            {{ /services:1:points }}
+                        </div><a href="{{ services:1:link_url }}" class="text-link">{{ services:1:link_label }}<span class="text-link_icon"><svg
                                     width="14" height="14" viewBox="0 0 14 14" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path d="M4 10L10 4M10 4H5M10 4V9" stroke="currentColor" stroke-width="1.4"
@@ -1174,26 +1138,20 @@
                 </div>
             </section>
             <section class="section">
-                <div id="messaging" class="anchor"></div>
+                <div id="{{ services:2:tag | slugify }}" class="anchor"></div>
                 <div class="module-grid">
                     <div class="module-copy reveal">
-                        <div class="mono-label">Building</div>
-                        <h2 class="heading-l">One site diary, from site to office to client.</h2>
-                        <p class="text-lead">We build as a CRB class B5 contractor (B5/1393/07/2021). Site, office and client share one record of every pour, delivery and decision.</p>
+                        <div class="mono-label">{{ services:2:tag }}</div>
+                        <h2 class="heading-l">{{ services:2:heading }}</h2>
+                        <p class="text-lead">{{ services:2:text }}</p>
                         <div class="points">
+                            {{ services:2:points }}
                             <div class="point">
                                 <div class="point_mark"></div>
-                                <div class="point_title">Residential, commercial and public buildings</div>
+                                <div class="point_title">{{ value }}</div>
                             </div>
-                            <div class="point">
-                                <div class="point_mark"></div>
-                                <div class="point_title">Daily site diary and weekly reports</div>
-                            </div>
-                            <div class="point">
-                                <div class="point_mark"></div>
-                                <div class="point_title">Quality checks at every stage</div>
-                            </div>
-                        </div><a href="/contact" class="text-link">Ask about building<span
+                            {{ /services:2:points }}
+                        </div><a href="{{ services:2:link_url }}" class="text-link">{{ services:2:link_label }}<span
                                 class="text-link_icon"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path d="M4 10L10 4M10 4H5M10 4V9" stroke="currentColor" stroke-width="1.4"
@@ -1345,26 +1303,20 @@
                 </div>
             </section>
             <section class="section">
-                <div id="billing" class="anchor"></div>
+                <div id="{{ services:3:tag | slugify }}" class="anchor"></div>
                 <div class="module-grid is-flip">
                     <div class="module-copy reveal">
-                        <div class="mono-label">Civil works</div>
-                        <h2 class="heading-l">Roads and structures, measured and certified.</h2>
-                        <p class="text-lead">As a CRB class C6 civil works contractor (C6/2288/07/2021) we build roads, culverts, bridges and water works, with quantities measured on site and certified on time.</p>
+                        <div class="mono-label">{{ services:3:tag }}</div>
+                        <h2 class="heading-l">{{ services:3:heading }}</h2>
+                        <p class="text-lead">{{ services:3:text }}</p>
                         <div class="points">
+                            {{ services:3:points }}
                             <div class="point">
                                 <div class="point_mark"></div>
-                                <div class="point_title">Roads, culverts and drainage</div>
+                                <div class="point_title">{{ value }}</div>
                             </div>
-                            <div class="point">
-                                <div class="point_mark"></div>
-                                <div class="point_title">Bridges, water supply and dams</div>
-                            </div>
-                            <div class="point">
-                                <div class="point_mark"></div>
-                                <div class="point_title">Measured works and clear valuations</div>
-                            </div>
-                        </div><a href="/contact" class="text-link">Ask about civil works<span
+                            {{ /services:3:points }}
+                        </div><a href="{{ services:3:link_url }}" class="text-link">{{ services:3:link_label }}<span
                                 class="text-link_icon"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path d="M4 10L10 4M10 4H5M10 4V9" stroke="currentColor" stroke-width="1.4"
@@ -1541,26 +1493,20 @@
                 </div>
             </section>
             <section class="section">
-                <div id="integrations" class="anchor"></div>
+                <div id="{{ services:4:tag | slugify }}" class="anchor"></div>
                 <div class="module-grid">
                     <div class="module-copy reveal">
-                        <div class="mono-label">Testing</div>
-                        <h2 class="heading-l">Materials proven in the lab before they go into the work.</h2>
-                        <p class="text-lead">Soil, concrete, aggregates and steel are sampled on site and tested to standard, so foundations and mix designs rest on results, not guesses.</p>
+                        <div class="mono-label">{{ services:4:tag }}</div>
+                        <h2 class="heading-l">{{ services:4:heading }}</h2>
+                        <p class="text-lead">{{ services:4:text }}</p>
                         <div class="points">
+                            {{ services:4:points }}
                             <div class="point">
                                 <div class="point_mark"></div>
-                                <div class="point_title">Soil investigation and CBR</div>
+                                <div class="point_title">{{ value }}</div>
                             </div>
-                            <div class="point">
-                                <div class="point_mark"></div>
-                                <div class="point_title">Concrete mix design and cube tests</div>
-                            </div>
-                            <div class="point">
-                                <div class="point_mark"></div>
-                                <div class="point_title">Aggregate and steel testing</div>
-                            </div>
-                        </div><a href="/contact" class="text-link">Ask about testing<span
+                            {{ /services:4:points }}
+                        </div><a href="{{ services:4:link_url }}" class="text-link">{{ services:4:link_label }}<span
                                 class="text-link_icon"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path d="M4 10L10 4M10 4H5M10 4V9" stroke="currentColor" stroke-width="1.4"
@@ -1759,9 +1705,9 @@
                 <div id="record" class="anchor"></div>
                 <div class="split-grid">
                     <div class="split-copy">
-                        <div class="mono-label">The site record</div>
-                        <h2 class="heading-xl">Every project, one living record.</h2>
-                        <p class="text-lead">See where a project stands and what happens next, on one screen the client and the team share.</p><a href="/contact" class="button">Get a quote</a>
+                        <div class="mono-label">{{ record_tag }}</div>
+                        <h2 class="heading-xl">{{ record_heading }}</h2>
+                        <p class="text-lead">{{ record_text }}</p>{{ if record_button_label }}<a href="{{ record_button_url }}" class="button">{{ record_button_label }}</a>{{ /if }}
                     </div>
                     <div class="visit-card">
                         <div class="visit-card_head">
@@ -1968,13 +1914,13 @@
                                 <circle cx="870" cy="140" r="8" class="ill-f-accent cord-end"></circle>
                             </g>
                         </svg></div>
-                    <h2 class="heading-xl is-center">Bring your next project to one team.</h2>
-                    <p class="text-lead is-center">Tell us about your site. A registered engineer will reply with next steps and a quote.</p>
-                    <div class="button-row is-center"><a href="/contact" class="button w-inline-block">Get a quote<svg
+                    <h2 class="heading-xl is-center">{{ cta_heading }}</h2>
+                    {{ if cta_text }}<p class="text-lead is-center">{{ cta_text }}</p>{{ /if }}
+                    <div class="button-row is-center"><a href="{{ cta_primary_url }}" class="button w-inline-block">{{ cta_primary_label }}<svg
                                 width="14" height="14" viewBox="0 0 14 14" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path d="M4 10L10 4M10 4H5M10 4V9" stroke="currentColor" stroke-width="1.4"
                                     stroke-linecap="round"></path>
-                            </svg></a><a href="tel:+255758526792" class="button is-secondary">Call +255 758 526 792</a></div>
+                            </svg></a>{{ if cta_secondary_label }}<a href="{{ cta_secondary_url }}" class="button is-secondary">{{ cta_secondary_label }}</a>{{ /if }}</div>
                 </div>
             </section>

@@ -1,0 +1,250 @@
+title: 'Features Page'
+hide: true
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: nav_title
+            field:
+              type: text
+              display: 'Navigation Title'
+              instructions: 'Optionally override the title shown in the navigation menu.'
+              placeholder: 'Defaults to the page title'
+  hero:
+    display: 'Hero'
+    sections:
+      -
+        display: 'Page Header'
+        instructions: 'The large centred heading at the top of the page.'
+        fields:
+          -
+            handle: hero_tag
+            field:
+              type: text
+              display: 'Small Label'
+              width: 50
+          -
+            handle: hero_heading
+            field:
+              type: text
+              display: 'Headline'
+              width: 50
+              validate:
+                - required
+          -
+            handle: hero_text
+            field:
+              type: textarea
+              display: 'Intro Text'
+          -
+            handle: hero_primary_label
+            field:
+              type: text
+              display: 'Main Button Label'
+              width: 50
+              validate:
+                - required
+          -
+            handle: hero_primary_url
+            field:
+              type: link
+              display: 'Main Button Link'
+              width: 50
+          -
+            handle: hero_secondary_label
+            field:
+              type: text
+              display: 'Second Button Label'
+              instructions: 'Leave empty to hide it.'
+              width: 50
+          -
+            handle: hero_secondary_url
+            field:
+              type: link
+              display: 'Second Button Link'
+              width: 50
+  services:
+    display: 'Services'
+    sections:
+      -
+        display: 'Services'
+        instructions: 'The five service sections, in page order. Each sits beside its own fixed drawing, so there are always five. The short summary is shown in the index under the header; the name also becomes the section link, e.g. /features#consultancy.'
+        fields:
+          -
+            handle: services
+            field:
+              type: grid
+              display: 'Services'
+              mode: stacked
+              min_rows: 5
+              max_rows: 5
+              reorderable: false
+              listable: hidden
+              fields:
+                -
+                  handle: tag
+                  field:
+                    type: text
+                    display: 'Service Name'
+                    width: 50
+                    validate:
+                      - required
+                -
+                  handle: summary
+                  field:
+                    type: text
+                    display: 'Short Summary'
+                    instructions: 'Shown in the index under the header, e.g. "Feasibility to supervision".'
+                    width: 50
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: 'Headline'
+                    validate:
+                      - required
+                -
+                  handle: text
+                  field:
+                    type: textarea
+                    display: 'Text'
+                -
+                  handle: points
+                  field:
+                    type: list
+                    display: 'Key Points'
+                    instructions: 'One per line, shown with a marker. Three fit best.'
+                -
+                  handle: link_label
+                  field:
+                    type: text
+                    display: 'Link Label'
+                    width: 50
+                -
+                  handle: link_url
+                  field:
+                    type: link
+                    display: 'Link'
+                    width: 50
+  site_record:
+    display: 'Site Record'
+    sections:
+      -
+        display: 'Every Project, One Record'
+        instructions: 'Text beside the project card. The card itself is a fixed illustration.'
+        fields:
+          -
+            handle: record_tag
+            field:
+              type: text
+              display: 'Small Label'
+              width: 50
+          -
+            handle: record_heading
+            field:
+              type: text
+              display: 'Headline'
+              width: 50
+              validate:
+                - required
+          -
+            handle: record_text
+            field:
+              type: textarea
+              display: 'Text'
+          -
+            handle: record_button_label
+            field:
+              type: text
+              display: 'Button Label'
+              instructions: 'Leave empty to hide the button.'
+              width: 50
+          -
+            handle: record_button_url
+            field:
+              type: link
+              display: 'Button Link'
+              width: 50
+  closing:
+    display: 'Closing'
+    sections:
+      -
+        display: 'Closing Call to Action'
+        instructions: 'The last block on the page, above the footer.'
+        fields:
+          -
+            handle: cta_heading
+            field:
+              type: text
+              display: 'Headline'
+              validate:
+                - required
+          -
+            handle: cta_text
+            field:
+              type: textarea
+              display: 'Text'
+          -
+            handle: cta_primary_label
+            field:
+              type: text
+              display: 'Main Button Label'
+              width: 50
+              validate:
+                - required
+          -
+            handle: cta_primary_url
+            field:
+              type: link
+              display: 'Main Button Link'
+              width: 50
+          -
+            handle: cta_secondary_label
+            field:
+              type: text
+              display: 'Second Button Label'
+              instructions: 'Leave empty to hide it.'
+              width: 50
+          -
+            handle: cta_secondary_url
+            field:
+              type: link
+              display: 'Second Button Link'
+              instructions: 'For a phone number, type tel: then the number, e.g. tel:+255758526792'
+              width: 50
+  seo:
+    display: SEO
+    sections:
+      -
+        fields:
+          -
+            import: seo
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+          -
+            handle: parent
+            field:
+              type: entries
+              collections:
+                - pages
+              max_items: 1
+              listable: false
+              localizable: true
