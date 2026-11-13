@@ -1,8 +1,0 @@
-title: 'All Posts'
-fields:
-  -
-    handle: page_main_title
-    field:
-      type: text
-      display: 'Banner Title'
-      instructions: 'Defaults to the page title. The post cards come from the Posts collection.'

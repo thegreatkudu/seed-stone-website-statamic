@@ -1,137 +1,34 @@
-{{ section:page_head_tags }}
-<link rel="stylesheet" id="siteground-optimizer-combined-css-f637d4720dea270ca0082db30d20a719"
-    href="/wp-content/uploads/siteground-optimizer-assets/siteground-optimizer-combined-css-f637d4720dea270ca0082db30d20a719.css"
-    media="all" />
-<link rel="preload"
-    href="/wp-content/uploads/siteground-optimizer-assets/siteground-optimizer-combined-css-f637d4720dea270ca0082db30d20a719.css"
-    as="style">
-<style id='elementor-frontend-inline-css'>
-    .elementor-kit-12 {
-        --e-global-color-primary: #00B30F;
-        --e-global-color-secondary: #00473C;
-        --e-global-color-text: #00473C;
-        --e-global-color-accent: #00B30F;
-        --e-global-color-light: #EFEEE7;
-        --e-global-typography-primary-font-family: "Plus Jakarta Sans";
-        --e-global-typography-primary-font-weight: 600;
-        --e-global-typography-secondary-font-family: "Plus Jakarta Sans";
-        --e-global-typography-secondary-font-weight: 600;
-        --e-global-typography-text-font-family: "DM Sans";
-        --e-global-typography-text-font-weight: 400;
-        --e-global-typography-accent-font-family: "Plus Jakarta Sans";
-        --e-global-typography-accent-font-weight: 500;
-        --keydesign-h5-font-weight: 600;
-    }
+{{# 404: rendered by Statamic inside the default layout (statamic.system.layout = webflow). #}}
+{{ section:wf_page }}6aec83b44f4f0425b95841d1{{ /section:wf_page }}
+{{ title = 'Page not found' }}
+{{ seo_title = 'Page not found' }}
+{{ seo_description = 'The page you were looking for has moved or no longer exists. Find our services, publications and contact details here.' }}
 
-    .elementor-kit-12 h5 {
-        font-weight: 600;
-    }
-
-    .elementor-kit-12 button,
-    .elementor-kit-12 input[type="button"],
-    .elementor-kit-12 input[type="submit"],
-    .elementor-kit-12 .elementor-button,
-    .elementor-kit-12 .ekit-wid-con .elementskit-btn,
-    .elementor-kit-12 .ekit-wid-con .elementskit-single-pricing .elementskit-pricing-btn,
-    .elementor-kit-12 .kd-widget-container .kd-button {
-        font-weight: 600;
-    }
-
-    .elementor-section.elementor-section-boxed>.elementor-container {
-        max-width: 1240px;
-    }
-
-    .e-con {
-        --container-max-width: 1240px;
-    }
-
-    .elementor-widget:not(:last-child) {
-        --kit-widget-spacing: 20px;
-    }
-
-    .elementor-element {
-        --widgets-spacing: 20px 20px;
-        --widgets-spacing-row: 20px;
-        --widgets-spacing-column: 20px;
-    }
-
-        {}
-
-    h1.entry-title {
-        display: var(--page-title-display);
-    }
-
-    body {
-        --vertical-spacing: 100px;
-        --mobile-spacing: 50px;
-    }
-
-    @media(max-width: 1024px) {
-        .elementor-section.elementor-section-boxed>.elementor-container {
-            max-width: 1024px;
-        }
-
-        .e-con {
-            --container-max-width: 1024px;
-        }
-    }
-
-    @media(max-width: 767px) {
-        .elementor-section.elementor-section-boxed>.elementor-container {
-            max-width: 767px;
-        }
-
-        .e-con {
-            --container-max-width: 767px;
-        }
-    }
-
-    /*# sourceURL=elementor-frontend-inline-css */
-</style>
-{{ /section:page_head_tags }}
-
-<!-- page-head-tags -->
-
-{{# ============================================================ #}}
-{{# BODY CLASS #}}
-{{# ============================================================ #}}
-{{ section:body_class }}
-error404 wp-theme-finpath wp-child-theme-finpath-child theme-finpath underline-link-effect keydesign-elementor-library
-woocommerce-no-js elementor-default elementor-kit-12
-{{ categories }}category-{{ slug }} {{ /categories }}
-{{ tags }}tag-{{ slug }} {{ /tags }}
-{{ /section:body_class }}
-
-<div id="content" class="site-content">
-    <div class="keydesign-container e-con">
-        <div id="primary" class="content-area">
-            <section class="block block-error-404">
-                <div class="container">
-                    <div class="content">
-                        <h1 id="content">404</h1>
-                        <h3 aria-hidden="true">{{ detail_pages:not_found_heading }}</h3>
-                        <p>{{ detail_pages:not_found_text }}</p>
-                        <div class="search-container">
-                            <div class="widget widget_search">
-                                <form role="search" method="get" class="search-form" action="/">
-                                    <label>
-                                        <span class="screen-reader-text">Search for:</span>
-                                        <input type="search" class="search-field" placeholder="Search &hellip;" value=""
-                                            name="s" />
-                                    </label>
-                                    <input type="submit" class="search-submit" value="Search" />
-                                </form>
-                            </div>
-                        </div>
-                    </div>
+            <section class="page-hero">
+                <div class="eyebrow">Error 404</div>
+                <h1 class="page-hero_title">This page is not on our drawings.</h1>
+                <p class="page-hero_text">The link may be old, or the page has moved. Start from one of these instead, or call us on +255 758 526 792.</p>
+                <div class="button-row">
+                    <a href="/" class="button">Go to the home page</a>
+                    <a href="/contact" class="button is-secondary">Contact us</a>
                 </div>
             </section>
-        </div>
-        <!-- #primary -->
-    </div>
-</div>
-<!-- #content -->
-
-<!-- footer -->
-
-<!-- page-footer-tags -->
+            <section class="section">
+                <div class="post-list hx-404_links">
+                    <a href="/features" class="post-card w-inline-block">
+                        <div class="post-card_tag">Services</div>
+                        <h3 class="post-card_title">Consultancy, design and construction</h3>
+                        <p class="post-card_text">Five services from one ERB and CRB registered team in Mbeya.</p>
+                    </a>
+                    <a href="/publications" class="post-card w-inline-block">
+                        <div class="post-card_tag">Publications</div>
+                        <h3 class="post-card_title">Research on roads and materials</h3>
+                        <p class="post-card_text">Papers by our engineers, free to read and download.</p>
+                    </a>
+                    <a href="/news" class="post-card w-inline-block">
+                        <div class="post-card_tag">News</div>
+                        <h3 class="post-card_title">What is new at HMXTECH</h3>
+                        <p class="post-card_text">Engineering events, training and company news.</p>
+                    </a>
+                </div>
+            </section>

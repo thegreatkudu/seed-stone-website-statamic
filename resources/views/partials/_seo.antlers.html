@@ -4,8 +4,7 @@
 {{# or Globals → Settings, so editors control all of it in the CP. #}}
 {{# ============================================================ #}}
 {{ page_title = seo_title ?? title }}
-{{ if collection:handle == 'posts' && post_introduction_part }}{{ intro_text = post_introduction_part | bard_html | decode | replace('</', ' </') | strip_tags | trim }}{{ /if }}
-{{ page_description = seo_description ?? excerpt ?? intro_text ?? settings:meta_description }}
+{{ page_description = seo_description ?? summary ?? excerpt ?? settings:meta_description }}
 {{ page_description = page_description | strip_tags | trim | safe_truncate(170, '…') }}
 {{ collection_handle = collection:handle }}
 {{ org_legal_name = settings:legal_name ?? settings:site_name }}
@@ -63,7 +62,7 @@
             "url": "{{ config:app:url }}/",
             "logo": {
                 "@type": "ImageObject",
-                "url": "{{ settings:header_logo:url }}"
+                "url": "{{ config:app:url }}/hmxtech/brand/android-chrome-512x512.png"
             },
             "description": {{ org_description | to_json }},
             {{ if settings:company_email }}"email": {{ settings:company_email | to_json }},{{ /if }}
@@ -85,18 +84,53 @@
                 {{ if settings:company_phone }}"telephone": {{ settings:company_phone | to_json }},{{ /if }}
                 "availableLanguage": {{ if settings:languages }}{{ settings:languages | to_json }}{{ else }}["English"]{{ /if }}
             },
-            "knowsAbout": ["Agricultural export", "Cashewnut", "Coffee", "Sesame", "Pigeon peas", "Tanzania Mercantile Exchange", "Warehouse Receipt System", "Clearing and forwarding"],
+            "knowsAbout": ["Civil engineering", "Structural engineering", "Building construction", "Road construction", "Geotechnical engineering", "Materials testing", "Water supply and sanitation", "Truss analysis"],
             "makesOffer": [
-                {{ collection:products as="product_items" }}{{ product_items }}
                 {
                     "@type": "Offer",
                     "itemOffered": {
-                        "@type": "Product",
-                        "name": {{ title | to_json }},
-                        "url": "{{ config:app:url }}{{ url }}"
+                        "@type": "Service",
+                        "name": "Engineering consultancy",
+                        "description": "Design and supervision of buildings, roads, water supply, towers and steel structures.",
+                        "url": "{{ config:app:url }}/features"
                     }
-                }{{ unless last }},{{ /unless }}
-                {{ /product_items }}{{ /collection:products }}
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Structural analysis and design",
+                        "description": "Geotechnical investigation, soil testing, concrete mix design and structural assessment.",
+                        "url": "{{ config:app:url }}/features"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Building construction",
+                        "description": "Houses, multistorey buildings, offices, apartments, factories and warehouses (CRB B5).",
+                        "url": "{{ config:app:url }}/features"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Civil works",
+                        "description": "Roads, water supply and sanitation, drainage, bridges, culverts, dams and tanks (CRB C6).",
+                        "url": "{{ config:app:url }}/features"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Materials testing",
+                        "description": "Soil, concrete and steel testing for design and quality control.",
+                        "url": "{{ config:app:url }}/features"
+                    }
+                }
             ]
         },
         {
@@ -121,6 +155,27 @@
 }
 </script>
 
+{{# ── Article (News articles in the Posts collection) ── #}}
+{{ if collection_handle == 'posts' }}
+{{ article_author = author_name ?? settings:site_name }}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "{{ config:app:url }}{{ uri }}#article",
+    "headline": {{ title | to_json }},
+    "description": {{ page_description | to_json }},
+    "datePublished": "{{ date format='c' }}",
+    "dateModified": "{{ last_modified format='c' }}",
+    {{ if share_image }}"image": "{{ glide:share_image width='1200' height='630' fit='crop_focal' absolute='true' }}",{{ /if }}
+    "author": { "@type": "Organization", "name": {{ article_author | to_json }} },
+    "publisher": { "@id": "{{ config:app:url }}/#organization" },
+    "mainEntityOfPage": { "@id": "{{ config:app:url }}{{ uri }}#webpage" },
+    "inLanguage": "{{ site:short_locale }}"
+}
+</script>
+{{ /if }}
+
 {{# ── Breadcrumbs (all pages except home) ── #}}
 {{ if uri && uri != '/' && title }}
 <script type="application/ld+json">
@@ -130,13 +185,7 @@
     "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "{{ config:app:url }}/" },
         {{ if collection_handle == 'posts' }}
-        { "@type": "ListItem", "position": 2, "name": "News", "item": "{{ config:app:url }}/posts" },
-        { "@type": "ListItem", "position": 3, "name": {{ title | to_json }}, "item": "{{ config:app:url }}{{ uri }}" }
-        {{ elseif collection_handle == 'products' }}
-        { "@type": "ListItem", "position": 2, "name": "Products", "item": "{{ config:app:url }}/products" },
-        { "@type": "ListItem", "position": 3, "name": {{ title | to_json }}, "item": "{{ config:app:url }}{{ uri }}" }
-        {{ elseif collection_handle == 'services' }}
-        { "@type": "ListItem", "position": 2, "name": "Our Services", "item": "{{ config:app:url }}/our-services" },
+        { "@type": "ListItem", "position": 2, "name": "News", "item": "{{ config:app:url }}/news" },
         { "@type": "ListItem", "position": 3, "name": {{ title | to_json }}, "item": "{{ config:app:url }}{{ uri }}" }
         {{ else }}
         { "@type": "ListItem", "position": 2, "name": {{ title | to_json }}, "item": "{{ config:app:url }}{{ uri }}" }

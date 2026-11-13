@@ -1,9 +1,0 @@
-title: Categories
-
-route: /categories/{slug}
-
-preview_targets:
-  -
-    label: Term
-    url: '{permalink}'
-    refresh: true

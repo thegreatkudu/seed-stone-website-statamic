@@ -8,8 +8,7 @@ test('page forms post to their Statamic form handlers', function (string $uri, s
         ->assertSee('name="website"', false)
         ->assertDontSee('wp-json/metform', false);
 })->with([
-    'contact page' => ['/contact-us', 'contact'],
-    'product quote' => ['/products/cashewnut', 'quote'],
-    'service quote' => ['/services/direct-sourcing', 'quote'],
-    'blog newsletter' => ['/news/a-guide-to-exporting-crops-from-tanzania', 'newsletter'],
+    'contact page' => ['/contact', 'project_enquiry'],
+    'news page' => ['/news', 'newsletter'],
+    'article footer' => ['/news/why-the-ruvu-to-mlandizi-road-keeps-failing-in-the-rain', 'newsletter'],
 ]);

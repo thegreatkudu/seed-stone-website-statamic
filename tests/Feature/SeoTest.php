@@ -32,10 +32,9 @@ test('key pages render SEO tags and valid structured data', function (string $ur
     expect($types)->toContain('Organization', 'WebSite', 'WebPage', $schemaType);
 })->with([
     'home' => ['/', 'WebPage'],
-    'product' => ['/products/cashewnut', 'Product'],
-    'service' => ['/services/direct-sourcing', 'Service'],
-    'post' => ['/news/a-guide-to-exporting-crops-from-tanzania', 'BlogPosting'],
-    'faq' => ['/faqs', 'FAQPage'],
+    'services' => ['/features', 'BreadcrumbList'],
+    'news' => ['/news', 'BreadcrumbList'],
+    'article' => ['/news/why-the-ruvu-to-mlandizi-road-keeps-failing-in-the-rain', 'BlogPosting'],
 ]);
 
 test('the 404 page is not indexed', function () {
@@ -49,9 +48,11 @@ test('the sitemap lists published indexable entries only', function () {
 
     expect($response->headers->get('Content-Type'))->toContain('application/xml')
         ->and($response->getContent())
-        ->toContain(config('app.url').'/products/cashewnut')
-        ->toContain(config('app.url').'/services/direct-sourcing')
-        ->not->toContain('leoleo');
+        ->toContain(config('app.url').'/features')
+        ->toContain(config('app.url').'/news/why-the-ruvu-to-mlandizi-road-keeps-failing-in-the-rain')
+        ->not->toContain('/products')
+        ->not->toContain('/our-services')
+        ->not->toContain('/style-guide');
 });
 
 test('llms.txt summarises the company from the CMS', function () {
@@ -60,8 +61,10 @@ test('llms.txt summarises the company from the CMS', function () {
     expect($response->headers->get('Content-Type'))->toContain('text/plain')
         ->and($response->getContent())
         ->toStartWith('# '.GlobalSet::findByHandle('settings')->inDefaultSite()->get('site_name'))
-        ->toContain('## Products')
-        ->toContain('[Cashewnut]('.config('app.url').'/products/cashewnut)')
-        ->toContain('## Services')
-        ->not->toContain('leoleo');
+        ->toContain('# HMXTECH')
+        ->toContain('## Key Pages')
+        ->toContain('## Publications')
+        ->toContain('Why the Ruvu to Mlandizi road keeps failing in the rain')
+        ->not->toContain('Products')
+        ->not->toContain('Cashewnut');
 });

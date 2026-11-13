@@ -1,9 +1,0 @@
-title: 'Contact'
-honeypot: website
-store: true
-email:
-  -
-    to: info@hmxtech.co.tz
-    reply_to: '{{ email }}'
-    subject: 'New contact message from the website'
-    markdown: true

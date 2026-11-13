@@ -17,106 +17,62 @@ use Statamic\Facades\GlobalSet;
 |
 */
 
-// Route::get('/', function () {
-//     return view('index');
-// });
-
-// Route::get('/about', function () {
-//     return view('about');
-// });
-
-// Route::get('/before-&-after', function () {
-//     return view('before-and-after');
-// });
-
-// Route::get('/single-service', function () {
-//     return view('single-service');
-// });
-
-// Route::get('/our-services', function () {
-//     return view('services');
-// });
-
-// Route::get('/services/{slug}', function ($slug) {
-//     return view('service', compact('slug'));
-// });
-
-// Route::get('/posts', function () {
-//     return view('posts');
-// });
-
-// Route::get('/post/{slug}', function ($slug) {
-//     return view('post', compact('slug'));
-// });
-
-// Route::get('/contact', function () {
-//     return view('contact');
-// });
-
-// Route::get('/sign-in', function () {
-//     return view('sign-in');
-// });
-
-// Route::get('/sign-up', function () {
-//     return view('sign-up');
-// });
-
-// Route::get('/style-guide', function () {
-//     return view('style-guide');
-// });
-
-// Route::get('/instructions', function () {
-//     return view('instructions');
-// });
-
-// Route::get('/terms', function () {
-//     return view('terms');
-// });
-
-// Route::get('/privacy', function () {
-//     return view('privacy');
-// });
-
-// Route::get('/licenses', function () {
-//     return view('licenses');
-// });
-
-// Route::get('/our-works', function () {
-//     return view('our-works');
-// });
-
-// Route::get('/pricing', function () {
-//     return view('pricing');
-// });
-
-// Route::get('/platform', function () {
-//     return view('platform');
-// });
-
-// Route::get('/research', function () {
-//     return view('research');
-// });
-
-// Route::get('/changelog', function () {
-//     return view('changelog');
-// });
-
-// Route::get('/posts/harbor-family-no-shows', function () {
-//     return view('post');
-// });
-
-// Route::statamic('search', 'search');
-
+/*
+ * Old Carefront template addresses.
+ */
 Route::redirect('/about', '/portfolio', 301);
 Route::redirect('/research', '/publications', 301);
 Route::redirect('/changelog', '/news', 301);
 Route::redirect('/pricing', '/how-we-work', 301);
 Route::redirect('/platform', '/features', 301);
 Route::redirect('/posts/harbor-family-no-shows', '/news/why-the-ruvu-to-mlandizi-road-keeps-failing-in-the-rain', 301);
-Route::get('/posts/{slug}', fn (string $slug) => redirect('/news/'.$slug, 301))->where('slug', '[^/]+');
 
-Route::redirect('/services', '/our-services', 301);
-Route::redirect('/services/', '/our-services', 301);
+/*
+ * Addresses from the site this project replaced, kept so old links and
+ * search results land on the closest HMXTECH page.
+ */
+Route::redirect('/about-us', '/portfolio', 301);
+Route::redirect('/our-partners', '/portfolio', 301);
+Route::redirect('/contact-us', '/contact', 301);
+Route::redirect('/faqs', '/how-we-work', 301);
+Route::redirect('/privacy-policy', '/privacy', 301);
+Route::redirect('/terms-and-conditions', '/terms', 301);
+Route::redirect('/our-services', '/features', 301);
+Route::redirect('/services', '/features', 301);
+Route::redirect('/services/{slug}', '/features', 301)->where('slug', '.*');
+Route::redirect('/products', '/features', 301);
+Route::redirect('/products/{slug}', '/features', 301)->where('slug', '.*');
+Route::redirect('/posts', '/news', 301);
+Route::redirect('/categories/{slug?}', '/news', 301)->where('slug', '.*');
+Route::redirect('/tags/{slug?}', '/news', 301)->where('slug', '.*');
+
+/*
+ * Articles moved from /posts/{slug} to /news/{slug}; slugs that no longer
+ * exist go to the News page instead of a 404.
+ */
+Route::get('/posts/{slug}', function (string $slug) {
+    $exists = Entry::query()->where('collection', 'posts')->where('slug', $slug)->count() > 0;
+
+    return redirect($exists ? '/news/'.$slug : '/news', 301);
+})->where('slug', '[^/]+');
+
+Route::get('/robots.txt', function () {
+    $lines = [
+        '# '.config('app.name').' — '.config('app.url'),
+        '# Search engines and AI assistants are welcome to read the public site.',
+        '# A plain-text company summary for AI assistants is at /llms.txt',
+        '',
+        'User-agent: *',
+        'Allow: /',
+        'Disallow: /cp',
+        'Disallow: /!/',
+        'Disallow: /_debugbar',
+        '',
+        'Sitemap: '.rtrim(config('app.url'), '/').'/sitemap.xml',
+    ];
+
+    return Response::make(implode("\n", $lines)."\n", 200, ['Content-Type' => 'text/plain; charset=UTF-8']);
+});
 
 /**
  * Published, indexable entries from the public collections, in sitemap order.
@@ -133,7 +89,7 @@ $indexableEntries = function (string $collection) {
 };
 
 Route::get('/sitemap.xml', function () use ($indexableEntries) {
-    $entries = collect(['pages', 'products', 'services', 'posts'])
+    $entries = collect(['pages', 'posts'])
         ->flatMap(fn (string $collection) => $indexableEntries($collection));
 
     $urls = $entries->map(function ($entry) {
@@ -142,7 +98,6 @@ Route::get('/sitemap.xml', function () use ($indexableEntries) {
 
         $priority = match ($entry->collection()->handle()) {
             'pages' => $entry->url() === '/' ? '1.0' : '0.8',
-            'products', 'services' => '0.7',
             default => '0.6',
         };
 
@@ -159,7 +114,7 @@ Route::get('/sitemap.xml', function () use ($indexableEntries) {
 
 /*
  * llms.txt — plain-text summary for AI assistants (ChatGPT, Claude, Perplexity…).
- * Built live from Globals → Settings and the Products, Services, Pages and Posts
+ * Built live from Globals → Settings and the Pages, Posts and Publications
  * collections, so it never drifts from what editors publish in the CP.
  */
 Route::get('/llms.txt', function () use ($indexableEntries) {
@@ -193,25 +148,6 @@ Route::get('/llms.txt', function () use ($indexableEntries) {
         $lines[] = "- Profile: {$profile}";
     }
 
-    $sections = [
-        'Products (export crops)' => $indexableEntries('products'),
-        'Services' => $indexableEntries('services'),
-    ];
-
-    foreach ($sections as $heading => $entries) {
-        if ($entries->isEmpty()) {
-            continue;
-        }
-
-        $lines[] = '';
-        $lines[] = "## {$heading}";
-
-        foreach ($entries as $entry) {
-            $description = $summary($entry);
-            $lines[] = "- [{$entry->get('title')}]({$url($entry)})".($description !== '' ? ": {$description}" : '');
-        }
-    }
-
     if ($about = trim((string) $setting('llms_about', ''))) {
         $lines[] = '';
         $lines[] = $about;
@@ -232,6 +168,21 @@ Route::get('/llms.txt', function () use ($indexableEntries) {
 
         foreach ($posts as $post) {
             $lines[] = "- [{$post->get('title')}]({$url($post)})";
+        }
+    }
+
+    $publications = Entry::query()
+        ->where('collection', 'publications')
+        ->where('published', true)
+        ->get()
+        ->filter(fn ($entry) => filled($entry->get('pdf_url')));
+
+    if ($publications->isNotEmpty()) {
+        $lines[] = '';
+        $lines[] = '## Publications';
+
+        foreach ($publications as $publication) {
+            $lines[] = "- [{$publication->get('title')}]({$publication->get('pdf_url')})";
         }
     }
 

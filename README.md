@@ -72,6 +72,3 @@ If you're using [Laravel Valet](https://laravel.com/docs/valet) (or similar), yo
 ## Contributing
 
 Contributions are always welcome, no matter how large or small, [here](https://github.com/afan417/blogo-starter-kit).
-# seed-stone-website-statamic
-# seed-stone-website-statamic
-# seed-stone-website-statamic

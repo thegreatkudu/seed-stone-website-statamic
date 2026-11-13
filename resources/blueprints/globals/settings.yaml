@@ -6,30 +6,6 @@ tabs:
         display: 'Global Settings'
         fields:
           -
-            handle: header_logo
-            field:
-              container: assets
-              max_files: 1
-              display: 'Header Logo'
-              instructions: 'Also used in search-engine structured data.'
-              type: assets
-          -
-            handle: footer_logo
-            field:
-              container: assets
-              max_files: 1
-              type: assets
-              display: 'Footer Logo'
-          -
-            handle: page_banner_image
-            field:
-              container: assets
-              folder: images/site
-              max_files: 1
-              type: assets
-              display: 'Default Page Banner Image'
-              instructions: 'Background of the title banner on inner pages, posts, products and services. Pages can override it with their own Banner Image.'
-          -
             handle: site_name
             field:
               character_limit: 0
@@ -59,13 +35,13 @@ tabs:
             field:
               type: text
               display: 'X (Twitter) Handle'
-              instructions: 'e.g. @seedstone. Leave empty if there is no account.'
+              instructions: 'e.g. @hmxtech. Leave empty if there is no account.'
           -
             handle: social_profiles
             field:
               type: list
               display: 'Official Social Profile URLs'
-              instructions: 'Full URLs of Seedstone''s real profiles (LinkedIn, Facebook, Instagram…). Search engines and AI assistants use these to confirm the company''s identity.'
+              instructions: 'Full URLs of HMXTECH''s real profiles (LinkedIn, Facebook, Instagram…). Search engines and AI assistants use these to confirm the company''s identity.'
   company:
     display: 'Company & SEO'
     sections:
@@ -84,7 +60,7 @@ tabs:
             field:
               type: textarea
               display: 'Company Description'
-              instructions: 'One or two plain sentences describing what Seedstone does.'
+              instructions: 'One or two plain sentences describing what HMXTECH does.'
           -
             handle: company_email
             field:

@@ -5,7 +5,7 @@ fields:
     field:
       type: text
       display: 'SEO Title'
-      instructions: 'Title shown in Google and browser tabs. Leave empty to use the entry title. "| Seedstone" is added automatically. Aim for under 60 characters.'
+      instructions: 'Title shown in Google and browser tabs. Leave empty to use the entry title. "| HMXTECH" is added automatically. Aim for under 60 characters.'
       character_limit: 70
       listable: hidden
   -
