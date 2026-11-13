@@ -1,0 +1,297 @@
+title: 'Portfolio Page'
+hide: true
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: nav_title
+            field:
+              type: text
+              display: 'Navigation Title'
+              instructions: 'Optionally override the title shown in the navigation menu.'
+              placeholder: 'Defaults to the page title'
+  hero:
+    display: Hero
+    sections:
+      -
+        display: 'Page Header'
+        fields:
+          -
+            handle: hero_tag
+            field:
+              type: text
+              display: 'Small Label'
+              width: 50
+          -
+            handle: hero_heading
+            field:
+              type: text
+              display: Headline
+              width: 50
+              validate:
+                - required
+          -
+            handle: hero_text
+            field:
+              type: textarea
+              display: 'Intro Text'
+  stats:
+    display: Figures
+    sections:
+      -
+        display: 'Figures Strip'
+        fields:
+          -
+            handle: stats
+            field:
+              type: grid
+              display: Figures
+              instructions: 'The row of big figures under the header. Four fit one row.'
+              mode: table
+              min_rows: 0
+              max_rows: 6
+              add_row: 'Add figure'
+              reorderable: true
+              listable: hidden
+              fields:
+                -
+                  handle: value
+                  field:
+                    type: text
+                    display: Figure
+                    validate:
+                      - required
+                -
+                  handle: label
+                  field:
+                    type: text
+                    display: Label
+  story:
+    display: 'Our Story'
+    sections:
+      -
+        display: 'Our Story'
+        fields:
+          -
+            handle: story_tag
+            field:
+              type: text
+              display: 'Small Label'
+              width: 50
+          -
+            handle: story_heading
+            field:
+              type: text
+              display: Headline
+              width: 50
+              validate:
+                - required
+          -
+            handle: story_text
+            field:
+              type: bard
+              display: Text
+              instructions: 'Shown beside the office drawing. Press Enter for a new paragraph.'
+              buttons:
+                - bold
+                - italic
+                - anchor
+                - unorderedlist
+                - orderedlist
+              save_html: true
+              toolbar_mode: fixed
+              remove_empty_nodes: trim
+  values:
+    display: Values
+    sections:
+      -
+        display: 'Rules We Build By'
+        fields:
+          -
+            handle: values_tag
+            field:
+              type: text
+              display: 'Small Label'
+              width: 50
+          -
+            handle: values_heading
+            field:
+              type: text
+              display: Headline
+              width: 50
+              validate:
+                - required
+          -
+            handle: principles
+            field:
+              type: grid
+              display: Values
+              instructions: 'Three fit one row.'
+              mode: stacked
+              min_rows: 1
+              max_rows: 6
+              add_row: 'Add value'
+              reorderable: true
+              listable: hidden
+              fields:
+                -
+                  handle: title
+                  field:
+                    type: text
+                    display: Title
+                    validate:
+                      - required
+                -
+                  handle: text
+                  field:
+                    type: textarea
+                    display: Text
+  work:
+    display: 'What We Take On'
+    sections:
+      -
+        display: 'What We Take On'
+        fields:
+          -
+            handle: work_tag
+            field:
+              type: text
+              display: 'Small Label'
+              width: 50
+          -
+            handle: work_heading
+            field:
+              type: text
+              display: Headline
+              width: 50
+              validate:
+                - required
+          -
+            handle: work_link_label
+            field:
+              type: text
+              display: 'Link Label'
+              width: 50
+          -
+            handle: work_link_url
+            field:
+              type: link
+              display: Link
+              width: 50
+          -
+            handle: work_types
+            field:
+              type: grid
+              display: 'Types of Work'
+              instructions: 'Tiles are numbered automatically; every third one starting with the first is dark.'
+              mode: table
+              min_rows: 1
+              max_rows: 12
+              add_row: 'Add type of work'
+              reorderable: true
+              listable: hidden
+              fields:
+                -
+                  handle: initials
+                  field:
+                    type: text
+                    display: Initials
+                    instructions: 'Two letters on the tile, e.g. "BL".'
+                    width: 20
+                    character_limit: 3
+                    validate:
+                      - required
+                -
+                  handle: name
+                  field:
+                    type: text
+                    display: Name
+                    width: 40
+                    validate:
+                      - required
+                -
+                  handle: text
+                  field:
+                    type: text
+                    display: Detail
+                    width: 40
+  closing:
+    display: Closing
+    sections:
+      -
+        display: 'Call to Action Band'
+        fields:
+          -
+            handle: cta_image
+            field:
+              type: assets
+              display: 'Background Photo'
+              instructions: 'Optional. Shown behind the band under a dark brand overlay.'
+              container: assets
+              folder: photos
+              max_files: 1
+              mode: grid
+          -
+            handle: cta_tag
+            field:
+              type: text
+              display: 'Small Label'
+              width: 50
+          -
+            handle: cta_heading
+            field:
+              type: text
+              display: Headline
+              width: 50
+              validate:
+                - required
+          -
+            handle: cta_button_label
+            field:
+              type: text
+              display: 'Button Label'
+              width: 50
+              validate:
+                - required
+          -
+            handle: cta_button_url
+            field:
+              type: link
+              display: 'Button Link'
+              width: 50
+  seo:
+    display: SEO
+    sections:
+      -
+        fields:
+          -
+            import: seo
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+          -
+            handle: parent
+            field:
+              type: entries
+              collections:
+                - pages
+              max_items: 1
+              listable: false
+              localizable: true

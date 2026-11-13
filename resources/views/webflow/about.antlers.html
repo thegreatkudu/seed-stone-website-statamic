@@ -17,35 +17,24 @@
 {{ /section:head_css }}
 
 			<section class="page-hero">
-				<div class="eyebrow">Portfolio</div>
-				<h1 class="page-hero_title">Your building is our business.</h1>
-				<p class="page-hero_text">HMXTECH Company Limited is a registered engineering consultancy and construction company based in Mbeya, Tanzania. We design, build and supervise buildings, roads and structures, within and beyond Tanzania’s borders.</p>
+				<div class="eyebrow">{{ hero_tag }}</div>
+				<h1 class="page-hero_title">{{ hero_heading }}</h1>
+				{{ if hero_text }}<p class="page-hero_text">{{ hero_text }}</p>{{ /if }}
 			</section>
-			<section class="about-stats">
+			{{ if stats }}<section class="about-stats">
+				{{ stats }}
 				<div class="about-stat">
-					<div class="about-stat_num">2020</div>
-					<div class="about-stat_label">incorporated in Mbeya</div>
+					<div class="about-stat_num">{{ value }}</div>
+					<div class="about-stat_label">{{ label }}</div>
 				</div>
-				<div class="about-stat">
-					<div class="about-stat_num">238L</div>
-					<div class="about-stat_label">ERB consulting engineers</div>
-				</div>
-				<div class="about-stat">
-					<div class="about-stat_num">B5</div>
-					<div class="about-stat_label">CRB building contractor</div>
-				</div>
-				<div class="about-stat">
-					<div class="about-stat_num">C6</div>
-					<div class="about-stat_label">CRB civil works contractor</div>
-				</div>
-			</section>
+				{{ /stats }}
+			</section>{{ /if }}
 			<section class="section">
 				<div class="story-grid">
 					<div class="story-copy">
-						<div class="eyebrow">Our story</div>
-						<h2 class="heading-section is-small">Design and construction under one roof.</h2>
-						<p class="text-body">HMXTECH was incorporated in Mbeya in 2020 (BRELA No. 478140) by engineers who wanted the people who design a project and the people who build it to work as one team.</p>
-						<p class="text-body">We are registered with the Engineers Registration Board as consulting engineers, and with the Contractors Registration Board for both building and civil works. That lets us take a project from feasibility and design through construction to handover, and share what we learn through our publications and the free Truss Analyzer.</p>
+						<div class="eyebrow">{{ story_tag }}</div>
+						<h2 class="heading-section is-small">{{ story_heading }}</h2>
+						{{ story_text | replace('<p>', '<p class="text-body">') }}
 					</div>
 					<div class="story-art"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 640 460"
 							aria-label="Line drawing of a site office desk with screens for the schedule, drawings, costs and the site diary, captioned 4 desks, 1 team, 1 project record"
@@ -469,160 +458,49 @@
 			</section>
 			<section class="section">
 				<div class="stack-head">
-					<div class="eyebrow">How we work</div>
-					<h2 class="heading-section">Three rules we build by.</h2>
+					<div class="eyebrow">{{ values_tag }}</div>
+					<h2 class="heading-section">{{ values_heading }}</h2>
 				</div>
 				<div class="values-grid">
+					{{ principles }}
 					<div class="value">
-						<div class="value_glyph"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
-								viewBox="0 0 65.5 43.1" height="43.1" width="65.5" aria-hidden="true" class="value_svg">
-								<path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.2"
-									d="M3.5 3.5C21.5 3.5 21.5 21.5 37.5 21.5" class="ill-s-strong"></path>
-								<path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.1"
-									d="M3.5 6.5C5.2 6.5 6.5 5.2 6.5 3.5C6.5 1.8 5.2 0.5 3.5 0.5C1.8 0.5 0.5 1.8 0.5 3.5C0.5 5.2 1.8 6.5 3.5 6.5Z"
-									class="ill-f-raised ill-s-ink"></path>
-								<path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.2"
-									d="M3.5 21.5C21.5 21.5 21.5 21.5 37.5 21.5" class="ill-s-ink"></path>
-								<path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.1"
-									d="M3.5 24.5C5.2 24.5 6.5 23.2 6.5 21.5C6.5 19.8 5.2 18.5 3.5 18.5C1.8 18.5 0.5 19.8 0.5 21.5C0.5 23.2 1.8 24.5 3.5 24.5Z"
-									class="ill-f-raised ill-s-ink"></path>
-								<path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.2"
-									d="M3.5 39.5C21.5 39.5 21.5 21.5 37.5 21.5" class="ill-s-strong"></path>
-								<path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.1"
-									d="M3.5 42.5C5.2 42.5 6.5 41.2 6.5 39.5C6.5 37.8 5.2 36.5 3.5 36.5C1.8 36.5 0.5 37.8 0.5 39.5C0.5 41.2 1.8 42.5 3.5 42.5Z"
-									class="ill-f-raised ill-s-ink"></path>
-								<path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.4"
-									d="M37.5 21.5H55.5" class="ill-s-ink"></path>
-								<path
-									d="M59.5 27.5C62.8 27.5 65.5 24.8 65.5 21.5C65.5 18.2 62.8 15.5 59.5 15.5C56.2 15.5 53.5 18.2 53.5 21.5C53.5 24.8 56.2 27.5 59.5 27.5Z"
-									class="ill-f-accent"></path>
-							</svg></div>
-						<h3 class="value_title">Engineers sign off</h3>
-						<p class="value_text">Every design and every site decision is checked by a registered engineer.</p>
+						<h3 class="value_title">{{ title }}</h3>
+						<p class="value_text">{{ text }}</p>
 					</div>
-					<div class="value">
-						<div class="value_glyph"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
-								viewBox="0 0 67.6 35.7" height="35.7" width="67.6" aria-hidden="true" class="value_svg">
-								<path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.3"
-									d="M0.6 18.6L2.6 0.6L6.6 35.0L10.6 3.8L14.6 31.8L18.6 7.0L22.6 28.6L26.6 10.2L30.6 25.4L34.6 13.4L38.6 22.2L42.6 16.6L46.6 19.0L50.6 18.6H54.6H58.6H62.6H64.6"
-									class="ill-s-ink"></path>
-								<path
-									d="M64.6 21.6C66.3 21.6 67.6 20.3 67.6 18.6C67.6 16.9 66.3 15.6 64.6 15.6C62.9 15.6 61.6 16.9 61.6 18.6C61.6 20.3 62.9 21.6 64.6 21.6Z"
-									class="ill-f-accent"></path>
-							</svg></div>
-						<h3 class="value_title">Tested, not assumed</h3>
-						<p class="value_text">Soil, concrete and steel are tested before we rely on them.</p>
-					</div>
-					<div class="value">
-						<div class="value_glyph"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
-								viewBox="0 0 57.3 37.3" height="37.3" width="57.3" aria-hidden="true" class="value_svg">
-								<path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.3"
-									d="M18.6 36.6C28.5 36.6 36.6 28.5 36.6 18.6C36.6 8.7 28.5 0.6 18.6 0.6C8.7 0.6 0.6 8.7 0.6 18.6C0.6 28.5 8.7 36.6 18.6 36.6Z"
-									class="ill-s-ink"></path>
-								<path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.3"
-									d="M38.6 36.6C48.5 36.6 56.6 28.5 56.6 18.6C56.6 8.7 48.5 0.6 38.6 0.6C28.7 0.6 20.6 8.7 20.6 18.6C20.6 28.5 28.7 36.6 38.6 36.6Z"
-									class="ill-s-ink"></path>
-								<path
-									d="M28.6 3.6C31.1 5.2 33.1 7.5 34.5 10.1C35.9 12.7 36.7 15.6 36.7 18.6C36.7 21.6 35.9 24.5 34.5 27.1C33.1 29.7 31.1 32.0 28.6 33.6C26.1 32.0 24.1 29.7 22.7 27.1C21.3 24.5 20.5 21.6 20.5 18.6C20.5 15.6 21.3 12.7 22.7 10.1C24.1 7.5 26.1 5.2 28.6 3.6Z"
-									class="ill-f-accent"></path>
-								<path
-									d="M29.6 12.6H27.6C27.3 12.6 27.1 12.8 27.1 13.1V24.1C27.1 24.4 27.3 24.6 27.6 24.6H29.6C29.9 24.6 30.1 24.4 30.1 24.1V13.1C30.1 12.8 29.9 12.6 29.6 12.6Z"
-									class="ill-f-raised"></path>
-								<path
-									d="M34.1 17.1H23.1C22.8 17.1 22.6 17.3 22.6 17.6V19.6C22.6 19.9 22.8 20.1 23.1 20.1H34.1C34.4 20.1 34.6 19.9 34.6 19.6V17.6C34.6 17.3 34.4 17.1 34.1 17.1Z"
-									class="ill-f-raised"></path>
-							</svg></div>
-						<h3 class="value_title">Built for Tanzania</h3>
-						<p class="value_text">Designs suit local materials, local climate and the people who will use them.</p>
-					</div>
+					{{ /principles }}
 				</div>
 			</section>
 			<section class="section">
 				<div class="team-head">
 					<div class="stack-head is-tight">
-						<div class="eyebrow">What we take on</div>
-						<h2 class="heading-section">Buildings, roads and the structures between.</h2>
-					</div><a href="/features" class="text-link">See our services<span class="text-link_icon"><svg
+						<div class="eyebrow">{{ work_tag }}</div>
+						<h2 class="heading-section">{{ work_heading }}</h2>
+					</div>{{ if work_link_label }}<a href="{{ work_link_url }}" class="text-link">{{ work_link_label }}<span class="text-link_icon"><svg
 								width="14" height="14" viewBox="0 0 14 14" fill="none"
 								xmlns="http://www.w3.org/2000/svg">
 								<path d="M4 10L10 4M10 4H5M10 4V9" stroke="currentColor" stroke-width="1.4"
 									stroke-linecap="round"></path>
-							</svg></span></a>
+							</svg></span></a>{{ /if }}
 				</div>
 				<div class="team-grid">
+					{{ work_types }}
 					<div class="member">
-						<div aria-hidden="true" class="member_portrait is-dark">
-							<div class="member_num is-dark">01</div>
-							<div class="member_mono"
-								style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 0px, 0px);">BL</div>
+						<div aria-hidden="true" class="member_portrait{{ if (count - 1) % 3 == 0 }} is-dark{{ /if }}">
+							<div class="member_num{{ if (count - 1) % 3 == 0 }} is-dark{{ /if }}">{{ if count < 10 }}0{{ /if }}{{ count }}</div>
+							<div class="member_mono">{{ initials }}</div>
 						</div>
-						<div class="member_name">Buildings</div>
-						<div class="member_role">Residential, commercial, public</div>
+						<div class="member_name">{{ name }}</div>
+						<div class="member_role">{{ text }}</div>
 					</div>
-					<div class="member">
-						<div aria-hidden="true" class="member_portrait">
-							<div class="member_num">02</div>
-							<div class="member_mono">RD</div>
-						</div>
-						<div class="member_name">Roads</div>
-						<div class="member_role">Earthworks to surfacing</div>
-					</div>
-					<div class="member">
-						<div aria-hidden="true" class="member_portrait">
-							<div class="member_num">03</div>
-							<div class="member_mono">BR</div>
-						</div>
-						<div class="member_name">Bridges</div>
-						<div class="member_role">Short-span bridges and crossings</div>
-					</div>
-					<div class="member">
-						<div aria-hidden="true" class="member_portrait is-dark">
-							<div class="member_num is-dark">04</div>
-							<div class="member_mono">TW</div>
-						</div>
-						<div class="member_name">Towers</div>
-						<div class="member_role">Steel and concrete towers</div>
-					</div>
-					<div class="member">
-						<div aria-hidden="true" class="member_portrait">
-							<div class="member_num">05</div>
-							<div class="member_mono">DM</div>
-						</div>
-						<div class="member_name">Dams</div>
-						<div class="member_role">Small dams and weirs</div>
-					</div>
-					<div class="member">
-						<div aria-hidden="true" class="member_portrait">
-							<div class="member_num">06</div>
-							<div class="member_mono">WS</div>
-						</div>
-						<div class="member_name">Water supply</div>
-						<div class="member_role">Intakes, tanks and pipelines</div>
-					</div>
-					<div class="member">
-						<div aria-hidden="true" class="member_portrait is-dark">
-							<div class="member_num is-dark">07</div>
-							<div class="member_mono">CV</div>
-						</div>
-						<div class="member_name">Culverts</div>
-						<div class="member_role">Box and pipe culverts, drainage</div>
-					</div>
-					<div class="member">
-						<div aria-hidden="true" class="member_portrait">
-							<div class="member_num">08</div>
-							<div class="member_mono">GD</div>
-						</div>
-						<div class="member_name">Godowns</div>
-						<div class="member_role">Warehouses and steel roof trusses</div>
-					</div>
+					{{ /work_types }}
 				</div>
 			</section>
 			<section class="careers">
 				<div id="contact" class="anchor"></div>
-				<div class="careers_band hx-photo-band" style="--hx-band-img: url('{{ glide src="assets::photos/tower-cranes-over-apartment-block.webp" width="1600" fit="crop_focal" format="webp" quality="72" }}')">
+				<div class="careers_band{{ if cta_image }} hx-photo-band" style="--hx-band-img: url('{{ glide:cta_image width="1600" fit="crop_focal" format="webp" quality="72" }}'){{ /if }}">
 					<div class="careers_copy">
-						<div class="eyebrow is-panel">Work with us</div>
-						<h2 class="heading-section is-inverse">Have a project in mind? Talk to an engineer.</h2>
-					</div><a href="/contact" class="button">Get a quote</a>
+						<div class="eyebrow is-panel">{{ cta_tag }}</div>
+						<h2 class="heading-section is-inverse">{{ cta_heading }}</h2>
+					</div><a href="{{ cta_button_url }}" class="button">{{ cta_button_label }}</a>
 				</div>
 			</section>
