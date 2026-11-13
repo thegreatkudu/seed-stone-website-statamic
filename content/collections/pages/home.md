@@ -28,8 +28,8 @@ hero_interval: 7
 hero_slides:
   -
     id: hxslide01
-    image: hero/hmx-hero-gradient.webp
-    image_alt: 'Building floor plan drawings and rolled plans under a magenta to blue wash'
+    image: hero/hmx-hero-buildings.jpg
+    image_alt: 'Tower cranes over the steel frame of a multi-storey building under construction'
     has_brand_wash: true
     tab_label: Buildings
     eyebrow: 'Registered building contractor · CRB B5'
@@ -42,8 +42,9 @@ hero_slides:
     secondary_url: '#services'
   -
     id: hxslide02
-    image: hero/hmx-hero-2.webp
-    image_alt: 'Steel fixer guiding reinforcement bars lifted by a crane'
+    image: hero/hmx-hero-civil.webp
+    image_alt: 'Excavator loading soil into a dump truck during earthworks'
+    has_brand_wash: true
     tab_label: 'Civil works'
     eyebrow: 'Civil works contractor · CRB C6'
     heading: 'Roads, water and'
@@ -55,8 +56,9 @@ hero_slides:
     secondary_url: '#services'
   -
     id: hxslide03
-    image: hero/hmx-hero-3.webp
-    image_alt: 'Blueprint drawing of a Pratt truss with member forces'
+    image: hero/hmx-hero-consultancy.webp
+    image_alt: 'Pencil resting on an architectural floor plan drawing'
+    has_brand_wash: true
     tab_label: Consultancy
     eyebrow: 'Engineering consulting firm · ERB 238L'
     heading: 'Designed, analysed'
